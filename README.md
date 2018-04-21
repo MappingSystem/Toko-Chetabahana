@@ -21,10 +21,6 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Tidak perlukan hosting berbayar karena [Google Site](http://sites.google.com/) adalah Free dan [AppEngine](https://cloud.google.com/appengine/) bisa [_dijalankan secara gratis_](https://stackoverflow.com/questions/18101642/appengine-limit-the-number-of-instances/26654430#26654430).
 - Bisa [_jalankan SEO_](https://developers.google.com/search/) untuk produk unggulan dari [Situs Toko](https://chetabahana.com/) via [Google Site](http://toko.chetabahana.com/) untuk berkompetisi di [Google Search](https://www.google.com/search?q=chetabahana)
 - Meraih data terkini untuk [_Update Setelan AdWords Secara Otomatis_](https://developers.google.com/adwords/api/docs/guides/start) guna peroleh sales return yang paling optimal.  
-<p align="center"> 
-<a href="https://chetabahana.com/product?l=60&o=harga&group=393"><img src="https://user-images.githubusercontent.com/36441664/38913079-10a00cea-4303-11e8-8138-4694115c4cf3.png"></a>Gambar-1: Contoh tampilan <a href=https://chetabahana.com>Chetabahana</a> di Iklan Shopping dari Google AdWords
-</p>
-
 
 ## Proses
  Alur dari prosesnya diatur sbb:
@@ -32,6 +28,9 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Proses ke-2: Pendataan hasil atas kinerja toko dari sesi yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
 - Proses ke-3: Pendataan hasil dari kinerja proses ke-1 dan -2 untuk [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id).
 - Proses ke-4: Pendataan hasil dari kinerja proses ke-3 untuk [_Optimasi Market_](https://support.google.com/adwords/answer/6167176).
+<p align="center"> 
+<a href="https://chetabahana.com/product?l=60&o=harga&group=393"><img src="https://user-images.githubusercontent.com/36441664/38913079-10a00cea-4303-11e8-8138-4694115c4cf3.png"></a>Gambar-1: Contoh tampilan <a href=https://chetabahana.com>Chetabahana</a> di Iklan Shopping dari Google AdWords
+</p>
 
 ## Struktur
 Struktur dari alur dijalankan dengan [_asas terbalik_](https://en.wikipedia.org/wiki/Algorithm) sbb:
