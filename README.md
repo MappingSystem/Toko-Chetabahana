@@ -69,7 +69,7 @@ Disarankan untuk disimak sebelum melangkah lebih jauh:
 - [e-Books Chetabahana](https://www.scribd.com/user/401259110/Chetabahana)
 
 ## License
-Apache License 2.0
+[Apache License 2.0](https://github.com/MarketLeader/Toko-Chetabahana/blob/master/LICENSE)
 
 ## Penutup
 Berikut ini beberapa catatan sebagai penutup:  
