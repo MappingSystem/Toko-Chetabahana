@@ -28,8 +28,8 @@ Manfaat yang bisa diperoleh adalah sbb:
 
 ## Proses
  Alur dari prosesnya diatur sbb:
-- Proses ke-1: Proses pendataan atas kinerja dari sesi yg petama yaitu: [_Optimasi Internal_](https://chetabahana.blogspot.com/).
-- Proses ke-2: Proses pendataan atas kinerja dari sesi yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
+- Proses ke-1: Pendataan hasil atas kinerja toko dari sesi yg petama yaitu: [_Optimasi Internal_](https://chetabahana.blogspot.com/).
+- Proses ke-2: Pendataan hasil atas kinerja toko dari sesi yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
 - Proses ke-3: Pendataan hasil dari kinerja proses ke-1 dan -2 untuk [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id).
 - Proses ke-4: Pendataan hasil dari kinerja proses ke-3 untuk [_Optimasi Market_](https://support.google.com/adwords/answer/6167176).
 
