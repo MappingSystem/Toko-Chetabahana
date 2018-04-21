@@ -28,9 +28,9 @@ Manfaat yang bisa diperoleh adalah sbb:
 
 ## Proses
  Alur dari prosesnya diatur sbb:
-- Proses ke-1: sesi sebelumnya yg petama yaitu: [_Optimasi Internal_](https://chetabahana.blogspot.com/).
-- Proses ke-2: sesi sebelumnya yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
-- Proses ke-3: Menyaring data dari proses ke-1 dan -2, analisa penjualan sampai untuk [_Optimasi Iklan_](https://support.google.com/adwords/answer/3455573?hl=id).
+- Proses ke-1: Proses pendataan atas kinerja sesi sebelumnya yg petama yaitu: [_Optimasi Internal_](https://chetabahana.blogspot.com/).
+- Proses ke-2: Proses pendataan atas kinerja sesi sebelumnya yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
+- Proses ke-3: Menyaring data dari proses ke-1 dan -2 untuk analisa penjualan sampai [_Optimasi Iklan_](https://support.google.com/adwords/answer/3455573?hl=id).
 - Proses ke-4: Mengatur setelan, penjadwalan, lalu-lintas data, dan monitoring hasil dari semua proses.
 
 ## Struktur
