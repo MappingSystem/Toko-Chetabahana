@@ -36,7 +36,7 @@ Manfaat yang bisa diperoleh adalah sbb:
 ## Struktur
 Struktur dari alur dijalankan dengan [_asas terbalik_](https://en.wikipedia.org/wiki/Algorithm) sbb:
 ```
-Proses ke-4: Top_dir
+Proses ke-4: Google AppEngine (Top_dir)
 |-----README.md
 |-----Proses ke-3: Google-AdWords-API
       |----README.md
