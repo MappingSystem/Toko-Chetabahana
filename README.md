@@ -31,7 +31,7 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Proses ke-1: Proses pendataan atas kinerja sesi yg petama yaitu: [_Optimasi Internal_](https://chetabahana.blogspot.com/).
 - Proses ke-2: Proses pendataan atas kinerja sesi yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
 - Proses ke-3: Pendataan dari kinerja proses ke-1 dan -2 untuk [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id).
-- Proses ke-4: Pendataan hasil dari kinerja proses ke-3 untuk [_Optimasi Market_](#).
+- Proses ke-4: Pendataan hasil dari kinerja proses ke-3 untuk [_Optimasi Market_](https://support.google.com/adwords/answer/6167176).
 
 ## Struktur
 Struktur dari alur dijalankan dengan [_asas terbalik_](https://en.wikipedia.org/wiki/Algorithm) sbb:
