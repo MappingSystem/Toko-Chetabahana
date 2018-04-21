@@ -13,7 +13,7 @@ WE ARE GOING TO WIN THE MARKET!
 Sesi ini adalah sesi penutup publikasi dari 
 [**Tim Chetabahana**](https://github.com/chetabahana) diperuntukkan bagi yang sudah ikuti sesi sebelumnya yaitu: [_Cara Buka Toko Online WinMarket dan Optimasi Internal_](https://chetabahana.blogspot.com/) serta [_Cara Optimasi Eksternal Toko dengan Shop SEO_](https://chetabahana.wordpress.com/).
 
-Di sesi ini kami akan publikasikan cara untuk meningkatkan penjualan dari [Toko Online Chetabahana](https://chetabahana.com/) di [Google Search](https://developers.google.com/search/) dan [Google AdWords](https://adwords.google.com/) dengan [_teknik memilah dan memampilkan_](#struktur) produk unggulan secara dinamis.
+Di sesi ini kami akan publikasikan cara untuk meningkatkan _Optimasi Penjualan_ dari [Toko Online Chetabahana](https://chetabahana.com/) di [Google Search](https://developers.google.com/search/) dan [Google AdWords](https://adwords.google.com/) dengan [_teknik memilah dan memampilkan_](#struktur) produk unggulan secara dinamis.
 
 ## Pilosopi
 Pilosopi sederhananya bisa dijabarkan sesuai urutan berikut ini:
