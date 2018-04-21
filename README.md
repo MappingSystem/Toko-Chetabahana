@@ -1,4 +1,6 @@
 # Toko Chetabahana
+[![Chetabahana.com | Situs Belanja Jual-Beli Barang & Promo Aneka Produk Fashion, Busana Muslim, Bayi & Anak-anak, Kecantikan, Tas, Sepatu, Peralatan Rumah Tangga, Elektronik, Makanan & Minuman Kemasan, dll. Soon The E-Shop Market Leader Will Be Owned Here! ](https://chetabahana.files.wordpress.com/2018/04/logoweb.png)](https://chetabahana.com/)  
+
 :hand: Selamat datang di [Halaman Project](https://github.com/MarketLeader) untuk sesi [**Toko Chetabahana**](https://github.com/MarketLeader/Toko-Chetabahana).
 
 Sesi ini adalah sesi penutup publikasi dari 
