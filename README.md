@@ -13,7 +13,7 @@ WE ARE GOING TO WIN THE MARKET!
 Sesi ini adalah sesi penutup publikasi dari 
 [**Tim Chetabahana**](https://github.com/chetabahana) diperuntukkan bagi yang sudah ikuti sesi sebelumnya yaitu: [_Cara Buka Toko Online WinMarket dan Optimasi Internal_](https://chetabahana.blogspot.com/) serta [_Cara Optimasi Eksternal Toko dengan Shop SEO_](https://chetabahana.wordpress.com/).
 
-Di sesi ini kami akan publikasikan cara untuk meningkatkan _Optimasi Penjualan_ dari [Toko Online Chetabahana](https://chetabahana.com/) di [Google Search](https://developers.google.com/search/) dan [Google AdWords](https://adwords.google.com/) dengan [_teknik memilah dan memampilkan_](#struktur) produk unggulan secara dinamis.
+Di sesi ini kami akan publikasikan cara untuk meningkatkan [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari [Toko Online Chetabahana](https://chetabahana.com/) di [Google Search](https://developers.google.com/search/) dan [Google AdWords](https://adwords.google.com/) dengan [_teknik memilah dan memampilkan_](#struktur) produk unggulan secara dinamis.
 
 ## Pilosopi
 Pilosopi sederhananya bisa dijabarkan sesuai urutan berikut ini:
@@ -36,7 +36,7 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Proses ke-1: Pendataan hasil atas kinerja toko dari sesi yg petama yaitu: [_Optimasi Internal_](https://chetabahana.blogspot.com/).
 - Proses ke-2: Pendataan hasil atas kinerja toko dari sesi yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
 - Proses ke-3: Pendataan hasil dari kinerja proses ke-1 dan -2 untuk [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id).
-- Proses ke-4: Pendataan hasil dari kinerja proses ke-3 untuk [_Optimasi Market_](https://support.google.com/adwords/answer/6167176).
+- Proses ke-4: Pendataan hasil dari kinerja proses ke-3 untuk [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176).
 <p align="center"> 
 <a href="https://chetabahana.com/product?l=60&o=harga&group=393"><img src="https://user-images.githubusercontent.com/36441664/38913079-10a00cea-4303-11e8-8138-4694115c4cf3.png"></a>Gambar-1: Contoh tampilan <a href=https://chetabahana.com>Chetabahana</a> di Iklan Shopping dari Google AdWords
 </p>
