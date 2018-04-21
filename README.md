@@ -29,9 +29,9 @@ Manfaat yang bisa diperoleh adalah sbb:
 ## Proses
  Alur dari prosesnya diatur sbb:
 - [Proses ke-1](https://github.com/MarketLeader/Google-Sites-API#google-sites-api): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
-- Proses ke-2: Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
-- Proses ke-3: Menyaring data dari proses ke-1 dan -2, analisa penjualan sampai perbaikan setelan iklan.
-- Proses ke-4: Mengatur setelan, penjadwalan, lalu-lintas data, dan monitoring hasil dari semua proses.
+- [Proses ke-2](https://github.com/MarketLeader/Google-Content-API#google-content-api): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
+- [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#google-adwords-api): Menyaring data dari proses ke-1 dan -2, analisa penjualan sampai perbaikan setelan iklan.
+- [Proses ke-4](#struktur): Mengatur setelan, penjadwalan, lalu-lintas data, dan monitoring hasil dari semua proses.
 
 ## Struktur
 Struktur dari alur dijalankan dengan [_asas terbalik_](https://en.wikipedia.org/wiki/Algorithm) sbb:
