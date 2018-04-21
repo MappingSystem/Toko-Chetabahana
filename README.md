@@ -2,7 +2,7 @@
 :hand: Selamat datang di [Halaman Project](https://github.com/MarketLeader) untuk sesi [**Toko Chetabahana**](https://github.com/MarketLeader/Toko-Chetabahana).
 
 Sesi ini adalah sesi penutup publikasi dari 
-[**Tim Chetabahana**](https://github.com/chetabahana) diperuntukkan bagi yang sudah ikuti sesi sebelumnya yaitu: [_Cara Buka Toko Online WinMarket dan Optimasi Internal_](https://chetabahana.blogspot.com/) serta [_Cara Optimasi Eksternal Toko dengan Shop SEO_](https://chetabahana.wordpress.com/) .
+[**Tim Chetabahana**](https://github.com/chetabahana) diperuntukkan bagi yang sudah ikuti sesi sebelumnya yaitu: [_Cara Buka Toko Online WinMarket dan Optimasi Internal_](https://chetabahana.blogspot.com/) serta [_Cara Optimasi Eksternal Toko dengan Shop SEO_](https://chetabahana.wordpress.com/).
 
 Di sesi ini kami akan publikasikan cara untuk meningkatkan penjualan dari [Toko Online Chetabahana](https://chetabahana.com/) di [Google Search](https://developers.google.com/search/) dan [Google AdWords](https://adwords.google.com/) dengan [_teknik memilah dan memampilkan_](#struktur) produk unggulan secara dinamis.
 
@@ -28,10 +28,10 @@ Manfaat yang bisa diperoleh adalah sbb:
 
 ## Proses
  Alur dari prosesnya diatur sbb:
-- [Proses ke-1](https://github.com/MarketLeader/Google-Sites-API#google-sites-api): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
-- [Proses ke-2](https://github.com/MarketLeader/Google-Content-API#google-content-api): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
-- [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#google-adwords-api): Menyaring data dari proses ke-1 dan -2, analisa penjualan sampai perbaikan setelan iklan.
-- [Proses ke-4](#struktur): Mengatur setelan, penjadwalan, lalu-lintas data, dan monitoring hasil dari semua proses.
+- Proses ke-1: sesi sebelumnya yg petama yaitu: [_Optimasi Internal_](https://chetabahana.blogspot.com/).
+- Proses ke-2: sesi sebelumnya yg kedua yaitu: [_Optimasi Eksternal_](https://chetabahana.wordpress.com/).
+- Proses ke-3: Menyaring data dari proses ke-1 dan -2, analisa penjualan sampai untuk [_Optimasi Iklan_](https://support.google.com/adwords/answer/3455573?hl=id).
+- Proses ke-4: Mengatur setelan, penjadwalan, lalu-lintas data, dan monitoring hasil dari semua proses.
 
 ## Struktur
 Struktur dari alur dijalankan dengan [_asas terbalik_](https://en.wikipedia.org/wiki/Algorithm) sbb:
@@ -45,6 +45,12 @@ Proses ke-4: Top_dir
       |----Proses ke-1: Google-Sites-API
            |----README.md
 ```
+- [Proses ke-1](https://github.com/MarketLeader/Google-Sites-API#google-sites-api): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
+- [Proses ke-2](https://github.com/MarketLeader/Google-Content-API#google-content-api): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
+- [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#google-adwords-api): Menyaring data dari proses ke-1 dan -2, analisa penjualan sampai perbaikan setelan iklan.
+- [Proses ke-4](#proses): Mengatur setelan, penjadwalan, lalu-lintas data, dan monitoring hasil dari semua proses.
+
+
 ## Repositori
 Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) untuk setiap proses dialokasikan sbb:
 - Repo Proses ke-1: [MarketLeader/Google-Sites-API](https://github.com/MarketLeader/Google-Sites-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Sites-API/wiki)
