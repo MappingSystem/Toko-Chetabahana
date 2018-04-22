@@ -28,13 +28,13 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Menampilkan produk unggulan secara dinamis sesuai [Trend](https://support.google.com/adwords/answer/6325039?hl=id) dan [Rekomendasi](https://support.google.com/adwords/answer/3448398) di [Google AdWords](https://adwords.google.com/).
 - Tidak memerlukan database karena bisa [_akses dan pakai data_](https://developers.google.com/shopping-content/v2/making-requests) yg sudah dimasukkan di Google Merchant
 - Tidak perlukan hosting berbayar karena [Google Site](http://sites.google.com/) adalah Free dan [AppEngine](https://cloud.google.com/appengine/) bisa [_dijalankan secara gratis_](https://stackoverflow.com/questions/18101642/appengine-limit-the-number-of-instances/26654430#26654430).
-- Bisa [_jalankan SEO_](https://support.google.com/webmasters/answer/7451184) untuk produk unggulan dari [Situs Toko](https://chetabahana.com/) via [Google Site](http://toko.chetabahana.com/) untuk berkompetisi di [Google Search](https://www.google.com/search?q=chetabahana)
+- Bisa [_Jalankan SEO_](https://support.google.com/webmasters/answer/7451184) untuk produk unggulan dari [Situs Toko](https://chetabahana.com/) via [Google Site](http://toko.chetabahana.com/) untuk berkompetisi di [Google Search](https://www.google.com/search?q=chetabahana)
 - Meraih data terkini untuk [_Update Setelan AdWords Secara Otomatis_](https://developers.google.com/adwords/api/docs/guides/start) guna peroleh sales return yang paling optimal.  
 
 ## Proses
  Alur dari prosesnya diatur sbb:
-- Proses ke-1: Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) atas rekomendasi [_sesi yg pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
-- Proses ke-2: Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) atas kinerja toko dari [_sesi yg kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
+- Proses ke-1: Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) atas rekomendasi [_Sesi yg Pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
+- Proses ke-2: Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) atas kinerja toko dari [_Sesi yg Kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
 - Proses ke-3: Pendataan hasil [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id) dari kinerja proses ke-1 dan -2 via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).
 - Proses ke-4: Pengelolaan atas hasil [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari kinerja proses ke-3 via [Google AppEngine](https://cloud.google.com/appengine/).
 <p align="center"> 
