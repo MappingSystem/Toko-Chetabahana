@@ -20,7 +20,7 @@ Pilosopi sederhananya bisa dijabarkan sesuai urutan berikut ini:
 - Jalankan [Iklan Shopping di AdWords](https://chetabahana.wordpress.com/google-shopping/) untuk dapat data [_produk yang di rekomendasikan_](https://support.google.com/merchants/answer/6288242) via [Google Merchant](https://support.google.com/merchants/answer/188493).  
 - Kemudian dari [_peta situs toko_](https://chetabahana.com/sitemap.xml) kita saring [_daftar semua produk_](https://chetabahana.com/product?p=1&c=0&l=60) yang memenuhi kriteria via [Google AppEngine](https://cloud.google.com/appengine/).  
 - Hasilnya kita masukkan ke [Google Merchant](https://www.google.com/retail/solutions/merchant-center/) sehingga [_tersimpan menjadi database_](https://support.google.com/merchants/answer/7052112) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).  
-- Dari database ini kita ambil produk yang mempunyai hasil dan [_peluang terbaik_](https://support.google.com/merchants/answer/7228489?hl=id) via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).  
+- Dari database ini kita pilah lagi produk yang mempunyai hasil dan [_peluang terbaik_](https://support.google.com/merchants/answer/7228489?hl=id) via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).  
 - Selanjutnya kita tampilkan sebagai produk unggulan di [_Situs Google Toko Chetabahana_](http://toko.chetabahana.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).  
 
 ## Manfaat
