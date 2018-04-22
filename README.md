@@ -33,8 +33,8 @@ Manfaat yang bisa diperoleh adalah sbb:
 
 ## Proses
  Alur dari prosesnya diatur sbb:
-- Proses ke-1: Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) dari [_Publikasi Sesi yg Pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
-- Proses ke-2: Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) atas kinerja toko dari [_Sesi yg Kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
+- Proses ke-1: Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) sesuai dengan [_Publikasi Sesi yg Pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
+- Proses ke-2: Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) atas kinerja toko sesuai dengan [_Sesi yg Kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
 - Proses ke-3: Pendataan hasil [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id) dari kinerja proses ke-1 dan -2 via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).
 - Proses ke-4: Pengelolaan atas hasil [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari kinerja proses ke-3 via [Google AppEngine](https://cloud.google.com/appengine/).
 <p align="center"> 
