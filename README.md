@@ -38,7 +38,7 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Proses ke-3: Pendataan hasil [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id) dari kinerja proses ke-1 dan -2 via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).
 - Proses ke-4: Pengelolaan atas hasil [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari kinerja proses ke-3 via [Google AppEngine](https://cloud.google.com/appengine/).
 <p align="center"> 
-<a href="https://chetabahana.com/product?l=60&o=produk&group=387"><img src="https://user-images.githubusercontent.com/36441664/39117383-03b2a9a4-4711-11e8-9f72-1d1cb7d61634.png"></a>Gambar-1: Analisa Pangsa Tayang <a href=https://chetabahana.com>Toko Chetabahana</a> dalam Lelang Iklan Shopping di Google Adwords
+<a href="https://chetabahana.com/product?l=60&o=produk&group=387"><img src="https://user-images.githubusercontent.com/36441664/39117383-03b2a9a4-4711-11e8-9f72-1d1cb7d61634.png" alt="Alalisa Toko Online Chetabahana dari Google AdWords"></a>Gambar-1: Analisa Pangsa Tayang <a href=https://chetabahana.com>Toko Online Chetabahana</a> dalam Lelang Iklan Belanja dari Google AdWords
 </p>
 
 ## Struktur
