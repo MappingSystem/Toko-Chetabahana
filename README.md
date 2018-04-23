@@ -72,7 +72,7 @@ Project ini dipublikasikan dengan lisensi berikut:
 
 ## Pustaka
 <p align="center"> 
-<a href="https://chetabahana.com/"><img src="https://user-images.githubusercontent.com/36441664/38942532-44c87736-4359-11e8-9ad4-56f7d2b68ced.png" alt="Alokasi Pustaka Online Chetabahana"></a>Gambar-2: Alokasi Pustaka Online <a href=https://chetabahana.com>Chetabahana</a>
+<a href="https://chetabahana.com/#brand_slider"><img src="https://user-images.githubusercontent.com/36441664/38942532-44c87736-4359-11e8-9ad4-56f7d2b68ced.png" alt="Alokasi Pustaka Online Chetabahana"></a>Gambar-2: Alokasi Pustaka Online <a href=https://chetabahana.com>Chetabahana</a>
 </p>
 
 Disarankan untuk disimak sebelum melangkah lebih jauh:  
