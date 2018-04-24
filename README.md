@@ -60,11 +60,11 @@ Proses ke-4: Google AppEngine (Top Directory)
 
 
 ## Repositori
-Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) disetel [_srtukturnya_](#struktur) via [_remote_](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) atau [_symlink_](https://github.com/MarketLeader/gh-pages-symlink-test) ke target terpisah sbb:
-- Top_dir/Repo#3/Repo#1: [MarketLeader/Google-Sites-API](https://github.com/MarketLeader/Google-Sites-API) (Repo#1). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Sites-API/wiki)
+Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) disetel [_srtukturnya_](#struktur) dari Top Directory (Top_dir) via [_remote_](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) atau [_symlink_](https://github.com/MarketLeader/gh-pages-symlink-test) sbb:
+- Top_dir/Repo#3/Repo#1: [MarketLeader/Google-Sites-API](https://github.com/MarketLeader/Google-Sites-API). Dokumentasi [_wiki_](https://help.github.com/articles/about-github-wikis/) nya [_disini_](https://github.com/MarketLeader/Google-Sites-API/wiki)
 - Top_dir/Repo#3/Repo#2: [MarketLeader/Google-Content-API](https://github.com/MarketLeader/Google-Content-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Content-API/wiki)
 - Top_dir/Repo#3: [MarketLeader/Google-AdWords-API](https://github.com/MarketLeader/Google-AdWords-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-AdWords-API/wiki)
-- Top_dir: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)  
+- Top_dir: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)  
 
 Catatan: Nama Reponya bebas, sistem akan mendeteksi via _File README.md_ yang ada di masing² Repo.
 
