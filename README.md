@@ -65,7 +65,8 @@ Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) disetel [
 - Repo Proses ke-2: [MarketLeader/Google-Content-API](https://github.com/MarketLeader/Google-Content-API) (Repo#2). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Content-API/wiki)
 - Repo Proses ke-3: [MarketLeader/Google-AdWords-API](https://github.com/MarketLeader/Google-AdWords-API) (Repo#3). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-AdWords-API/wiki)
 - Repo Proses ke-4: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (Top Directory). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)  
-Catatan: Nama Reponya bebas, ststem akan mendeteksi via README.md yang ada di masing-masing Repo.
+
+Catatan: Nama Reponya bebas, sistem akan mendeteksi via File README.md yang ada di masing² Repo.
 
 ## License
 Project ini dipublikasikan dengan lisensi berikut:  
