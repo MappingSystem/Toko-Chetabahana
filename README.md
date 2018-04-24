@@ -60,11 +60,11 @@ Proses ke-4: Google AppEngine (Top_dir)
 
 
 ## Repositori
-Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) untuk setiap proses ditempatkan sbb:
+Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) kecuali _Top_dir_ ditempatkan via [_remote_](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) sbb:
 - Repo Proses ke-1: [MarketLeader/Google-Sites-API](https://github.com/MarketLeader/Google-Sites-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Sites-API/wiki)
 - Repo Proses ke-2: [MarketLeader/Google-Content-API](https://github.com/MarketLeader/Google-Content-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Content-API/wiki)
 - Repo Proses ke-3: [MarketLeader/Google-AdWords-API](https://github.com/MarketLeader/Google-AdWords-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-AdWords-API/wiki)
-- Repo Proses ke-4: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (ini). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)
+- Repo Proses ke-4: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (Top_dir). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)
 
 ## License
 Project ini dipublikasikan dengan lisensi berikut:  
