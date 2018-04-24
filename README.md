@@ -44,7 +44,7 @@ Manfaat yang bisa diperoleh adalah sbb:
 ## Struktur
 Struktur dari alur dijalankan dengan [_asas terbalik_](https://en.wikipedia.org/wiki/Algorithm) sbb:
 ```
-Proses ke-4: Google AppEngine (Top_dir)
+Proses ke-4: Google AppEngine (Top Directory)
 |-----README.md (yg sedang ada baca)
 |-----Proses ke-3: Google-AdWords-API (Repo#3)
       |----README.md
@@ -64,7 +64,7 @@ Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) disetel [
 - Repo Proses ke-1: [MarketLeader/Google-Sites-API](https://github.com/MarketLeader/Google-Sites-API) (Repo#1). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Sites-API/wiki)
 - Repo Proses ke-2: [MarketLeader/Google-Content-API](https://github.com/MarketLeader/Google-Content-API) (Repo#2). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Content-API/wiki)
 - Repo Proses ke-3: [MarketLeader/Google-AdWords-API](https://github.com/MarketLeader/Google-AdWords-API) (Repo#3). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-AdWords-API/wiki)
-- Repo Proses ke-4: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (Top_dir). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)
+- Repo Proses ke-4: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (Top Directory). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)
 
 ## License
 Project ini dipublikasikan dengan lisensi berikut:  
