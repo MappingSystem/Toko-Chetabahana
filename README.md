@@ -66,7 +66,7 @@ Hirarki dari Top Directory (Top_dir) disetel [_srtukturnya_](#struktur) via [_re
 - Top_dir/Repo#3: [MarketLeader/Google-AdWords-API](https://github.com/MarketLeader/Google-AdWords-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-AdWords-API/wiki)
 - Top_dir: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)  
 
-Ctt: Nama Direktori bebas, sistem akan mendeteksi via _File README.md_
+Ctt: Nama Direktori bebas, akan dideteksi via _File README.md_
 
 ## License
 Project ini dipublikasikan dengan lisensi berikut:  
