@@ -45,7 +45,7 @@ Manfaat yang bisa diperoleh adalah sbb:
 Struktur dari alur dijalankan dengan [_asas terbalik_](https://en.wikipedia.org/wiki/Algorithm) sbb:
 ```
 Proses ke-4: Google AppEngine (Top Directory)
-|-----README.md (yg sedang ada baca)
+|-----README.md (File yang kontennya sedang Anda baca)
 |-----Proses ke-3: Google-AdWords-API (Repo#3)
       |----README.md
       |----Proses ke-2: Google-Content-API (Repo#2)
