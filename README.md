@@ -53,9 +53,9 @@ Proses ke-4: Google AppEngine (Top Directory)
       |----Proses ke-1: Google-Sites-API (Repo#1)
            |----README.md
 ```
-- [Repo#1](https://github.com/MarketLeader/Google-Sites-API#proses): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
-- [Repo#2](https://github.com/MarketLeader/Google-Content-API#proses): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
-- [Repo#3](https://github.com/MarketLeader/Google-AdWords-API#proses): Mulai dari akses ke database produk, kinerja penjualan sampai [optimasi setelan promosi](https://support.google.com/adwords).
+- [Repo#1](https://github.com/MarketLeader/Google-Sites-API#struktur): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
+- [Repo#2](https://github.com/MarketLeader/Google-Content-API#struktur): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
+- [Repo#3](https://github.com/MarketLeader/Google-AdWords-API#struktur): Mulai dari akses ke database produk, kinerja penjualan sampai [optimasi setelan promosi](https://support.google.com/adwords).
 - [Top Directory](#proses): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari setelan.
 
 
