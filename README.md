@@ -58,14 +58,15 @@ Proses ke-4: Google AppEngine (Top Directory)
 - [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#google-adwords-api): Mulai dari akses ke database produk, kinerja penjualan sampai optimasi setelan promosi.
 - [Proses ke-4](#proses): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari semua proses.
 
-Catatan: Nama Reponya bebas, sistem akan mendeteksi via _File README.md_ yang ada di masing² Repo.
 
 ## Repositori
 Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) disetel [_srtukturnya_](#struktur) via [_remote_](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) atau [_symlink_](https://github.com/MarketLeader/gh-pages-symlink-test) ke target terpisah sbb:
-- Repo Proses ke-1: [MarketLeader/Google-Sites-API](https://github.com/MarketLeader/Google-Sites-API) (Repo#1). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Sites-API/wiki)
-- Repo Proses ke-2: [MarketLeader/Google-Content-API](https://github.com/MarketLeader/Google-Content-API) (Repo#2). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Content-API/wiki)
-- Repo Proses ke-3: [MarketLeader/Google-AdWords-API](https://github.com/MarketLeader/Google-AdWords-API) (Repo#3). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-AdWords-API/wiki)
-- Repo Proses ke-4: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (Top Directory). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)  
+- Top_dir/Repo#3/Repo#1: [MarketLeader/Google-Sites-API](https://github.com/MarketLeader/Google-Sites-API) (Repo#1). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Sites-API/wiki)
+- Top_dir/Repo#3/Repo#2: [MarketLeader/Google-Content-API](https://github.com/MarketLeader/Google-Content-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-Content-API/wiki)
+- Top_dir/Repo#3: [MarketLeader/Google-AdWords-API](https://github.com/MarketLeader/Google-AdWords-API). Dokumentasinya [_disini_](https://github.com/MarketLeader/Google-AdWords-API/wiki)
+- Top_dir: [MarketLeader/Toko-Chetabahana](https://github.com/MarketLeader/Toko-Chetabahana) (). Dokumentasinya [_disini_](https://github.com/MarketLeader/Toko-Chetabahana/wiki)  
+
+Catatan: Nama Reponya bebas, sistem akan mendeteksi via _File README.md_ yang ada di masing² Repo.
 
 ## License
 Project ini dipublikasikan dengan lisensi berikut:  
