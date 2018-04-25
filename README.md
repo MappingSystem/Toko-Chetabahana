@@ -32,11 +32,11 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Meraih data terkini untuk [_Update Setelan AdWords Secara Otomatis_](https://developers.google.com/adwords/api/docs/guides/start) guna peroleh sales return yang paling optimal.  
 
 ## Proses
- Alur dari prosesnya diatur sbb:
-- [Proses ke-1](https://github.com/MarketLeader/Google-Sites-API#proses): Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) sesuai dengan [_Publikasi Sesi yg Pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
-- [Proses ke-2](https://github.com/MarketLeader/Google-Content-API#proses): Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) sesuai dengan  [_Publikasi Sesi yg Kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
-- [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#proses): Pendataan hasil [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id) dari kinerja proses ke-1 dan -2 via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).
-- [Proses ke-4](#struktur): Pengelolaan atas hasil [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari kinerja proses ke-3 via [Google AppEngine](https://cloud.google.com/appengine/).
+Alur dari prosesnya diatur sbb:
+- [Proses ke-1](https://github.com/MarketLeader/Google-Sites-API#proses): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
+- [Proses ke-2](https://github.com/MarketLeader/Google-Content-API#proses): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
+- [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#proses): Mulai dari akses ke database produk, kinerja penjualan sampai [optimasi setelan promosi](https://support.google.com/adwords).
+- [Proses ke-4](#struktur): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari setelan.
 <p align="center"> 
 <a href="https://chetabahana.com/product?l=60&o=harga&group=0"><img src="https://user-images.githubusercontent.com/36441664/39117383-03b2a9a4-4711-11e8-9f72-1d1cb7d61634.png" alt="Analisis iklan aneka produk fashion, sepatu, makanan dll dari Toko Online Chetabahana dari Google AdWords"></a>Gambar-1: Analisis pangsa tayang <a href="https://chetabahana.com/product?l=60&o=harga&group=0">aneka produk Toko Online Chetabahana.com</a> di Iklan Belanja dari Google AdWords
 </p>
@@ -53,11 +53,10 @@ Proses ke-4: Google AppEngine (Top Directory)
       |----Proses ke-1: Google-Sites-API (Repo#1)
            |----README.md
 ```
-- [Repo#1](https://github.com/MarketLeader/Google-Sites-API#struktur): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
-- [Repo#2](https://github.com/MarketLeader/Google-Content-API#struktur): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
-- [Repo#3](https://github.com/MarketLeader/Google-AdWords-API#struktur): Mulai dari akses ke database produk, kinerja penjualan sampai [optimasi setelan promosi](https://support.google.com/adwords).
-- [Top Directory](#proses): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari setelan.
-
+- [Repo#1](https://github.com/MarketLeader/Google-Sites-API#struktur): Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) sesuai dengan [_Publikasi Sesi yg Pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
+- [Repo#2](https://github.com/MarketLeader/Google-Content-API#struktur): Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) sesuai dengan  [_Publikasi Sesi yg Kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
+- [Repo#3](https://github.com/MarketLeader/Google-AdWords-API#struktur): Pendataan hasil [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id) dari kinerja proses ke-1 dan -2 via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).
+- [Top Directory](#proses): Pengelolaan atas hasil [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari kinerja proses ke-3 via [Google AppEngine](https://cloud.google.com/appengine/).
 
 ## Repositori
 Hirarki dari Top Directory (Top_dir) disetel via [_remote_](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) atau [_symlink_](https://github.com/MarketLeader/gh-pages-symlink-test) ke Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) sbb:
