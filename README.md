@@ -17,7 +17,7 @@ Di sesi ini kami akan publikasikan cara untuk meningkatkan [_Optimasi Penjualan_
 
 ## Pilosopi
 Pilosopi sederhananya bisa dijabarkan sesuai urutan berikut ini:
-- Jalankan [Iklan Shopping di AdWords](https://chetabahana.wordpress.com/google-shopping/) untuk dapat data [_produk yang di rekomendasikan_](https://support.google.com/merchants/answer/6288242) via [Google Merchant](https://support.google.com/merchants/answer/188493).  
+- Jalankan [Iklan Shopping di AdWords](https://chetabahana.wordpress.com/google-shopping/) untuk dapat data [_produk yang di rekomendasikan_](https://support.google.com/merchants/answer/6288242) via [Google Merchant](https://support.google.com/merchants/answer/188493).  
 - Kemudian dari [_peta situs toko_](https://chetabahana.com/sitemap.xml) kita saring [_daftar semua produk_](https://chetabahana.com/product?p=1&c=0&l=60) yang memenuhi kriteria via [Google AppEngine](https://cloud.google.com/appengine/).  
 - Hasilnya kita masukkan ke [Google Merchant](https://www.google.com/retail/solutions/merchant-center/) sehingga [_tersimpan menjadi database_](https://support.google.com/merchants/answer/7052112) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).  
 - Dari database ini kita pilah lagi produk yang mempunyai hasil dan [_peluang terbaik_](https://support.google.com/merchants/answer/7228489?hl=id) via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).  
@@ -32,11 +32,11 @@ Manfaat yang bisa diperoleh adalah sbb:
 - Meraih data terkini untuk [_Update Setelan AdWords Secara Otomatis_](https://developers.google.com/adwords/api/docs/guides/start) guna peroleh sales return yang paling optimal.  
 
 ## Proses
-Alur dari prosesnya diatur sbb:
-- [Proses ke-1](https://github.com/MarketLeader/Google-Sites-API#proses): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
-- [Proses ke-2](https://github.com/MarketLeader/Google-Content-API#proses): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
-- [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#proses): Mulai dari akses ke database produk, kinerja penjualan sampai [optimasi setelan promosi](https://support.google.com/adwords).
-- [Proses ke-4](#struktur): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari setelan.
+ Alur dari prosesnya diatur sbb:
+- [Proses ke-1](https://github.com/MarketLeader/Google-Sites-API#proses): Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) sesuai dengan [_Publikasi Sesi yg Pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
+- [Proses ke-2](https://github.com/MarketLeader/Google-Content-API#proses): Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) sesuai dengan  [_Publikasi Sesi yg Kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
+- [Proses ke-3](https://github.com/MarketLeader/Google-AdWords-API#proses): Pendataan hasil [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id) dari kinerja proses ke-1 dan -2 via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).
+- [Proses ke-4](#struktur): Pengelolaan atas hasil [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari kinerja proses ke-3 via [Google AppEngine](https://cloud.google.com/appengine/).
 <p align="center"> 
 <a href="https://chetabahana.com/product?l=60&o=harga&group=0"><img src="https://user-images.githubusercontent.com/36441664/39117383-03b2a9a4-4711-11e8-9f72-1d1cb7d61634.png" alt="Analisis iklan aneka produk fashion, sepatu, makanan dll dari Toko Online Chetabahana dari Google AdWords"></a>Gambar-1: Analisis pangsa tayang <a href="https://chetabahana.com/product?l=60&o=harga&group=0">aneka produk Toko Online Chetabahana.com</a> di Iklan Belanja dari Google AdWords
 </p>
@@ -53,10 +53,11 @@ Proses ke-4: Google AppEngine (Top Directory)
       |----Proses ke-1: Google-Sites-API (Repo#1)
            |----README.md
 ```
-- [Repo#1](https://github.com/MarketLeader/Google-Sites-API#struktur): Pengelolaan hasil [_Optimasi Internal Toko_](https://developers.google.com/search/docs/guides/) sesuai dengan [_Publikasi Sesi yg Pertama_](https://chetabahana.blogspot.com/) via [Google Sites API](https://developers.google.com/google-apps/sites/docs/developers_guide).
-- [Repo#2](https://github.com/MarketLeader/Google-Content-API#struktur): Pendataan hasil [_Optimasi Eksternal_](https://support.google.com/webmasters/answer/40349) sesuai dengan  [_Publikasi Sesi yg Kedua_](https://chetabahana.wordpress.com/) via [Google Content API](https://developers.google.com/shopping-content/v2/quickstart).
-- [Repo#3](https://github.com/MarketLeader/Google-AdWords-API#struktur): Pendataan hasil [_Optimasi Promosi_](https://support.google.com/adwords/answer/3455573?hl=id) dari kinerja proses ke-1 dan -2 via [Google AdWords API](https://developers.google.com/adwords/api/docs/guides/start).
-- [Top Directory](#proses): Pengelolaan atas hasil [_Optimasi Penjualan_](https://support.google.com/adwords/answer/6167176) dari kinerja proses ke-3 via [Google AppEngine](https://cloud.google.com/appengine/).
+- [Repo#1](https://github.com/MarketLeader/Google-Sites-API#struktur): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
+- [Repo#2](https://github.com/MarketLeader/Google-Content-API#struktur): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
+- [Repo#3](https://github.com/MarketLeader/Google-AdWords-API#struktur): Mulai dari akses ke database produk, kinerja penjualan sampai [optimasi setelan promosi](https://support.google.com/adwords).
+- [Top Directory](#proses): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari setelan.
+
 
 ## Repositori
 Hirarki dari Top Directory (Top_dir) disetel via [_remote_](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) atau [_symlink_](https://github.com/MarketLeader/gh-pages-symlink-test) ke Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) sbb:
@@ -83,7 +84,7 @@ Disarankan untuk disimak sebelum melangkah lebih jauh:
 - [e-Books Chetabahana](https://www.scribd.com/user/401259110/Chetabahana)
 
 ## Penutup
-Berikut ini beberapa catatan sebagai penutup:  
+Berikut ini beberapa catatan sebagai penutup:  
 - Projek ini diprioriostaskan bagi peminat [e-Commerce di Indonesia](https://www.youtube.com/watch?v=dd__L8Jh2c4&t=25s) 🇮🇩
 - Status masih pengembangan dan pengetesan implementasi
 - Syarat untuk bergabung silahkan [Daftar ID WinMarket](https://www.winmarket.id/?b=01647234)
