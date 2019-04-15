@@ -1,2 +1,1 @@
-application/cache/*
-application/logs/*
+virtual-env/bin/python*
