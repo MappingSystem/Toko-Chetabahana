@@ -1,0 +1,1218 @@
+2019/04/14 14:27:31 Starting cygwin install, version 2.897
+2019/04/14 14:27:31 User has backup/restore rights
+2019/04/14 14:27:31 io_stream_cygfile: fopen(/etc/setup/setup.rc) failed 2 No such file or directory
+2019/04/14 14:27:31 Current Directory: C:\Users\Chetabahana
+2019/04/14 14:27:31 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 14:27:38 source: network install
+2019/04/14 14:28:04 root: C:\cygwin system
+2019/04/14 14:28:48 Selected local directory: C:\Users\Chetabahana
+2019/04/14 14:28:54 net: Direct
+2019/04/14 14:30:18 site: http://cygwin.mirror.constant.com/
+2019/04/14 14:30:19 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 14:30:20 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 14:30:31 io_stream_cygfile: fopen(/etc/setup/timestamp) failed 2 No such file or directory
+2019/04/14 14:30:31 io_stream_cygfile: fopen(/etc/setup/installed.db) failed 2 No such file or directory
+2019/04/14 14:30:31 solving: 37 tasks, update: yes, use test packages: no
+2019/04/14 14:33:54 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 14:34:04 net: Direct
+2019/04/14 14:34:12 site: http://cygwin.mirror.constant.com/
+2019/04/14 14:34:12 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 14:34:13 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 14:34:16 io_stream_cygfile: fopen(/etc/setup/installed.db) failed 2 No such file or directory
+2019/04/14 14:35:18 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 14:35:19 net: Direct
+2019/04/14 14:42:26 Ending cygwin install
+2019/04/14 14:44:18 Starting cygwin install, version 2.897
+2019/04/14 14:44:18 User has backup/restore rights
+2019/04/14 14:44:18 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 14:44:18 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 14:44:21 source: network install
+2019/04/14 14:44:50 root: C:\cygwin system
+2019/04/14 14:45:03 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 14:45:06 net: Direct
+2019/04/14 14:45:13 site: http://cygwin.mirror.constant.com/
+2019/04/14 14:45:14 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 14:45:15 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 14:45:18 io_stream_cygfile: fopen(/etc/setup/installed.db) failed 2 No such file or directory
+2019/04/14 14:45:18 solving: 37 tasks, update: yes, use test packages: no
+2019/04/14 14:46:27 solving: 71 tasks, update: no, use test packages: no
+2019/04/14 14:46:27 Augmented Transaction List:
+2019/04/14 14:46:27    0 install                                     base-cygwin               3.8-1
+2019/04/14 14:46:27    1 install                                          cygwin             3.0.6-1
+2019/04/14 14:46:27    2 install                                  libpopt-common              1.16-2
+2019/04/14 14:46:27    3 install                                        terminfo     6.0-12.20171125
+2019/04/14 14:46:27    4 install                                          tzdata             2018i-1
+2019/04/14 14:46:27    5 install                                           which              2.20-2
+2019/04/14 14:46:27    6 install                                             run             1.3.4-2
+2019/04/14 14:46:27    7 install                                          mintty             3.0.0-1
+2019/04/14 14:46:27    8 install                                           login              1.13-1
+2019/04/14 14:46:27    9 install                                     libsigsegv2              2.10-2
+2019/04/14 14:46:27   10 install                                    libpipeline1             1.4.0-1
+2019/04/14 14:46:27   11 install                                        libpcre1              8.43-1
+2019/04/14 14:46:27   12 install                                        liblzma5             5.2.3-1
+2019/04/14 14:46:27   13 install                                       libiconv2              1.14-3
+2019/04/14 14:46:27   14 install                                        libgmp10             6.1.2-1
+2019/04/14 14:46:27   15 install                                         libgcc1             7.4.0-1
+2019/04/14 14:46:27   16 install                                         libffi6             3.2.1-1
+2019/04/14 14:46:27   17 install                                        libbz2_1             1.0.6-3
+2019/04/14 14:46:27   18 install                                         libargp          20110921-3
+2019/04/14 14:46:27   19 install                                       ipc-utils               1.0-1
+2019/04/14 14:46:27   20 install                                        hostname              3.13-1
+2019/04/14 14:46:27   21 install                                      editrights              1.03-1
+2019/04/14 14:46:27   22 install                                            dash           0.5.9.1-1
+2019/04/14 14:46:27   23 install                                   libncursesw10     6.0-12.20171125
+2019/04/14 14:46:27   24 install                                        libintl8          0.19.8.1-2
+2019/04/14 14:46:27   25 install                                           zlib0            1.2.11-1
+2019/04/14 14:46:27   26 install                                      libtasn1_6              4.13-1
+2019/04/14 14:46:27   27 install                                      libstdc++6             7.4.0-1
+2019/04/14 14:46:27   28 install                                        libmpfr6             4.0.2-1
+2019/04/14 14:46:27   29 install                                          getent           2.18.90-4
+2019/04/14 14:46:27   30 install                                     _autorebase            001007-1
+2019/04/14 14:46:27   31 install                                     vim-minimal          8.0.1567-1
+2019/04/14 14:46:27   32 install                                         ncurses     6.0-12.20171125
+2019/04/14 14:46:27   33 install                                    libreadline7             7.0.3-3
+2019/04/14 14:46:27   34 install                                            less               530-1
+2019/04/14 14:46:27   35 install                                             sed               4.4-1
+2019/04/14 14:46:27   36 install                                        libuuid1            2.33.1-1
+2019/04/14 14:46:27   37 install                                   libsmartcols1            2.33.1-1
+2019/04/14 14:46:27   38 install                                        libpopt0              1.16-2
+2019/04/14 14:46:27   39 install                                     libp11-kit0           0.23.15-1
+2019/04/14 14:46:27   40 install                                        libiconv              1.14-3
+2019/04/14 14:46:27   41 install                                        libgdbm4              1.12-1
+2019/04/14 14:46:27   42 install                                        libattr1            2.4.48-2
+2019/04/14 14:46:27   43 install                                            info               6.6-1
+2019/04/14 14:46:27   44 install                                       diffutils               3.5-2
+2019/04/14 14:46:27   45 install                                    alternatives          1.3.30c-10
+2019/04/14 14:46:27   46 install                                            file              5.32-1
+2019/04/14 14:46:27   47 install                                            gawk             5.0.0-1
+2019/04/14 14:46:27   48 install                                       libblkid1            2.33.1-1
+2019/04/14 14:46:27   49 install                                        cygutils            1.4.16-2
+2019/04/14 14:46:27   50 install                                   p11-kit-trust           0.23.15-1
+2019/04/14 14:46:27   51 install                                         p11-kit           0.23.15-1
+2019/04/14 14:46:27   52 install                                       coreutils              8.26-2
+2019/04/14 14:46:27   53 install                                       libfdisk1            2.33.1-1
+2019/04/14 14:46:27   54 install                                            bash            4.4.12-3
+2019/04/14 14:46:27   55 install                                      util-linux            2.33.1-1
+2019/04/14 14:46:27   56 install                                          tzcode             2018i-1
+2019/04/14 14:46:27   57 install                                              xz             5.2.3-1
+2019/04/14 14:46:27   58 install                                            gzip               1.8-1
+2019/04/14 14:46:27   59 install                                           groff            1.22.4-1
+2019/04/14 14:46:27   60 install                                            grep               3.0-2
+2019/04/14 14:46:27   61 install                                       findutils             4.6.0-1
+2019/04/14 14:46:27   62 install                                 crypto-policies          20190218-1
+2019/04/14 14:46:27   63 install                                 ca-certificates              2.26-1
+2019/04/14 14:46:27   64 install                                           bzip2             1.0.6-3
+2019/04/14 14:46:27   65 install                                          man-db           2.7.6.1-1
+2019/04/14 14:46:27   66 install                                          rebase             4.4.4-1
+2019/04/14 14:46:27   67 install                                      base-files               4.2-4
+2019/04/14 14:46:27   68 install                                       libssl1.1            1.1.1b-1
+2019/04/14 14:46:27   69 install                                             tar              1.29-1
+2019/04/14 14:46:27   70 install                                         openssl            1.1.1b-1
+2019/04/14 14:46:46 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-cygwin/base-cygwin-3.8-1.tar.xz
+2019/04/14 14:46:50 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygwin/cygwin-3.0.6-1.tar.xz
+2019/04/14 14:46:51 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/popt/libpopt-common/libpopt-common-1.16-2.tar.xz
+2019/04/14 14:46:51 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ncurses/terminfo/terminfo-6.0-12.20171125.tar.xz
+2019/04/14 14:46:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/tzdata/tzdata-2018i-1.tar.xz
+2019/04/14 14:46:53 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/which/which-2.20-2.tar.bz2
+2019/04/14 14:46:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/run/run-1.3.4-2.tar.xz
+2019/04/14 14:46:56 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mintty/mintty-3.0.0-1.tar.xz
+2019/04/14 14:46:57 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/login/login-1.13-1.tar.xz
+2019/04/14 14:46:57 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libsigsegv/libsigsegv2/libsigsegv2-2.10-2.tar.xz
+2019/04/14 14:46:58 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libpipeline/libpipeline1/libpipeline1-1.4.0-1.tar.xz
+2019/04/14 14:46:59 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pcre/libpcre1/libpcre1-8.43-1.tar.xz
+2019/04/14 14:46:59 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/xz/liblzma5/liblzma5-5.2.3-1.tar.xz
+2019/04/14 14:47:00 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libiconv/libiconv2/libiconv2-1.14-3.tar.xz
+2019/04/14 14:47:01 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gmp/libgmp10/libgmp10-6.1.2-1.tar.xz
+2019/04/14 14:47:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libgcc1/libgcc1-7.4.0-1.tar.xz
+2019/04/14 14:47:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libffi/libffi6/libffi6-3.2.1-1.tar.xz
+2019/04/14 14:47:03 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/bzip2/libbz2_1/libbz2_1-1.0.6-3.tar.xz
+2019/04/14 14:47:03 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libargp/libargp-20110921-3.tar.xz
+2019/04/14 14:47:04 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ipc-utils/ipc-utils-1.0-1.tar.bz2
+2019/04/14 14:47:05 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/hostname/hostname-3.13-1.tar.bz2
+2019/04/14 14:47:06 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/editrights/editrights-1.03-1.tar.xz
+2019/04/14 14:47:07 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/dash/dash-0.5.9.1-1.tar.xz
+2019/04/14 14:47:08 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ncurses/libncursesw10/libncursesw10-6.0-12.20171125.tar.xz
+2019/04/14 14:47:09 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/libintl8/libintl8-0.19.8.1-2.tar.xz
+2019/04/14 14:47:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib0/zlib0-1.2.11-1.tar.xz
+2019/04/14 14:47:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libtasn1/libtasn1_6/libtasn1_6-4.13-1.tar.xz
+2019/04/14 14:47:11 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libstdc++6/libstdc++6-7.4.0-1.tar.xz
+2019/04/14 14:47:12 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mpfr/libmpfr6/libmpfr6-4.0.2-1.tar.xz
+2019/04/14 14:47:13 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/getent/getent-2.18.90-4.tar.xz
+2019/04/14 14:47:13 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/_autorebase/_autorebase-001007-1.tar.xz
+2019/04/14 14:47:14 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/vim/vim-minimal/vim-minimal-8.0.1567-1.tar.xz
+2019/04/14 14:47:15 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ncurses/ncurses-6.0-12.20171125.tar.xz
+2019/04/14 14:47:15 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/readline/libreadline7/libreadline7-7.0.3-3.tar.xz
+2019/04/14 14:47:19 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/less/less-530-1.tar.xz
+2019/04/14 14:47:21 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/sed/sed-4.4-1.tar.xz
+2019/04/14 14:47:22 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libuuid1/libuuid1-2.33.1-1.tar.xz
+2019/04/14 14:47:22 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libsmartcols1/libsmartcols1-2.33.1-1.tar.xz
+2019/04/14 14:47:23 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/popt/libpopt0/libpopt0-1.16-2.tar.xz
+2019/04/14 14:47:24 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/p11-kit/libp11-kit0/libp11-kit0-0.23.15-1.tar.xz
+2019/04/14 14:47:25 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libiconv/libiconv-1.14-3.tar.xz
+2019/04/14 14:47:25 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gdbm/libgdbm4/libgdbm4-1.12-1.tar.xz
+2019/04/14 14:47:26 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/attr/libattr1/libattr1-2.4.48-2.tar.xz
+2019/04/14 14:47:27 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/texinfo/info/info-6.6-1.tar.xz
+2019/04/14 14:47:28 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/diffutils/diffutils-3.5-2.tar.xz
+2019/04/14 14:47:29 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/alternatives/alternatives-1.3.30c-10.tar.bz2
+2019/04/14 14:47:30 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/file/file-5.32-1.tar.xz
+2019/04/14 14:47:33 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gawk/gawk-5.0.0-1.tar.xz
+2019/04/14 14:47:34 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libblkid1/libblkid1-2.33.1-1.tar.xz
+2019/04/14 14:47:35 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygutils/cygutils-1.4.16-2.tar.xz
+2019/04/14 14:47:36 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/p11-kit/p11-kit-trust/p11-kit-trust-0.23.15-1.tar.xz
+2019/04/14 14:47:36 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/p11-kit/p11-kit-0.23.15-1.tar.xz
+2019/04/14 14:47:40 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/coreutils/coreutils-8.26-2.tar.xz
+2019/04/14 14:47:41 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libfdisk1/libfdisk1-2.33.1-1.tar.xz
+2019/04/14 14:47:44 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/bash/bash-4.4.12-3.tar.xz
+2019/04/14 14:47:46 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/util-linux-2.33.1-1.tar.xz
+2019/04/14 14:47:47 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/tzcode/tzcode-2018i-1.tar.xz
+2019/04/14 14:47:51 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/xz/xz-5.2.3-1.tar.xz
+2019/04/14 14:47:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gzip/gzip-1.8-1.tar.xz
+2019/04/14 14:47:57 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/groff/groff-1.22.4-1.tar.xz
+2019/04/14 14:47:57 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/grep/grep-3.0-2.tar.xz
+2019/04/14 14:47:59 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/findutils/findutils-4.6.0-1.tar.xz
+2019/04/14 14:48:00 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/crypto-policies/crypto-policies-20190218-1.tar.xz
+2019/04/14 14:48:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/ca-certificates/ca-certificates-2.26-1.tar.xz
+2019/04/14 14:48:03 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/bzip2/bzip2-1.0.6-3.tar.xz
+2019/04/14 14:48:05 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/man-db/man-db-2.7.6.1-1.tar.xz
+2019/04/14 14:48:06 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/rebase/rebase-4.4.4-1.tar.xz
+2019/04/14 14:48:06 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-files/base-files-4.2-4.tar.xz
+2019/04/14 14:48:09 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl/libssl1.1/libssl1.1-1.1.1b-1.tar.xz
+2019/04/14 14:48:11 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/tar/tar-1.29-1.tar.xz
+2019/04/14 14:48:14 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl/openssl-1.1.1b-1.tar.xz
+2019/04/14 14:48:14 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-cygwin/base-cygwin-3.8-1.tar.xz
+2019/04/14 14:48:14 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygwin/cygwin-3.0.6-1.tar.xz
+2019/04/14 14:48:15 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/popt/libpopt-common/libpopt-common-1.16-2.tar.xz
+2019/04/14 14:48:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ncurses/terminfo/terminfo-6.0-12.20171125.tar.xz
+2019/04/14 14:48:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/tzdata/tzdata-2018i-1.tar.xz
+2019/04/14 14:48:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/which/which-2.20-2.tar.bz2
+2019/04/14 14:48:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/run/run-1.3.4-2.tar.xz
+2019/04/14 14:48:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mintty/mintty-3.0.0-1.tar.xz
+2019/04/14 14:48:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/login/login-1.13-1.tar.xz
+2019/04/14 14:48:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libsigsegv/libsigsegv2/libsigsegv2-2.10-2.tar.xz
+2019/04/14 14:48:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libpipeline/libpipeline1/libpipeline1-1.4.0-1.tar.xz
+2019/04/14 14:48:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pcre/libpcre1/libpcre1-8.43-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/xz/liblzma5/liblzma5-5.2.3-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libiconv/libiconv2/libiconv2-1.14-3.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gmp/libgmp10/libgmp10-6.1.2-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libgcc1/libgcc1-7.4.0-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libffi/libffi6/libffi6-3.2.1-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/bzip2/libbz2_1/libbz2_1-1.0.6-3.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libargp/libargp-20110921-3.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ipc-utils/ipc-utils-1.0-1.tar.bz2
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/hostname/hostname-3.13-1.tar.bz2
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/editrights/editrights-1.03-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/dash/dash-0.5.9.1-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ncurses/libncursesw10/libncursesw10-6.0-12.20171125.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/libintl8/libintl8-0.19.8.1-2.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib0/zlib0-1.2.11-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libtasn1/libtasn1_6/libtasn1_6-4.13-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libstdc++6/libstdc++6-7.4.0-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mpfr/libmpfr6/libmpfr6-4.0.2-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/getent/getent-2.18.90-4.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/_autorebase/_autorebase-001007-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/vim/vim-minimal/vim-minimal-8.0.1567-1.tar.xz
+2019/04/14 14:48:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/ncurses/ncurses-6.0-12.20171125.tar.xz
+2019/04/14 14:48:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/readline/libreadline7/libreadline7-7.0.3-3.tar.xz
+2019/04/14 14:48:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/less/less-530-1.tar.xz
+2019/04/14 14:48:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/sed/sed-4.4-1.tar.xz
+2019/04/14 14:48:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libuuid1/libuuid1-2.33.1-1.tar.xz
+2019/04/14 14:48:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libsmartcols1/libsmartcols1-2.33.1-1.tar.xz
+2019/04/14 14:48:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/popt/libpopt0/libpopt0-1.16-2.tar.xz
+2019/04/14 14:48:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/p11-kit/libp11-kit0/libp11-kit0-0.23.15-1.tar.xz
+2019/04/14 14:48:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libiconv/libiconv-1.14-3.tar.xz
+2019/04/14 14:48:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gdbm/libgdbm4/libgdbm4-1.12-1.tar.xz
+2019/04/14 14:48:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/attr/libattr1/libattr1-2.4.48-2.tar.xz
+2019/04/14 14:48:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/texinfo/info/info-6.6-1.tar.xz
+2019/04/14 14:48:29 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/diffutils/diffutils-3.5-2.tar.xz
+2019/04/14 14:48:30 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/alternatives/alternatives-1.3.30c-10.tar.bz2
+2019/04/14 14:48:31 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/file/file-5.32-1.tar.xz
+2019/04/14 14:48:31 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gawk/gawk-5.0.0-1.tar.xz
+2019/04/14 14:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libblkid1/libblkid1-2.33.1-1.tar.xz
+2019/04/14 14:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygutils/cygutils-1.4.16-2.tar.xz
+2019/04/14 14:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/p11-kit/p11-kit-trust/p11-kit-trust-0.23.15-1.tar.xz
+2019/04/14 14:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/p11-kit/p11-kit-0.23.15-1.tar.xz
+2019/04/14 14:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/coreutils/coreutils-8.26-2.tar.xz
+2019/04/14 14:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libfdisk1/libfdisk1-2.33.1-1.tar.xz
+2019/04/14 14:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/bash/bash-4.4.12-3.tar.xz
+2019/04/14 14:48:36 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/util-linux-2.33.1-1.tar.xz
+2019/04/14 14:48:39 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/tzcode/tzcode-2018i-1.tar.xz
+2019/04/14 14:48:39 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/xz/xz-5.2.3-1.tar.xz
+2019/04/14 14:48:40 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gzip/gzip-1.8-1.tar.xz
+2019/04/14 14:48:40 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/groff/groff-1.22.4-1.tar.xz
+2019/04/14 14:48:44 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/grep/grep-3.0-2.tar.xz
+2019/04/14 14:48:44 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/findutils/findutils-4.6.0-1.tar.xz
+2019/04/14 14:48:45 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/crypto-policies/crypto-policies-20190218-1.tar.xz
+2019/04/14 14:48:45 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/ca-certificates/ca-certificates-2.26-1.tar.xz
+2019/04/14 14:48:46 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/bzip2/bzip2-1.0.6-3.tar.xz
+2019/04/14 14:48:46 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/man-db/man-db-2.7.6.1-1.tar.xz
+2019/04/14 14:48:47 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/rebase/rebase-4.4.4-1.tar.xz
+2019/04/14 14:48:47 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-files/base-files-4.2-4.tar.xz
+2019/04/14 14:48:47 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl/libssl1.1/libssl1.1-1.1.1b-1.tar.xz
+2019/04/14 14:48:48 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/tar/tar-1.29-1.tar.xz
+2019/04/14 14:48:48 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl/openssl-1.1.1b-1.tar.xz
+2019/04/14 14:48:51 Changing gid back to original
+2019/04/14 14:48:51 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 14:49:32 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 14:49:37 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/000-cygwin-post-install.sh"
+2019/04/14 14:49:38 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/coreutils.sh"
+2019/04/14 14:49:40 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/bash.sh"
+2019/04/14 14:49:42 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/base-files-mketc.sh"
+2019/04/14 14:49:43 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/base-files-profile.sh"
+2019/04/14 14:49:49 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/p11-kit.sh"
+2019/04/14 14:49:49 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/ca-certificates.sh"
+2019/04/14 14:49:54 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/crypto-policies.sh"
+2019/04/14 14:50:02 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/openssl.sh"
+2019/04/14 14:50:03 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/man-db.sh"
+2019/04/14 14:50:03 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/mintty.sh"
+2019/04/14 14:50:03 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 14:50:03 Changing gid to Administrators
+2019/04/14 14:54:16 note: Installation Complete
+2019/04/14 14:54:16 Ending cygwin install
+2019/04/14 15:00:51 Starting cygwin install, version 2.897
+2019/04/14 15:00:51 User has backup/restore rights
+2019/04/14 15:00:51 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 15:00:51 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 15:00:54 source: network install
+2019/04/14 15:00:57 root: C:\cygwin system
+2019/04/14 15:00:59 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 15:01:00 net: Direct
+2019/04/14 15:01:04 site: http://cygwin.mirror.constant.com/
+2019/04/14 15:01:05 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 15:01:06 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 15:01:09 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 15:01:26 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 15:01:27 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 15:01:28 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 15:01:31 solving: 0 tasks, update: yes, use test packages: yes
+2019/04/14 15:01:32 solving: 0 tasks, update: yes, use test packages: yes
+2019/04/14 15:01:33 solving: 0 tasks, update: yes, use test packages: yes
+2019/04/14 15:41:08 Ending cygwin install
+2019/04/14 17:52:11 Starting cygwin install, version 2.897
+2019/04/14 17:52:11 User has backup/restore rights
+2019/04/14 17:52:11 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 17:52:11 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 17:52:13 source: network install
+2019/04/14 17:52:15 root: C:\cygwin system
+2019/04/14 17:52:18 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 17:52:19 net: Direct
+2019/04/14 17:52:46 site: http://cygwin.mirror.constant.com/
+2019/04/14 17:52:47 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 17:52:48 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 17:52:51 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 18:02:03 solving: 6 tasks, update: no, use test packages: no
+2019/04/14 18:02:03 Augmented Transaction List:
+2019/04/14 18:02:03    0 install                                python-pip-wheel            19.0.3-1
+2019/04/14 18:02:03    1 install                         python-setuptools-wheel            40.8.0-1
+2019/04/14 18:02:03    2 install                              python-wheel-wheel            0.33.1-1
+2019/04/14 18:02:03    3 install                                        libisl15            0.16.1-1
+2019/04/14 18:02:03    4 install                                       libcrypt2             4.4.4-1
+2019/04/14 18:02:03    5 install                                     libpkgconf3             1.6.0-1
+2019/04/14 18:02:03    6 install                                        binutils              2.29-1
+2019/04/14 18:02:03    7 install                                       libcrypt0               2.1-1
+2019/04/14 18:02:03    8 install                                       libexpat1             2.2.6-1
+2019/04/14 18:02:03    9 install                                    libsqlite3_0            3.27.2-1
+2019/04/14 18:02:03   10 install                                       liblzo2_2              2.10-1
+2019/04/14 18:02:03   11 install                                    libpixman1_0            0.34.0-1
+2019/04/14 18:02:03   12 install                                        libpng16            1.6.34-1
+2019/04/14 18:02:03   13 install                                         libXau6             1.0.8-1
+2019/04/14 18:02:03   14 install                                    cygwin-devel             3.0.6-1
+2019/04/14 18:02:03   15 install                                      libatomic1             7.4.0-1
+2019/04/14 18:02:03   16 install                                        libgomp1             7.4.0-1
+2019/04/14 18:02:03   17 install                                         libmpc3             1.1.0-1
+2019/04/14 18:02:03   18 install                                    libquadmath0             7.4.0-1
+2019/04/14 18:02:03   19 install                                  w32api-headers             5.0.4-1
+2019/04/14 18:02:03   20 install                        windows-default-manifest               6.4-1
+2019/04/14 18:02:03   21 install                                       libXdmcp6             1.1.2-1
+2019/04/14 18:02:03   22 install                       gsettings-desktop-schemas            3.24.1-1
+2019/04/14 18:02:03   23 install                                    dejavu-fonts              2.37-1
+2019/04/14 18:02:03   24 install                            libfontconfig-common            2.12.6-2
+2019/04/14 18:02:03   25 install                                         libxml2             2.9.9-2
+2019/04/14 18:02:03   26 install                                         pkgconf             1.6.0-1
+2019/04/14 18:02:03   27 install                                        python37             3.7.3-1
+2019/04/14 18:02:03   28 install                                    libfreetype6             2.8.1-1
+2019/04/14 18:02:03   29 install                                  w32api-runtime             5.0.4-1
+2019/04/14 18:02:03   30 install                                         libxcb1              1.12-2
+2019/04/14 18:02:03   31 install                                    libglib2.0_0            2.54.3-1
+2019/04/14 18:02:03   32 install                                      pkg-config             1.6.0-1
+2019/04/14 18:02:03   33 install                             python37-setuptools            40.8.0-1
+2019/04/14 18:02:03   34 install                                    python37-ply              3.11-1
+2019/04/14 18:02:03   35 install                             python37-virtualenv            16.4.3-1
+2019/04/14 18:02:03   36 install                                  libfontconfig1            2.12.6-2
+2019/04/14 18:02:03   37 install                                        gcc-core             7.4.0-1
+2019/04/14 18:02:03   38 install                                     libxcb-shm0              1.12-2
+2019/04/14 18:02:03   39 install                                  libxcb-render0              1.12-2
+2019/04/14 18:02:03   40 install                                        libX11_6             1.6.5-1
+2019/04/14 18:02:03   41 install                              desktop-file-utils              0.23-1
+2019/04/14 18:02:03   42 install                                  libcrypt-devel             4.4.4-1
+2019/04/14 18:02:03   43 install                                    python37-pip            19.0.3-1
+2019/04/14 18:02:03   44 install                              python37-pycparser              2.19-1
+2019/04/14 18:02:03   45 install                                     libXrender1             0.9.9-1
+2019/04/14 18:02:03   46 install                                        libXext6             1.3.3-1
+2019/04/14 18:02:03   47 install                                           gamin           0.1.10-15
+2019/04/14 18:02:03   48 install                                  python37-devel             3.7.3-1
+2019/04/14 18:02:03   49 install                                   python37-cffi            1.12.2-1
+2019/04/14 18:02:03   50 install                                         libfam0           0.1.10-15
+2019/04/14 18:02:03   51 install                                shared-mime-info               1.8-1
+2019/04/14 18:02:03   52 install                                       libcairo2           1.14.12-1
+2019/04/14 18:02:03   53 install                                  python37-cairo            1.14.1-1
+2019/04/14 18:02:32 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python-pip-wheel/python-pip-wheel-19.0.3-1.tar.xz
+2019/04/14 18:02:33 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python-setuptools-wheel/python-setuptools-wheel-40.8.0-1.tar.xz
+2019/04/14 18:02:34 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-wheel/python-wheel-wheel/python-wheel-wheel-0.33.1-1.tar.xz
+2019/04/14 18:02:35 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/isl/libisl15/libisl15-0.16.1-1.tar.xz
+2019/04/14 18:02:36 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcrypt/libcrypt2/libcrypt2-4.4.4-1.tar.xz
+2019/04/14 18:02:37 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pkgconf/libpkgconf3/libpkgconf3-1.6.0-1.tar.xz
+2019/04/14 18:02:45 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/binutils/binutils-2.29-1.tar.xz
+2019/04/14 18:02:45 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/crypt/libcrypt0/libcrypt0-2.1-1.tar.xz
+2019/04/14 18:02:46 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/expat/libexpat1/libexpat1-2.2.6-1.tar.xz
+2019/04/14 18:02:47 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/sqlite3/libsqlite3_0/libsqlite3_0-3.27.2-1.tar.xz
+2019/04/14 18:02:48 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/liblzo2/liblzo2_2/liblzo2_2-2.10-1.tar.xz
+2019/04/14 18:02:49 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pixman/libpixman1_0/libpixman1_0-0.34.0-1.tar.xz
+2019/04/14 18:02:50 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libpng/libpng16/libpng16-1.6.34-1.tar.xz
+2019/04/14 18:02:50 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXau/libXau6/libXau6-1.0.8-1.tar.bz2
+2019/04/14 18:02:51 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygwin/cygwin-devel/cygwin-devel-3.0.6-1.tar.xz
+2019/04/14 18:02:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libatomic1/libatomic1-7.4.0-1.tar.xz
+2019/04/14 18:02:53 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libgomp1/libgomp1-7.4.0-1.tar.xz
+2019/04/14 18:02:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mpclib/libmpc3/libmpc3-1.1.0-1.tar.xz
+2019/04/14 18:02:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libquadmath0/libquadmath0-7.4.0-1.tar.xz
+2019/04/14 18:03:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/w32api-headers/w32api-headers-5.0.4-1.tar.xz
+2019/04/14 18:03:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/windows-default-manifest/windows-default-manifest-6.4-1.tar.xz
+2019/04/14 18:03:03 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXdmcp/libXdmcp6/libXdmcp6-1.1.2-1.tar.xz
+2019/04/14 18:03:04 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/gsettings-desktop-schemas/gsettings-desktop-schemas-3.24.1-1.tar.xz
+2019/04/14 18:03:08 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/dejavu-fonts/dejavu-fonts-2.37-1.tar.xz
+2019/04/14 18:03:09 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/fontconfig/libfontconfig-common/libfontconfig-common-2.12.6-2.tar.xz
+2019/04/14 18:03:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxml2/libxml2-2.9.9-2.tar.xz
+2019/04/14 18:03:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pkgconf/pkgconf-1.6.0-1.tar.xz
+2019/04/14 18:03:16 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python37/python37-3.7.3-1.tar.xz
+2019/04/14 18:03:17 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/freetype2/libfreetype6/libfreetype6-2.8.1-1.tar.xz
+2019/04/14 18:03:19 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/w32api-runtime/w32api-runtime-5.0.4-1.tar.xz
+2019/04/14 18:03:20 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcb/libxcb1/libxcb1-1.12-2.tar.xz
+2019/04/14 18:03:24 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/glib2.0/libglib2.0_0/libglib2.0_0-2.54.3-1.tar.xz
+2019/04/14 18:03:25 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pkgconf/pkg-config/pkg-config-1.6.0-1.tar.xz
+2019/04/14 18:03:26 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python37-setuptools/python37-setuptools-40.8.0-1.tar.xz
+2019/04/14 18:03:26 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-ply/python37-ply/python37-ply-3.11-1.tar.xz
+2019/04/14 18:03:28 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-virtualenv/python37-virtualenv/python37-virtualenv-16.4.3-1.tar.xz
+2019/04/14 18:03:28 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/fontconfig/libfontconfig1/libfontconfig1-2.12.6-2.tar.xz
+2019/04/14 18:03:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/gcc-core/gcc-core-7.4.0-1.tar.xz
+2019/04/14 18:03:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcb/libxcb-shm0/libxcb-shm0-1.12-2.tar.xz
+2019/04/14 18:03:53 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcb/libxcb-render0/libxcb-render0-1.12-2.tar.xz
+2019/04/14 18:03:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libX11/libX11_6/libX11_6-1.6.5-1.tar.xz
+2019/04/14 18:03:55 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/desktop-file-utils/desktop-file-utils-0.23-1.tar.xz
+2019/04/14 18:03:56 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcrypt/libcrypt-devel/libcrypt-devel-4.4.4-1.tar.xz
+2019/04/14 18:04:00 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python37-pip/python37-pip-19.0.3-1.tar.xz
+2019/04/14 18:04:01 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pycparser/python37-pycparser/python37-pycparser-2.19-1.tar.xz
+2019/04/14 18:04:01 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXrender/libXrender1/libXrender1-0.9.9-1.tar.xz
+2019/04/14 18:04:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXext/libXext6/libXext6-1.3.3-1.tar.xz
+2019/04/14 18:04:03 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gamin/gamin-0.1.10-15.tar.xz
+2019/04/14 18:04:05 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python37/python37-devel/python37-devel-3.7.3-1.tar.xz
+2019/04/14 18:04:06 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python-cffi/python37-cffi/python37-cffi-1.12.2-1.tar.xz
+2019/04/14 18:04:06 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gamin/libfam0/libfam0-0.1.10-15.tar.xz
+2019/04/14 18:04:07 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/shared-mime-info/shared-mime-info-1.8-1.tar.xz
+2019/04/14 18:04:09 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cairo/libcairo2/libcairo2-1.14.12-1.tar.xz
+2019/04/14 18:04:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python-cairo/python37-cairo/python37-cairo-1.14.1-1.tar.xz
+2019/04/14 18:04:10 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python-pip-wheel/python-pip-wheel-19.0.3-1.tar.xz
+2019/04/14 18:04:10 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python-setuptools-wheel/python-setuptools-wheel-40.8.0-1.tar.xz
+2019/04/14 18:04:10 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-wheel/python-wheel-wheel/python-wheel-wheel-0.33.1-1.tar.xz
+2019/04/14 18:04:10 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/isl/libisl15/libisl15-0.16.1-1.tar.xz
+2019/04/14 18:04:10 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcrypt/libcrypt2/libcrypt2-4.4.4-1.tar.xz
+2019/04/14 18:04:10 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pkgconf/libpkgconf3/libpkgconf3-1.6.0-1.tar.xz
+2019/04/14 18:04:10 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/binutils/binutils-2.29-1.tar.xz
+2019/04/14 18:04:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/crypt/libcrypt0/libcrypt0-2.1-1.tar.xz
+2019/04/14 18:04:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/expat/libexpat1/libexpat1-2.2.6-1.tar.xz
+2019/04/14 18:04:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/sqlite3/libsqlite3_0/libsqlite3_0-3.27.2-1.tar.xz
+2019/04/14 18:04:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/liblzo2/liblzo2_2/liblzo2_2-2.10-1.tar.xz
+2019/04/14 18:04:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pixman/libpixman1_0/libpixman1_0-0.34.0-1.tar.xz
+2019/04/14 18:04:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libpng/libpng16/libpng16-1.6.34-1.tar.xz
+2019/04/14 18:04:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXau/libXau6/libXau6-1.0.8-1.tar.bz2
+2019/04/14 18:04:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygwin/cygwin-devel/cygwin-devel-3.0.6-1.tar.xz
+2019/04/14 18:04:19 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libatomic1/libatomic1-7.4.0-1.tar.xz
+2019/04/14 18:04:19 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libgomp1/libgomp1-7.4.0-1.tar.xz
+2019/04/14 18:04:19 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mpclib/libmpc3/libmpc3-1.1.0-1.tar.xz
+2019/04/14 18:04:19 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libquadmath0/libquadmath0-7.4.0-1.tar.xz
+2019/04/14 18:04:19 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/w32api-headers/w32api-headers-5.0.4-1.tar.xz
+2019/04/14 18:04:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/windows-default-manifest/windows-default-manifest-6.4-1.tar.xz
+2019/04/14 18:04:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXdmcp/libXdmcp6/libXdmcp6-1.1.2-1.tar.xz
+2019/04/14 18:04:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/gsettings-desktop-schemas/gsettings-desktop-schemas-3.24.1-1.tar.xz
+2019/04/14 18:04:29 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/dejavu-fonts/dejavu-fonts-2.37-1.tar.xz
+2019/04/14 18:04:30 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/fontconfig/libfontconfig-common/libfontconfig-common-2.12.6-2.tar.xz
+2019/04/14 18:04:30 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxml2/libxml2-2.9.9-2.tar.xz
+2019/04/14 18:04:30 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pkgconf/pkgconf-1.6.0-1.tar.xz
+2019/04/14 18:04:30 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python37/python37-3.7.3-1.tar.xz
+2019/04/14 18:04:46 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/freetype2/libfreetype6/libfreetype6-2.8.1-1.tar.xz
+2019/04/14 18:04:46 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/w32api-runtime/w32api-runtime-5.0.4-1.tar.xz
+2019/04/14 18:04:49 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcb/libxcb1/libxcb1-1.12-2.tar.xz
+2019/04/14 18:04:49 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/glib2.0/libglib2.0_0/libglib2.0_0-2.54.3-1.tar.xz
+2019/04/14 18:04:52 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/pkgconf/pkg-config/pkg-config-1.6.0-1.tar.xz
+2019/04/14 18:04:52 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python37-setuptools/python37-setuptools-40.8.0-1.tar.xz
+2019/04/14 18:04:58 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-ply/python37-ply/python37-ply-3.11-1.tar.xz
+2019/04/14 18:04:58 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-virtualenv/python37-virtualenv/python37-virtualenv-16.4.3-1.tar.xz
+2019/04/14 18:04:58 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/fontconfig/libfontconfig1/libfontconfig1-2.12.6-2.tar.xz
+2019/04/14 18:04:58 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/gcc-core/gcc-core-7.4.0-1.tar.xz
+2019/04/14 18:05:03 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcb/libxcb-shm0/libxcb-shm0-1.12-2.tar.xz
+2019/04/14 18:05:03 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcb/libxcb-render0/libxcb-render0-1.12-2.tar.xz
+2019/04/14 18:05:03 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libX11/libX11_6/libX11_6-1.6.5-1.tar.xz
+2019/04/14 18:05:04 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/desktop-file-utils/desktop-file-utils-0.23-1.tar.xz
+2019/04/14 18:05:05 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libxcrypt/libcrypt-devel/libcrypt-devel-4.4.4-1.tar.xz
+2019/04/14 18:05:05 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python37-pip/python37-pip-19.0.3-1.tar.xz
+2019/04/14 18:05:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pycparser/python37-pycparser/python37-pycparser-2.19-1.tar.xz
+2019/04/14 18:05:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXrender/libXrender1/libXrender1-0.9.9-1.tar.xz
+2019/04/14 18:05:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libXext/libXext6/libXext6-1.3.3-1.tar.xz
+2019/04/14 18:05:18 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gamin/gamin-0.1.10-15.tar.xz
+2019/04/14 18:05:18 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python37/python37-devel/python37-devel-3.7.3-1.tar.xz
+2019/04/14 18:05:18 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python-cffi/python37-cffi/python37-cffi-1.12.2-1.tar.xz
+2019/04/14 18:05:19 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gamin/libfam0/libfam0-0.1.10-15.tar.xz
+2019/04/14 18:05:19 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/shared-mime-info/shared-mime-info-1.8-1.tar.xz
+2019/04/14 18:05:20 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cairo/libcairo2/libcairo2-1.14.12-1.tar.xz
+2019/04/14 18:05:20 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python-cairo/python37-cairo/python37-cairo-1.14.1-1.tar.xz
+2019/04/14 18:05:20 Changing gid back to original
+2019/04/14 18:05:20 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 18:05:51 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 18:05:59 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/fontconfig_dtd.sh"
+2019/04/14 18:06:00 abnormal exit: exit code=2
+2019/04/14 18:06:00 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/libxml2.sh"
+2019/04/14 18:06:00 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 18:06:01 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 18:07:18 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 18:07:20 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 18:07:20 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 18:07:26 Changing gid to Administrators
+2019/04/14 18:13:09 note: Installation Complete
+2019/04/14 18:13:09 Ending cygwin install
+2019/04/14 18:13:41 Starting cygwin install, version 2.897
+2019/04/14 18:13:41 User has backup/restore rights
+2019/04/14 18:13:41 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 18:13:41 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 18:13:47 source: network install
+2019/04/14 18:13:48 root: C:\cygwin system
+2019/04/14 18:13:49 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 18:13:49 net: Direct
+2019/04/14 18:13:53 site: http://cygwin.mirror.constant.com/
+2019/04/14 18:13:54 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 18:13:55 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 18:13:58 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 18:15:12 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 18:15:20 solving: 0 tasks, update: no, use test packages: no
+2019/04/14 18:15:20 Augmented Transaction List: is empty
+2019/04/14 18:15:23 Changing gid back to original
+2019/04/14 18:15:23 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 18:15:31 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 18:15:32 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/fontconfig_dtd.sh"
+2019/04/14 18:15:32 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 18:15:33 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 18:15:35 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 18:15:36 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 18:15:36 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 18:15:36 Changing gid to Administrators
+2019/04/14 18:15:39 note: Nothing needed to be installed
+2019/04/14 18:15:39 Ending cygwin install
+2019/04/14 18:58:35 Starting cygwin install, version 2.897
+2019/04/14 18:58:35 User has backup/restore rights
+2019/04/14 18:58:35 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 18:58:35 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 18:58:38 source: network install
+2019/04/14 18:58:39 root: C:\cygwin system
+2019/04/14 18:58:39 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 18:58:41 net: Direct
+2019/04/14 18:58:45 site: http://cygwin.mirror.constant.com/
+2019/04/14 18:58:46 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 18:58:47 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 18:58:50 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 18:59:01 solving: 0 tasks, update: no, use test packages: no
+2019/04/14 18:59:01 Augmented Transaction List: is empty
+2019/04/14 18:59:02 Changing gid back to original
+2019/04/14 18:59:02 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 18:59:11 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 18:59:12 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 18:59:12 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 18:59:15 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 18:59:15 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 18:59:15 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 18:59:16 Changing gid to Administrators
+2019/04/14 18:59:23 note: Nothing needed to be installed
+2019/04/14 18:59:23 Ending cygwin install
+2019/04/14 19:00:30 Starting cygwin install, version 2.897
+2019/04/14 19:00:30 User has backup/restore rights
+2019/04/14 19:00:30 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 19:00:30 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 19:00:32 source: network install
+2019/04/14 19:00:33 root: C:\cygwin system
+2019/04/14 19:00:34 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 19:00:35 net: Direct
+2019/04/14 19:00:51 Ending cygwin install
+2019/04/14 19:01:20 Starting cygwin install, version 2.897
+2019/04/14 19:01:20 User has backup/restore rights
+2019/04/14 19:01:20 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 19:01:20 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 19:01:22 source: network install
+2019/04/14 19:01:22 root: C:\cygwin system
+2019/04/14 19:01:23 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 19:01:23 net: Direct
+2019/04/14 19:01:28 site: http://cygwin.mirror.constant.com/
+2019/04/14 19:01:29 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 19:01:30 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 19:01:33 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 19:01:42 Ending cygwin install
+2019/04/14 18:26:31 Starting cygwin install, version 2.897
+2019/04/14 18:26:31 User has backup/restore rights
+2019/04/14 18:26:31 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 18:26:31 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 18:26:33 source: network install
+2019/04/14 18:26:33 root: C:\cygwin system
+2019/04/14 18:26:34 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 18:26:35 net: Direct
+2019/04/14 18:26:39 site: http://cygwin.mirror.constant.com/
+2019/04/14 18:26:40 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 18:26:40 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 18:26:44 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 19:02:05 Ending cygwin install
+2019/04/14 20:41:03 Starting cygwin install, version 2.897
+2019/04/14 20:41:03 User has backup/restore rights
+2019/04/14 20:41:03 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 20:41:03 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 20:41:06 source: network install
+2019/04/14 20:41:07 root: C:\cygwin system
+2019/04/14 20:41:07 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 20:41:08 net: Direct
+2019/04/14 20:41:47 site: http://cygwin.mirror.constant.com/
+2019/04/14 20:41:47 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 20:41:48 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 20:41:51 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 20:42:38 solving: 1 tasks, update: no, use test packages: no
+2019/04/14 20:42:38 Augmented Transaction List:
+2019/04/14 20:42:38    0 install                                            nano             2.8.4-1
+2019/04/14 20:42:44 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/nano/nano-2.8.4-1.tar.xz
+2019/04/14 20:42:44 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/nano/nano-2.8.4-1.tar.xz
+2019/04/14 20:42:44 Changing gid back to original
+2019/04/14 20:42:44 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 20:42:54 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 20:43:03 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 20:43:03 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 20:43:07 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 20:43:08 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 20:43:08 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 20:43:08 Changing gid to Administrators
+2019/04/14 20:46:18 note: Installation Complete
+2019/04/14 20:46:18 Ending cygwin install
+2019/04/14 21:22:44 Starting cygwin install, version 2.897
+2019/04/14 21:22:44 User has backup/restore rights
+2019/04/14 21:22:44 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 21:22:44 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 21:22:45 source: network install
+2019/04/14 21:22:46 root: C:\cygwin system
+2019/04/14 21:22:46 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 21:22:46 net: Direct
+2019/04/14 21:22:54 site: http://cygwin.mirror.constant.com/
+2019/04/14 21:22:55 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 21:22:55 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 21:22:59 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 21:29:46 solving: 4 tasks, update: no, use test packages: no
+2019/04/14 21:29:46 Augmented Transaction List:
+2019/04/14 21:29:46    0 install                                    libffi-devel             3.2.1-1
+2019/04/14 21:29:46    1 install                             mingw64-i686-libffi             3.2.1-1
+2019/04/14 21:29:46    2 install                                            nano             2.9.7-1
+2019/04/14 21:29:46    3   erase                                            nano             2.8.4-1
+2019/04/14 21:29:46    4 install                                cygwin-debuginfo             3.0.6-1
+2019/04/14 21:29:46    5 install                                libffi-debuginfo             3.2.1-1
+2019/04/14 21:30:07 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libffi/libffi-devel/libffi-devel-3.2.1-1.tar.xz
+2019/04/14 21:30:08 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-libffi/mingw64-i686-libffi-3.2.1-1.tar.xz
+2019/04/14 21:30:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/nano/nano-2.9.7-1.tar.xz
+2019/04/14 21:30:20 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygwin/cygwin-debuginfo/cygwin-debuginfo-3.0.6-1.tar.xz
+2019/04/14 21:30:21 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libffi/libffi-debuginfo/libffi-debuginfo-3.2.1-1.tar.xz
+2019/04/14 21:30:21 Uninstalling nano
+2019/04/14 21:30:22 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libffi/libffi-devel/libffi-devel-3.2.1-1.tar.xz
+2019/04/14 21:30:22 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-libffi/mingw64-i686-libffi-3.2.1-1.tar.xz
+2019/04/14 21:30:22 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/nano/nano-2.9.7-1.tar.xz
+2019/04/14 21:30:23 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygwin/cygwin-debuginfo/cygwin-debuginfo-3.0.6-1.tar.xz
+2019/04/14 21:30:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libffi/libffi-debuginfo/libffi-debuginfo-3.2.1-1.tar.xz
+2019/04/14 21:30:29 Changing gid back to original
+2019/04/14 21:30:29 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 21:30:46 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 21:30:55 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 21:30:55 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 21:31:34 abnormal exit: exit code=254
+2019/04/14 21:31:34 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 21:31:35 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 21:31:35 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 21:31:37 Changing gid to Administrators
+2019/04/14 21:32:12 note: Installation Complete
+2019/04/14 21:32:12 Ending cygwin install
+2019/04/14 21:34:28 Starting cygwin install, version 2.897
+2019/04/14 21:34:28 User has backup/restore rights
+2019/04/14 21:34:28 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 21:34:29 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 21:34:33 source: network install
+2019/04/14 21:34:34 root: C:\cygwin system
+2019/04/14 21:34:35 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 21:34:35 net: Direct
+2019/04/14 21:34:38 site: http://cygwin.mirror.constant.com/
+2019/04/14 21:34:39 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 21:34:39 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 21:34:43 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 21:49:08 solving: 4 tasks, update: no, use test packages: no
+2019/04/14 21:49:08 Augmented Transaction List:
+2019/04/14 21:49:08    0 install                               mingw64-i686-zlib             1.2.8-3
+2019/04/14 21:49:08    1 install                                            zlib             1.2.8-3
+2019/04/14 21:49:08    2 install                                  zlib-debuginfo             1.2.8-3
+2019/04/14 21:49:08    3 install                                      zlib-devel             1.2.8-3
+2019/04/14 21:49:12 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-zlib/mingw64-i686-zlib-1.2.8-3.tar.xz
+2019/04/14 21:49:13 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-1.2.8-3.tar.xz
+2019/04/14 21:49:15 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-debuginfo/zlib-debuginfo-1.2.8-3.tar.xz
+2019/04/14 21:49:16 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-devel/zlib-devel-1.2.8-3.tar.xz
+2019/04/14 21:49:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-zlib/mingw64-i686-zlib-1.2.8-3.tar.xz
+2019/04/14 21:49:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-1.2.8-3.tar.xz
+2019/04/14 21:49:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-debuginfo/zlib-debuginfo-1.2.8-3.tar.xz
+2019/04/14 21:49:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-devel/zlib-devel-1.2.8-3.tar.xz
+2019/04/14 21:49:17 Changing gid back to original
+2019/04/14 21:49:17 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 21:49:32 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 21:49:33 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 21:49:34 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 21:49:51 abnormal exit: exit code=254
+2019/04/14 21:49:51 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 21:49:51 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 21:49:51 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 21:49:54 Changing gid to Administrators
+2019/04/14 21:50:06 note: Installation Complete
+2019/04/14 21:50:06 Ending cygwin install
+2019/04/14 21:55:11 Starting cygwin install, version 2.897
+2019/04/14 21:55:11 User has backup/restore rights
+2019/04/14 21:55:11 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 21:55:11 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 21:55:13 source: network install
+2019/04/14 21:55:13 root: C:\cygwin system
+2019/04/14 21:55:14 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 21:55:15 net: Direct
+2019/04/14 21:55:18 site: http://cygwin.mirror.constant.com/
+2019/04/14 21:55:18 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 21:55:19 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 21:55:22 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 21:56:40 solving: 7 tasks, update: no, use test packages: no
+2019/04/14 21:56:40 Augmented Transaction List:
+2019/04/14 21:56:40    0 install                                    R_autorebase            001001-1
+2019/04/14 21:56:40    1 install                               mingw64-i686-zlib            1.2.11-1
+2019/04/14 21:56:40    2   erase                               mingw64-i686-zlib             1.2.8-3
+2019/04/14 21:56:40    3 install                                 perl_autorebase            5.26.3-1
+2019/04/14 21:56:40    4 install                                rebase-debuginfo             4.4.4-1
+2019/04/14 21:56:40    5 install                                            zlib            1.2.11-1
+2019/04/14 21:56:40    6   erase                                            zlib             1.2.8-3
+2019/04/14 21:56:40    7 install                                  zlib-debuginfo            1.2.11-1
+2019/04/14 21:56:40    8   erase                                  zlib-debuginfo             1.2.8-3
+2019/04/14 21:56:40    9 install                                      zlib-devel            1.2.11-1
+2019/04/14 21:56:40   10   erase                                      zlib-devel             1.2.8-3
+2019/04/14 21:56:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/R/R_autorebase/R_autorebase-001001-1.tar.xz
+2019/04/14 21:56:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-zlib/mingw64-i686-zlib-1.2.11-1.tar.xz
+2019/04/14 21:56:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl/perl_autorebase/perl_autorebase-5.26.3-1.tar.xz
+2019/04/14 21:56:59 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/rebase/rebase-debuginfo/rebase-debuginfo-4.4.4-1.tar.xz
+2019/04/14 21:57:00 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-1.2.11-1.tar.xz
+2019/04/14 21:57:01 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-debuginfo/zlib-debuginfo-1.2.11-1.tar.xz
+2019/04/14 21:57:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-devel/zlib-devel-1.2.11-1.tar.xz
+2019/04/14 21:57:02 Uninstalling mingw64-i686-zlib
+2019/04/14 21:57:02 Uninstalling zlib
+2019/04/14 21:57:02 Uninstalling zlib-debuginfo
+2019/04/14 21:57:02 Uninstalling zlib-devel
+2019/04/14 21:57:02 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/R/R_autorebase/R_autorebase-001001-1.tar.xz
+2019/04/14 21:57:02 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-zlib/mingw64-i686-zlib-1.2.11-1.tar.xz
+2019/04/14 21:57:02 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl/perl_autorebase/perl_autorebase-5.26.3-1.tar.xz
+2019/04/14 21:57:02 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/rebase/rebase-debuginfo/rebase-debuginfo-4.4.4-1.tar.xz
+2019/04/14 21:57:02 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-1.2.11-1.tar.xz
+2019/04/14 21:57:02 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-debuginfo/zlib-debuginfo-1.2.11-1.tar.xz
+2019/04/14 21:57:03 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-devel/zlib-devel-1.2.11-1.tar.xz
+2019/04/14 21:57:03 Changing gid back to original
+2019/04/14 21:57:03 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 21:57:14 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 21:57:15 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 21:57:30 abnormal exit: exit code=254
+2019/04/14 21:57:30 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 21:57:42 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 21:57:49 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 21:57:49 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 21:58:05 abnormal exit: exit code=254
+2019/04/14 21:58:05 Changing gid to Administrators
+2019/04/14 21:58:09 Uninstalling mingw64-i686-zlib
+2019/04/14 21:58:09 Uninstalling zlib
+2019/04/14 21:58:09 Uninstalling zlib-debuginfo
+2019/04/14 21:58:09 Uninstalling zlib-devel
+2019/04/14 21:58:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/R/R_autorebase/R_autorebase-001001-1.tar.xz
+2019/04/14 21:58:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-zlib/mingw64-i686-zlib-1.2.11-1.tar.xz
+2019/04/14 21:58:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl/perl_autorebase/perl_autorebase-5.26.3-1.tar.xz
+2019/04/14 21:58:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/rebase/rebase-debuginfo/rebase-debuginfo-4.4.4-1.tar.xz
+2019/04/14 21:58:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-1.2.11-1.tar.xz
+2019/04/14 21:58:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-debuginfo/zlib-debuginfo-1.2.11-1.tar.xz
+2019/04/14 21:58:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/zlib/zlib-devel/zlib-devel-1.2.11-1.tar.xz
+2019/04/14 21:58:09 Changing gid back to original
+2019/04/14 21:58:09 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 21:58:21 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 21:58:22 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 21:58:22 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 21:58:24 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 21:58:24 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 21:58:24 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 21:58:25 Changing gid to Administrators
+2019/04/14 21:58:26 note: Installation Complete
+2019/04/14 21:58:26 Ending cygwin install
+2019/04/14 22:08:55 Starting cygwin install, version 2.897
+2019/04/14 22:08:55 User has backup/restore rights
+2019/04/14 22:08:55 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 22:08:55 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 22:08:58 source: network install
+2019/04/14 22:09:00 root: C:\cygwin system
+2019/04/14 22:09:00 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 22:09:01 net: Direct
+2019/04/14 22:09:04 site: http://cygwin.mirror.constant.com/
+2019/04/14 22:09:04 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 22:09:05 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 22:09:08 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 22:11:45 solving: 6 tasks, update: no, use test packages: no
+2019/04/14 22:11:45 Augmented Transaction List:
+2019/04/14 22:11:45    0 install                         libjpeg-turbo-debuginfo             1.5.3-1
+2019/04/14 22:11:45    1 install                                        libjpeg8             1.5.3-1
+2019/04/14 22:11:45    2 install                      mingw64-i686-libjpeg-turbo             1.5.3-1
+2019/04/14 22:11:45    3 install                             gambas3-gb-compress            3.12.2-1
+2019/04/14 22:11:45    4 install                                   libjpeg-devel             1.5.3-1
+2019/04/14 22:11:45    5 install                        gambas3-gb-compress-zlib            3.12.2-1
+2019/04/14 22:11:45    6 install                      gambas3-gb-compress-bzlib2            3.12.2-1
+2019/04/14 22:11:49 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libjpeg-turbo/libjpeg-turbo-debuginfo/libjpeg-turbo-debuginfo-1.5.3-1.tar.xz
+2019/04/14 22:11:51 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libjpeg-turbo/libjpeg8/libjpeg8-1.5.3-1.tar.xz
+2019/04/14 22:11:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-libjpeg-turbo/mingw64-i686-libjpeg-turbo-1.5.3-1.tar.xz
+2019/04/14 22:11:53 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-compress/gambas3-gb-compress-3.12.2-1.tar.xz
+2019/04/14 22:11:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libjpeg-turbo/libjpeg-devel/libjpeg-devel-1.5.3-1.tar.xz
+2019/04/14 22:11:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-compress-zlib/gambas3-gb-compress-zlib-3.12.2-1.tar.xz
+2019/04/14 22:11:55 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-compress-bzlib2/gambas3-gb-compress-bzlib2-3.12.2-1.tar.xz
+2019/04/14 22:11:55 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libjpeg-turbo/libjpeg-turbo-debuginfo/libjpeg-turbo-debuginfo-1.5.3-1.tar.xz
+2019/04/14 22:11:56 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libjpeg-turbo/libjpeg8/libjpeg8-1.5.3-1.tar.xz
+2019/04/14 22:11:56 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-libjpeg-turbo/mingw64-i686-libjpeg-turbo-1.5.3-1.tar.xz
+2019/04/14 22:11:56 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-compress/gambas3-gb-compress-3.12.2-1.tar.xz
+2019/04/14 22:11:56 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libjpeg-turbo/libjpeg-devel/libjpeg-devel-1.5.3-1.tar.xz
+2019/04/14 22:11:56 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-compress-zlib/gambas3-gb-compress-zlib-3.12.2-1.tar.xz
+2019/04/14 22:11:56 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-compress-bzlib2/gambas3-gb-compress-bzlib2-3.12.2-1.tar.xz
+2019/04/14 22:11:56 Changing gid back to original
+2019/04/14 22:11:56 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 22:12:08 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 22:12:08 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 22:12:09 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 22:12:19 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 22:12:20 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 22:12:20 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 22:12:21 Changing gid to Administrators
+2019/04/14 22:12:24 note: Installation Complete
+2019/04/14 22:12:24 Ending cygwin install
+2019/04/14 22:34:31 Starting cygwin install, version 2.897
+2019/04/14 22:34:31 User has backup/restore rights
+2019/04/14 22:34:31 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 22:34:31 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 22:34:34 source: network install
+2019/04/14 22:34:35 root: C:\cygwin system
+2019/04/14 22:34:35 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 22:34:36 net: Direct
+2019/04/14 22:34:43 site: http://cygwin.mirror.constant.com/
+2019/04/14 22:34:44 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 22:34:45 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 22:34:48 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 22:36:49 solving: 9 tasks, update: no, use test packages: no
+2019/04/14 22:36:49 Augmented Transaction List:
+2019/04/14 22:36:49    0 install                                postgresql-devel              11.2-1
+2019/04/14 22:36:49    1 install                                  postgresql-doc              11.2-1
+2019/04/14 22:36:49    2 install                                       perl_base            5.26.3-1
+2019/04/14 22:36:49    3 install                                       libssl1.0            1.0.2r-2
+2019/04/14 22:36:49    4 install                                           crypt               2.1-1
+2019/04/14 22:36:49    5 install                                        libdb5.3            5.3.28-2
+2019/04/14 22:36:49    6 install                          mingw64-i686-win-iconv             0.0.6-2
+2019/04/14 22:36:49    7 install           mingw64-i686-windows-default-manifest               6.4-1
+2019/04/14 22:36:49    8 install                           mingw64-i686-binutils   2.29.1.787c9873-1
+2019/04/14 22:36:49    9 install                        mingw64-i686-winpthreads             6.0.0-1
+2019/04/14 22:36:49   10 install                                 gambas3-runtime            3.12.2-1
+2019/04/14 22:36:49   11 install                                     libcom_err2            1.44.5-1
+2019/04/14 22:36:49   12 install                                 libkrb5support0            1.15.2-2
+2019/04/14 22:36:49   13 install                                   libuuid-devel            2.33.1-1
+2019/04/14 22:36:49   14 install                                            perl            5.26.3-1
+2019/04/14 22:36:49   15 install                            mingw64-i686-headers             6.0.0-1
+2019/04/14 22:36:49   16 install                                   gambas3-gb-db            3.12.2-1
+2019/04/14 22:36:49   17 install                                    libk5crypto3            1.15.2-2
+2019/04/14 22:36:49   18 install                                        python27            2.7.16-1
+2019/04/14 22:36:49   19 install                            mingw64-i686-runtime             6.0.0-1
+2019/04/14 22:36:49   20 install                                       libkrb5_3            1.15.2-2
+2019/04/14 22:36:49   21 install                                         python2            2.7.16-1
+2019/04/14 22:36:49   22 install                           mingw64-i686-gcc-core             7.4.0-1
+2019/04/14 22:36:49   23 install                                libgssapi_krb5_2            1.15.2-2
+2019/04/14 22:36:49   24 install                            mingw64-i686-gcc-g++             7.4.0-1
+2019/04/14 22:36:49   25 install                            mingw64-i686-openssl            1.0.2o-1
+2019/04/14 22:36:49   26 install                                libopenldap2_4_2            2.4.42-1
+2019/04/14 22:36:49   27 install                            mingw64-i686-gettext          0.19.8.1-2
+2019/04/14 22:36:49   28 install                                      libsasl2_3           2.1.26-11
+2019/04/14 22:36:49   29 install                         mingw64-i686-postgresql             9.5.4-1
+2019/04/14 22:36:49   30 install                                          libpq5              11.2-1
+2019/04/14 22:36:49   31 install                               postgresql-client              11.2-1
+2019/04/14 22:36:49   32 install                        gambas3-gb-db-postgresql            3.12.2-1
+2019/04/14 22:36:49   33 install                                      postgresql              11.2-1
+2019/04/14 22:36:49   34 install                             postgresql-plpython              11.2-1
+2019/04/14 22:36:49   35 install                               postgresql-plperl              11.2-1
+2019/04/14 22:36:49   36 install                              postgresql-contrib              11.2-1
+2019/04/14 22:36:55 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-devel/postgresql-devel-11.2-1.tar.xz
+2019/04/14 22:36:56 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-doc/postgresql-doc-11.2-1.tar.xz
+2019/04/14 22:36:59 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl/perl_base/perl_base-5.26.3-1.tar.xz
+2019/04/14 22:37:01 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl10/libssl1.0/libssl1.0-1.0.2r-2.tar.xz
+2019/04/14 22:37:01 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/crypt/crypt-2.1-1.tar.xz
+2019/04/14 22:37:02 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/db/libdb5.3/libdb5.3-5.3.28-2.tar.xz
+2019/04/14 22:37:03 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-win-iconv/mingw64-i686-win-iconv-0.0.6-2.tar.xz
+2019/04/14 22:37:04 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-windows-default-manifest/mingw64-i686-windows-default-manifest-6.4-1.tar.xz
+2019/04/14 22:37:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mingw64-i686-binutils/mingw64-i686-binutils-2.29.1.787c9873-1.tar.xz
+2019/04/14 22:37:12 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-winpthreads/mingw64-i686-winpthreads-6.0.0-1.tar.xz
+2019/04/14 22:37:14 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-runtime/gambas3-runtime-3.12.2-1.tar.xz
+2019/04/14 22:37:15 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/e2fsprogs/libcom_err2/libcom_err2-1.44.5-1.tar.xz
+2019/04/14 22:37:15 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libkrb5support0/libkrb5support0-1.15.2-2.tar.xz
+2019/04/14 22:37:16 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libuuid-devel/libuuid-devel-2.33.1-1.tar.xz
+2019/04/14 22:37:19 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl/perl-5.26.3-1.tar.xz
+2019/04/14 22:37:27 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-headers/mingw64-i686-headers-6.0.0-1.tar.xz
+2019/04/14 22:37:28 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-db/gambas3-gb-db-3.12.2-1.tar.xz
+2019/04/14 22:37:28 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libk5crypto3/libk5crypto3-1.15.2-2.tar.xz
+2019/04/14 22:37:32 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python2/python27/python27-2.7.16-1.tar.xz
+2019/04/14 22:37:37 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-runtime/mingw64-i686-runtime-6.0.0-1.tar.xz
+2019/04/14 22:37:38 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libkrb5_3/libkrb5_3-1.15.2-2.tar.xz
+2019/04/14 22:37:40 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python2/python2-2.7.16-1.tar.xz
+2019/04/14 22:37:53 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mingw64-i686-gcc/mingw64-i686-gcc-core/mingw64-i686-gcc-core-7.4.0-1.tar.xz
+2019/04/14 22:37:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libgssapi_krb5_2/libgssapi_krb5_2-1.15.2-2.tar.xz
+2019/04/14 22:38:05 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mingw64-i686-gcc/mingw64-i686-gcc-g++/mingw64-i686-gcc-g++-7.4.0-1.tar.xz
+2019/04/14 22:38:09 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-openssl/mingw64-i686-openssl-1.0.2o-1.tar.xz
+2019/04/14 22:38:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openldap/libopenldap2_4_2/libopenldap2_4_2-2.4.42-1.tar.xz
+2019/04/14 22:38:12 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-gettext/mingw64-i686-gettext-0.19.8.1-2.tar.xz
+2019/04/14 22:38:13 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cyrus-sasl/libsasl2_3/libsasl2_3-2.1.26-11.tar.xz
+2019/04/14 22:38:16 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-postgresql/mingw64-i686-postgresql-9.5.4-1.tar.xz
+2019/04/14 22:38:17 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libpq5/libpq5-11.2-1.tar.xz
+2019/04/14 22:38:22 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-client/postgresql-client-11.2-1.tar.xz
+2019/04/14 22:38:22 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-db-postgresql/gambas3-gb-db-postgresql-3.12.2-1.tar.xz
+2019/04/14 22:38:29 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-11.2-1.tar.xz
+2019/04/14 22:38:30 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-plpython/postgresql-plpython-11.2-1.tar.xz
+2019/04/14 22:38:30 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-plperl/postgresql-plperl-11.2-1.tar.xz
+2019/04/14 22:38:33 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-contrib/postgresql-contrib-11.2-1.tar.xz
+2019/04/14 22:38:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-devel/postgresql-devel-11.2-1.tar.xz
+2019/04/14 22:38:37 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-doc/postgresql-doc-11.2-1.tar.xz
+2019/04/14 22:38:37 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl/perl_base/perl_base-5.26.3-1.tar.xz
+2019/04/14 22:38:39 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl10/libssl1.0/libssl1.0-1.0.2r-2.tar.xz
+2019/04/14 22:38:40 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/db/libdb5.3/libdb5.3-5.3.28-2.tar.xz
+2019/04/14 22:38:40 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-win-iconv/mingw64-i686-win-iconv-0.0.6-2.tar.xz
+2019/04/14 22:38:40 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-windows-default-manifest/mingw64-i686-windows-default-manifest-6.4-1.tar.xz
+2019/04/14 22:38:40 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mingw64-i686-binutils/mingw64-i686-binutils-2.29.1.787c9873-1.tar.xz
+2019/04/14 22:38:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-winpthreads/mingw64-i686-winpthreads-6.0.0-1.tar.xz
+2019/04/14 22:38:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-runtime/gambas3-runtime-3.12.2-1.tar.xz
+2019/04/14 22:38:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/e2fsprogs/libcom_err2/libcom_err2-1.44.5-1.tar.xz
+2019/04/14 22:38:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libkrb5support0/libkrb5support0-1.15.2-2.tar.xz
+2019/04/14 22:38:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/util-linux/libuuid-devel/libuuid-devel-2.33.1-1.tar.xz
+2019/04/14 22:38:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl/perl-5.26.3-1.tar.xz
+2019/04/14 22:38:49 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-headers/mingw64-i686-headers-6.0.0-1.tar.xz
+2019/04/14 22:38:55 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-db/gambas3-gb-db-3.12.2-1.tar.xz
+2019/04/14 22:38:55 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libk5crypto3/libk5crypto3-1.15.2-2.tar.xz
+2019/04/14 22:38:55 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python2/python27/python27-2.7.16-1.tar.xz
+2019/04/14 22:39:06 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-runtime/mingw64-i686-runtime-6.0.0-1.tar.xz
+2019/04/14 22:39:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libkrb5_3/libkrb5_3-1.15.2-2.tar.xz
+2019/04/14 22:39:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python2/python2-2.7.16-1.tar.xz
+2019/04/14 22:39:09 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mingw64-i686-gcc/mingw64-i686-gcc-core/mingw64-i686-gcc-core-7.4.0-1.tar.xz
+2019/04/14 22:39:13 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/krb5/libgssapi_krb5_2/libgssapi_krb5_2-1.15.2-2.tar.xz
+2019/04/14 22:39:13 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/mingw64-i686-gcc/mingw64-i686-gcc-g++/mingw64-i686-gcc-g++-7.4.0-1.tar.xz
+2019/04/14 22:39:23 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-openssl/mingw64-i686-openssl-1.0.2o-1.tar.xz
+2019/04/14 22:39:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openldap/libopenldap2_4_2/libopenldap2_4_2-2.4.42-1.tar.xz
+2019/04/14 22:39:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-gettext/mingw64-i686-gettext-0.19.8.1-2.tar.xz
+2019/04/14 22:39:27 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cyrus-sasl/libsasl2_3/libsasl2_3-2.1.26-11.tar.xz
+2019/04/14 22:39:28 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-postgresql/mingw64-i686-postgresql-9.5.4-1.tar.xz
+2019/04/14 22:39:32 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libpq5/libpq5-11.2-1.tar.xz
+2019/04/14 22:39:32 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-client/postgresql-client-11.2-1.tar.xz
+2019/04/14 22:39:38 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gambas3/gambas3-gb-db-postgresql/gambas3-gb-db-postgresql-3.12.2-1.tar.xz
+2019/04/14 22:39:38 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-11.2-1.tar.xz
+2019/04/14 22:39:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-plpython/postgresql-plpython-11.2-1.tar.xz
+2019/04/14 22:39:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-plperl/postgresql-plperl-11.2-1.tar.xz
+2019/04/14 22:39:41 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/postgresql-contrib/postgresql-contrib-11.2-1.tar.xz
+2019/04/14 22:39:42 Changing gid back to original
+2019/04/14 22:39:42 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 22:40:19 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 22:40:21 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/gambas3.sh"
+2019/04/14 22:40:21 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/libsasl2_3.sh"
+2019/04/14 22:40:22 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/openssl10.sh"
+2019/04/14 22:40:24 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 22:40:24 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 22:40:35 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 22:40:35 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 22:40:35 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 22:40:43 Changing gid to Administrators
+2019/04/14 22:40:48 note: Installation Complete
+2019/04/14 22:40:48 Ending cygwin install
+2019/04/14 22:56:46 Starting cygwin install, version 2.897
+2019/04/14 22:56:46 User has backup/restore rights
+2019/04/14 22:56:46 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 22:56:46 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 22:56:49 source: network install
+2019/04/14 22:56:50 root: C:\cygwin system
+2019/04/14 22:56:50 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 22:56:51 net: Direct
+2019/04/14 22:56:53 site: http://cygwin.mirror.constant.com/
+2019/04/14 22:56:54 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 22:56:54 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 22:56:58 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 22:57:58 solving: 6 tasks, update: no, use test packages: no
+2019/04/14 22:57:58 Augmented Transaction List:
+2019/04/14 22:57:58    0 install                                  curl-debuginfo            7.59.0-1
+2019/04/14 22:57:58    1 install                                     libcurl-doc            7.59.0-1
+2019/04/14 22:57:58    2 install                                    libmetalink3             0.1.2-1
+2019/04/14 22:57:58    3 install                            mingw64-i686-libssh2             1.7.0-2
+2019/04/14 22:57:58    4 install                            mingw64-i686-nghttp2            1.31.0-1
+2019/04/14 22:57:58    5 install                                   libnghttp2_14            1.37.0-1
+2019/04/14 22:57:58    6 install                                       libssh2_1             1.7.0-1
+2019/04/14 22:57:58    7 install                                   libunistring2            0.9.10-1
+2019/04/14 22:57:58    8 install                         publicsuffix-list-dafsa          20180523-1
+2019/04/14 22:57:58    9 install                               mingw64-i686-curl            7.59.0-1
+2019/04/14 22:57:58   10 install                                       libidn2_0             2.0.4-1
+2019/04/14 22:57:58   11 install                                         libpsl5            0.18.0-1
+2019/04/14 22:57:58   12 install                                        libcurl4            7.59.0-1
+2019/04/14 22:57:58   13 install                                   libcurl-devel            7.59.0-1
+2019/04/14 22:57:58   14 install                                            curl            7.59.0-1
+2019/04/14 22:58:04 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/curl-debuginfo/curl-debuginfo-7.59.0-1.tar.xz
+2019/04/14 22:58:07 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/libcurl-doc/libcurl-doc-7.59.0-1.tar.xz
+2019/04/14 22:58:08 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libmetalink/libmetalink3/libmetalink3-0.1.2-1.tar.bz2
+2019/04/14 22:58:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-libssh2/mingw64-i686-libssh2-1.7.0-2.tar.xz
+2019/04/14 22:58:12 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-nghttp2/mingw64-i686-nghttp2-1.31.0-1.tar.xz
+2019/04/14 22:58:13 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/nghttp2/libnghttp2_14/libnghttp2_14-1.37.0-1.tar.xz
+2019/04/14 22:58:13 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libssh2/libssh2_1/libssh2_1-1.7.0-1.tar.xz
+2019/04/14 22:58:14 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libunistring/libunistring2/libunistring2-0.9.10-1.tar.xz
+2019/04/14 22:58:15 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/publicsuffix-list/publicsuffix-list-dafsa/publicsuffix-list-dafsa-20180523-1.tar.xz
+2019/04/14 22:58:18 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-curl/mingw64-i686-curl-7.59.0-1.tar.xz
+2019/04/14 22:58:18 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libidn2/libidn2_0/libidn2_0-2.0.4-1.tar.xz
+2019/04/14 22:58:19 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libpsl/libpsl5/libpsl5-0.18.0-1.tar.xz
+2019/04/14 22:58:20 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/libcurl4/libcurl4-7.59.0-1.tar.xz
+2019/04/14 22:58:21 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/libcurl-devel/libcurl-devel-7.59.0-1.tar.xz
+2019/04/14 22:58:22 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/curl-7.59.0-1.tar.xz
+2019/04/14 22:58:22 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/curl-debuginfo/curl-debuginfo-7.59.0-1.tar.xz
+2019/04/14 22:58:22 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/libcurl-doc/libcurl-doc-7.59.0-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libmetalink/libmetalink3/libmetalink3-0.1.2-1.tar.bz2
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-libssh2/mingw64-i686-libssh2-1.7.0-2.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-nghttp2/mingw64-i686-nghttp2-1.31.0-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/nghttp2/libnghttp2_14/libnghttp2_14-1.37.0-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libssh2/libssh2_1/libssh2_1-1.7.0-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libunistring/libunistring2/libunistring2-0.9.10-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/publicsuffix-list/publicsuffix-list-dafsa/publicsuffix-list-dafsa-20180523-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-curl/mingw64-i686-curl-7.59.0-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libidn2/libidn2_0/libidn2_0-2.0.4-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libpsl/libpsl5/libpsl5-0.18.0-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/libcurl4/libcurl4-7.59.0-1.tar.xz
+2019/04/14 22:58:25 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/libcurl-devel/libcurl-devel-7.59.0-1.tar.xz
+2019/04/14 22:58:26 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/curl/curl-7.59.0-1.tar.xz
+2019/04/14 22:58:26 Changing gid back to original
+2019/04/14 22:58:26 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 22:58:42 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 22:58:43 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 22:58:43 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 22:58:46 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 22:58:46 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 22:58:46 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 22:58:47 Changing gid to Administrators
+2019/04/14 22:58:52 note: Installation Complete
+2019/04/14 22:58:52 Ending cygwin install
+2019/04/14 23:00:08 Starting cygwin install, version 2.897
+2019/04/14 23:00:08 User has backup/restore rights
+2019/04/14 23:00:08 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:00:08 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 23:00:10 source: network install
+2019/04/14 23:00:11 root: C:\cygwin system
+2019/04/14 23:00:11 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:00:12 net: Direct
+2019/04/14 23:00:15 site: http://cygwin.mirror.constant.com/
+2019/04/14 23:00:16 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 23:00:16 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 23:00:20 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 23:01:57 solving: 1 tasks, update: no, use test packages: no
+2019/04/14 23:01:57 Augmented Transaction List:
+2019/04/14 23:01:57    0   erase                                    python37-pip            19.0.3-1
+2019/04/14 23:01:57    1 install                                    python37-pip            19.0.3-1
+2019/04/14 23:01:59 Uninstalling python37-pip
+2019/04/14 23:02:01 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python37-pip/python37-pip-19.0.3-1.tar.xz
+2019/04/14 23:02:06 Changing gid back to original
+2019/04/14 23:02:06 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 23:02:23 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 23:02:23 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 23:02:24 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 23:02:25 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 23:02:26 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 23:02:26 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 23:02:26 Changing gid to Administrators
+2019/04/14 23:02:29 note: Installation Complete
+2019/04/14 23:02:29 Ending cygwin install
+2019/04/14 23:23:15 Starting cygwin install, version 2.897
+2019/04/14 23:23:15 User has backup/restore rights
+2019/04/14 23:23:15 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:23:15 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 23:23:17 source: network install
+2019/04/14 23:23:17 root: C:\cygwin system
+2019/04/14 23:23:18 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:23:18 net: Direct
+2019/04/14 23:23:21 site: http://cygwin.mirror.constant.com/
+2019/04/14 23:23:22 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 23:23:22 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 23:23:26 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 23:25:18 solving: 4 tasks, update: no, use test packages: no
+2019/04/14 23:25:18 Augmented Transaction List:
+2019/04/14 23:25:18    0 install                                     libpgtypes3              11.2-1
+2019/04/14 23:25:18    1 install                                    libssl-devel            1.1.1b-1
+2019/04/14 23:25:18    2 install                                        libecpg6              11.2-1
+2019/04/14 23:25:18    3 install                                     libpq-devel              11.2-1
+2019/04/14 23:25:18    4 install                                 libecpg-compat3              11.2-1
+2019/04/14 23:25:18    5 install                                   libecpg-devel              11.2-1
+2019/04/14 23:25:23 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libpgtypes3/libpgtypes3-11.2-1.tar.xz
+2019/04/14 23:25:25 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl/libssl-devel/libssl-devel-1.1.1b-1.tar.xz
+2019/04/14 23:25:27 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libecpg6/libecpg6-11.2-1.tar.xz
+2019/04/14 23:25:28 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libpq-devel/libpq-devel-11.2-1.tar.xz
+2019/04/14 23:25:29 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libecpg-compat3/libecpg-compat3-11.2-1.tar.xz
+2019/04/14 23:25:30 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libecpg-devel/libecpg-devel-11.2-1.tar.xz
+2019/04/14 23:25:30 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libpgtypes3/libpgtypes3-11.2-1.tar.xz
+2019/04/14 23:25:30 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssl/libssl-devel/libssl-devel-1.1.1b-1.tar.xz
+2019/04/14 23:25:48 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libecpg6/libecpg6-11.2-1.tar.xz
+2019/04/14 23:25:48 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libpq-devel/libpq-devel-11.2-1.tar.xz
+2019/04/14 23:25:48 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libecpg-compat3/libecpg-compat3-11.2-1.tar.xz
+2019/04/14 23:25:49 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/postgresql/libecpg-devel/libecpg-devel-11.2-1.tar.xz
+2019/04/14 23:25:49 Changing gid back to original
+2019/04/14 23:25:49 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 23:26:08 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 23:26:09 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 23:26:09 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 23:26:17 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 23:26:18 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 23:26:18 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 23:26:19 Changing gid to Administrators
+2019/04/14 23:26:37 note: Installation Complete
+2019/04/14 23:26:37 Ending cygwin install
+2019/04/14 23:26:46 Starting cygwin install, version 2.897
+2019/04/14 23:26:46 User has backup/restore rights
+2019/04/14 23:26:46 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:26:46 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 23:26:48 source: network install
+2019/04/14 23:26:49 root: C:\cygwin system
+2019/04/14 23:26:49 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:26:51 net: Direct
+2019/04/14 23:26:53 site: http://cygwin.mirror.constant.com/
+2019/04/14 23:26:54 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 23:26:54 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 23:26:58 solving: 0 tasks, update: yes, use test packages: no
+2019/04/14 23:47:33 solving: 2 tasks, update: no, use test packages: no
+2019/04/14 23:47:33 Augmented Transaction List:
+2019/04/14 23:47:33    0 install                                   libintl-devel          0.19.8.1-2
+2019/04/14 23:47:33    1 install                                         gettext          0.19.8.1-2
+2019/04/14 23:47:33    2 install                                   libcroco0.6_3            0.6.12-1
+2019/04/14 23:47:33    3 install                                        python36             3.6.8-1
+2019/04/14 23:47:33    4 install                                         libssp0             6.4.0-4
+2019/04/14 23:47:33    5 install                              perl-Encode-Locale              1.05-2
+2019/04/14 23:47:33    6 install                                  perl-HTTP-Date              6.02-6
+2019/04/14 23:47:33    7 install                             perl-LWP-MediaTypes              6.04-1
+2019/04/14 23:47:33    8 install                                   perl-Try-Tiny              0.30-1
+2019/04/14 23:47:33    9 install                                        perl-URI              1.76-1
+2019/04/14 23:47:33   10 install                                    perl-IO-HTML             1.001-3
+2019/04/14 23:47:33   11 install                                perl-HTML-Tagset              3.20-6
+2019/04/14 23:47:33   12 install                                      perl-Error           0.17027-1
+2019/04/14 23:47:33   13 install                          perl-Scalar-List-Utils              1.50-1
+2019/04/14 23:47:33   14 install                                perl-TermReadKey              2.38-1
+2019/04/14 23:47:33   15 install                                           rsync             3.1.2-1
+2019/04/14 23:47:33   16 install                                            csih            0.9.11-1
+2019/04/14 23:47:33   17 install                                       cygrunsrv              1.62-1
+2019/04/14 23:47:33   18 install                                        libedit0          20130712-1
+2019/04/14 23:47:33   19 install                                         python3             3.6.8-1
+2019/04/14 23:47:33   20 install                               perl-File-Listing              6.04-6
+2019/04/14 23:47:33   21 install                             perl-WWW-RobotRules              6.02-6
+2019/04/14 23:47:33   22 install                                   perl-Net-HTTP              6.18-1
+2019/04/14 23:47:33   23 install                               perl-HTTP-Message              6.18-1
+2019/04/14 23:47:33   24 install                                perl-HTML-Parser              3.72-2
+2019/04/14 23:47:33   25 install                                         openssh             7.9p1-1
+2019/04/14 23:47:33   26 install                             perl-HTTP-Negotiate              6.01-6
+2019/04/14 23:47:33   27 install                                perl-HTTP-Daemon              6.01-6
+2019/04/14 23:47:33   28 install                               perl-HTTP-Cookies              6.04-2
+2019/04/14 23:47:33   29 install                                             git            2.17.0-1
+2019/04/14 23:47:33   30 install                                perl-libwww-perl              6.38-1
+2019/04/14 23:47:33   31 install                                   gettext-devel          0.19.8.1-2
+2019/04/14 23:47:33   32 install                                 perl-XML-Parser              2.44-3
+2019/04/14 23:47:33   33 install                                        intltool            0.51.0-1
+2019/04/14 23:47:36 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/libintl-devel/libintl-devel-0.19.8.1-2.tar.xz
+2019/04/14 23:47:38 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/gettext-0.19.8.1-2.tar.xz
+2019/04/14 23:47:38 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libcroco0.6/libcroco0.6_3/libcroco0.6_3-0.6.12-1.tar.xz
+2019/04/14 23:47:43 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python36/python36-3.6.8-1.tar.xz
+2019/04/14 23:47:44 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libssp0/libssp0-6.4.0-4.tar.xz
+2019/04/14 23:47:44 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Encode-Locale/perl-Encode-Locale-1.05-2.tar.xz
+2019/04/14 23:47:45 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Date/perl-HTTP-Date-6.02-6.tar.xz
+2019/04/14 23:47:46 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-LWP-MediaTypes/perl-LWP-MediaTypes-6.04-1.tar.xz
+2019/04/14 23:47:46 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Try-Tiny/perl-Try-Tiny-0.30-1.tar.xz
+2019/04/14 23:47:47 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-URI/perl-URI-1.76-1.tar.xz
+2019/04/14 23:47:48 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-IO-HTML/perl-IO-HTML-1.001-3.tar.xz
+2019/04/14 23:47:48 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTML-Tagset/perl-HTML-Tagset-3.20-6.tar.xz
+2019/04/14 23:47:49 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Error/perl-Error-0.17027-1.tar.xz
+2019/04/14 23:47:50 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-Scalar-List-Utils/perl-Scalar-List-Utils-1.50-1.tar.xz
+2019/04/14 23:47:50 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-TermReadKey/perl-TermReadKey-2.38-1.tar.xz
+2019/04/14 23:47:51 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/rsync/rsync-3.1.2-1.tar.xz
+2019/04/14 23:47:52 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/csih/csih-0.9.11-1.tar.xz
+2019/04/14 23:47:53 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygrunsrv/cygrunsrv-1.62-1.tar.xz
+2019/04/14 23:47:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libedit/libedit0/libedit0-20130712-1.tar.xz
+2019/04/14 23:47:54 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python3/python3-3.6.8-1.tar.xz
+2019/04/14 23:47:55 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-File-Listing/perl-File-Listing-6.04-6.tar.xz
+2019/04/14 23:47:55 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-WWW-RobotRules/perl-WWW-RobotRules-6.02-6.tar.xz
+2019/04/14 23:47:56 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Net-HTTP/perl-Net-HTTP-6.18-1.tar.xz
+2019/04/14 23:47:57 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Message/perl-HTTP-Message-6.18-1.tar.xz
+2019/04/14 23:47:57 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-HTML-Parser/perl-HTML-Parser-3.72-2.tar.xz
+2019/04/14 23:47:59 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssh/openssh-7.9p1-1.tar.xz
+2019/04/14 23:47:59 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Negotiate/perl-HTTP-Negotiate-6.01-6.tar.xz
+2019/04/14 23:48:00 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Daemon/perl-HTTP-Daemon-6.01-6.tar.xz
+2019/04/14 23:48:01 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Cookies/perl-HTTP-Cookies-6.04-2.tar.xz
+2019/04/14 23:48:09 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/git/git-2.17.0-1.tar.xz
+2019/04/14 23:48:10 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-libwww-perl/perl-libwww-perl-6.38-1.tar.xz
+2019/04/14 23:48:15 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/gettext-devel/gettext-devel-0.19.8.1-2.tar.xz
+2019/04/14 23:48:16 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-XML-Parser/perl-XML-Parser-2.44-3.tar.xz
+2019/04/14 23:48:16 Downloaded C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/intltool/intltool-0.51.0-1.tar.xz
+2019/04/14 23:48:16 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/libintl-devel/libintl-devel-0.19.8.1-2.tar.xz
+2019/04/14 23:48:17 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/gettext-0.19.8.1-2.tar.xz
+2019/04/14 23:48:18 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libcroco0.6/libcroco0.6_3/libcroco0.6_3-0.6.12-1.tar.xz
+2019/04/14 23:48:18 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python36/python36-3.6.8-1.tar.xz
+2019/04/14 23:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gcc/libssp0/libssp0-6.4.0-4.tar.xz
+2019/04/14 23:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Encode-Locale/perl-Encode-Locale-1.05-2.tar.xz
+2019/04/14 23:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Date/perl-HTTP-Date-6.02-6.tar.xz
+2019/04/14 23:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-LWP-MediaTypes/perl-LWP-MediaTypes-6.04-1.tar.xz
+2019/04/14 23:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Try-Tiny/perl-Try-Tiny-0.30-1.tar.xz
+2019/04/14 23:48:33 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-URI/perl-URI-1.76-1.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-IO-HTML/perl-IO-HTML-1.001-3.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTML-Tagset/perl-HTML-Tagset-3.20-6.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Error/perl-Error-0.17027-1.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-Scalar-List-Utils/perl-Scalar-List-Utils-1.50-1.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-TermReadKey/perl-TermReadKey-2.38-1.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/rsync/rsync-3.1.2-1.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/csih/csih-0.9.11-1.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/cygrunsrv/cygrunsrv-1.62-1.tar.xz
+2019/04/14 23:48:34 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/libedit/libedit0/libedit0-20130712-1.tar.xz
+2019/04/14 23:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/python3/python3-3.6.8-1.tar.xz
+2019/04/14 23:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-File-Listing/perl-File-Listing-6.04-6.tar.xz
+2019/04/14 23:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-WWW-RobotRules/perl-WWW-RobotRules-6.02-6.tar.xz
+2019/04/14 23:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-Net-HTTP/perl-Net-HTTP-6.18-1.tar.xz
+2019/04/14 23:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Message/perl-HTTP-Message-6.18-1.tar.xz
+2019/04/14 23:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-HTML-Parser/perl-HTML-Parser-3.72-2.tar.xz
+2019/04/14 23:48:35 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/openssh/openssh-7.9p1-1.tar.xz
+2019/04/14 23:48:36 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Negotiate/perl-HTTP-Negotiate-6.01-6.tar.xz
+2019/04/14 23:48:36 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Daemon/perl-HTTP-Daemon-6.01-6.tar.xz
+2019/04/14 23:48:36 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-HTTP-Cookies/perl-HTTP-Cookies-6.04-2.tar.xz
+2019/04/14 23:48:36 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/git/git-2.17.0-1.tar.xz
+2019/04/14 23:48:45 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/perl-libwww-perl/perl-libwww-perl-6.38-1.tar.xz
+2019/04/14 23:48:46 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/gettext/gettext-devel/gettext-devel-0.19.8.1-2.tar.xz
+2019/04/14 23:48:47 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86/release/perl-XML-Parser/perl-XML-Parser-2.44-3.tar.xz
+2019/04/14 23:48:47 Extracting from file://C:\Users\Chetabahana\.cygwin\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/intltool/intltool-0.51.0-1.tar.xz
+2019/04/14 23:48:48 Changing gid back to original
+2019/04/14 23:48:48 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/04/14 23:49:14 running: C:\cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/04/14 23:49:26 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/openssh.sh"
+2019/04/14 23:49:27 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/04/14 23:49:27 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/04/14 23:49:36 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/04/14 23:49:37 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/04/14 23:49:37 running: C:\cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/04/14 23:49:38 Changing gid to Administrators
+2019/04/14 23:50:34 note: Installation Complete
+2019/04/14 23:50:34 Ending cygwin install
+2019/04/14 23:51:00 Starting cygwin install, version 2.897
+2019/04/14 23:51:00 User has backup/restore rights
+2019/04/14 23:51:00 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:51:00 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 23:51:03 source: network install
+2019/04/14 23:51:04 root: C:\cygwin system
+2019/04/14 23:51:04 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:51:05 net: Direct
+2019/04/14 23:51:09 site: http://cygwin.mirror.constant.com/
+2019/04/14 23:51:09 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 23:51:10 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+2019/04/14 23:51:14 solving: 0 tasks, update: yes, use test packages: no
+2019/04/15 00:16:18 Ending cygwin install
