@@ -1,7 +1,6 @@
 encoding: utf-8
 highlighter: rouge
-exclude:
-  - virtual-env
+exclude: [virtual-env]
 plugins:
   - jekyll-feed
   - jekyll-coffeescrip
