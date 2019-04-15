@@ -1,0 +1,74 @@
+2019/04/14 23:51:00 Starting cygwin install, version 2.897
+2019/04/14 23:51:00 User has backup/restore rights
+2019/04/14 23:51:00 Current Directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:51:00 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/04/14 23:51:03 source: network install
+2019/04/14 23:51:04 root: C:\cygwin system
+2019/04/14 23:51:04 Selected local directory: C:\Users\Chetabahana\.cygwin\packages
+2019/04/14 23:51:05 net: Direct
+Loaded cached mirror list
+Request for URL https://cygwin.com/mirrors.lst satisfied from cache
+Fetched URL: https://cygwin.com/mirrors.lst
+2019/04/14 23:51:09 site: http://cygwin.mirror.constant.com/
+2019/04/14 23:51:09 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst.sig
+2019/04/14 23:51:10 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86/setup.zst
+Request for URL http://cygwin.mirror.constant.com/x86/setup.xz.sig satisfied from cache
+Fetched URL: http://cygwin.mirror.constant.com/x86/setup.xz.sig
+Request for URL http://cygwin.mirror.constant.com/x86/setup.xz satisfied from cache
+Fetched URL: http://cygwin.mirror.constant.com/x86/setup.xz
+compress_xz::bid_xz: success: 48
+compress_xz::bid_xz: success: 48
+.ini setup_version is 2.897, our setup_version is 2.897
+INSTALLED.DB version 3
+2019/04/14 23:51:14 solving: 0 tasks, update: yes, use test packages: no
+libsolv: solver started
+libsolv: dosplitprovides=0, noupdateprovide=0, noinfarchcheck=0
+libsolv: allowuninstall=0, allowdowngrade=0, allownamechange=1, allowarchchange=0, allowvendorchange=1
+libsolv: promoteepoch=0, forbidselfconflicts=0
+libsolv: obsoleteusesprovides=0, implicitobsoleteusesprovides=0, obsoleteusescolors=0, implicitobsoleteusescolors=0
+libsolv: dontinstallrecommended=0, addalreadyrecommended=0
+libsolv: number of solvables: 48898, memory used: 2483 K
+libsolv: number of ids: 26047 + 48661
+libsolv: string memory used: 101 K array + 444 K data,  rel memory used: 570 K array
+libsolv: string hash memory: 256 K, rel hash memory : 512 K
+libsolv: provide ids: 11160
+libsolv: provide space needed: 36461 + 97322
+libsolv: shrunk whatprovidesdata from 36461 to 36461
+libsolv: shrunk whatprovidesauxdata from 36461 to 25298
+libsolv: whatprovides memory used: 295 K id array, 522 K data
+libsolv: whatprovidesaux memory used: 101 K id array, 98 K data
+libsolv: WARNING: pool_addfileprovides was not called, this may result in slow operation
+libsolv: lazywhatprovidesq size: 0 entries
+libsolv: createwhatprovides took 8 ms
+libsolv: obsoletes data: 1 entries
+libsolv: added 3883 pkg rules for installed solvables
+libsolv: added 413 pkg rules for updaters of installed solvables
+libsolv: added 0 pkg rules for packages involved in a job
+libsolv: added 0 pkg rules because of weak dependencies
+libsolv: 892 of 24650 installable solvables considered for solving
+libsolv: pruned rules from 4297 to 4297
+libsolv:   binary: 1263
+libsolv:   normal: 3033, 11533 literals
+libsolv: pkg rule memory used: 100 K
+libsolv: pkg rule creation took 5 ms
+libsolv: choice rule creation took 2 ms
+libsolv: 4296 pkg rules, 2 * 237 update rules, 0 job rules, 0 infarch rules, 0 dup rules, 0 choice rules, 0 best rules
+libsolv: overall rule memory used: 111 K
+libsolv: solving...
+libsolv: resolving job rules
+libsolv: resolving installed packages
+libsolv: deciding orphaned packages
+libsolv: solver statistics: 0 learned rules, 0 unsolvable, 0 minimization steps
+libsolv: done solving.
+libsolv: solver took 2 ms
+libsolv: final solver statistics: 0 problems, 0 learned rules, 0 unsolvable
+libsolv: solver_solve took 19 ms
+libsolv: 
+libsolv: transaction:
+libsolv: 
+libsolv: orphaned packages:
+libsolv:   base-0.0-0.any (kept)
+libsolv: 
+libsolv: ordering transaction
+libsolv: transaction elements: 0
+2019/04/15 00:16:18 Ending cygwin install
