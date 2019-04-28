@@ -13,6 +13,7 @@ cairosvg==2.3.0
 celery[redis]==4.3.0
 certifi==2019.3.9
 cffi==1.12.2
+cachetools==3.1.0
 chardet==3.0.4
 cssselect2==0.2.1
 defusedxml==0.5.0 ; python_version >= '3.0'
@@ -52,14 +53,21 @@ elasticsearch-dsl==6.0.1
 elasticsearch==6.3.1
 faker==1.0.4
 freezegun==0.3.11
+google-api-core==1.9.0
+google-auth==1.6.3
+google-cloud-core==0.29.1
+google-cloud-storage==1.15.0
 google-i18n-address==2.3.4
 google-measurement-protocol==1.0.0
+google-resumable-media==0.3.2
+googleapis-common-protos==1.5.9
 gprof2dot==2016.10.13
 graphene-django-optimizer==0.3.6
 graphene-django==2.2.0
 graphene==2.1.3
 graphql-core==2.1
 graphql-relay==0.4.5
+gunicorn==19.9.0
 html5lib==1.0.1
 idna==2.8
 ipaddress==1.0.22
@@ -78,8 +86,11 @@ phonenumberslite==8.10.9
 pillow==5.4.1
 prices==1.0.0
 promise==2.2.1
+protobuf==3.7.1
 psycopg2-binary==2.8.1
 purl==1.5
+pyasn1==0.4.5
+pyasn1-modules==0.2.5
 pycodestyle==2.5.0
 pycparser==2.19
 pygments==2.3.1
@@ -93,6 +104,7 @@ razorpay==1.2.0
 redis==3.2.1
 requests-oauthlib==1.2.0
 requests==2.21.0
+rsa==4.0
 rx==1.6.1
 s3transfer==0.2.0
 singledispatch==3.4.0.3
@@ -110,4 +122,3 @@ uwsgi==2.0.18 ; platform_system != 'Windows'
 vine==1.3.0
 weasyprint==46
 webencodings==0.5.1
-gunicorn==19.9.0
