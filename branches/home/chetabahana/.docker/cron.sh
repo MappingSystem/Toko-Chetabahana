@@ -1,11 +1,11 @@
 #!/bin/sh
 WORKDIR=~/.docker/compose && cd $WORKDIR
-eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 if grep -Fqe "Image is up to date" << EOF
 `docker pull chetabahana/saleor`
 EOF
 then
     rm -rf Tutorial-Buka-Toko
+    eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
     git clone git@github.com:MarketLeader/Tutorial-Buka-Toko.git
     cd Tutorial-Buka-Toko && git checkout master
     git remote add upstream git://github.com/mirumee/saleor.git
@@ -22,8 +22,8 @@ then
         cd branches && export PWD=`pwd` && push
     fi
     cd $WORKDIR && rm -rf Tutorial-Buka-Toko
+    eval `ssh-agent -k`
 else
     echo "latest exist, do compose!"
-    export PWD=`pwd` && push
+    sh ~/.docker/init.sh
 fi
-eval `ssh-agent -k`

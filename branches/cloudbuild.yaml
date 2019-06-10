@@ -14,7 +14,7 @@ steps:
 substitutions:
   _ZONE: us-central1-c
   _INSTANCE_PATH: /home
-  _BUILD_ID: 'v1-101400-cron'
+  _BUILD_ID: 'v1-102200-cron'
   _INSTANCE_NAME: chetabahana@backend
   _LOCAL_PATH: /workspace/home/chetabahana
   _REPOSITORY: https://github.com/mirumee/saleor.git
