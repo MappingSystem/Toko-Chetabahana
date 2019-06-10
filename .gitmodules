@@ -1,0 +1,6 @@
+[submodule "branches"]
+	path = branches
+	url = git@github.com:chetabahana/branches.git
+[submodule "compose"]
+	path = compose
+	url = git@github.com:chetabahana/compose.git
