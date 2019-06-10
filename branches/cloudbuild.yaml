@@ -1,0 +1,22 @@
+steps:
+- name: 'python'
+  args: ['sh', '/workspace/scripts/github/pip.sh']
+
+- name: 'gcr.io/cloud-builders/gcloud' 
+  args: ['compute', 'scp', '--zone', '${_ZONE}', '--verbosity', 'debug', 
+         '--recurse', '--force-key-file-overwrite', '${_LOCAL_PATH}',  
+         '${_INSTANCE_NAME}:${_INSTANCE_PATH}']
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}', 
+         '--command', 'sh /home/chetabahana/.docker/git.sh']
+
+substitutions:
+  _ZONE: us-central1-c
+  _INSTANCE_PATH: /home
+  _BUILD_ID: 'v1-101400-cron'
+  _INSTANCE_NAME: chetabahana@backend
+  _LOCAL_PATH: /workspace/home/chetabahana
+  _REPOSITORY: https://github.com/mirumee/saleor.git
+
+timeout: "1800s"
