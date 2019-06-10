@@ -976,3 +976,17 @@
 2019/06/10 16:11:36 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
 2019/06/10 16:11:39 solving: 0 tasks, update: yes, use test packages: no
 2019/06/10 16:13:09 Ending cygwin install
+2019/06/10 20:05:38 Starting cygwin install, version 2.897
+2019/06/10 20:05:38 User has backup/restore rights
+2019/06/10 20:05:38 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 20:05:38 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 20:05:41 source: network install
+2019/06/10 20:05:42 root: C:\Cygwin system
+2019/06/10 20:05:43 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 20:05:44 net: Direct
+2019/06/10 20:05:47 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 20:05:48 site: http://cygwin.mirror.constant.com/
+2019/06/10 20:05:49 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 20:05:50 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 20:05:53 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 20:34:22 Ending cygwin install
