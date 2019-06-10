@@ -1,0 +1,978 @@
+2019/05/29 18:27:27 Starting cygwin install, version 2.897
+2019/05/29 18:27:27 User has backup/restore rights
+2019/05/29 18:27:27 io_stream_cygfile: fopen(/etc/setup/setup.rc) failed 2 No such file or directory
+2019/05/29 18:27:27 Current Directory: C:\Users\Chetabahana\Downloads
+2019/05/29 18:27:27 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/05/29 18:27:46 source: network install
+2019/05/29 18:28:14 root: C:\Cygwin system
+2019/05/29 18:29:49 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/05/29 18:29:55 net: Direct
+2019/05/29 18:29:57 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/05/29 18:30:09 net: Preconfig
+2019/05/29 18:30:23 source: network install
+2019/05/29 18:30:27 source: network install
+2019/05/29 18:30:28 root: C:\Cygwin system
+2019/05/29 18:30:30 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/05/29 18:30:35 net: Direct
+2019/05/29 18:36:48 site: http://cygwin.mirror.constant.com/
+2019/05/29 18:36:49 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/05/29 18:36:49 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/05/29 18:37:26 io_stream_cygfile: fopen(/etc/setup/timestamp) failed 2 No such file or directory
+2019/05/29 18:37:26 io_stream_cygfile: fopen(/etc/setup/installed.db) failed 2 No such file or directory
+2019/05/29 18:37:26 solving: 37 tasks, update: yes, use test packages: no
+2019/05/29 18:38:28 solving: 71 tasks, update: no, use test packages: no
+2019/05/29 18:38:28 Augmented Transaction List:
+2019/05/29 18:38:28    0 install                                     base-cygwin               3.8-1
+2019/05/29 18:38:28    1 install                                          cygwin             3.0.7-1
+2019/05/29 18:38:28    2 install                                  libpopt-common              1.16-2
+2019/05/29 18:38:28    3 install                                        terminfo     6.0-12.20171125
+2019/05/29 18:38:28    4 install                                          tzdata             2018i-1
+2019/05/29 18:38:28    5 install                                           zlib0            1.2.11-1
+2019/05/29 18:38:28    6 install                                           which              2.20-2
+2019/05/29 18:38:28    7 install                                             run             1.3.4-2
+2019/05/29 18:38:28    8 install                                          mintty             3.0.1-1
+2019/05/29 18:38:28    9 install                                           login              1.13-1
+2019/05/29 18:38:28   10 install                                      libtasn1_6              4.13-1
+2019/05/29 18:38:28   11 install                                     libsigsegv2              2.10-2
+2019/05/29 18:38:28   12 install                                    libpipeline1             1.4.0-1
+2019/05/29 18:38:28   13 install                                        libpcre1              8.43-1
+2019/05/29 18:38:28   14 install                                        liblzma5             5.2.3-1
+2019/05/29 18:38:28   15 install                                       libiconv2              1.14-3
+2019/05/29 18:38:28   16 install                                        libgmp10             6.1.2-1
+2019/05/29 18:38:28   17 install                                         libgcc1             7.4.0-1
+2019/05/29 18:38:28   18 install                                         libffi6             3.2.1-2
+2019/05/29 18:38:28   19 install                                        libbz2_1             1.0.6-3
+2019/05/29 18:38:28   20 install                                         libargp          20110921-3
+2019/05/29 18:38:28   21 install                                       ipc-utils               1.0-2
+2019/05/29 18:38:28   22 install                                        hostname              3.13-1
+2019/05/29 18:38:28   23 install                                      editrights              1.03-1
+2019/05/29 18:38:28   24 install                                            dash           0.5.9.1-1
+2019/05/29 18:38:28   25 install                                   libncursesw10     6.0-12.20171125
+2019/05/29 18:38:28   26 install                                            file              5.32-1
+2019/05/29 18:38:28   27 install                                        libintl8          0.19.8.1-2
+2019/05/29 18:38:28   28 install                                      libstdc++6             7.4.0-1
+2019/05/29 18:38:28   29 install                                        libmpfr6             4.0.2-1
+2019/05/29 18:38:28   30 install                                          getent           2.18.90-4
+2019/05/29 18:38:28   31 install                                     _autorebase            001007-1
+2019/05/29 18:38:28   32 install                                     vim-minimal          8.1.1240-1
+2019/05/29 18:38:28   33 install                                         ncurses     6.0-12.20171125
+2019/05/29 18:38:28   34 install                                    libreadline7             7.0.3-3
+2019/05/29 18:38:28   35 install                                            less               530-1
+2019/05/29 18:38:28   36 install                                             sed               4.4-1
+2019/05/29 18:38:28   37 install                                        libuuid1            2.33.1-1
+2019/05/29 18:38:28   38 install                                   libsmartcols1            2.33.1-1
+2019/05/29 18:38:28   39 install                                        libpopt0              1.16-2
+2019/05/29 18:38:28   40 install                                     libp11-kit0           0.23.15-1
+2019/05/29 18:38:28   41 install                                        libiconv              1.14-3
+2019/05/29 18:38:28   42 install                                        libgdbm4              1.12-1
+2019/05/29 18:38:28   43 install                                        libattr1            2.4.48-2
+2019/05/29 18:38:28   44 install                                            info               6.6-1
+2019/05/29 18:38:28   45 install                                       diffutils               3.5-2
+2019/05/29 18:38:28   46 install                                    alternatives          1.3.30c-10
+2019/05/29 18:38:28   47 install                                            gawk             5.0.0-1
+2019/05/29 18:38:28   48 install                                       libblkid1            2.33.1-1
+2019/05/29 18:38:28   49 install                                        cygutils            1.4.16-2
+2019/05/29 18:38:28   50 install                                   p11-kit-trust           0.23.15-1
+2019/05/29 18:38:28   51 install                                         p11-kit           0.23.15-1
+2019/05/29 18:38:28   52 install                                       coreutils              8.26-2
+2019/05/29 18:38:28   53 install                                       libfdisk1            2.33.1-1
+2019/05/29 18:38:28   54 install                                            bash            4.4.12-3
+2019/05/29 18:38:28   55 install                                      util-linux            2.33.1-1
+2019/05/29 18:38:28   56 install                                          tzcode             2018i-1
+2019/05/29 18:38:28   57 install                                              xz             5.2.3-1
+2019/05/29 18:38:28   58 install                                            gzip               1.8-1
+2019/05/29 18:38:28   59 install                                           groff            1.22.4-1
+2019/05/29 18:38:28   60 install                                            grep               3.0-2
+2019/05/29 18:38:28   61 install                                       findutils             4.6.0-1
+2019/05/29 18:38:28   62 install                                 crypto-policies          20190218-1
+2019/05/29 18:38:28   63 install                                 ca-certificates              2.30-1
+2019/05/29 18:38:28   64 install                                           bzip2             1.0.6-3
+2019/05/29 18:38:28   65 install                                          man-db           2.7.6.1-1
+2019/05/29 18:38:28   66 install                                          rebase             4.4.4-1
+2019/05/29 18:38:28   67 install                                      base-files               4.3-2
+2019/05/29 18:38:28   68 install                                       libssl1.1            1.1.1b-1
+2019/05/29 18:38:28   69 install                                             tar              1.29-1
+2019/05/29 18:38:28   70 install                                         openssl            1.1.1b-1
+2019/05/29 18:38:38 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-cygwin/base-cygwin-3.8-1.tar.xz
+2019/05/29 18:38:48 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygwin/cygwin-3.0.7-1.tar.xz
+2019/05/29 18:38:48 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/popt/libpopt-common/libpopt-common-1.16-2.tar.xz
+2019/05/29 18:38:50 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ncurses/terminfo/terminfo-6.0-12.20171125.tar.xz
+2019/05/29 18:38:51 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/tzdata/tzdata-2018i-1.tar.xz
+2019/05/29 18:38:51 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/zlib/zlib0/zlib0-1.2.11-1.tar.xz
+2019/05/29 18:38:53 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/which/which-2.20-2.tar.bz2
+2019/05/29 18:38:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/run/run-1.3.4-2.tar.xz
+2019/05/29 18:38:59 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/mintty/mintty-3.0.1-1.tar.xz
+2019/05/29 18:39:00 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/login/login-1.13-1.tar.xz
+2019/05/29 18:39:01 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libtasn1/libtasn1_6/libtasn1_6-4.13-1.tar.xz
+2019/05/29 18:39:01 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libsigsegv/libsigsegv2/libsigsegv2-2.10-2.tar.xz
+2019/05/29 18:39:02 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpipeline/libpipeline1/libpipeline1-1.4.0-1.tar.xz
+2019/05/29 18:39:03 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre1/libpcre1-8.43-1.tar.xz
+2019/05/29 18:39:03 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/xz/liblzma5/liblzma5-5.2.3-1.tar.xz
+2019/05/29 18:39:05 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libiconv/libiconv2/libiconv2-1.14-3.tar.xz
+2019/05/29 18:39:09 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gmp/libgmp10/libgmp10-6.1.2-1.tar.xz
+2019/05/29 18:39:09 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libgcc1/libgcc1-7.4.0-1.tar.xz
+2019/05/29 18:39:12 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libffi/libffi6/libffi6-3.2.1-2.tar.xz
+2019/05/29 18:39:12 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/bzip2/libbz2_1/libbz2_1-1.0.6-3.tar.xz
+2019/05/29 18:39:14 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libargp/libargp-20110921-3.tar.xz
+2019/05/29 18:39:15 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ipc-utils/ipc-utils-1.0-2.tar.bz2
+2019/05/29 18:39:15 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/hostname/hostname-3.13-1.tar.bz2
+2019/05/29 18:39:17 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/editrights/editrights-1.03-1.tar.xz
+2019/05/29 18:39:18 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/dash/dash-0.5.9.1-1.tar.xz
+2019/05/29 18:39:19 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ncurses/libncursesw10/libncursesw10-6.0-12.20171125.tar.xz
+2019/05/29 18:39:22 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/file/file-5.32-1.tar.xz
+2019/05/29 18:39:26 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gettext/libintl8/libintl8-0.19.8.1-2.tar.xz
+2019/05/29 18:39:26 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libstdc++6/libstdc++6-7.4.0-1.tar.xz
+2019/05/29 18:39:27 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/mpfr/libmpfr6/libmpfr6-4.0.2-1.tar.xz
+2019/05/29 18:39:29 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/getent/getent-2.18.90-4.tar.xz
+2019/05/29 18:39:30 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/_autorebase/_autorebase-001007-1.tar.xz
+2019/05/29 18:39:33 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/vim/vim-minimal/vim-minimal-8.1.1240-1.tar.xz
+2019/05/29 18:39:34 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ncurses/ncurses-6.0-12.20171125.tar.xz
+2019/05/29 18:39:35 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/readline/libreadline7/libreadline7-7.0.3-3.tar.xz
+2019/05/29 18:39:39 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/less/less-530-1.tar.xz
+2019/05/29 18:39:41 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/sed/sed-4.4-1.tar.xz
+2019/05/29 18:39:41 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libuuid1/libuuid1-2.33.1-1.tar.xz
+2019/05/29 18:39:42 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libsmartcols1/libsmartcols1-2.33.1-1.tar.xz
+2019/05/29 18:39:43 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/popt/libpopt0/libpopt0-1.16-2.tar.xz
+2019/05/29 18:39:44 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/p11-kit/libp11-kit0/libp11-kit0-0.23.15-1.tar.xz
+2019/05/29 18:39:44 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libiconv/libiconv-1.14-3.tar.xz
+2019/05/29 18:39:45 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gdbm/libgdbm4/libgdbm4-1.12-1.tar.xz
+2019/05/29 18:39:46 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/attr/libattr1/libattr1-2.4.48-2.tar.xz
+2019/05/29 18:39:51 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/texinfo/info/info-6.6-1.tar.xz
+2019/05/29 18:39:53 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/diffutils/diffutils-3.5-2.tar.xz
+2019/05/29 18:39:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/alternatives/alternatives-1.3.30c-10.tar.bz2
+2019/05/29 18:39:57 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gawk/gawk-5.0.0-1.tar.xz
+2019/05/29 18:39:58 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libblkid1/libblkid1-2.33.1-1.tar.xz
+2019/05/29 18:40:00 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygutils/cygutils-1.4.16-2.tar.xz
+2019/05/29 18:40:02 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/p11-kit/p11-kit-trust/p11-kit-trust-0.23.15-1.tar.xz
+2019/05/29 18:40:11 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/p11-kit/p11-kit-0.23.15-1.tar.xz
+2019/05/29 18:40:22 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/coreutils/coreutils-8.26-2.tar.xz
+2019/05/29 18:40:23 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libfdisk1/libfdisk1-2.33.1-1.tar.xz
+2019/05/29 18:40:37 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/bash/bash-4.4.12-3.tar.xz
+2019/05/29 18:40:50 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/util-linux-2.33.1-1.tar.xz
+2019/05/29 18:40:51 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tzcode/tzcode-2018i-1.tar.xz
+2019/05/29 18:40:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/xz/xz-5.2.3-1.tar.xz
+2019/05/29 18:40:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gzip/gzip-1.8-1.tar.xz
+2019/05/29 18:41:06 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/groff/groff-1.22.4-1.tar.xz
+2019/05/29 18:41:09 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/grep/grep-3.0-2.tar.xz
+2019/05/29 18:41:12 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/findutils/findutils-4.6.0-1.tar.xz
+2019/05/29 18:41:14 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/crypto-policies/crypto-policies-20190218-1.tar.xz
+2019/05/29 18:41:15 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/ca-certificates/ca-certificates-2.30-1.tar.xz
+2019/05/29 18:41:15 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/bzip2/bzip2-1.0.6-3.tar.xz
+2019/05/29 18:41:16 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/man-db/man-db-2.7.6.1-1.tar.xz
+2019/05/29 18:41:20 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/rebase/rebase-4.4.4-1.tar.xz
+2019/05/29 18:41:21 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-files/base-files-4.3-2.tar.xz
+2019/05/29 18:41:32 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openssl/libssl1.1/libssl1.1-1.1.1b-1.tar.xz
+2019/05/29 18:41:34 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tar/tar-1.29-1.tar.xz
+2019/05/29 18:41:36 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openssl/openssl-1.1.1b-1.tar.xz
+2019/05/29 18:41:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-cygwin/base-cygwin-3.8-1.tar.xz
+2019/05/29 18:41:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygwin/cygwin-3.0.7-1.tar.xz
+2019/05/29 18:41:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/popt/libpopt-common/libpopt-common-1.16-2.tar.xz
+2019/05/29 18:41:37 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ncurses/terminfo/terminfo-6.0-12.20171125.tar.xz
+2019/05/29 18:41:37 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/tzdata/tzdata-2018i-1.tar.xz
+2019/05/29 18:41:41 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/zlib/zlib0/zlib0-1.2.11-1.tar.xz
+2019/05/29 18:41:41 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/which/which-2.20-2.tar.bz2
+2019/05/29 18:41:41 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/run/run-1.3.4-2.tar.xz
+2019/05/29 18:41:41 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/mintty/mintty-3.0.1-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/login/login-1.13-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libtasn1/libtasn1_6/libtasn1_6-4.13-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libsigsegv/libsigsegv2/libsigsegv2-2.10-2.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpipeline/libpipeline1/libpipeline1-1.4.0-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre1/libpcre1-8.43-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/xz/liblzma5/liblzma5-5.2.3-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libiconv/libiconv2/libiconv2-1.14-3.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gmp/libgmp10/libgmp10-6.1.2-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libgcc1/libgcc1-7.4.0-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libffi/libffi6/libffi6-3.2.1-2.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/bzip2/libbz2_1/libbz2_1-1.0.6-3.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libargp/libargp-20110921-3.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ipc-utils/ipc-utils-1.0-2.tar.bz2
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/hostname/hostname-3.13-1.tar.bz2
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/editrights/editrights-1.03-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/dash/dash-0.5.9.1-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ncurses/libncursesw10/libncursesw10-6.0-12.20171125.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/file/file-5.32-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gettext/libintl8/libintl8-0.19.8.1-2.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libstdc++6/libstdc++6-7.4.0-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/mpfr/libmpfr6/libmpfr6-4.0.2-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/getent/getent-2.18.90-4.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/_autorebase/_autorebase-001007-1.tar.xz
+2019/05/29 18:41:42 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/vim/vim-minimal/vim-minimal-8.1.1240-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ncurses/ncurses-6.0-12.20171125.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/readline/libreadline7/libreadline7-7.0.3-3.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/less/less-530-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/sed/sed-4.4-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libuuid1/libuuid1-2.33.1-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libsmartcols1/libsmartcols1-2.33.1-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/popt/libpopt0/libpopt0-1.16-2.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/p11-kit/libp11-kit0/libp11-kit0-0.23.15-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libiconv/libiconv-1.14-3.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gdbm/libgdbm4/libgdbm4-1.12-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/attr/libattr1/libattr1-2.4.48-2.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/texinfo/info/info-6.6-1.tar.xz
+2019/05/29 18:41:43 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/diffutils/diffutils-3.5-2.tar.xz
+2019/05/29 18:41:44 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/alternatives/alternatives-1.3.30c-10.tar.bz2
+2019/05/29 18:41:45 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gawk/gawk-5.0.0-1.tar.xz
+2019/05/29 18:41:45 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libblkid1/libblkid1-2.33.1-1.tar.xz
+2019/05/29 18:41:45 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygutils/cygutils-1.4.16-2.tar.xz
+2019/05/29 18:41:45 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/p11-kit/p11-kit-trust/p11-kit-trust-0.23.15-1.tar.xz
+2019/05/29 18:41:45 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/p11-kit/p11-kit-0.23.15-1.tar.xz
+2019/05/29 18:41:45 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/coreutils/coreutils-8.26-2.tar.xz
+2019/05/29 18:41:46 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libfdisk1/libfdisk1-2.33.1-1.tar.xz
+2019/05/29 18:41:46 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/bash/bash-4.4.12-3.tar.xz
+2019/05/29 18:41:47 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/util-linux-2.33.1-1.tar.xz
+2019/05/29 18:41:47 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tzcode/tzcode-2018i-1.tar.xz
+2019/05/29 18:41:47 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/xz/xz-5.2.3-1.tar.xz
+2019/05/29 18:41:48 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gzip/gzip-1.8-1.tar.xz
+2019/05/29 18:41:48 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/groff/groff-1.22.4-1.tar.xz
+2019/05/29 18:41:51 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/grep/grep-3.0-2.tar.xz
+2019/05/29 18:41:53 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/findutils/findutils-4.6.0-1.tar.xz
+2019/05/29 18:41:53 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/crypto-policies/crypto-policies-20190218-1.tar.xz
+2019/05/29 18:41:53 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/ca-certificates/ca-certificates-2.30-1.tar.xz
+2019/05/29 18:41:53 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/bzip2/bzip2-1.0.6-3.tar.xz
+2019/05/29 18:41:53 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/man-db/man-db-2.7.6.1-1.tar.xz
+2019/05/29 18:41:54 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/rebase/rebase-4.4.4-1.tar.xz
+2019/05/29 18:41:54 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/base-files/base-files-4.3-2.tar.xz
+2019/05/29 18:41:54 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openssl/libssl1.1/libssl1.1-1.1.1b-1.tar.xz
+2019/05/29 18:41:54 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tar/tar-1.29-1.tar.xz
+2019/05/29 18:41:55 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openssl/openssl-1.1.1b-1.tar.xz
+2019/05/29 18:41:55 Changing gid back to original
+2019/05/29 18:41:55 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/05/29 18:42:11 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/05/29 18:42:12 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/000-cygwin-post-install.sh"
+2019/05/29 18:42:12 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/coreutils.sh"
+2019/05/29 18:42:12 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/bash.sh"
+2019/05/29 18:42:13 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/base-files-mketc.sh"
+2019/05/29 18:42:13 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/base-files-profile.sh"
+2019/05/29 18:42:14 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/p11-kit.sh"
+2019/05/29 18:42:14 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/ca-certificates.sh"
+2019/05/29 18:42:16 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/crypto-policies.sh"
+2019/05/29 18:42:18 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/openssl.sh"
+2019/05/29 18:42:18 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/man-db.sh"
+2019/05/29 18:42:18 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/mintty.sh"
+2019/05/29 18:42:18 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/05/29 18:42:18 Changing gid to Administrators
+2019/05/29 18:44:09 note: Installation Complete
+2019/05/29 18:44:09 Ending cygwin install
+2019/06/09 03:35:47 Starting cygwin install, version 2.897
+2019/06/09 03:35:47 User has backup/restore rights
+2019/06/09 03:35:47 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/09 03:35:47 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/09 03:35:52 source: network install
+2019/06/09 03:35:55 root: C:\Cygwin system
+2019/06/09 03:36:39 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/09 03:36:42 net: Direct
+2019/06/09 03:36:45 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/09 03:36:47 site: http://cygwin.mirror.constant.com/
+2019/06/09 03:36:48 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/09 03:36:48 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/09 03:36:57 solving: 0 tasks, update: yes, use test packages: no
+2019/06/09 03:38:10 solving: 1 tasks, update: no, use test packages: no
+2019/06/09 03:38:10 Augmented Transaction List:
+2019/06/09 03:38:10    0 install                                            nano             2.9.7-1
+2019/06/09 03:38:14 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/nano/nano-2.9.7-1.tar.xz
+2019/06/09 03:38:14 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/nano/nano-2.9.7-1.tar.xz
+2019/06/09 03:38:15 Changing gid back to original
+2019/06/09 03:38:15 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/09 03:38:20 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/09 03:38:21 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/09 03:38:22 Changing gid to Administrators
+2019/06/09 03:38:31 note: Installation Complete
+2019/06/09 03:38:31 Ending cygwin install
+2019/06/09 23:48:40 Starting cygwin install, version 2.897
+2019/06/09 23:48:40 User has backup/restore rights
+2019/06/09 23:48:40 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/09 23:48:40 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/09 23:48:48 Ending cygwin install
+2019/06/09 23:48:50 Starting cygwin install, version 2.897
+2019/06/09 23:48:50 User has backup/restore rights
+2019/06/09 23:48:50 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/09 23:48:50 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/09 23:48:52 source: network install
+2019/06/09 23:48:53 root: C:\Cygwin system
+2019/06/09 23:48:54 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/09 23:48:54 net: Direct
+2019/06/09 23:48:57 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/09 23:48:59 site: http://cygwin.mirror.constant.com/
+2019/06/09 23:48:59 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/09 23:49:00 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/09 23:49:03 solving: 0 tasks, update: yes, use test packages: no
+2019/06/09 23:49:25 solving: 0 tasks, update: no, use test packages: no
+2019/06/09 23:49:25 Augmented Transaction List: is empty
+2019/06/10 00:20:10 solving: 1 tasks, update: no, use test packages: no
+2019/06/10 00:20:10 Augmented Transaction List:
+2019/06/10 00:20:10    0 install                                        binutils              2.29-1
+2019/06/10 00:20:10    1 install                                       libcrypt0               2.1-1
+2019/06/10 00:20:10    2 install                                       libexpat1             2.2.6-1
+2019/06/10 00:20:10    3 install                                    libsqlite3_0            3.28.0-1
+2019/06/10 00:20:10    4 install                                python-pip-wheel            19.0.3-1
+2019/06/10 00:20:10    5 install                         python-setuptools-wheel            40.8.0-1
+2019/06/10 00:20:10    6 install                                        python37             3.7.3-1
+2019/06/10 00:20:10    7 install                             python37-setuptools            40.8.0-1
+2019/06/10 00:20:10    8 install                                    python37-pip            19.0.3-1
+2019/06/10 00:20:27 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/binutils/binutils-2.29-1.tar.xz
+2019/06/10 00:20:28 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/crypt/libcrypt0/libcrypt0-2.1-1.tar.xz
+2019/06/10 00:20:28 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/expat/libexpat1/libexpat1-2.2.6-1.tar.xz
+2019/06/10 00:20:29 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/sqlite3/libsqlite3_0/libsqlite3_0-3.28.0-1.tar.xz
+2019/06/10 00:20:30 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python-pip-wheel/python-pip-wheel-19.0.3-1.tar.xz
+2019/06/10 00:20:31 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python-setuptools-wheel/python-setuptools-wheel-40.8.0-1.tar.xz
+2019/06/10 00:20:39 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python37/python37-3.7.3-1.tar.xz
+2019/06/10 00:20:41 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python37-setuptools/python37-setuptools-40.8.0-1.tar.xz
+2019/06/10 00:20:45 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python37-pip/python37-pip-19.0.3-1.tar.xz
+2019/06/10 00:20:45 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/binutils/binutils-2.29-1.tar.xz
+2019/06/10 00:20:49 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/crypt/libcrypt0/libcrypt0-2.1-1.tar.xz
+2019/06/10 00:20:49 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/expat/libexpat1/libexpat1-2.2.6-1.tar.xz
+2019/06/10 00:20:49 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/sqlite3/libsqlite3_0/libsqlite3_0-3.28.0-1.tar.xz
+2019/06/10 00:20:49 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python-pip-wheel/python-pip-wheel-19.0.3-1.tar.xz
+2019/06/10 00:20:49 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python-setuptools-wheel/python-setuptools-wheel-40.8.0-1.tar.xz
+2019/06/10 00:20:49 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python37/python37-3.7.3-1.tar.xz
+2019/06/10 00:21:01 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python37-setuptools/python37-setuptools-40.8.0-1.tar.xz
+2019/06/10 00:21:03 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python37-pip/python37-pip-19.0.3-1.tar.xz
+2019/06/10 00:21:12 Changing gid back to original
+2019/06/10 00:21:12 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/10 00:21:26 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/10 00:21:30 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/10 00:21:30 Changing gid to Administrators
+2019/06/10 00:22:57 note: Installation Complete
+2019/06/10 00:22:57 Ending cygwin install
+2019/06/10 00:34:33 Starting cygwin install, version 2.897
+2019/06/10 00:34:33 User has backup/restore rights
+2019/06/10 00:34:33 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 00:34:33 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 00:34:36 source: network install
+2019/06/10 00:34:37 root: C:\Cygwin system
+2019/06/10 00:34:38 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 00:34:39 net: Direct
+2019/06/10 00:34:41 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 00:34:44 site: http://cygwin.mirror.constant.com/
+2019/06/10 00:34:44 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 00:34:46 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 00:34:49 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 01:37:20 solving: 1 tasks, update: no, use test packages: no
+2019/06/10 01:37:20 Augmented Transaction List:
+2019/06/10 01:37:20    0 install                                       libcrypt2             4.4.4-1
+2019/06/10 01:37:20    1 install                                     libpkgconf3             1.6.0-1
+2019/06/10 01:37:20    2 install                                         pkgconf             1.6.0-1
+2019/06/10 01:37:20    3 install                                      pkg-config             1.6.0-1
+2019/06/10 01:37:20    4 install                                  libcrypt-devel             4.4.4-1
+2019/06/10 01:37:20    5 install                                  python37-devel             3.7.3-1
+2019/06/10 01:37:31 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcrypt/libcrypt2/libcrypt2-4.4.4-1.tar.xz
+2019/06/10 01:37:32 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pkgconf/libpkgconf3/libpkgconf3-1.6.0-1.tar.xz
+2019/06/10 01:37:33 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pkgconf/pkgconf-1.6.0-1.tar.xz
+2019/06/10 01:37:33 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pkgconf/pkg-config/pkg-config-1.6.0-1.tar.xz
+2019/06/10 01:37:34 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcrypt/libcrypt-devel/libcrypt-devel-4.4.4-1.tar.xz
+2019/06/10 01:37:36 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python37/python37-devel/python37-devel-3.7.3-1.tar.xz
+2019/06/10 01:37:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcrypt/libcrypt2/libcrypt2-4.4.4-1.tar.xz
+2019/06/10 01:37:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pkgconf/libpkgconf3/libpkgconf3-1.6.0-1.tar.xz
+2019/06/10 01:37:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pkgconf/pkgconf-1.6.0-1.tar.xz
+2019/06/10 01:37:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pkgconf/pkg-config/pkg-config-1.6.0-1.tar.xz
+2019/06/10 01:37:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcrypt/libcrypt-devel/libcrypt-devel-4.4.4-1.tar.xz
+2019/06/10 01:37:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python37/python37-devel/python37-devel-3.7.3-1.tar.xz
+2019/06/10 01:37:37 Changing gid back to original
+2019/06/10 01:37:37 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/10 01:37:43 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/10 01:37:43 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/10 01:37:43 Changing gid to Administrators
+2019/06/10 01:37:47 note: Installation Complete
+2019/06/10 01:37:47 Ending cygwin install
+2019/06/10 01:45:40 Starting cygwin install, version 2.897
+2019/06/10 01:45:40 User has backup/restore rights
+2019/06/10 01:45:40 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 01:45:40 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 01:45:43 source: network install
+2019/06/10 01:45:44 root: C:\Cygwin system
+2019/06/10 01:45:44 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 01:45:45 net: Direct
+2019/06/10 01:45:48 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 01:45:49 site: http://cygwin.mirror.constant.com/
+2019/06/10 01:45:50 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 01:45:50 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 01:45:53 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 01:50:30 solving: 2 tasks, update: no, use test packages: no
+2019/06/10 01:50:30 Augmented Transaction List:
+2019/06/10 01:50:30    0 install                                    libffi-devel             3.2.1-2
+2019/06/10 01:50:30    1 install                                       liblzo2_2              2.10-1
+2019/06/10 01:50:30    2 install                                    libpixman1_0            0.34.0-1
+2019/06/10 01:50:30    3 install                                        libpng16            1.6.34-1
+2019/06/10 01:50:30    4 install                                         libXau6             1.0.8-1
+2019/06/10 01:50:30    5 install                                       libXdmcp6             1.1.2-1
+2019/06/10 01:50:30    6 install                       gsettings-desktop-schemas            3.24.1-1
+2019/06/10 01:50:30    7 install                                    dejavu-fonts              2.37-1
+2019/06/10 01:50:30    8 install                            libfontconfig-common            2.12.6-1
+2019/06/10 01:50:30    9 install                                         libxml2             2.9.9-2
+2019/06/10 01:50:30   10 install                                    libfreetype6             2.8.1-1
+2019/06/10 01:50:30   11 install                                         libxcb1              1.12-2
+2019/06/10 01:50:30   12 install                                    libglib2.0_0            2.54.3-1
+2019/06/10 01:50:30   13 install                                  libfontconfig1            2.12.6-1
+2019/06/10 01:50:30   14 install                                     libxcb-shm0              1.12-2
+2019/06/10 01:50:30   15 install                                  libxcb-render0              1.12-2
+2019/06/10 01:50:30   16 install                                        libX11_6             1.6.5-1
+2019/06/10 01:50:30   17 install                              desktop-file-utils              0.23-1
+2019/06/10 01:50:30   18 install                                     libXrender1             0.9.9-1
+2019/06/10 01:50:30   19 install                                        libXext6             1.3.3-1
+2019/06/10 01:50:30   20 install                                           gamin           0.1.10-15
+2019/06/10 01:50:30   21 install                                         libfam0           0.1.10-15
+2019/06/10 01:50:30   22 install                                shared-mime-info               1.8-1
+2019/06/10 01:50:30   23 install                                       libcairo2           1.14.12-1
+2019/06/10 01:50:30   24 install                                  python37-cairo            1.14.1-1
+2019/06/10 01:50:45 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libffi/libffi-devel/libffi-devel-3.2.1-2.tar.xz
+2019/06/10 01:50:46 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/liblzo2/liblzo2_2/liblzo2_2-2.10-1.tar.xz
+2019/06/10 01:50:47 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pixman/libpixman1_0/libpixman1_0-0.34.0-1.tar.xz
+2019/06/10 01:50:48 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpng/libpng16/libpng16-1.6.34-1.tar.xz
+2019/06/10 01:50:48 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXau/libXau6/libXau6-1.0.8-1.tar.bz2
+2019/06/10 01:50:49 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXdmcp/libXdmcp6/libXdmcp6-1.1.2-1.tar.xz
+2019/06/10 01:50:50 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/gsettings-desktop-schemas/gsettings-desktop-schemas-3.24.1-1.tar.xz
+2019/06/10 01:50:53 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/dejavu-fonts/dejavu-fonts-2.37-1.tar.xz
+2019/06/10 01:50:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fontconfig/libfontconfig-common/libfontconfig-common-2.12.6-1.tar.xz
+2019/06/10 01:50:56 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxml2/libxml2-2.9.9-2.tar.xz
+2019/06/10 01:50:57 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/freetype2/libfreetype6/libfreetype6-2.8.1-1.tar.xz
+2019/06/10 01:50:57 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb1/libxcb1-1.12-2.tar.xz
+2019/06/10 01:51:03 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/glib2.0/libglib2.0_0/libglib2.0_0-2.54.3-1.tar.xz
+2019/06/10 01:51:04 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fontconfig/libfontconfig1/libfontconfig1-2.12.6-1.tar.xz
+2019/06/10 01:51:04 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-shm0/libxcb-shm0-1.12-2.tar.xz
+2019/06/10 01:51:05 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-render0/libxcb-render0-1.12-2.tar.xz
+2019/06/10 01:51:06 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libX11/libX11_6/libX11_6-1.6.5-1.tar.xz
+2019/06/10 01:51:06 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/desktop-file-utils/desktop-file-utils-0.23-1.tar.xz
+2019/06/10 01:51:07 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXrender/libXrender1/libXrender1-0.9.9-1.tar.xz
+2019/06/10 01:51:08 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXext/libXext6/libXext6-1.3.3-1.tar.xz
+2019/06/10 01:51:09 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gamin/gamin-0.1.10-15.tar.xz
+2019/06/10 01:51:10 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gamin/libfam0/libfam0-0.1.10-15.tar.xz
+2019/06/10 01:51:10 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/shared-mime-info/shared-mime-info-1.8-1.tar.xz
+2019/06/10 01:51:13 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cairo/libcairo2/libcairo2-1.14.12-1.tar.xz
+2019/06/10 01:51:14 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cairo/python37-cairo/python37-cairo-1.14.1-1.tar.xz
+2019/06/10 01:51:14 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libffi/libffi-devel/libffi-devel-3.2.1-2.tar.xz
+2019/06/10 01:51:14 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/liblzo2/liblzo2_2/liblzo2_2-2.10-1.tar.xz
+2019/06/10 01:51:14 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pixman/libpixman1_0/libpixman1_0-0.34.0-1.tar.xz
+2019/06/10 01:51:14 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpng/libpng16/libpng16-1.6.34-1.tar.xz
+2019/06/10 01:51:14 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXau/libXau6/libXau6-1.0.8-1.tar.bz2
+2019/06/10 01:51:14 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXdmcp/libXdmcp6/libXdmcp6-1.1.2-1.tar.xz
+2019/06/10 01:51:15 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/gsettings-desktop-schemas/gsettings-desktop-schemas-3.24.1-1.tar.xz
+2019/06/10 01:51:15 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/dejavu-fonts/dejavu-fonts-2.37-1.tar.xz
+2019/06/10 01:51:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fontconfig/libfontconfig-common/libfontconfig-common-2.12.6-1.tar.xz
+2019/06/10 01:51:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxml2/libxml2-2.9.9-2.tar.xz
+2019/06/10 01:51:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/freetype2/libfreetype6/libfreetype6-2.8.1-1.tar.xz
+2019/06/10 01:51:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb1/libxcb1-1.12-2.tar.xz
+2019/06/10 01:51:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/glib2.0/libglib2.0_0/libglib2.0_0-2.54.3-1.tar.xz
+2019/06/10 01:51:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fontconfig/libfontconfig1/libfontconfig1-2.12.6-1.tar.xz
+2019/06/10 01:51:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-shm0/libxcb-shm0-1.12-2.tar.xz
+2019/06/10 01:51:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-render0/libxcb-render0-1.12-2.tar.xz
+2019/06/10 01:51:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libX11/libX11_6/libX11_6-1.6.5-1.tar.xz
+2019/06/10 01:51:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/desktop-file-utils/desktop-file-utils-0.23-1.tar.xz
+2019/06/10 01:51:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXrender/libXrender1/libXrender1-0.9.9-1.tar.xz
+2019/06/10 01:51:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXext/libXext6/libXext6-1.3.3-1.tar.xz
+2019/06/10 01:51:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gamin/gamin-0.1.10-15.tar.xz
+2019/06/10 01:51:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gamin/libfam0/libfam0-0.1.10-15.tar.xz
+2019/06/10 01:51:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/shared-mime-info/shared-mime-info-1.8-1.tar.xz
+2019/06/10 01:51:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cairo/libcairo2/libcairo2-1.14.12-1.tar.xz
+2019/06/10 01:51:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cairo/python37-cairo/python37-cairo-1.14.1-1.tar.xz
+2019/06/10 01:51:20 Changing gid back to original
+2019/06/10 01:51:20 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/10 01:51:26 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/10 01:51:29 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/fontconfig_dtd.sh"
+2019/06/10 01:51:29 abnormal exit: exit code=2
+2019/06/10 01:51:29 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/libxml2.sh"
+2019/06/10 01:51:29 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/06/10 01:51:30 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/06/10 01:51:45 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/06/10 01:51:46 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/10 01:51:46 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/06/10 01:51:48 Changing gid to Administrators
+2019/06/10 01:51:58 note: Installation Complete
+2019/06/10 01:51:58 Ending cygwin install
+2019/06/10 01:52:01 Starting cygwin install, version 2.897
+2019/06/10 01:52:01 User has backup/restore rights
+2019/06/10 01:52:01 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 01:52:01 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 01:52:02 source: network install
+2019/06/10 01:52:03 root: C:\Cygwin system
+2019/06/10 01:52:04 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 01:52:04 net: Direct
+2019/06/10 01:52:06 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 01:52:07 site: http://cygwin.mirror.constant.com/
+2019/06/10 01:52:08 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 01:52:08 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 01:52:11 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 01:59:57 solving: 14 tasks, update: no, use test packages: no
+2019/06/10 01:59:57 Augmented Transaction List:
+2019/06/10 01:59:57    0 install                   mingw64-i686-shared-mime-info               1.2-1
+2019/06/10 01:59:57    1 install                 mingw64-x86_64-shared-mime-info               1.2-1
+2019/06/10 01:59:57    2 install                                    python37-ply              3.11-1
+2019/06/10 01:59:57    3 install                                cygwin-debuginfo             3.0.7-1
+2019/06/10 01:59:57    4 install                                        libisl15            0.16.1-1
+2019/06/10 01:59:57    5 install                                       libssl1.0            1.0.2r-2
+2019/06/10 01:59:57    6 install                                   libuuid-devel            2.33.1-1
+2019/06/10 01:59:57    7 install                                         libXft2             2.3.2-1
+2019/06/10 01:59:57    8 install                                  libgraphite2_3            1.3.10-1
+2019/06/10 01:59:57    9 install                                   libintl-devel          0.19.8.1-2
+2019/06/10 01:59:57   10 install                                        libjpeg8             1.5.3-1
+2019/06/10 01:59:57   11 install                                      zlib-devel            1.2.11-1
+2019/06/10 01:59:57   12 install                                  libexpat-devel             2.2.6-1
+2019/06/10 01:59:57   13 install                                libpixman1-devel            0.34.0-1
+2019/06/10 01:59:57   14 install                           girepository-cairo1.0            1.54.1-1
+2019/06/10 01:59:57   15 install                            girepository-GLib2.0            1.54.1-1
+2019/06/10 01:59:57   16 install                                    cygwin-devel             3.0.7-1
+2019/06/10 01:59:57   17 install                                      libatomic1             7.4.0-1
+2019/06/10 01:59:57   18 install                                        libgomp1             7.4.0-1
+2019/06/10 01:59:57   19 install                                         libmpc3             1.1.0-1
+2019/06/10 01:59:57   20 install                                    libquadmath0             7.4.0-1
+2019/06/10 01:59:57   21 install                                  w32api-headers             5.0.4-1
+2019/06/10 01:59:57   22 install                        windows-default-manifest               6.4-1
+2019/06/10 01:59:57   23 install                                       xorgproto            2018.4-1
+2019/06/10 01:59:57   24 install                                        libjbig2              2.0-14
+2019/06/10 01:59:57   25 install                                      libdatrie1             0.2.8-1
+2019/06/10 01:59:57   26 install                                     libpcre16_0              8.43-1
+2019/06/10 01:59:57   27 install                                     libpcre32_0              8.43-1
+2019/06/10 01:59:57   28 install                                     libpcrecpp0              8.43-1
+2019/06/10 01:59:57   29 install                                   libpcreposix0              8.43-1
+2019/06/10 01:59:57   30 install                                        libdb5.3            5.3.28-2
+2019/06/10 01:59:57   31 install                      shared-mime-info-debuginfo               1.8-1
+2019/06/10 01:59:57   32 install                                        python36             3.6.8-1
+2019/06/10 01:59:57   33 install                                        python35             3.5.7-1
+2019/06/10 01:59:57   34 install                              libgraphite2-devel            1.3.10-1
+2019/06/10 01:59:57   35 install                                    libharfbuzz0             1.7.6-1
+2019/06/10 01:59:57   36 install                                      libjasper4            2.0.14-1
+2019/06/10 01:59:57   37 install                                  libpng16-devel            1.6.34-1
+2019/06/10 01:59:57   38 install                                girepository-x11            1.54.1-1
+2019/06/10 01:59:57   39 install                                  w32api-runtime             5.0.4-1
+2019/06/10 01:59:57   40 install                                  libXdmcp-devel             1.1.2-1
+2019/06/10 01:59:57   41 install                                    libXau-devel             1.0.8-1
+2019/06/10 01:59:57   42 install                                        libtiff6             4.0.9-1
+2019/06/10 01:59:57   43 install                                        libthai0            0.1.26-1
+2019/06/10 01:59:57   44 install                                   libpcre-devel              8.43-1
+2019/06/10 01:59:57   45 install                                        python27            2.7.16-1
+2019/06/10 01:59:57   46 install                             python36-setuptools            40.8.0-1
+2019/06/10 01:59:57   47 install                                    python36-ply              3.11-1
+2019/06/10 01:59:57   48 install                                  python36-cairo            1.14.1-1
+2019/06/10 01:59:57   49 install                             python35-setuptools            40.8.0-1
+2019/06/10 01:59:57   50 install                            libharfbuzz-gobject0             1.7.6-1
+2019/06/10 01:59:57   51 install                                    libpng-devel            1.6.34-1
+2019/06/10 01:59:57   52 install                                        gcc-core             7.4.0-1
+2019/06/10 01:59:57   53 install                                    libxcb-devel              1.12-2
+2019/06/10 01:59:57   54 install                              libgdk_pixbuf2.0_0           2.36.11-1
+2019/06/10 01:59:57   55 install                                   libpango1.0_0           1.40.14-1
+2019/06/10 01:59:57   56 install                                         python2            2.7.16-1
+2019/06/10 01:59:57   57 install                                  python36-devel             3.6.8-1
+2019/06/10 01:59:57   58 install                                    python35-pip            19.0.3-1
+2019/06/10 01:59:57   59 install                                  python35-devel             3.5.7-1
+2019/06/10 01:59:57   60 install                        girepository-HarfBuzz0.0             1.7.6-1
+2019/06/10 01:59:57   61 install                               libfreetype-devel             2.8.1-1
+2019/06/10 01:59:57   62 install                              python37-pycparser              2.19-1
+2019/06/10 01:59:57   63 install                              python36-pycparser              2.19-1
+2019/06/10 01:59:57   64 install                                libxcb-shm-devel              1.12-2
+2019/06/10 01:59:57   65 install                             libxcb-render-devel              1.12-2
+2019/06/10 01:59:57   66 install                                    libX11-devel             1.6.5-1
+2019/06/10 01:59:57   67 install                           girepository-Pango1.0           1.40.14-1
+2019/06/10 01:59:57   68 install                                libglib2.0-devel            2.54.3-1
+2019/06/10 01:59:57   69 install                             libfontconfig-devel            2.12.6-1
+2019/06/10 01:59:57   70 install                                   python37-cffi            1.12.2-1
+2019/06/10 01:59:57   71 install                                   python36-cffi            1.12.2-1
+2019/06/10 01:59:57   72 install                                libXrender-devel             0.9.9-1
+2019/06/10 01:59:57   73 install                                   libXext-devel             1.3.3-1
+2019/06/10 01:59:57   74 install                               libharfbuzz-devel             1.7.6-1
+2019/06/10 01:59:57   75 install                                    libXft-devel             2.3.2-1
+2019/06/10 01:59:57   76 install                                  libcairo-devel           1.14.12-1
+2019/06/10 01:59:57   77 install                               libpango1.0-devel           1.40.14-1
+2019/06/10 02:00:01 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-shared-mime-info/mingw64-i686-shared-mime-info-1.2-1.tar.xz
+2019/06/10 02:00:04 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-x86_64-shared-mime-info/mingw64-x86_64-shared-mime-info-1.2-1.tar.xz
+2019/06/10 02:00:05 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-ply/python37-ply/python37-ply-3.11-1.tar.xz
+2019/06/10 02:00:13 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygwin/cygwin-debuginfo/cygwin-debuginfo-3.0.7-1.tar.xz
+2019/06/10 02:00:14 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/isl/libisl15/libisl15-0.16.1-1.tar.xz
+2019/06/10 02:00:15 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openssl10/libssl1.0/libssl1.0-1.0.2r-2.tar.xz
+2019/06/10 02:00:16 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libuuid-devel/libuuid-devel-2.33.1-1.tar.xz
+2019/06/10 02:00:17 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXft/libXft2/libXft2-2.3.2-1.tar.xz
+2019/06/10 02:00:17 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/graphite2/libgraphite2_3/libgraphite2_3-1.3.10-1.tar.xz
+2019/06/10 02:00:18 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gettext/libintl-devel/libintl-devel-0.19.8.1-2.tar.xz
+2019/06/10 02:00:19 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libjpeg-turbo/libjpeg8/libjpeg8-1.5.3-1.tar.xz
+2019/06/10 02:00:20 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/zlib/zlib-devel/zlib-devel-1.2.11-1.tar.xz
+2019/06/10 02:00:21 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/expat/libexpat-devel/libexpat-devel-2.2.6-1.tar.xz
+2019/06/10 02:00:21 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pixman/libpixman1-devel/libpixman1-devel-0.34.0-1.tar.xz
+2019/06/10 02:00:22 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gobject-introspection/girepository-cairo1.0/girepository-cairo1.0-1.54.1-1.tar.xz
+2019/06/10 02:00:24 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gobject-introspection/girepository-GLib2.0/girepository-GLib2.0-1.54.1-1.tar.xz
+2019/06/10 02:00:25 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygwin/cygwin-devel/cygwin-devel-3.0.7-1.tar.xz
+2019/06/10 02:00:26 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libatomic1/libatomic1-7.4.0-1.tar.xz
+2019/06/10 02:00:27 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libgomp1/libgomp1-7.4.0-1.tar.xz
+2019/06/10 02:00:27 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/mpclib/libmpc3/libmpc3-1.1.0-1.tar.xz
+2019/06/10 02:00:28 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libquadmath0/libquadmath0-7.4.0-1.tar.xz
+2019/06/10 02:00:35 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/w32api-headers/w32api-headers-5.0.4-1.tar.xz
+2019/06/10 02:00:36 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/windows-default-manifest/windows-default-manifest-6.4-1.tar.xz
+2019/06/10 02:00:37 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/xorgproto/xorgproto-2018.4-1.tar.xz
+2019/06/10 02:00:37 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/jbigkit/libjbig2/libjbig2-2.0-14.tar.xz
+2019/06/10 02:00:38 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libdatrie/libdatrie1/libdatrie1-0.2.8-1.tar.xz
+2019/06/10 02:00:39 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre16_0/libpcre16_0-8.43-1.tar.xz
+2019/06/10 02:00:40 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre32_0/libpcre32_0-8.43-1.tar.xz
+2019/06/10 02:00:41 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcrecpp0/libpcrecpp0-8.43-1.tar.xz
+2019/06/10 02:00:41 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcreposix0/libpcreposix0-8.43-1.tar.xz
+2019/06/10 02:00:43 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/db/libdb5.3/libdb5.3-5.3.28-2.tar.xz
+2019/06/10 02:00:45 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/shared-mime-info/shared-mime-info-debuginfo/shared-mime-info-debuginfo-1.8-1.tar.xz
+2019/06/10 02:00:50 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python36/python36-3.6.8-1.tar.xz
+2019/06/10 02:01:00 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python35/python35-3.5.7-1.tar.xz
+2019/06/10 02:01:00 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/graphite2/libgraphite2-devel/libgraphite2-devel-1.3.10-1.tar.xz
+2019/06/10 02:01:04 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz0/libharfbuzz0-1.7.6-1.tar.xz
+2019/06/10 02:01:04 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/jasper/libjasper4/libjasper4-2.0.14-1.tar.xz
+2019/06/10 02:01:05 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpng/libpng16-devel/libpng16-devel-1.6.34-1.tar.xz
+2019/06/10 02:01:06 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gobject-introspection/girepository-x11/girepository-x11-1.54.1-1.tar.xz
+2019/06/10 02:01:08 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/w32api-runtime/w32api-runtime-5.0.4-1.tar.xz
+2019/06/10 02:01:09 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXdmcp/libXdmcp-devel/libXdmcp-devel-1.1.2-1.tar.xz
+2019/06/10 02:01:10 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXau/libXau-devel/libXau-devel-1.0.8-1.tar.bz2
+2019/06/10 02:01:10 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tiff/libtiff6/libtiff6-4.0.9-1.tar.xz
+2019/06/10 02:01:11 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libthai/libthai0/libthai0-0.1.26-1.tar.xz
+2019/06/10 02:01:12 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre-devel/libpcre-devel-8.43-1.tar.xz
+2019/06/10 02:01:18 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python2/python27/python27-2.7.16-1.tar.xz
+2019/06/10 02:01:20 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python36-setuptools/python36-setuptools-40.8.0-1.tar.xz
+2019/06/10 02:01:21 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-ply/python36-ply/python36-ply-3.11-1.tar.xz
+2019/06/10 02:01:22 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cairo/python36-cairo/python36-cairo-1.14.1-1.tar.xz
+2019/06/10 02:01:25 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python35-setuptools/python35-setuptools-40.8.0-1.tar.xz
+2019/06/10 02:01:26 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz-gobject0/libharfbuzz-gobject0-1.7.6-1.tar.xz
+2019/06/10 02:01:27 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpng/libpng-devel/libpng-devel-1.6.34-1.tar.xz
+2019/06/10 02:01:51 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/gcc-core/gcc-core-7.4.0-1.tar.xz
+2019/06/10 02:01:52 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-devel/libxcb-devel-1.12-2.tar.xz
+2019/06/10 02:01:52 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gdk-pixbuf2.0/libgdk_pixbuf2.0_0/libgdk_pixbuf2.0_0-2.36.11-1.tar.xz
+2019/06/10 02:01:53 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pango1.0/libpango1.0_0/libpango1.0_0-1.40.14-1.tar.xz
+2019/06/10 02:01:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python2/python2-2.7.16-1.tar.xz
+2019/06/10 02:01:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python36/python36-devel/python36-devel-3.6.8-1.tar.xz
+2019/06/10 02:01:56 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python35-pip/python35-pip-19.0.3-1.tar.xz
+2019/06/10 02:01:59 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python35/python35-devel/python35-devel-3.5.7-1.tar.xz
+2019/06/10 02:01:59 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/girepository-HarfBuzz0.0/girepository-HarfBuzz0.0-1.7.6-1.tar.xz
+2019/06/10 02:02:00 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/freetype2/libfreetype-devel/libfreetype-devel-2.8.1-1.tar.xz
+2019/06/10 02:02:01 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pycparser/python37-pycparser/python37-pycparser-2.19-1.tar.xz
+2019/06/10 02:02:01 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pycparser/python36-pycparser/python36-pycparser-2.19-1.tar.xz
+2019/06/10 02:02:02 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-shm-devel/libxcb-shm-devel-1.12-2.tar.xz
+2019/06/10 02:02:03 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-render-devel/libxcb-render-devel-1.12-2.tar.xz
+2019/06/10 02:02:03 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libX11/libX11-devel/libX11-devel-1.6.5-1.tar.xz
+2019/06/10 02:02:05 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pango1.0/girepository-Pango1.0/girepository-Pango1.0-1.40.14-1.tar.xz
+2019/06/10 02:02:09 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/glib2.0/libglib2.0-devel/libglib2.0-devel-2.54.3-1.tar.xz
+2019/06/10 02:02:10 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fontconfig/libfontconfig-devel/libfontconfig-devel-2.12.6-1.tar.xz
+2019/06/10 02:02:11 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cffi/python37-cffi/python37-cffi-1.12.2-1.tar.xz
+2019/06/10 02:02:14 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cffi/python36-cffi/python36-cffi-1.12.2-1.tar.xz
+2019/06/10 02:02:15 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXrender/libXrender-devel/libXrender-devel-0.9.9-1.tar.xz
+2019/06/10 02:02:16 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXext/libXext-devel/libXext-devel-1.3.3-1.tar.xz
+2019/06/10 02:02:17 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz-devel/libharfbuzz-devel-1.7.6-1.tar.xz
+2019/06/10 02:02:17 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXft/libXft-devel/libXft-devel-2.3.2-1.tar.xz
+2019/06/10 02:02:20 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cairo/libcairo-devel/libcairo-devel-1.14.12-1.tar.xz
+2019/06/10 02:02:21 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pango1.0/libpango1.0-devel/libpango1.0-devel-1.40.14-1.tar.xz
+2019/06/10 02:02:21 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-i686-shared-mime-info/mingw64-i686-shared-mime-info-1.2-1.tar.xz
+2019/06/10 02:02:24 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/mingw64-x86_64-shared-mime-info/mingw64-x86_64-shared-mime-info-1.2-1.tar.xz
+2019/06/10 02:02:26 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-ply/python37-ply/python37-ply-3.11-1.tar.xz
+2019/06/10 02:02:27 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygwin/cygwin-debuginfo/cygwin-debuginfo-3.0.7-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/isl/libisl15/libisl15-0.16.1-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openssl10/libssl1.0/libssl1.0-1.0.2r-2.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/util-linux/libuuid-devel/libuuid-devel-2.33.1-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXft/libXft2/libXft2-2.3.2-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/graphite2/libgraphite2_3/libgraphite2_3-1.3.10-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gettext/libintl-devel/libintl-devel-0.19.8.1-2.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libjpeg-turbo/libjpeg8/libjpeg8-1.5.3-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/zlib/zlib-devel/zlib-devel-1.2.11-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/expat/libexpat-devel/libexpat-devel-2.2.6-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pixman/libpixman1-devel/libpixman1-devel-0.34.0-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gobject-introspection/girepository-cairo1.0/girepository-cairo1.0-1.54.1-1.tar.xz
+2019/06/10 02:02:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gobject-introspection/girepository-GLib2.0/girepository-GLib2.0-1.54.1-1.tar.xz
+2019/06/10 02:02:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cygwin/cygwin-devel/cygwin-devel-3.0.7-1.tar.xz
+2019/06/10 02:02:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libatomic1/libatomic1-7.4.0-1.tar.xz
+2019/06/10 02:02:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libgomp1/libgomp1-7.4.0-1.tar.xz
+2019/06/10 02:02:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/mpclib/libmpc3/libmpc3-1.1.0-1.tar.xz
+2019/06/10 02:02:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/libquadmath0/libquadmath0-7.4.0-1.tar.xz
+2019/06/10 02:02:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/w32api-headers/w32api-headers-5.0.4-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/windows-default-manifest/windows-default-manifest-6.4-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/xorgproto/xorgproto-2018.4-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/jbigkit/libjbig2/libjbig2-2.0-14.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libdatrie/libdatrie1/libdatrie1-0.2.8-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre16_0/libpcre16_0-8.43-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre32_0/libpcre32_0-8.43-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcrecpp0/libpcrecpp0-8.43-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcreposix0/libpcreposix0-8.43-1.tar.xz
+2019/06/10 02:02:38 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/db/libdb5.3/libdb5.3-5.3.28-2.tar.xz
+2019/06/10 02:02:39 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/shared-mime-info/shared-mime-info-debuginfo/shared-mime-info-debuginfo-1.8-1.tar.xz
+2019/06/10 02:02:39 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python36/python36-3.6.8-1.tar.xz
+2019/06/10 02:02:49 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python35/python35-3.5.7-1.tar.xz
+2019/06/10 02:03:00 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/graphite2/libgraphite2-devel/libgraphite2-devel-1.3.10-1.tar.xz
+2019/06/10 02:03:00 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz0/libharfbuzz0-1.7.6-1.tar.xz
+2019/06/10 02:03:00 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/jasper/libjasper4/libjasper4-2.0.14-1.tar.xz
+2019/06/10 02:03:00 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpng/libpng16-devel/libpng16-devel-1.6.34-1.tar.xz
+2019/06/10 02:03:00 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gobject-introspection/girepository-x11/girepository-x11-1.54.1-1.tar.xz
+2019/06/10 02:03:01 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/w32api-runtime/w32api-runtime-5.0.4-1.tar.xz
+2019/06/10 02:03:05 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXdmcp/libXdmcp-devel/libXdmcp-devel-1.1.2-1.tar.xz
+2019/06/10 02:03:05 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXau/libXau-devel/libXau-devel-1.0.8-1.tar.bz2
+2019/06/10 02:03:06 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tiff/libtiff6/libtiff6-4.0.9-1.tar.xz
+2019/06/10 02:03:06 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libthai/libthai0/libthai0-0.1.26-1.tar.xz
+2019/06/10 02:03:06 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pcre/libpcre-devel/libpcre-devel-8.43-1.tar.xz
+2019/06/10 02:03:06 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python2/python27/python27-2.7.16-1.tar.xz
+2019/06/10 02:03:13 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python36-setuptools/python36-setuptools-40.8.0-1.tar.xz
+2019/06/10 02:03:15 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-ply/python36-ply/python36-ply-3.11-1.tar.xz
+2019/06/10 02:03:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cairo/python36-cairo/python36-cairo-1.14.1-1.tar.xz
+2019/06/10 02:03:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-setuptools/python35-setuptools/python35-setuptools-40.8.0-1.tar.xz
+2019/06/10 02:03:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz-gobject0/libharfbuzz-gobject0-1.7.6-1.tar.xz
+2019/06/10 02:03:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libpng/libpng-devel/libpng-devel-1.6.34-1.tar.xz
+2019/06/10 02:03:19 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gcc/gcc-core/gcc-core-7.4.0-1.tar.xz
+2019/06/10 02:03:23 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-devel/libxcb-devel-1.12-2.tar.xz
+2019/06/10 02:03:23 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/gdk-pixbuf2.0/libgdk_pixbuf2.0_0/libgdk_pixbuf2.0_0-2.36.11-1.tar.xz
+2019/06/10 02:03:24 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pango1.0/libpango1.0_0/libpango1.0_0-1.40.14-1.tar.xz
+2019/06/10 02:03:24 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python2/python2-2.7.16-1.tar.xz
+2019/06/10 02:03:24 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python36/python36-devel/python36-devel-3.6.8-1.tar.xz
+2019/06/10 02:03:25 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pip/python35-pip/python35-pip-19.0.3-1.tar.xz
+2019/06/10 02:03:31 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python35/python35-devel/python35-devel-3.5.7-1.tar.xz
+2019/06/10 02:03:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/girepository-HarfBuzz0.0/girepository-HarfBuzz0.0-1.7.6-1.tar.xz
+2019/06/10 02:03:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/freetype2/libfreetype-devel/libfreetype-devel-2.8.1-1.tar.xz
+2019/06/10 02:03:32 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pycparser/python37-pycparser/python37-pycparser-2.19-1.tar.xz
+2019/06/10 02:03:33 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/noarch/release/python-pycparser/python36-pycparser/python36-pycparser-2.19-1.tar.xz
+2019/06/10 02:03:33 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-shm-devel/libxcb-shm-devel-1.12-2.tar.xz
+2019/06/10 02:03:33 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libxcb/libxcb-render-devel/libxcb-render-devel-1.12-2.tar.xz
+2019/06/10 02:03:33 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libX11/libX11-devel/libX11-devel-1.6.5-1.tar.xz
+2019/06/10 02:03:33 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pango1.0/girepository-Pango1.0/girepository-Pango1.0-1.40.14-1.tar.xz
+2019/06/10 02:03:33 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/glib2.0/libglib2.0-devel/libglib2.0-devel-2.54.3-1.tar.xz
+2019/06/10 02:03:35 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fontconfig/libfontconfig-devel/libfontconfig-devel-2.12.6-1.tar.xz
+2019/06/10 02:03:35 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cffi/python37-cffi/python37-cffi-1.12.2-1.tar.xz
+2019/06/10 02:03:35 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/python-cffi/python36-cffi/python36-cffi-1.12.2-1.tar.xz
+2019/06/10 02:03:35 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXrender/libXrender-devel/libXrender-devel-0.9.9-1.tar.xz
+2019/06/10 02:03:35 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXext/libXext-devel/libXext-devel-1.3.3-1.tar.xz
+2019/06/10 02:03:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz-devel/libharfbuzz-devel-1.7.6-1.tar.xz
+2019/06/10 02:03:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXft/libXft-devel/libXft-devel-2.3.2-1.tar.xz
+2019/06/10 02:03:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cairo/libcairo-devel/libcairo-devel-1.14.12-1.tar.xz
+2019/06/10 02:03:36 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/pango1.0/libpango1.0-devel/libpango1.0-devel-1.40.14-1.tar.xz
+2019/06/10 02:03:36 Changing gid back to original
+2019/06/10 02:03:36 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/10 02:03:51 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/10 02:03:55 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/gdk-pixbuf2.0.sh"
+2019/06/10 02:03:56 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/openssl10.sh"
+2019/06/10 02:03:56 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/mingw64-i686-shared-mime-info.sh"
+2019/06/10 02:04:00 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/mingw64-x86_64-shared-mime-info.sh"
+2019/06/10 02:04:02 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/fontconfig_dtd.sh"
+2019/06/10 02:04:02 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/06/10 02:04:02 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/06/10 02:04:09 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/06/10 02:04:09 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/10 02:04:09 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/06/10 02:04:09 Changing gid to Administrators
+2019/06/10 02:04:18 note: Installation Complete
+2019/06/10 02:04:18 Ending cygwin install
+2019/06/10 02:17:17 Starting cygwin install, version 2.897
+2019/06/10 02:17:17 User has backup/restore rights
+2019/06/10 02:17:17 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 02:17:17 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 02:17:21 source: network install
+2019/06/10 02:17:22 root: C:\Cygwin system
+2019/06/10 02:17:22 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 02:17:23 net: Direct
+2019/06/10 02:17:25 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 02:17:26 site: http://cygwin.mirror.constant.com/
+2019/06/10 02:17:27 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 02:17:27 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 02:17:30 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 02:34:51 solving: 13 tasks, update: no, use test packages: no
+2019/06/10 02:34:51 Augmented Transaction List:
+2019/06/10 02:34:51    0 install                                     libfribidi0            0.19.7-1
+2019/06/10 02:34:51    1 install                       libharfbuzz-gobject-devel             1.7.6-1
+2019/06/10 02:34:51    2 install                                   libjpeg-devel             1.5.3-1
+2019/06/10 02:34:51    3 install                                      liblcms2_2               2.9-1
+2019/06/10 02:34:51    4 install                                   libtiff-devel             4.0.9-1
+2019/06/10 02:34:51    5 install                                        libwebp7             0.6.1-2
+2019/06/10 02:34:51    6 install                                            zlib            1.2.11-1
+2019/06/10 02:34:51    7 install                                         libXss1             1.2.2-1
+2019/06/10 02:34:51    8 install                                             tcl             8.6.8-1
+2019/06/10 02:34:51    9 install                                         libgif7             5.1.4-1
+2019/06/10 02:34:51   10 install                                 libwebpdecoder3             0.6.1-2
+2019/06/10 02:34:51   11 install                                libfribidi-devel            0.19.7-1
+2019/06/10 02:34:51   12 install                                  liblcms2-devel               2.9-1
+2019/06/10 02:34:51   13 install                                     libwebpmux3             0.6.1-2
+2019/06/10 02:34:51   14 install                                   libwebpdemux2             0.6.1-2
+2019/06/10 02:34:51   15 install                                       tcl-devel             8.6.8-1
+2019/06/10 02:34:51   16 install                                          tcl-tk             8.6.8-1
+2019/06/10 02:34:51   17 install                                        libming1             0.4.8-3
+2019/06/10 02:34:51   18 install                                   libwebp-devel             0.6.1-2
+2019/06/10 02:34:51   19 install                                    tcl-tk-devel             8.6.8-1
+2019/06/10 02:34:51   20 install                                        tcl-ming             0.4.8-3
+2019/06/10 02:34:53 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fribidi/libfribidi0/libfribidi0-0.19.7-1.tar.xz
+2019/06/10 02:34:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz-gobject-devel/libharfbuzz-gobject-devel-1.7.6-1.tar.xz
+2019/06/10 02:34:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libjpeg-turbo/libjpeg-devel/libjpeg-devel-1.5.3-1.tar.xz
+2019/06/10 02:34:55 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/lcms2/liblcms2_2/liblcms2_2-2.9-1.tar.xz
+2019/06/10 02:34:56 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tiff/libtiff-devel/libtiff-devel-4.0.9-1.tar.xz
+2019/06/10 02:34:57 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebp7/libwebp7-0.6.1-2.tar.xz
+2019/06/10 02:34:57 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/zlib/zlib-1.2.11-1.tar.xz
+2019/06/10 02:34:58 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXScrnSaver/libXss1/libXss1-1.2.2-1.tar.bz2
+2019/06/10 02:35:00 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl/tcl-8.6.8-1.tar.xz
+2019/06/10 02:35:01 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/giflib/libgif7/libgif7-5.1.4-1.tar.xz
+2019/06/10 02:35:02 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebpdecoder3/libwebpdecoder3-0.6.1-2.tar.xz
+2019/06/10 02:35:03 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fribidi/libfribidi-devel/libfribidi-devel-0.19.7-1.tar.xz
+2019/06/10 02:35:03 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/lcms2/liblcms2-devel/liblcms2-devel-2.9-1.tar.xz
+2019/06/10 02:35:04 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebpmux3/libwebpmux3-0.6.1-2.tar.xz
+2019/06/10 02:35:05 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebpdemux2/libwebpdemux2-0.6.1-2.tar.xz
+2019/06/10 02:35:08 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl/tcl-devel/tcl-devel-8.6.8-1.tar.xz
+2019/06/10 02:35:10 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl-tk/tcl-tk-8.6.8-1.tar.xz
+2019/06/10 02:35:12 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ming/libming1/libming1-0.4.8-3.tar.xz
+2019/06/10 02:35:13 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebp-devel/libwebp-devel-0.6.1-2.tar.xz
+2019/06/10 02:35:15 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl-tk/tcl-tk-devel/tcl-tk-devel-8.6.8-1.tar.xz
+2019/06/10 02:35:16 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ming/tcl-ming/tcl-ming-0.4.8-3.tar.xz
+2019/06/10 02:35:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fribidi/libfribidi0/libfribidi0-0.19.7-1.tar.xz
+2019/06/10 02:35:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/harfbuzz/libharfbuzz-gobject-devel/libharfbuzz-gobject-devel-1.7.6-1.tar.xz
+2019/06/10 02:35:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libjpeg-turbo/libjpeg-devel/libjpeg-devel-1.5.3-1.tar.xz
+2019/06/10 02:35:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/lcms2/liblcms2_2/liblcms2_2-2.9-1.tar.xz
+2019/06/10 02:35:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tiff/libtiff-devel/libtiff-devel-4.0.9-1.tar.xz
+2019/06/10 02:35:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebp7/libwebp7-0.6.1-2.tar.xz
+2019/06/10 02:35:16 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/zlib/zlib-1.2.11-1.tar.xz
+2019/06/10 02:35:17 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libXScrnSaver/libXss1/libXss1-1.2.2-1.tar.bz2
+2019/06/10 02:35:17 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl/tcl-8.6.8-1.tar.xz
+2019/06/10 02:35:18 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/giflib/libgif7/libgif7-5.1.4-1.tar.xz
+2019/06/10 02:35:18 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebpdecoder3/libwebpdecoder3-0.6.1-2.tar.xz
+2019/06/10 02:35:18 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/fribidi/libfribidi-devel/libfribidi-devel-0.19.7-1.tar.xz
+2019/06/10 02:35:18 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/lcms2/liblcms2-devel/liblcms2-devel-2.9-1.tar.xz
+2019/06/10 02:35:18 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebpmux3/libwebpmux3-0.6.1-2.tar.xz
+2019/06/10 02:35:18 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebpdemux2/libwebpdemux2-0.6.1-2.tar.xz
+2019/06/10 02:35:18 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl/tcl-devel/tcl-devel-8.6.8-1.tar.xz
+2019/06/10 02:35:20 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl-tk/tcl-tk-8.6.8-1.tar.xz
+2019/06/10 02:35:21 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ming/libming1/libming1-0.4.8-3.tar.xz
+2019/06/10 02:35:22 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/libwebp/libwebp-devel/libwebp-devel-0.6.1-2.tar.xz
+2019/06/10 02:35:22 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/tcl-tk/tcl-tk-devel/tcl-tk-devel-8.6.8-1.tar.xz
+2019/06/10 02:35:23 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/ming/tcl-ming/tcl-ming-0.4.8-3.tar.xz
+2019/06/10 02:35:23 Changing gid back to original
+2019/06/10 02:35:23 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/10 02:35:30 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/10 02:35:31 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/06/10 02:35:31 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/06/10 02:35:36 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/06/10 02:35:36 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/10 02:35:36 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/06/10 02:35:37 Changing gid to Administrators
+2019/06/10 02:35:39 note: Installation Complete
+2019/06/10 02:35:39 Ending cygwin install
+2019/06/10 02:42:57 Starting cygwin install, version 2.897
+2019/06/10 02:42:57 User has backup/restore rights
+2019/06/10 02:42:57 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 02:42:57 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 02:42:58 source: network install
+2019/06/10 02:42:59 root: C:\Cygwin system
+2019/06/10 02:42:59 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 02:43:00 net: Direct
+2019/06/10 02:43:02 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 02:43:03 site: http://cygwin.mirror.constant.com/
+2019/06/10 02:43:03 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 02:43:04 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 02:43:07 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 02:47:35 solving: 1 tasks, update: no, use test packages: no
+2019/06/10 02:47:35 Augmented Transaction List:
+2019/06/10 02:47:35    0 install                                postgresql-devel              11.2-1
+2019/06/10 02:47:39 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/postgresql/postgresql-devel/postgresql-devel-11.2-1.tar.xz
+2019/06/10 02:47:39 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/postgresql/postgresql-devel/postgresql-devel-11.2-1.tar.xz
+2019/06/10 02:47:42 Changing gid back to original
+2019/06/10 02:47:42 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/10 02:47:48 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/10 02:47:49 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/06/10 02:47:49 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/06/10 02:47:53 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/06/10 02:47:53 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/10 02:47:53 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/06/10 02:47:54 Changing gid to Administrators
+2019/06/10 02:47:56 note: Installation Complete
+2019/06/10 02:47:56 Ending cygwin install
+2019/06/10 02:59:45 Starting cygwin install, version 2.897
+2019/06/10 02:59:45 User has backup/restore rights
+2019/06/10 02:59:45 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 02:59:45 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 02:59:47 source: network install
+2019/06/10 02:59:48 root: C:\Cygwin system
+2019/06/10 02:59:48 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 02:59:49 net: Direct
+2019/06/10 02:59:51 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 02:59:52 site: http://cygwin.mirror.constant.com/
+2019/06/10 02:59:52 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 02:59:53 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 02:59:56 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 03:00:30 Ending cygwin install
+2019/06/10 03:16:04 Starting cygwin install, version 2.897
+2019/06/10 03:16:04 User has backup/restore rights
+2019/06/10 03:16:04 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 03:16:04 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 03:16:06 source: network install
+2019/06/10 03:16:06 root: C:\Cygwin system
+2019/06/10 03:16:07 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 03:16:08 net: Direct
+2019/06/10 03:16:10 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 03:16:11 site: http://cygwin.mirror.constant.com/
+2019/06/10 03:16:11 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 03:16:12 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 03:16:15 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 03:17:12 Ending cygwin install
+2019/06/10 03:08:38 Starting cygwin install, version 2.897
+2019/06/10 03:08:38 User has backup/restore rights
+2019/06/10 03:08:38 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 03:08:38 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 03:08:40 source: network install
+2019/06/10 03:08:41 root: C:\Cygwin system
+2019/06/10 03:08:42 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 03:08:43 net: Direct
+2019/06/10 03:08:45 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 03:08:46 site: http://cygwin.mirror.constant.com/
+2019/06/10 03:08:46 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 03:08:47 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 03:08:49 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 03:20:33 solving: 0 tasks, update: yes, use test packages: yes
+2019/06/10 03:20:34 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 03:20:35 solving: 0 tasks, update: yes, use test packages: yes
+2019/06/10 03:20:35 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 03:20:38 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 03:20:40 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 03:27:57 Ending cygwin install
+2019/06/10 03:57:32 Starting cygwin install, version 2.897
+2019/06/10 03:57:32 User has backup/restore rights
+2019/06/10 03:57:32 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 03:57:32 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 03:57:34 source: network install
+2019/06/10 03:57:35 root: C:\Cygwin system
+2019/06/10 03:57:36 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 03:57:36 net: Direct
+2019/06/10 03:57:38 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 03:57:40 site: http://cygwin.mirror.constant.com/
+2019/06/10 03:57:41 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 03:57:42 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 03:57:50 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 04:03:41 solving: 1 tasks, update: no, use test packages: no
+2019/06/10 04:03:41 Augmented Transaction List:
+2019/06/10 04:03:41    0 install                                           crypt               2.1-1
+2019/06/10 04:03:41    1 install                                     libcom_err2            1.44.5-1
+2019/06/10 04:03:41    2 install                                 libkrb5support0            1.15.2-2
+2019/06/10 04:03:41    3 install                                    libk5crypto3            1.15.2-2
+2019/06/10 04:03:41    4 install                                       libkrb5_3            1.15.2-2
+2019/06/10 04:03:41    5 install                                libgssapi_krb5_2            1.15.2-2
+2019/06/10 04:03:41    6 install                                libopenldap2_4_2            2.4.42-1
+2019/06/10 04:03:41    7 install                                      libsasl2_3           2.1.26-11
+2019/06/10 04:03:41    8 install                                          libpq5              11.2-1
+2019/06/10 04:03:51 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/crypt/crypt-2.1-1.tar.xz
+2019/06/10 04:03:52 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/e2fsprogs/libcom_err2/libcom_err2-1.44.5-1.tar.xz
+2019/06/10 04:03:52 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libkrb5support0/libkrb5support0-1.15.2-2.tar.xz
+2019/06/10 04:03:53 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libk5crypto3/libk5crypto3-1.15.2-2.tar.xz
+2019/06/10 04:03:53 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libkrb5_3/libkrb5_3-1.15.2-2.tar.xz
+2019/06/10 04:03:54 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libgssapi_krb5_2/libgssapi_krb5_2-1.15.2-2.tar.xz
+2019/06/10 04:03:55 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openldap/libopenldap2_4_2/libopenldap2_4_2-2.4.42-1.tar.xz
+2019/06/10 04:03:55 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cyrus-sasl/libsasl2_3/libsasl2_3-2.1.26-11.tar.xz
+2019/06/10 04:03:56 Downloaded C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/postgresql/libpq5/libpq5-11.2-1.tar.xz
+2019/06/10 04:03:56 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/e2fsprogs/libcom_err2/libcom_err2-1.44.5-1.tar.xz
+2019/06/10 04:03:56 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libkrb5support0/libkrb5support0-1.15.2-2.tar.xz
+2019/06/10 04:03:57 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libk5crypto3/libk5crypto3-1.15.2-2.tar.xz
+2019/06/10 04:03:57 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libkrb5_3/libkrb5_3-1.15.2-2.tar.xz
+2019/06/10 04:03:57 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/krb5/libgssapi_krb5_2/libgssapi_krb5_2-1.15.2-2.tar.xz
+2019/06/10 04:03:57 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/openldap/libopenldap2_4_2/libopenldap2_4_2-2.4.42-1.tar.xz
+2019/06/10 04:03:57 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/cyrus-sasl/libsasl2_3/libsasl2_3-2.1.26-11.tar.xz
+2019/06/10 04:03:57 Extracting from file://C:\Users\Chetabahana\Documents\Cygwin\etc\packages/http%3a%2f%2fcygwin.mirror.constant.com%2f/x86_64/release/postgresql/libpq5/libpq5-11.2-1.tar.xz
+2019/06/10 04:03:57 Changing gid back to original
+2019/06/10 04:03:57 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_000_autorebase.dash"
+2019/06/10 04:04:07 running: C:\Cygwin\bin\dash.exe "/etc/postinstall/0p_update-info-dir.dash"
+2019/06/10 04:04:07 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/libsasl2_3.sh"
+2019/06/10 04:04:07 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_desktop-file-utils.sh"
+2019/06/10 04:04:08 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_fontconfig_cache_1.sh"
+2019/06/10 04:04:09 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_glib2.0.sh"
+2019/06/10 04:04:09 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_man-db.sh"
+2019/06/10 04:04:09 running: C:\Cygwin\bin\bash.exe --norc --noprofile "/etc/postinstall/zp_shared-mime-info.sh"
+2019/06/10 04:04:09 Changing gid to Administrators
+2019/06/10 04:04:40 note: Installation Complete
+2019/06/10 04:04:40 Ending cygwin install
+2019/06/10 16:11:27 Starting cygwin install, version 2.897
+2019/06/10 16:11:27 User has backup/restore rights
+2019/06/10 16:11:27 Current Directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 16:11:27 Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2019/06/10 16:11:29 source: network install
+2019/06/10 16:11:30 root: C:\Cygwin system
+2019/06/10 16:11:30 Selected local directory: C:\Users\Chetabahana\Documents\Cygwin\etc\packages
+2019/06/10 16:11:31 net: Direct
+2019/06/10 16:11:33 connection error: 12157 fetching https://cygwin.com/mirrors.lst
+2019/06/10 16:11:34 site: http://cygwin.mirror.constant.com/
+2019/06/10 16:11:35 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst.sig
+2019/06/10 16:11:36 HTTP status 404 fetching http://cygwin.mirror.constant.com/x86_64/setup.zst
+2019/06/10 16:11:39 solving: 0 tasks, update: yes, use test packages: no
+2019/06/10 16:13:09 Ending cygwin install
