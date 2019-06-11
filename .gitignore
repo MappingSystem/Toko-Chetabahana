@@ -1,5 +1,6 @@
 .ssh
 *.pyc
-app.yaml
 __pycache__/
 .gitconfig
+compose/deploy/product/app.yaml
+compose/deploy/product/Chetabahana-f92949fb068b.json
