@@ -9,16 +9,16 @@ DISK
 
 Filesystem      Size  Used Avail Use% Mounted on
 udev            279M     0  279M   0% /dev
-tmpfs            59M  896K   58M   2% /run
-/dev/sda1        29G  7.2G   22G  25% /
+tmpfs            59M  1.1M   58M   2% /run
+/dev/sda1        29G  7.9G   22G  28% /
 tmpfs           291M     0  291M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           291M     0  291M   0% /sys/fs/cgroup
 /dev/loop0       60M   60M     0 100% /snap/google-cloud-sdk/86
-/dev/loop1       60M   60M     0 100% /snap/google-cloud-sdk/85
-/dev/loop2       90M   90M     0 100% /snap/core/6818
-/dev/loop4       90M   90M     0 100% /snap/core/6673
-/dev/loop3       89M   89M     0 100% /snap/core/6964
+/dev/loop2       90M   90M     0 100% /snap/core/6673
+/dev/loop1       89M   89M     0 100% /snap/core/6964
+/dev/loop3       90M   90M     0 100% /snap/core/6818
+/dev/loop4       60M   60M     0 100% /snap/google-cloud-sdk/85
 /dev/sda15      105M  3.6M  101M   4% /boot/efi
 tmpfs            59M     0   59M   0% /run/user/1001
 
@@ -26,16 +26,18 @@ NET STATUS
 
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      1115/dockerd        
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      747/systemd-resolve 
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1300/sshd           
-tcp6       0      0 :::22                   :::*                    LISTEN      1300/sshd           
+tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      1091/dockerd        
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      750/systemd-resolve 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1274/sshd           
+tcp6       0      0 :::6378                 :::*                    LISTEN      1578/docker-proxy   
+tcp6       0      0 :::22                   :::*                    LISTEN      1274/sshd           
+tcp6       0      0 :::5431                 :::*                    LISTEN      1560/docker-proxy   
 
 NMAP STATUS
 
-Starting Nmap 7.60 ( https://nmap.org ) at 2019-06-12 00:43 WIB
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-06-12 03:01 WIB
 Nmap scan report for scanme.nmap.org (45.33.32.156)
-Host is up (0.041s latency).
+Host is up (0.039s latency).
 Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
 Not shown: 995 closed ports
 PORT      STATE    SERVICE
@@ -45,7 +47,7 @@ PORT      STATE    SERVICE
 9929/tcp  open     nping-echo
 31337/tcp open     Elite
 
-Nmap done: 1 IP address (1 host up) scanned in 1.84 seconds
+Nmap done: 1 IP address (1 host up) scanned in 1.95 seconds
 
 GCLOUD
 
@@ -92,7 +94,7 @@ Digest: sha256:1518027f4aaee49b836c5cf4ece1b4a16bdcd820af873402e19e1cc181c1aff2
 Status: Image is up to date for postgres:latest
 Using default tag: latest
 latest: Pulling from chetabahana/saleor
-Digest: sha256:8d54e548ca6958ff1d9eb12801220db6124222210b3621c434cde4c9a2844042
+Digest: sha256:0387c7684d518f8e5258a8f9f627aa61f69259ccdafbab123b86c9dc5aabc1bf
 Status: Image is up to date for chetabahana/saleor:latest
 
 CLAIMING
@@ -102,107 +104,14 @@ Total reclaimed space: 0B
 IMAGES
 
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-chetabahana/saleor   latest              af178c95bb18        9 hours ago         712MB
-redis                latest              3c41ce05add9        11 hours ago        95MB
-postgres             latest              4e045cb8eecd        18 hours ago        312MB
+chetabahana/saleor   latest              6459be8672dc        About an hour ago   712MB
+chetabahana/saleor   <none>              af178c95bb18        11 hours ago        712MB
+redis                latest              3c41ce05add9        13 hours ago        95MB
+postgres             latest              4e045cb8eecd        20 hours ago        312MB
 postgres             11.3                587aa1d0e586        4 weeks ago         312MB
 redis                5.0.4               a4fe14ff1981        4 weeks ago         95MB
 
 CONFIG
-
-networks:
-  network_tier:
-    driver: bridge
-services:
-  celery:
-    command: celery -A saleor worker --app=saleor.celeryconf:app --loglevel=info
-    depends_on:
-    - redis
-    environment:
-      ALLOWED_HOSTS: localhost,.chetabahana.com
-      CELERY_BROKER_URL: redis://redis:6379/1
-      CIRCLECI_TOKEN: d9f689daa4d16d966c8ed21a4f4b849751c87509
-      DATABASE_URL: postgres://saleor:saleor@postgres/saleor
-      DEBUG: "False"
-      DEFAULT_COUNTRY: ID
-      DEFAULT_FROM_EMAIL: noreply@chetabahana.com
-      ENABLE_DEBUG_TOOLBAR: "False"
-      ENABLE_SILK: "False"
-      GOOGLE_APPLICATION_CREDENTIALS: /app/.ssh/Chetabahana-f92949fb068b.json
-      GS_AUTO_CREATE_BUCKET: "True"
-      GS_MEDIA_BUCKET_NAME: jual
-      GS_PROJECT_ID: chetabahana
-      OPENEXCHANGERATES_API_KEY: 95ad2e70ce45497aaea2404967c949f0
-      REDIS_URL: redis://redis:6379/0
-      SECRET_KEY: ojbhzdfwtncvtfnc
-      TX_TOKEN: 1/c75d069b10a1c63d742584bcbf78019ee8421faa
-    image: chetabahana/saleor
-    networks:
-      network_tier: null
-    restart: unless-stopped
-    user: saleor:saleor
-    volumes:
-    - /home/chetabahana/.docker/compose/windows/cygwin/home/Chetabahana/.ssh:/app/.ssh:rw
-  postgres:
-    environment:
-      POSTGRES_PASSWORD: saleor
-      POSTGRES_USER: saleor
-    image: postgres
-    networks:
-      network_tier: null
-    ports:
-    - published: 5431
-      target: 5432
-    restart: unless-stopped
-    volumes:
-    - psql_data:/var/lib/postgresql:rw
-  redis:
-    image: redis
-    networks:
-      network_tier: null
-    ports:
-    - published: 6378
-      target: 6379
-    restart: unless-stopped
-    user: redis:redis
-    volumes:
-    - redis_data:/data:rw
-  saleor:
-    depends_on:
-    - postgres
-    - redis
-    environment:
-      ALLOWED_HOSTS: localhost,.chetabahana.com
-      CELERY_BROKER_URL: redis://redis:6379/1
-      CIRCLECI_TOKEN: d9f689daa4d16d966c8ed21a4f4b849751c87509
-      DATABASE_URL: postgres://saleor:saleor@postgres/saleor
-      DEBUG: "False"
-      DEFAULT_COUNTRY: ID
-      DEFAULT_FROM_EMAIL: noreply@chetabahana.com
-      ENABLE_DEBUG_TOOLBAR: "False"
-      ENABLE_SILK: "False"
-      GOOGLE_APPLICATION_CREDENTIALS: /app/.ssh/Chetabahana-f92949fb068b.json
-      GS_AUTO_CREATE_BUCKET: "True"
-      GS_MEDIA_BUCKET_NAME: jual
-      GS_PROJECT_ID: chetabahana
-      OPENEXCHANGERATES_API_KEY: 95ad2e70ce45497aaea2404967c949f0
-      REDIS_URL: redis://redis:6379/0
-      SECRET_KEY: ojbhzdfwtncvtfnc
-      TX_TOKEN: 1/c75d069b10a1c63d742584bcbf78019ee8421faa
-    image: chetabahana/saleor
-    networks:
-      network_tier: null
-    restart: "no"
-    user: saleor:saleor
-    volumes:
-    - /home/chetabahana/.docker/compose/windows/cygwin/home/Chetabahana/.ssh:/app/.ssh:rw
-    - /tmp/volume/static:/app/static:rw
-version: '3.2'
-volumes:
-  psql_data:
-    driver: local
-  redis_data:
-    driver: local
 
 
 REDIS
@@ -222,11 +131,11 @@ REDIS
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 2163,
+            "Pid": 1649,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-11T17:43:50.63453379Z",
-            "FinishedAt": "0001-01-01T00:00:00Z"
+            "StartedAt": "2019-06-11T17:53:10.790903988Z",
+            "FinishedAt": "2019-06-11T17:51:57.430477144Z"
         },
         "Image": "sha256:3c41ce05add98e89ff5ef31ec8cf2f5866e2b82fbe1eae057201f7c6f884f23d",
         "ResolvConfPath": "/var/lib/docker/containers/7f755b3a33d3d498c3ae9090b433fbcdfa4fca79eb49cd559f77da3886d42b7c/resolv.conf",
@@ -268,9 +177,9 @@ REDIS
             "VolumesFrom": [],
             "CapAdd": null,
             "CapDrop": null,
-            "Dns": null,
-            "DnsOptions": null,
-            "DnsSearch": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
             "ExtraHosts": null,
             "GroupAdd": null,
             "IpcMode": "shareable",
@@ -406,7 +315,7 @@ REDIS
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "d5440ea22f60a10ba455dddc622552e97ffe1b515e243ae1376154558762012d",
+            "SandboxID": "38b9ba0432699a1dd3639e3e4d05b5a7902deda8e64e8ee1fa84a29708000856",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -418,7 +327,7 @@ REDIS
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/d5440ea22f60",
+            "SandboxKey": "/var/run/docker/netns/38b9ba043269",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -438,7 +347,7 @@ REDIS
                         "7f755b3a33d3"
                     ],
                     "NetworkID": "6521530c6e8752efb16a58c0dc0d4939e34df4ea96e8dc163551af84953fb999",
-                    "EndpointID": "3cc42112cae85444f836ab89ed683b08f702037f1f14a6e37f223bdce7881cf8",
+                    "EndpointID": "f710fe05f045982ae532362ad65eed18493f6f591634dabd09260a40d79fdd81",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.2",
                     "IPPrefixLen": 16,
@@ -470,11 +379,11 @@ POSTGRES
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 2314,
+            "Pid": 1665,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-11T17:43:54.993219349Z",
-            "FinishedAt": "0001-01-01T00:00:00Z"
+            "StartedAt": "2019-06-11T17:53:10.805581213Z",
+            "FinishedAt": "2019-06-11T17:52:07.389687337Z"
         },
         "Image": "sha256:4e045cb8eecd48ecf0b5eea966e9a8b0b9332b18e55d40a40f7971a1a0a08cb6",
         "ResolvConfPath": "/var/lib/docker/containers/2530c5fcf5c6dafd7fd7a34de7278cd84e4dcca12baa8fd6d46f352b84f74ce2/resolv.conf",
@@ -516,9 +425,9 @@ POSTGRES
             "VolumesFrom": [],
             "CapAdd": null,
             "CapDrop": null,
-            "Dns": null,
-            "DnsOptions": null,
-            "DnsSearch": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
             "ExtraHosts": null,
             "GroupAdd": null,
             "IpcMode": "shareable",
@@ -668,7 +577,7 @@ POSTGRES
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "7bd37ebe20fc38fc4eb88ed4158008e10ccb45885506b5b6bb1ff9b8ab170eb8",
+            "SandboxID": "c05adbcc653eb69ee1fdbbedffe115dfb153ca4f6b649f9202f2dad32fc18c14",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -680,7 +589,7 @@ POSTGRES
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/7bd37ebe20fc",
+            "SandboxKey": "/var/run/docker/netns/c05adbcc653e",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -700,7 +609,7 @@ POSTGRES
                         "2530c5fcf5c6"
                     ],
                     "NetworkID": "6521530c6e8752efb16a58c0dc0d4939e34df4ea96e8dc163551af84953fb999",
-                    "EndpointID": "10a2ca041ae2b5bb1d4ecb9e3fa12d49eb99dcf6330d05ade50ed4376dd67eda",
+                    "EndpointID": "13eda2d352ae81f22ab072b80cb17117bc3e77c0ad61f8620765c72d7a68aafa",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.3",
                     "IPPrefixLen": 16,
@@ -717,1221 +626,12 @@ POSTGRES
 
 MIGRATE
 
-Operations to perform:
-  Apply all migrations: account, auth, checkout, contenttypes, discount, django_prices_openexchangerates, django_prices_vatlayer, giftcard, impersonate, menu, order, page, payment, product, sessions, shipping, site, sites, social_django
-Running pre-migrate handlers for application contenttypes
-Running pre-migrate handlers for application sessions
-Running pre-migrate handlers for application sites
-Running pre-migrate handlers for application auth
-Running pre-migrate handlers for application forms
-Running pre-migrate handlers for application account
-Running pre-migrate handlers for application discount
-Running pre-migrate handlers for application giftcard
-Running pre-migrate handlers for application product
-Running pre-migrate handlers for application checkout
-Running pre-migrate handlers for application core
-Running pre-migrate handlers for application menu
-Running pre-migrate handlers for application order
-Running pre-migrate handlers for application seo
-Running pre-migrate handlers for application shipping
-Running pre-migrate handlers for application site
-Running pre-migrate handlers for application page
-Running pre-migrate handlers for application payment
-Running pre-migrate handlers for application bootstrap4
-Running pre-migrate handlers for application django_measurement
-Running pre-migrate handlers for application django_prices
-Running pre-migrate handlers for application django_prices_openexchangerates
-Running pre-migrate handlers for application django_prices_vatlayer
-Running pre-migrate handlers for application mptt
-Running pre-migrate handlers for application social_django
-Running pre-migrate handlers for application django_countries
-Running pre-migrate handlers for application django_filters
-Running pre-migrate handlers for application impersonate
-Running pre-migrate handlers for application captcha
-Running migrations:
-  Applying product.0001_initial... OK (0.662s)
-  Applying product.0002_auto_20150722_0545... OK (0.013s)
-  Applying product.0003_auto_20150820_2016... OK (0.055s)
-  Applying product.0003_auto_20150820_1955... OK (0.013s)
-  Applying product.0004_merge... OK (0.003s)
-  Applying product.0005_auto_20150825_1433... OK (0.064s)
-  Applying product.0006_product_updated_at... OK (0.047s)
-  Applying product.0007_auto_20160112_1025... OK (0.021s)
-  Applying product.0008_auto_20160114_0733... OK (0.082s)
-  Applying product.0009_discount_categories... OK (0.036s)
-  Applying product.0010_auto_20160129_0826... OK (0.033s)
-  Applying product.0011_stock_quantity_allocated... OK (0.014s)
-  Applying product.0012_auto_20160218_0812... OK (0.067s)
-  Applying product.0013_auto_20161207_0555... OK (0.038s)
-  Applying product.0014_auto_20161207_0840... OK (0.016s)
-  Applying product.0015_transfer_locations... OK (0.030s)
-  Applying product.0016_auto_20161207_0843... OK (0.034s)
-  Applying product.0017_remove_stock_location... OK (0.015s)
-  Applying product.0018_auto_20161207_0844... OK (0.038s)
-  Applying product.0019_auto_20161212_0230... OK (0.146s)
-  Applying product.0020_attribute_data_to_class... OK (0.021s)
-  Applying product.0021_add_hstore_extension... OK (1.200s)
-  Applying product.0022_auto_20161212_0301... OK (0.055s)
-  Applying product.0023_auto_20161211_1912... OK (0.016s)
-  Applying product.0024_migrate_json_data... OK (0.042s)
-  Applying product.0025_auto_20161219_0517... OK (0.014s)
-  Applying product.0026_auto_20161230_0347... OK (0.011s)
-  Applying product.0027_auto_20170113_0435... OK (0.055s)
-  Applying product.0013_auto_20161130_0608... OK (0.006s)
-  Applying product.0014_remove_productvariant_attributes... OK (0.017s)
-  Applying product.0015_productvariant_attributes... OK (0.017s)
-  Applying product.0016_auto_20161204_0311... OK (0.019s)
-  Applying product.0017_attributechoicevalue_slug... OK (0.023s)
-  Applying product.0018_auto_20161212_0725... OK (0.020s)
-  Applying product.0026_merge_20161221_0845... OK (0.003s)
-  Applying product.0028_merge_20170116_1016... OK (0.004s)
-  Applying product.0029_product_is_featured... OK (0.017s)
-  Applying product.0030_auto_20170206_0407... OK (0.178s)
-  Applying product.0031_auto_20170206_0601... OK (0.030s)
-  Applying product.0032_auto_20170216_0438... OK (0.020s)
-  Applying product.0033_auto_20170227_0757... OK (0.037s)
-  Applying product.0034_product_is_published... OK (0.016s)
-  Applying product.0035_auto_20170919_0846... OK (0.030s)
-  Applying product.0036_auto_20171115_0608... OK (0.029s)
-  Applying product.0037_auto_20171124_0847... OK (0.122s)
-  Applying product.0038_auto_20171129_0616... OK (0.076s)
-  Applying product.0037_auto_20171129_1004... OK (0.063s)
-  Applying product.0039_merge_20171130_0727... OK (0.003s)
-  Applying product.0040_auto_20171205_0428... OK (0.021s)
-  Applying product.0041_auto_20171205_0546... OK (0.018s)
-  Applying product.0042_auto_20171206_0501... OK (0.012s)
-  Applying product.0043_auto_20171207_0839... OK (0.016s)
-  Applying product.0044_auto_20180108_0814... OK (0.432s)
-  Applying product.0045_md_to_html... OK (0.020s)
-  Applying product.0046_product_category... OK (0.046s)
-  Applying product.0047_auto_20180117_0359... OK (0.038s)
-  Applying product.0048_product_class_to_type... OK (0.093s)
-  Applying product.0049_collection... OK (0.083s)
-  Applying product.0050_auto_20180131_0746... OK (0.016s)
-  Applying product.0051_auto_20180202_1106... OK (0.013s)
-  Applying product.0052_slug_field_length... OK (0.058s)
-  Applying product.0053_product_seo_description... OK (0.037s)
-  Applying product.0053_auto_20180305_1002... OK (0.026s)
-  Applying product.0054_merge_20180320_1108... OK (0.004s)
-  Applying shipping.0001_initial... OK (0.066s)
-  Applying shipping.0002_auto_20160906_0741... OK (0.015s)
-  Applying shipping.0003_auto_20170116_0700... OK (0.008s)
-  Applying shipping.0004_auto_20170206_0407... OK (0.031s)
-  Applying shipping.0005_auto_20170906_0556... OK (0.008s)
-  Applying shipping.0006_auto_20171109_0908... OK (0.008s)
-  Applying shipping.0007_auto_20171129_1004... OK (0.012s)
-  Applying shipping.0008_auto_20180108_0814... OK (0.027s)
-  Applying contenttypes.0001_initial... OK (0.024s)
-  Applying contenttypes.0002_remove_content_type_name... OK (0.035s)
-  Applying auth.0001_initial... OK (0.113s)
-  Applying auth.0002_alter_permission_name_max_length... OK (0.012s)
-  Applying auth.0003_alter_user_email_max_length... OK (0.012s)
-  Applying auth.0004_alter_user_username_opts... OK (0.011s)
-  Applying auth.0005_alter_user_last_login_null... OK (0.011s)
-  Applying auth.0006_require_contenttypes_0002... OK (0.003s)
-  Applying account.0001_initial... OK (0.339s)
-  Applying order.0001_initial... OK (0.315s)
-  Applying order.0002_auto_20150820_1955... OK (0.024s)
-  Applying order.0003_auto_20150825_1433... OK (0.043s)
-  Applying order.0004_order_total... OK (0.028s)
-  Applying order.0005_deliverygroup_last_updated... OK (0.028s)
-  Applying order.0006_deliverygroup_shipping_method... OK (0.047s)
-  Applying order.0007_deliverygroup_tracking_number... OK (0.036s)
-  Applying order.0008_auto_20151026_0820... OK (0.117s)
-  Applying order.0009_auto_20151201_0820... OK (0.087s)
-  Applying order.0010_auto_20160119_0541... OK (0.066s)
-  Applying discount.0001_initial... OK (0.114s)
-  Applying discount.0002_voucher... OK (0.082s)
-  Applying discount.0003_auto_20160207_0534... OK (0.187s)
-  Applying order.0011_auto_20160207_0534... OK (0.102s)
-  Applying order.0012_auto_20160216_1032... OK (0.062s)
-  Applying order.0013_auto_20160906_0741... OK (0.095s)
-  Applying order.0014_auto_20161028_0955... OK (0.030s)
-  Applying order.0015_auto_20170206_0407... OK (0.717s)
-  Applying order.0016_order_language_code... OK (0.029s)
-  Applying order.0017_auto_20170906_0556... OK (0.023s)
-  Applying order.0018_auto_20170919_0839... OK (0.028s)
-  Applying order.0019_auto_20171109_1423... OK (0.319s)
-  Applying order.0020_auto_20171123_0609... OK (0.071s)
-  Applying order.0021_auto_20171129_1004... OK (0.098s)
-  Applying order.0022_auto_20171205_0428... OK (0.043s)
-  Applying order.0023_auto_20171206_0506... OK (0.056s)
-  Applying order.0024_remove_order_status... OK (0.027s)
-  Applying order.0025_auto_20171214_1015... OK (0.039s)
-  Applying order.0026_auto_20171218_0428... OK (0.067s)
-  Applying order.0027_auto_20180108_0814... OK (0.921s)
-  Applying order.0028_status_fsm... OK (0.022s)
-  Applying order.0029_auto_20180111_0845... OK (0.061s)
-  Applying order.0030_auto_20180118_0605... OK (0.073s)
-  Applying order.0031_auto_20180119_0405... OK (0.091s)
-  Applying order.0032_orderline_is_shipping_required... OK (0.065s)
-  Applying order.0033_auto_20180123_0832... OK (0.024s)
-  Applying order.0034_auto_20180221_1056... OK (0.057s)
-  Applying order.0035_auto_20180221_1057... OK (0.054s)
-  Applying order.0036_remove_order_total_tax... OK (0.025s)
-  Applying order.0037_auto_20180228_0450... OK (0.100s)
-  Applying order.0038_auto_20180228_0451... OK (0.046s)
-  Applying order.0039_auto_20180312_1203... OK (0.050s)
-  Applying order.0040_auto_20180210_0422... OK (0.469s)
-  Applying order.0041_auto_20180222_0458... OK (0.048s)
-  Applying order.0042_auto_20180227_0436... OK (0.137s)
-  Applying order.0043_auto_20180322_0655... OK (0.049s)
-  Applying order.0044_auto_20180326_1055... OK (0.202s)
-  Applying order.0045_auto_20180329_0142... OK (0.204s)
-  Applying order.0046_order_line_taxes... OK (0.054s)
-  Applying order.0047_order_line_name_length... OK (0.028s)
-  Applying order.0048_auto_20180629_1055... OK (0.278s)
-  Applying order.0049_auto_20180719_0520... OK (0.027s)
-  Applying order.0050_auto_20180803_0528... OK (0.059s)
-  Applying order.0050_auto_20180803_0337... OK (0.050s)
-  Applying order.0051_merge_20180807_0704... OK (0.003s)
-  Applying order.0052_auto_20180822_0720... OK (0.071s)
-  Applying order.0053_orderevent... OK (0.065s)
-  Applying order.0054_move_data_to_order_events... OK (0.091s)
-  Applying order.0055_remove_order_note_order_history_entry... OK (0.161s)
-  Applying order.0056_auto_20180911_1541... OK (0.024s)
-  Applying order.0057_orderevent_parameters_new... OK (0.110s)
-  Applying order.0058_remove_orderevent_parameters... OK (0.026s)
-  Applying order.0059_auto_20180913_0841... OK (0.034s)
-  Applying order.0060_auto_20180919_0731... OK (0.024s)
-  Applying order.0061_auto_20180920_0859... OK (0.026s)
-  Applying order.0062_auto_20180921_0949... OK (0.054s)
-  Applying order.0063_auto_20180926_0446... OK (0.028s)
-  Applying order.0064_auto_20181016_0819... OK (0.038s)
-  Applying checkout.0001_initial... OK (0.157s)
-  Applying checkout.0002_auto_20161014_1221... OK (0.064s)
-  Applying checkout.fix_empty_data_in_lines... OK (0.050s)
-  Applying checkout.0001_auto_20170113_0435... OK (0.096s)
-  Applying checkout.0002_auto_20170206_0407... OK (0.422s)
-  Applying checkout.0003_auto_20170906_0556... OK (0.024s)
-  Applying checkout.0004_auto_20171129_1004... OK (0.038s)
-  Applying checkout.0005_auto_20180108_0814... OK (0.348s)
-  Applying checkout.0006_auto_20180221_0825... OK (0.026s)
-  Applying account.0002_auto_20150907_0602... OK (0.050s)
-  Applying account.0003_auto_20151104_1102... OK (0.029s)
-  Applying account.0004_auto_20160114_0419... OK (0.018s)
-  Applying account.0005_auto_20160205_0651... OK (0.033s)
-  Applying account.0006_auto_20160829_0819... OK (0.040s)
-  Applying account.0007_auto_20161115_0940... OK (0.032s)
-  Applying account.0008_auto_20161115_1011... OK (0.024s)
-  Applying account.0009_auto_20170206_0407... OK (0.094s)
-  Applying account.0010_auto_20170919_0839... OK (0.022s)
-  Applying account.0011_auto_20171110_0552... OK (0.021s)
-  Applying account.0012_auto_20171117_0846... OK (0.022s)
-  Applying account.0013_auto_20171120_0521... OK (0.066s)
-  Applying account.0014_auto_20171129_1004... OK (0.037s)
-  Applying account.0015_auto_20171213_0734... OK (0.018s)
-  Applying account.0016_auto_20180108_0814... OK (2.266s)
-  Applying account.0017_auto_20180206_0957... OK (0.236s)
-  Applying account.0018_auto_20180426_0641... OK (0.726s)
-  Applying account.0019_auto_20180528_1205... OK (0.246s)
-  Applying checkout.0007_merge_cart_with_checkout... OK (2.034s)
-  Applying checkout.0008_rename_tables... OK (0.241s)
-  Applying checkout.0009_cart_translated_discount_name... OK (0.231s)
-  Applying checkout.0010_auto_20180822_0720... OK (0.254s)
-  Applying checkout.0011_auto_20180913_0817... OK (0.494s)
-  Applying checkout.0012_remove_cartline_data... OK (0.023s)
-  Applying checkout.0013_auto_20180913_0841... OK (1.246s)
-  Applying checkout.0014_auto_20180921_0751... OK (0.222s)
-  Applying checkout.0015_auto_20181017_1346... OK (0.021s)
-  Applying payment.0001_initial... OK (0.512s)
-  Applying payment.0002_transfer_payment_to_payment_method... OK (0.237s)
-  Applying order.0065_auto_20181017_1346... OK (0.979s)
-  Applying order.0066_auto_20181023_0319... OK (0.253s)
-  Applying order.0067_auto_20181102_1054... OK (0.031s)
-  Applying order.0068_order_checkout_token... OK (0.225s)
-  Applying order.0069_auto_20190225_2305... OK (0.016s)
-  Applying order.0070_drop_update_event_and_rename_events... OK (0.737s)
-  Applying account.0020_user_token... OK (0.043s)
-  Applying account.0021_unique_token... OK (0.465s)
-  Applying account.0022_auto_20180718_0956... OK (0.026s)
-  Applying account.0023_auto_20180719_0520... OK (0.213s)
-  Applying account.0024_auto_20181011_0737... OK (0.243s)
-  Applying account.0025_auto_20190314_0550... OK (0.021s)
-  Applying account.0026_user_avatar... OK (0.224s)
-  Applying account.0027_customerevent... OK (0.258s)
-  Applying auth.0007_alter_validators_add_error_messages... OK (0.017s)
-  Applying auth.0008_alter_user_username_max_length... OK (0.021s)
-  Applying auth.0009_alter_user_last_name_max_length... OK (0.203s)
-  Applying auth.0010_alter_group_name_max_length... OK (0.016s)
-  Applying auth.0011_update_proxy_permissions... OK (0.250s)
-  Applying giftcard.0001_initial... OK (0.250s)
-  Applying shipping.0009_auto_20180629_1055... OK (0.012s)
-  Applying shipping.0010_auto_20180719_0520... OK (0.011s)
-  Applying shipping.0011_auto_20180802_1238... OK (0.010s)
-  Applying shipping.0012_remove_legacy_shipping_methods... OK (1.229s)
-  Applying shipping.0013_auto_20180822_0721... OK (1.242s)
-  Applying shipping.0014_auto_20180920_0956... OK (0.024s)
-  Applying shipping.0015_auto_20190305_0640... OK (0.200s)
-  Applying sites.0001_initial... OK (0.014s)
-  Applying sites.0002_alter_domain_unique... OK (0.017s)
-  Applying site.0001_initial... OK (0.023s)
-  Applying site.0002_add_default_data... OK (0.459s)
-  Applying site.0003_sitesettings_description... OK (0.020s)
-  Applying site.0004_auto_20170221_0426... OK (0.237s)
-  Applying site.0005_auto_20170906_0556... OK (0.011s)
-  Applying site.0006_auto_20171025_0454... OK (0.055s)
-  Applying site.0007_auto_20171027_0856... OK (0.421s)
-  Applying site.0008_auto_20171027_0856... OK (0.235s)
-  Applying site.0009_auto_20171109_0849... OK (0.012s)
-  Applying site.0010_auto_20171113_0958... OK (0.011s)
-  Applying site.0011_auto_20180108_0814... OK (0.235s)
-  Applying page.0001_initial... OK (0.024s)
-  Applying menu.0001_initial... OK (0.502s)
-  Applying menu.0002_auto_20180319_0412... OK (0.293s)
-  Applying site.0012_auto_20180405_0757... OK (0.665s)
-  Applying menu.0003_auto_20180405_0854... OK (0.288s)
-  Applying site.0013_assign_default_menus... OK (0.472s)
-  Applying site.0014_handle_taxes... OK (0.035s)
-  Applying site.0015_sitesettings_handle_stock_by_default... OK (0.213s)
-  Applying site.0016_auto_20180719_0520... OK (0.014s)
-  Applying site.0017_auto_20180803_0528... OK (0.283s)
-  Applying product.0055_auto_20180321_0417... OK (0.482s)
-  Applying product.0056_auto_20180330_0321... OK (1.507s)
-  Applying product.0057_auto_20180403_0852... OK (0.225s)
-  Applying product.0058_auto_20180329_0142... OK (1.258s)
-  Applying product.0059_generate_variant_name_from_attrs... OK (0.500s)
-  Applying product.0060_collection_is_published... OK (0.227s)
-  Applying product.0061_product_taxes... OK (0.277s)
-  Applying product.0062_sortable_models... OK (0.979s)
-  Applying product.0063_required_attr_value_order... OK (0.014s)
-  Applying product.0064_productvariant_handle_stock... OK (0.018s)
-  Applying product.0065_auto_20180719_0520... OK (0.219s)
-  Applying product.0066_auto_20180803_0528... OK (1.264s)
-  Applying site.0018_sitesettings_homepage_collection... OK (0.742s)
-  Applying product.0067_remove_product_is_featured... OK (0.026s)
-  Applying product.0068_auto_20180822_0720... OK (0.240s)
-  Applying product.0069_auto_20180912_0326... OK (0.217s)
-  Applying product.0070_auto_20180912_0329... OK (0.031s)
-  Applying product.0071_attributechoicevalue_value... OK (0.214s)
-  Applying product.0072_auto_20180925_1048... OK (3.268s)
-  Applying product.0073_auto_20181010_0729... OK (0.290s)
-  Applying product.0074_auto_20181010_0730... OK (1.192s)
-  Applying product.0075_auto_20181010_0842... OK (0.248s)
-  Applying product.0076_auto_20181012_1146... OK (0.012s)
-  Applying product.0077_generate_versatile_background_images... OK (0.332s)
-  Applying product.0078_auto_20181120_0437... OK (0.175s)
-  Applying product.0079_default_tax_rate_instead_of_empty_field... OK (0.276s)
-  Applying product.0080_collection_published_date... OK (0.216s)
-  Applying product.0080_auto_20181214_0440... OK (0.031s)
-  Applying product.0081_merge_20181215_1659... OK (0.203s)
-  Applying product.0081_auto_20181218_0024... OK (0.019s)
-  Applying product.0082_merge_20181219_1440... OK (0.005s)
-  Applying product.0083_auto_20190104_0443... OK (0.228s)
-  Applying product.0084_auto_20190122_0113... OK (0.025s)
-  Applying product.0085_auto_20190125_0025... OK (0.012s)
-  Applying product.0086_product_publication_date... OK (0.220s)
-  Applying product.0087_auto_20190208_0326... OK (0.023s)
-  Applying product.0088_auto_20190220_1928... OK (0.222s)
-  Applying product.0089_auto_20190225_0252... OK (0.518s)
-  Applying product.0090_auto_20190328_0608... OK (0.223s)
-  Applying product.0091_auto_20190402_0853... OK (0.506s)
-  Applying payment.0003_rename_payment_method_to_payment... OK (2.514s)
-  Applying payment.0004_auto_20181206_0031... OK (0.230s)
-  Applying payment.0005_auto_20190104_0443... OK (0.031s)
-  Applying payment.0006_auto_20190109_0358... OK (0.216s)
-  Applying payment.0007_auto_20190206_0938... OK (0.018s)
-  Applying payment.0007_auto_20190125_0242... OK (0.028s)
-  Applying payment.0008_merge_20190214_0447... OK (0.204s)
-  Applying payment.0009_convert_to_partially_charged_and_partially_refunded... OK (0.278s)
-  Applying payment.0010_auto_20190220_2001... OK (0.230s)
-  Applying checkout.0016_auto_20190112_0506... OK (0.031s)
-  Applying checkout.0017_auto_20190130_0207... OK (0.229s)
-  Applying checkout.0018_auto_20190410_0132... OK (2.245s)
-  Applying checkout.0019_checkout_gift_cards... OK (1.534s)
-  Applying discount.0004_auto_20170206_0407... OK (1.482s)
-  Applying discount.0005_auto_20170919_0839... OK (0.249s)
-  Applying discount.0006_auto_20171129_1004... OK (0.247s)
-  Applying discount.0007_auto_20180108_0814... OK (2.249s)
-  Applying discount.0008_sale_collections... OK (0.256s)
-  Applying discount.0009_auto_20180719_0520... OK (0.244s)
-  Applying discount.0010_auto_20180724_1251... OK (1.780s)
-  Applying discount.0011_auto_20180803_0528... OK (0.441s)
-  Applying discount.0012_auto_20190329_0836... OK (0.304s)
-  Applying django_prices_openexchangerates.0001_initial... OK (0.021s)
-  Applying django_prices_openexchangerates.0002_auto_20160329_0702... OK (0.024s)
-  Applying django_prices_openexchangerates.0003_auto_20161018_0707... OK (1.669s)
-  Applying django_prices_openexchangerates.0004_auto_20170316_0944... OK (0.011s)
-  Applying django_prices_vatlayer.0001_initial... OK (0.212s)
-  Applying django_prices_vatlayer.0002_ratetypes... OK (0.018s)
-  Applying django_prices_vatlayer.0003_auto_20180316_1053... OK (0.018s)
-  Applying impersonate.0001_initial... OK (0.475s)
-  Applying menu.0004_sort_order_index... OK (0.036s)
-  Applying menu.0005_auto_20180719_0520... OK (0.209s)
-  Applying menu.0006_auto_20180803_0528... OK (0.339s)
-  Applying menu.0007_auto_20180807_0547... OK (0.465s)
-  Applying menu.0008_menu_json_content_new... OK (0.458s)
-  Applying menu.0009_remove_menu_json_content... OK (0.012s)
-  Applying menu.0010_auto_20180913_0841... OK (0.233s)
-  Applying menu.0011_auto_20181204_0004... OK (0.011s)
-  Applying menu.0012_auto_20190104_0443... OK (0.011s)
-  Applying menu.0013_auto_20190507_0309... OK (0.490s)
-  Applying menu.0014_auto_20190523_0759... OK (0.228s)
-  Applying order.0071_order_gift_cards... OK (0.287s)
-  Applying page.0002_auto_20180321_0417... OK (0.213s)
-  Applying page.0003_auto_20180719_0520... OK (0.012s)
-  Applying page.0004_auto_20180803_0528... OK (0.495s)
-  Applying page.0005_auto_20190208_0456... OK (0.741s)
-  Applying page.0006_auto_20190220_1928... OK (0.015s)
-  Applying page.0007_auto_20190225_0252... OK (0.247s)
-  Applying payment.0011_auto_20190516_0901... OK (0.021s)
-  Applying product.0092_auto_20190507_0309... OK (0.484s)
-  Applying product.0093_auto_20190521_0124... OK (2.016s)
-  Applying sessions.0001_initial... OK (0.220s)
-  Applying site.0019_sitesettings_default_weight_unit... OK (0.031s)
-  Applying site.0020_auto_20190301_0336... OK (0.220s)
-  Applying site.0021_auto_20190326_0521... OK (0.486s)
-  Applying social_django.0001_initial... OK (0.780s)
-  Applying social_django.0002_add_related_name... OK (0.469s)
-  Applying social_django.0003_alter_email_max_length... OK (0.015s)
-  Applying social_django.0004_auto_20160423_0400... OK (0.234s)
-  Applying social_django.0005_auto_20160727_2333... OK (0.017s)
-  Applying social_django.0006_partial... OK (0.027s)
-  Applying social_django.0007_code_timestamp... OK (0.199s)
-  Applying social_django.0008_partial_timestamp... OK (0.016s)
-Running post-migrate handlers for application contenttypes
-Adding content type 'contenttypes | contenttype'
-Adding permission 'Permission object (1)'
-Adding permission 'Permission object (2)'
-Adding permission 'Permission object (3)'
-Adding permission 'Permission object (4)'
-Running post-migrate handlers for application sessions
-Adding content type 'sessions | session'
-Adding permission 'Permission object (5)'
-Adding permission 'Permission object (6)'
-Adding permission 'Permission object (7)'
-Adding permission 'Permission object (8)'
-Running post-migrate handlers for application sites
-Adding content type 'sites | site'
-Adding permission 'Permission object (9)'
-Adding permission 'Permission object (10)'
-Adding permission 'Permission object (11)'
-Adding permission 'Permission object (12)'
-Running post-migrate handlers for application auth
-Adding content type 'auth | permission'
-Adding content type 'auth | group'
-Adding permission 'Permission object (13)'
-Adding permission 'Permission object (14)'
-Adding permission 'Permission object (15)'
-Adding permission 'Permission object (16)'
-Adding permission 'Permission object (17)'
-Adding permission 'Permission object (18)'
-Adding permission 'Permission object (19)'
-Adding permission 'Permission object (20)'
-Running post-migrate handlers for application forms
-Running post-migrate handlers for application account
-Adding content type 'account | user'
-Adding content type 'account | address'
-Adding content type 'account | customernote'
-Adding content type 'account | customerevent'
-Adding permission 'Permission object (21)'
-Adding permission 'Permission object (22)'
-Adding permission 'Permission object (23)'
-Adding permission 'Permission object (24)'
-Adding permission 'Permission object (25)'
-Adding permission 'Permission object (26)'
-Adding permission 'Permission object (27)'
-Adding permission 'Permission object (28)'
-Adding permission 'Permission object (29)'
-Adding permission 'Permission object (30)'
-Adding permission 'Permission object (31)'
-Adding permission 'Permission object (32)'
-Adding permission 'Permission object (33)'
-Adding permission 'Permission object (34)'
-Adding permission 'Permission object (35)'
-Adding permission 'Permission object (36)'
-Adding permission 'Permission object (37)'
-Adding permission 'Permission object (38)'
-Adding permission 'Permission object (39)'
-Running post-migrate handlers for application discount
-Adding content type 'discount | sale'
-Adding content type 'discount | voucher'
-Adding content type 'discount | vouchertranslation'
-Adding content type 'discount | saletranslation'
-Adding permission 'Permission object (40)'
-Adding permission 'Permission object (41)'
-Adding permission 'Permission object (42)'
-Adding permission 'Permission object (43)'
-Adding permission 'Permission object (44)'
-Adding permission 'Permission object (45)'
-Adding permission 'Permission object (46)'
-Adding permission 'Permission object (47)'
-Adding permission 'Permission object (48)'
-Adding permission 'Permission object (49)'
-Adding permission 'Permission object (50)'
-Adding permission 'Permission object (51)'
-Adding permission 'Permission object (52)'
-Adding permission 'Permission object (53)'
-Adding permission 'Permission object (54)'
-Adding permission 'Permission object (55)'
-Adding permission 'Permission object (56)'
-Running post-migrate handlers for application giftcard
-Adding content type 'giftcard | giftcard'
-Adding permission 'Permission object (57)'
-Adding permission 'Permission object (58)'
-Adding permission 'Permission object (59)'
-Adding permission 'Permission object (60)'
-Adding permission 'Permission object (61)'
-Running post-migrate handlers for application product
-Adding content type 'product | category'
-Adding content type 'product | product'
-Adding content type 'product | productimage'
-Adding content type 'product | productvariant'
-Adding content type 'product | variantimage'
-Adding content type 'product | producttype'
-Adding content type 'product | collectionproduct'
-Adding content type 'product | collection'
-Adding content type 'product | categorytranslation'
-Adding content type 'product | collectiontranslation'
-Adding content type 'product | producttranslation'
-Adding content type 'product | productvarianttranslation'
-Adding content type 'product | attribute'
-Adding content type 'product | attributevaluetranslation'
-Adding content type 'product | attributevalue'
-Adding content type 'product | attributetranslation'
-Adding content type 'product | digitalcontent'
-Adding content type 'product | digitalcontenturl'
-Adding permission 'Permission object (62)'
-Adding permission 'Permission object (63)'
-Adding permission 'Permission object (64)'
-Adding permission 'Permission object (65)'
-Adding permission 'Permission object (66)'
-Adding permission 'Permission object (67)'
-Adding permission 'Permission object (68)'
-Adding permission 'Permission object (69)'
-Adding permission 'Permission object (70)'
-Adding permission 'Permission object (71)'
-Adding permission 'Permission object (72)'
-Adding permission 'Permission object (73)'
-Adding permission 'Permission object (74)'
-Adding permission 'Permission object (75)'
-Adding permission 'Permission object (76)'
-Adding permission 'Permission object (77)'
-Adding permission 'Permission object (78)'
-Adding permission 'Permission object (79)'
-Adding permission 'Permission object (80)'
-Adding permission 'Permission object (81)'
-Adding permission 'Permission object (82)'
-Adding permission 'Permission object (83)'
-Adding permission 'Permission object (84)'
-Adding permission 'Permission object (85)'
-Adding permission 'Permission object (86)'
-Adding permission 'Permission object (87)'
-Adding permission 'Permission object (88)'
-Adding permission 'Permission object (89)'
-Adding permission 'Permission object (90)'
-Adding permission 'Permission object (91)'
-Adding permission 'Permission object (92)'
-Adding permission 'Permission object (93)'
-Adding permission 'Permission object (94)'
-Adding permission 'Permission object (95)'
-Adding permission 'Permission object (96)'
-Adding permission 'Permission object (97)'
-Adding permission 'Permission object (98)'
-Adding permission 'Permission object (99)'
-Adding permission 'Permission object (100)'
-Adding permission 'Permission object (101)'
-Adding permission 'Permission object (102)'
-Adding permission 'Permission object (103)'
-Adding permission 'Permission object (104)'
-Adding permission 'Permission object (105)'
-Adding permission 'Permission object (106)'
-Adding permission 'Permission object (107)'
-Adding permission 'Permission object (108)'
-Adding permission 'Permission object (109)'
-Adding permission 'Permission object (110)'
-Adding permission 'Permission object (111)'
-Adding permission 'Permission object (112)'
-Adding permission 'Permission object (113)'
-Adding permission 'Permission object (114)'
-Adding permission 'Permission object (115)'
-Adding permission 'Permission object (116)'
-Adding permission 'Permission object (117)'
-Adding permission 'Permission object (118)'
-Adding permission 'Permission object (119)'
-Adding permission 'Permission object (120)'
-Adding permission 'Permission object (121)'
-Adding permission 'Permission object (122)'
-Adding permission 'Permission object (123)'
-Adding permission 'Permission object (124)'
-Adding permission 'Permission object (125)'
-Adding permission 'Permission object (126)'
-Adding permission 'Permission object (127)'
-Adding permission 'Permission object (128)'
-Adding permission 'Permission object (129)'
-Adding permission 'Permission object (130)'
-Adding permission 'Permission object (131)'
-Adding permission 'Permission object (132)'
-Adding permission 'Permission object (133)'
-Adding permission 'Permission object (134)'
-Running post-migrate handlers for application checkout
-Adding content type 'checkout | checkout'
-Adding content type 'checkout | checkoutline'
-Adding permission 'Permission object (135)'
-Adding permission 'Permission object (136)'
-Adding permission 'Permission object (137)'
-Adding permission 'Permission object (138)'
-Adding permission 'Permission object (139)'
-Adding permission 'Permission object (140)'
-Adding permission 'Permission object (141)'
-Adding permission 'Permission object (142)'
-Running post-migrate handlers for application core
-Running post-migrate handlers for application menu
-Adding content type 'menu | menu'
-Adding content type 'menu | menuitem'
-Adding content type 'menu | menuitemtranslation'
-Adding permission 'Permission object (143)'
-Adding permission 'Permission object (144)'
-Adding permission 'Permission object (145)'
-Adding permission 'Permission object (146)'
-Adding permission 'Permission object (147)'
-Adding permission 'Permission object (148)'
-Adding permission 'Permission object (149)'
-Adding permission 'Permission object (150)'
-Adding permission 'Permission object (151)'
-Adding permission 'Permission object (152)'
-Adding permission 'Permission object (153)'
-Adding permission 'Permission object (154)'
-Adding permission 'Permission object (155)'
-Running post-migrate handlers for application order
-Adding content type 'order | order'
-Adding content type 'order | orderline'
-Adding content type 'order | fulfillment'
-Adding content type 'order | fulfillmentline'
-Adding content type 'order | orderevent'
-Adding permission 'Permission object (156)'
-Adding permission 'Permission object (157)'
-Adding permission 'Permission object (158)'
-Adding permission 'Permission object (159)'
-Adding permission 'Permission object (160)'
-Adding permission 'Permission object (161)'
-Adding permission 'Permission object (162)'
-Adding permission 'Permission object (163)'
-Adding permission 'Permission object (164)'
-Adding permission 'Permission object (165)'
-Adding permission 'Permission object (166)'
-Adding permission 'Permission object (167)'
-Adding permission 'Permission object (168)'
-Adding permission 'Permission object (169)'
-Adding permission 'Permission object (170)'
-Adding permission 'Permission object (171)'
-Adding permission 'Permission object (172)'
-Adding permission 'Permission object (173)'
-Adding permission 'Permission object (174)'
-Adding permission 'Permission object (175)'
-Adding permission 'Permission object (176)'
-Running post-migrate handlers for application seo
-Running post-migrate handlers for application shipping
-Adding content type 'shipping | shippingmethod'
-Adding content type 'shipping | shippingmethodtranslation'
-Adding content type 'shipping | shippingzone'
-Adding permission 'Permission object (177)'
-Adding permission 'Permission object (178)'
-Adding permission 'Permission object (179)'
-Adding permission 'Permission object (180)'
-Adding permission 'Permission object (181)'
-Adding permission 'Permission object (182)'
-Adding permission 'Permission object (183)'
-Adding permission 'Permission object (184)'
-Adding permission 'Permission object (185)'
-Adding permission 'Permission object (186)'
-Adding permission 'Permission object (187)'
-Adding permission 'Permission object (188)'
-Adding permission 'Permission object (189)'
-Running post-migrate handlers for application site
-Adding content type 'site | sitesettings'
-Adding content type 'site | authorizationkey'
-Adding content type 'site | sitesettingstranslation'
-Adding permission 'Permission object (190)'
-Adding permission 'Permission object (191)'
-Adding permission 'Permission object (192)'
-Adding permission 'Permission object (193)'
-Adding permission 'Permission object (194)'
-Adding permission 'Permission object (195)'
-Adding permission 'Permission object (196)'
-Adding permission 'Permission object (197)'
-Adding permission 'Permission object (198)'
-Adding permission 'Permission object (199)'
-Adding permission 'Permission object (200)'
-Adding permission 'Permission object (201)'
-Adding permission 'Permission object (202)'
-Adding permission 'Permission object (203)'
-Running post-migrate handlers for application page
-Adding content type 'page | page'
-Adding content type 'page | pagetranslation'
-Adding permission 'Permission object (204)'
-Adding permission 'Permission object (205)'
-Adding permission 'Permission object (206)'
-Adding permission 'Permission object (207)'
-Adding permission 'Permission object (208)'
-Adding permission 'Permission object (209)'
-Adding permission 'Permission object (210)'
-Adding permission 'Permission object (211)'
-Adding permission 'Permission object (212)'
-Running post-migrate handlers for application payment
-Adding content type 'payment | transaction'
-Adding content type 'payment | payment'
-Adding permission 'Permission object (213)'
-Adding permission 'Permission object (214)'
-Adding permission 'Permission object (215)'
-Adding permission 'Permission object (216)'
-Adding permission 'Permission object (217)'
-Adding permission 'Permission object (218)'
-Adding permission 'Permission object (219)'
-Adding permission 'Permission object (220)'
-Running post-migrate handlers for application bootstrap4
-Running post-migrate handlers for application django_measurement
-Running post-migrate handlers for application django_prices
-Running post-migrate handlers for application django_prices_openexchangerates
-Adding content type 'django_prices_openexchangerates | conversionrate'
-Adding permission 'Permission object (221)'
-Adding permission 'Permission object (222)'
-Adding permission 'Permission object (223)'
-Adding permission 'Permission object (224)'
-Running post-migrate handlers for application django_prices_vatlayer
-Adding content type 'django_prices_vatlayer | vat'
-Adding content type 'django_prices_vatlayer | ratetypes'
-Adding permission 'Permission object (225)'
-Adding permission 'Permission object (226)'
-Adding permission 'Permission object (227)'
-Adding permission 'Permission object (228)'
-Adding permission 'Permission object (229)'
-Adding permission 'Permission object (230)'
-Adding permission 'Permission object (231)'
-Adding permission 'Permission object (232)'
-Running post-migrate handlers for application mptt
-Running post-migrate handlers for application social_django
-Adding content type 'social_django | association'
-Adding content type 'social_django | code'
-Adding content type 'social_django | nonce'
-Adding content type 'social_django | usersocialauth'
-Adding content type 'social_django | partial'
-Adding permission 'Permission object (233)'
-Adding permission 'Permission object (234)'
-Adding permission 'Permission object (235)'
-Adding permission 'Permission object (236)'
-Adding permission 'Permission object (237)'
-Adding permission 'Permission object (238)'
-Adding permission 'Permission object (239)'
-Adding permission 'Permission object (240)'
-Adding permission 'Permission object (241)'
-Adding permission 'Permission object (242)'
-Adding permission 'Permission object (243)'
-Adding permission 'Permission object (244)'
-Adding permission 'Permission object (245)'
-Adding permission 'Permission object (246)'
-Adding permission 'Permission object (247)'
-Adding permission 'Permission object (248)'
-Adding permission 'Permission object (249)'
-Adding permission 'Permission object (250)'
-Adding permission 'Permission object (251)'
-Adding permission 'Permission object (252)'
-Running post-migrate handlers for application django_countries
-Running post-migrate handlers for application django_filters
-Running post-migrate handlers for application impersonate
-Adding content type 'impersonate | impersonationlog'
-Adding permission 'Permission object (253)'
-Adding permission 'Permission object (254)'
-Adding permission 'Permission object (255)'
-Adding permission 'Permission object (256)'
-Running post-migrate handlers for application captcha
 
 STATIC
 
-Copying '/app/saleor/static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg'
-Copying '/app/saleor/static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg'
-Copying '/app/saleor/static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2'
-Copying '/app/saleor/static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg'
-Copying '/app/saleor/static/assets/logo-light.d493430f320751f6bffac210ced37643.svg'
-Copying '/app/saleor/static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg'
-Copying '/app/saleor/static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2'
-Copying '/app/saleor/static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff'
-Copying '/app/saleor/static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2'
-Copying '/app/saleor/static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg'
-Copying '/app/saleor/static/assets/dashboard.51197608a80d98e796c6.css'
-Copying '/app/saleor/static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg'
-Copying '/app/saleor/static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg'
-Copying '/app/saleor/static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg'
-Copying '/app/saleor/static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff'
-Copying '/app/saleor/static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg'
-Copying '/app/saleor/static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff'
-Copying '/app/saleor/static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg'
-Copying '/app/saleor/static/assets/storefront.a10bccac1ae4e3f50de0.js'
-Copying '/app/saleor/static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2'
-Copying '/app/saleor/static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff'
-Copying '/app/saleor/static/assets/dashboard.51197608a80d98e796c6.js'
-Copying '/app/saleor/static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg'
-Copying '/app/saleor/static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg'
-Copying '/app/saleor/static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff'
-Copying '/app/saleor/static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg'
-Copying '/app/saleor/static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2'
-Copying '/app/saleor/static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg'
-Copying '/app/saleor/static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff'
-Copying '/app/saleor/static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2'
-Copying '/app/saleor/static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg'
-Copying '/app/saleor/static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff'
-Copying '/app/saleor/static/assets/document.3b0f1c589937fcde3c50.js'
-Copying '/app/saleor/static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg'
-Copying '/app/saleor/static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf'
-Copying '/app/saleor/static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg'
-Copying '/app/saleor/static/assets/document.3b0f1c589937fcde3c50.css'
-Copying '/app/saleor/static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2'
-Copying '/app/saleor/static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg'
-Copying '/app/saleor/static/assets/dashboard-next.8696ba192c05c7b380e3.js'
-Copying '/app/saleor/static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg'
-Copying '/app/saleor/static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg'
-Copying '/app/saleor/static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg'
-Copying '/app/saleor/static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf'
-Copying '/app/saleor/static/assets/storefront.a10bccac1ae4e3f50de0.css'
-Copying '/app/saleor/static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg'
-Copying '/app/saleor/static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff'
-Copying '/app/saleor/static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2'
-Copying '/app/saleor/static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf'
-Copying '/app/saleor/static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png'
-Copying '/app/saleor/static/favicons/mstile-310x150.png'
-Copying '/app/saleor/static/favicons/android-chrome-512x512.png'
-Copying '/app/saleor/static/favicons/favicon-16x16.png'
-Copying '/app/saleor/static/favicons/mstile-144x144.png'
-Copying '/app/saleor/static/favicons/safari-pinned-tab.svg'
-Copying '/app/saleor/static/favicons/browserconfig.xml'
-Copying '/app/saleor/static/favicons/favicon.ico'
-Copying '/app/saleor/static/favicons/mstile-150x150.png'
-Copying '/app/saleor/static/favicons/android-chrome-192x192.png'
-Copying '/app/saleor/static/favicons/favicon-32x32.png'
-Copying '/app/saleor/static/favicons/mstile-70x70.png'
-Copying '/app/saleor/static/favicons/mstile-310x310.png'
-Copying '/app/saleor/static/favicons/apple-touch-icon.png'
-Copying '/app/saleor/static/images/placeholder120x120.png'
-Copying '/app/saleor/static/images/favicon.svg'
-Copying '/app/saleor/static/images/reset-bg.png'
-Copying '/app/saleor/static/images/filter-icon.svg'
-Copying '/app/saleor/static/images/arrow-up.svg'
-Copying '/app/saleor/static/images/confirm-order-bg.png'
-Copying '/app/saleor/static/images/block3.jpg'
-Copying '/app/saleor/static/images/placeholder540x540.png'
-Copying '/app/saleor/static/images/not-found-404.svg'
-Copying '/app/saleor/static/images/arrow-select.svg'
-Copying '/app/saleor/static/images/checkout.svg'
-Copying '/app/saleor/static/images/search.svg'
-Copying '/app/saleor/static/images/mobile-menu.svg'
-Copying '/app/saleor/static/images/twitter-logo.svg'
-Copying '/app/saleor/static/images/what.svg'
-Copying '/app/saleor/static/images/logo-dark.svg'
-Copying '/app/saleor/static/images/arrow-up-icon.svg'
-Copying '/app/saleor/static/images/arrow-down-icon.svg'
-Copying '/app/saleor/static/images/pass-visible.svg'
-Copying '/app/saleor/static/images/checkout-bg.png'
-Copying '/app/saleor/static/images/gallery-arrow.svg'
-Copying '/app/saleor/static/images/sample-product2.jpg'
-Copying '/app/saleor/static/images/block2.jpg'
-Copying '/app/saleor/static/images/confirm-order-bg2x.png'
-Copying '/app/saleor/static/images/login-background.svg'
-Copying '/app/saleor/static/images/linkedin-logo.svg'
-Copying '/app/saleor/static/images/empty-checkout-bg.png'
-Copying '/app/saleor/static/images/meetup-logo.svg'
-Copying '/app/saleor/static/images/login-bg2x.png'
-Copying '/app/saleor/static/images/empty-checkout-bg2x.png'
-Copying '/app/saleor/static/images/dribbble-logo.svg'
-Copying '/app/saleor/static/images/placeholder1080x1080.png'
-Copying '/app/saleor/static/images/arrow-down.svg'
-Copying '/app/saleor/static/images/instagram-logo.svg'
-Copying '/app/saleor/static/images/sample-product.jpg'
-Copying '/app/saleor/static/images/facebook-logo.svg'
-Copying '/app/saleor/static/images/logo-light.svg'
-Copying '/app/saleor/static/images/arrow-left.svg'
-Copying '/app/saleor/static/images/sale-bg.svg'
-Copying '/app/saleor/static/images/close.svg'
-Copying '/app/saleor/static/images/photo-icon.svg'
-Copying '/app/saleor/static/images/login-bg.png'
-Copying '/app/saleor/static/images/chevron-down.svg'
-Copying '/app/saleor/static/images/placeholder60x60.png'
-Copying '/app/saleor/static/images/checkout-bg2x.png'
-Copying '/app/saleor/static/images/github-logo.svg'
-Copying '/app/saleor/static/images/logo-white.svg'
-Copying '/app/saleor/static/images/chevron-up.svg'
-Copying '/app/saleor/static/images/placeholder255x255.png'
-Copying '/app/saleor/static/images/edit.svg'
-Copying '/app/saleor/static/images/google-logo.svg'
-Copying '/app/saleor/static/images/no-results-bg.svg'
-Copying '/app/saleor/static/images/loader.svg'
-Copying '/app/saleor/static/images/pass-invisible.svg'
-Copying '/app/saleor/static/images/delete.svg'
-Copying '/app/saleor/static/images/block1.jpg'
-Copying '/app/saleor/static/images/avatars/avatar2.png'
-Copying '/app/saleor/static/images/avatars/avatar3.png'
-Copying '/app/saleor/static/images/avatars/avatar4.png'
-Copying '/app/saleor/static/images/avatars/avatar1.png'
-Copying '/app/saleor/static/images/avatars/avatar8.png'
-Copying '/app/saleor/static/images/avatars/avatar9.png'
-Copying '/app/saleor/static/images/avatars/avatar10.png'
-Copying '/app/saleor/static/images/avatars/avatar6.png'
-Copying '/app/saleor/static/images/avatars/avatar5.png'
-Copying '/app/saleor/static/images/avatars/avatar7.png'
-Copying '/app/saleor/static/images/avatars/avatar12.png'
-Copying '/app/saleor/static/images/avatars/avatar11.png'
-Copying '/app/saleor/static/dashboard/images/more-vert.svg'
-Copying '/app/saleor/static/dashboard/images/store.svg'
-Copying '/app/saleor/static/dashboard/images/description.svg'
-Copying '/app/saleor/static/dashboard/images/history.svg'
-Copying '/app/saleor/static/dashboard/images/add.svg'
-Copying '/app/saleor/static/dashboard/images/chevron-left.svg'
-Copying '/app/saleor/static/dashboard/images/chevron-right.svg'
-Copying '/app/saleor/static/dashboard/images/search.svg'
-Copying '/app/saleor/static/dashboard/images/logo.svg'
-Copying '/app/saleor/static/dashboard/images/phone.svg'
-Copying '/app/saleor/static/dashboard/images/reorder.svg'
-Copying '/app/saleor/static/dashboard/images/mobile-menu.svg'
-Copying '/app/saleor/static/dashboard/images/style.svg'
-Copying '/app/saleor/static/dashboard/images/done.svg'
-Copying '/app/saleor/static/dashboard/images/account-circle.svg'
-Copying '/app/saleor/static/dashboard/images/email.svg'
-Copying '/app/saleor/static/dashboard/images/payment.svg'
-Copying '/app/saleor/static/dashboard/images/arrow-left.svg'
-Copying '/app/saleor/static/dashboard/images/close.svg'
-Copying '/app/saleor/static/dashboard/images/arrow-drop-down.svg'
-Copying '/app/saleor/static/dashboard/images/edit.svg'
-Copying '/app/saleor/static/dashboard/images/collections.svg'
-Copying '/app/saleor/static/dashboard/images/help.svg'
-Copying '/app/saleor/static/dashboard/images/editor/quote.svg'
-Copying '/app/saleor/static/dashboard/images/editor/format_clear.svg'
-Copying '/app/saleor/static/dashboard/images/editor/insert_photo.svg'
-Copying '/app/saleor/static/dashboard/images/editor/insert_link.svg'
-Copying '/app/saleor/static/dashboard/images/editor/align_left.svg'
-Copying '/app/saleor/static/dashboard/images/editor/align_right.svg'
-Copying '/app/saleor/static/dashboard/images/editor/align_justify.svg'
-Copying '/app/saleor/static/dashboard/images/editor/align_center.svg'
-Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/css/versatileimagefield.css'
-Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/css/versatileimagefield-bootstrap3.css'
-Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/css/versatileimagefield-djangoadmin.css'
-Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/js/versatileimagefield.js'
-Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/disclosure-down.png'
-Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/draggable-admin.css'
-Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/arrow-move.png'
-Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/disclosure-right.png'
-Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/draggable-admin.js'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ph.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bj.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/aq.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ec.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/am.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/id.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ar.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bh.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ng.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/aw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ai.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sh.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mv.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/jo.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/va.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/py.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ci.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cc.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/er.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/me.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ml.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ke.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/us.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ba.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/na.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cy.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gh.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/__.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite-hq.png'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mt.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/si.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/zm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite-hq.css'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mh.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cx.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/co.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sb.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/wf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lb.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ni.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/to.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bl.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ir.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lc.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mo.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gi.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/br.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nc.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/in.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/re.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ht.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fj.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gs.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lt.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pa.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/de.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/io.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bq.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/my.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bv.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tl.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite.css'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sy.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bs.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/im.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ga.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bi.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ly.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mq.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/is.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pl.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ug.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tt.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/es.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/at.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ye.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gt.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/uz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sl.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/do.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ps.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ge.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bb.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kh.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ky.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bd.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/jm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/az.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ch.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/uy.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tc.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/iq.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/et.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fi.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kp.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/jp.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/qa.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ck.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fo.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gy.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ag.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ls.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/za.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/li.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/so.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ao.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mc.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tv.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/om.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/md.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vc.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/zw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tj.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sj.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/la.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cd.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cv.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ax.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ua.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite.png'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/no.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ws.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/al.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/eg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ve.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/be.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ae.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gp.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ca.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gd.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bf.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dj.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/km.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/rs.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/se.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mp.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pe.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/st.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pt.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ma.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ie.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ss.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gl.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bo.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sa.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ki.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/eu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sc.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bz.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/as.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/it.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/eh.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ro.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/td.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/um.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sx.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ne.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/th.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pk.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gq.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sn.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/np.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/af.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sd.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bt.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lr.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/by.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/je.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nl.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ru.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/rw.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ms.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ad.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vu.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gb.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tm.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mx.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vi.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ee.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tg.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sv.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/il.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/au.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lv.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/yt.gif'
-Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cl.gif'
-
-426 static files copied to '/app/static'.
 
 POPULATE
 
-Shipping Zone: Europe
-Shipping Zone: Oceania
-Shipping Zone: Asia
-Shipping Zone: Americas
-Shipping Zone: Africa
-Created products
-Sale: Happy charge day!
-Sale: Happy operation day!
-Sale: Happy include day!
-Sale: Happy market day!
-Sale: Happy arrive day!
-Voucher #1
-Voucher #2
-Gift card #1
-User: kristina.mendez@example.com
-User: phillip.bell@example.com
-User: angela.french@example.com
-User: elizabeth.lewis@example.com
-User: scott.morton@example.com
-User: elizabeth.greene@example.com
-User: jason.wilson@example.com
-User: justin.smith@example.com
-User: mario.weber@example.com
-User: alicia.gray@example.com
-User: barbara.navarro@example.com
-User: nathan.cox@example.com
-User: jenna.herrera@example.com
-User: ashley.jimenez@example.com
-User: andrew.mills@example.com
-User: christine.campos@example.com
-User: steven.barnes@example.com
-User: donna.smith@example.com
-User: julie.diaz@example.com
-User: lindsay.sandoval@example.com
-Order: #1
-Order: #2
-Order: #3
-Order: #4
-Order: #5
-Order: #6
-Order: #7
-Order: #8
-Order: #9
-Order: #10
-Order: #11
-Order: #12
-Order: #13
-Order: #14
-Order: #15
-Order: #16
-Order: #17
-Order: #18
-Order: #19
-Order: #20
-Homepage collection assigned
-Page about created
-Created navbar menu
-Created menu item for category Accessories
-Created menu item for category Groceries
-Created menu item for category Apparel
-Created footer menu
-
-Superuser - admin@example.com/admin
 [
     {
         "Id": "3bd2840e50ef1b6a5e4be02b439962891686a1ad00dbb7a3945cf9c75457289f",
@@ -1951,11 +651,11 @@ Superuser - admin@example.com/admin
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 3225,
+            "Pid": 1682,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-11T17:48:05.864134241Z",
-            "FinishedAt": "0001-01-01T00:00:00Z"
+            "StartedAt": "2019-06-11T17:53:11.001175161Z",
+            "FinishedAt": "2019-06-11T17:52:07.382867873Z"
         },
         "Image": "sha256:af178c95bb18e767a2779e7e30b78d7aa45cf70ad20bc211ae69c99d7d9aee12",
         "ResolvConfPath": "/var/lib/docker/containers/3bd2840e50ef1b6a5e4be02b439962891686a1ad00dbb7a3945cf9c75457289f/resolv.conf",
@@ -1990,9 +690,9 @@ Superuser - admin@example.com/admin
             "VolumesFrom": [],
             "CapAdd": null,
             "CapDrop": null,
-            "Dns": null,
-            "DnsOptions": null,
-            "DnsSearch": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
             "ExtraHosts": null,
             "GroupAdd": null,
             "IpcMode": "shareable",
@@ -2149,14 +849,14 @@ Superuser - admin@example.com/admin
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "3ae57b316ef450acd61f4737f25c88ff835cc066cb991bf83d9b424e7e1b6fab",
+            "SandboxID": "64629558674b129ba75478915037652cb195ced36b3e79e6b8dc75693e8617a4",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
             "Ports": {
                 "8000/tcp": null
             },
-            "SandboxKey": "/var/run/docker/netns/3ae57b316ef4",
+            "SandboxKey": "/var/run/docker/netns/64629558674b",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -2176,7 +876,7 @@ Superuser - admin@example.com/admin
                         "3bd2840e50ef"
                     ],
                     "NetworkID": "6521530c6e8752efb16a58c0dc0d4939e34df4ea96e8dc163551af84953fb999",
-                    "EndpointID": "904165556ac506c2b0ef7e5d72f9f47b8105bda3804b1e00e2f5a144d6d962f7",
+                    "EndpointID": "7ff35042129f016ccd6576bad30cc80b2c5b412b9a43bca02fd06aaf62f86a21",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.4",
                     "IPPrefixLen": 16,
@@ -2197,30 +897,866 @@ On branch master
 Your branch is up to date with 'origin/master'.
 
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
+  (use "git add/rm <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   static/assets/dashboard.51197608a80d98e796c6.css
-	modified:   static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg
-	modified:   static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg
-	modified:   static/dashboard/images/mobile-menu.svg
-	modified:   static/images/arrow-down.svg
-	modified:   static/images/arrow-up.svg
-	modified:   static/images/chevron-down.svg
-	modified:   static/images/chevron-up.svg
-	modified:   static/images/close.svg
-	modified:   static/images/delete.svg
-	modified:   static/images/favicon.svg
-	modified:   static/images/loader.svg
-	modified:   static/images/mobile-menu.svg
-	modified:   static/images/pass-invisible.svg
-	modified:   static/images/pass-visible.svg
+	deleted:    static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2
+	deleted:    static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf
+	deleted:    static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff
+	deleted:    static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff
+	deleted:    static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf
+	deleted:    static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2
+	deleted:    static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff
+	deleted:    static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2
+	deleted:    static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf
+	deleted:    static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2
+	deleted:    static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff
+	deleted:    static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2
+	deleted:    static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff
+	deleted:    static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2
+	deleted:    static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff
+	deleted:    static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff
+	deleted:    static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2
+	deleted:    static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2
+	deleted:    static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff
+	deleted:    static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg
+	deleted:    static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg
+	deleted:    static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg
+	deleted:    static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg
+	deleted:    static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg
+	deleted:    static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg
+	deleted:    static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg
+	deleted:    static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg
+	deleted:    static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg
+	deleted:    static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg
+	deleted:    static/assets/dashboard-next.8696ba192c05c7b380e3.js
+	deleted:    static/assets/dashboard.51197608a80d98e796c6.css
+	deleted:    static/assets/dashboard.51197608a80d98e796c6.js
+	deleted:    static/assets/document.3b0f1c589937fcde3c50.css
+	deleted:    static/assets/document.3b0f1c589937fcde3c50.js
+	deleted:    static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg
+	deleted:    static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg
+	deleted:    static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg
+	deleted:    static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg
+	deleted:    static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg
+	deleted:    static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg
+	deleted:    static/assets/logo-light.d493430f320751f6bffac210ced37643.svg
+	deleted:    static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg
+	deleted:    static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg
+	deleted:    static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg
+	deleted:    static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg
+	deleted:    static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png
+	deleted:    static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg
+	deleted:    static/assets/storefront.a10bccac1ae4e3f50de0.css
+	deleted:    static/assets/storefront.a10bccac1ae4e3f50de0.js
+	deleted:    static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg
+	deleted:    static/dashboard/images/account-circle.svg
+	deleted:    static/dashboard/images/add.svg
+	deleted:    static/dashboard/images/arrow-drop-down.svg
+	deleted:    static/dashboard/images/arrow-left.svg
+	deleted:    static/dashboard/images/chevron-left.svg
+	deleted:    static/dashboard/images/chevron-right.svg
+	deleted:    static/dashboard/images/close.svg
+	deleted:    static/dashboard/images/collections.svg
+	deleted:    static/dashboard/images/description.svg
+	deleted:    static/dashboard/images/done.svg
+	deleted:    static/dashboard/images/edit.svg
+	deleted:    static/dashboard/images/editor/align_center.svg
+	deleted:    static/dashboard/images/editor/align_justify.svg
+	deleted:    static/dashboard/images/editor/align_left.svg
+	deleted:    static/dashboard/images/editor/align_right.svg
+	deleted:    static/dashboard/images/editor/format_clear.svg
+	deleted:    static/dashboard/images/editor/insert_link.svg
+	deleted:    static/dashboard/images/editor/insert_photo.svg
+	deleted:    static/dashboard/images/editor/quote.svg
+	deleted:    static/dashboard/images/email.svg
+	deleted:    static/dashboard/images/help.svg
+	deleted:    static/dashboard/images/history.svg
+	deleted:    static/dashboard/images/logo.svg
+	deleted:    static/dashboard/images/mobile-menu.svg
+	deleted:    static/dashboard/images/more-vert.svg
+	deleted:    static/dashboard/images/payment.svg
+	deleted:    static/dashboard/images/phone.svg
+	deleted:    static/dashboard/images/reorder.svg
+	deleted:    static/dashboard/images/search.svg
+	deleted:    static/dashboard/images/store.svg
+	deleted:    static/dashboard/images/style.svg
+	deleted:    static/favicons/android-chrome-192x192.png
+	deleted:    static/favicons/android-chrome-512x512.png
+	deleted:    static/favicons/apple-touch-icon.png
+	deleted:    static/favicons/browserconfig.xml
+	deleted:    static/favicons/favicon-16x16.png
+	deleted:    static/favicons/favicon-32x32.png
+	deleted:    static/favicons/favicon.ico
+	deleted:    static/favicons/mstile-144x144.png
+	deleted:    static/favicons/mstile-150x150.png
+	deleted:    static/favicons/mstile-310x150.png
+	deleted:    static/favicons/mstile-310x310.png
+	deleted:    static/favicons/mstile-70x70.png
+	deleted:    static/favicons/safari-pinned-tab.svg
+	deleted:    static/flags/__.gif
+	deleted:    static/flags/ad.gif
+	deleted:    static/flags/ae.gif
+	deleted:    static/flags/af.gif
+	deleted:    static/flags/ag.gif
+	deleted:    static/flags/ai.gif
+	deleted:    static/flags/al.gif
+	deleted:    static/flags/am.gif
+	deleted:    static/flags/ao.gif
+	deleted:    static/flags/aq.gif
+	deleted:    static/flags/ar.gif
+	deleted:    static/flags/as.gif
+	deleted:    static/flags/at.gif
+	deleted:    static/flags/au.gif
+	deleted:    static/flags/aw.gif
+	deleted:    static/flags/ax.gif
+	deleted:    static/flags/az.gif
+	deleted:    static/flags/ba.gif
+	deleted:    static/flags/bb.gif
+	deleted:    static/flags/bd.gif
+	deleted:    static/flags/be.gif
+	deleted:    static/flags/bf.gif
+	deleted:    static/flags/bg.gif
+	deleted:    static/flags/bh.gif
+	deleted:    static/flags/bi.gif
+	deleted:    static/flags/bj.gif
+	deleted:    static/flags/bl.gif
+	deleted:    static/flags/bm.gif
+	deleted:    static/flags/bn.gif
+	deleted:    static/flags/bo.gif
+	deleted:    static/flags/bq.gif
+	deleted:    static/flags/br.gif
+	deleted:    static/flags/bs.gif
+	deleted:    static/flags/bt.gif
+	deleted:    static/flags/bv.gif
+	deleted:    static/flags/bw.gif
+	deleted:    static/flags/by.gif
+	deleted:    static/flags/bz.gif
+	deleted:    static/flags/ca.gif
+	deleted:    static/flags/cc.gif
+	deleted:    static/flags/cd.gif
+	deleted:    static/flags/cf.gif
+	deleted:    static/flags/cg.gif
+	deleted:    static/flags/ch.gif
+	deleted:    static/flags/ci.gif
+	deleted:    static/flags/ck.gif
+	deleted:    static/flags/cl.gif
+	deleted:    static/flags/cm.gif
+	deleted:    static/flags/cn.gif
+	deleted:    static/flags/co.gif
+	deleted:    static/flags/cr.gif
+	deleted:    static/flags/cu.gif
+	deleted:    static/flags/cv.gif
+	deleted:    static/flags/cw.gif
+	deleted:    static/flags/cx.gif
+	deleted:    static/flags/cy.gif
+	deleted:    static/flags/cz.gif
+	deleted:    static/flags/de.gif
+	deleted:    static/flags/dj.gif
+	deleted:    static/flags/dk.gif
+	deleted:    static/flags/dm.gif
+	deleted:    static/flags/do.gif
+	deleted:    static/flags/dz.gif
+	deleted:    static/flags/ec.gif
+	deleted:    static/flags/ee.gif
+	deleted:    static/flags/eg.gif
+	deleted:    static/flags/eh.gif
+	deleted:    static/flags/er.gif
+	deleted:    static/flags/es.gif
+	deleted:    static/flags/et.gif
+	deleted:    static/flags/eu.gif
+	deleted:    static/flags/fi.gif
+	deleted:    static/flags/fj.gif
+	deleted:    static/flags/fk.gif
+	deleted:    static/flags/fm.gif
+	deleted:    static/flags/fo.gif
+	deleted:    static/flags/fr.gif
+	deleted:    static/flags/ga.gif
+	deleted:    static/flags/gb.gif
+	deleted:    static/flags/gd.gif
+	deleted:    static/flags/ge.gif
+	deleted:    static/flags/gf.gif
+	deleted:    static/flags/gg.gif
+	deleted:    static/flags/gh.gif
+	deleted:    static/flags/gi.gif
+	deleted:    static/flags/gl.gif
+	deleted:    static/flags/gm.gif
+	deleted:    static/flags/gn.gif
+	deleted:    static/flags/gp.gif
+	deleted:    static/flags/gq.gif
+	deleted:    static/flags/gr.gif
+	deleted:    static/flags/gs.gif
+	deleted:    static/flags/gt.gif
+	deleted:    static/flags/gu.gif
+	deleted:    static/flags/gw.gif
+	deleted:    static/flags/gy.gif
+	deleted:    static/flags/hk.gif
+	deleted:    static/flags/hm.gif
+	deleted:    static/flags/hn.gif
+	deleted:    static/flags/hr.gif
+	deleted:    static/flags/ht.gif
+	deleted:    static/flags/hu.gif
+	deleted:    static/flags/id.gif
+	deleted:    static/flags/ie.gif
+	deleted:    static/flags/il.gif
+	deleted:    static/flags/im.gif
+	deleted:    static/flags/in.gif
+	deleted:    static/flags/io.gif
+	deleted:    static/flags/iq.gif
+	deleted:    static/flags/ir.gif
+	deleted:    static/flags/is.gif
+	deleted:    static/flags/it.gif
+	deleted:    static/flags/je.gif
+	deleted:    static/flags/jm.gif
+	deleted:    static/flags/jo.gif
+	deleted:    static/flags/jp.gif
+	deleted:    static/flags/ke.gif
+	deleted:    static/flags/kg.gif
+	deleted:    static/flags/kh.gif
+	deleted:    static/flags/ki.gif
+	deleted:    static/flags/km.gif
+	deleted:    static/flags/kn.gif
+	deleted:    static/flags/kp.gif
+	deleted:    static/flags/kr.gif
+	deleted:    static/flags/kw.gif
+	deleted:    static/flags/ky.gif
+	deleted:    static/flags/kz.gif
+	deleted:    static/flags/la.gif
+	deleted:    static/flags/lb.gif
+	deleted:    static/flags/lc.gif
+	deleted:    static/flags/li.gif
+	deleted:    static/flags/lk.gif
+	deleted:    static/flags/lr.gif
+	deleted:    static/flags/ls.gif
+	deleted:    static/flags/lt.gif
+	deleted:    static/flags/lu.gif
+	deleted:    static/flags/lv.gif
+	deleted:    static/flags/ly.gif
+	deleted:    static/flags/ma.gif
+	deleted:    static/flags/mc.gif
+	deleted:    static/flags/md.gif
+	deleted:    static/flags/me.gif
+	deleted:    static/flags/mf.gif
+	deleted:    static/flags/mg.gif
+	deleted:    static/flags/mh.gif
+	deleted:    static/flags/mk.gif
+	deleted:    static/flags/ml.gif
+	deleted:    static/flags/mm.gif
+	deleted:    static/flags/mn.gif
+	deleted:    static/flags/mo.gif
+	deleted:    static/flags/mp.gif
+	deleted:    static/flags/mq.gif
+	deleted:    static/flags/mr.gif
+	deleted:    static/flags/ms.gif
+	deleted:    static/flags/mt.gif
+	deleted:    static/flags/mu.gif
+	deleted:    static/flags/mv.gif
+	deleted:    static/flags/mw.gif
+	deleted:    static/flags/mx.gif
+	deleted:    static/flags/my.gif
+	deleted:    static/flags/mz.gif
+	deleted:    static/flags/na.gif
+	deleted:    static/flags/nc.gif
+	deleted:    static/flags/ne.gif
+	deleted:    static/flags/nf.gif
+	deleted:    static/flags/ng.gif
+	deleted:    static/flags/ni.gif
+	deleted:    static/flags/nl.gif
+	deleted:    static/flags/no.gif
+	deleted:    static/flags/np.gif
+	deleted:    static/flags/nr.gif
+	deleted:    static/flags/nu.gif
+	deleted:    static/flags/nz.gif
+	deleted:    static/flags/om.gif
+	deleted:    static/flags/pa.gif
+	deleted:    static/flags/pe.gif
+	deleted:    static/flags/pf.gif
+	deleted:    static/flags/pg.gif
+	deleted:    static/flags/ph.gif
+	deleted:    static/flags/pk.gif
+	deleted:    static/flags/pl.gif
+	deleted:    static/flags/pm.gif
+	deleted:    static/flags/pn.gif
+	deleted:    static/flags/pr.gif
+	deleted:    static/flags/ps.gif
+	deleted:    static/flags/pt.gif
+	deleted:    static/flags/pw.gif
+	deleted:    static/flags/py.gif
+	deleted:    static/flags/qa.gif
+	deleted:    static/flags/re.gif
+	deleted:    static/flags/ro.gif
+	deleted:    static/flags/rs.gif
+	deleted:    static/flags/ru.gif
+	deleted:    static/flags/rw.gif
+	deleted:    static/flags/sa.gif
+	deleted:    static/flags/sb.gif
+	deleted:    static/flags/sc.gif
+	deleted:    static/flags/sd.gif
+	deleted:    static/flags/se.gif
+	deleted:    static/flags/sg.gif
+	deleted:    static/flags/sh.gif
+	deleted:    static/flags/si.gif
+	deleted:    static/flags/sj.gif
+	deleted:    static/flags/sk.gif
+	deleted:    static/flags/sl.gif
+	deleted:    static/flags/sm.gif
+	deleted:    static/flags/sn.gif
+	deleted:    static/flags/so.gif
+	deleted:    static/flags/sprite-hq.css
+	deleted:    static/flags/sprite-hq.png
+	deleted:    static/flags/sprite.css
+	deleted:    static/flags/sprite.png
+	deleted:    static/flags/sr.gif
+	deleted:    static/flags/ss.gif
+	deleted:    static/flags/st.gif
+	deleted:    static/flags/sv.gif
+	deleted:    static/flags/sx.gif
+	deleted:    static/flags/sy.gif
+	deleted:    static/flags/sz.gif
+	deleted:    static/flags/tc.gif
+	deleted:    static/flags/td.gif
+	deleted:    static/flags/tf.gif
+	deleted:    static/flags/tg.gif
+	deleted:    static/flags/th.gif
+	deleted:    static/flags/tj.gif
+	deleted:    static/flags/tk.gif
+	deleted:    static/flags/tl.gif
+	deleted:    static/flags/tm.gif
+	deleted:    static/flags/tn.gif
+	deleted:    static/flags/to.gif
+	deleted:    static/flags/tr.gif
+	deleted:    static/flags/tt.gif
+	deleted:    static/flags/tv.gif
+	deleted:    static/flags/tw.gif
+	deleted:    static/flags/tz.gif
+	deleted:    static/flags/ua.gif
+	deleted:    static/flags/ug.gif
+	deleted:    static/flags/um.gif
+	deleted:    static/flags/us.gif
+	deleted:    static/flags/uy.gif
+	deleted:    static/flags/uz.gif
+	deleted:    static/flags/va.gif
+	deleted:    static/flags/vc.gif
+	deleted:    static/flags/ve.gif
+	deleted:    static/flags/vg.gif
+	deleted:    static/flags/vi.gif
+	deleted:    static/flags/vn.gif
+	deleted:    static/flags/vu.gif
+	deleted:    static/flags/wf.gif
+	deleted:    static/flags/ws.gif
+	deleted:    static/flags/ye.gif
+	deleted:    static/flags/yt.gif
+	deleted:    static/flags/za.gif
+	deleted:    static/flags/zm.gif
+	deleted:    static/flags/zw.gif
+	deleted:    static/images/arrow-down-icon.svg
+	deleted:    static/images/arrow-down.svg
+	deleted:    static/images/arrow-left.svg
+	deleted:    static/images/arrow-select.svg
+	deleted:    static/images/arrow-up-icon.svg
+	deleted:    static/images/arrow-up.svg
+	deleted:    static/images/avatars/avatar1.png
+	deleted:    static/images/avatars/avatar10.png
+	deleted:    static/images/avatars/avatar11.png
+	deleted:    static/images/avatars/avatar12.png
+	deleted:    static/images/avatars/avatar2.png
+	deleted:    static/images/avatars/avatar3.png
+	deleted:    static/images/avatars/avatar4.png
+	deleted:    static/images/avatars/avatar5.png
+	deleted:    static/images/avatars/avatar6.png
+	deleted:    static/images/avatars/avatar7.png
+	deleted:    static/images/avatars/avatar8.png
+	deleted:    static/images/avatars/avatar9.png
+	deleted:    static/images/block1.jpg
+	deleted:    static/images/block2.jpg
+	deleted:    static/images/block3.jpg
+	deleted:    static/images/checkout-bg.png
+	deleted:    static/images/checkout-bg2x.png
+	deleted:    static/images/checkout.svg
+	deleted:    static/images/chevron-down.svg
+	deleted:    static/images/chevron-up.svg
+	deleted:    static/images/close.svg
+	deleted:    static/images/confirm-order-bg.png
+	deleted:    static/images/confirm-order-bg2x.png
+	deleted:    static/images/delete.svg
+	deleted:    static/images/dribbble-logo.svg
+	deleted:    static/images/edit.svg
+	deleted:    static/images/empty-checkout-bg.png
+	deleted:    static/images/empty-checkout-bg2x.png
+	deleted:    static/images/facebook-logo.svg
+	deleted:    static/images/favicon.svg
+	deleted:    static/images/filter-icon.svg
+	deleted:    static/images/gallery-arrow.svg
+	deleted:    static/images/github-logo.svg
+	deleted:    static/images/google-logo.svg
+	deleted:    static/images/instagram-logo.svg
+	deleted:    static/images/linkedin-logo.svg
+	deleted:    static/images/loader.svg
+	deleted:    static/images/login-background.svg
+	deleted:    static/images/login-bg.png
+	deleted:    static/images/login-bg2x.png
+	deleted:    static/images/logo-dark.svg
+	deleted:    static/images/logo-light.svg
+	deleted:    static/images/logo-white.svg
+	deleted:    static/images/meetup-logo.svg
+	deleted:    static/images/mobile-menu.svg
+	deleted:    static/images/no-results-bg.svg
+	deleted:    static/images/not-found-404.svg
+	deleted:    static/images/pass-invisible.svg
+	deleted:    static/images/pass-visible.svg
+	deleted:    static/images/photo-icon.svg
+	deleted:    static/images/placeholder1080x1080.png
+	deleted:    static/images/placeholder120x120.png
+	deleted:    static/images/placeholder255x255.png
+	deleted:    static/images/placeholder540x540.png
+	deleted:    static/images/placeholder60x60.png
+	deleted:    static/images/reset-bg.png
+	deleted:    static/images/sale-bg.svg
+	deleted:    static/images/sample-product.jpg
+	deleted:    static/images/sample-product2.jpg
+	deleted:    static/images/search.svg
+	deleted:    static/images/twitter-logo.svg
+	deleted:    static/images/what.svg
+	deleted:    static/mptt/arrow-move.png
+	deleted:    static/mptt/disclosure-down.png
+	deleted:    static/mptt/disclosure-right.png
+	deleted:    static/mptt/draggable-admin.css
+	deleted:    static/mptt/draggable-admin.js
+	deleted:    static/versatileimagefield/css/versatileimagefield-bootstrap3.css
+	deleted:    static/versatileimagefield/css/versatileimagefield-djangoadmin.css
+	deleted:    static/versatileimagefield/css/versatileimagefield.css
+	deleted:    static/versatileimagefield/js/versatileimagefield.js
 
 no changes added to commit (use "git add" and/or "git commit -a")
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
+[master f9f2d07] fresh commit
+ 426 files changed, 2685 deletions(-)
+ delete mode 100644 static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2
+ delete mode 100644 static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf
+ delete mode 100644 static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff
+ delete mode 100644 static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff
+ delete mode 100644 static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf
+ delete mode 100644 static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2
+ delete mode 100644 static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff
+ delete mode 100644 static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2
+ delete mode 100644 static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf
+ delete mode 100644 static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2
+ delete mode 100644 static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff
+ delete mode 100644 static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2
+ delete mode 100644 static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff
+ delete mode 100644 static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2
+ delete mode 100644 static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff
+ delete mode 100644 static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff
+ delete mode 100644 static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2
+ delete mode 100644 static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2
+ delete mode 100644 static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff
+ delete mode 100644 static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg
+ delete mode 100644 static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg
+ delete mode 100644 static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg
+ delete mode 100644 static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg
+ delete mode 100644 static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg
+ delete mode 100644 static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg
+ delete mode 100644 static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg
+ delete mode 100644 static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg
+ delete mode 100644 static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg
+ delete mode 100644 static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg
+ delete mode 100644 static/assets/dashboard-next.8696ba192c05c7b380e3.js
+ delete mode 100644 static/assets/dashboard.51197608a80d98e796c6.css
+ delete mode 100644 static/assets/dashboard.51197608a80d98e796c6.js
+ delete mode 100644 static/assets/document.3b0f1c589937fcde3c50.css
+ delete mode 100644 static/assets/document.3b0f1c589937fcde3c50.js
+ delete mode 100644 static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg
+ delete mode 100644 static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg
+ delete mode 100644 static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg
+ delete mode 100644 static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg
+ delete mode 100644 static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg
+ delete mode 100644 static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg
+ delete mode 100644 static/assets/logo-light.d493430f320751f6bffac210ced37643.svg
+ delete mode 100644 static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg
+ delete mode 100644 static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg
+ delete mode 100644 static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg
+ delete mode 100644 static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg
+ delete mode 100644 static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png
+ delete mode 100644 static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg
+ delete mode 100644 static/assets/storefront.a10bccac1ae4e3f50de0.css
+ delete mode 100644 static/assets/storefront.a10bccac1ae4e3f50de0.js
+ delete mode 100644 static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg
+ delete mode 100644 static/dashboard/images/account-circle.svg
+ delete mode 100644 static/dashboard/images/add.svg
+ delete mode 100644 static/dashboard/images/arrow-drop-down.svg
+ delete mode 100644 static/dashboard/images/arrow-left.svg
+ delete mode 100644 static/dashboard/images/chevron-left.svg
+ delete mode 100644 static/dashboard/images/chevron-right.svg
+ delete mode 100644 static/dashboard/images/close.svg
+ delete mode 100644 static/dashboard/images/collections.svg
+ delete mode 100644 static/dashboard/images/description.svg
+ delete mode 100644 static/dashboard/images/done.svg
+ delete mode 100644 static/dashboard/images/edit.svg
+ delete mode 100644 static/dashboard/images/editor/align_center.svg
+ delete mode 100644 static/dashboard/images/editor/align_justify.svg
+ delete mode 100644 static/dashboard/images/editor/align_left.svg
+ delete mode 100644 static/dashboard/images/editor/align_right.svg
+ delete mode 100644 static/dashboard/images/editor/format_clear.svg
+ delete mode 100644 static/dashboard/images/editor/insert_link.svg
+ delete mode 100644 static/dashboard/images/editor/insert_photo.svg
+ delete mode 100644 static/dashboard/images/editor/quote.svg
+ delete mode 100644 static/dashboard/images/email.svg
+ delete mode 100644 static/dashboard/images/help.svg
+ delete mode 100644 static/dashboard/images/history.svg
+ delete mode 100644 static/dashboard/images/logo.svg
+ delete mode 100644 static/dashboard/images/mobile-menu.svg
+ delete mode 100644 static/dashboard/images/more-vert.svg
+ delete mode 100644 static/dashboard/images/payment.svg
+ delete mode 100644 static/dashboard/images/phone.svg
+ delete mode 100644 static/dashboard/images/reorder.svg
+ delete mode 100644 static/dashboard/images/search.svg
+ delete mode 100644 static/dashboard/images/store.svg
+ delete mode 100644 static/dashboard/images/style.svg
+ delete mode 100644 static/favicons/android-chrome-192x192.png
+ delete mode 100644 static/favicons/android-chrome-512x512.png
+ delete mode 100644 static/favicons/apple-touch-icon.png
+ delete mode 100644 static/favicons/browserconfig.xml
+ delete mode 100644 static/favicons/favicon-16x16.png
+ delete mode 100644 static/favicons/favicon-32x32.png
+ delete mode 100644 static/favicons/favicon.ico
+ delete mode 100644 static/favicons/mstile-144x144.png
+ delete mode 100644 static/favicons/mstile-150x150.png
+ delete mode 100644 static/favicons/mstile-310x150.png
+ delete mode 100644 static/favicons/mstile-310x310.png
+ delete mode 100644 static/favicons/mstile-70x70.png
+ delete mode 100644 static/favicons/safari-pinned-tab.svg
+ delete mode 100644 static/flags/__.gif
+ delete mode 100644 static/flags/ad.gif
+ delete mode 100644 static/flags/ae.gif
+ delete mode 100644 static/flags/af.gif
+ delete mode 100644 static/flags/ag.gif
+ delete mode 100644 static/flags/ai.gif
+ delete mode 100644 static/flags/al.gif
+ delete mode 100644 static/flags/am.gif
+ delete mode 100644 static/flags/ao.gif
+ delete mode 100644 static/flags/aq.gif
+ delete mode 100644 static/flags/ar.gif
+ delete mode 100644 static/flags/as.gif
+ delete mode 100644 static/flags/at.gif
+ delete mode 100644 static/flags/au.gif
+ delete mode 100644 static/flags/aw.gif
+ delete mode 100644 static/flags/ax.gif
+ delete mode 100644 static/flags/az.gif
+ delete mode 100644 static/flags/ba.gif
+ delete mode 100644 static/flags/bb.gif
+ delete mode 100644 static/flags/bd.gif
+ delete mode 100644 static/flags/be.gif
+ delete mode 100644 static/flags/bf.gif
+ delete mode 100644 static/flags/bg.gif
+ delete mode 100644 static/flags/bh.gif
+ delete mode 100644 static/flags/bi.gif
+ delete mode 100644 static/flags/bj.gif
+ delete mode 100644 static/flags/bl.gif
+ delete mode 100644 static/flags/bm.gif
+ delete mode 100644 static/flags/bn.gif
+ delete mode 100644 static/flags/bo.gif
+ delete mode 100644 static/flags/bq.gif
+ delete mode 100644 static/flags/br.gif
+ delete mode 100644 static/flags/bs.gif
+ delete mode 100644 static/flags/bt.gif
+ delete mode 100644 static/flags/bv.gif
+ delete mode 100644 static/flags/bw.gif
+ delete mode 100644 static/flags/by.gif
+ delete mode 100644 static/flags/bz.gif
+ delete mode 100644 static/flags/ca.gif
+ delete mode 100644 static/flags/cc.gif
+ delete mode 100644 static/flags/cd.gif
+ delete mode 100644 static/flags/cf.gif
+ delete mode 100644 static/flags/cg.gif
+ delete mode 100644 static/flags/ch.gif
+ delete mode 100644 static/flags/ci.gif
+ delete mode 100644 static/flags/ck.gif
+ delete mode 100644 static/flags/cl.gif
+ delete mode 100644 static/flags/cm.gif
+ delete mode 100644 static/flags/cn.gif
+ delete mode 100644 static/flags/co.gif
+ delete mode 100644 static/flags/cr.gif
+ delete mode 100644 static/flags/cu.gif
+ delete mode 100644 static/flags/cv.gif
+ delete mode 100644 static/flags/cw.gif
+ delete mode 100644 static/flags/cx.gif
+ delete mode 100644 static/flags/cy.gif
+ delete mode 100644 static/flags/cz.gif
+ delete mode 100644 static/flags/de.gif
+ delete mode 100644 static/flags/dj.gif
+ delete mode 100644 static/flags/dk.gif
+ delete mode 100644 static/flags/dm.gif
+ delete mode 100644 static/flags/do.gif
+ delete mode 100644 static/flags/dz.gif
+ delete mode 100644 static/flags/ec.gif
+ delete mode 100644 static/flags/ee.gif
+ delete mode 100644 static/flags/eg.gif
+ delete mode 100644 static/flags/eh.gif
+ delete mode 100644 static/flags/er.gif
+ delete mode 100644 static/flags/es.gif
+ delete mode 100644 static/flags/et.gif
+ delete mode 100644 static/flags/eu.gif
+ delete mode 100644 static/flags/fi.gif
+ delete mode 100644 static/flags/fj.gif
+ delete mode 100644 static/flags/fk.gif
+ delete mode 100644 static/flags/fm.gif
+ delete mode 100644 static/flags/fo.gif
+ delete mode 100644 static/flags/fr.gif
+ delete mode 100644 static/flags/ga.gif
+ delete mode 100644 static/flags/gb.gif
+ delete mode 100644 static/flags/gd.gif
+ delete mode 100644 static/flags/ge.gif
+ delete mode 100644 static/flags/gf.gif
+ delete mode 100644 static/flags/gg.gif
+ delete mode 100644 static/flags/gh.gif
+ delete mode 100644 static/flags/gi.gif
+ delete mode 100644 static/flags/gl.gif
+ delete mode 100644 static/flags/gm.gif
+ delete mode 100644 static/flags/gn.gif
+ delete mode 100644 static/flags/gp.gif
+ delete mode 100644 static/flags/gq.gif
+ delete mode 100644 static/flags/gr.gif
+ delete mode 100644 static/flags/gs.gif
+ delete mode 100644 static/flags/gt.gif
+ delete mode 100644 static/flags/gu.gif
+ delete mode 100644 static/flags/gw.gif
+ delete mode 100644 static/flags/gy.gif
+ delete mode 100644 static/flags/hk.gif
+ delete mode 100644 static/flags/hm.gif
+ delete mode 100644 static/flags/hn.gif
+ delete mode 100644 static/flags/hr.gif
+ delete mode 100644 static/flags/ht.gif
+ delete mode 100644 static/flags/hu.gif
+ delete mode 100644 static/flags/id.gif
+ delete mode 100644 static/flags/ie.gif
+ delete mode 100644 static/flags/il.gif
+ delete mode 100644 static/flags/im.gif
+ delete mode 100644 static/flags/in.gif
+ delete mode 100644 static/flags/io.gif
+ delete mode 100644 static/flags/iq.gif
+ delete mode 100644 static/flags/ir.gif
+ delete mode 100644 static/flags/is.gif
+ delete mode 100644 static/flags/it.gif
+ delete mode 100644 static/flags/je.gif
+ delete mode 100644 static/flags/jm.gif
+ delete mode 100644 static/flags/jo.gif
+ delete mode 100644 static/flags/jp.gif
+ delete mode 100644 static/flags/ke.gif
+ delete mode 100644 static/flags/kg.gif
+ delete mode 100644 static/flags/kh.gif
+ delete mode 100644 static/flags/ki.gif
+ delete mode 100644 static/flags/km.gif
+ delete mode 100644 static/flags/kn.gif
+ delete mode 100644 static/flags/kp.gif
+ delete mode 100644 static/flags/kr.gif
+ delete mode 100644 static/flags/kw.gif
+ delete mode 100644 static/flags/ky.gif
+ delete mode 100644 static/flags/kz.gif
+ delete mode 100644 static/flags/la.gif
+ delete mode 100644 static/flags/lb.gif
+ delete mode 100644 static/flags/lc.gif
+ delete mode 100644 static/flags/li.gif
+ delete mode 100644 static/flags/lk.gif
+ delete mode 100644 static/flags/lr.gif
+ delete mode 100644 static/flags/ls.gif
+ delete mode 100644 static/flags/lt.gif
+ delete mode 100644 static/flags/lu.gif
+ delete mode 100644 static/flags/lv.gif
+ delete mode 100644 static/flags/ly.gif
+ delete mode 100644 static/flags/ma.gif
+ delete mode 100644 static/flags/mc.gif
+ delete mode 100644 static/flags/md.gif
+ delete mode 100644 static/flags/me.gif
+ delete mode 100644 static/flags/mf.gif
+ delete mode 100644 static/flags/mg.gif
+ delete mode 100644 static/flags/mh.gif
+ delete mode 100644 static/flags/mk.gif
+ delete mode 100644 static/flags/ml.gif
+ delete mode 100644 static/flags/mm.gif
+ delete mode 100644 static/flags/mn.gif
+ delete mode 100644 static/flags/mo.gif
+ delete mode 100644 static/flags/mp.gif
+ delete mode 100644 static/flags/mq.gif
+ delete mode 100644 static/flags/mr.gif
+ delete mode 100644 static/flags/ms.gif
+ delete mode 100644 static/flags/mt.gif
+ delete mode 100644 static/flags/mu.gif
+ delete mode 100644 static/flags/mv.gif
+ delete mode 100644 static/flags/mw.gif
+ delete mode 100644 static/flags/mx.gif
+ delete mode 100644 static/flags/my.gif
+ delete mode 100644 static/flags/mz.gif
+ delete mode 100644 static/flags/na.gif
+ delete mode 100644 static/flags/nc.gif
+ delete mode 100644 static/flags/ne.gif
+ delete mode 100644 static/flags/nf.gif
+ delete mode 100644 static/flags/ng.gif
+ delete mode 100644 static/flags/ni.gif
+ delete mode 100644 static/flags/nl.gif
+ delete mode 100644 static/flags/no.gif
+ delete mode 100644 static/flags/np.gif
+ delete mode 100644 static/flags/nr.gif
+ delete mode 100644 static/flags/nu.gif
+ delete mode 100644 static/flags/nz.gif
+ delete mode 100644 static/flags/om.gif
+ delete mode 100644 static/flags/pa.gif
+ delete mode 100644 static/flags/pe.gif
+ delete mode 100644 static/flags/pf.gif
+ delete mode 100644 static/flags/pg.gif
+ delete mode 100644 static/flags/ph.gif
+ delete mode 100644 static/flags/pk.gif
+ delete mode 100644 static/flags/pl.gif
+ delete mode 100644 static/flags/pm.gif
+ delete mode 100644 static/flags/pn.gif
+ delete mode 100644 static/flags/pr.gif
+ delete mode 100644 static/flags/ps.gif
+ delete mode 100644 static/flags/pt.gif
+ delete mode 100644 static/flags/pw.gif
+ delete mode 100644 static/flags/py.gif
+ delete mode 100644 static/flags/qa.gif
+ delete mode 100644 static/flags/re.gif
+ delete mode 100644 static/flags/ro.gif
+ delete mode 100644 static/flags/rs.gif
+ delete mode 100644 static/flags/ru.gif
+ delete mode 100644 static/flags/rw.gif
+ delete mode 100644 static/flags/sa.gif
+ delete mode 100644 static/flags/sb.gif
+ delete mode 100644 static/flags/sc.gif
+ delete mode 100644 static/flags/sd.gif
+ delete mode 100644 static/flags/se.gif
+ delete mode 100644 static/flags/sg.gif
+ delete mode 100644 static/flags/sh.gif
+ delete mode 100644 static/flags/si.gif
+ delete mode 100644 static/flags/sj.gif
+ delete mode 100644 static/flags/sk.gif
+ delete mode 100644 static/flags/sl.gif
+ delete mode 100644 static/flags/sm.gif
+ delete mode 100644 static/flags/sn.gif
+ delete mode 100644 static/flags/so.gif
+ delete mode 100644 static/flags/sprite-hq.css
+ delete mode 100644 static/flags/sprite-hq.png
+ delete mode 100644 static/flags/sprite.css
+ delete mode 100644 static/flags/sprite.png
+ delete mode 100644 static/flags/sr.gif
+ delete mode 100644 static/flags/ss.gif
+ delete mode 100644 static/flags/st.gif
+ delete mode 100644 static/flags/sv.gif
+ delete mode 100644 static/flags/sx.gif
+ delete mode 100644 static/flags/sy.gif
+ delete mode 100644 static/flags/sz.gif
+ delete mode 100644 static/flags/tc.gif
+ delete mode 100644 static/flags/td.gif
+ delete mode 100644 static/flags/tf.gif
+ delete mode 100644 static/flags/tg.gif
+ delete mode 100644 static/flags/th.gif
+ delete mode 100644 static/flags/tj.gif
+ delete mode 100644 static/flags/tk.gif
+ delete mode 100644 static/flags/tl.gif
+ delete mode 100644 static/flags/tm.gif
+ delete mode 100644 static/flags/tn.gif
+ delete mode 100644 static/flags/to.gif
+ delete mode 100644 static/flags/tr.gif
+ delete mode 100644 static/flags/tt.gif
+ delete mode 100644 static/flags/tv.gif
+ delete mode 100644 static/flags/tw.gif
+ delete mode 100644 static/flags/tz.gif
+ delete mode 100644 static/flags/ua.gif
+ delete mode 100644 static/flags/ug.gif
+ delete mode 100644 static/flags/um.gif
+ delete mode 100644 static/flags/us.gif
+ delete mode 100644 static/flags/uy.gif
+ delete mode 100644 static/flags/uz.gif
+ delete mode 100644 static/flags/va.gif
+ delete mode 100644 static/flags/vc.gif
+ delete mode 100644 static/flags/ve.gif
+ delete mode 100644 static/flags/vg.gif
+ delete mode 100644 static/flags/vi.gif
+ delete mode 100644 static/flags/vn.gif
+ delete mode 100644 static/flags/vu.gif
+ delete mode 100644 static/flags/wf.gif
+ delete mode 100644 static/flags/ws.gif
+ delete mode 100644 static/flags/ye.gif
+ delete mode 100644 static/flags/yt.gif
+ delete mode 100644 static/flags/za.gif
+ delete mode 100644 static/flags/zm.gif
+ delete mode 100644 static/flags/zw.gif
+ delete mode 100644 static/images/arrow-down-icon.svg
+ delete mode 100644 static/images/arrow-down.svg
+ delete mode 100644 static/images/arrow-left.svg
+ delete mode 100644 static/images/arrow-select.svg
+ delete mode 100644 static/images/arrow-up-icon.svg
+ delete mode 100644 static/images/arrow-up.svg
+ delete mode 100644 static/images/avatars/avatar1.png
+ delete mode 100644 static/images/avatars/avatar10.png
+ delete mode 100644 static/images/avatars/avatar11.png
+ delete mode 100644 static/images/avatars/avatar12.png
+ delete mode 100644 static/images/avatars/avatar2.png
+ delete mode 100644 static/images/avatars/avatar3.png
+ delete mode 100644 static/images/avatars/avatar4.png
+ delete mode 100644 static/images/avatars/avatar5.png
+ delete mode 100644 static/images/avatars/avatar6.png
+ delete mode 100644 static/images/avatars/avatar7.png
+ delete mode 100644 static/images/avatars/avatar8.png
+ delete mode 100644 static/images/avatars/avatar9.png
+ delete mode 100644 static/images/block1.jpg
+ delete mode 100644 static/images/block2.jpg
+ delete mode 100644 static/images/block3.jpg
+ delete mode 100644 static/images/checkout-bg.png
+ delete mode 100644 static/images/checkout-bg2x.png
+ delete mode 100644 static/images/checkout.svg
+ delete mode 100644 static/images/chevron-down.svg
+ delete mode 100644 static/images/chevron-up.svg
+ delete mode 100644 static/images/close.svg
+ delete mode 100644 static/images/confirm-order-bg.png
+ delete mode 100644 static/images/confirm-order-bg2x.png
+ delete mode 100644 static/images/delete.svg
+ delete mode 100644 static/images/dribbble-logo.svg
+ delete mode 100644 static/images/edit.svg
+ delete mode 100644 static/images/empty-checkout-bg.png
+ delete mode 100644 static/images/empty-checkout-bg2x.png
+ delete mode 100644 static/images/facebook-logo.svg
+ delete mode 100644 static/images/favicon.svg
+ delete mode 100644 static/images/filter-icon.svg
+ delete mode 100644 static/images/gallery-arrow.svg
+ delete mode 100644 static/images/github-logo.svg
+ delete mode 100644 static/images/google-logo.svg
+ delete mode 100644 static/images/instagram-logo.svg
+ delete mode 100644 static/images/linkedin-logo.svg
+ delete mode 100644 static/images/loader.svg
+ delete mode 100644 static/images/login-background.svg
+ delete mode 100644 static/images/login-bg.png
+ delete mode 100644 static/images/login-bg2x.png
+ delete mode 100644 static/images/logo-dark.svg
+ delete mode 100644 static/images/logo-light.svg
+ delete mode 100644 static/images/logo-white.svg
+ delete mode 100644 static/images/meetup-logo.svg
+ delete mode 100644 static/images/mobile-menu.svg
+ delete mode 100644 static/images/no-results-bg.svg
+ delete mode 100644 static/images/not-found-404.svg
+ delete mode 100644 static/images/pass-invisible.svg
+ delete mode 100644 static/images/pass-visible.svg
+ delete mode 100644 static/images/photo-icon.svg
+ delete mode 100644 static/images/placeholder1080x1080.png
+ delete mode 100644 static/images/placeholder120x120.png
+ delete mode 100644 static/images/placeholder255x255.png
+ delete mode 100644 static/images/placeholder540x540.png
+ delete mode 100644 static/images/placeholder60x60.png
+ delete mode 100644 static/images/reset-bg.png
+ delete mode 100644 static/images/sale-bg.svg
+ delete mode 100644 static/images/sample-product.jpg
+ delete mode 100644 static/images/sample-product2.jpg
+ delete mode 100644 static/images/search.svg
+ delete mode 100644 static/images/twitter-logo.svg
+ delete mode 100644 static/images/what.svg
+ delete mode 100644 static/mptt/arrow-move.png
+ delete mode 100644 static/mptt/disclosure-down.png
+ delete mode 100644 static/mptt/disclosure-right.png
+ delete mode 100644 static/mptt/draggable-admin.css
+ delete mode 100644 static/mptt/draggable-admin.js
+ delete mode 100644 static/versatileimagefield/css/versatileimagefield-bootstrap3.css
+ delete mode 100644 static/versatileimagefield/css/versatileimagefield-djangoadmin.css
+ delete mode 100644 static/versatileimagefield/css/versatileimagefield.css
+ delete mode 100644 static/versatileimagefield/js/versatileimagefield.js
+Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 PRODUCT
 
@@ -2242,10 +1778,10 @@ nothing to commit, working tree clean
 
 SERVICES
 
-CONTAINER ID        IMAGE                COMMAND                  CREATED              STATUS              PORTS                    NAMES
-3bd2840e50ef        chetabahana/saleor   "celery -A saleor wo…"   About a minute ago   Up About a minute   8000/tcp                 compose_celery_1
-2530c5fcf5c6        postgres             "docker-entrypoint.s…"   5 minutes ago        Up 5 minutes        0.0.0.0:5431->5432/tcp   compose_postgres_1
-7f755b3a33d3        redis                "docker-entrypoint.s…"   5 minutes ago        Up 5 minutes        0.0.0.0:6378->6379/tcp   compose_redis_1
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+3bd2840e50ef        af178c95bb18        "celery -A saleor wo…"   2 hours ago         Up 2 hours          8000/tcp                 compose_celery_1
+2530c5fcf5c6        postgres            "docker-entrypoint.s…"   2 hours ago         Up 2 hours          0.0.0.0:5431->5432/tcp   compose_postgres_1
+7f755b3a33d3        redis               "docker-entrypoint.s…"   2 hours ago         Up 2 hours          0.0.0.0:6378->6379/tcp   compose_redis_1
 
 REDIS
 
@@ -2263,6 +1799,31 @@ REDIS
 10:C 11 Jun 2019 17:49:22.819 * DB saved on disk
 10:C 11 Jun 2019 17:49:22.820 * RDB: 0 MB of memory used by copy-on-write
 1:M 11 Jun 2019 17:49:23.063 * Background saving terminated with success
+1:signal-handler (1560275517) Received SIGTERM scheduling shutdown...
+1:M 11 Jun 2019 17:51:57.171 # User requested shutdown...
+1:M 11 Jun 2019 17:51:57.256 * Saving the final RDB snapshot before exiting.
+1:M 11 Jun 2019 17:51:57.427 * DB saved on disk
+1:M 11 Jun 2019 17:51:57.427 # Redis is now ready to exit, bye bye...
+1:C 11 Jun 2019 17:53:11.396 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 11 Jun 2019 17:53:11.396 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 11 Jun 2019 17:53:11.396 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1:M 11 Jun 2019 17:53:11.400 * Running mode=standalone, port=6379.
+1:M 11 Jun 2019 17:53:11.400 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 11 Jun 2019 17:53:11.400 # Server initialized
+1:M 11 Jun 2019 17:53:11.400 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 11 Jun 2019 17:53:11.400 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 11 Jun 2019 17:53:11.501 * DB loaded from disk: 0.102 seconds
+1:M 11 Jun 2019 17:53:11.501 * Ready to accept connections
+1:M 11 Jun 2019 18:53:12.017 * 1 changes in 3600 seconds. Saving...
+1:M 11 Jun 2019 18:53:12.081 * Background saving started by pid 10
+10:C 11 Jun 2019 18:53:12.113 * DB saved on disk
+10:C 11 Jun 2019 18:53:12.114 * RDB: 0 MB of memory used by copy-on-write
+1:M 11 Jun 2019 18:53:12.183 * Background saving terminated with success
+1:M 11 Jun 2019 19:53:13.004 * 1 changes in 3600 seconds. Saving...
+1:M 11 Jun 2019 19:53:13.077 * Background saving started by pid 11
+11:C 11 Jun 2019 19:53:13.196 * DB saved on disk
+11:C 11 Jun 2019 19:53:13.196 * RDB: 0 MB of memory used by copy-on-write
+1:M 11 Jun 2019 19:53:13.278 * Background saving terminated with success
 
 POSTGRES
 
@@ -2357,4 +1918,81 @@ CELERY
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ -------------- celery@3bd2840e50ef v4.3.0 (rhubarb)
+---- **** ----- 
+--- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-11 12:53:43
+-- * - **** --- 
+- ** ---------- [config]
+- ** ---------- .> app:         saleor:0x7fe347f65da0
+- ** ---------- .> transport:   redis://redis:6379/1
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . saleor.account.emails.send_account_delete_confirmation_email
+  . saleor.account.emails.send_password_reset_email
+  . saleor.account.thumbnails.create_user_avatar_thumbnails
+  . saleor.core.analytics.ga_report
+  . saleor.core.utils.update_conversion_rates_from_openexchangerates
+  . saleor.dashboard.emails.send_promote_customer_to_staff_email
+  . saleor.dashboard.emails.send_set_password_customer_email
+  . saleor.dashboard.emails.send_set_password_staff_email
+  . saleor.order.emails.send_fulfillment_confirmation
+  . saleor.order.emails.send_fulfillment_update
+  . saleor.order.emails.send_order_confirmation
+  . saleor.order.emails.send_payment_confirmation
+  . saleor.product.tasks.update_variants_names
+  . saleor.product.thumbnails.create_category_background_image_thumbnails
+  . saleor.product.thumbnails.create_collection_background_image_thumbnails
+  . saleor.product.thumbnails.create_product_thumbnails
 
