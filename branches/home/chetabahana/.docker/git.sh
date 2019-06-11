@@ -100,14 +100,14 @@ git remote add upstream git://github.com/MarketLeader/Tutorial-Buka-Toko.git
 git fetch --prune upstream Chetabahana && git reset --hard upstream/Chetabahana
 git push origin master --force
 
-#echo "\nCURRENT\n"
-#git checkout "${CURRENT}"
-#git fetch --prune origin master && git reset --hard origin/master
+echo "\nCURRENT\n"
+git checkout "${CURRENT}"
+git fetch --prune origin master && git reset --hard origin/master
 #git push origin "${CURRENT}" --force
 
 echo "\nNEXT\n"
 git checkout "${NEXT}"
 git fetch --prune origin master && git reset --hard origin/master
 tx pull --all > /dev/null
-git push origin "${NEXT}" --force
+#git push origin "${NEXT}" --force
 cd .. && rm -rf saleor

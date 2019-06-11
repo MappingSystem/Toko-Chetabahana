@@ -60,11 +60,6 @@ Commands:
   uninstall  Un-installs a provided package and removes it from Pipfile.
 END
 
-#$HOME/ssh
-mv -f /workspace/windows/cygwin/home/Chetabahana/.ssh $HOME
-chmod 0400 $HOME/.ssh/*
-return
-
 #Environtment
 export APP="gunicorn gevent"
 export PATH=$HOME/.local/bin:$PATH
@@ -87,4 +82,3 @@ pipenv check
 pipenv lock -r -d > requirements_dev.txt && cat requirements_dev.txt
 pipenv lock -r > requirements.txt && cat requirements.txt
 mv -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
-
