@@ -89,7 +89,7 @@ echo "\nREMOTE\n"
 git checkout Chetabahana
 git fetch --prune origin && git reset --hard origin/master
 cp -frpvT ~/.docker/branch ~/.docker/compose/Tutorial-Buka-Toko
-git status && git add . && git commit -m "Add support for ${CURRENT}"
+git status && git add . && git commit -m "Add support for ${NEXT}"
 git push origin Chetabahana --force
 cd .. && rm -rf Tutorial-Buka-Toko
 
@@ -100,14 +100,15 @@ git remote add upstream git://github.com/MarketLeader/Tutorial-Buka-Toko.git
 git fetch --prune upstream Chetabahana && git reset --hard upstream/Chetabahana
 git push origin master --force
 
-echo "\nCURRENT\n"
-git checkout "${CURRENT}"
-git fetch --prune origin master && git reset --hard origin/master
+#echo "\nCURRENT\n"
+#git checkout "${CURRENT}"
+#git fetch --prune origin master && git reset --hard origin/master
 #git push origin "${CURRENT}" --force
 
 echo "\nNEXT\n"
 git checkout "${NEXT}"
 git fetch --prune origin master && git reset --hard origin/master
 tx pull --all > /dev/null
-#git push origin "${NEXT}" --force
+find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
+git push origin "${NEXT}" --force
 cd .. && rm -rf saleor
