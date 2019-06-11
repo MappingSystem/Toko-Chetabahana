@@ -1,0 +1,26 @@
+version: "3.2"
+
+services:
+  redis:
+    ports:
+      - 6378:6379
+
+  celery:
+    volumes: 
+      - ./windows/cygwin/home/Chetabahana/.ssh:/app/.ssh
+         
+  postgres:
+    ports:
+      - 5431:5432
+
+  saleor:
+    volumes: 
+      - ./windows/cygwin/home/Chetabahana/.ssh:/app/.ssh
+      - /tmp/volume/static:/app/static
+      # shared volume between celery and web
+      #- ./saleor/:/app/saleor:Z
+      #- ./templates/:/app/templates:Z
+      #- ./tests/:/app/tests
+      # prevents overshadowing of build-time assets
+      #- /app/saleor/static/assets
+      #- /app/templates/templated_email/compiled
