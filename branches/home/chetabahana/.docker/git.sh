@@ -71,21 +71,22 @@ usage: git clone [<options>] [--] <repo> [<dir>]
 END
 
 #Environtment
-export CURRENT=gunicorn
 export NEXT=taxonomy
+export CURRENT=gunicorn
 
 echo "\nAGENT\n"
-cd /home/chetabahana/.docker/compose
 eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 
 echo "\nBRANCHES\n"
+cd /home/chetabahana/.docker/compose
 [ -d Toko-Chetabahana ] && rm -rf Toko-Chetabahana|| echo "cloning.."
 git clone git@github.com:MarketLeader/Toko-Chetabahana.git
 cp -frpT ~/.logs Toko-Chetabahana/logs && cd Toko-Chetabahana
-git add . && git commit -m "branches logs on cloud builder"
-git push -u origin master && cd .. && rm -rf Toko-Chetabahana
+git add . && git commit -m "fresh commit"
+git push -u origin master
 
 echo "\nUPSTREAM\n"
+cd /home/chetabahana/.docker/compose
 [ -d Tutorial-Buka-Toko ] && rm -rf Tutorial-Buka-Toko || echo "cloning.."
 git clone git@github.com:MarketLeader/Tutorial-Buka-Toko.git
 cd Tutorial-Buka-Toko && git checkout master
@@ -99,9 +100,9 @@ git fetch --prune origin && git reset --hard origin/master
 cp -frpvT ~/.docker/branch ~/.docker/compose/Tutorial-Buka-Toko
 git status && git add . && git commit -m "Add support for ${NEXT}"
 git push origin Chetabahana --force
-cd .. && rm -rf Tutorial-Buka-Toko
 
 echo "\nMASTER\n"
+cd /home/chetabahana/.docker/compose
 [ -d saleor ] && rm -rf saleor || echo "cloning.."
 git clone git@github.com:Chetabahana/saleor.git saleor && cd saleor
 git remote add upstream git@github.com:MarketLeader/Tutorial-Buka-Toko.git
@@ -118,5 +119,8 @@ git checkout "${NEXT}"
 git fetch --prune origin master && git reset --hard origin/master
 tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
-#git push origin "${NEXT}" --force
-cd .. && rm -rf saleor
+git push origin "${NEXT}" --force
+
+cd /home/chetabahana/.docker/compose
+rm -rf saleor Toko-Chetabahana Tutorial-Buka-Toko
+eval `ssh-agent -k`

@@ -93,6 +93,7 @@ END
 cd ~/.docker/compose
 rm -rf app default product
 docker cp compose_celery_1:/app .
+eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 
 echo "\nDEFAULT\n"
 cd ~/.docker/compose
@@ -119,3 +120,4 @@ git push -u origin master
 
 cd ~/.docker/compose
 rm -rf app default product
+eval `ssh-agent -k`

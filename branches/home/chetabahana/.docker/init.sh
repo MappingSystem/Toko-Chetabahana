@@ -4,11 +4,13 @@ if [ -d ~/.docker/compose ]; then
    docker-compose down --volumes
 fi
 
-cd ~/.docker && rm -rf compose
+cd ~/.docker && sudo rm -rf compose
 eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 git clone git@github.com:Chetabahana/compose.git
+eval `ssh-agent -k`
 
 cd ~/.docker/compose/scripts && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh > compose.log
+mv -f compose.log ~/.logs/ && cat ~/.logs/compose.log
 
-eval `ssh-agent -k` && (sleep 3; sudo reboot) &
+(sleep 3; sudo reboot) &

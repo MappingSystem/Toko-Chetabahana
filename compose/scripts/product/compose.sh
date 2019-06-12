@@ -200,3 +200,4 @@ docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py popula
 #echo "\nCELERY\n"
 CURRENT_UID=$(id -u):$(id -g) docker-compose up -d celery
 docker inspect compose_celery_1
+sleep 10

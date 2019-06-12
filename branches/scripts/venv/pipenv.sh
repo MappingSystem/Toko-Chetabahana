@@ -67,18 +67,28 @@ export BRANCH=/workspace/home/chetabahana/.docker/branch
 export DEBIAN_FRONTEND=noninteractive 
 export LC_ALL=C.UTF-8 && export LANG=C.UTF-8
 
-#Get Utilities
-cd /workspace/saleor
-#pip3 install --user pipenv > /dev/null && pipenv sync > /dev/null
-#pipenv install $APP > /dev/null && cat Pipfile
+echo "\nSOURCE\n"
+cd /workspace/saleor && ls -al
 
-#Run test
-#pipenv install --dev > /dev/null
-#pipenv run pytest > /dev/null
-#pipenv run tox > /dev/null
-#pipenv check
+echo "\nPIPENV\n"
+pip3 install --user pipenv
+
+echo "\nDEV\n"
+pipenv install --system --deploy --dev
+
+echo "\n$APP\n"
+pipenv install $APP
+
+echo "\nRESULT\n"
+cat Pipfile
+
+echo "\nTEST\n"
+#pipenv run pytest
+pipenv run tox
+pipenv check
 
 echo "\nTRANSFER\n"
-#pipenv lock -r -d > requirements_dev.txt && cat requirements_dev.txt
-#pipenv lock -r > requirements.txt && cat requirements.txt
+pipenv lock --clear
+pipenv lock --pre -r > requirements.txt && cat requirements.txt
+pipenv lock --pre -r -d > requirements_dev.txt && cat requirements_dev.txt
 mv -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
