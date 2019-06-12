@@ -14,11 +14,11 @@ tmpfs            59M  896K   58M   2% /run
 tmpfs           291M     0  291M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           291M     0  291M   0% /sys/fs/cgroup
-/dev/loop0       60M   60M     0 100% /snap/google-cloud-sdk/85
 /dev/loop1       90M   90M     0 100% /snap/core/6673
+/dev/loop0       90M   90M     0 100% /snap/core/6818
+/dev/loop3       60M   60M     0 100% /snap/google-cloud-sdk/86
 /dev/loop2       89M   89M     0 100% /snap/core/6964
-/dev/loop3       90M   90M     0 100% /snap/core/6818
-/dev/loop4       60M   60M     0 100% /snap/google-cloud-sdk/86
+/dev/loop4       60M   60M     0 100% /snap/google-cloud-sdk/85
 /dev/sda15      105M  3.6M  101M   4% /boot/efi
 tmpfs            59M     0   59M   0% /run/user/1001
 
@@ -26,14 +26,14 @@ NET STATUS
 
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      1102/dockerd        
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      753/systemd-resolve 
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1315/sshd           
-tcp6       0      0 :::22                   :::*                    LISTEN      1315/sshd           
+tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      1163/dockerd        
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      767/systemd-resolve 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1365/sshd           
+tcp6       0      0 :::22                   :::*                    LISTEN      1365/sshd           
 
 NMAP STATUS
 
-Starting Nmap 7.60 ( https://nmap.org ) at 2019-06-12 04:34 WIB
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-06-12 07:32 WIB
 Nmap scan report for scanme.nmap.org (45.33.32.156)
 Host is up (0.040s latency).
 Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
@@ -45,7 +45,7 @@ PORT      STATE    SERVICE
 9929/tcp  open     nping-echo
 31337/tcp open     Elite
 
-Nmap done: 1 IP address (1 host up) scanned in 2.26 seconds
+Nmap done: 1 IP address (1 host up) scanned in 1.82 seconds
 
 GCLOUD
 
@@ -67,7 +67,7 @@ STORAGE
 687.46 MiB   gs://artifacts.chetabahana.appspot.com
 947 B        gs://chetabahana_cloudbuild
 18.65 MiB    gs://jual
-189.86 MiB   gs://staging.chetabahana.appspot.com
+189.7 MiB    gs://staging.chetabahana.appspot.com
 30.23 GiB    gs://us.artifacts.chetabahana.appspot.com
 31.11 GiB    total
 
@@ -75,10 +75,6 @@ CLEANING
 
 mkdir: created directory '/tmp/volume'
 mkdir: created directory '/tmp/volume/static'
-mkdir: created directory '/tmp/volume/media'
-mkdir: created directory '/tmp/volume/media/__sized__'
-mkdir: created directory 'category-backgrounds'
-mkdir: created directory 'collection-backgrounds'
 
 PULLING
 
@@ -102,9 +98,9 @@ Total reclaimed space: 0B
 IMAGES
 
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-chetabahana/saleor   latest              6459be8672dc        2 hours ago         712MB
-redis                latest              3c41ce05add9        15 hours ago        95MB
-postgres             latest              4e045cb8eecd        22 hours ago        312MB
+chetabahana/saleor   latest              6459be8672dc        5 hours ago         712MB
+redis                latest              3c41ce05add9        18 hours ago        95MB
+postgres             latest              4e045cb8eecd        25 hours ago        312MB
 postgres             11.3                587aa1d0e586        4 weeks ago         312MB
 redis                5.0.4               a4fe14ff1981        4 weeks ago         95MB
 
@@ -209,8 +205,8 @@ REDIS
 
 [
     {
-        "Id": "d9a6e52ae7c0fc429273f9e9957589f7c8ff7999ee1f82d4bf50797b345a34e4",
-        "Created": "2019-06-11T21:35:17.105490719Z",
+        "Id": "5111ee3fde8adc938b6c562e3b7afca4b7a953acf830606a027034ce6eaffdc5",
+        "Created": "2019-06-12T00:32:41.947286695Z",
         "Path": "docker-entrypoint.sh",
         "Args": [
             "redis-server"
@@ -222,17 +218,17 @@ REDIS
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 3463,
+            "Pid": 2259,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-11T21:35:23.379086672Z",
+            "StartedAt": "2019-06-12T00:32:47.528494386Z",
             "FinishedAt": "0001-01-01T00:00:00Z"
         },
         "Image": "sha256:3c41ce05add98e89ff5ef31ec8cf2f5866e2b82fbe1eae057201f7c6f884f23d",
-        "ResolvConfPath": "/var/lib/docker/containers/d9a6e52ae7c0fc429273f9e9957589f7c8ff7999ee1f82d4bf50797b345a34e4/resolv.conf",
-        "HostnamePath": "/var/lib/docker/containers/d9a6e52ae7c0fc429273f9e9957589f7c8ff7999ee1f82d4bf50797b345a34e4/hostname",
-        "HostsPath": "/var/lib/docker/containers/d9a6e52ae7c0fc429273f9e9957589f7c8ff7999ee1f82d4bf50797b345a34e4/hosts",
-        "LogPath": "/var/lib/docker/containers/d9a6e52ae7c0fc429273f9e9957589f7c8ff7999ee1f82d4bf50797b345a34e4/d9a6e52ae7c0fc429273f9e9957589f7c8ff7999ee1f82d4bf50797b345a34e4-json.log",
+        "ResolvConfPath": "/var/lib/docker/containers/5111ee3fde8adc938b6c562e3b7afca4b7a953acf830606a027034ce6eaffdc5/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/5111ee3fde8adc938b6c562e3b7afca4b7a953acf830606a027034ce6eaffdc5/hostname",
+        "HostsPath": "/var/lib/docker/containers/5111ee3fde8adc938b6c562e3b7afca4b7a953acf830606a027034ce6eaffdc5/hosts",
+        "LogPath": "/var/lib/docker/containers/5111ee3fde8adc938b6c562e3b7afca4b7a953acf830606a027034ce6eaffdc5/5111ee3fde8adc938b6c562e3b7afca4b7a953acf830606a027034ce6eaffdc5-json.log",
         "Name": "/compose_redis_1",
         "RestartCount": 0,
         "Driver": "overlay2",
@@ -343,10 +339,10 @@ REDIS
         },
         "GraphDriver": {
             "Data": {
-                "LowerDir": "/var/lib/docker/overlay2/7d1d2321473120d4190ca6a1f36fa7661b0065cbcd1de4748d7e854efe884019-init/diff:/var/lib/docker/overlay2/b321ea4ed6b65cba8501c0c9ab29358ba135f73b750e3e711ba90d5fce82f60a/diff:/var/lib/docker/overlay2/53d724cd0be60344271e836ca7319a26528d7fe71937f385eab364a4922c4e2a/diff:/var/lib/docker/overlay2/366cfb42553f7b6e9e7262771ae2b7e8692b5cbc23ef89d51979830b25362c07/diff:/var/lib/docker/overlay2/fdf8539221994b6cd8340423c6915dc9b4e84989387169a8baa5db8b63b6e32b/diff:/var/lib/docker/overlay2/e448130531638b574a2bf5129877310cc04e3affb40084c9f0c0fb3437779c62/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
-                "MergedDir": "/var/lib/docker/overlay2/7d1d2321473120d4190ca6a1f36fa7661b0065cbcd1de4748d7e854efe884019/merged",
-                "UpperDir": "/var/lib/docker/overlay2/7d1d2321473120d4190ca6a1f36fa7661b0065cbcd1de4748d7e854efe884019/diff",
-                "WorkDir": "/var/lib/docker/overlay2/7d1d2321473120d4190ca6a1f36fa7661b0065cbcd1de4748d7e854efe884019/work"
+                "LowerDir": "/var/lib/docker/overlay2/9f9b0a9ffa7d2b6cca7b1f62a4a684e9592323387345477ade1761a202203cc8-init/diff:/var/lib/docker/overlay2/b321ea4ed6b65cba8501c0c9ab29358ba135f73b750e3e711ba90d5fce82f60a/diff:/var/lib/docker/overlay2/53d724cd0be60344271e836ca7319a26528d7fe71937f385eab364a4922c4e2a/diff:/var/lib/docker/overlay2/366cfb42553f7b6e9e7262771ae2b7e8692b5cbc23ef89d51979830b25362c07/diff:/var/lib/docker/overlay2/fdf8539221994b6cd8340423c6915dc9b4e84989387169a8baa5db8b63b6e32b/diff:/var/lib/docker/overlay2/e448130531638b574a2bf5129877310cc04e3affb40084c9f0c0fb3437779c62/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/9f9b0a9ffa7d2b6cca7b1f62a4a684e9592323387345477ade1761a202203cc8/merged",
+                "UpperDir": "/var/lib/docker/overlay2/9f9b0a9ffa7d2b6cca7b1f62a4a684e9592323387345477ade1761a202203cc8/diff",
+                "WorkDir": "/var/lib/docker/overlay2/9f9b0a9ffa7d2b6cca7b1f62a4a684e9592323387345477ade1761a202203cc8/work"
             },
             "Name": "overlay2"
         },
@@ -363,7 +359,7 @@ REDIS
             }
         ],
         "Config": {
-            "Hostname": "d9a6e52ae7c0",
+            "Hostname": "5111ee3fde8a",
             "Domainname": "",
             "User": "redis:redis",
             "AttachStdin": false,
@@ -406,7 +402,7 @@ REDIS
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "4ead8c86280b3a4e28e0e7b17cc3704ed1e6ec8c16b2b42b20c05db32ab02dc8",
+            "SandboxID": "76b45b7b056e9de80d34f1feac4e57a116f9fdd2c0f23bc55377a1dceed867ef",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -418,7 +414,7 @@ REDIS
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/4ead8c86280b",
+            "SandboxKey": "/var/run/docker/netns/76b45b7b056e",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -434,11 +430,11 @@ REDIS
                     "IPAMConfig": null,
                     "Links": null,
                     "Aliases": [
-                        "redis",
-                        "d9a6e52ae7c0"
+                        "5111ee3fde8a",
+                        "redis"
                     ],
-                    "NetworkID": "1c1d30833336d0ddd42139cf58d403a402a521acad227d1484cf3a8ec2307b79",
-                    "EndpointID": "11cf4d1e02721d139551d2ac491e24e2e08e691e5dbea7ca017138614e55a79e",
+                    "NetworkID": "5b6c2637814b508ddc096f67f594bccc7e8a05326ed1fade781b924e6e802bf7",
+                    "EndpointID": "9bed1e0c31bb74b597ec75c1a69fe3f7f69002841f06055f9195669462edd094",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.2",
                     "IPPrefixLen": 16,
@@ -457,8 +453,8 @@ POSTGRES
 
 [
     {
-        "Id": "deb58174bf709efc2248f5404c1d71f911835f1fc1556716c1dce9d69854b82b",
-        "Created": "2019-06-11T21:35:25.800411202Z",
+        "Id": "c6c1d584f8c81dc3f191361f17a3d6ab1beb33a38647554ff11ef05b48a1574e",
+        "Created": "2019-06-12T00:32:48.912763449Z",
         "Path": "docker-entrypoint.sh",
         "Args": [
             "postgres"
@@ -470,17 +466,17 @@ POSTGRES
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 3611,
+            "Pid": 2409,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-11T21:35:28.583006465Z",
+            "StartedAt": "2019-06-12T00:32:51.505507948Z",
             "FinishedAt": "0001-01-01T00:00:00Z"
         },
         "Image": "sha256:4e045cb8eecd48ecf0b5eea966e9a8b0b9332b18e55d40a40f7971a1a0a08cb6",
-        "ResolvConfPath": "/var/lib/docker/containers/deb58174bf709efc2248f5404c1d71f911835f1fc1556716c1dce9d69854b82b/resolv.conf",
-        "HostnamePath": "/var/lib/docker/containers/deb58174bf709efc2248f5404c1d71f911835f1fc1556716c1dce9d69854b82b/hostname",
-        "HostsPath": "/var/lib/docker/containers/deb58174bf709efc2248f5404c1d71f911835f1fc1556716c1dce9d69854b82b/hosts",
-        "LogPath": "/var/lib/docker/containers/deb58174bf709efc2248f5404c1d71f911835f1fc1556716c1dce9d69854b82b/deb58174bf709efc2248f5404c1d71f911835f1fc1556716c1dce9d69854b82b-json.log",
+        "ResolvConfPath": "/var/lib/docker/containers/c6c1d584f8c81dc3f191361f17a3d6ab1beb33a38647554ff11ef05b48a1574e/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/c6c1d584f8c81dc3f191361f17a3d6ab1beb33a38647554ff11ef05b48a1574e/hostname",
+        "HostsPath": "/var/lib/docker/containers/c6c1d584f8c81dc3f191361f17a3d6ab1beb33a38647554ff11ef05b48a1574e/hosts",
+        "LogPath": "/var/lib/docker/containers/c6c1d584f8c81dc3f191361f17a3d6ab1beb33a38647554ff11ef05b48a1574e/c6c1d584f8c81dc3f191361f17a3d6ab1beb33a38647554ff11ef05b48a1574e-json.log",
         "Name": "/compose_postgres_1",
         "RestartCount": 0,
         "Driver": "overlay2",
@@ -591,10 +587,10 @@ POSTGRES
         },
         "GraphDriver": {
             "Data": {
-                "LowerDir": "/var/lib/docker/overlay2/2021d542350078a0b6f4c2503acd9d28ef372cc4a1ac4a3bef96920022e126f7-init/diff:/var/lib/docker/overlay2/c2353f061418fb31717039e72eaac26a439bb1f559e253c2ea0f2434db8ca31c/diff:/var/lib/docker/overlay2/e25cded6483555b3b72491ebe8c02f6ff52e67133b24472add5859c524705964/diff:/var/lib/docker/overlay2/7638a19ba1744384d549e48fa899390c56a385202e0691ace62620c816de019e/diff:/var/lib/docker/overlay2/d2d2105c4c0e09db4f1ed6a7f8204dace63a79dbd93aecd654cc388ad0011975/diff:/var/lib/docker/overlay2/9c94ce5ce883d9f8a598a6de0008d33bf37262d91bdaf92a8d49abae1567e3eb/diff:/var/lib/docker/overlay2/4c4a31813926786865ce7a993a0609578dca72979c316389bf941251dcd80728/diff:/var/lib/docker/overlay2/bd6143335af904753adf29c10e36ec8de04949ca29d0153b1738ee302ba7e04f/diff:/var/lib/docker/overlay2/50d681676f899007ee376a78035a4da8da1b20176e549f170d409bc4faa75aaa/diff:/var/lib/docker/overlay2/8f0e379e0515a2abc7a1cfe787e99eb6f4dac027f726734570692db7d01092f7/diff:/var/lib/docker/overlay2/52344c503438164b0aae80530ae0bc750b5a82ca2f9ec915b9f1fc380a038457/diff:/var/lib/docker/overlay2/589f4d5764764ed84929f8fbfdb31626ad4428f0050099475a0afd0080b399b3/diff:/var/lib/docker/overlay2/ff07c8211573e600cc433646b8769402d97fb15efa091a82915482da58dc9abc/diff:/var/lib/docker/overlay2/cb89d3cf47bc0d2c8a60c48d994a847800913b94f3e573b3b95c174268b695cf/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
-                "MergedDir": "/var/lib/docker/overlay2/2021d542350078a0b6f4c2503acd9d28ef372cc4a1ac4a3bef96920022e126f7/merged",
-                "UpperDir": "/var/lib/docker/overlay2/2021d542350078a0b6f4c2503acd9d28ef372cc4a1ac4a3bef96920022e126f7/diff",
-                "WorkDir": "/var/lib/docker/overlay2/2021d542350078a0b6f4c2503acd9d28ef372cc4a1ac4a3bef96920022e126f7/work"
+                "LowerDir": "/var/lib/docker/overlay2/c8c1be3bfd65dac15c5b19f0be7edcdcc076dc208154819f973f05e56218da1f-init/diff:/var/lib/docker/overlay2/c2353f061418fb31717039e72eaac26a439bb1f559e253c2ea0f2434db8ca31c/diff:/var/lib/docker/overlay2/e25cded6483555b3b72491ebe8c02f6ff52e67133b24472add5859c524705964/diff:/var/lib/docker/overlay2/7638a19ba1744384d549e48fa899390c56a385202e0691ace62620c816de019e/diff:/var/lib/docker/overlay2/d2d2105c4c0e09db4f1ed6a7f8204dace63a79dbd93aecd654cc388ad0011975/diff:/var/lib/docker/overlay2/9c94ce5ce883d9f8a598a6de0008d33bf37262d91bdaf92a8d49abae1567e3eb/diff:/var/lib/docker/overlay2/4c4a31813926786865ce7a993a0609578dca72979c316389bf941251dcd80728/diff:/var/lib/docker/overlay2/bd6143335af904753adf29c10e36ec8de04949ca29d0153b1738ee302ba7e04f/diff:/var/lib/docker/overlay2/50d681676f899007ee376a78035a4da8da1b20176e549f170d409bc4faa75aaa/diff:/var/lib/docker/overlay2/8f0e379e0515a2abc7a1cfe787e99eb6f4dac027f726734570692db7d01092f7/diff:/var/lib/docker/overlay2/52344c503438164b0aae80530ae0bc750b5a82ca2f9ec915b9f1fc380a038457/diff:/var/lib/docker/overlay2/589f4d5764764ed84929f8fbfdb31626ad4428f0050099475a0afd0080b399b3/diff:/var/lib/docker/overlay2/ff07c8211573e600cc433646b8769402d97fb15efa091a82915482da58dc9abc/diff:/var/lib/docker/overlay2/cb89d3cf47bc0d2c8a60c48d994a847800913b94f3e573b3b95c174268b695cf/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c8c1be3bfd65dac15c5b19f0be7edcdcc076dc208154819f973f05e56218da1f/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c8c1be3bfd65dac15c5b19f0be7edcdcc076dc208154819f973f05e56218da1f/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c8c1be3bfd65dac15c5b19f0be7edcdcc076dc208154819f973f05e56218da1f/work"
             },
             "Name": "overlay2"
         },
@@ -611,8 +607,8 @@ POSTGRES
             },
             {
                 "Type": "volume",
-                "Name": "31f395e424e3eecf848b34c907483d1927eeff906c59858d2c8e9ff8c730ed02",
-                "Source": "/var/lib/docker/volumes/31f395e424e3eecf848b34c907483d1927eeff906c59858d2c8e9ff8c730ed02/_data",
+                "Name": "1332622f4348151a25524323bfe84780b6ef9bf5d5e16dc5cb6216a92ad25e48",
+                "Source": "/var/lib/docker/volumes/1332622f4348151a25524323bfe84780b6ef9bf5d5e16dc5cb6216a92ad25e48/_data",
                 "Destination": "/var/lib/postgresql/data",
                 "Driver": "local",
                 "Mode": "",
@@ -621,7 +617,7 @@ POSTGRES
             }
         ],
         "Config": {
-            "Hostname": "deb58174bf70",
+            "Hostname": "c6c1d584f8c8",
             "Domainname": "",
             "User": "",
             "AttachStdin": false,
@@ -668,7 +664,7 @@ POSTGRES
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "8de397133d9049aebb394c726433a6bb27e9e1aeb198d049194852267143bc27",
+            "SandboxID": "c2ca50598252930a320c75493ca0eb552ef50c992e266b607775f785c68a2914",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -680,7 +676,7 @@ POSTGRES
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/8de397133d90",
+            "SandboxKey": "/var/run/docker/netns/c2ca50598252",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -697,10 +693,10 @@ POSTGRES
                     "Links": null,
                     "Aliases": [
                         "postgres",
-                        "deb58174bf70"
+                        "c6c1d584f8c8"
                     ],
-                    "NetworkID": "1c1d30833336d0ddd42139cf58d403a402a521acad227d1484cf3a8ec2307b79",
-                    "EndpointID": "e12896ef2d3bce1fd2181ffcc7a7063a5472d7b233ac0ab5ac815df90cc19874",
+                    "NetworkID": "5b6c2637814b508ddc096f67f594bccc7e8a05326ed1fade781b924e6e802bf7",
+                    "EndpointID": "1e79747a965cad17063d1dce488a64f88a909eacac0da0ec808da399d0edc151",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.3",
                     "IPPrefixLen": 16,
@@ -749,346 +745,346 @@ Running pre-migrate handlers for application django_filters
 Running pre-migrate handlers for application impersonate
 Running pre-migrate handlers for application captcha
 Running migrations:
-  Applying product.0001_initial... OK (0.477s)
+  Applying product.0001_initial... OK (0.632s)
   Applying product.0002_auto_20150722_0545... OK (0.014s)
-  Applying product.0003_auto_20150820_2016... OK (0.068s)
-  Applying product.0003_auto_20150820_1955... OK (0.013s)
-  Applying product.0004_merge... OK (0.004s)
-  Applying product.0005_auto_20150825_1433... OK (0.059s)
-  Applying product.0006_product_updated_at... OK (0.016s)
-  Applying product.0007_auto_20160112_1025... OK (0.020s)
-  Applying product.0008_auto_20160114_0733... OK (0.039s)
-  Applying product.0009_discount_categories... OK (0.037s)
-  Applying product.0010_auto_20160129_0826... OK (0.033s)
-  Applying product.0011_stock_quantity_allocated... OK (0.012s)
-  Applying product.0012_auto_20160218_0812... OK (0.046s)
-  Applying product.0013_auto_20161207_0555... OK (0.034s)
-  Applying product.0014_auto_20161207_0840... OK (0.015s)
+  Applying product.0003_auto_20150820_2016... OK (0.050s)
+  Applying product.0003_auto_20150820_1955... OK (0.016s)
+  Applying product.0004_merge... OK (0.005s)
+  Applying product.0005_auto_20150825_1433... OK (0.056s)
+  Applying product.0006_product_updated_at... OK (0.041s)
+  Applying product.0007_auto_20160112_1025... OK (0.021s)
+  Applying product.0008_auto_20160114_0733... OK (0.037s)
+  Applying product.0009_discount_categories... OK (0.034s)
+  Applying product.0010_auto_20160129_0826... OK (0.031s)
+  Applying product.0011_stock_quantity_allocated... OK (0.013s)
+  Applying product.0012_auto_20160218_0812... OK (0.050s)
+  Applying product.0013_auto_20161207_0555... OK (0.036s)
+  Applying product.0014_auto_20161207_0840... OK (0.014s)
   Applying product.0015_transfer_locations... OK (0.017s)
-  Applying product.0016_auto_20161207_0843... OK (0.025s)
+  Applying product.0016_auto_20161207_0843... OK (0.022s)
   Applying product.0017_remove_stock_location... OK (0.015s)
-  Applying product.0018_auto_20161207_0844... OK (0.041s)
-  Applying product.0019_auto_20161212_0230... OK (0.118s)
-  Applying product.0020_attribute_data_to_class... OK (0.021s)
-  Applying product.0021_add_hstore_extension... OK (0.708s)
-  Applying product.0022_auto_20161212_0301... OK (0.133s)
-  Applying product.0023_auto_20161211_1912... OK (0.037s)
-  Applying product.0024_migrate_json_data... OK (0.047s)
+  Applying product.0018_auto_20161207_0844... OK (0.038s)
+  Applying product.0019_auto_20161212_0230... OK (0.082s)
+  Applying product.0020_attribute_data_to_class... OK (0.020s)
+  Applying product.0021_add_hstore_extension... OK (0.411s)
+  Applying product.0022_auto_20161212_0301... OK (0.053s)
+  Applying product.0023_auto_20161211_1912... OK (0.015s)
+  Applying product.0024_migrate_json_data... OK (0.041s)
   Applying product.0025_auto_20161219_0517... OK (0.010s)
-  Applying product.0026_auto_20161230_0347... OK (0.020s)
-  Applying product.0027_auto_20170113_0435... OK (0.094s)
-  Applying product.0013_auto_20161130_0608... OK (0.007s)
-  Applying product.0014_remove_productvariant_attributes... OK (0.019s)
-  Applying product.0015_productvariant_attributes... OK (0.017s)
-  Applying product.0016_auto_20161204_0311... OK (0.020s)
-  Applying product.0017_attributechoicevalue_slug... OK (0.026s)
-  Applying product.0018_auto_20161212_0725... OK (0.020s)
+  Applying product.0026_auto_20161230_0347... OK (0.011s)
+  Applying product.0027_auto_20170113_0435... OK (0.050s)
+  Applying product.0013_auto_20161130_0608... OK (0.006s)
+  Applying product.0014_remove_productvariant_attributes... OK (0.015s)
+  Applying product.0015_productvariant_attributes... OK (0.016s)
+  Applying product.0016_auto_20161204_0311... OK (0.019s)
+  Applying product.0017_attributechoicevalue_slug... OK (0.022s)
+  Applying product.0018_auto_20161212_0725... OK (0.021s)
   Applying product.0026_merge_20161221_0845... OK (0.003s)
-  Applying product.0028_merge_20170116_1016... OK (0.003s)
+  Applying product.0028_merge_20170116_1016... OK (0.004s)
   Applying product.0029_product_is_featured... OK (0.017s)
-  Applying product.0030_auto_20170206_0407... OK (0.192s)
-  Applying product.0031_auto_20170206_0601... OK (0.029s)
-  Applying product.0032_auto_20170216_0438... OK (0.017s)
+  Applying product.0030_auto_20170206_0407... OK (0.166s)
+  Applying product.0031_auto_20170206_0601... OK (0.028s)
+  Applying product.0032_auto_20170216_0438... OK (0.015s)
   Applying product.0033_auto_20170227_0757... OK (0.035s)
-  Applying product.0034_product_is_published... OK (0.018s)
-  Applying product.0035_auto_20170919_0846... OK (0.022s)
-  Applying product.0036_auto_20171115_0608... OK (0.016s)
-  Applying product.0037_auto_20171124_0847... OK (0.121s)
-  Applying product.0038_auto_20171129_0616... OK (0.069s)
-  Applying product.0037_auto_20171129_1004... OK (0.062s)
+  Applying product.0034_product_is_published... OK (0.016s)
+  Applying product.0035_auto_20170919_0846... OK (0.021s)
+  Applying product.0036_auto_20171115_0608... OK (0.014s)
+  Applying product.0037_auto_20171124_0847... OK (0.098s)
+  Applying product.0038_auto_20171129_0616... OK (0.197s)
+  Applying product.0037_auto_20171129_1004... OK (0.056s)
   Applying product.0039_merge_20171130_0727... OK (0.003s)
   Applying product.0040_auto_20171205_0428... OK (0.018s)
-  Applying product.0041_auto_20171205_0546... OK (0.015s)
-  Applying product.0042_auto_20171206_0501... OK (0.010s)
-  Applying product.0043_auto_20171207_0839... OK (0.015s)
-  Applying product.0044_auto_20180108_0814... OK (0.461s)
-  Applying product.0045_md_to_html... OK (0.022s)
-  Applying product.0046_product_category... OK (0.044s)
-  Applying product.0047_auto_20180117_0359... OK (0.041s)
-  Applying product.0048_product_class_to_type... OK (0.088s)
-  Applying product.0049_collection... OK (0.111s)
+  Applying product.0041_auto_20171205_0546... OK (0.014s)
+  Applying product.0042_auto_20171206_0501... OK (0.009s)
+  Applying product.0043_auto_20171207_0839... OK (0.013s)
+  Applying product.0044_auto_20180108_0814... OK (0.401s)
+  Applying product.0045_md_to_html... OK (0.019s)
+  Applying product.0046_product_category... OK (0.039s)
+  Applying product.0047_auto_20180117_0359... OK (0.039s)
+  Applying product.0048_product_class_to_type... OK (0.086s)
+  Applying product.0049_collection... OK (0.085s)
   Applying product.0050_auto_20180131_0746... OK (0.016s)
-  Applying product.0051_auto_20180202_1106... OK (0.013s)
-  Applying product.0052_slug_field_length... OK (0.067s)
+  Applying product.0051_auto_20180202_1106... OK (0.014s)
+  Applying product.0052_slug_field_length... OK (0.079s)
   Applying product.0053_product_seo_description... OK (0.033s)
-  Applying product.0053_auto_20180305_1002... OK (0.019s)
+  Applying product.0053_auto_20180305_1002... OK (0.020s)
   Applying product.0054_merge_20180320_1108... OK (0.003s)
-  Applying shipping.0001_initial... OK (0.053s)
-  Applying shipping.0002_auto_20160906_0741... OK (0.016s)
-  Applying shipping.0003_auto_20170116_0700... OK (0.009s)
+  Applying shipping.0001_initial... OK (0.039s)
+  Applying shipping.0002_auto_20160906_0741... OK (0.015s)
+  Applying shipping.0003_auto_20170116_0700... OK (0.007s)
   Applying shipping.0004_auto_20170206_0407... OK (0.032s)
-  Applying shipping.0005_auto_20170906_0556... OK (0.011s)
+  Applying shipping.0005_auto_20170906_0556... OK (0.008s)
   Applying shipping.0006_auto_20171109_0908... OK (0.008s)
   Applying shipping.0007_auto_20171129_1004... OK (0.011s)
   Applying shipping.0008_auto_20180108_0814... OK (0.030s)
-  Applying contenttypes.0001_initial... OK (0.029s)
+  Applying contenttypes.0001_initial... OK (0.019s)
   Applying contenttypes.0002_remove_content_type_name... OK (0.033s)
-  Applying auth.0001_initial... OK (0.115s)
-  Applying auth.0002_alter_permission_name_max_length... OK (0.014s)
-  Applying auth.0003_alter_user_email_max_length... OK (0.015s)
-  Applying auth.0004_alter_user_username_opts... OK (0.013s)
-  Applying auth.0005_alter_user_last_login_null... OK (0.011s)
-  Applying auth.0006_require_contenttypes_0002... OK (0.005s)
-  Applying account.0001_initial... OK (0.207s)
-  Applying order.0001_initial... OK (0.414s)
-  Applying order.0002_auto_20150820_1955... OK (0.019s)
-  Applying order.0003_auto_20150825_1433... OK (0.034s)
-  Applying order.0004_order_total... OK (0.024s)
-  Applying order.0005_deliverygroup_last_updated... OK (0.021s)
+  Applying auth.0001_initial... OK (0.110s)
+  Applying auth.0002_alter_permission_name_max_length... OK (0.011s)
+  Applying auth.0003_alter_user_email_max_length... OK (0.013s)
+  Applying auth.0004_alter_user_username_opts... OK (0.012s)
+  Applying auth.0005_alter_user_last_login_null... OK (0.012s)
+  Applying auth.0006_require_contenttypes_0002... OK (0.004s)
+  Applying account.0001_initial... OK (0.177s)
+  Applying order.0001_initial... OK (0.451s)
+  Applying order.0002_auto_20150820_1955... OK (0.018s)
+  Applying order.0003_auto_20150825_1433... OK (0.031s)
+  Applying order.0004_order_total... OK (0.021s)
+  Applying order.0005_deliverygroup_last_updated... OK (0.019s)
   Applying order.0006_deliverygroup_shipping_method... OK (0.027s)
-  Applying order.0007_deliverygroup_tracking_number... OK (0.023s)
-  Applying order.0008_auto_20151026_0820... OK (0.064s)
-  Applying order.0009_auto_20151201_0820... OK (0.079s)
-  Applying order.0010_auto_20160119_0541... OK (0.061s)
-  Applying discount.0001_initial... OK (0.074s)
-  Applying discount.0002_voucher... OK (0.057s)
-  Applying discount.0003_auto_20160207_0534... OK (0.170s)
-  Applying order.0011_auto_20160207_0534... OK (0.075s)
-  Applying order.0012_auto_20160216_1032... OK (0.057s)
-  Applying order.0013_auto_20160906_0741... OK (0.099s)
-  Applying order.0014_auto_20161028_0955... OK (0.029s)
-  Applying order.0015_auto_20170206_0407... OK (0.761s)
-  Applying order.0016_order_language_code... OK (0.028s)
-  Applying order.0017_auto_20170906_0556... OK (0.022s)
+  Applying order.0007_deliverygroup_tracking_number... OK (0.026s)
+  Applying order.0008_auto_20151026_0820... OK (0.065s)
+  Applying order.0009_auto_20151201_0820... OK (0.075s)
+  Applying order.0010_auto_20160119_0541... OK (0.059s)
+  Applying discount.0001_initial... OK (0.084s)
+  Applying discount.0002_voucher... OK (0.065s)
+  Applying discount.0003_auto_20160207_0534... OK (0.165s)
+  Applying order.0011_auto_20160207_0534... OK (0.077s)
+  Applying order.0012_auto_20160216_1032... OK (0.063s)
+  Applying order.0013_auto_20160906_0741... OK (0.088s)
+  Applying order.0014_auto_20161028_0955... OK (0.027s)
+  Applying order.0015_auto_20170206_0407... OK (0.780s)
+  Applying order.0016_order_language_code... OK (0.027s)
+  Applying order.0017_auto_20170906_0556... OK (0.023s)
   Applying order.0018_auto_20170919_0839... OK (0.025s)
-  Applying order.0019_auto_20171109_1423... OK (0.164s)
-  Applying order.0020_auto_20171123_0609... OK (0.088s)
-  Applying order.0021_auto_20171129_1004... OK (0.276s)
-  Applying order.0022_auto_20171205_0428... OK (0.053s)
-  Applying order.0023_auto_20171206_0506... OK (0.069s)
-  Applying order.0024_remove_order_status... OK (0.027s)
-  Applying order.0025_auto_20171214_1015... OK (0.040s)
-  Applying order.0026_auto_20171218_0428... OK (0.072s)
-  Applying order.0027_auto_20180108_0814... OK (0.951s)
-  Applying order.0028_status_fsm... OK (0.023s)
-  Applying order.0029_auto_20180111_0845... OK (0.062s)
-  Applying order.0030_auto_20180118_0605... OK (0.071s)
-  Applying order.0031_auto_20180119_0405... OK (0.099s)
-  Applying order.0032_orderline_is_shipping_required... OK (0.067s)
-  Applying order.0033_auto_20180123_0832... OK (0.023s)
-  Applying order.0034_auto_20180221_1056... OK (0.062s)
-  Applying order.0035_auto_20180221_1057... OK (0.048s)
-  Applying order.0036_remove_order_total_tax... OK (0.025s)
-  Applying order.0037_auto_20180228_0450... OK (0.102s)
-  Applying order.0038_auto_20180228_0451... OK (0.050s)
-  Applying order.0039_auto_20180312_1203... OK (0.049s)
-  Applying order.0040_auto_20180210_0422... OK (0.292s)
-  Applying order.0041_auto_20180222_0458... OK (0.246s)
-  Applying order.0042_auto_20180227_0436... OK (0.140s)
-  Applying order.0043_auto_20180322_0655... OK (0.047s)
-  Applying order.0044_auto_20180326_1055... OK (0.198s)
-  Applying order.0045_auto_20180329_0142... OK (0.204s)
-  Applying order.0046_order_line_taxes... OK (0.054s)
-  Applying order.0047_order_line_name_length... OK (0.026s)
-  Applying order.0048_auto_20180629_1055... OK (0.066s)
-  Applying order.0049_auto_20180719_0520... OK (0.028s)
-  Applying order.0050_auto_20180803_0528... OK (0.054s)
-  Applying order.0050_auto_20180803_0337... OK (0.053s)
+  Applying order.0019_auto_20171109_1423... OK (0.259s)
+  Applying order.0020_auto_20171123_0609... OK (0.314s)
+  Applying order.0021_auto_20171129_1004... OK (0.106s)
+  Applying order.0022_auto_20171205_0428... OK (0.041s)
+  Applying order.0023_auto_20171206_0506... OK (0.059s)
+  Applying order.0024_remove_order_status... OK (0.029s)
+  Applying order.0025_auto_20171214_1015... OK (0.038s)
+  Applying order.0026_auto_20171218_0428... OK (0.068s)
+  Applying order.0027_auto_20180108_0814... OK (0.930s)
+  Applying order.0028_status_fsm... OK (0.020s)
+  Applying order.0029_auto_20180111_0845... OK (0.053s)
+  Applying order.0030_auto_20180118_0605... OK (0.065s)
+  Applying order.0031_auto_20180119_0405... OK (0.088s)
+  Applying order.0032_orderline_is_shipping_required... OK (0.056s)
+  Applying order.0033_auto_20180123_0832... OK (0.021s)
+  Applying order.0034_auto_20180221_1056... OK (0.053s)
+  Applying order.0035_auto_20180221_1057... OK (0.073s)
+  Applying order.0036_remove_order_total_tax... OK (0.022s)
+  Applying order.0037_auto_20180228_0450... OK (0.107s)
+  Applying order.0038_auto_20180228_0451... OK (0.044s)
+  Applying order.0039_auto_20180312_1203... OK (0.043s)
+  Applying order.0040_auto_20180210_0422... OK (0.524s)
+  Applying order.0041_auto_20180222_0458... OK (0.047s)
+  Applying order.0042_auto_20180227_0436... OK (0.126s)
+  Applying order.0043_auto_20180322_0655... OK (0.042s)
+  Applying order.0044_auto_20180326_1055... OK (0.178s)
+  Applying order.0045_auto_20180329_0142... OK (0.180s)
+  Applying order.0046_order_line_taxes... OK (0.048s)
+  Applying order.0047_order_line_name_length... OK (0.024s)
+  Applying order.0048_auto_20180629_1055... OK (0.059s)
+  Applying order.0049_auto_20180719_0520... OK (0.027s)
+  Applying order.0050_auto_20180803_0528... OK (0.050s)
+  Applying order.0050_auto_20180803_0337... OK (0.047s)
   Applying order.0051_merge_20180807_0704... OK (0.003s)
-  Applying order.0052_auto_20180822_0720... OK (0.101s)
-  Applying order.0053_orderevent... OK (0.054s)
-  Applying order.0054_move_data_to_order_events... OK (0.297s)
-  Applying order.0055_remove_order_note_order_history_entry... OK (0.161s)
-  Applying order.0056_auto_20180911_1541... OK (0.024s)
-  Applying order.0057_orderevent_parameters_new... OK (0.115s)
-  Applying order.0058_remove_orderevent_parameters... OK (0.025s)
-  Applying order.0059_auto_20180913_0841... OK (0.036s)
-  Applying order.0060_auto_20180919_0731... OK (0.025s)
-  Applying order.0061_auto_20180920_0859... OK (0.023s)
-  Applying order.0062_auto_20180921_0949... OK (0.056s)
-  Applying order.0063_auto_20180926_0446... OK (0.024s)
-  Applying order.0064_auto_20181016_0819... OK (0.040s)
-  Applying checkout.0001_initial... OK (0.153s)
-  Applying checkout.0002_auto_20161014_1221... OK (0.060s)
-  Applying checkout.fix_empty_data_in_lines... OK (0.048s)
-  Applying checkout.0001_auto_20170113_0435... OK (0.077s)
-  Applying checkout.0002_auto_20170206_0407... OK (0.420s)
-  Applying checkout.0003_auto_20170906_0556... OK (0.022s)
-  Applying checkout.0004_auto_20171129_1004... OK (0.040s)
-  Applying checkout.0005_auto_20180108_0814... OK (0.350s)
-  Applying checkout.0006_auto_20180221_0825... OK (0.027s)
-  Applying account.0002_auto_20150907_0602... OK (0.045s)
-  Applying account.0003_auto_20151104_1102... OK (0.031s)
+  Applying order.0052_auto_20180822_0720... OK (0.297s)
+  Applying order.0053_orderevent... OK (0.057s)
+  Applying order.0054_move_data_to_order_events... OK (0.083s)
+  Applying order.0055_remove_order_note_order_history_entry... OK (0.145s)
+  Applying order.0056_auto_20180911_1541... OK (0.023s)
+  Applying order.0057_orderevent_parameters_new... OK (0.103s)
+  Applying order.0058_remove_orderevent_parameters... OK (0.022s)
+  Applying order.0059_auto_20180913_0841... OK (0.035s)
+  Applying order.0060_auto_20180919_0731... OK (0.023s)
+  Applying order.0061_auto_20180920_0859... OK (0.021s)
+  Applying order.0062_auto_20180921_0949... OK (0.052s)
+  Applying order.0063_auto_20180926_0446... OK (0.023s)
+  Applying order.0064_auto_20181016_0819... OK (0.034s)
+  Applying checkout.0001_initial... OK (0.168s)
+  Applying checkout.0002_auto_20161014_1221... OK (0.057s)
+  Applying checkout.fix_empty_data_in_lines... OK (0.043s)
+  Applying checkout.0001_auto_20170113_0435... OK (0.139s)
+  Applying checkout.0002_auto_20170206_0407... OK (0.411s)
+  Applying checkout.0003_auto_20170906_0556... OK (0.021s)
+  Applying checkout.0004_auto_20171129_1004... OK (0.037s)
+  Applying checkout.0005_auto_20180108_0814... OK (0.310s)
+  Applying checkout.0006_auto_20180221_0825... OK (0.023s)
+  Applying account.0002_auto_20150907_0602... OK (0.041s)
+  Applying account.0003_auto_20151104_1102... OK (0.028s)
   Applying account.0004_auto_20160114_0419... OK (0.017s)
-  Applying account.0005_auto_20160205_0651... OK (0.029s)
-  Applying account.0006_auto_20160829_0819... OK (0.039s)
-  Applying account.0007_auto_20161115_0940... OK (0.031s)
-  Applying account.0008_auto_20161115_1011... OK (0.020s)
-  Applying account.0009_auto_20170206_0407... OK (0.098s)
+  Applying account.0005_auto_20160205_0651... OK (0.028s)
+  Applying account.0006_auto_20160829_0819... OK (0.038s)
+  Applying account.0007_auto_20161115_0940... OK (0.027s)
+  Applying account.0008_auto_20161115_1011... OK (0.019s)
+  Applying account.0009_auto_20170206_0407... OK (0.084s)
   Applying account.0010_auto_20170919_0839... OK (0.022s)
-  Applying account.0011_auto_20171110_0552... OK (0.025s)
-  Applying account.0012_auto_20171117_0846... OK (0.022s)
-  Applying account.0013_auto_20171120_0521... OK (0.066s)
-  Applying account.0014_auto_20171129_1004... OK (0.035s)
+  Applying account.0011_auto_20171110_0552... OK (0.019s)
+  Applying account.0012_auto_20171117_0846... OK (0.020s)
+  Applying account.0013_auto_20171120_0521... OK (0.068s)
+  Applying account.0014_auto_20171129_1004... OK (0.047s)
   Applying account.0015_auto_20171213_0734... OK (0.017s)
-  Applying account.0016_auto_20180108_0814... OK (0.353s)
-  Applying account.0017_auto_20180206_0957... OK (0.250s)
-  Applying account.0018_auto_20180426_0641... OK (0.115s)
-  Applying account.0019_auto_20180528_1205... OK (0.049s)
-  Applying checkout.0007_merge_cart_with_checkout... OK (0.466s)
-  Applying checkout.0008_rename_tables... OK (0.046s)
-  Applying checkout.0009_cart_translated_discount_name... OK (0.022s)
-  Applying checkout.0010_auto_20180822_0720... OK (0.044s)
-  Applying checkout.0011_auto_20180913_0817... OK (0.101s)
-  Applying checkout.0012_remove_cartline_data... OK (0.024s)
-  Applying checkout.0013_auto_20180913_0841... OK (0.060s)
-  Applying checkout.0014_auto_20180921_0751... OK (0.023s)
-  Applying checkout.0015_auto_20181017_1346... OK (0.026s)
-  Applying payment.0001_initial... OK (0.111s)
-  Applying payment.0002_transfer_payment_to_payment_method... OK (0.273s)
-  Applying order.0065_auto_20181017_1346... OK (0.178s)
-  Applying order.0066_auto_20181023_0319... OK (0.054s)
-  Applying order.0067_auto_20181102_1054... OK (0.026s)
-  Applying order.0068_order_checkout_token... OK (0.029s)
-  Applying order.0069_auto_20190225_2305... OK (0.018s)
-  Applying order.0070_drop_update_event_and_rename_events... OK (0.139s)
-  Applying account.0020_user_token... OK (0.026s)
-  Applying account.0021_unique_token... OK (0.077s)
+  Applying account.0016_auto_20180108_0814... OK (0.562s)
+  Applying account.0017_auto_20180206_0957... OK (0.033s)
+  Applying account.0018_auto_20180426_0641... OK (0.136s)
+  Applying account.0019_auto_20180528_1205... OK (0.051s)
+  Applying checkout.0007_merge_cart_with_checkout... OK (0.413s)
+  Applying checkout.0008_rename_tables... OK (0.044s)
+  Applying checkout.0009_cart_translated_discount_name... OK (0.021s)
+  Applying checkout.0010_auto_20180822_0720... OK (0.042s)
+  Applying checkout.0011_auto_20180913_0817... OK (0.094s)
+  Applying checkout.0012_remove_cartline_data... OK (0.025s)
+  Applying checkout.0013_auto_20180913_0841... OK (0.051s)
+  Applying checkout.0014_auto_20180921_0751... OK (0.022s)
+  Applying checkout.0015_auto_20181017_1346... OK (0.020s)
+  Applying payment.0001_initial... OK (0.107s)
+  Applying payment.0002_transfer_payment_to_payment_method... OK (0.303s)
+  Applying order.0065_auto_20181017_1346... OK (0.162s)
+  Applying order.0066_auto_20181023_0319... OK (0.049s)
+  Applying order.0067_auto_20181102_1054... OK (0.027s)
+  Applying order.0068_order_checkout_token... OK (0.028s)
+  Applying order.0069_auto_20190225_2305... OK (0.016s)
+  Applying order.0070_drop_update_event_and_rename_events... OK (0.127s)
+  Applying account.0020_user_token... OK (0.024s)
+  Applying account.0021_unique_token... OK (0.076s)
   Applying account.0022_auto_20180718_0956... OK (0.023s)
-  Applying account.0023_auto_20180719_0520... OK (0.022s)
-  Applying account.0024_auto_20181011_0737... OK (0.047s)
-  Applying account.0025_auto_20190314_0550... OK (0.018s)
+  Applying account.0023_auto_20180719_0520... OK (0.024s)
+  Applying account.0024_auto_20181011_0737... OK (0.048s)
+  Applying account.0025_auto_20190314_0550... OK (0.019s)
   Applying account.0026_user_avatar... OK (0.022s)
-  Applying account.0027_customerevent... OK (0.052s)
-  Applying auth.0007_alter_validators_add_error_messages... OK (0.021s)
+  Applying account.0027_customerevent... OK (0.056s)
+  Applying auth.0007_alter_validators_add_error_messages... OK (0.019s)
   Applying auth.0008_alter_user_username_max_length... OK (0.018s)
-  Applying auth.0009_alter_user_last_name_max_length... OK (0.018s)
-  Applying auth.0010_alter_group_name_max_length... OK (0.019s)
-  Applying auth.0011_update_proxy_permissions... OK (0.056s)
-  Applying giftcard.0001_initial... OK (0.051s)
-  Applying shipping.0009_auto_20180629_1055... OK (0.015s)
-  Applying shipping.0010_auto_20180719_0520... OK (0.012s)
+  Applying auth.0009_alter_user_last_name_max_length... OK (0.017s)
+  Applying auth.0010_alter_group_name_max_length... OK (0.018s)
+  Applying auth.0011_update_proxy_permissions... OK (0.066s)
+  Applying giftcard.0001_initial... OK (0.053s)
+  Applying shipping.0009_auto_20180629_1055... OK (0.012s)
+  Applying shipping.0010_auto_20180719_0520... OK (0.011s)
   Applying shipping.0011_auto_20180802_1238... OK (0.012s)
-  Applying shipping.0012_remove_legacy_shipping_methods... OK (0.059s)
-  Applying shipping.0013_auto_20180822_0721... OK (0.246s)
-  Applying shipping.0014_auto_20180920_0956... OK (0.023s)
+  Applying shipping.0012_remove_legacy_shipping_methods... OK (0.050s)
+  Applying shipping.0013_auto_20180822_0721... OK (0.534s)
+  Applying shipping.0014_auto_20180920_0956... OK (0.022s)
   Applying shipping.0015_auto_20190305_0640... OK (0.013s)
-  Applying sites.0001_initial... OK (0.014s)
-  Applying sites.0002_alter_domain_unique... OK (0.016s)
-  Applying site.0001_initial... OK (0.019s)
-  Applying site.0002_add_default_data... OK (0.287s)
-  Applying site.0003_sitesettings_description... OK (0.014s)
-  Applying site.0004_auto_20170221_0426... OK (0.034s)
+  Applying sites.0001_initial... OK (0.016s)
+  Applying sites.0002_alter_domain_unique... OK (0.021s)
+  Applying site.0001_initial... OK (0.021s)
+  Applying site.0002_add_default_data... OK (0.061s)
+  Applying site.0003_sitesettings_description... OK (0.017s)
+  Applying site.0004_auto_20170221_0426... OK (0.036s)
   Applying site.0005_auto_20170906_0556... OK (0.010s)
-  Applying site.0006_auto_20171025_0454... OK (0.017s)
-  Applying site.0007_auto_20171027_0856... OK (0.098s)
-  Applying site.0008_auto_20171027_0856... OK (0.036s)
-  Applying site.0009_auto_20171109_0849... OK (0.015s)
-  Applying site.0010_auto_20171113_0958... OK (0.011s)
-  Applying site.0011_auto_20180108_0814... OK (0.039s)
-  Applying page.0001_initial... OK (0.035s)
-  Applying menu.0001_initial... OK (0.203s)
-  Applying menu.0002_auto_20180319_0412... OK (0.070s)
-  Applying site.0012_auto_20180405_0757... OK (0.124s)
-  Applying menu.0003_auto_20180405_0854... OK (0.087s)
-  Applying site.0013_assign_default_menus... OK (0.071s)
-  Applying site.0014_handle_taxes... OK (0.033s)
-  Applying site.0015_sitesettings_handle_stock_by_default... OK (0.014s)
-  Applying site.0016_auto_20180719_0520... OK (0.013s)
-  Applying site.0017_auto_20180803_0528... OK (0.088s)
-  Applying product.0055_auto_20180321_0417... OK (0.104s)
-  Applying product.0056_auto_20180330_0321... OK (0.046s)
-  Applying product.0057_auto_20180403_0852... OK (0.026s)
-  Applying product.0058_auto_20180329_0142... OK (0.180s)
-  Applying product.0059_generate_variant_name_from_attrs... OK (0.073s)
-  Applying product.0060_collection_is_published... OK (0.045s)
-  Applying product.0061_product_taxes... OK (0.060s)
-  Applying product.0062_sortable_models... OK (0.370s)
-  Applying product.0063_required_attr_value_order... OK (0.015s)
+  Applying site.0006_auto_20171025_0454... OK (0.018s)
+  Applying site.0007_auto_20171027_0856... OK (0.114s)
+  Applying site.0008_auto_20171027_0856... OK (0.032s)
+  Applying site.0009_auto_20171109_0849... OK (0.010s)
+  Applying site.0010_auto_20171113_0958... OK (0.013s)
+  Applying site.0011_auto_20180108_0814... OK (0.034s)
+  Applying page.0001_initial... OK (0.024s)
+  Applying menu.0001_initial... OK (0.190s)
+  Applying menu.0002_auto_20180319_0412... OK (0.150s)
+  Applying site.0012_auto_20180405_0757... OK (0.101s)
+  Applying menu.0003_auto_20180405_0854... OK (0.076s)
+  Applying site.0013_assign_default_menus... OK (0.062s)
+  Applying site.0014_handle_taxes... OK (0.031s)
+  Applying site.0015_sitesettings_handle_stock_by_default... OK (0.013s)
+  Applying site.0016_auto_20180719_0520... OK (0.014s)
+  Applying site.0017_auto_20180803_0528... OK (0.072s)
+  Applying product.0055_auto_20180321_0417... OK (0.093s)
+  Applying product.0056_auto_20180330_0321... OK (0.040s)
+  Applying product.0057_auto_20180403_0852... OK (0.023s)
+  Applying product.0058_auto_20180329_0142... OK (0.461s)
+  Applying product.0059_generate_variant_name_from_attrs... OK (0.062s)
+  Applying product.0060_collection_is_published... OK (0.032s)
+  Applying product.0061_product_taxes... OK (0.069s)
+  Applying product.0062_sortable_models... OK (0.151s)
+  Applying product.0063_required_attr_value_order... OK (0.014s)
   Applying product.0064_productvariant_handle_stock... OK (0.018s)
-  Applying product.0065_auto_20180719_0520... OK (0.024s)
-  Applying product.0066_auto_20180803_0528... OK (0.358s)
-  Applying site.0018_sitesettings_homepage_collection... OK (0.103s)
+  Applying product.0065_auto_20180719_0520... OK (0.026s)
+  Applying product.0066_auto_20180803_0528... OK (0.307s)
+  Applying site.0018_sitesettings_homepage_collection... OK (0.107s)
   Applying product.0067_remove_product_is_featured... OK (0.024s)
-  Applying product.0068_auto_20180822_0720... OK (0.052s)
-  Applying product.0069_auto_20180912_0326... OK (0.016s)
+  Applying product.0068_auto_20180822_0720... OK (0.051s)
+  Applying product.0069_auto_20180912_0326... OK (0.015s)
   Applying product.0070_auto_20180912_0329... OK (0.029s)
-  Applying product.0071_attributechoicevalue_value... OK (0.015s)
-  Applying product.0072_auto_20180925_1048... OK (0.393s)
-  Applying product.0073_auto_20181010_0729... OK (0.089s)
-  Applying product.0074_auto_20181010_0730... OK (0.459s)
+  Applying product.0071_attributechoicevalue_value... OK (0.020s)
+  Applying product.0072_auto_20180925_1048... OK (0.389s)
+  Applying product.0073_auto_20181010_0729... OK (0.080s)
+  Applying product.0074_auto_20181010_0730... OK (0.457s)
   Applying product.0075_auto_20181010_0842... OK (0.051s)
-  Applying product.0076_auto_20181012_1146... OK (0.013s)
-  Applying product.0077_generate_versatile_background_images... OK (0.112s)
-  Applying product.0078_auto_20181120_0437... OK (0.036s)
-  Applying product.0079_default_tax_rate_instead_of_empty_field... OK (0.081s)
-  Applying product.0080_collection_published_date... OK (0.019s)
-  Applying product.0080_auto_20181214_0440... OK (0.033s)
-  Applying product.0081_merge_20181215_1659... OK (0.004s)
-  Applying product.0081_auto_20181218_0024... OK (0.018s)
+  Applying product.0076_auto_20181012_1146... OK (0.014s)
+  Applying product.0077_generate_versatile_background_images... OK (0.119s)
+  Applying product.0078_auto_20181120_0437... OK (0.033s)
+  Applying product.0079_default_tax_rate_instead_of_empty_field... OK (0.070s)
+  Applying product.0080_collection_published_date... OK (0.017s)
+  Applying product.0080_auto_20181214_0440... OK (0.028s)
+  Applying product.0081_merge_20181215_1659... OK (0.003s)
+  Applying product.0081_auto_20181218_0024... OK (0.020s)
   Applying product.0082_merge_20181219_1440... OK (0.003s)
-  Applying product.0083_auto_20190104_0443... OK (0.032s)
-  Applying product.0084_auto_20190122_0113... OK (0.025s)
-  Applying product.0085_auto_20190125_0025... OK (0.012s)
-  Applying product.0086_product_publication_date... OK (0.023s)
-  Applying product.0087_auto_20190208_0326... OK (0.023s)
-  Applying product.0088_auto_20190220_1928... OK (0.023s)
-  Applying product.0089_auto_20190225_0252... OK (0.115s)
-  Applying product.0090_auto_20190328_0608... OK (0.025s)
-  Applying product.0091_auto_20190402_0853... OK (0.131s)
-  Applying payment.0003_rename_payment_method_to_payment... OK (0.290s)
-  Applying payment.0004_auto_20181206_0031... OK (0.030s)
-  Applying payment.0005_auto_20190104_0443... OK (0.032s)
-  Applying payment.0006_auto_20190109_0358... OK (0.019s)
-  Applying payment.0007_auto_20190206_0938... OK (0.019s)
-  Applying payment.0007_auto_20190125_0242... OK (0.030s)
-  Applying payment.0008_merge_20190214_0447... OK (0.006s)
-  Applying payment.0009_convert_to_partially_charged_and_partially_refunded... OK (0.074s)
-  Applying payment.0010_auto_20190220_2001... OK (0.275s)
-  Applying checkout.0016_auto_20190112_0506... OK (0.030s)
-  Applying checkout.0017_auto_20190130_0207... OK (0.029s)
-  Applying checkout.0018_auto_20190410_0132... OK (0.448s)
-  Applying checkout.0019_checkout_gift_cards... OK (0.097s)
-  Applying discount.0004_auto_20170206_0407... OK (0.304s)
-  Applying discount.0005_auto_20170919_0839... OK (0.044s)
-  Applying discount.0006_auto_20171129_1004... OK (0.044s)
-  Applying discount.0007_auto_20180108_0814... OK (0.648s)
-  Applying discount.0008_sale_collections... OK (0.058s)
-  Applying discount.0009_auto_20180719_0520... OK (0.050s)
-  Applying discount.0010_auto_20180724_1251... OK (0.416s)
-  Applying discount.0011_auto_20180803_0528... OK (0.078s)
-  Applying discount.0012_auto_20190329_0836... OK (0.075s)
-  Applying django_prices_openexchangerates.0001_initial... OK (0.030s)
-  Applying django_prices_openexchangerates.0002_auto_20160329_0702... OK (0.031s)
-  Applying django_prices_openexchangerates.0003_auto_20161018_0707... OK (0.035s)
-  Applying django_prices_openexchangerates.0004_auto_20170316_0944... OK (0.012s)
-  Applying django_prices_vatlayer.0001_initial... OK (0.022s)
-  Applying django_prices_vatlayer.0002_ratetypes... OK (0.024s)
-  Applying django_prices_vatlayer.0003_auto_20180316_1053... OK (0.023s)
-  Applying impersonate.0001_initial... OK (0.094s)
-  Applying menu.0004_sort_order_index... OK (0.037s)
-  Applying menu.0005_auto_20180719_0520... OK (0.013s)
-  Applying menu.0006_auto_20180803_0528... OK (0.084s)
-  Applying menu.0007_auto_20180807_0547... OK (0.098s)
-  Applying menu.0008_menu_json_content_new... OK (0.097s)
-  Applying menu.0009_remove_menu_json_content... OK (0.015s)
-  Applying menu.0010_auto_20180913_0841... OK (0.032s)
-  Applying menu.0011_auto_20181204_0004... OK (0.013s)
-  Applying menu.0012_auto_20190104_0443... OK (0.013s)
-  Applying menu.0013_auto_20190507_0309... OK (0.323s)
-  Applying menu.0014_auto_20190523_0759... OK (0.030s)
-  Applying order.0071_order_gift_cards... OK (0.102s)
-  Applying page.0002_auto_20180321_0417... OK (0.022s)
-  Applying page.0003_auto_20180719_0520... OK (0.014s)
-  Applying page.0004_auto_20180803_0528... OK (0.121s)
-  Applying page.0005_auto_20190208_0456... OK (0.142s)
-  Applying page.0006_auto_20190220_1928... OK (0.014s)
-  Applying page.0007_auto_20190225_0252... OK (0.045s)
-  Applying payment.0011_auto_20190516_0901... OK (0.021s)
-  Applying product.0092_auto_20190507_0309... OK (0.083s)
-  Applying product.0093_auto_20190521_0124... OK (0.169s)
-  Applying sessions.0001_initial... OK (0.033s)
-  Applying site.0019_sitesettings_default_weight_unit... OK (0.031s)
-  Applying site.0020_auto_20190301_0336... OK (0.032s)
-  Applying site.0021_auto_20190326_0521... OK (0.085s)
-  Applying social_django.0001_initial... OK (0.224s)
-  Applying social_django.0002_add_related_name... OK (0.077s)
-  Applying social_django.0003_alter_email_max_length... OK (0.017s)
-  Applying social_django.0004_auto_20160423_0400... OK (0.034s)
-  Applying social_django.0005_auto_20160727_2333... OK (0.017s)
-  Applying social_django.0006_partial... OK (0.038s)
-  Applying social_django.0007_code_timestamp... OK (0.021s)
-  Applying social_django.0008_partial_timestamp... OK (0.022s)
+  Applying product.0083_auto_20190104_0443... OK (0.027s)
+  Applying product.0084_auto_20190122_0113... OK (0.023s)
+  Applying product.0085_auto_20190125_0025... OK (0.011s)
+  Applying product.0086_product_publication_date... OK (0.021s)
+  Applying product.0087_auto_20190208_0326... OK (0.024s)
+  Applying product.0088_auto_20190220_1928... OK (0.018s)
+  Applying product.0089_auto_20190225_0252... OK (0.107s)
+  Applying product.0090_auto_20190328_0608... OK (0.024s)
+  Applying product.0091_auto_20190402_0853... OK (0.110s)
+  Applying payment.0003_rename_payment_method_to_payment... OK (0.262s)
+  Applying payment.0004_auto_20181206_0031... OK (0.028s)
+  Applying payment.0005_auto_20190104_0443... OK (0.284s)
+  Applying payment.0006_auto_20190109_0358... OK (0.016s)
+  Applying payment.0007_auto_20190206_0938... OK (0.015s)
+  Applying payment.0007_auto_20190125_0242... OK (0.026s)
+  Applying payment.0008_merge_20190214_0447... OK (0.004s)
+  Applying payment.0009_convert_to_partially_charged_and_partially_refunded... OK (0.066s)
+  Applying payment.0010_auto_20190220_2001... OK (0.028s)
+  Applying checkout.0016_auto_20190112_0506... OK (0.026s)
+  Applying checkout.0017_auto_20190130_0207... OK (0.026s)
+  Applying checkout.0018_auto_20190410_0132... OK (0.402s)
+  Applying checkout.0019_checkout_gift_cards... OK (0.080s)
+  Applying discount.0004_auto_20170206_0407... OK (0.612s)
+  Applying discount.0005_auto_20170919_0839... OK (0.040s)
+  Applying discount.0006_auto_20171129_1004... OK (0.045s)
+  Applying discount.0007_auto_20180108_0814... OK (0.381s)
+  Applying discount.0008_sale_collections... OK (0.055s)
+  Applying discount.0009_auto_20180719_0520... OK (0.047s)
+  Applying discount.0010_auto_20180724_1251... OK (0.332s)
+  Applying discount.0011_auto_20180803_0528... OK (0.067s)
+  Applying discount.0012_auto_20190329_0836... OK (0.063s)
+  Applying django_prices_openexchangerates.0001_initial... OK (0.021s)
+  Applying django_prices_openexchangerates.0002_auto_20160329_0702... OK (0.024s)
+  Applying django_prices_openexchangerates.0003_auto_20161018_0707... OK (0.030s)
+  Applying django_prices_openexchangerates.0004_auto_20170316_0944... OK (0.010s)
+  Applying django_prices_vatlayer.0001_initial... OK (0.017s)
+  Applying django_prices_vatlayer.0002_ratetypes... OK (0.021s)
+  Applying django_prices_vatlayer.0003_auto_20180316_1053... OK (0.021s)
+  Applying impersonate.0001_initial... OK (0.078s)
+  Applying menu.0004_sort_order_index... OK (0.034s)
+  Applying menu.0005_auto_20180719_0520... OK (0.017s)
+  Applying menu.0006_auto_20180803_0528... OK (0.348s)
+  Applying menu.0007_auto_20180807_0547... OK (0.088s)
+  Applying menu.0008_menu_json_content_new... OK (0.088s)
+  Applying menu.0009_remove_menu_json_content... OK (0.012s)
+  Applying menu.0010_auto_20180913_0841... OK (0.027s)
+  Applying menu.0011_auto_20181204_0004... OK (0.011s)
+  Applying menu.0012_auto_20190104_0443... OK (0.011s)
+  Applying menu.0013_auto_20190507_0309... OK (0.085s)
+  Applying menu.0014_auto_20190523_0759... OK (0.027s)
+  Applying order.0071_order_gift_cards... OK (0.081s)
+  Applying page.0002_auto_20180321_0417... OK (0.020s)
+  Applying page.0003_auto_20180719_0520... OK (0.012s)
+  Applying page.0004_auto_20180803_0528... OK (0.088s)
+  Applying page.0005_auto_20190208_0456... OK (0.122s)
+  Applying page.0006_auto_20190220_1928... OK (0.013s)
+  Applying page.0007_auto_20190225_0252... OK (0.041s)
+  Applying payment.0011_auto_20190516_0901... OK (0.020s)
+  Applying product.0092_auto_20190507_0309... OK (0.076s)
+  Applying product.0093_auto_20190521_0124... OK (0.155s)
+  Applying sessions.0001_initial... OK (0.024s)
+  Applying site.0019_sitesettings_default_weight_unit... OK (0.029s)
+  Applying site.0020_auto_20190301_0336... OK (0.026s)
+  Applying site.0021_auto_20190326_0521... OK (0.313s)
+  Applying social_django.0001_initial... OK (0.185s)
+  Applying social_django.0002_add_related_name... OK (0.073s)
+  Applying social_django.0003_alter_email_max_length... OK (0.014s)
+  Applying social_django.0004_auto_20160423_0400... OK (0.031s)
+  Applying social_django.0005_auto_20160727_2333... OK (0.015s)
+  Applying social_django.0006_partial... OK (0.029s)
+  Applying social_django.0007_code_timestamp... OK (0.019s)
+  Applying social_django.0008_partial_timestamp... OK (0.017s)
 Running post-migrate handlers for application contenttypes
 Adding content type 'contenttypes | contenttype'
 Adding permission 'Permission object (1)'
@@ -1875,34 +1871,34 @@ Shipping Zone: Asia
 Shipping Zone: Americas
 Shipping Zone: Africa
 Created products
-Sale: Happy bad day!
-Sale: Happy only day!
-Sale: Happy difficult day!
-Sale: Happy business day!
-Sale: Happy choice day!
+Sale: Happy war day!
+Sale: Happy decision day!
+Sale: Happy role day!
+Sale: Happy decision day!
+Sale: Happy peace day!
 Voucher #1
 Voucher #2
 Gift card #1
-User: nicole.russo@example.com
-User: james.obrien@example.com
-User: corey.walker@example.com
-User: derek.ortiz@example.com
-User: melissa.glass@example.com
-User: laurie.washington@example.com
-User: kyle.scott@example.com
-User: bethany.johnson@example.com
-User: nicholas.nelson@example.com
-User: leslie.howard@example.com
-User: jon.meyers@example.com
-User: michael.kaufman@example.com
-User: jamie.garcia@example.com
-User: robin.williams@example.com
-User: sabrina.kelly@example.com
-User: jacob.odom@example.com
-User: christopher.fry@example.com
-User: roger.brooks@example.com
-User: angie.fletcher@example.com
-User: james.robles@example.com
+User: sarah.miller@example.com
+User: mary.parker@example.com
+User: lisa.johnson@example.com
+User: sharon.burns@example.com
+User: ryan.miller@example.com
+User: joseph.charles@example.com
+User: virginia.butler@example.com
+User: willie.stephens@example.com
+User: kenneth.griffith@example.com
+User: joseph.flores@example.com
+User: cody.boyer@example.com
+User: annette.martinez@example.com
+User: jaime.torres@example.com
+User: jessica.ramos@example.com
+User: cindy.hanson@example.com
+User: briana.liu@example.com
+User: wendy.molina@example.com
+User: jennifer.smith@example.com
+User: angela.donaldson@example.com
+User: lisa.barnes@example.com
 Order: #1
 Order: #2
 Order: #3
@@ -1934,8 +1930,8 @@ Created footer menu
 Superuser - admin@example.com/admin
 [
     {
-        "Id": "c4a33360bfb3ec3fbedb7dd384b6138ffb13035b8368f47149dbf9c761b9540c",
-        "Created": "2019-06-11T21:38:50.52780919Z",
+        "Id": "56a5416a8ba8d7ac30d9d107446209874c0dde255974b73dee09088a8d2307c4",
+        "Created": "2019-06-12T00:36:03.560249339Z",
         "Path": "celery",
         "Args": [
             "-A",
@@ -1951,17 +1947,17 @@ Superuser - admin@example.com/admin
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 4368,
+            "Pid": 3160,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-11T21:38:55.202334813Z",
+            "StartedAt": "2019-06-12T00:36:07.5608215Z",
             "FinishedAt": "0001-01-01T00:00:00Z"
         },
         "Image": "sha256:6459be8672dce0a0319a2b1108da0b5cf2cf30119c1e8756dce9317f112009ec",
-        "ResolvConfPath": "/var/lib/docker/containers/c4a33360bfb3ec3fbedb7dd384b6138ffb13035b8368f47149dbf9c761b9540c/resolv.conf",
-        "HostnamePath": "/var/lib/docker/containers/c4a33360bfb3ec3fbedb7dd384b6138ffb13035b8368f47149dbf9c761b9540c/hostname",
-        "HostsPath": "/var/lib/docker/containers/c4a33360bfb3ec3fbedb7dd384b6138ffb13035b8368f47149dbf9c761b9540c/hosts",
-        "LogPath": "/var/lib/docker/containers/c4a33360bfb3ec3fbedb7dd384b6138ffb13035b8368f47149dbf9c761b9540c/c4a33360bfb3ec3fbedb7dd384b6138ffb13035b8368f47149dbf9c761b9540c-json.log",
+        "ResolvConfPath": "/var/lib/docker/containers/56a5416a8ba8d7ac30d9d107446209874c0dde255974b73dee09088a8d2307c4/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/56a5416a8ba8d7ac30d9d107446209874c0dde255974b73dee09088a8d2307c4/hostname",
+        "HostsPath": "/var/lib/docker/containers/56a5416a8ba8d7ac30d9d107446209874c0dde255974b73dee09088a8d2307c4/hosts",
+        "LogPath": "/var/lib/docker/containers/56a5416a8ba8d7ac30d9d107446209874c0dde255974b73dee09088a8d2307c4/56a5416a8ba8d7ac30d9d107446209874c0dde255974b73dee09088a8d2307c4-json.log",
         "Name": "/compose_celery_1",
         "RestartCount": 0,
         "Driver": "overlay2",
@@ -2065,10 +2061,10 @@ Superuser - admin@example.com/admin
         },
         "GraphDriver": {
             "Data": {
-                "LowerDir": "/var/lib/docker/overlay2/de56c0c7f83b8a21a3289d348f2625dfe61a520c72674a3f3480fcc97475a4a4-init/diff:/var/lib/docker/overlay2/02f10f776027eaa7695fa4564695418694a4837c09a2a3c999feccd11360132f/diff:/var/lib/docker/overlay2/d2f0d811eac94724a8042958a8909da25c806dedd697e519c50558d568d101cc/diff:/var/lib/docker/overlay2/80eb988052113ca5625722b6785245ffa68737be1c04157c8303be9c531e3d57/diff:/var/lib/docker/overlay2/1649ada980a3d622260abcb3dd65442c2a3c9d2b873c043dea81b6e5cb52cb03/diff:/var/lib/docker/overlay2/33c36178d2a37e60a74a4d694358b2b84e02cab2d768898ff5b1fb5af59f460b/diff:/var/lib/docker/overlay2/9b1d62ccba181e64e5824d5f67dd3add9c4d8e84f4512fc34c9c601b60261c46/diff:/var/lib/docker/overlay2/836e74feae2f27c1c2ad19d2c5f6d9bfec9db78ee75d183596f887a83d051659/diff:/var/lib/docker/overlay2/93cf752863981974aedcad37e9787145741b6087beb9a5e17a0c30b2902eeb85/diff:/var/lib/docker/overlay2/d065e54e8cec3a8f014642286ad980d5aef2b696968a895c99f36fdf79e6e60b/diff:/var/lib/docker/overlay2/c69b396530c7cc0867a35ae3c727ddbd8b952112925b60d994e4f9a61ffcdbe3/diff:/var/lib/docker/overlay2/48dc6093afd7e2a3a624fa0709ea04d8a1c63f24f9178d7f991d34bcb8b1a8b8/diff:/var/lib/docker/overlay2/10eace4f8e380b498938fb3efe6f1368ff8d95bfd10eaf9f115a4f4bb9ea0ffe/diff:/var/lib/docker/overlay2/b801a1709a96dc171bb81a64d33417009fc2d3393d8cc25c0f310ba423044179/diff:/var/lib/docker/overlay2/6b6a97f26ee6e223c414e0a146b449948d459f6fee3b80468b89a020c40d9b2e/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
-                "MergedDir": "/var/lib/docker/overlay2/de56c0c7f83b8a21a3289d348f2625dfe61a520c72674a3f3480fcc97475a4a4/merged",
-                "UpperDir": "/var/lib/docker/overlay2/de56c0c7f83b8a21a3289d348f2625dfe61a520c72674a3f3480fcc97475a4a4/diff",
-                "WorkDir": "/var/lib/docker/overlay2/de56c0c7f83b8a21a3289d348f2625dfe61a520c72674a3f3480fcc97475a4a4/work"
+                "LowerDir": "/var/lib/docker/overlay2/4b9c2b2375b38e69fff2891b8bf6a297a469ec8e033ce336455bec49ab51c6c4-init/diff:/var/lib/docker/overlay2/02f10f776027eaa7695fa4564695418694a4837c09a2a3c999feccd11360132f/diff:/var/lib/docker/overlay2/d2f0d811eac94724a8042958a8909da25c806dedd697e519c50558d568d101cc/diff:/var/lib/docker/overlay2/80eb988052113ca5625722b6785245ffa68737be1c04157c8303be9c531e3d57/diff:/var/lib/docker/overlay2/1649ada980a3d622260abcb3dd65442c2a3c9d2b873c043dea81b6e5cb52cb03/diff:/var/lib/docker/overlay2/33c36178d2a37e60a74a4d694358b2b84e02cab2d768898ff5b1fb5af59f460b/diff:/var/lib/docker/overlay2/9b1d62ccba181e64e5824d5f67dd3add9c4d8e84f4512fc34c9c601b60261c46/diff:/var/lib/docker/overlay2/836e74feae2f27c1c2ad19d2c5f6d9bfec9db78ee75d183596f887a83d051659/diff:/var/lib/docker/overlay2/93cf752863981974aedcad37e9787145741b6087beb9a5e17a0c30b2902eeb85/diff:/var/lib/docker/overlay2/d065e54e8cec3a8f014642286ad980d5aef2b696968a895c99f36fdf79e6e60b/diff:/var/lib/docker/overlay2/c69b396530c7cc0867a35ae3c727ddbd8b952112925b60d994e4f9a61ffcdbe3/diff:/var/lib/docker/overlay2/48dc6093afd7e2a3a624fa0709ea04d8a1c63f24f9178d7f991d34bcb8b1a8b8/diff:/var/lib/docker/overlay2/10eace4f8e380b498938fb3efe6f1368ff8d95bfd10eaf9f115a4f4bb9ea0ffe/diff:/var/lib/docker/overlay2/b801a1709a96dc171bb81a64d33417009fc2d3393d8cc25c0f310ba423044179/diff:/var/lib/docker/overlay2/6b6a97f26ee6e223c414e0a146b449948d459f6fee3b80468b89a020c40d9b2e/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/4b9c2b2375b38e69fff2891b8bf6a297a469ec8e033ce336455bec49ab51c6c4/merged",
+                "UpperDir": "/var/lib/docker/overlay2/4b9c2b2375b38e69fff2891b8bf6a297a469ec8e033ce336455bec49ab51c6c4/diff",
+                "WorkDir": "/var/lib/docker/overlay2/4b9c2b2375b38e69fff2891b8bf6a297a469ec8e033ce336455bec49ab51c6c4/work"
             },
             "Name": "overlay2"
         },
@@ -2083,7 +2079,7 @@ Superuser - admin@example.com/admin
             }
         ],
         "Config": {
-            "Hostname": "c4a33360bfb3",
+            "Hostname": "56a5416a8ba8",
             "Domainname": "",
             "User": "saleor:saleor",
             "AttachStdin": false,
@@ -2149,14 +2145,14 @@ Superuser - admin@example.com/admin
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "9754c7f32e4ab671ad7e1869144eab0bc14f0a48da50366a08ef2789cf7d6c4d",
+            "SandboxID": "3bb568c0556cd622a5fbb9744b5bef87a3e9e382a6a8f132139e46ec8ec8d684",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
             "Ports": {
                 "8000/tcp": null
             },
-            "SandboxKey": "/var/run/docker/netns/9754c7f32e4a",
+            "SandboxKey": "/var/run/docker/netns/3bb568c0556c",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -2172,11 +2168,11 @@ Superuser - admin@example.com/admin
                     "IPAMConfig": null,
                     "Links": null,
                     "Aliases": [
-                        "c4a33360bfb3",
+                        "56a5416a8ba8",
                         "celery"
                     ],
-                    "NetworkID": "1c1d30833336d0ddd42139cf58d403a402a521acad227d1484cf3a8ec2307b79",
-                    "EndpointID": "5fb1ab21427171f5c197bfc6d5deb15973e15fd13e44f5822a1b7212f895ad40",
+                    "NetworkID": "5b6c2637814b508ddc096f67f594bccc7e8a05326ed1fade781b924e6e802bf7",
+                    "EndpointID": "583d504f1a4572918b82de868f0c38370c1a89637687a7de82dfb8b289ffb8c8",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.4",
                     "IPPrefixLen": 16,
@@ -2193,468 +2189,881 @@ Superuser - admin@example.com/admin
 
 DEFAULT
 
-'/tmp/volume' -> 'default'
-'/tmp/volume/static' -> 'default/static'
-'/tmp/volume/static/assets' -> 'default/static/assets'
-'/tmp/volume/static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg' -> 'default/static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg'
-'/tmp/volume/static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg' -> 'default/static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg'
-'/tmp/volume/static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2' -> 'default/static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2'
-'/tmp/volume/static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg' -> 'default/static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg'
-'/tmp/volume/static/assets/logo-light.d493430f320751f6bffac210ced37643.svg' -> 'default/static/assets/logo-light.d493430f320751f6bffac210ced37643.svg'
-'/tmp/volume/static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg' -> 'default/static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg'
-'/tmp/volume/static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2' -> 'default/static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2'
-'/tmp/volume/static/assets/storefront.e1ffe21d4c6f258d297b.css' -> 'default/static/assets/storefront.e1ffe21d4c6f258d297b.css'
-'/tmp/volume/static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff' -> 'default/static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff'
-'/tmp/volume/static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2' -> 'default/static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2'
-'/tmp/volume/static/assets/document.5da8542a5fa88198e0b8.css' -> 'default/static/assets/document.5da8542a5fa88198e0b8.css'
-'/tmp/volume/static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg' -> 'default/static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg'
-'/tmp/volume/static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg' -> 'default/static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg'
-'/tmp/volume/static/assets/dashboard.16a701600f4a5f253104.css' -> 'default/static/assets/dashboard.16a701600f4a5f253104.css'
-'/tmp/volume/static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg' -> 'default/static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg'
-'/tmp/volume/static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg' -> 'default/static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg'
-'/tmp/volume/static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff' -> 'default/static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff'
-'/tmp/volume/static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg' -> 'default/static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg'
-'/tmp/volume/static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff' -> 'default/static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff'
-'/tmp/volume/static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg' -> 'default/static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg'
-'/tmp/volume/static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2' -> 'default/static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2'
-'/tmp/volume/static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff' -> 'default/static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff'
-'/tmp/volume/static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg' -> 'default/static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg'
-'/tmp/volume/static/assets/dashboard.16a701600f4a5f253104.js' -> 'default/static/assets/dashboard.16a701600f4a5f253104.js'
-'/tmp/volume/static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg' -> 'default/static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg'
-'/tmp/volume/static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff' -> 'default/static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff'
-'/tmp/volume/static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg' -> 'default/static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg'
-'/tmp/volume/static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2' -> 'default/static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2'
-'/tmp/volume/static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg' -> 'default/static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg'
-'/tmp/volume/static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff' -> 'default/static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff'
-'/tmp/volume/static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2' -> 'default/static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2'
-'/tmp/volume/static/assets/document.5da8542a5fa88198e0b8.js' -> 'default/static/assets/document.5da8542a5fa88198e0b8.js'
-'/tmp/volume/static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg' -> 'default/static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg'
-'/tmp/volume/static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff' -> 'default/static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff'
-'/tmp/volume/static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg' -> 'default/static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg'
-'/tmp/volume/static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf' -> 'default/static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf'
-'/tmp/volume/static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg' -> 'default/static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg'
-'/tmp/volume/static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2' -> 'default/static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2'
-'/tmp/volume/static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg' -> 'default/static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg'
-'/tmp/volume/static/assets/storefront.e1ffe21d4c6f258d297b.js' -> 'default/static/assets/storefront.e1ffe21d4c6f258d297b.js'
-'/tmp/volume/static/assets/dashboard-next.46a99ef4cd5c9ff12206.js' -> 'default/static/assets/dashboard-next.46a99ef4cd5c9ff12206.js'
-'/tmp/volume/static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg' -> 'default/static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg'
-'/tmp/volume/static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg' -> 'default/static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg'
-'/tmp/volume/static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg' -> 'default/static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg'
-'/tmp/volume/static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf' -> 'default/static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf'
-'/tmp/volume/static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg' -> 'default/static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg'
-'/tmp/volume/static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff' -> 'default/static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff'
-'/tmp/volume/static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2' -> 'default/static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2'
-'/tmp/volume/static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf' -> 'default/static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf'
-'/tmp/volume/static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png' -> 'default/static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png'
-'/tmp/volume/static/favicons' -> 'default/static/favicons'
-'/tmp/volume/static/favicons/mstile-310x150.png' -> 'default/static/favicons/mstile-310x150.png'
-'/tmp/volume/static/favicons/android-chrome-512x512.png' -> 'default/static/favicons/android-chrome-512x512.png'
-'/tmp/volume/static/favicons/favicon-16x16.png' -> 'default/static/favicons/favicon-16x16.png'
-'/tmp/volume/static/favicons/mstile-144x144.png' -> 'default/static/favicons/mstile-144x144.png'
-'/tmp/volume/static/favicons/safari-pinned-tab.svg' -> 'default/static/favicons/safari-pinned-tab.svg'
-'/tmp/volume/static/favicons/browserconfig.xml' -> 'default/static/favicons/browserconfig.xml'
-'/tmp/volume/static/favicons/favicon.ico' -> 'default/static/favicons/favicon.ico'
-'/tmp/volume/static/favicons/mstile-150x150.png' -> 'default/static/favicons/mstile-150x150.png'
-'/tmp/volume/static/favicons/android-chrome-192x192.png' -> 'default/static/favicons/android-chrome-192x192.png'
-'/tmp/volume/static/favicons/favicon-32x32.png' -> 'default/static/favicons/favicon-32x32.png'
-'/tmp/volume/static/favicons/mstile-70x70.png' -> 'default/static/favicons/mstile-70x70.png'
-'/tmp/volume/static/favicons/mstile-310x310.png' -> 'default/static/favicons/mstile-310x310.png'
-'/tmp/volume/static/favicons/apple-touch-icon.png' -> 'default/static/favicons/apple-touch-icon.png'
-'/tmp/volume/static/images' -> 'default/static/images'
-'/tmp/volume/static/images/placeholder120x120.png' -> 'default/static/images/placeholder120x120.png'
-'/tmp/volume/static/images/favicon.svg' -> 'default/static/images/favicon.svg'
-'/tmp/volume/static/images/reset-bg.png' -> 'default/static/images/reset-bg.png'
-'/tmp/volume/static/images/filter-icon.svg' -> 'default/static/images/filter-icon.svg'
-'/tmp/volume/static/images/arrow-up.svg' -> 'default/static/images/arrow-up.svg'
-'/tmp/volume/static/images/confirm-order-bg.png' -> 'default/static/images/confirm-order-bg.png'
-'/tmp/volume/static/images/block3.jpg' -> 'default/static/images/block3.jpg'
-'/tmp/volume/static/images/placeholder540x540.png' -> 'default/static/images/placeholder540x540.png'
-'/tmp/volume/static/images/not-found-404.svg' -> 'default/static/images/not-found-404.svg'
-'/tmp/volume/static/images/arrow-select.svg' -> 'default/static/images/arrow-select.svg'
-'/tmp/volume/static/images/checkout.svg' -> 'default/static/images/checkout.svg'
-'/tmp/volume/static/images/search.svg' -> 'default/static/images/search.svg'
-'/tmp/volume/static/images/mobile-menu.svg' -> 'default/static/images/mobile-menu.svg'
-'/tmp/volume/static/images/twitter-logo.svg' -> 'default/static/images/twitter-logo.svg'
-'/tmp/volume/static/images/what.svg' -> 'default/static/images/what.svg'
-'/tmp/volume/static/images/logo-dark.svg' -> 'default/static/images/logo-dark.svg'
-'/tmp/volume/static/images/arrow-up-icon.svg' -> 'default/static/images/arrow-up-icon.svg'
-'/tmp/volume/static/images/arrow-down-icon.svg' -> 'default/static/images/arrow-down-icon.svg'
-'/tmp/volume/static/images/pass-visible.svg' -> 'default/static/images/pass-visible.svg'
-'/tmp/volume/static/images/checkout-bg.png' -> 'default/static/images/checkout-bg.png'
-'/tmp/volume/static/images/gallery-arrow.svg' -> 'default/static/images/gallery-arrow.svg'
-'/tmp/volume/static/images/sample-product2.jpg' -> 'default/static/images/sample-product2.jpg'
-'/tmp/volume/static/images/block2.jpg' -> 'default/static/images/block2.jpg'
-'/tmp/volume/static/images/confirm-order-bg2x.png' -> 'default/static/images/confirm-order-bg2x.png'
-'/tmp/volume/static/images/login-background.svg' -> 'default/static/images/login-background.svg'
-'/tmp/volume/static/images/linkedin-logo.svg' -> 'default/static/images/linkedin-logo.svg'
-'/tmp/volume/static/images/empty-checkout-bg.png' -> 'default/static/images/empty-checkout-bg.png'
-'/tmp/volume/static/images/meetup-logo.svg' -> 'default/static/images/meetup-logo.svg'
-'/tmp/volume/static/images/login-bg2x.png' -> 'default/static/images/login-bg2x.png'
-'/tmp/volume/static/images/empty-checkout-bg2x.png' -> 'default/static/images/empty-checkout-bg2x.png'
-'/tmp/volume/static/images/dribbble-logo.svg' -> 'default/static/images/dribbble-logo.svg'
-'/tmp/volume/static/images/placeholder1080x1080.png' -> 'default/static/images/placeholder1080x1080.png'
-'/tmp/volume/static/images/arrow-down.svg' -> 'default/static/images/arrow-down.svg'
-'/tmp/volume/static/images/instagram-logo.svg' -> 'default/static/images/instagram-logo.svg'
-'/tmp/volume/static/images/sample-product.jpg' -> 'default/static/images/sample-product.jpg'
-'/tmp/volume/static/images/facebook-logo.svg' -> 'default/static/images/facebook-logo.svg'
-'/tmp/volume/static/images/logo-light.svg' -> 'default/static/images/logo-light.svg'
-'/tmp/volume/static/images/arrow-left.svg' -> 'default/static/images/arrow-left.svg'
-'/tmp/volume/static/images/sale-bg.svg' -> 'default/static/images/sale-bg.svg'
-'/tmp/volume/static/images/close.svg' -> 'default/static/images/close.svg'
-'/tmp/volume/static/images/photo-icon.svg' -> 'default/static/images/photo-icon.svg'
-'/tmp/volume/static/images/login-bg.png' -> 'default/static/images/login-bg.png'
-'/tmp/volume/static/images/chevron-down.svg' -> 'default/static/images/chevron-down.svg'
-'/tmp/volume/static/images/placeholder60x60.png' -> 'default/static/images/placeholder60x60.png'
-'/tmp/volume/static/images/checkout-bg2x.png' -> 'default/static/images/checkout-bg2x.png'
-'/tmp/volume/static/images/github-logo.svg' -> 'default/static/images/github-logo.svg'
-'/tmp/volume/static/images/logo-white.svg' -> 'default/static/images/logo-white.svg'
-'/tmp/volume/static/images/chevron-up.svg' -> 'default/static/images/chevron-up.svg'
-'/tmp/volume/static/images/placeholder255x255.png' -> 'default/static/images/placeholder255x255.png'
-'/tmp/volume/static/images/edit.svg' -> 'default/static/images/edit.svg'
-'/tmp/volume/static/images/google-logo.svg' -> 'default/static/images/google-logo.svg'
-'/tmp/volume/static/images/no-results-bg.svg' -> 'default/static/images/no-results-bg.svg'
-'/tmp/volume/static/images/loader.svg' -> 'default/static/images/loader.svg'
-'/tmp/volume/static/images/pass-invisible.svg' -> 'default/static/images/pass-invisible.svg'
-'/tmp/volume/static/images/delete.svg' -> 'default/static/images/delete.svg'
-'/tmp/volume/static/images/block1.jpg' -> 'default/static/images/block1.jpg'
-'/tmp/volume/static/images/avatars' -> 'default/static/images/avatars'
-'/tmp/volume/static/images/avatars/avatar2.png' -> 'default/static/images/avatars/avatar2.png'
-'/tmp/volume/static/images/avatars/avatar3.png' -> 'default/static/images/avatars/avatar3.png'
-'/tmp/volume/static/images/avatars/avatar4.png' -> 'default/static/images/avatars/avatar4.png'
-'/tmp/volume/static/images/avatars/avatar1.png' -> 'default/static/images/avatars/avatar1.png'
-'/tmp/volume/static/images/avatars/avatar8.png' -> 'default/static/images/avatars/avatar8.png'
-'/tmp/volume/static/images/avatars/avatar9.png' -> 'default/static/images/avatars/avatar9.png'
-'/tmp/volume/static/images/avatars/avatar10.png' -> 'default/static/images/avatars/avatar10.png'
-'/tmp/volume/static/images/avatars/avatar6.png' -> 'default/static/images/avatars/avatar6.png'
-'/tmp/volume/static/images/avatars/avatar5.png' -> 'default/static/images/avatars/avatar5.png'
-'/tmp/volume/static/images/avatars/avatar7.png' -> 'default/static/images/avatars/avatar7.png'
-'/tmp/volume/static/images/avatars/avatar12.png' -> 'default/static/images/avatars/avatar12.png'
-'/tmp/volume/static/images/avatars/avatar11.png' -> 'default/static/images/avatars/avatar11.png'
-'/tmp/volume/static/dashboard' -> 'default/static/dashboard'
-'/tmp/volume/static/dashboard/images' -> 'default/static/dashboard/images'
-'/tmp/volume/static/dashboard/images/more-vert.svg' -> 'default/static/dashboard/images/more-vert.svg'
-'/tmp/volume/static/dashboard/images/store.svg' -> 'default/static/dashboard/images/store.svg'
-'/tmp/volume/static/dashboard/images/description.svg' -> 'default/static/dashboard/images/description.svg'
-'/tmp/volume/static/dashboard/images/history.svg' -> 'default/static/dashboard/images/history.svg'
-'/tmp/volume/static/dashboard/images/add.svg' -> 'default/static/dashboard/images/add.svg'
-'/tmp/volume/static/dashboard/images/chevron-left.svg' -> 'default/static/dashboard/images/chevron-left.svg'
-'/tmp/volume/static/dashboard/images/chevron-right.svg' -> 'default/static/dashboard/images/chevron-right.svg'
-'/tmp/volume/static/dashboard/images/search.svg' -> 'default/static/dashboard/images/search.svg'
-'/tmp/volume/static/dashboard/images/logo.svg' -> 'default/static/dashboard/images/logo.svg'
-'/tmp/volume/static/dashboard/images/phone.svg' -> 'default/static/dashboard/images/phone.svg'
-'/tmp/volume/static/dashboard/images/reorder.svg' -> 'default/static/dashboard/images/reorder.svg'
-'/tmp/volume/static/dashboard/images/mobile-menu.svg' -> 'default/static/dashboard/images/mobile-menu.svg'
-'/tmp/volume/static/dashboard/images/style.svg' -> 'default/static/dashboard/images/style.svg'
-'/tmp/volume/static/dashboard/images/done.svg' -> 'default/static/dashboard/images/done.svg'
-'/tmp/volume/static/dashboard/images/account-circle.svg' -> 'default/static/dashboard/images/account-circle.svg'
-'/tmp/volume/static/dashboard/images/email.svg' -> 'default/static/dashboard/images/email.svg'
-'/tmp/volume/static/dashboard/images/payment.svg' -> 'default/static/dashboard/images/payment.svg'
-'/tmp/volume/static/dashboard/images/arrow-left.svg' -> 'default/static/dashboard/images/arrow-left.svg'
-'/tmp/volume/static/dashboard/images/close.svg' -> 'default/static/dashboard/images/close.svg'
-'/tmp/volume/static/dashboard/images/arrow-drop-down.svg' -> 'default/static/dashboard/images/arrow-drop-down.svg'
-'/tmp/volume/static/dashboard/images/edit.svg' -> 'default/static/dashboard/images/edit.svg'
-'/tmp/volume/static/dashboard/images/collections.svg' -> 'default/static/dashboard/images/collections.svg'
-'/tmp/volume/static/dashboard/images/help.svg' -> 'default/static/dashboard/images/help.svg'
-'/tmp/volume/static/dashboard/images/editor' -> 'default/static/dashboard/images/editor'
-'/tmp/volume/static/dashboard/images/editor/quote.svg' -> 'default/static/dashboard/images/editor/quote.svg'
-'/tmp/volume/static/dashboard/images/editor/format_clear.svg' -> 'default/static/dashboard/images/editor/format_clear.svg'
-'/tmp/volume/static/dashboard/images/editor/insert_photo.svg' -> 'default/static/dashboard/images/editor/insert_photo.svg'
-'/tmp/volume/static/dashboard/images/editor/insert_link.svg' -> 'default/static/dashboard/images/editor/insert_link.svg'
-'/tmp/volume/static/dashboard/images/editor/align_left.svg' -> 'default/static/dashboard/images/editor/align_left.svg'
-'/tmp/volume/static/dashboard/images/editor/align_right.svg' -> 'default/static/dashboard/images/editor/align_right.svg'
-'/tmp/volume/static/dashboard/images/editor/align_justify.svg' -> 'default/static/dashboard/images/editor/align_justify.svg'
-'/tmp/volume/static/dashboard/images/editor/align_center.svg' -> 'default/static/dashboard/images/editor/align_center.svg'
-'/tmp/volume/static/versatileimagefield' -> 'default/static/versatileimagefield'
-'/tmp/volume/static/versatileimagefield/css' -> 'default/static/versatileimagefield/css'
-'/tmp/volume/static/versatileimagefield/css/versatileimagefield.css' -> 'default/static/versatileimagefield/css/versatileimagefield.css'
-'/tmp/volume/static/versatileimagefield/css/versatileimagefield-bootstrap3.css' -> 'default/static/versatileimagefield/css/versatileimagefield-bootstrap3.css'
-'/tmp/volume/static/versatileimagefield/css/versatileimagefield-djangoadmin.css' -> 'default/static/versatileimagefield/css/versatileimagefield-djangoadmin.css'
-'/tmp/volume/static/versatileimagefield/js' -> 'default/static/versatileimagefield/js'
-'/tmp/volume/static/versatileimagefield/js/versatileimagefield.js' -> 'default/static/versatileimagefield/js/versatileimagefield.js'
-'/tmp/volume/static/mptt' -> 'default/static/mptt'
-'/tmp/volume/static/mptt/disclosure-down.png' -> 'default/static/mptt/disclosure-down.png'
-'/tmp/volume/static/mptt/draggable-admin.css' -> 'default/static/mptt/draggable-admin.css'
-'/tmp/volume/static/mptt/arrow-move.png' -> 'default/static/mptt/arrow-move.png'
-'/tmp/volume/static/mptt/disclosure-right.png' -> 'default/static/mptt/disclosure-right.png'
-'/tmp/volume/static/mptt/draggable-admin.js' -> 'default/static/mptt/draggable-admin.js'
-'/tmp/volume/static/flags' -> 'default/static/flags'
-'/tmp/volume/static/flags/bm.gif' -> 'default/static/flags/bm.gif'
-'/tmp/volume/static/flags/ph.gif' -> 'default/static/flags/ph.gif'
-'/tmp/volume/static/flags/bj.gif' -> 'default/static/flags/bj.gif'
-'/tmp/volume/static/flags/aq.gif' -> 'default/static/flags/aq.gif'
-'/tmp/volume/static/flags/ec.gif' -> 'default/static/flags/ec.gif'
-'/tmp/volume/static/flags/am.gif' -> 'default/static/flags/am.gif'
-'/tmp/volume/static/flags/id.gif' -> 'default/static/flags/id.gif'
-'/tmp/volume/static/flags/ar.gif' -> 'default/static/flags/ar.gif'
-'/tmp/volume/static/flags/dz.gif' -> 'default/static/flags/dz.gif'
-'/tmp/volume/static/flags/bh.gif' -> 'default/static/flags/bh.gif'
-'/tmp/volume/static/flags/ng.gif' -> 'default/static/flags/ng.gif'
-'/tmp/volume/static/flags/aw.gif' -> 'default/static/flags/aw.gif'
-'/tmp/volume/static/flags/ai.gif' -> 'default/static/flags/ai.gif'
-'/tmp/volume/static/flags/sh.gif' -> 'default/static/flags/sh.gif'
-'/tmp/volume/static/flags/mv.gif' -> 'default/static/flags/mv.gif'
-'/tmp/volume/static/flags/jo.gif' -> 'default/static/flags/jo.gif'
-'/tmp/volume/static/flags/va.gif' -> 'default/static/flags/va.gif'
-'/tmp/volume/static/flags/py.gif' -> 'default/static/flags/py.gif'
-'/tmp/volume/static/flags/ci.gif' -> 'default/static/flags/ci.gif'
-'/tmp/volume/static/flags/cc.gif' -> 'default/static/flags/cc.gif'
-'/tmp/volume/static/flags/gm.gif' -> 'default/static/flags/gm.gif'
-'/tmp/volume/static/flags/er.gif' -> 'default/static/flags/er.gif'
-'/tmp/volume/static/flags/me.gif' -> 'default/static/flags/me.gif'
-'/tmp/volume/static/flags/ml.gif' -> 'default/static/flags/ml.gif'
-'/tmp/volume/static/flags/ke.gif' -> 'default/static/flags/ke.gif'
-'/tmp/volume/static/flags/us.gif' -> 'default/static/flags/us.gif'
-'/tmp/volume/static/flags/nz.gif' -> 'default/static/flags/nz.gif'
-'/tmp/volume/static/flags/ba.gif' -> 'default/static/flags/ba.gif'
-'/tmp/volume/static/flags/fr.gif' -> 'default/static/flags/fr.gif'
-'/tmp/volume/static/flags/na.gif' -> 'default/static/flags/na.gif'
-'/tmp/volume/static/flags/cy.gif' -> 'default/static/flags/cy.gif'
-'/tmp/volume/static/flags/mg.gif' -> 'default/static/flags/mg.gif'
-'/tmp/volume/static/flags/gh.gif' -> 'default/static/flags/gh.gif'
-'/tmp/volume/static/flags/__.gif' -> 'default/static/flags/__.gif'
-'/tmp/volume/static/flags/lk.gif' -> 'default/static/flags/lk.gif'
-'/tmp/volume/static/flags/sk.gif' -> 'default/static/flags/sk.gif'
-'/tmp/volume/static/flags/kz.gif' -> 'default/static/flags/kz.gif'
-'/tmp/volume/static/flags/sprite-hq.png' -> 'default/static/flags/sprite-hq.png'
-'/tmp/volume/static/flags/mt.gif' -> 'default/static/flags/mt.gif'
-'/tmp/volume/static/flags/si.gif' -> 'default/static/flags/si.gif'
-'/tmp/volume/static/flags/zm.gif' -> 'default/static/flags/zm.gif'
-'/tmp/volume/static/flags/sprite-hq.css' -> 'default/static/flags/sprite-hq.css'
-'/tmp/volume/static/flags/mh.gif' -> 'default/static/flags/mh.gif'
-'/tmp/volume/static/flags/hr.gif' -> 'default/static/flags/hr.gif'
-'/tmp/volume/static/flags/hm.gif' -> 'default/static/flags/hm.gif'
-'/tmp/volume/static/flags/cn.gif' -> 'default/static/flags/cn.gif'
-'/tmp/volume/static/flags/tk.gif' -> 'default/static/flags/tk.gif'
-'/tmp/volume/static/flags/cx.gif' -> 'default/static/flags/cx.gif'
-'/tmp/volume/static/flags/nu.gif' -> 'default/static/flags/nu.gif'
-'/tmp/volume/static/flags/pw.gif' -> 'default/static/flags/pw.gif'
-'/tmp/volume/static/flags/co.gif' -> 'default/static/flags/co.gif'
-'/tmp/volume/static/flags/sr.gif' -> 'default/static/flags/sr.gif'
-'/tmp/volume/static/flags/sb.gif' -> 'default/static/flags/sb.gif'
-'/tmp/volume/static/flags/wf.gif' -> 'default/static/flags/wf.gif'
-'/tmp/volume/static/flags/lb.gif' -> 'default/static/flags/lb.gif'
-'/tmp/volume/static/flags/ni.gif' -> 'default/static/flags/ni.gif'
-'/tmp/volume/static/flags/fk.gif' -> 'default/static/flags/fk.gif'
-'/tmp/volume/static/flags/nf.gif' -> 'default/static/flags/nf.gif'
-'/tmp/volume/static/flags/pm.gif' -> 'default/static/flags/pm.gif'
-'/tmp/volume/static/flags/to.gif' -> 'default/static/flags/to.gif'
-'/tmp/volume/static/flags/tf.gif' -> 'default/static/flags/tf.gif'
-'/tmp/volume/static/flags/bl.gif' -> 'default/static/flags/bl.gif'
-'/tmp/volume/static/flags/ir.gif' -> 'default/static/flags/ir.gif'
-'/tmp/volume/static/flags/lc.gif' -> 'default/static/flags/lc.gif'
-'/tmp/volume/static/flags/mo.gif' -> 'default/static/flags/mo.gif'
-'/tmp/volume/static/flags/gi.gif' -> 'default/static/flags/gi.gif'
-'/tmp/volume/static/flags/br.gif' -> 'default/static/flags/br.gif'
-'/tmp/volume/static/flags/nc.gif' -> 'default/static/flags/nc.gif'
-'/tmp/volume/static/flags/in.gif' -> 'default/static/flags/in.gif'
-'/tmp/volume/static/flags/re.gif' -> 'default/static/flags/re.gif'
-'/tmp/volume/static/flags/ht.gif' -> 'default/static/flags/ht.gif'
-'/tmp/volume/static/flags/fj.gif' -> 'default/static/flags/fj.gif'
-'/tmp/volume/static/flags/gs.gif' -> 'default/static/flags/gs.gif'
-'/tmp/volume/static/flags/cu.gif' -> 'default/static/flags/cu.gif'
-'/tmp/volume/static/flags/tz.gif' -> 'default/static/flags/tz.gif'
-'/tmp/volume/static/flags/lt.gif' -> 'default/static/flags/lt.gif'
-'/tmp/volume/static/flags/pa.gif' -> 'default/static/flags/pa.gif'
-'/tmp/volume/static/flags/dk.gif' -> 'default/static/flags/dk.gif'
-'/tmp/volume/static/flags/tw.gif' -> 'default/static/flags/tw.gif'
-'/tmp/volume/static/flags/de.gif' -> 'default/static/flags/de.gif'
-'/tmp/volume/static/flags/io.gif' -> 'default/static/flags/io.gif'
-'/tmp/volume/static/flags/bq.gif' -> 'default/static/flags/bq.gif'
-'/tmp/volume/static/flags/nr.gif' -> 'default/static/flags/nr.gif'
-'/tmp/volume/static/flags/gu.gif' -> 'default/static/flags/gu.gif'
-'/tmp/volume/static/flags/my.gif' -> 'default/static/flags/my.gif'
-'/tmp/volume/static/flags/bv.gif' -> 'default/static/flags/bv.gif'
-'/tmp/volume/static/flags/tl.gif' -> 'default/static/flags/tl.gif'
-'/tmp/volume/static/flags/sprite.css' -> 'default/static/flags/sprite.css'
-'/tmp/volume/static/flags/sy.gif' -> 'default/static/flags/sy.gif'
-'/tmp/volume/static/flags/bs.gif' -> 'default/static/flags/bs.gif'
-'/tmp/volume/static/flags/im.gif' -> 'default/static/flags/im.gif'
-'/tmp/volume/static/flags/bg.gif' -> 'default/static/flags/bg.gif'
-'/tmp/volume/static/flags/ga.gif' -> 'default/static/flags/ga.gif'
-'/tmp/volume/static/flags/bi.gif' -> 'default/static/flags/bi.gif'
-'/tmp/volume/static/flags/ly.gif' -> 'default/static/flags/ly.gif'
-'/tmp/volume/static/flags/sz.gif' -> 'default/static/flags/sz.gif'
-'/tmp/volume/static/flags/mq.gif' -> 'default/static/flags/mq.gif'
-'/tmp/volume/static/flags/fm.gif' -> 'default/static/flags/fm.gif'
-'/tmp/volume/static/flags/is.gif' -> 'default/static/flags/is.gif'
-'/tmp/volume/static/flags/pl.gif' -> 'default/static/flags/pl.gif'
-'/tmp/volume/static/flags/tr.gif' -> 'default/static/flags/tr.gif'
-'/tmp/volume/static/flags/ug.gif' -> 'default/static/flags/ug.gif'
-'/tmp/volume/static/flags/tt.gif' -> 'default/static/flags/tt.gif'
-'/tmp/volume/static/flags/es.gif' -> 'default/static/flags/es.gif'
-'/tmp/volume/static/flags/at.gif' -> 'default/static/flags/at.gif'
-'/tmp/volume/static/flags/ye.gif' -> 'default/static/flags/ye.gif'
-'/tmp/volume/static/flags/pg.gif' -> 'default/static/flags/pg.gif'
-'/tmp/volume/static/flags/gt.gif' -> 'default/static/flags/gt.gif'
-'/tmp/volume/static/flags/uz.gif' -> 'default/static/flags/uz.gif'
-'/tmp/volume/static/flags/sl.gif' -> 'default/static/flags/sl.gif'
-'/tmp/volume/static/flags/pn.gif' -> 'default/static/flags/pn.gif'
-'/tmp/volume/static/flags/kr.gif' -> 'default/static/flags/kr.gif'
-'/tmp/volume/static/flags/do.gif' -> 'default/static/flags/do.gif'
-'/tmp/volume/static/flags/ps.gif' -> 'default/static/flags/ps.gif'
-'/tmp/volume/static/flags/ge.gif' -> 'default/static/flags/ge.gif'
-'/tmp/volume/static/flags/bb.gif' -> 'default/static/flags/bb.gif'
-'/tmp/volume/static/flags/kh.gif' -> 'default/static/flags/kh.gif'
-'/tmp/volume/static/flags/pf.gif' -> 'default/static/flags/pf.gif'
-'/tmp/volume/static/flags/ky.gif' -> 'default/static/flags/ky.gif'
-'/tmp/volume/static/flags/bd.gif' -> 'default/static/flags/bd.gif'
-'/tmp/volume/static/flags/jm.gif' -> 'default/static/flags/jm.gif'
-'/tmp/volume/static/flags/az.gif' -> 'default/static/flags/az.gif'
-'/tmp/volume/static/flags/ch.gif' -> 'default/static/flags/ch.gif'
-'/tmp/volume/static/flags/uy.gif' -> 'default/static/flags/uy.gif'
-'/tmp/volume/static/flags/tc.gif' -> 'default/static/flags/tc.gif'
-'/tmp/volume/static/flags/iq.gif' -> 'default/static/flags/iq.gif'
-'/tmp/volume/static/flags/et.gif' -> 'default/static/flags/et.gif'
-'/tmp/volume/static/flags/bn.gif' -> 'default/static/flags/bn.gif'
-'/tmp/volume/static/flags/kw.gif' -> 'default/static/flags/kw.gif'
-'/tmp/volume/static/flags/gr.gif' -> 'default/static/flags/gr.gif'
-'/tmp/volume/static/flags/fi.gif' -> 'default/static/flags/fi.gif'
-'/tmp/volume/static/flags/kp.gif' -> 'default/static/flags/kp.gif'
-'/tmp/volume/static/flags/jp.gif' -> 'default/static/flags/jp.gif'
-'/tmp/volume/static/flags/qa.gif' -> 'default/static/flags/qa.gif'
-'/tmp/volume/static/flags/ck.gif' -> 'default/static/flags/ck.gif'
-'/tmp/volume/static/flags/mw.gif' -> 'default/static/flags/mw.gif'
-'/tmp/volume/static/flags/fo.gif' -> 'default/static/flags/fo.gif'
-'/tmp/volume/static/flags/gy.gif' -> 'default/static/flags/gy.gif'
-'/tmp/volume/static/flags/ag.gif' -> 'default/static/flags/ag.gif'
-'/tmp/volume/static/flags/gw.gif' -> 'default/static/flags/gw.gif'
-'/tmp/volume/static/flags/cw.gif' -> 'default/static/flags/cw.gif'
-'/tmp/volume/static/flags/ls.gif' -> 'default/static/flags/ls.gif'
-'/tmp/volume/static/flags/za.gif' -> 'default/static/flags/za.gif'
-'/tmp/volume/static/flags/mk.gif' -> 'default/static/flags/mk.gif'
-'/tmp/volume/static/flags/vn.gif' -> 'default/static/flags/vn.gif'
-'/tmp/volume/static/flags/mz.gif' -> 'default/static/flags/mz.gif'
-'/tmp/volume/static/flags/li.gif' -> 'default/static/flags/li.gif'
-'/tmp/volume/static/flags/so.gif' -> 'default/static/flags/so.gif'
-'/tmp/volume/static/flags/ao.gif' -> 'default/static/flags/ao.gif'
-'/tmp/volume/static/flags/lu.gif' -> 'default/static/flags/lu.gif'
-'/tmp/volume/static/flags/mc.gif' -> 'default/static/flags/mc.gif'
-'/tmp/volume/static/flags/tv.gif' -> 'default/static/flags/tv.gif'
-'/tmp/volume/static/flags/om.gif' -> 'default/static/flags/om.gif'
-'/tmp/volume/static/flags/md.gif' -> 'default/static/flags/md.gif'
-'/tmp/volume/static/flags/sm.gif' -> 'default/static/flags/sm.gif'
-'/tmp/volume/static/flags/vc.gif' -> 'default/static/flags/vc.gif'
-'/tmp/volume/static/flags/zw.gif' -> 'default/static/flags/zw.gif'
-'/tmp/volume/static/flags/cf.gif' -> 'default/static/flags/cf.gif'
-'/tmp/volume/static/flags/tj.gif' -> 'default/static/flags/tj.gif'
-'/tmp/volume/static/flags/mu.gif' -> 'default/static/flags/mu.gif'
-'/tmp/volume/static/flags/dm.gif' -> 'default/static/flags/dm.gif'
-'/tmp/volume/static/flags/cm.gif' -> 'default/static/flags/cm.gif'
-'/tmp/volume/static/flags/sj.gif' -> 'default/static/flags/sj.gif'
-'/tmp/volume/static/flags/la.gif' -> 'default/static/flags/la.gif'
-'/tmp/volume/static/flags/cd.gif' -> 'default/static/flags/cd.gif'
-'/tmp/volume/static/flags/kn.gif' -> 'default/static/flags/kn.gif'
-'/tmp/volume/static/flags/cz.gif' -> 'default/static/flags/cz.gif'
-'/tmp/volume/static/flags/cv.gif' -> 'default/static/flags/cv.gif'
-'/tmp/volume/static/flags/mf.gif' -> 'default/static/flags/mf.gif'
-'/tmp/volume/static/flags/hu.gif' -> 'default/static/flags/hu.gif'
-'/tmp/volume/static/flags/gf.gif' -> 'default/static/flags/gf.gif'
-'/tmp/volume/static/flags/ax.gif' -> 'default/static/flags/ax.gif'
-'/tmp/volume/static/flags/ua.gif' -> 'default/static/flags/ua.gif'
-'/tmp/volume/static/flags/mr.gif' -> 'default/static/flags/mr.gif'
-'/tmp/volume/static/flags/sprite.png' -> 'default/static/flags/sprite.png'
-'/tmp/volume/static/flags/no.gif' -> 'default/static/flags/no.gif'
-'/tmp/volume/static/flags/ws.gif' -> 'default/static/flags/ws.gif'
-'/tmp/volume/static/flags/pr.gif' -> 'default/static/flags/pr.gif'
-'/tmp/volume/static/flags/tn.gif' -> 'default/static/flags/tn.gif'
-'/tmp/volume/static/flags/bw.gif' -> 'default/static/flags/bw.gif'
-'/tmp/volume/static/flags/kg.gif' -> 'default/static/flags/kg.gif'
-'/tmp/volume/static/flags/al.gif' -> 'default/static/flags/al.gif'
-'/tmp/volume/static/flags/eg.gif' -> 'default/static/flags/eg.gif'
-'/tmp/volume/static/flags/ve.gif' -> 'default/static/flags/ve.gif'
-'/tmp/volume/static/flags/be.gif' -> 'default/static/flags/be.gif'
-'/tmp/volume/static/flags/ae.gif' -> 'default/static/flags/ae.gif'
-'/tmp/volume/static/flags/gp.gif' -> 'default/static/flags/gp.gif'
-'/tmp/volume/static/flags/sg.gif' -> 'default/static/flags/sg.gif'
-'/tmp/volume/static/flags/ca.gif' -> 'default/static/flags/ca.gif'
-'/tmp/volume/static/flags/gd.gif' -> 'default/static/flags/gd.gif'
-'/tmp/volume/static/flags/bf.gif' -> 'default/static/flags/bf.gif'
-'/tmp/volume/static/flags/dj.gif' -> 'default/static/flags/dj.gif'
-'/tmp/volume/static/flags/km.gif' -> 'default/static/flags/km.gif'
-'/tmp/volume/static/flags/rs.gif' -> 'default/static/flags/rs.gif'
-'/tmp/volume/static/flags/gg.gif' -> 'default/static/flags/gg.gif'
-'/tmp/volume/static/flags/se.gif' -> 'default/static/flags/se.gif'
-'/tmp/volume/static/flags/mp.gif' -> 'default/static/flags/mp.gif'
-'/tmp/volume/static/flags/pe.gif' -> 'default/static/flags/pe.gif'
-'/tmp/volume/static/flags/st.gif' -> 'default/static/flags/st.gif'
-'/tmp/volume/static/flags/pt.gif' -> 'default/static/flags/pt.gif'
-'/tmp/volume/static/flags/gn.gif' -> 'default/static/flags/gn.gif'
-'/tmp/volume/static/flags/ma.gif' -> 'default/static/flags/ma.gif'
-'/tmp/volume/static/flags/ie.gif' -> 'default/static/flags/ie.gif'
-'/tmp/volume/static/flags/ss.gif' -> 'default/static/flags/ss.gif'
-'/tmp/volume/static/flags/gl.gif' -> 'default/static/flags/gl.gif'
-'/tmp/volume/static/flags/bo.gif' -> 'default/static/flags/bo.gif'
-'/tmp/volume/static/flags/sa.gif' -> 'default/static/flags/sa.gif'
-'/tmp/volume/static/flags/ki.gif' -> 'default/static/flags/ki.gif'
-'/tmp/volume/static/flags/hk.gif' -> 'default/static/flags/hk.gif'
-'/tmp/volume/static/flags/eu.gif' -> 'default/static/flags/eu.gif'
-'/tmp/volume/static/flags/sc.gif' -> 'default/static/flags/sc.gif'
-'/tmp/volume/static/flags/bz.gif' -> 'default/static/flags/bz.gif'
-'/tmp/volume/static/flags/as.gif' -> 'default/static/flags/as.gif'
-'/tmp/volume/static/flags/it.gif' -> 'default/static/flags/it.gif'
-'/tmp/volume/static/flags/eh.gif' -> 'default/static/flags/eh.gif'
-'/tmp/volume/static/flags/mn.gif' -> 'default/static/flags/mn.gif'
-'/tmp/volume/static/flags/hn.gif' -> 'default/static/flags/hn.gif'
-'/tmp/volume/static/flags/ro.gif' -> 'default/static/flags/ro.gif'
-'/tmp/volume/static/flags/cr.gif' -> 'default/static/flags/cr.gif'
-'/tmp/volume/static/flags/td.gif' -> 'default/static/flags/td.gif'
-'/tmp/volume/static/flags/vg.gif' -> 'default/static/flags/vg.gif'
-'/tmp/volume/static/flags/um.gif' -> 'default/static/flags/um.gif'
-'/tmp/volume/static/flags/sx.gif' -> 'default/static/flags/sx.gif'
-'/tmp/volume/static/flags/ne.gif' -> 'default/static/flags/ne.gif'
-'/tmp/volume/static/flags/th.gif' -> 'default/static/flags/th.gif'
-'/tmp/volume/static/flags/mm.gif' -> 'default/static/flags/mm.gif'
-'/tmp/volume/static/flags/pk.gif' -> 'default/static/flags/pk.gif'
-'/tmp/volume/static/flags/gq.gif' -> 'default/static/flags/gq.gif'
-'/tmp/volume/static/flags/sn.gif' -> 'default/static/flags/sn.gif'
-'/tmp/volume/static/flags/np.gif' -> 'default/static/flags/np.gif'
-'/tmp/volume/static/flags/af.gif' -> 'default/static/flags/af.gif'
-'/tmp/volume/static/flags/sd.gif' -> 'default/static/flags/sd.gif'
-'/tmp/volume/static/flags/bt.gif' -> 'default/static/flags/bt.gif'
-'/tmp/volume/static/flags/lr.gif' -> 'default/static/flags/lr.gif'
-'/tmp/volume/static/flags/by.gif' -> 'default/static/flags/by.gif'
-'/tmp/volume/static/flags/je.gif' -> 'default/static/flags/je.gif'
-'/tmp/volume/static/flags/nl.gif' -> 'default/static/flags/nl.gif'
-'/tmp/volume/static/flags/ru.gif' -> 'default/static/flags/ru.gif'
-'/tmp/volume/static/flags/rw.gif' -> 'default/static/flags/rw.gif'
-'/tmp/volume/static/flags/ms.gif' -> 'default/static/flags/ms.gif'
-'/tmp/volume/static/flags/ad.gif' -> 'default/static/flags/ad.gif'
-'/tmp/volume/static/flags/vu.gif' -> 'default/static/flags/vu.gif'
-'/tmp/volume/static/flags/gb.gif' -> 'default/static/flags/gb.gif'
-'/tmp/volume/static/flags/tm.gif' -> 'default/static/flags/tm.gif'
-'/tmp/volume/static/flags/mx.gif' -> 'default/static/flags/mx.gif'
-'/tmp/volume/static/flags/vi.gif' -> 'default/static/flags/vi.gif'
-'/tmp/volume/static/flags/ee.gif' -> 'default/static/flags/ee.gif'
-'/tmp/volume/static/flags/cg.gif' -> 'default/static/flags/cg.gif'
-'/tmp/volume/static/flags/tg.gif' -> 'default/static/flags/tg.gif'
-'/tmp/volume/static/flags/sv.gif' -> 'default/static/flags/sv.gif'
-'/tmp/volume/static/flags/il.gif' -> 'default/static/flags/il.gif'
-'/tmp/volume/static/flags/au.gif' -> 'default/static/flags/au.gif'
-'/tmp/volume/static/flags/lv.gif' -> 'default/static/flags/lv.gif'
-'/tmp/volume/static/flags/yt.gif' -> 'default/static/flags/yt.gif'
-'/tmp/volume/static/flags/cl.gif' -> 'default/static/flags/cl.gif'
-'/tmp/volume/media' -> 'default/media'
-'/tmp/volume/media/__sized__' -> 'default/media/__sized__'
-'/tmp/volume/media/__sized__/category-backgrounds' -> 'default/media/__sized__/category-backgrounds'
-'/tmp/volume/media/__sized__/collection-backgrounds' -> 'default/media/__sized__/collection-backgrounds'
+'/tmp/volume/static/assets' -> 'static/assets'
+'/tmp/volume/static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg' -> 'static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg'
+'/tmp/volume/static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg' -> 'static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg'
+'/tmp/volume/static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2' -> 'static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2'
+'/tmp/volume/static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg' -> 'static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg'
+'/tmp/volume/static/assets/logo-light.d493430f320751f6bffac210ced37643.svg' -> 'static/assets/logo-light.d493430f320751f6bffac210ced37643.svg'
+'/tmp/volume/static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg' -> 'static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg'
+'/tmp/volume/static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2' -> 'static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2'
+'/tmp/volume/static/assets/storefront.e1ffe21d4c6f258d297b.css' -> 'static/assets/storefront.e1ffe21d4c6f258d297b.css'
+'/tmp/volume/static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff' -> 'static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff'
+'/tmp/volume/static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2' -> 'static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2'
+'/tmp/volume/static/assets/document.5da8542a5fa88198e0b8.css' -> 'static/assets/document.5da8542a5fa88198e0b8.css'
+'/tmp/volume/static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg' -> 'static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg'
+'/tmp/volume/static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg' -> 'static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg'
+'/tmp/volume/static/assets/dashboard.16a701600f4a5f253104.css' -> 'static/assets/dashboard.16a701600f4a5f253104.css'
+'/tmp/volume/static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg' -> 'static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg'
+'/tmp/volume/static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg' -> 'static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg'
+'/tmp/volume/static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff' -> 'static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff'
+'/tmp/volume/static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg' -> 'static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg'
+'/tmp/volume/static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff' -> 'static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff'
+'/tmp/volume/static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg' -> 'static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg'
+'/tmp/volume/static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2' -> 'static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2'
+'/tmp/volume/static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff' -> 'static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff'
+'/tmp/volume/static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg' -> 'static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg'
+'/tmp/volume/static/assets/dashboard.16a701600f4a5f253104.js' -> 'static/assets/dashboard.16a701600f4a5f253104.js'
+'/tmp/volume/static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg' -> 'static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg'
+'/tmp/volume/static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff' -> 'static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff'
+'/tmp/volume/static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg' -> 'static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg'
+'/tmp/volume/static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2' -> 'static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2'
+'/tmp/volume/static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg' -> 'static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg'
+'/tmp/volume/static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff' -> 'static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff'
+'/tmp/volume/static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2' -> 'static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2'
+'/tmp/volume/static/assets/document.5da8542a5fa88198e0b8.js' -> 'static/assets/document.5da8542a5fa88198e0b8.js'
+'/tmp/volume/static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg' -> 'static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg'
+'/tmp/volume/static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff' -> 'static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff'
+'/tmp/volume/static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg' -> 'static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg'
+'/tmp/volume/static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf' -> 'static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf'
+'/tmp/volume/static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg' -> 'static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg'
+'/tmp/volume/static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2' -> 'static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2'
+'/tmp/volume/static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg' -> 'static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg'
+'/tmp/volume/static/assets/storefront.e1ffe21d4c6f258d297b.js' -> 'static/assets/storefront.e1ffe21d4c6f258d297b.js'
+'/tmp/volume/static/assets/dashboard-next.46a99ef4cd5c9ff12206.js' -> 'static/assets/dashboard-next.46a99ef4cd5c9ff12206.js'
+'/tmp/volume/static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg' -> 'static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg'
+'/tmp/volume/static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg' -> 'static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg'
+'/tmp/volume/static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg' -> 'static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg'
+'/tmp/volume/static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf' -> 'static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf'
+'/tmp/volume/static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg' -> 'static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg'
+'/tmp/volume/static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff' -> 'static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff'
+'/tmp/volume/static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2' -> 'static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2'
+'/tmp/volume/static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf' -> 'static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf'
+'/tmp/volume/static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png' -> 'static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png'
+'/tmp/volume/static/favicons' -> 'static/favicons'
+'/tmp/volume/static/favicons/mstile-310x150.png' -> 'static/favicons/mstile-310x150.png'
+'/tmp/volume/static/favicons/android-chrome-512x512.png' -> 'static/favicons/android-chrome-512x512.png'
+'/tmp/volume/static/favicons/favicon-16x16.png' -> 'static/favicons/favicon-16x16.png'
+'/tmp/volume/static/favicons/mstile-144x144.png' -> 'static/favicons/mstile-144x144.png'
+'/tmp/volume/static/favicons/safari-pinned-tab.svg' -> 'static/favicons/safari-pinned-tab.svg'
+'/tmp/volume/static/favicons/browserconfig.xml' -> 'static/favicons/browserconfig.xml'
+'/tmp/volume/static/favicons/favicon.ico' -> 'static/favicons/favicon.ico'
+'/tmp/volume/static/favicons/mstile-150x150.png' -> 'static/favicons/mstile-150x150.png'
+'/tmp/volume/static/favicons/android-chrome-192x192.png' -> 'static/favicons/android-chrome-192x192.png'
+'/tmp/volume/static/favicons/favicon-32x32.png' -> 'static/favicons/favicon-32x32.png'
+'/tmp/volume/static/favicons/mstile-70x70.png' -> 'static/favicons/mstile-70x70.png'
+'/tmp/volume/static/favicons/mstile-310x310.png' -> 'static/favicons/mstile-310x310.png'
+'/tmp/volume/static/favicons/apple-touch-icon.png' -> 'static/favicons/apple-touch-icon.png'
+'/tmp/volume/static/images' -> 'static/images'
+'/tmp/volume/static/images/placeholder120x120.png' -> 'static/images/placeholder120x120.png'
+'/tmp/volume/static/images/favicon.svg' -> 'static/images/favicon.svg'
+'/tmp/volume/static/images/reset-bg.png' -> 'static/images/reset-bg.png'
+'/tmp/volume/static/images/filter-icon.svg' -> 'static/images/filter-icon.svg'
+'/tmp/volume/static/images/arrow-up.svg' -> 'static/images/arrow-up.svg'
+'/tmp/volume/static/images/confirm-order-bg.png' -> 'static/images/confirm-order-bg.png'
+'/tmp/volume/static/images/block3.jpg' -> 'static/images/block3.jpg'
+'/tmp/volume/static/images/placeholder540x540.png' -> 'static/images/placeholder540x540.png'
+'/tmp/volume/static/images/not-found-404.svg' -> 'static/images/not-found-404.svg'
+'/tmp/volume/static/images/arrow-select.svg' -> 'static/images/arrow-select.svg'
+'/tmp/volume/static/images/checkout.svg' -> 'static/images/checkout.svg'
+'/tmp/volume/static/images/search.svg' -> 'static/images/search.svg'
+'/tmp/volume/static/images/mobile-menu.svg' -> 'static/images/mobile-menu.svg'
+'/tmp/volume/static/images/twitter-logo.svg' -> 'static/images/twitter-logo.svg'
+'/tmp/volume/static/images/what.svg' -> 'static/images/what.svg'
+'/tmp/volume/static/images/logo-dark.svg' -> 'static/images/logo-dark.svg'
+'/tmp/volume/static/images/arrow-up-icon.svg' -> 'static/images/arrow-up-icon.svg'
+'/tmp/volume/static/images/arrow-down-icon.svg' -> 'static/images/arrow-down-icon.svg'
+'/tmp/volume/static/images/pass-visible.svg' -> 'static/images/pass-visible.svg'
+'/tmp/volume/static/images/checkout-bg.png' -> 'static/images/checkout-bg.png'
+'/tmp/volume/static/images/gallery-arrow.svg' -> 'static/images/gallery-arrow.svg'
+'/tmp/volume/static/images/sample-product2.jpg' -> 'static/images/sample-product2.jpg'
+'/tmp/volume/static/images/block2.jpg' -> 'static/images/block2.jpg'
+'/tmp/volume/static/images/confirm-order-bg2x.png' -> 'static/images/confirm-order-bg2x.png'
+'/tmp/volume/static/images/login-background.svg' -> 'static/images/login-background.svg'
+'/tmp/volume/static/images/linkedin-logo.svg' -> 'static/images/linkedin-logo.svg'
+'/tmp/volume/static/images/empty-checkout-bg.png' -> 'static/images/empty-checkout-bg.png'
+'/tmp/volume/static/images/meetup-logo.svg' -> 'static/images/meetup-logo.svg'
+'/tmp/volume/static/images/login-bg2x.png' -> 'static/images/login-bg2x.png'
+'/tmp/volume/static/images/empty-checkout-bg2x.png' -> 'static/images/empty-checkout-bg2x.png'
+'/tmp/volume/static/images/dribbble-logo.svg' -> 'static/images/dribbble-logo.svg'
+'/tmp/volume/static/images/placeholder1080x1080.png' -> 'static/images/placeholder1080x1080.png'
+'/tmp/volume/static/images/arrow-down.svg' -> 'static/images/arrow-down.svg'
+'/tmp/volume/static/images/instagram-logo.svg' -> 'static/images/instagram-logo.svg'
+'/tmp/volume/static/images/sample-product.jpg' -> 'static/images/sample-product.jpg'
+'/tmp/volume/static/images/facebook-logo.svg' -> 'static/images/facebook-logo.svg'
+'/tmp/volume/static/images/logo-light.svg' -> 'static/images/logo-light.svg'
+'/tmp/volume/static/images/arrow-left.svg' -> 'static/images/arrow-left.svg'
+'/tmp/volume/static/images/sale-bg.svg' -> 'static/images/sale-bg.svg'
+'/tmp/volume/static/images/close.svg' -> 'static/images/close.svg'
+'/tmp/volume/static/images/photo-icon.svg' -> 'static/images/photo-icon.svg'
+'/tmp/volume/static/images/login-bg.png' -> 'static/images/login-bg.png'
+'/tmp/volume/static/images/chevron-down.svg' -> 'static/images/chevron-down.svg'
+'/tmp/volume/static/images/placeholder60x60.png' -> 'static/images/placeholder60x60.png'
+'/tmp/volume/static/images/checkout-bg2x.png' -> 'static/images/checkout-bg2x.png'
+'/tmp/volume/static/images/github-logo.svg' -> 'static/images/github-logo.svg'
+'/tmp/volume/static/images/logo-white.svg' -> 'static/images/logo-white.svg'
+'/tmp/volume/static/images/chevron-up.svg' -> 'static/images/chevron-up.svg'
+'/tmp/volume/static/images/placeholder255x255.png' -> 'static/images/placeholder255x255.png'
+'/tmp/volume/static/images/edit.svg' -> 'static/images/edit.svg'
+'/tmp/volume/static/images/google-logo.svg' -> 'static/images/google-logo.svg'
+'/tmp/volume/static/images/no-results-bg.svg' -> 'static/images/no-results-bg.svg'
+'/tmp/volume/static/images/loader.svg' -> 'static/images/loader.svg'
+'/tmp/volume/static/images/pass-invisible.svg' -> 'static/images/pass-invisible.svg'
+'/tmp/volume/static/images/delete.svg' -> 'static/images/delete.svg'
+'/tmp/volume/static/images/block1.jpg' -> 'static/images/block1.jpg'
+'/tmp/volume/static/images/avatars' -> 'static/images/avatars'
+'/tmp/volume/static/images/avatars/avatar2.png' -> 'static/images/avatars/avatar2.png'
+'/tmp/volume/static/images/avatars/avatar3.png' -> 'static/images/avatars/avatar3.png'
+'/tmp/volume/static/images/avatars/avatar4.png' -> 'static/images/avatars/avatar4.png'
+'/tmp/volume/static/images/avatars/avatar1.png' -> 'static/images/avatars/avatar1.png'
+'/tmp/volume/static/images/avatars/avatar8.png' -> 'static/images/avatars/avatar8.png'
+'/tmp/volume/static/images/avatars/avatar9.png' -> 'static/images/avatars/avatar9.png'
+'/tmp/volume/static/images/avatars/avatar10.png' -> 'static/images/avatars/avatar10.png'
+'/tmp/volume/static/images/avatars/avatar6.png' -> 'static/images/avatars/avatar6.png'
+'/tmp/volume/static/images/avatars/avatar5.png' -> 'static/images/avatars/avatar5.png'
+'/tmp/volume/static/images/avatars/avatar7.png' -> 'static/images/avatars/avatar7.png'
+'/tmp/volume/static/images/avatars/avatar12.png' -> 'static/images/avatars/avatar12.png'
+'/tmp/volume/static/images/avatars/avatar11.png' -> 'static/images/avatars/avatar11.png'
+'/tmp/volume/static/dashboard' -> 'static/dashboard'
+'/tmp/volume/static/dashboard/images' -> 'static/dashboard/images'
+'/tmp/volume/static/dashboard/images/more-vert.svg' -> 'static/dashboard/images/more-vert.svg'
+'/tmp/volume/static/dashboard/images/store.svg' -> 'static/dashboard/images/store.svg'
+'/tmp/volume/static/dashboard/images/description.svg' -> 'static/dashboard/images/description.svg'
+'/tmp/volume/static/dashboard/images/history.svg' -> 'static/dashboard/images/history.svg'
+'/tmp/volume/static/dashboard/images/add.svg' -> 'static/dashboard/images/add.svg'
+'/tmp/volume/static/dashboard/images/chevron-left.svg' -> 'static/dashboard/images/chevron-left.svg'
+'/tmp/volume/static/dashboard/images/chevron-right.svg' -> 'static/dashboard/images/chevron-right.svg'
+'/tmp/volume/static/dashboard/images/search.svg' -> 'static/dashboard/images/search.svg'
+'/tmp/volume/static/dashboard/images/logo.svg' -> 'static/dashboard/images/logo.svg'
+'/tmp/volume/static/dashboard/images/phone.svg' -> 'static/dashboard/images/phone.svg'
+'/tmp/volume/static/dashboard/images/reorder.svg' -> 'static/dashboard/images/reorder.svg'
+'/tmp/volume/static/dashboard/images/mobile-menu.svg' -> 'static/dashboard/images/mobile-menu.svg'
+'/tmp/volume/static/dashboard/images/style.svg' -> 'static/dashboard/images/style.svg'
+'/tmp/volume/static/dashboard/images/done.svg' -> 'static/dashboard/images/done.svg'
+'/tmp/volume/static/dashboard/images/account-circle.svg' -> 'static/dashboard/images/account-circle.svg'
+'/tmp/volume/static/dashboard/images/email.svg' -> 'static/dashboard/images/email.svg'
+'/tmp/volume/static/dashboard/images/payment.svg' -> 'static/dashboard/images/payment.svg'
+'/tmp/volume/static/dashboard/images/arrow-left.svg' -> 'static/dashboard/images/arrow-left.svg'
+'/tmp/volume/static/dashboard/images/close.svg' -> 'static/dashboard/images/close.svg'
+'/tmp/volume/static/dashboard/images/arrow-drop-down.svg' -> 'static/dashboard/images/arrow-drop-down.svg'
+'/tmp/volume/static/dashboard/images/edit.svg' -> 'static/dashboard/images/edit.svg'
+'/tmp/volume/static/dashboard/images/collections.svg' -> 'static/dashboard/images/collections.svg'
+'/tmp/volume/static/dashboard/images/help.svg' -> 'static/dashboard/images/help.svg'
+'/tmp/volume/static/dashboard/images/editor' -> 'static/dashboard/images/editor'
+'/tmp/volume/static/dashboard/images/editor/quote.svg' -> 'static/dashboard/images/editor/quote.svg'
+'/tmp/volume/static/dashboard/images/editor/format_clear.svg' -> 'static/dashboard/images/editor/format_clear.svg'
+'/tmp/volume/static/dashboard/images/editor/insert_photo.svg' -> 'static/dashboard/images/editor/insert_photo.svg'
+'/tmp/volume/static/dashboard/images/editor/insert_link.svg' -> 'static/dashboard/images/editor/insert_link.svg'
+'/tmp/volume/static/dashboard/images/editor/align_left.svg' -> 'static/dashboard/images/editor/align_left.svg'
+'/tmp/volume/static/dashboard/images/editor/align_right.svg' -> 'static/dashboard/images/editor/align_right.svg'
+'/tmp/volume/static/dashboard/images/editor/align_justify.svg' -> 'static/dashboard/images/editor/align_justify.svg'
+'/tmp/volume/static/dashboard/images/editor/align_center.svg' -> 'static/dashboard/images/editor/align_center.svg'
+'/tmp/volume/static/versatileimagefield' -> 'static/versatileimagefield'
+'/tmp/volume/static/versatileimagefield/css' -> 'static/versatileimagefield/css'
+'/tmp/volume/static/versatileimagefield/css/versatileimagefield.css' -> 'static/versatileimagefield/css/versatileimagefield.css'
+'/tmp/volume/static/versatileimagefield/css/versatileimagefield-bootstrap3.css' -> 'static/versatileimagefield/css/versatileimagefield-bootstrap3.css'
+'/tmp/volume/static/versatileimagefield/css/versatileimagefield-djangoadmin.css' -> 'static/versatileimagefield/css/versatileimagefield-djangoadmin.css'
+'/tmp/volume/static/versatileimagefield/js' -> 'static/versatileimagefield/js'
+'/tmp/volume/static/versatileimagefield/js/versatileimagefield.js' -> 'static/versatileimagefield/js/versatileimagefield.js'
+'/tmp/volume/static/mptt' -> 'static/mptt'
+'/tmp/volume/static/mptt/disclosure-down.png' -> 'static/mptt/disclosure-down.png'
+'/tmp/volume/static/mptt/draggable-admin.css' -> 'static/mptt/draggable-admin.css'
+'/tmp/volume/static/mptt/arrow-move.png' -> 'static/mptt/arrow-move.png'
+'/tmp/volume/static/mptt/disclosure-right.png' -> 'static/mptt/disclosure-right.png'
+'/tmp/volume/static/mptt/draggable-admin.js' -> 'static/mptt/draggable-admin.js'
+'/tmp/volume/static/flags' -> 'static/flags'
+'/tmp/volume/static/flags/bm.gif' -> 'static/flags/bm.gif'
+'/tmp/volume/static/flags/ph.gif' -> 'static/flags/ph.gif'
+'/tmp/volume/static/flags/bj.gif' -> 'static/flags/bj.gif'
+'/tmp/volume/static/flags/aq.gif' -> 'static/flags/aq.gif'
+'/tmp/volume/static/flags/ec.gif' -> 'static/flags/ec.gif'
+'/tmp/volume/static/flags/am.gif' -> 'static/flags/am.gif'
+'/tmp/volume/static/flags/id.gif' -> 'static/flags/id.gif'
+'/tmp/volume/static/flags/ar.gif' -> 'static/flags/ar.gif'
+'/tmp/volume/static/flags/dz.gif' -> 'static/flags/dz.gif'
+'/tmp/volume/static/flags/bh.gif' -> 'static/flags/bh.gif'
+'/tmp/volume/static/flags/ng.gif' -> 'static/flags/ng.gif'
+'/tmp/volume/static/flags/aw.gif' -> 'static/flags/aw.gif'
+'/tmp/volume/static/flags/ai.gif' -> 'static/flags/ai.gif'
+'/tmp/volume/static/flags/sh.gif' -> 'static/flags/sh.gif'
+'/tmp/volume/static/flags/mv.gif' -> 'static/flags/mv.gif'
+'/tmp/volume/static/flags/jo.gif' -> 'static/flags/jo.gif'
+'/tmp/volume/static/flags/va.gif' -> 'static/flags/va.gif'
+'/tmp/volume/static/flags/py.gif' -> 'static/flags/py.gif'
+'/tmp/volume/static/flags/ci.gif' -> 'static/flags/ci.gif'
+'/tmp/volume/static/flags/cc.gif' -> 'static/flags/cc.gif'
+'/tmp/volume/static/flags/gm.gif' -> 'static/flags/gm.gif'
+'/tmp/volume/static/flags/er.gif' -> 'static/flags/er.gif'
+'/tmp/volume/static/flags/me.gif' -> 'static/flags/me.gif'
+'/tmp/volume/static/flags/ml.gif' -> 'static/flags/ml.gif'
+'/tmp/volume/static/flags/ke.gif' -> 'static/flags/ke.gif'
+'/tmp/volume/static/flags/us.gif' -> 'static/flags/us.gif'
+'/tmp/volume/static/flags/nz.gif' -> 'static/flags/nz.gif'
+'/tmp/volume/static/flags/ba.gif' -> 'static/flags/ba.gif'
+'/tmp/volume/static/flags/fr.gif' -> 'static/flags/fr.gif'
+'/tmp/volume/static/flags/na.gif' -> 'static/flags/na.gif'
+'/tmp/volume/static/flags/cy.gif' -> 'static/flags/cy.gif'
+'/tmp/volume/static/flags/mg.gif' -> 'static/flags/mg.gif'
+'/tmp/volume/static/flags/gh.gif' -> 'static/flags/gh.gif'
+'/tmp/volume/static/flags/__.gif' -> 'static/flags/__.gif'
+'/tmp/volume/static/flags/lk.gif' -> 'static/flags/lk.gif'
+'/tmp/volume/static/flags/sk.gif' -> 'static/flags/sk.gif'
+'/tmp/volume/static/flags/kz.gif' -> 'static/flags/kz.gif'
+'/tmp/volume/static/flags/sprite-hq.png' -> 'static/flags/sprite-hq.png'
+'/tmp/volume/static/flags/mt.gif' -> 'static/flags/mt.gif'
+'/tmp/volume/static/flags/si.gif' -> 'static/flags/si.gif'
+'/tmp/volume/static/flags/zm.gif' -> 'static/flags/zm.gif'
+'/tmp/volume/static/flags/sprite-hq.css' -> 'static/flags/sprite-hq.css'
+'/tmp/volume/static/flags/mh.gif' -> 'static/flags/mh.gif'
+'/tmp/volume/static/flags/hr.gif' -> 'static/flags/hr.gif'
+'/tmp/volume/static/flags/hm.gif' -> 'static/flags/hm.gif'
+'/tmp/volume/static/flags/cn.gif' -> 'static/flags/cn.gif'
+'/tmp/volume/static/flags/tk.gif' -> 'static/flags/tk.gif'
+'/tmp/volume/static/flags/cx.gif' -> 'static/flags/cx.gif'
+'/tmp/volume/static/flags/nu.gif' -> 'static/flags/nu.gif'
+'/tmp/volume/static/flags/pw.gif' -> 'static/flags/pw.gif'
+'/tmp/volume/static/flags/co.gif' -> 'static/flags/co.gif'
+'/tmp/volume/static/flags/sr.gif' -> 'static/flags/sr.gif'
+'/tmp/volume/static/flags/sb.gif' -> 'static/flags/sb.gif'
+'/tmp/volume/static/flags/wf.gif' -> 'static/flags/wf.gif'
+'/tmp/volume/static/flags/lb.gif' -> 'static/flags/lb.gif'
+'/tmp/volume/static/flags/ni.gif' -> 'static/flags/ni.gif'
+'/tmp/volume/static/flags/fk.gif' -> 'static/flags/fk.gif'
+'/tmp/volume/static/flags/nf.gif' -> 'static/flags/nf.gif'
+'/tmp/volume/static/flags/pm.gif' -> 'static/flags/pm.gif'
+'/tmp/volume/static/flags/to.gif' -> 'static/flags/to.gif'
+'/tmp/volume/static/flags/tf.gif' -> 'static/flags/tf.gif'
+'/tmp/volume/static/flags/bl.gif' -> 'static/flags/bl.gif'
+'/tmp/volume/static/flags/ir.gif' -> 'static/flags/ir.gif'
+'/tmp/volume/static/flags/lc.gif' -> 'static/flags/lc.gif'
+'/tmp/volume/static/flags/mo.gif' -> 'static/flags/mo.gif'
+'/tmp/volume/static/flags/gi.gif' -> 'static/flags/gi.gif'
+'/tmp/volume/static/flags/br.gif' -> 'static/flags/br.gif'
+'/tmp/volume/static/flags/nc.gif' -> 'static/flags/nc.gif'
+'/tmp/volume/static/flags/in.gif' -> 'static/flags/in.gif'
+'/tmp/volume/static/flags/re.gif' -> 'static/flags/re.gif'
+'/tmp/volume/static/flags/ht.gif' -> 'static/flags/ht.gif'
+'/tmp/volume/static/flags/fj.gif' -> 'static/flags/fj.gif'
+'/tmp/volume/static/flags/gs.gif' -> 'static/flags/gs.gif'
+'/tmp/volume/static/flags/cu.gif' -> 'static/flags/cu.gif'
+'/tmp/volume/static/flags/tz.gif' -> 'static/flags/tz.gif'
+'/tmp/volume/static/flags/lt.gif' -> 'static/flags/lt.gif'
+'/tmp/volume/static/flags/pa.gif' -> 'static/flags/pa.gif'
+'/tmp/volume/static/flags/dk.gif' -> 'static/flags/dk.gif'
+'/tmp/volume/static/flags/tw.gif' -> 'static/flags/tw.gif'
+'/tmp/volume/static/flags/de.gif' -> 'static/flags/de.gif'
+'/tmp/volume/static/flags/io.gif' -> 'static/flags/io.gif'
+'/tmp/volume/static/flags/bq.gif' -> 'static/flags/bq.gif'
+'/tmp/volume/static/flags/nr.gif' -> 'static/flags/nr.gif'
+'/tmp/volume/static/flags/gu.gif' -> 'static/flags/gu.gif'
+'/tmp/volume/static/flags/my.gif' -> 'static/flags/my.gif'
+'/tmp/volume/static/flags/bv.gif' -> 'static/flags/bv.gif'
+'/tmp/volume/static/flags/tl.gif' -> 'static/flags/tl.gif'
+'/tmp/volume/static/flags/sprite.css' -> 'static/flags/sprite.css'
+'/tmp/volume/static/flags/sy.gif' -> 'static/flags/sy.gif'
+'/tmp/volume/static/flags/bs.gif' -> 'static/flags/bs.gif'
+'/tmp/volume/static/flags/im.gif' -> 'static/flags/im.gif'
+'/tmp/volume/static/flags/bg.gif' -> 'static/flags/bg.gif'
+'/tmp/volume/static/flags/ga.gif' -> 'static/flags/ga.gif'
+'/tmp/volume/static/flags/bi.gif' -> 'static/flags/bi.gif'
+'/tmp/volume/static/flags/ly.gif' -> 'static/flags/ly.gif'
+'/tmp/volume/static/flags/sz.gif' -> 'static/flags/sz.gif'
+'/tmp/volume/static/flags/mq.gif' -> 'static/flags/mq.gif'
+'/tmp/volume/static/flags/fm.gif' -> 'static/flags/fm.gif'
+'/tmp/volume/static/flags/is.gif' -> 'static/flags/is.gif'
+'/tmp/volume/static/flags/pl.gif' -> 'static/flags/pl.gif'
+'/tmp/volume/static/flags/tr.gif' -> 'static/flags/tr.gif'
+'/tmp/volume/static/flags/ug.gif' -> 'static/flags/ug.gif'
+'/tmp/volume/static/flags/tt.gif' -> 'static/flags/tt.gif'
+'/tmp/volume/static/flags/es.gif' -> 'static/flags/es.gif'
+'/tmp/volume/static/flags/at.gif' -> 'static/flags/at.gif'
+'/tmp/volume/static/flags/ye.gif' -> 'static/flags/ye.gif'
+'/tmp/volume/static/flags/pg.gif' -> 'static/flags/pg.gif'
+'/tmp/volume/static/flags/gt.gif' -> 'static/flags/gt.gif'
+'/tmp/volume/static/flags/uz.gif' -> 'static/flags/uz.gif'
+'/tmp/volume/static/flags/sl.gif' -> 'static/flags/sl.gif'
+'/tmp/volume/static/flags/pn.gif' -> 'static/flags/pn.gif'
+'/tmp/volume/static/flags/kr.gif' -> 'static/flags/kr.gif'
+'/tmp/volume/static/flags/do.gif' -> 'static/flags/do.gif'
+'/tmp/volume/static/flags/ps.gif' -> 'static/flags/ps.gif'
+'/tmp/volume/static/flags/ge.gif' -> 'static/flags/ge.gif'
+'/tmp/volume/static/flags/bb.gif' -> 'static/flags/bb.gif'
+'/tmp/volume/static/flags/kh.gif' -> 'static/flags/kh.gif'
+'/tmp/volume/static/flags/pf.gif' -> 'static/flags/pf.gif'
+'/tmp/volume/static/flags/ky.gif' -> 'static/flags/ky.gif'
+'/tmp/volume/static/flags/bd.gif' -> 'static/flags/bd.gif'
+'/tmp/volume/static/flags/jm.gif' -> 'static/flags/jm.gif'
+'/tmp/volume/static/flags/az.gif' -> 'static/flags/az.gif'
+'/tmp/volume/static/flags/ch.gif' -> 'static/flags/ch.gif'
+'/tmp/volume/static/flags/uy.gif' -> 'static/flags/uy.gif'
+'/tmp/volume/static/flags/tc.gif' -> 'static/flags/tc.gif'
+'/tmp/volume/static/flags/iq.gif' -> 'static/flags/iq.gif'
+'/tmp/volume/static/flags/et.gif' -> 'static/flags/et.gif'
+'/tmp/volume/static/flags/bn.gif' -> 'static/flags/bn.gif'
+'/tmp/volume/static/flags/kw.gif' -> 'static/flags/kw.gif'
+'/tmp/volume/static/flags/gr.gif' -> 'static/flags/gr.gif'
+'/tmp/volume/static/flags/fi.gif' -> 'static/flags/fi.gif'
+'/tmp/volume/static/flags/kp.gif' -> 'static/flags/kp.gif'
+'/tmp/volume/static/flags/jp.gif' -> 'static/flags/jp.gif'
+'/tmp/volume/static/flags/qa.gif' -> 'static/flags/qa.gif'
+'/tmp/volume/static/flags/ck.gif' -> 'static/flags/ck.gif'
+'/tmp/volume/static/flags/mw.gif' -> 'static/flags/mw.gif'
+'/tmp/volume/static/flags/fo.gif' -> 'static/flags/fo.gif'
+'/tmp/volume/static/flags/gy.gif' -> 'static/flags/gy.gif'
+'/tmp/volume/static/flags/ag.gif' -> 'static/flags/ag.gif'
+'/tmp/volume/static/flags/gw.gif' -> 'static/flags/gw.gif'
+'/tmp/volume/static/flags/cw.gif' -> 'static/flags/cw.gif'
+'/tmp/volume/static/flags/ls.gif' -> 'static/flags/ls.gif'
+'/tmp/volume/static/flags/za.gif' -> 'static/flags/za.gif'
+'/tmp/volume/static/flags/mk.gif' -> 'static/flags/mk.gif'
+'/tmp/volume/static/flags/vn.gif' -> 'static/flags/vn.gif'
+'/tmp/volume/static/flags/mz.gif' -> 'static/flags/mz.gif'
+'/tmp/volume/static/flags/li.gif' -> 'static/flags/li.gif'
+'/tmp/volume/static/flags/so.gif' -> 'static/flags/so.gif'
+'/tmp/volume/static/flags/ao.gif' -> 'static/flags/ao.gif'
+'/tmp/volume/static/flags/lu.gif' -> 'static/flags/lu.gif'
+'/tmp/volume/static/flags/mc.gif' -> 'static/flags/mc.gif'
+'/tmp/volume/static/flags/tv.gif' -> 'static/flags/tv.gif'
+'/tmp/volume/static/flags/om.gif' -> 'static/flags/om.gif'
+'/tmp/volume/static/flags/md.gif' -> 'static/flags/md.gif'
+'/tmp/volume/static/flags/sm.gif' -> 'static/flags/sm.gif'
+'/tmp/volume/static/flags/vc.gif' -> 'static/flags/vc.gif'
+'/tmp/volume/static/flags/zw.gif' -> 'static/flags/zw.gif'
+'/tmp/volume/static/flags/cf.gif' -> 'static/flags/cf.gif'
+'/tmp/volume/static/flags/tj.gif' -> 'static/flags/tj.gif'
+'/tmp/volume/static/flags/mu.gif' -> 'static/flags/mu.gif'
+'/tmp/volume/static/flags/dm.gif' -> 'static/flags/dm.gif'
+'/tmp/volume/static/flags/cm.gif' -> 'static/flags/cm.gif'
+'/tmp/volume/static/flags/sj.gif' -> 'static/flags/sj.gif'
+'/tmp/volume/static/flags/la.gif' -> 'static/flags/la.gif'
+'/tmp/volume/static/flags/cd.gif' -> 'static/flags/cd.gif'
+'/tmp/volume/static/flags/kn.gif' -> 'static/flags/kn.gif'
+'/tmp/volume/static/flags/cz.gif' -> 'static/flags/cz.gif'
+'/tmp/volume/static/flags/cv.gif' -> 'static/flags/cv.gif'
+'/tmp/volume/static/flags/mf.gif' -> 'static/flags/mf.gif'
+'/tmp/volume/static/flags/hu.gif' -> 'static/flags/hu.gif'
+'/tmp/volume/static/flags/gf.gif' -> 'static/flags/gf.gif'
+'/tmp/volume/static/flags/ax.gif' -> 'static/flags/ax.gif'
+'/tmp/volume/static/flags/ua.gif' -> 'static/flags/ua.gif'
+'/tmp/volume/static/flags/mr.gif' -> 'static/flags/mr.gif'
+'/tmp/volume/static/flags/sprite.png' -> 'static/flags/sprite.png'
+'/tmp/volume/static/flags/no.gif' -> 'static/flags/no.gif'
+'/tmp/volume/static/flags/ws.gif' -> 'static/flags/ws.gif'
+'/tmp/volume/static/flags/pr.gif' -> 'static/flags/pr.gif'
+'/tmp/volume/static/flags/tn.gif' -> 'static/flags/tn.gif'
+'/tmp/volume/static/flags/bw.gif' -> 'static/flags/bw.gif'
+'/tmp/volume/static/flags/kg.gif' -> 'static/flags/kg.gif'
+'/tmp/volume/static/flags/al.gif' -> 'static/flags/al.gif'
+'/tmp/volume/static/flags/eg.gif' -> 'static/flags/eg.gif'
+'/tmp/volume/static/flags/ve.gif' -> 'static/flags/ve.gif'
+'/tmp/volume/static/flags/be.gif' -> 'static/flags/be.gif'
+'/tmp/volume/static/flags/ae.gif' -> 'static/flags/ae.gif'
+'/tmp/volume/static/flags/gp.gif' -> 'static/flags/gp.gif'
+'/tmp/volume/static/flags/sg.gif' -> 'static/flags/sg.gif'
+'/tmp/volume/static/flags/ca.gif' -> 'static/flags/ca.gif'
+'/tmp/volume/static/flags/gd.gif' -> 'static/flags/gd.gif'
+'/tmp/volume/static/flags/bf.gif' -> 'static/flags/bf.gif'
+'/tmp/volume/static/flags/dj.gif' -> 'static/flags/dj.gif'
+'/tmp/volume/static/flags/km.gif' -> 'static/flags/km.gif'
+'/tmp/volume/static/flags/rs.gif' -> 'static/flags/rs.gif'
+'/tmp/volume/static/flags/gg.gif' -> 'static/flags/gg.gif'
+'/tmp/volume/static/flags/se.gif' -> 'static/flags/se.gif'
+'/tmp/volume/static/flags/mp.gif' -> 'static/flags/mp.gif'
+'/tmp/volume/static/flags/pe.gif' -> 'static/flags/pe.gif'
+'/tmp/volume/static/flags/st.gif' -> 'static/flags/st.gif'
+'/tmp/volume/static/flags/pt.gif' -> 'static/flags/pt.gif'
+'/tmp/volume/static/flags/gn.gif' -> 'static/flags/gn.gif'
+'/tmp/volume/static/flags/ma.gif' -> 'static/flags/ma.gif'
+'/tmp/volume/static/flags/ie.gif' -> 'static/flags/ie.gif'
+'/tmp/volume/static/flags/ss.gif' -> 'static/flags/ss.gif'
+'/tmp/volume/static/flags/gl.gif' -> 'static/flags/gl.gif'
+'/tmp/volume/static/flags/bo.gif' -> 'static/flags/bo.gif'
+'/tmp/volume/static/flags/sa.gif' -> 'static/flags/sa.gif'
+'/tmp/volume/static/flags/ki.gif' -> 'static/flags/ki.gif'
+'/tmp/volume/static/flags/hk.gif' -> 'static/flags/hk.gif'
+'/tmp/volume/static/flags/eu.gif' -> 'static/flags/eu.gif'
+'/tmp/volume/static/flags/sc.gif' -> 'static/flags/sc.gif'
+'/tmp/volume/static/flags/bz.gif' -> 'static/flags/bz.gif'
+'/tmp/volume/static/flags/as.gif' -> 'static/flags/as.gif'
+'/tmp/volume/static/flags/it.gif' -> 'static/flags/it.gif'
+'/tmp/volume/static/flags/eh.gif' -> 'static/flags/eh.gif'
+'/tmp/volume/static/flags/mn.gif' -> 'static/flags/mn.gif'
+'/tmp/volume/static/flags/hn.gif' -> 'static/flags/hn.gif'
+'/tmp/volume/static/flags/ro.gif' -> 'static/flags/ro.gif'
+'/tmp/volume/static/flags/cr.gif' -> 'static/flags/cr.gif'
+'/tmp/volume/static/flags/td.gif' -> 'static/flags/td.gif'
+'/tmp/volume/static/flags/vg.gif' -> 'static/flags/vg.gif'
+'/tmp/volume/static/flags/um.gif' -> 'static/flags/um.gif'
+'/tmp/volume/static/flags/sx.gif' -> 'static/flags/sx.gif'
+'/tmp/volume/static/flags/ne.gif' -> 'static/flags/ne.gif'
+'/tmp/volume/static/flags/th.gif' -> 'static/flags/th.gif'
+'/tmp/volume/static/flags/mm.gif' -> 'static/flags/mm.gif'
+'/tmp/volume/static/flags/pk.gif' -> 'static/flags/pk.gif'
+'/tmp/volume/static/flags/gq.gif' -> 'static/flags/gq.gif'
+'/tmp/volume/static/flags/sn.gif' -> 'static/flags/sn.gif'
+'/tmp/volume/static/flags/np.gif' -> 'static/flags/np.gif'
+'/tmp/volume/static/flags/af.gif' -> 'static/flags/af.gif'
+'/tmp/volume/static/flags/sd.gif' -> 'static/flags/sd.gif'
+'/tmp/volume/static/flags/bt.gif' -> 'static/flags/bt.gif'
+'/tmp/volume/static/flags/lr.gif' -> 'static/flags/lr.gif'
+'/tmp/volume/static/flags/by.gif' -> 'static/flags/by.gif'
+'/tmp/volume/static/flags/je.gif' -> 'static/flags/je.gif'
+'/tmp/volume/static/flags/nl.gif' -> 'static/flags/nl.gif'
+'/tmp/volume/static/flags/ru.gif' -> 'static/flags/ru.gif'
+'/tmp/volume/static/flags/rw.gif' -> 'static/flags/rw.gif'
+'/tmp/volume/static/flags/ms.gif' -> 'static/flags/ms.gif'
+'/tmp/volume/static/flags/ad.gif' -> 'static/flags/ad.gif'
+'/tmp/volume/static/flags/vu.gif' -> 'static/flags/vu.gif'
+'/tmp/volume/static/flags/gb.gif' -> 'static/flags/gb.gif'
+'/tmp/volume/static/flags/tm.gif' -> 'static/flags/tm.gif'
+'/tmp/volume/static/flags/mx.gif' -> 'static/flags/mx.gif'
+'/tmp/volume/static/flags/vi.gif' -> 'static/flags/vi.gif'
+'/tmp/volume/static/flags/ee.gif' -> 'static/flags/ee.gif'
+'/tmp/volume/static/flags/cg.gif' -> 'static/flags/cg.gif'
+'/tmp/volume/static/flags/tg.gif' -> 'static/flags/tg.gif'
+'/tmp/volume/static/flags/sv.gif' -> 'static/flags/sv.gif'
+'/tmp/volume/static/flags/il.gif' -> 'static/flags/il.gif'
+'/tmp/volume/static/flags/au.gif' -> 'static/flags/au.gif'
+'/tmp/volume/static/flags/lv.gif' -> 'static/flags/lv.gif'
+'/tmp/volume/static/flags/yt.gif' -> 'static/flags/yt.gif'
+'/tmp/volume/static/flags/cl.gif' -> 'static/flags/cl.gif'
 On branch master
 Your branch is up to date with 'origin/master'.
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	../app/
-	../scripts/compose.log
+	static/
 
 nothing added to commit but untracked files present (use "git add" to track)
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-	../app/
-	../scripts/compose.log
-
-nothing added to commit but untracked files present
+[master c258835] fresh commit
+ 426 files changed, 2685 insertions(+)
+ create mode 100644 static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2
+ create mode 100644 static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf
+ create mode 100644 static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff
+ create mode 100644 static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff
+ create mode 100644 static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf
+ create mode 100644 static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2
+ create mode 100644 static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff
+ create mode 100644 static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2
+ create mode 100644 static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf
+ create mode 100644 static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2
+ create mode 100644 static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff
+ create mode 100644 static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2
+ create mode 100644 static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff
+ create mode 100644 static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2
+ create mode 100644 static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff
+ create mode 100644 static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff
+ create mode 100644 static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2
+ create mode 100644 static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2
+ create mode 100644 static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff
+ create mode 100644 static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg
+ create mode 100644 static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg
+ create mode 100644 static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg
+ create mode 100644 static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg
+ create mode 100644 static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg
+ create mode 100644 static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg
+ create mode 100644 static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg
+ create mode 100644 static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg
+ create mode 100644 static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg
+ create mode 100644 static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg
+ create mode 100644 static/assets/dashboard-next.46a99ef4cd5c9ff12206.js
+ create mode 100644 static/assets/dashboard.16a701600f4a5f253104.css
+ create mode 100644 static/assets/dashboard.16a701600f4a5f253104.js
+ create mode 100644 static/assets/document.5da8542a5fa88198e0b8.css
+ create mode 100644 static/assets/document.5da8542a5fa88198e0b8.js
+ create mode 100644 static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg
+ create mode 100644 static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg
+ create mode 100644 static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg
+ create mode 100644 static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg
+ create mode 100644 static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg
+ create mode 100644 static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg
+ create mode 100644 static/assets/logo-light.d493430f320751f6bffac210ced37643.svg
+ create mode 100644 static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg
+ create mode 100644 static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg
+ create mode 100644 static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg
+ create mode 100644 static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg
+ create mode 100644 static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png
+ create mode 100644 static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg
+ create mode 100644 static/assets/storefront.e1ffe21d4c6f258d297b.css
+ create mode 100644 static/assets/storefront.e1ffe21d4c6f258d297b.js
+ create mode 100644 static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg
+ create mode 100644 static/dashboard/images/account-circle.svg
+ create mode 100644 static/dashboard/images/add.svg
+ create mode 100644 static/dashboard/images/arrow-drop-down.svg
+ create mode 100644 static/dashboard/images/arrow-left.svg
+ create mode 100644 static/dashboard/images/chevron-left.svg
+ create mode 100644 static/dashboard/images/chevron-right.svg
+ create mode 100644 static/dashboard/images/close.svg
+ create mode 100644 static/dashboard/images/collections.svg
+ create mode 100644 static/dashboard/images/description.svg
+ create mode 100644 static/dashboard/images/done.svg
+ create mode 100644 static/dashboard/images/edit.svg
+ create mode 100644 static/dashboard/images/editor/align_center.svg
+ create mode 100644 static/dashboard/images/editor/align_justify.svg
+ create mode 100644 static/dashboard/images/editor/align_left.svg
+ create mode 100644 static/dashboard/images/editor/align_right.svg
+ create mode 100644 static/dashboard/images/editor/format_clear.svg
+ create mode 100644 static/dashboard/images/editor/insert_link.svg
+ create mode 100644 static/dashboard/images/editor/insert_photo.svg
+ create mode 100644 static/dashboard/images/editor/quote.svg
+ create mode 100644 static/dashboard/images/email.svg
+ create mode 100644 static/dashboard/images/help.svg
+ create mode 100644 static/dashboard/images/history.svg
+ create mode 100644 static/dashboard/images/logo.svg
+ create mode 100644 static/dashboard/images/mobile-menu.svg
+ create mode 100644 static/dashboard/images/more-vert.svg
+ create mode 100644 static/dashboard/images/payment.svg
+ create mode 100644 static/dashboard/images/phone.svg
+ create mode 100644 static/dashboard/images/reorder.svg
+ create mode 100644 static/dashboard/images/search.svg
+ create mode 100644 static/dashboard/images/store.svg
+ create mode 100644 static/dashboard/images/style.svg
+ create mode 100644 static/favicons/android-chrome-192x192.png
+ create mode 100644 static/favicons/android-chrome-512x512.png
+ create mode 100644 static/favicons/apple-touch-icon.png
+ create mode 100644 static/favicons/browserconfig.xml
+ create mode 100644 static/favicons/favicon-16x16.png
+ create mode 100644 static/favicons/favicon-32x32.png
+ create mode 100644 static/favicons/favicon.ico
+ create mode 100644 static/favicons/mstile-144x144.png
+ create mode 100644 static/favicons/mstile-150x150.png
+ create mode 100644 static/favicons/mstile-310x150.png
+ create mode 100644 static/favicons/mstile-310x310.png
+ create mode 100644 static/favicons/mstile-70x70.png
+ create mode 100644 static/favicons/safari-pinned-tab.svg
+ create mode 100644 static/flags/__.gif
+ create mode 100644 static/flags/ad.gif
+ create mode 100644 static/flags/ae.gif
+ create mode 100644 static/flags/af.gif
+ create mode 100644 static/flags/ag.gif
+ create mode 100644 static/flags/ai.gif
+ create mode 100644 static/flags/al.gif
+ create mode 100644 static/flags/am.gif
+ create mode 100644 static/flags/ao.gif
+ create mode 100644 static/flags/aq.gif
+ create mode 100644 static/flags/ar.gif
+ create mode 100644 static/flags/as.gif
+ create mode 100644 static/flags/at.gif
+ create mode 100644 static/flags/au.gif
+ create mode 100644 static/flags/aw.gif
+ create mode 100644 static/flags/ax.gif
+ create mode 100644 static/flags/az.gif
+ create mode 100644 static/flags/ba.gif
+ create mode 100644 static/flags/bb.gif
+ create mode 100644 static/flags/bd.gif
+ create mode 100644 static/flags/be.gif
+ create mode 100644 static/flags/bf.gif
+ create mode 100644 static/flags/bg.gif
+ create mode 100644 static/flags/bh.gif
+ create mode 100644 static/flags/bi.gif
+ create mode 100644 static/flags/bj.gif
+ create mode 100644 static/flags/bl.gif
+ create mode 100644 static/flags/bm.gif
+ create mode 100644 static/flags/bn.gif
+ create mode 100644 static/flags/bo.gif
+ create mode 100644 static/flags/bq.gif
+ create mode 100644 static/flags/br.gif
+ create mode 100644 static/flags/bs.gif
+ create mode 100644 static/flags/bt.gif
+ create mode 100644 static/flags/bv.gif
+ create mode 100644 static/flags/bw.gif
+ create mode 100644 static/flags/by.gif
+ create mode 100644 static/flags/bz.gif
+ create mode 100644 static/flags/ca.gif
+ create mode 100644 static/flags/cc.gif
+ create mode 100644 static/flags/cd.gif
+ create mode 100644 static/flags/cf.gif
+ create mode 100644 static/flags/cg.gif
+ create mode 100644 static/flags/ch.gif
+ create mode 100644 static/flags/ci.gif
+ create mode 100644 static/flags/ck.gif
+ create mode 100644 static/flags/cl.gif
+ create mode 100644 static/flags/cm.gif
+ create mode 100644 static/flags/cn.gif
+ create mode 100644 static/flags/co.gif
+ create mode 100644 static/flags/cr.gif
+ create mode 100644 static/flags/cu.gif
+ create mode 100644 static/flags/cv.gif
+ create mode 100644 static/flags/cw.gif
+ create mode 100644 static/flags/cx.gif
+ create mode 100644 static/flags/cy.gif
+ create mode 100644 static/flags/cz.gif
+ create mode 100644 static/flags/de.gif
+ create mode 100644 static/flags/dj.gif
+ create mode 100644 static/flags/dk.gif
+ create mode 100644 static/flags/dm.gif
+ create mode 100644 static/flags/do.gif
+ create mode 100644 static/flags/dz.gif
+ create mode 100644 static/flags/ec.gif
+ create mode 100644 static/flags/ee.gif
+ create mode 100644 static/flags/eg.gif
+ create mode 100644 static/flags/eh.gif
+ create mode 100644 static/flags/er.gif
+ create mode 100644 static/flags/es.gif
+ create mode 100644 static/flags/et.gif
+ create mode 100644 static/flags/eu.gif
+ create mode 100644 static/flags/fi.gif
+ create mode 100644 static/flags/fj.gif
+ create mode 100644 static/flags/fk.gif
+ create mode 100644 static/flags/fm.gif
+ create mode 100644 static/flags/fo.gif
+ create mode 100644 static/flags/fr.gif
+ create mode 100644 static/flags/ga.gif
+ create mode 100644 static/flags/gb.gif
+ create mode 100644 static/flags/gd.gif
+ create mode 100644 static/flags/ge.gif
+ create mode 100644 static/flags/gf.gif
+ create mode 100644 static/flags/gg.gif
+ create mode 100644 static/flags/gh.gif
+ create mode 100644 static/flags/gi.gif
+ create mode 100644 static/flags/gl.gif
+ create mode 100644 static/flags/gm.gif
+ create mode 100644 static/flags/gn.gif
+ create mode 100644 static/flags/gp.gif
+ create mode 100644 static/flags/gq.gif
+ create mode 100644 static/flags/gr.gif
+ create mode 100644 static/flags/gs.gif
+ create mode 100644 static/flags/gt.gif
+ create mode 100644 static/flags/gu.gif
+ create mode 100644 static/flags/gw.gif
+ create mode 100644 static/flags/gy.gif
+ create mode 100644 static/flags/hk.gif
+ create mode 100644 static/flags/hm.gif
+ create mode 100644 static/flags/hn.gif
+ create mode 100644 static/flags/hr.gif
+ create mode 100644 static/flags/ht.gif
+ create mode 100644 static/flags/hu.gif
+ create mode 100644 static/flags/id.gif
+ create mode 100644 static/flags/ie.gif
+ create mode 100644 static/flags/il.gif
+ create mode 100644 static/flags/im.gif
+ create mode 100644 static/flags/in.gif
+ create mode 100644 static/flags/io.gif
+ create mode 100644 static/flags/iq.gif
+ create mode 100644 static/flags/ir.gif
+ create mode 100644 static/flags/is.gif
+ create mode 100644 static/flags/it.gif
+ create mode 100644 static/flags/je.gif
+ create mode 100644 static/flags/jm.gif
+ create mode 100644 static/flags/jo.gif
+ create mode 100644 static/flags/jp.gif
+ create mode 100644 static/flags/ke.gif
+ create mode 100644 static/flags/kg.gif
+ create mode 100644 static/flags/kh.gif
+ create mode 100644 static/flags/ki.gif
+ create mode 100644 static/flags/km.gif
+ create mode 100644 static/flags/kn.gif
+ create mode 100644 static/flags/kp.gif
+ create mode 100644 static/flags/kr.gif
+ create mode 100644 static/flags/kw.gif
+ create mode 100644 static/flags/ky.gif
+ create mode 100644 static/flags/kz.gif
+ create mode 100644 static/flags/la.gif
+ create mode 100644 static/flags/lb.gif
+ create mode 100644 static/flags/lc.gif
+ create mode 100644 static/flags/li.gif
+ create mode 100644 static/flags/lk.gif
+ create mode 100644 static/flags/lr.gif
+ create mode 100644 static/flags/ls.gif
+ create mode 100644 static/flags/lt.gif
+ create mode 100644 static/flags/lu.gif
+ create mode 100644 static/flags/lv.gif
+ create mode 100644 static/flags/ly.gif
+ create mode 100644 static/flags/ma.gif
+ create mode 100644 static/flags/mc.gif
+ create mode 100644 static/flags/md.gif
+ create mode 100644 static/flags/me.gif
+ create mode 100644 static/flags/mf.gif
+ create mode 100644 static/flags/mg.gif
+ create mode 100644 static/flags/mh.gif
+ create mode 100644 static/flags/mk.gif
+ create mode 100644 static/flags/ml.gif
+ create mode 100644 static/flags/mm.gif
+ create mode 100644 static/flags/mn.gif
+ create mode 100644 static/flags/mo.gif
+ create mode 100644 static/flags/mp.gif
+ create mode 100644 static/flags/mq.gif
+ create mode 100644 static/flags/mr.gif
+ create mode 100644 static/flags/ms.gif
+ create mode 100644 static/flags/mt.gif
+ create mode 100644 static/flags/mu.gif
+ create mode 100644 static/flags/mv.gif
+ create mode 100644 static/flags/mw.gif
+ create mode 100644 static/flags/mx.gif
+ create mode 100644 static/flags/my.gif
+ create mode 100644 static/flags/mz.gif
+ create mode 100644 static/flags/na.gif
+ create mode 100644 static/flags/nc.gif
+ create mode 100644 static/flags/ne.gif
+ create mode 100644 static/flags/nf.gif
+ create mode 100644 static/flags/ng.gif
+ create mode 100644 static/flags/ni.gif
+ create mode 100644 static/flags/nl.gif
+ create mode 100644 static/flags/no.gif
+ create mode 100644 static/flags/np.gif
+ create mode 100644 static/flags/nr.gif
+ create mode 100644 static/flags/nu.gif
+ create mode 100644 static/flags/nz.gif
+ create mode 100644 static/flags/om.gif
+ create mode 100644 static/flags/pa.gif
+ create mode 100644 static/flags/pe.gif
+ create mode 100644 static/flags/pf.gif
+ create mode 100644 static/flags/pg.gif
+ create mode 100644 static/flags/ph.gif
+ create mode 100644 static/flags/pk.gif
+ create mode 100644 static/flags/pl.gif
+ create mode 100644 static/flags/pm.gif
+ create mode 100644 static/flags/pn.gif
+ create mode 100644 static/flags/pr.gif
+ create mode 100644 static/flags/ps.gif
+ create mode 100644 static/flags/pt.gif
+ create mode 100644 static/flags/pw.gif
+ create mode 100644 static/flags/py.gif
+ create mode 100644 static/flags/qa.gif
+ create mode 100644 static/flags/re.gif
+ create mode 100644 static/flags/ro.gif
+ create mode 100644 static/flags/rs.gif
+ create mode 100644 static/flags/ru.gif
+ create mode 100644 static/flags/rw.gif
+ create mode 100644 static/flags/sa.gif
+ create mode 100644 static/flags/sb.gif
+ create mode 100644 static/flags/sc.gif
+ create mode 100644 static/flags/sd.gif
+ create mode 100644 static/flags/se.gif
+ create mode 100644 static/flags/sg.gif
+ create mode 100644 static/flags/sh.gif
+ create mode 100644 static/flags/si.gif
+ create mode 100644 static/flags/sj.gif
+ create mode 100644 static/flags/sk.gif
+ create mode 100644 static/flags/sl.gif
+ create mode 100644 static/flags/sm.gif
+ create mode 100644 static/flags/sn.gif
+ create mode 100644 static/flags/so.gif
+ create mode 100644 static/flags/sprite-hq.css
+ create mode 100644 static/flags/sprite-hq.png
+ create mode 100644 static/flags/sprite.css
+ create mode 100644 static/flags/sprite.png
+ create mode 100644 static/flags/sr.gif
+ create mode 100644 static/flags/ss.gif
+ create mode 100644 static/flags/st.gif
+ create mode 100644 static/flags/sv.gif
+ create mode 100644 static/flags/sx.gif
+ create mode 100644 static/flags/sy.gif
+ create mode 100644 static/flags/sz.gif
+ create mode 100644 static/flags/tc.gif
+ create mode 100644 static/flags/td.gif
+ create mode 100644 static/flags/tf.gif
+ create mode 100644 static/flags/tg.gif
+ create mode 100644 static/flags/th.gif
+ create mode 100644 static/flags/tj.gif
+ create mode 100644 static/flags/tk.gif
+ create mode 100644 static/flags/tl.gif
+ create mode 100644 static/flags/tm.gif
+ create mode 100644 static/flags/tn.gif
+ create mode 100644 static/flags/to.gif
+ create mode 100644 static/flags/tr.gif
+ create mode 100644 static/flags/tt.gif
+ create mode 100644 static/flags/tv.gif
+ create mode 100644 static/flags/tw.gif
+ create mode 100644 static/flags/tz.gif
+ create mode 100644 static/flags/ua.gif
+ create mode 100644 static/flags/ug.gif
+ create mode 100644 static/flags/um.gif
+ create mode 100644 static/flags/us.gif
+ create mode 100644 static/flags/uy.gif
+ create mode 100644 static/flags/uz.gif
+ create mode 100644 static/flags/va.gif
+ create mode 100644 static/flags/vc.gif
+ create mode 100644 static/flags/ve.gif
+ create mode 100644 static/flags/vg.gif
+ create mode 100644 static/flags/vi.gif
+ create mode 100644 static/flags/vn.gif
+ create mode 100644 static/flags/vu.gif
+ create mode 100644 static/flags/wf.gif
+ create mode 100644 static/flags/ws.gif
+ create mode 100644 static/flags/ye.gif
+ create mode 100644 static/flags/yt.gif
+ create mode 100644 static/flags/za.gif
+ create mode 100644 static/flags/zm.gif
+ create mode 100644 static/flags/zw.gif
+ create mode 100644 static/images/arrow-down-icon.svg
+ create mode 100644 static/images/arrow-down.svg
+ create mode 100644 static/images/arrow-left.svg
+ create mode 100644 static/images/arrow-select.svg
+ create mode 100644 static/images/arrow-up-icon.svg
+ create mode 100644 static/images/arrow-up.svg
+ create mode 100644 static/images/avatars/avatar1.png
+ create mode 100644 static/images/avatars/avatar10.png
+ create mode 100644 static/images/avatars/avatar11.png
+ create mode 100644 static/images/avatars/avatar12.png
+ create mode 100644 static/images/avatars/avatar2.png
+ create mode 100644 static/images/avatars/avatar3.png
+ create mode 100644 static/images/avatars/avatar4.png
+ create mode 100644 static/images/avatars/avatar5.png
+ create mode 100644 static/images/avatars/avatar6.png
+ create mode 100644 static/images/avatars/avatar7.png
+ create mode 100644 static/images/avatars/avatar8.png
+ create mode 100644 static/images/avatars/avatar9.png
+ create mode 100644 static/images/block1.jpg
+ create mode 100644 static/images/block2.jpg
+ create mode 100644 static/images/block3.jpg
+ create mode 100644 static/images/checkout-bg.png
+ create mode 100644 static/images/checkout-bg2x.png
+ create mode 100644 static/images/checkout.svg
+ create mode 100644 static/images/chevron-down.svg
+ create mode 100644 static/images/chevron-up.svg
+ create mode 100644 static/images/close.svg
+ create mode 100644 static/images/confirm-order-bg.png
+ create mode 100644 static/images/confirm-order-bg2x.png
+ create mode 100644 static/images/delete.svg
+ create mode 100644 static/images/dribbble-logo.svg
+ create mode 100644 static/images/edit.svg
+ create mode 100644 static/images/empty-checkout-bg.png
+ create mode 100644 static/images/empty-checkout-bg2x.png
+ create mode 100644 static/images/facebook-logo.svg
+ create mode 100644 static/images/favicon.svg
+ create mode 100644 static/images/filter-icon.svg
+ create mode 100644 static/images/gallery-arrow.svg
+ create mode 100644 static/images/github-logo.svg
+ create mode 100644 static/images/google-logo.svg
+ create mode 100644 static/images/instagram-logo.svg
+ create mode 100644 static/images/linkedin-logo.svg
+ create mode 100644 static/images/loader.svg
+ create mode 100644 static/images/login-background.svg
+ create mode 100644 static/images/login-bg.png
+ create mode 100644 static/images/login-bg2x.png
+ create mode 100644 static/images/logo-dark.svg
+ create mode 100644 static/images/logo-light.svg
+ create mode 100644 static/images/logo-white.svg
+ create mode 100644 static/images/meetup-logo.svg
+ create mode 100644 static/images/mobile-menu.svg
+ create mode 100644 static/images/no-results-bg.svg
+ create mode 100644 static/images/not-found-404.svg
+ create mode 100644 static/images/pass-invisible.svg
+ create mode 100644 static/images/pass-visible.svg
+ create mode 100644 static/images/photo-icon.svg
+ create mode 100644 static/images/placeholder1080x1080.png
+ create mode 100644 static/images/placeholder120x120.png
+ create mode 100644 static/images/placeholder255x255.png
+ create mode 100644 static/images/placeholder540x540.png
+ create mode 100644 static/images/placeholder60x60.png
+ create mode 100644 static/images/reset-bg.png
+ create mode 100644 static/images/sale-bg.svg
+ create mode 100644 static/images/sample-product.jpg
+ create mode 100644 static/images/sample-product2.jpg
+ create mode 100644 static/images/search.svg
+ create mode 100644 static/images/twitter-logo.svg
+ create mode 100644 static/images/what.svg
+ create mode 100644 static/mptt/arrow-move.png
+ create mode 100644 static/mptt/disclosure-down.png
+ create mode 100644 static/mptt/disclosure-right.png
+ create mode 100644 static/mptt/draggable-admin.css
+ create mode 100644 static/mptt/draggable-admin.js
+ create mode 100644 static/versatileimagefield/css/versatileimagefield-bootstrap3.css
+ create mode 100644 static/versatileimagefield/css/versatileimagefield-djangoadmin.css
+ create mode 100644 static/versatileimagefield/css/versatileimagefield.css
+ create mode 100644 static/versatileimagefield/js/versatileimagefield.js
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 PRODUCT
@@ -2679,21 +3088,21 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 SERVICES
 
 CONTAINER ID        IMAGE                COMMAND                  CREATED              STATUS              PORTS                    NAMES
-c4a33360bfb3        chetabahana/saleor   "celery -A saleor wo…"   About a minute ago   Up About a minute   8000/tcp                 compose_celery_1
-deb58174bf70        postgres             "docker-entrypoint.s…"   4 minutes ago        Up 4 minutes        0.0.0.0:5431->5432/tcp   compose_postgres_1
-d9a6e52ae7c0        redis                "docker-entrypoint.s…"   4 minutes ago        Up 4 minutes        0.0.0.0:6378->6379/tcp   compose_redis_1
+56a5416a8ba8        chetabahana/saleor   "celery -A saleor wo…"   About a minute ago   Up About a minute   8000/tcp                 compose_celery_1
+c6c1d584f8c8        postgres             "docker-entrypoint.s…"   4 minutes ago        Up 4 minutes        0.0.0.0:5431->5432/tcp   compose_postgres_1
+5111ee3fde8a        redis                "docker-entrypoint.s…"   4 minutes ago        Up 4 minutes        0.0.0.0:6378->6379/tcp   compose_redis_1
 
 REDIS
 
-1:C 11 Jun 2019 21:35:23.944 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-1:C 11 Jun 2019 21:35:23.944 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
-1:C 11 Jun 2019 21:35:23.944 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-1:M 11 Jun 2019 21:35:23.948 * Running mode=standalone, port=6379.
-1:M 11 Jun 2019 21:35:23.949 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
-1:M 11 Jun 2019 21:35:23.949 # Server initialized
-1:M 11 Jun 2019 21:35:23.949 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-1:M 11 Jun 2019 21:35:23.949 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
-1:M 11 Jun 2019 21:35:23.949 * Ready to accept connections
+1:C 12 Jun 2019 00:32:48.193 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 12 Jun 2019 00:32:48.193 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 12 Jun 2019 00:32:48.193 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1:M 12 Jun 2019 00:32:48.202 * Running mode=standalone, port=6379.
+1:M 12 Jun 2019 00:32:48.202 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 12 Jun 2019 00:32:48.202 # Server initialized
+1:M 12 Jun 2019 00:32:48.202 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 12 Jun 2019 00:32:48.202 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 12 Jun 2019 00:32:48.202 * Ready to accept connections
 
 POSTGRES
 
@@ -2720,9 +3129,9 @@ Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgresql/data -l logfile start
 
-waiting for server to start....2019-06-11 21:35:38.774 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2019-06-11 21:35:38.852 UTC [41] LOG:  database system was shut down at 2019-06-11 21:35:37 UTC
-2019-06-11 21:35:38.880 UTC [40] LOG:  database system is ready to accept connections
+waiting for server to start....2019-06-12 00:32:59.796 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 00:32:59.905 UTC [41] LOG:  database system was shut down at 2019-06-12 00:32:58 UTC
+2019-06-12 00:32:59.926 UTC [40] LOG:  database system is ready to accept connections
  done
 server started
 CREATE DATABASE
@@ -2730,11 +3139,11 @@ CREATE DATABASE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-2019-06-11 21:35:40.386 UTC [40] LOG:  received fast shutdown request
-waiting for server to shut down....2019-06-11 21:35:40.389 UTC [40] LOG:  aborting any active transactions
-2019-06-11 21:35:40.394 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
-2019-06-11 21:35:40.394 UTC [42] LOG:  shutting down
-2019-06-11 21:35:40.412 UTC [40] LOG:  database system is shut down
+2019-06-12 00:33:01.437 UTC [40] LOG:  received fast shutdown request
+waiting for server to shut down....2019-06-12 00:33:01.440 UTC [40] LOG:  aborting any active transactions
+2019-06-12 00:33:01.442 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+2019-06-12 00:33:01.446 UTC [42] LOG:  shutting down
+2019-06-12 00:33:01.477 UTC [40] LOG:  database system is shut down
  done
 server stopped
 
@@ -2744,12 +3153,12 @@ PostgreSQL init process complete; ready for start up.
 CELERY
 
  
- -------------- celery@c4a33360bfb3 v4.3.0 (rhubarb)
+ -------------- celery@56a5416a8ba8 v4.3.0 (rhubarb)
 ---- **** ----- 
---- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-11 16:39:46
+--- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-11 19:37:18
 -- * - **** --- 
 - ** ---------- [config]
-- ** ---------- .> app:         saleor:0x7fbe9f6c6dd8
+- ** ---------- .> app:         saleor:0x7f6bb7eebdd8
 - ** ---------- .> transport:   redis://redis:6379/1
 - ** ---------- .> results:     disabled://
 - *** --- * --- .> concurrency: 1 (prefork)
@@ -2781,82 +3190,6 @@ CELERY
 LOGS
 
 Attaching to compose_celery_1, compose_postgres_1, compose_redis_1
-[36mcelery_1    |[0m  
-[36mcelery_1    |[0m  -------------- celery@c4a33360bfb3 v4.3.0 (rhubarb)
-[36mcelery_1    |[0m ---- **** ----- 
-[36mcelery_1    |[0m --- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-11 16:39:46
-[36mcelery_1    |[0m -- * - **** --- 
-[36mcelery_1    |[0m - ** ---------- [config]
-[36mcelery_1    |[0m - ** ---------- .> app:         saleor:0x7fbe9f6c6dd8
-[36mcelery_1    |[0m - ** ---------- .> transport:   redis://redis:6379/1
-[36mcelery_1    |[0m - ** ---------- .> results:     disabled://
-[36mcelery_1    |[0m - *** --- * --- .> concurrency: 1 (prefork)
-[36mcelery_1    |[0m -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
-[36mcelery_1    |[0m --- ***** ----- 
-[36mcelery_1    |[0m  -------------- [queues]
-[36mcelery_1    |[0m                 .> celery           exchange=celery(direct) key=celery
-[36mcelery_1    |[0m                 
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m [tasks]
-[36mcelery_1    |[0m   . saleor.account.emails.send_account_delete_confirmation_email
-[36mcelery_1    |[0m   . saleor.account.emails.send_password_reset_email
-[36mcelery_1    |[0m   . saleor.account.thumbnails.create_user_avatar_thumbnails
-[36mcelery_1    |[0m   . saleor.core.analytics.ga_report
-[36mcelery_1    |[0m   . saleor.core.utils.update_conversion_rates_from_openexchangerates
-[36mcelery_1    |[0m   . saleor.dashboard.emails.send_promote_customer_to_staff_email
-[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_customer_email
-[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_staff_email
-[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_confirmation
-[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_update
-[36mcelery_1    |[0m   . saleor.order.emails.send_order_confirmation
-[36mcelery_1    |[0m   . saleor.order.emails.send_payment_confirmation
-[36mcelery_1    |[0m   . saleor.product.tasks.update_variants_names
-[36mcelery_1    |[0m   . saleor.product.thumbnails.create_category_background_image_thumbnails
-[36mcelery_1    |[0m   . saleor.product.thumbnails.create_collection_background_image_thumbnails
-[36mcelery_1    |[0m   . saleor.product.thumbnails.create_product_thumbnails
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m [2019-06-11 16:39:48,885: INFO/MainProcess] Connected to redis://redis:6379/1
-[36mcelery_1    |[0m [2019-06-11 16:39:48,933: INFO/MainProcess] mingle: searching for neighbors
-[36mcelery_1    |[0m [2019-06-11 16:39:50,073: INFO/MainProcess] mingle: all alone
-[36mcelery_1    |[0m [2019-06-11 16:39:50,090: INFO/MainProcess] celery@c4a33360bfb3 ready.
-[36mcelery_1    |[0m [2019-06-11 16:39:50,364: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[0dc7788f-ccda-42ac-902b-431dcbf6b9dc]  
-[36mcelery_1    |[0m [2019-06-11 16:39:50,366: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[8a1d9f78-6e8f-41b1-a60a-ba29f9c33ff5]  
-[36mcelery_1    |[0m [2019-06-11 16:39:50,369: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[ff0f5cdc-19da-4451-8cee-8578fd8ba638]  
-[36mcelery_1    |[0m [2019-06-11 16:39:50,563: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b8874b59-d3d8-462a-acef-459406b7a383]  
-[36mcelery_1    |[0m [2019-06-11 16:39:50,568: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[490f8bee-f872-4008-86a1-fe384a3fa8a3]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  7 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:39:51,661: INFO/ForkPoolWorker-1] Creating thumbnails for  7
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:39:59,171: INFO/ForkPoolWorker-1] Created 1 thumbnails
-[36mcelery_1    |[0m [2019-06-11 16:39:59,174: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[0dc7788f-ccda-42ac-902b-431dcbf6b9dc] succeeded in 8.807321072999912s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  8 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:39:59,609: INFO/ForkPoolWorker-1] Creating thumbnails for  8
-[36mcelery_1    |[0m [2019-06-11 16:40:00,116: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[273ed8b1-dff8-47fb-abe6-561920eb9f76]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:00,315: INFO/ForkPoolWorker-1] Created 1 thumbnails
-[36mcelery_1    |[0m [2019-06-11 16:40:00,316: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[8a1d9f78-6e8f-41b1-a60a-ba29f9c33ff5] succeeded in 1.1370919910000339s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  9 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:00,322: INFO/ForkPoolWorker-1] Creating thumbnails for  9
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:00,626: INFO/ForkPoolWorker-1] Created 1 thumbnails
-[36mcelery_1    |[0m [2019-06-11 16:40:00,627: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[ff0f5cdc-19da-4451-8cee-8578fd8ba638] succeeded in 0.3078862570000638s: None
-[36mcelery_1    |[0m [2019-06-11 16:40:00,629: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b9e2bff0-99a6-4d57-bda4-7378691dbf94]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  1 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:00,758: INFO/ForkPoolWorker-1] Creating thumbnails for  1
-[36mcelery_1    |[0m [2019-06-11 16:40:01,074: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[812fdfe4-3727-4dec-aa40-83a2d6cb1ad8]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:03,814: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-11 16:40:03,815: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[b8874b59-d3d8-462a-acef-459406b7a383] succeeded in 3.183856563000063s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  2 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:03,820: INFO/ForkPoolWorker-1] Creating thumbnails for  2
-[36mcelery_1    |[0m [2019-06-11 16:40:05,080: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[cdbeff7a-e1a1-4957-b647-7c3b12dcbd93]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:05,387: INFO/ForkPoolWorker-1] Created 6 thumbnails
 [33mpostgres_1  |[0m The files belonging to this database system will be owned by user "postgres".
 [33mpostgres_1  |[0m This user must also own the server process.
 [33mpostgres_1  |[0m 
@@ -2884,29 +3217,9 @@ Attaching to compose_celery_1, compose_postgres_1, compose_redis_1
 [33mpostgres_1  |[0m 
 [33mpostgres_1  |[0m     pg_ctl -D /var/lib/postgresql/data -l logfile start
 [33mpostgres_1  |[0m 
-[33mpostgres_1  |[0m waiting for server to start....2019-06-11 21:35:38.774 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-[33mpostgres_1  |[0m 2019-06-11 21:35:38.852 UTC [41] LOG:  database system was shut down at 2019-06-11 21:35:37 UTC
-[36mcelery_1    |[0m [2019-06-11 16:40:05,387: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[490f8bee-f872-4008-86a1-fe384a3fa8a3] succeeded in 1.569668997000008s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  3 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:05,564: INFO/ForkPoolWorker-1] Creating thumbnails for  3
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:06,905: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-11 16:40:06,906: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[273ed8b1-dff8-47fb-abe6-561920eb9f76] succeeded in 1.516713950000394s: None
-[36mcelery_1    |[0m [2019-06-11 16:40:06,909: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[19e5df6b-fd19-4653-9057-8b6abbaa1270]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  4 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-11 16:40:07,065: INFO/ForkPoolWorker-1] Creating thumbnails for  4
-[36mcelery_1    |[0m [2019-06-11 16:40:07,316: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[f064dc0f-dee9-449d-b89e-d3d638e0cd18]  
-[32mredis_1     |[0m 1:C 11 Jun 2019 21:35:23.944 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-[32mredis_1     |[0m 1:C 11 Jun 2019 21:35:23.944 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
-[32mredis_1     |[0m 1:C 11 Jun 2019 21:35:23.944 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-[32mredis_1     |[0m 1:M 11 Jun 2019 21:35:23.948 * Running mode=standalone, port=6379.
-[32mredis_1     |[0m 1:M 11 Jun 2019 21:35:23.949 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
-[32mredis_1     |[0m 1:M 11 Jun 2019 21:35:23.949 # Server initialized
-[32mredis_1     |[0m 1:M 11 Jun 2019 21:35:23.949 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-[32mredis_1     |[0m 1:M 11 Jun 2019 21:35:23.949 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
-[32mredis_1     |[0m 1:M 11 Jun 2019 21:35:23.949 * Ready to accept connections
-[33mpostgres_1  |[0m 2019-06-11 21:35:38.880 UTC [40] LOG:  database system is ready to accept connections
+[33mpostgres_1  |[0m waiting for server to start....2019-06-12 00:32:59.796 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[33mpostgres_1  |[0m 2019-06-12 00:32:59.905 UTC [41] LOG:  database system was shut down at 2019-06-12 00:32:58 UTC
+[33mpostgres_1  |[0m 2019-06-12 00:32:59.926 UTC [40] LOG:  database system is ready to accept connections
 [33mpostgres_1  |[0m  done
 [33mpostgres_1  |[0m server started
 [33mpostgres_1  |[0m CREATE DATABASE
@@ -2914,18 +3227,106 @@ Attaching to compose_celery_1, compose_postgres_1, compose_redis_1
 [33mpostgres_1  |[0m 
 [33mpostgres_1  |[0m /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 [33mpostgres_1  |[0m 
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.386 UTC [40] LOG:  received fast shutdown request
-[33mpostgres_1  |[0m waiting for server to shut down....2019-06-11 21:35:40.389 UTC [40] LOG:  aborting any active transactions
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.394 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.394 UTC [42] LOG:  shutting down
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.412 UTC [40] LOG:  database system is shut down
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.437 UTC [40] LOG:  received fast shutdown request
+[33mpostgres_1  |[0m waiting for server to shut down....2019-06-12 00:33:01.440 UTC [40] LOG:  aborting any active transactions
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.442 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.446 UTC [42] LOG:  shutting down
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.477 UTC [40] LOG:  database system is shut down
 [33mpostgres_1  |[0m  done
 [33mpostgres_1  |[0m server stopped
 [33mpostgres_1  |[0m 
 [33mpostgres_1  |[0m PostgreSQL init process complete; ready for start up.
 [33mpostgres_1  |[0m 
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.511 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.511 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.521 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.553 UTC [58] LOG:  database system was shut down at 2019-06-11 21:35:40 UTC
-[33mpostgres_1  |[0m 2019-06-11 21:35:40.562 UTC [1] LOG:  database system is ready to accept connections
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.558 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.558 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.566 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.586 UTC [58] LOG:  database system was shut down at 2019-06-12 00:33:01 UTC
+[33mpostgres_1  |[0m 2019-06-12 00:33:01.594 UTC [1] LOG:  database system is ready to accept connections
+[36mcelery_1    |[0m  
+[36mcelery_1    |[0m  -------------- celery@56a5416a8ba8 v4.3.0 (rhubarb)
+[36mcelery_1    |[0m ---- **** ----- 
+[36mcelery_1    |[0m --- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-11 19:37:18
+[36mcelery_1    |[0m -- * - **** --- 
+[36mcelery_1    |[0m - ** ---------- [config]
+[36mcelery_1    |[0m - ** ---------- .> app:         saleor:0x7f6bb7eebdd8
+[36mcelery_1    |[0m - ** ---------- .> transport:   redis://redis:6379/1
+[36mcelery_1    |[0m - ** ---------- .> results:     disabled://
+[36mcelery_1    |[0m - *** --- * --- .> concurrency: 1 (prefork)
+[36mcelery_1    |[0m -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+[36mcelery_1    |[0m --- ***** ----- 
+[36mcelery_1    |[0m  -------------- [queues]
+[36mcelery_1    |[0m                 .> celery           exchange=celery(direct) key=celery
+[36mcelery_1    |[0m                 
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m [tasks]
+[36mcelery_1    |[0m   . saleor.account.emails.send_account_delete_confirmation_email
+[36mcelery_1    |[0m   . saleor.account.emails.send_password_reset_email
+[36mcelery_1    |[0m   . saleor.account.thumbnails.create_user_avatar_thumbnails
+[36mcelery_1    |[0m   . saleor.core.analytics.ga_report
+[36mcelery_1    |[0m   . saleor.core.utils.update_conversion_rates_from_openexchangerates
+[36mcelery_1    |[0m   . saleor.dashboard.emails.send_promote_customer_to_staff_email
+[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_customer_email
+[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_staff_email
+[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_confirmation
+[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_update
+[36mcelery_1    |[0m   . saleor.order.emails.send_order_confirmation
+[36mcelery_1    |[0m   . saleor.order.emails.send_payment_confirmation
+[36mcelery_1    |[0m   . saleor.product.tasks.update_variants_names
+[36mcelery_1    |[0m   . saleor.product.thumbnails.create_category_background_image_thumbnails
+[36mcelery_1    |[0m   . saleor.product.thumbnails.create_collection_background_image_thumbnails
+[36mcelery_1    |[0m   . saleor.product.thumbnails.create_product_thumbnails
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m [2019-06-11 19:37:20,914: INFO/MainProcess] Connected to redis://redis:6379/1
+[36mcelery_1    |[0m [2019-06-11 19:37:20,965: INFO/MainProcess] mingle: searching for neighbors
+[36mcelery_1    |[0m [2019-06-11 19:37:22,135: INFO/MainProcess] mingle: all alone
+[36mcelery_1    |[0m [2019-06-11 19:37:22,223: INFO/MainProcess] celery@56a5416a8ba8 ready.
+[36mcelery_1    |[0m [2019-06-11 19:37:22,344: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[593f53f0-db17-47f1-bb17-24356f72dc3e]  
+[36mcelery_1    |[0m [2019-06-11 19:37:22,346: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[9c313bc7-81e0-43dd-beb3-198192c868e8]  
+[36mcelery_1    |[0m [2019-06-11 19:37:22,350: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[9b0bdc9b-934d-47c1-90bd-18c921d20d39]  
+[36mcelery_1    |[0m [2019-06-11 19:37:22,353: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[d621e4fb-7640-4848-8904-2d1c35a196c6]  
+[36mcelery_1    |[0m [2019-06-11 19:37:22,356: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[100160f6-9196-45bc-b33e-7033ce4db3e7]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  7 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:23,786: INFO/ForkPoolWorker-1] Creating thumbnails for  7
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:32,847: INFO/ForkPoolWorker-1] Created 1 thumbnails
+[36mcelery_1    |[0m [2019-06-11 19:37:32,849: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[593f53f0-db17-47f1-bb17-24356f72dc3e] succeeded in 10.500990650999938s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  8 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:33,181: INFO/ForkPoolWorker-1] Creating thumbnails for  8
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:33,594: INFO/ForkPoolWorker-1] Created 1 thumbnails
+[36mcelery_1    |[0m [2019-06-11 19:37:33,594: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[9c313bc7-81e0-43dd-beb3-198192c868e8] succeeded in 0.7305453200000329s: None
+[36mcelery_1    |[0m [2019-06-11 19:37:33,613: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[14f9d30e-32fc-4a9d-a615-876bb74ddeec]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  9 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:33,619: INFO/ForkPoolWorker-1] Creating thumbnails for  9
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:34,344: INFO/ForkPoolWorker-1] Created 1 thumbnails
+[36mcelery_1    |[0m [2019-06-11 19:37:34,344: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[9b0bdc9b-934d-47c1-90bd-18c921d20d39] succeeded in 0.7303962729999967s: None
+[36mcelery_1    |[0m [2019-06-11 19:37:34,349: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[fd515079-90c6-46b4-9cc0-9039df22eafc]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  1 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:34,628: INFO/ForkPoolWorker-1] Creating thumbnails for  1
+[36mcelery_1    |[0m [2019-06-11 19:37:36,355: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[e368b02b-293e-45dc-a826-50f7260f2c2c]  
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:36,664: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-11 19:37:36,664: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[d621e4fb-7640-4848-8904-2d1c35a196c6] succeeded in 2.3123880979999285s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  2 [PID:8:MainThread]
+[32mredis_1     |[0m 1:C 12 Jun 2019 00:32:48.193 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[32mredis_1     |[0m 1:C 12 Jun 2019 00:32:48.193 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+[32mredis_1     |[0m 1:C 12 Jun 2019 00:32:48.193 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[32mredis_1     |[0m 1:M 12 Jun 2019 00:32:48.202 * Running mode=standalone, port=6379.
+[32mredis_1     |[0m 1:M 12 Jun 2019 00:32:48.202 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[32mredis_1     |[0m 1:M 12 Jun 2019 00:32:48.202 # Server initialized
+[32mredis_1     |[0m 1:M 12 Jun 2019 00:32:48.202 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[32mredis_1     |[0m 1:M 12 Jun 2019 00:32:48.202 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+[32mredis_1     |[0m 1:M 12 Jun 2019 00:32:48.202 * Ready to accept connections
+[36mcelery_1    |[0m [2019-06-11 19:37:36,669: INFO/ForkPoolWorker-1] Creating thumbnails for  2
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m [2019-06-11 19:37:37,345: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[0071f9b2-e31b-412f-8d29-1a76c1d325f9]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:38,154: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-11 19:37:38,155: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[100160f6-9196-45bc-b33e-7033ce4db3e7] succeeded in 1.4884574489999522s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  3 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-11 19:37:38,159: INFO/ForkPoolWorker-1] Creating thumbnails for  3
