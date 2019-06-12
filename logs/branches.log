@@ -2,7 +2,7 @@
 WHOAMI
 
 root
-/workspace/scripts
+/builder/home
 uid=0(root) gid=0(root) groups=0(root)
 
 DISK
@@ -14,11 +14,6 @@ tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
 /dev/sda1       184G   83G  102G  46% /workspace
 shm              64M     0   64M   0% /dev/shm
 tmpfs           370M  1.1M  369M   1% /run/docker.sock
-
-NET STATUS
-
-
-NMAP STATUS
 
 TRANSFER
 
