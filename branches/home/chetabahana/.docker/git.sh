@@ -117,8 +117,8 @@ git push origin master --force
 echo "\nNEXT\n"
 git checkout "${NEXT}"
 git fetch --prune origin master && git reset --hard origin/master
-tx pull --all > /dev/null
-find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
+#tx pull --all > /dev/null
+#find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
 git push origin "${NEXT}" --force
 
 cd /home/chetabahana/.docker/compose

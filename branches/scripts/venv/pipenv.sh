@@ -74,7 +74,7 @@ echo "\nPIPENV\n"
 pip3 install --user pipenv
 
 echo "\nDEV\n"
-pipenv install --system --deploy --dev
+pipenv install --dev
 
 echo "\n$APP\n"
 pipenv install $APP
@@ -88,7 +88,6 @@ pipenv run tox
 pipenv check
 
 echo "\nTRANSFER\n"
-pipenv lock --clear
-pipenv lock --pre -r > requirements.txt && cat requirements.txt
-pipenv lock --pre -r -d > requirements_dev.txt && cat requirements_dev.txt
+pipenv lock -r > requirements.txt && cat requirements.txt
+pipenv lock -r -d > requirements_dev.txt && cat requirements_dev.txt
 mv -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
