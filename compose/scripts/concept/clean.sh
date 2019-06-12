@@ -125,4 +125,3 @@ export BOTO_CONFIG=/dev/null
 gsutil -o GSUtil:default_project_id=chetabahana du -shc
 #gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/media
 #gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/static
-

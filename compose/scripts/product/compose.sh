@@ -159,8 +159,8 @@ END
 
 
 echo "\nCLEANING\n"
-sudo rm -rfv /tmp/volume && mkdir -pv /tmp/volume/static /tmp/volume/media/__sized__
-cd /tmp/volume/media/__sized__ && mkdir -v category-backgrounds collection-backgrounds && chmod -R a+rw /tmp/volume
+sudo rm -rfv /tmp/volume
+mkdir -pv /tmp/volume/static && chmod -R a+rw /tmp/volume
 
 echo "\nPULLING\n"
 docker pull redis
@@ -200,5 +200,3 @@ docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py popula
 #echo "\nCELERY\n"
 CURRENT_UID=$(id -u):$(id -g) docker-compose up -d celery
 docker inspect compose_celery_1
-
-return

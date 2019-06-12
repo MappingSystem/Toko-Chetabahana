@@ -30,5 +30,3 @@ docker logs compose_celery_1
 
 echo "\nLOGS\n"
 docker-compose logs
-
-return

@@ -1,5 +1,4 @@
 #!/bin/sh
-
 : <<'END'
 $ docker cp --help
 Copy files/folders between a container and the local filesystem
@@ -10,27 +9,32 @@ Options:
   -L, --follow-link   Always follow symbol link in SRC_PATH
 END
 
-echo "\nDEFAULT\n"
-cd ~/.docker/compose && rm -rf default
-git clone git@github.com:cetabahana/default.git
-rm -rf default/media default/static && cp -frpT /tmp/volume default
+cd ~/.docker/compose
+rm -rf app default product
+docker cp compose_celery_1:/app .
 
-cd default
+echo "\nDEFAULT\n"
+cd ~/.docker/compose
+git clone git@github.com:cetabahana/default.git
+cd default && rm -rf static && mkdir static
+cp -frpvT /tmp/volume/static static
 sed -i 's/-local/-fresh/g' cloudbuild.yaml
-git status && git add . && git commit -m "fresh commit" && git push -u origin master
-cd .. && rm -rf default
+git status && git add . && git commit -m "fresh commit"
+git push -u origin master
 
 echo "\nPRODUCT\n"
-cd ~/.docker/compose && rm -rf product
+cd ~/.docker/compose
 git clone git@github.com:chetabahana/product.git
-rm -rf product/media product/static && cp -frpT /tmp/volume product
-docker cp compose_celery_1:/app . && cp -frpT app product
-cp -frpvT deploy/product product && rm -rf app
+rm -rf product/static && mkdir product/static
+cp -frpT /tmp/volume product && cp -frpT app product
+cp -frpvT deploy/product product
+rm -rf ~/.docker/compose/app
 
-cd product
+cd ~/.docker/compose/product
 sed -i "s|'America/Chicago'|'Asia/Jakarta'|g" saleor/settings.py
 sed -i "s|LANGUAGE_CODE = 'en'|LANGUAGE_CODE = 'id'|g" saleor/settings.py
-git status && git add . && git commit -m "gunicorn" && git push -u origin master
-cd .. && rm -rf product
+git status && git add . && git commit -m "gunicorn"
+git push -u origin master
 
-return
+cd ~/.docker/compose
+rm -rf app default product

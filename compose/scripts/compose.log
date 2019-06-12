@@ -1,0 +1,2039 @@
+
+WHOAMI
+
+chetabahana
+/home/chetabahana/.docker/compose/scripts
+uid=1001(chetabahana) gid=999(docker) groups=999(docker),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),108(lxd),114(netdev),1000(ubuntu),1001(google-sudoers)
+
+DISK
+
+Filesystem      Size  Used Avail Use% Mounted on
+udev            279M     0  279M   0% /dev
+tmpfs            59M  896K   58M   2% /run
+/dev/sda1        29G  7.3G   22G  26% /
+tmpfs           291M     0  291M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           291M     0  291M   0% /sys/fs/cgroup
+/dev/loop0       89M   89M     0 100% /snap/core/6964
+/dev/loop1       60M   60M     0 100% /snap/google-cloud-sdk/86
+/dev/loop2       90M   90M     0 100% /snap/core/6673
+/dev/loop3       90M   90M     0 100% /snap/core/6818
+/dev/loop4       60M   60M     0 100% /snap/google-cloud-sdk/85
+/dev/sda15      105M  3.6M  101M   4% /boot/efi
+tmpfs            59M     0   59M   0% /run/user/1001
+
+NET STATUS
+
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      1157/dockerd        
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      791/systemd-resolve 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1284/sshd           
+tcp6       0      0 :::22                   :::*                    LISTEN      1284/sshd           
+
+NMAP STATUS
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-06-12 06:20 WIB
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.039s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 995 closed ports
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+25/tcp    filtered smtp
+80/tcp    open     http
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 1.89 seconds
+
+GCLOUD
+
+Google Cloud SDK 245.0.0
+alpha 2019.05.03
+beta 2019.05.03
+bq 2.0.43
+core 2019.05.03
+gsutil 4.38
+kubectl 2019.05.03
+
+REGISTRY
+
+No digest
+
+STORAGE
+
+17.37 KiB    gs://appspot.chetabahana.com
+687.46 MiB   gs://artifacts.chetabahana.appspot.com
+947 B        gs://chetabahana_cloudbuild
+18.65 MiB    gs://jual
+189.86 MiB   gs://staging.chetabahana.appspot.com
+30.23 GiB    gs://us.artifacts.chetabahana.appspot.com
+31.11 GiB    total
+
+CLEANING
+
+mkdir: created directory '/tmp/volume'
+mkdir: created directory '/tmp/volume/static'
+
+PULLING
+
+Using default tag: latest
+latest: Pulling from library/redis
+Digest: sha256:ca2d9251c2818df48c6598e01a5bdeab46040dc7ab236abe075d7c7343465177
+Status: Image is up to date for redis:latest
+Using default tag: latest
+latest: Pulling from library/postgres
+Digest: sha256:1518027f4aaee49b836c5cf4ece1b4a16bdcd820af873402e19e1cc181c1aff2
+Status: Image is up to date for postgres:latest
+Using default tag: latest
+latest: Pulling from chetabahana/saleor
+Digest: sha256:0387c7684d518f8e5258a8f9f627aa61f69259ccdafbab123b86c9dc5aabc1bf
+Status: Image is up to date for chetabahana/saleor:latest
+
+CLAIMING
+
+Total reclaimed space: 0B
+
+IMAGES
+
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+chetabahana/saleor   latest              6459be8672dc        4 hours ago         712MB
+redis                latest              3c41ce05add9        17 hours ago        95MB
+postgres             latest              4e045cb8eecd        23 hours ago        312MB
+postgres             11.3                587aa1d0e586        4 weeks ago         312MB
+redis                5.0.4               a4fe14ff1981        4 weeks ago         95MB
+
+CONFIG
+
+networks:
+  network_tier:
+    driver: bridge
+services:
+  celery:
+    command: celery -A saleor worker --app=saleor.celeryconf:app --loglevel=info
+    depends_on:
+    - redis
+    environment:
+      ALLOWED_HOSTS: localhost,.chetabahana.com
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CIRCLECI_TOKEN: d9f689daa4d16d966c8ed21a4f4b849751c87509
+      DATABASE_URL: postgres://saleor:saleor@postgres/saleor
+      DEBUG: "False"
+      DEFAULT_COUNTRY: ID
+      DEFAULT_FROM_EMAIL: noreply@chetabahana.com
+      ENABLE_DEBUG_TOOLBAR: "False"
+      ENABLE_SILK: "False"
+      GOOGLE_APPLICATION_CREDENTIALS: /app/.ssh/Chetabahana-f92949fb068b.json
+      GS_AUTO_CREATE_BUCKET: "True"
+      GS_MEDIA_BUCKET_NAME: jual
+      GS_PROJECT_ID: chetabahana
+      OPENEXCHANGERATES_API_KEY: 95ad2e70ce45497aaea2404967c949f0
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: ojbhzdfwtncvtfnc
+      TX_TOKEN: 1/c75d069b10a1c63d742584bcbf78019ee8421faa
+    image: chetabahana/saleor
+    networks:
+      network_tier: null
+    restart: unless-stopped
+    user: saleor:saleor
+    volumes:
+    - /home/chetabahana/.docker/compose/windows/cygwin/home/Chetabahana/.ssh:/app/.ssh:rw
+  postgres:
+    environment:
+      POSTGRES_PASSWORD: saleor
+      POSTGRES_USER: saleor
+    image: postgres
+    networks:
+      network_tier: null
+    ports:
+    - published: 5431
+      target: 5432
+    restart: unless-stopped
+    volumes:
+    - psql_data:/var/lib/postgresql:rw
+  redis:
+    image: redis
+    networks:
+      network_tier: null
+    ports:
+    - published: 6378
+      target: 6379
+    restart: unless-stopped
+    user: redis:redis
+    volumes:
+    - redis_data:/data:rw
+  saleor:
+    depends_on:
+    - postgres
+    - redis
+    environment:
+      ALLOWED_HOSTS: localhost,.chetabahana.com
+      CELERY_BROKER_URL: redis://redis:6379/1
+      CIRCLECI_TOKEN: d9f689daa4d16d966c8ed21a4f4b849751c87509
+      DATABASE_URL: postgres://saleor:saleor@postgres/saleor
+      DEBUG: "False"
+      DEFAULT_COUNTRY: ID
+      DEFAULT_FROM_EMAIL: noreply@chetabahana.com
+      ENABLE_DEBUG_TOOLBAR: "False"
+      ENABLE_SILK: "False"
+      GOOGLE_APPLICATION_CREDENTIALS: /app/.ssh/Chetabahana-f92949fb068b.json
+      GS_AUTO_CREATE_BUCKET: "True"
+      GS_MEDIA_BUCKET_NAME: jual
+      GS_PROJECT_ID: chetabahana
+      OPENEXCHANGERATES_API_KEY: 95ad2e70ce45497aaea2404967c949f0
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: ojbhzdfwtncvtfnc
+      TX_TOKEN: 1/c75d069b10a1c63d742584bcbf78019ee8421faa
+    image: chetabahana/saleor
+    networks:
+      network_tier: null
+    restart: "no"
+    user: saleor:saleor
+    volumes:
+    - /home/chetabahana/.docker/compose/windows/cygwin/home/Chetabahana/.ssh:/app/.ssh:rw
+    - /tmp/volume/static:/app/static:rw
+version: '3.2'
+volumes:
+  psql_data:
+    driver: local
+  redis_data:
+    driver: local
+
+
+REDIS
+
+[
+    {
+        "Id": "f9557e3adf57176bdf5d0c2cde042d10ab1b09bbcb621d6aee7cad0d45d397a7",
+        "Created": "2019-06-11T23:21:08.873389378Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "redis-server"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 2286,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2019-06-11T23:21:14.762371596Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:3c41ce05add98e89ff5ef31ec8cf2f5866e2b82fbe1eae057201f7c6f884f23d",
+        "ResolvConfPath": "/var/lib/docker/containers/f9557e3adf57176bdf5d0c2cde042d10ab1b09bbcb621d6aee7cad0d45d397a7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/f9557e3adf57176bdf5d0c2cde042d10ab1b09bbcb621d6aee7cad0d45d397a7/hostname",
+        "HostsPath": "/var/lib/docker/containers/f9557e3adf57176bdf5d0c2cde042d10ab1b09bbcb621d6aee7cad0d45d397a7/hosts",
+        "LogPath": "/var/lib/docker/containers/f9557e3adf57176bdf5d0c2cde042d10ab1b09bbcb621d6aee7cad0d45d397a7/f9557e3adf57176bdf5d0c2cde042d10ab1b09bbcb621d6aee7cad0d45d397a7-json.log",
+        "Name": "/compose_redis_1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "compose_redis_data:/data:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "compose_network_tier",
+            "PortBindings": {
+                "6379/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "6378"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/d381ecad8d104eccaab4c074b45f008600a75c48e56092c20ed930cbb7cd38ba-init/diff:/var/lib/docker/overlay2/b321ea4ed6b65cba8501c0c9ab29358ba135f73b750e3e711ba90d5fce82f60a/diff:/var/lib/docker/overlay2/53d724cd0be60344271e836ca7319a26528d7fe71937f385eab364a4922c4e2a/diff:/var/lib/docker/overlay2/366cfb42553f7b6e9e7262771ae2b7e8692b5cbc23ef89d51979830b25362c07/diff:/var/lib/docker/overlay2/fdf8539221994b6cd8340423c6915dc9b4e84989387169a8baa5db8b63b6e32b/diff:/var/lib/docker/overlay2/e448130531638b574a2bf5129877310cc04e3affb40084c9f0c0fb3437779c62/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/d381ecad8d104eccaab4c074b45f008600a75c48e56092c20ed930cbb7cd38ba/merged",
+                "UpperDir": "/var/lib/docker/overlay2/d381ecad8d104eccaab4c074b45f008600a75c48e56092c20ed930cbb7cd38ba/diff",
+                "WorkDir": "/var/lib/docker/overlay2/d381ecad8d104eccaab4c074b45f008600a75c48e56092c20ed930cbb7cd38ba/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "compose_redis_data",
+                "Source": "/var/lib/docker/volumes/compose_redis_data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "f9557e3adf57",
+            "Domainname": "",
+            "User": "redis:redis",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "6379/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.10",
+                "REDIS_VERSION=5.0.5",
+                "REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-5.0.5.tar.gz",
+                "REDIS_DOWNLOAD_SHA=2139009799d21d8ff94fc40b7f36ac46699b9e1254086299f8d3b223ca54a375"
+            ],
+            "Cmd": [
+                "redis-server"
+            ],
+            "ArgsEscaped": true,
+            "Image": "redis",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "/data",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "ad480f14181332df9cddfa4ac22aedbe0036ff4881c86ce2146d996b545523bd",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "compose",
+                "com.docker.compose.service": "redis",
+                "com.docker.compose.version": "1.23.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "89b723c9d43ecb8bcf4ac1fea04f9d35cc8dacf399f5547377b7299b0eee6509",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "6379/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "6378"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/89b723c9d43e",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "compose_network_tier": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "redis",
+                        "f9557e3adf57"
+                    ],
+                    "NetworkID": "e5553271001cff827d5037823c79dd9c0941eae3a7b75985cff9e72d5df0e67a",
+                    "EndpointID": "da1b34278113f89690d625cca7439e0c2d64c68c09fb74a1f0cdeaa6f9a29a84",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+
+POSTGRES
+
+[
+    {
+        "Id": "0639e93efa1c7320cf25a4b9dff7747d98e888b582e8425422981f4ea722d2ff",
+        "Created": "2019-06-11T23:21:15.979395645Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "postgres"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 2430,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2019-06-11T23:21:18.438362951Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:4e045cb8eecd48ecf0b5eea966e9a8b0b9332b18e55d40a40f7971a1a0a08cb6",
+        "ResolvConfPath": "/var/lib/docker/containers/0639e93efa1c7320cf25a4b9dff7747d98e888b582e8425422981f4ea722d2ff/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/0639e93efa1c7320cf25a4b9dff7747d98e888b582e8425422981f4ea722d2ff/hostname",
+        "HostsPath": "/var/lib/docker/containers/0639e93efa1c7320cf25a4b9dff7747d98e888b582e8425422981f4ea722d2ff/hosts",
+        "LogPath": "/var/lib/docker/containers/0639e93efa1c7320cf25a4b9dff7747d98e888b582e8425422981f4ea722d2ff/0639e93efa1c7320cf25a4b9dff7747d98e888b582e8425422981f4ea722d2ff-json.log",
+        "Name": "/compose_postgres_1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "compose_psql_data:/var/lib/postgresql:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "compose_network_tier",
+            "PortBindings": {
+                "5432/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5431"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/bd2b4951c05e93901e883b2ed30414500e9fd39864b59935d2f3d73524e7f808-init/diff:/var/lib/docker/overlay2/c2353f061418fb31717039e72eaac26a439bb1f559e253c2ea0f2434db8ca31c/diff:/var/lib/docker/overlay2/e25cded6483555b3b72491ebe8c02f6ff52e67133b24472add5859c524705964/diff:/var/lib/docker/overlay2/7638a19ba1744384d549e48fa899390c56a385202e0691ace62620c816de019e/diff:/var/lib/docker/overlay2/d2d2105c4c0e09db4f1ed6a7f8204dace63a79dbd93aecd654cc388ad0011975/diff:/var/lib/docker/overlay2/9c94ce5ce883d9f8a598a6de0008d33bf37262d91bdaf92a8d49abae1567e3eb/diff:/var/lib/docker/overlay2/4c4a31813926786865ce7a993a0609578dca72979c316389bf941251dcd80728/diff:/var/lib/docker/overlay2/bd6143335af904753adf29c10e36ec8de04949ca29d0153b1738ee302ba7e04f/diff:/var/lib/docker/overlay2/50d681676f899007ee376a78035a4da8da1b20176e549f170d409bc4faa75aaa/diff:/var/lib/docker/overlay2/8f0e379e0515a2abc7a1cfe787e99eb6f4dac027f726734570692db7d01092f7/diff:/var/lib/docker/overlay2/52344c503438164b0aae80530ae0bc750b5a82ca2f9ec915b9f1fc380a038457/diff:/var/lib/docker/overlay2/589f4d5764764ed84929f8fbfdb31626ad4428f0050099475a0afd0080b399b3/diff:/var/lib/docker/overlay2/ff07c8211573e600cc433646b8769402d97fb15efa091a82915482da58dc9abc/diff:/var/lib/docker/overlay2/cb89d3cf47bc0d2c8a60c48d994a847800913b94f3e573b3b95c174268b695cf/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/bd2b4951c05e93901e883b2ed30414500e9fd39864b59935d2f3d73524e7f808/merged",
+                "UpperDir": "/var/lib/docker/overlay2/bd2b4951c05e93901e883b2ed30414500e9fd39864b59935d2f3d73524e7f808/diff",
+                "WorkDir": "/var/lib/docker/overlay2/bd2b4951c05e93901e883b2ed30414500e9fd39864b59935d2f3d73524e7f808/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "446508364eed38e9d7893d7a7a929ff4f320aac8ef27f2fb6c39cf0a885ea521",
+                "Source": "/var/lib/docker/volumes/446508364eed38e9d7893d7a7a929ff4f320aac8ef27f2fb6c39cf0a885ea521/_data",
+                "Destination": "/var/lib/postgresql/data",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "compose_psql_data",
+                "Source": "/var/lib/docker/volumes/compose_psql_data/_data",
+                "Destination": "/var/lib/postgresql",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "0639e93efa1c",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "POSTGRES_USER=saleor",
+                "POSTGRES_PASSWORD=saleor",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/11/bin",
+                "GOSU_VERSION=1.11",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=11",
+                "PG_VERSION=11.3-1.pgdg90+1",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "ArgsEscaped": true,
+            "Image": "postgres",
+            "Volumes": {
+                "/var/lib/postgresql": {},
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "c6c97a367fe4d2819c979f3896e1d04f24d97337353e822a3d14ec07484c7415",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "compose",
+                "com.docker.compose.service": "postgres",
+                "com.docker.compose.version": "1.23.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "a0a03ffab556ee4b4da84fc2903976312e8716229aad0a194d7ee46ff458ec0e",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "5432/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5431"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/a0a03ffab556",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "compose_network_tier": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "0639e93efa1c",
+                        "postgres"
+                    ],
+                    "NetworkID": "e5553271001cff827d5037823c79dd9c0941eae3a7b75985cff9e72d5df0e67a",
+                    "EndpointID": "07bc034501c182a8c0d2ea8f9b4e722e84562b455bd0e60dc0d5aa12b97238ae",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:03",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+
+MIGRATE
+
+Operations to perform:
+  Apply all migrations: account, auth, checkout, contenttypes, discount, django_prices_openexchangerates, django_prices_vatlayer, giftcard, impersonate, menu, order, page, payment, product, sessions, shipping, site, sites, social_django
+Running pre-migrate handlers for application contenttypes
+Running pre-migrate handlers for application sessions
+Running pre-migrate handlers for application sites
+Running pre-migrate handlers for application auth
+Running pre-migrate handlers for application forms
+Running pre-migrate handlers for application account
+Running pre-migrate handlers for application discount
+Running pre-migrate handlers for application giftcard
+Running pre-migrate handlers for application product
+Running pre-migrate handlers for application checkout
+Running pre-migrate handlers for application core
+Running pre-migrate handlers for application menu
+Running pre-migrate handlers for application order
+Running pre-migrate handlers for application seo
+Running pre-migrate handlers for application shipping
+Running pre-migrate handlers for application site
+Running pre-migrate handlers for application page
+Running pre-migrate handlers for application payment
+Running pre-migrate handlers for application bootstrap4
+Running pre-migrate handlers for application django_measurement
+Running pre-migrate handlers for application django_prices
+Running pre-migrate handlers for application django_prices_openexchangerates
+Running pre-migrate handlers for application django_prices_vatlayer
+Running pre-migrate handlers for application mptt
+Running pre-migrate handlers for application social_django
+Running pre-migrate handlers for application django_countries
+Running pre-migrate handlers for application django_filters
+Running pre-migrate handlers for application impersonate
+Running pre-migrate handlers for application captcha
+Running migrations:
+  Applying product.0001_initial... OK (0.433s)
+  Applying product.0002_auto_20150722_0545... OK (0.013s)
+  Applying product.0003_auto_20150820_2016... OK (0.061s)
+  Applying product.0003_auto_20150820_1955... OK (0.012s)
+  Applying product.0004_merge... OK (0.003s)
+  Applying product.0005_auto_20150825_1433... OK (0.054s)
+  Applying product.0006_product_updated_at... OK (0.054s)
+  Applying product.0007_auto_20160112_1025... OK (0.021s)
+  Applying product.0008_auto_20160114_0733... OK (0.037s)
+  Applying product.0009_discount_categories... OK (0.038s)
+  Applying product.0010_auto_20160129_0826... OK (0.027s)
+  Applying product.0011_stock_quantity_allocated... OK (0.010s)
+  Applying product.0012_auto_20160218_0812... OK (0.042s)
+  Applying product.0013_auto_20161207_0555... OK (0.031s)
+  Applying product.0014_auto_20161207_0840... OK (0.014s)
+  Applying product.0015_transfer_locations... OK (0.015s)
+  Applying product.0016_auto_20161207_0843... OK (0.019s)
+  Applying product.0017_remove_stock_location... OK (0.013s)
+  Applying product.0018_auto_20161207_0844... OK (0.033s)
+  Applying product.0019_auto_20161212_0230... OK (0.075s)
+  Applying product.0020_attribute_data_to_class... OK (0.019s)
+  Applying product.0021_add_hstore_extension... OK (0.361s)
+  Applying product.0022_auto_20161212_0301... OK (0.050s)
+  Applying product.0023_auto_20161211_1912... OK (0.014s)
+  Applying product.0024_migrate_json_data... OK (0.041s)
+  Applying product.0025_auto_20161219_0517... OK (0.009s)
+  Applying product.0026_auto_20161230_0347... OK (0.011s)
+  Applying product.0027_auto_20170113_0435... OK (0.049s)
+  Applying product.0013_auto_20161130_0608... OK (0.005s)
+  Applying product.0014_remove_productvariant_attributes... OK (0.015s)
+  Applying product.0015_productvariant_attributes... OK (0.017s)
+  Applying product.0016_auto_20161204_0311... OK (0.017s)
+  Applying product.0017_attributechoicevalue_slug... OK (0.020s)
+  Applying product.0018_auto_20161212_0725... OK (0.018s)
+  Applying product.0026_merge_20161221_0845... OK (0.003s)
+  Applying product.0028_merge_20170116_1016... OK (0.003s)
+  Applying product.0029_product_is_featured... OK (0.015s)
+  Applying product.0030_auto_20170206_0407... OK (0.173s)
+  Applying product.0031_auto_20170206_0601... OK (0.033s)
+  Applying product.0032_auto_20170216_0438... OK (0.014s)
+  Applying product.0033_auto_20170227_0757... OK (0.034s)
+  Applying product.0034_product_is_published... OK (0.014s)
+  Applying product.0035_auto_20170919_0846... OK (0.019s)
+  Applying product.0036_auto_20171115_0608... OK (0.013s)
+  Applying product.0037_auto_20171124_0847... OK (0.109s)
+  Applying product.0038_auto_20171129_0616... OK (0.083s)
+  Applying product.0037_auto_20171129_1004... OK (0.062s)
+  Applying product.0039_merge_20171130_0727... OK (0.003s)
+  Applying product.0040_auto_20171205_0428... OK (0.017s)
+  Applying product.0041_auto_20171205_0546... OK (0.015s)
+  Applying product.0042_auto_20171206_0501... OK (0.008s)
+  Applying product.0043_auto_20171207_0839... OK (0.012s)
+  Applying product.0044_auto_20180108_0814... OK (0.417s)
+  Applying product.0045_md_to_html... OK (0.019s)
+  Applying product.0046_product_category... OK (0.077s)
+  Applying product.0047_auto_20180117_0359... OK (0.039s)
+  Applying product.0048_product_class_to_type... OK (0.087s)
+  Applying product.0049_collection... OK (0.100s)
+  Applying product.0050_auto_20180131_0746... OK (0.014s)
+  Applying product.0051_auto_20180202_1106... OK (0.012s)
+  Applying product.0052_slug_field_length... OK (0.042s)
+  Applying product.0053_product_seo_description... OK (0.033s)
+  Applying product.0053_auto_20180305_1002... OK (0.018s)
+  Applying product.0054_merge_20180320_1108... OK (0.003s)
+  Applying shipping.0001_initial... OK (0.041s)
+  Applying shipping.0002_auto_20160906_0741... OK (0.022s)
+  Applying shipping.0003_auto_20170116_0700... OK (0.007s)
+  Applying shipping.0004_auto_20170206_0407... OK (0.040s)
+  Applying shipping.0005_auto_20170906_0556... OK (0.019s)
+  Applying shipping.0006_auto_20171109_0908... OK (0.009s)
+  Applying shipping.0007_auto_20171129_1004... OK (0.016s)
+  Applying shipping.0008_auto_20180108_0814... OK (0.043s)
+  Applying contenttypes.0001_initial... OK (0.020s)
+  Applying contenttypes.0002_remove_content_type_name... OK (0.032s)
+  Applying auth.0001_initial... OK (0.071s)
+  Applying auth.0002_alter_permission_name_max_length... OK (0.010s)
+  Applying auth.0003_alter_user_email_max_length... OK (0.012s)
+  Applying auth.0004_alter_user_username_opts... OK (0.012s)
+  Applying auth.0005_alter_user_last_login_null... OK (0.011s)
+  Applying auth.0006_require_contenttypes_0002... OK (0.003s)
+  Applying account.0001_initial... OK (0.306s)
+  Applying order.0001_initial... OK (0.251s)
+  Applying order.0002_auto_20150820_1955... OK (0.021s)
+  Applying order.0003_auto_20150825_1433... OK (0.033s)
+  Applying order.0004_order_total... OK (0.023s)
+  Applying order.0005_deliverygroup_last_updated... OK (0.023s)
+  Applying order.0006_deliverygroup_shipping_method... OK (0.032s)
+  Applying order.0007_deliverygroup_tracking_number... OK (0.024s)
+  Applying order.0008_auto_20151026_0820... OK (0.063s)
+  Applying order.0009_auto_20151201_0820... OK (0.075s)
+  Applying order.0010_auto_20160119_0541... OK (0.061s)
+  Applying discount.0001_initial... OK (0.093s)
+  Applying discount.0002_voucher... OK (0.069s)
+  Applying discount.0003_auto_20160207_0534... OK (0.177s)
+  Applying order.0011_auto_20160207_0534... OK (0.079s)
+  Applying order.0012_auto_20160216_1032... OK (0.060s)
+  Applying order.0013_auto_20160906_0741... OK (0.096s)
+  Applying order.0014_auto_20161028_0955... OK (0.032s)
+  Applying order.0015_auto_20170206_0407... OK (0.725s)
+  Applying order.0016_order_language_code... OK (0.029s)
+  Applying order.0017_auto_20170906_0556... OK (0.024s)
+  Applying order.0018_auto_20170919_0839... OK (0.025s)
+  Applying order.0019_auto_20171109_1423... OK (0.322s)
+  Applying order.0020_auto_20171123_0609... OK (0.072s)
+  Applying order.0021_auto_20171129_1004... OK (0.096s)
+  Applying order.0022_auto_20171205_0428... OK (0.043s)
+  Applying order.0023_auto_20171206_0506... OK (0.056s)
+  Applying order.0024_remove_order_status... OK (0.027s)
+  Applying order.0025_auto_20171214_1015... OK (0.040s)
+  Applying order.0026_auto_20171218_0428... OK (0.068s)
+  Applying order.0027_auto_20180108_0814... OK (0.929s)
+  Applying order.0028_status_fsm... OK (0.023s)
+  Applying order.0029_auto_20180111_0845... OK (0.061s)
+  Applying order.0030_auto_20180118_0605... OK (0.071s)
+  Applying order.0031_auto_20180119_0405... OK (0.101s)
+  Applying order.0032_orderline_is_shipping_required... OK (0.068s)
+  Applying order.0033_auto_20180123_0832... OK (0.025s)
+  Applying order.0034_auto_20180221_1056... OK (0.059s)
+  Applying order.0035_auto_20180221_1057... OK (0.060s)
+  Applying order.0036_remove_order_total_tax... OK (0.025s)
+  Applying order.0037_auto_20180228_0450... OK (0.107s)
+  Applying order.0038_auto_20180228_0451... OK (0.048s)
+  Applying order.0039_auto_20180312_1203... OK (0.050s)
+  Applying order.0040_auto_20180210_0422... OK (0.477s)
+  Applying order.0041_auto_20180222_0458... OK (0.052s)
+  Applying order.0042_auto_20180227_0436... OK (0.139s)
+  Applying order.0043_auto_20180322_0655... OK (0.051s)
+  Applying order.0044_auto_20180326_1055... OK (0.193s)
+  Applying order.0045_auto_20180329_0142... OK (0.205s)
+  Applying order.0046_order_line_taxes... OK (0.054s)
+  Applying order.0047_order_line_name_length... OK (0.028s)
+  Applying order.0048_auto_20180629_1055... OK (0.068s)
+  Applying order.0049_auto_20180719_0520... OK (0.027s)
+  Applying order.0050_auto_20180803_0528... OK (0.233s)
+  Applying order.0050_auto_20180803_0337... OK (0.051s)
+  Applying order.0051_merge_20180807_0704... OK (0.005s)
+  Applying order.0052_auto_20180822_0720... OK (0.084s)
+  Applying order.0053_orderevent... OK (0.065s)
+  Applying order.0054_move_data_to_order_events... OK (0.089s)
+  Applying order.0055_remove_order_note_order_history_entry... OK (0.153s)
+  Applying order.0056_auto_20180911_1541... OK (0.023s)
+  Applying order.0057_orderevent_parameters_new... OK (0.135s)
+  Applying order.0058_remove_orderevent_parameters... OK (0.026s)
+  Applying order.0059_auto_20180913_0841... OK (0.033s)
+  Applying order.0060_auto_20180919_0731... OK (0.026s)
+  Applying order.0061_auto_20180920_0859... OK (0.021s)
+  Applying order.0062_auto_20180921_0949... OK (0.055s)
+  Applying order.0063_auto_20180926_0446... OK (0.024s)
+  Applying order.0064_auto_20181016_0819... OK (0.037s)
+  Applying checkout.0001_initial... OK (0.165s)
+  Applying checkout.0002_auto_20161014_1221... OK (0.062s)
+  Applying checkout.fix_empty_data_in_lines... OK (0.047s)
+  Applying checkout.0001_auto_20170113_0435... OK (0.267s)
+  Applying checkout.0002_auto_20170206_0407... OK (0.196s)
+  Applying checkout.0003_auto_20170906_0556... OK (0.026s)
+  Applying checkout.0004_auto_20171129_1004... OK (0.038s)
+  Applying checkout.0005_auto_20180108_0814... OK (0.331s)
+  Applying checkout.0006_auto_20180221_0825... OK (0.029s)
+  Applying account.0002_auto_20150907_0602... OK (0.046s)
+  Applying account.0003_auto_20151104_1102... OK (0.026s)
+  Applying account.0004_auto_20160114_0419... OK (0.017s)
+  Applying account.0005_auto_20160205_0651... OK (0.030s)
+  Applying account.0006_auto_20160829_0819... OK (0.037s)
+  Applying account.0007_auto_20161115_0940... OK (0.030s)
+  Applying account.0008_auto_20161115_1011... OK (0.020s)
+  Applying account.0009_auto_20170206_0407... OK (0.091s)
+  Applying account.0010_auto_20170919_0839... OK (0.021s)
+  Applying account.0011_auto_20171110_0552... OK (0.021s)
+  Applying account.0012_auto_20171117_0846... OK (0.025s)
+  Applying account.0013_auto_20171120_0521... OK (0.061s)
+  Applying account.0014_auto_20171129_1004... OK (0.036s)
+  Applying account.0015_auto_20171213_0734... OK (0.017s)
+  Applying account.0016_auto_20180108_0814... OK (0.513s)
+  Applying account.0017_auto_20180206_0957... OK (0.043s)
+  Applying account.0018_auto_20180426_0641... OK (0.122s)
+  Applying account.0019_auto_20180528_1205... OK (0.046s)
+  Applying checkout.0007_merge_cart_with_checkout... OK (0.437s)
+  Applying checkout.0008_rename_tables... OK (0.048s)
+  Applying checkout.0009_cart_translated_discount_name... OK (0.024s)
+  Applying checkout.0010_auto_20180822_0720... OK (0.046s)
+  Applying checkout.0011_auto_20180913_0817... OK (0.100s)
+  Applying checkout.0012_remove_cartline_data... OK (0.024s)
+  Applying checkout.0013_auto_20180913_0841... OK (0.326s)
+  Applying checkout.0014_auto_20180921_0751... OK (0.024s)
+  Applying checkout.0015_auto_20181017_1346... OK (0.022s)
+  Applying payment.0001_initial... OK (0.131s)
+  Applying payment.0002_transfer_payment_to_payment_method... OK (0.055s)
+  Applying order.0065_auto_20181017_1346... OK (0.183s)
+  Applying order.0066_auto_20181023_0319... OK (0.054s)
+  Applying order.0067_auto_20181102_1054... OK (0.028s)
+  Applying order.0068_order_checkout_token... OK (0.028s)
+  Applying order.0069_auto_20190225_2305... OK (0.017s)
+  Applying order.0070_drop_update_event_and_rename_events... OK (0.133s)
+  Applying account.0020_user_token... OK (0.025s)
+  Applying account.0021_unique_token... OK (0.077s)
+  Applying account.0022_auto_20180718_0956... OK (0.021s)
+  Applying account.0023_auto_20180719_0520... OK (0.037s)
+  Applying account.0024_auto_20181011_0737... OK (0.045s)
+  Applying account.0025_auto_20190314_0550... OK (0.017s)
+  Applying account.0026_user_avatar... OK (0.023s)
+  Applying account.0027_customerevent... OK (0.055s)
+  Applying auth.0007_alter_validators_add_error_messages... OK (0.021s)
+  Applying auth.0008_alter_user_username_max_length... OK (0.018s)
+  Applying auth.0009_alter_user_last_name_max_length... OK (0.018s)
+  Applying auth.0010_alter_group_name_max_length... OK (0.017s)
+  Applying auth.0011_update_proxy_permissions... OK (0.055s)
+  Applying giftcard.0001_initial... OK (0.059s)
+  Applying shipping.0009_auto_20180629_1055... OK (0.013s)
+  Applying shipping.0010_auto_20180719_0520... OK (0.014s)
+  Applying shipping.0011_auto_20180802_1238... OK (0.223s)
+  Applying shipping.0012_remove_legacy_shipping_methods... OK (0.060s)
+  Applying shipping.0013_auto_20180822_0721... OK (0.252s)
+  Applying shipping.0014_auto_20180920_0956... OK (0.021s)
+  Applying shipping.0015_auto_20190305_0640... OK (0.011s)
+  Applying sites.0001_initial... OK (0.016s)
+  Applying sites.0002_alter_domain_unique... OK (0.021s)
+  Applying site.0001_initial... OK (0.027s)
+  Applying site.0002_add_default_data... OK (0.062s)
+  Applying site.0003_sitesettings_description... OK (0.014s)
+  Applying site.0004_auto_20170221_0426... OK (0.040s)
+  Applying site.0005_auto_20170906_0556... OK (0.011s)
+  Applying site.0006_auto_20171025_0454... OK (0.019s)
+  Applying site.0007_auto_20171027_0856... OK (0.091s)
+  Applying site.0008_auto_20171027_0856... OK (0.033s)
+  Applying site.0009_auto_20171109_0849... OK (0.013s)
+  Applying site.0010_auto_20171113_0958... OK (0.012s)
+  Applying site.0011_auto_20180108_0814... OK (0.037s)
+  Applying page.0001_initial... OK (0.026s)
+  Applying menu.0001_initial... OK (0.127s)
+  Applying menu.0002_auto_20180319_0412... OK (0.100s)
+  Applying site.0012_auto_20180405_0757... OK (0.114s)
+  Applying menu.0003_auto_20180405_0854... OK (0.083s)
+  Applying site.0013_assign_default_menus... OK (0.069s)
+  Applying site.0014_handle_taxes... OK (0.033s)
+  Applying site.0015_sitesettings_handle_stock_by_default... OK (0.016s)
+  Applying site.0016_auto_20180719_0520... OK (0.013s)
+  Applying site.0017_auto_20180803_0528... OK (0.089s)
+  Applying product.0055_auto_20180321_0417... OK (0.094s)
+  Applying product.0056_auto_20180330_0321... OK (0.045s)
+  Applying product.0057_auto_20180403_0852... OK (0.024s)
+  Applying product.0058_auto_20180329_0142... OK (0.377s)
+  Applying product.0059_generate_variant_name_from_attrs... OK (0.068s)
+  Applying product.0060_collection_is_published... OK (0.027s)
+  Applying product.0061_product_taxes... OK (0.055s)
+  Applying product.0062_sortable_models... OK (0.151s)
+  Applying product.0063_required_attr_value_order... OK (0.016s)
+  Applying product.0064_productvariant_handle_stock... OK (0.018s)
+  Applying product.0065_auto_20180719_0520... OK (0.021s)
+  Applying product.0066_auto_20180803_0528... OK (0.297s)
+  Applying site.0018_sitesettings_homepage_collection... OK (0.099s)
+  Applying product.0067_remove_product_is_featured... OK (0.024s)
+  Applying product.0068_auto_20180822_0720... OK (0.047s)
+  Applying product.0069_auto_20180912_0326... OK (0.014s)
+  Applying product.0070_auto_20180912_0329... OK (0.028s)
+  Applying product.0071_attributechoicevalue_value... OK (0.014s)
+  Applying product.0072_auto_20180925_1048... OK (0.644s)
+  Applying product.0073_auto_20181010_0729... OK (0.073s)
+  Applying product.0074_auto_20181010_0730... OK (0.220s)
+  Applying product.0075_auto_20181010_0842... OK (0.050s)
+  Applying product.0076_auto_20181012_1146... OK (0.012s)
+  Applying product.0077_generate_versatile_background_images... OK (0.162s)
+  Applying product.0078_auto_20181120_0437... OK (0.033s)
+  Applying product.0079_default_tax_rate_instead_of_empty_field... OK (0.077s)
+  Applying product.0080_collection_published_date... OK (0.018s)
+  Applying product.0080_auto_20181214_0440... OK (0.029s)
+  Applying product.0081_merge_20181215_1659... OK (0.003s)
+  Applying product.0081_auto_20181218_0024... OK (0.016s)
+  Applying product.0082_merge_20181219_1440... OK (0.003s)
+  Applying product.0083_auto_20190104_0443... OK (0.029s)
+  Applying product.0084_auto_20190122_0113... OK (0.024s)
+  Applying product.0085_auto_20190125_0025... OK (0.010s)
+  Applying product.0086_product_publication_date... OK (0.021s)
+  Applying product.0087_auto_20190208_0326... OK (0.022s)
+  Applying product.0088_auto_20190220_1928... OK (0.022s)
+  Applying product.0089_auto_20190225_0252... OK (0.109s)
+  Applying product.0090_auto_20190328_0608... OK (0.022s)
+  Applying product.0091_auto_20190402_0853... OK (0.107s)
+  Applying payment.0003_rename_payment_method_to_payment... OK (0.478s)
+  Applying payment.0004_auto_20181206_0031... OK (0.027s)
+  Applying payment.0005_auto_20190104_0443... OK (0.029s)
+  Applying payment.0006_auto_20190109_0358... OK (0.016s)
+  Applying payment.0007_auto_20190206_0938... OK (0.016s)
+  Applying payment.0007_auto_20190125_0242... OK (0.026s)
+  Applying payment.0008_merge_20190214_0447... OK (0.003s)
+  Applying payment.0009_convert_to_partially_charged_and_partially_refunded... OK (0.069s)
+  Applying payment.0010_auto_20190220_2001... OK (0.028s)
+  Applying checkout.0016_auto_20190112_0506... OK (0.029s)
+  Applying checkout.0017_auto_20190130_0207... OK (0.027s)
+  Applying checkout.0018_auto_20190410_0132... OK (0.415s)
+  Applying checkout.0019_checkout_gift_cards... OK (0.074s)
+  Applying discount.0004_auto_20170206_0407... OK (0.506s)
+  Applying discount.0005_auto_20170919_0839... OK (0.041s)
+  Applying discount.0006_auto_20171129_1004... OK (0.044s)
+  Applying discount.0007_auto_20180108_0814... OK (0.381s)
+  Applying discount.0008_sale_collections... OK (0.044s)
+  Applying discount.0009_auto_20180719_0520... OK (0.046s)
+  Applying discount.0010_auto_20180724_1251... OK (0.334s)
+  Applying discount.0011_auto_20180803_0528... OK (0.060s)
+  Applying discount.0012_auto_20190329_0836... OK (0.267s)
+  Applying django_prices_openexchangerates.0001_initial... OK (0.021s)
+  Applying django_prices_openexchangerates.0002_auto_20160329_0702... OK (0.023s)
+  Applying django_prices_openexchangerates.0003_auto_20161018_0707... OK (0.027s)
+  Applying django_prices_openexchangerates.0004_auto_20170316_0944... OK (0.009s)
+  Applying django_prices_vatlayer.0001_initial... OK (0.015s)
+  Applying django_prices_vatlayer.0002_ratetypes... OK (0.015s)
+  Applying django_prices_vatlayer.0003_auto_20180316_1053... OK (0.016s)
+  Applying impersonate.0001_initial... OK (0.078s)
+  Applying menu.0004_sort_order_index... OK (0.032s)
+  Applying menu.0005_auto_20180719_0520... OK (0.012s)
+  Applying menu.0006_auto_20180803_0528... OK (0.072s)
+  Applying menu.0007_auto_20180807_0547... OK (0.094s)
+  Applying menu.0008_menu_json_content_new... OK (0.093s)
+  Applying menu.0009_remove_menu_json_content... OK (0.012s)
+  Applying menu.0010_auto_20180913_0841... OK (0.028s)
+  Applying menu.0011_auto_20181204_0004... OK (0.010s)
+  Applying menu.0012_auto_20190104_0443... OK (0.010s)
+  Applying menu.0013_auto_20190507_0309... OK (0.088s)
+  Applying menu.0014_auto_20190523_0759... OK (0.030s)
+  Applying order.0071_order_gift_cards... OK (0.085s)
+  Applying page.0002_auto_20180321_0417... OK (0.022s)
+  Applying page.0003_auto_20180719_0520... OK (0.011s)
+  Applying page.0004_auto_20180803_0528... OK (0.089s)
+  Applying page.0005_auto_20190208_0456... OK (0.130s)
+  Applying page.0006_auto_20190220_1928... OK (0.012s)
+  Applying page.0007_auto_20190225_0252... OK (0.040s)
+  Applying payment.0011_auto_20190516_0901... OK (0.020s)
+  Applying product.0092_auto_20190507_0309... OK (0.075s)
+  Applying product.0093_auto_20190521_0124... OK (0.154s)
+  Applying sessions.0001_initial... OK (0.022s)
+  Applying site.0019_sitesettings_default_weight_unit... OK (0.241s)
+  Applying site.0020_auto_20190301_0336... OK (0.027s)
+  Applying site.0021_auto_20190326_0521... OK (0.076s)
+  Applying social_django.0001_initial... OK (0.177s)
+  Applying social_django.0002_add_related_name... OK (0.075s)
+  Applying social_django.0003_alter_email_max_length... OK (0.014s)
+  Applying social_django.0004_auto_20160423_0400... OK (0.032s)
+  Applying social_django.0005_auto_20160727_2333... OK (0.014s)
+  Applying social_django.0006_partial... OK (0.021s)
+  Applying social_django.0007_code_timestamp... OK (0.015s)
+  Applying social_django.0008_partial_timestamp... OK (0.014s)
+Running post-migrate handlers for application contenttypes
+Adding content type 'contenttypes | contenttype'
+Adding permission 'Permission object (1)'
+Adding permission 'Permission object (2)'
+Adding permission 'Permission object (3)'
+Adding permission 'Permission object (4)'
+Running post-migrate handlers for application sessions
+Adding content type 'sessions | session'
+Adding permission 'Permission object (5)'
+Adding permission 'Permission object (6)'
+Adding permission 'Permission object (7)'
+Adding permission 'Permission object (8)'
+Running post-migrate handlers for application sites
+Adding content type 'sites | site'
+Adding permission 'Permission object (9)'
+Adding permission 'Permission object (10)'
+Adding permission 'Permission object (11)'
+Adding permission 'Permission object (12)'
+Running post-migrate handlers for application auth
+Adding content type 'auth | permission'
+Adding content type 'auth | group'
+Adding permission 'Permission object (13)'
+Adding permission 'Permission object (14)'
+Adding permission 'Permission object (15)'
+Adding permission 'Permission object (16)'
+Adding permission 'Permission object (17)'
+Adding permission 'Permission object (18)'
+Adding permission 'Permission object (19)'
+Adding permission 'Permission object (20)'
+Running post-migrate handlers for application forms
+Running post-migrate handlers for application account
+Adding content type 'account | user'
+Adding content type 'account | address'
+Adding content type 'account | customernote'
+Adding content type 'account | customerevent'
+Adding permission 'Permission object (21)'
+Adding permission 'Permission object (22)'
+Adding permission 'Permission object (23)'
+Adding permission 'Permission object (24)'
+Adding permission 'Permission object (25)'
+Adding permission 'Permission object (26)'
+Adding permission 'Permission object (27)'
+Adding permission 'Permission object (28)'
+Adding permission 'Permission object (29)'
+Adding permission 'Permission object (30)'
+Adding permission 'Permission object (31)'
+Adding permission 'Permission object (32)'
+Adding permission 'Permission object (33)'
+Adding permission 'Permission object (34)'
+Adding permission 'Permission object (35)'
+Adding permission 'Permission object (36)'
+Adding permission 'Permission object (37)'
+Adding permission 'Permission object (38)'
+Adding permission 'Permission object (39)'
+Running post-migrate handlers for application discount
+Adding content type 'discount | sale'
+Adding content type 'discount | voucher'
+Adding content type 'discount | vouchertranslation'
+Adding content type 'discount | saletranslation'
+Adding permission 'Permission object (40)'
+Adding permission 'Permission object (41)'
+Adding permission 'Permission object (42)'
+Adding permission 'Permission object (43)'
+Adding permission 'Permission object (44)'
+Adding permission 'Permission object (45)'
+Adding permission 'Permission object (46)'
+Adding permission 'Permission object (47)'
+Adding permission 'Permission object (48)'
+Adding permission 'Permission object (49)'
+Adding permission 'Permission object (50)'
+Adding permission 'Permission object (51)'
+Adding permission 'Permission object (52)'
+Adding permission 'Permission object (53)'
+Adding permission 'Permission object (54)'
+Adding permission 'Permission object (55)'
+Adding permission 'Permission object (56)'
+Running post-migrate handlers for application giftcard
+Adding content type 'giftcard | giftcard'
+Adding permission 'Permission object (57)'
+Adding permission 'Permission object (58)'
+Adding permission 'Permission object (59)'
+Adding permission 'Permission object (60)'
+Adding permission 'Permission object (61)'
+Running post-migrate handlers for application product
+Adding content type 'product | category'
+Adding content type 'product | product'
+Adding content type 'product | productimage'
+Adding content type 'product | productvariant'
+Adding content type 'product | variantimage'
+Adding content type 'product | producttype'
+Adding content type 'product | collectionproduct'
+Adding content type 'product | collection'
+Adding content type 'product | categorytranslation'
+Adding content type 'product | collectiontranslation'
+Adding content type 'product | producttranslation'
+Adding content type 'product | productvarianttranslation'
+Adding content type 'product | attribute'
+Adding content type 'product | attributevaluetranslation'
+Adding content type 'product | attributevalue'
+Adding content type 'product | attributetranslation'
+Adding content type 'product | digitalcontent'
+Adding content type 'product | digitalcontenturl'
+Adding permission 'Permission object (62)'
+Adding permission 'Permission object (63)'
+Adding permission 'Permission object (64)'
+Adding permission 'Permission object (65)'
+Adding permission 'Permission object (66)'
+Adding permission 'Permission object (67)'
+Adding permission 'Permission object (68)'
+Adding permission 'Permission object (69)'
+Adding permission 'Permission object (70)'
+Adding permission 'Permission object (71)'
+Adding permission 'Permission object (72)'
+Adding permission 'Permission object (73)'
+Adding permission 'Permission object (74)'
+Adding permission 'Permission object (75)'
+Adding permission 'Permission object (76)'
+Adding permission 'Permission object (77)'
+Adding permission 'Permission object (78)'
+Adding permission 'Permission object (79)'
+Adding permission 'Permission object (80)'
+Adding permission 'Permission object (81)'
+Adding permission 'Permission object (82)'
+Adding permission 'Permission object (83)'
+Adding permission 'Permission object (84)'
+Adding permission 'Permission object (85)'
+Adding permission 'Permission object (86)'
+Adding permission 'Permission object (87)'
+Adding permission 'Permission object (88)'
+Adding permission 'Permission object (89)'
+Adding permission 'Permission object (90)'
+Adding permission 'Permission object (91)'
+Adding permission 'Permission object (92)'
+Adding permission 'Permission object (93)'
+Adding permission 'Permission object (94)'
+Adding permission 'Permission object (95)'
+Adding permission 'Permission object (96)'
+Adding permission 'Permission object (97)'
+Adding permission 'Permission object (98)'
+Adding permission 'Permission object (99)'
+Adding permission 'Permission object (100)'
+Adding permission 'Permission object (101)'
+Adding permission 'Permission object (102)'
+Adding permission 'Permission object (103)'
+Adding permission 'Permission object (104)'
+Adding permission 'Permission object (105)'
+Adding permission 'Permission object (106)'
+Adding permission 'Permission object (107)'
+Adding permission 'Permission object (108)'
+Adding permission 'Permission object (109)'
+Adding permission 'Permission object (110)'
+Adding permission 'Permission object (111)'
+Adding permission 'Permission object (112)'
+Adding permission 'Permission object (113)'
+Adding permission 'Permission object (114)'
+Adding permission 'Permission object (115)'
+Adding permission 'Permission object (116)'
+Adding permission 'Permission object (117)'
+Adding permission 'Permission object (118)'
+Adding permission 'Permission object (119)'
+Adding permission 'Permission object (120)'
+Adding permission 'Permission object (121)'
+Adding permission 'Permission object (122)'
+Adding permission 'Permission object (123)'
+Adding permission 'Permission object (124)'
+Adding permission 'Permission object (125)'
+Adding permission 'Permission object (126)'
+Adding permission 'Permission object (127)'
+Adding permission 'Permission object (128)'
+Adding permission 'Permission object (129)'
+Adding permission 'Permission object (130)'
+Adding permission 'Permission object (131)'
+Adding permission 'Permission object (132)'
+Adding permission 'Permission object (133)'
+Adding permission 'Permission object (134)'
+Running post-migrate handlers for application checkout
+Adding content type 'checkout | checkout'
+Adding content type 'checkout | checkoutline'
+Adding permission 'Permission object (135)'
+Adding permission 'Permission object (136)'
+Adding permission 'Permission object (137)'
+Adding permission 'Permission object (138)'
+Adding permission 'Permission object (139)'
+Adding permission 'Permission object (140)'
+Adding permission 'Permission object (141)'
+Adding permission 'Permission object (142)'
+Running post-migrate handlers for application core
+Running post-migrate handlers for application menu
+Adding content type 'menu | menu'
+Adding content type 'menu | menuitem'
+Adding content type 'menu | menuitemtranslation'
+Adding permission 'Permission object (143)'
+Adding permission 'Permission object (144)'
+Adding permission 'Permission object (145)'
+Adding permission 'Permission object (146)'
+Adding permission 'Permission object (147)'
+Adding permission 'Permission object (148)'
+Adding permission 'Permission object (149)'
+Adding permission 'Permission object (150)'
+Adding permission 'Permission object (151)'
+Adding permission 'Permission object (152)'
+Adding permission 'Permission object (153)'
+Adding permission 'Permission object (154)'
+Adding permission 'Permission object (155)'
+Running post-migrate handlers for application order
+Adding content type 'order | order'
+Adding content type 'order | orderline'
+Adding content type 'order | fulfillment'
+Adding content type 'order | fulfillmentline'
+Adding content type 'order | orderevent'
+Adding permission 'Permission object (156)'
+Adding permission 'Permission object (157)'
+Adding permission 'Permission object (158)'
+Adding permission 'Permission object (159)'
+Adding permission 'Permission object (160)'
+Adding permission 'Permission object (161)'
+Adding permission 'Permission object (162)'
+Adding permission 'Permission object (163)'
+Adding permission 'Permission object (164)'
+Adding permission 'Permission object (165)'
+Adding permission 'Permission object (166)'
+Adding permission 'Permission object (167)'
+Adding permission 'Permission object (168)'
+Adding permission 'Permission object (169)'
+Adding permission 'Permission object (170)'
+Adding permission 'Permission object (171)'
+Adding permission 'Permission object (172)'
+Adding permission 'Permission object (173)'
+Adding permission 'Permission object (174)'
+Adding permission 'Permission object (175)'
+Adding permission 'Permission object (176)'
+Running post-migrate handlers for application seo
+Running post-migrate handlers for application shipping
+Adding content type 'shipping | shippingmethod'
+Adding content type 'shipping | shippingmethodtranslation'
+Adding content type 'shipping | shippingzone'
+Adding permission 'Permission object (177)'
+Adding permission 'Permission object (178)'
+Adding permission 'Permission object (179)'
+Adding permission 'Permission object (180)'
+Adding permission 'Permission object (181)'
+Adding permission 'Permission object (182)'
+Adding permission 'Permission object (183)'
+Adding permission 'Permission object (184)'
+Adding permission 'Permission object (185)'
+Adding permission 'Permission object (186)'
+Adding permission 'Permission object (187)'
+Adding permission 'Permission object (188)'
+Adding permission 'Permission object (189)'
+Running post-migrate handlers for application site
+Adding content type 'site | sitesettings'
+Adding content type 'site | authorizationkey'
+Adding content type 'site | sitesettingstranslation'
+Adding permission 'Permission object (190)'
+Adding permission 'Permission object (191)'
+Adding permission 'Permission object (192)'
+Adding permission 'Permission object (193)'
+Adding permission 'Permission object (194)'
+Adding permission 'Permission object (195)'
+Adding permission 'Permission object (196)'
+Adding permission 'Permission object (197)'
+Adding permission 'Permission object (198)'
+Adding permission 'Permission object (199)'
+Adding permission 'Permission object (200)'
+Adding permission 'Permission object (201)'
+Adding permission 'Permission object (202)'
+Adding permission 'Permission object (203)'
+Running post-migrate handlers for application page
+Adding content type 'page | page'
+Adding content type 'page | pagetranslation'
+Adding permission 'Permission object (204)'
+Adding permission 'Permission object (205)'
+Adding permission 'Permission object (206)'
+Adding permission 'Permission object (207)'
+Adding permission 'Permission object (208)'
+Adding permission 'Permission object (209)'
+Adding permission 'Permission object (210)'
+Adding permission 'Permission object (211)'
+Adding permission 'Permission object (212)'
+Running post-migrate handlers for application payment
+Adding content type 'payment | transaction'
+Adding content type 'payment | payment'
+Adding permission 'Permission object (213)'
+Adding permission 'Permission object (214)'
+Adding permission 'Permission object (215)'
+Adding permission 'Permission object (216)'
+Adding permission 'Permission object (217)'
+Adding permission 'Permission object (218)'
+Adding permission 'Permission object (219)'
+Adding permission 'Permission object (220)'
+Running post-migrate handlers for application bootstrap4
+Running post-migrate handlers for application django_measurement
+Running post-migrate handlers for application django_prices
+Running post-migrate handlers for application django_prices_openexchangerates
+Adding content type 'django_prices_openexchangerates | conversionrate'
+Adding permission 'Permission object (221)'
+Adding permission 'Permission object (222)'
+Adding permission 'Permission object (223)'
+Adding permission 'Permission object (224)'
+Running post-migrate handlers for application django_prices_vatlayer
+Adding content type 'django_prices_vatlayer | vat'
+Adding content type 'django_prices_vatlayer | ratetypes'
+Adding permission 'Permission object (225)'
+Adding permission 'Permission object (226)'
+Adding permission 'Permission object (227)'
+Adding permission 'Permission object (228)'
+Adding permission 'Permission object (229)'
+Adding permission 'Permission object (230)'
+Adding permission 'Permission object (231)'
+Adding permission 'Permission object (232)'
+Running post-migrate handlers for application mptt
+Running post-migrate handlers for application social_django
+Adding content type 'social_django | association'
+Adding content type 'social_django | code'
+Adding content type 'social_django | nonce'
+Adding content type 'social_django | usersocialauth'
+Adding content type 'social_django | partial'
+Adding permission 'Permission object (233)'
+Adding permission 'Permission object (234)'
+Adding permission 'Permission object (235)'
+Adding permission 'Permission object (236)'
+Adding permission 'Permission object (237)'
+Adding permission 'Permission object (238)'
+Adding permission 'Permission object (239)'
+Adding permission 'Permission object (240)'
+Adding permission 'Permission object (241)'
+Adding permission 'Permission object (242)'
+Adding permission 'Permission object (243)'
+Adding permission 'Permission object (244)'
+Adding permission 'Permission object (245)'
+Adding permission 'Permission object (246)'
+Adding permission 'Permission object (247)'
+Adding permission 'Permission object (248)'
+Adding permission 'Permission object (249)'
+Adding permission 'Permission object (250)'
+Adding permission 'Permission object (251)'
+Adding permission 'Permission object (252)'
+Running post-migrate handlers for application django_countries
+Running post-migrate handlers for application django_filters
+Running post-migrate handlers for application impersonate
+Adding content type 'impersonate | impersonationlog'
+Adding permission 'Permission object (253)'
+Adding permission 'Permission object (254)'
+Adding permission 'Permission object (255)'
+Adding permission 'Permission object (256)'
+Running post-migrate handlers for application captcha
+
+STATIC
+
+Copying '/app/saleor/static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg'
+Copying '/app/saleor/static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg'
+Copying '/app/saleor/static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2'
+Copying '/app/saleor/static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg'
+Copying '/app/saleor/static/assets/logo-light.d493430f320751f6bffac210ced37643.svg'
+Copying '/app/saleor/static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg'
+Copying '/app/saleor/static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2'
+Copying '/app/saleor/static/assets/storefront.e1ffe21d4c6f258d297b.css'
+Copying '/app/saleor/static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff'
+Copying '/app/saleor/static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2'
+Copying '/app/saleor/static/assets/document.5da8542a5fa88198e0b8.css'
+Copying '/app/saleor/static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg'
+Copying '/app/saleor/static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg'
+Copying '/app/saleor/static/assets/dashboard.16a701600f4a5f253104.css'
+Copying '/app/saleor/static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg'
+Copying '/app/saleor/static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg'
+Copying '/app/saleor/static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff'
+Copying '/app/saleor/static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg'
+Copying '/app/saleor/static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff'
+Copying '/app/saleor/static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg'
+Copying '/app/saleor/static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2'
+Copying '/app/saleor/static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff'
+Copying '/app/saleor/static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg'
+Copying '/app/saleor/static/assets/dashboard.16a701600f4a5f253104.js'
+Copying '/app/saleor/static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg'
+Copying '/app/saleor/static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff'
+Copying '/app/saleor/static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg'
+Copying '/app/saleor/static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2'
+Copying '/app/saleor/static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg'
+Copying '/app/saleor/static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff'
+Copying '/app/saleor/static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2'
+Copying '/app/saleor/static/assets/document.5da8542a5fa88198e0b8.js'
+Copying '/app/saleor/static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg'
+Copying '/app/saleor/static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff'
+Copying '/app/saleor/static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg'
+Copying '/app/saleor/static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf'
+Copying '/app/saleor/static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg'
+Copying '/app/saleor/static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2'
+Copying '/app/saleor/static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg'
+Copying '/app/saleor/static/assets/storefront.e1ffe21d4c6f258d297b.js'
+Copying '/app/saleor/static/assets/dashboard-next.46a99ef4cd5c9ff12206.js'
+Copying '/app/saleor/static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg'
+Copying '/app/saleor/static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg'
+Copying '/app/saleor/static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg'
+Copying '/app/saleor/static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf'
+Copying '/app/saleor/static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg'
+Copying '/app/saleor/static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff'
+Copying '/app/saleor/static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2'
+Copying '/app/saleor/static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf'
+Copying '/app/saleor/static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png'
+Copying '/app/saleor/static/favicons/mstile-310x150.png'
+Copying '/app/saleor/static/favicons/android-chrome-512x512.png'
+Copying '/app/saleor/static/favicons/favicon-16x16.png'
+Copying '/app/saleor/static/favicons/mstile-144x144.png'
+Copying '/app/saleor/static/favicons/safari-pinned-tab.svg'
+Copying '/app/saleor/static/favicons/browserconfig.xml'
+Copying '/app/saleor/static/favicons/favicon.ico'
+Copying '/app/saleor/static/favicons/mstile-150x150.png'
+Copying '/app/saleor/static/favicons/android-chrome-192x192.png'
+Copying '/app/saleor/static/favicons/favicon-32x32.png'
+Copying '/app/saleor/static/favicons/mstile-70x70.png'
+Copying '/app/saleor/static/favicons/mstile-310x310.png'
+Copying '/app/saleor/static/favicons/apple-touch-icon.png'
+Copying '/app/saleor/static/images/placeholder120x120.png'
+Copying '/app/saleor/static/images/favicon.svg'
+Copying '/app/saleor/static/images/reset-bg.png'
+Copying '/app/saleor/static/images/filter-icon.svg'
+Copying '/app/saleor/static/images/arrow-up.svg'
+Copying '/app/saleor/static/images/confirm-order-bg.png'
+Copying '/app/saleor/static/images/block3.jpg'
+Copying '/app/saleor/static/images/placeholder540x540.png'
+Copying '/app/saleor/static/images/not-found-404.svg'
+Copying '/app/saleor/static/images/arrow-select.svg'
+Copying '/app/saleor/static/images/checkout.svg'
+Copying '/app/saleor/static/images/search.svg'
+Copying '/app/saleor/static/images/mobile-menu.svg'
+Copying '/app/saleor/static/images/twitter-logo.svg'
+Copying '/app/saleor/static/images/what.svg'
+Copying '/app/saleor/static/images/logo-dark.svg'
+Copying '/app/saleor/static/images/arrow-up-icon.svg'
+Copying '/app/saleor/static/images/arrow-down-icon.svg'
+Copying '/app/saleor/static/images/pass-visible.svg'
+Copying '/app/saleor/static/images/checkout-bg.png'
+Copying '/app/saleor/static/images/gallery-arrow.svg'
+Copying '/app/saleor/static/images/sample-product2.jpg'
+Copying '/app/saleor/static/images/block2.jpg'
+Copying '/app/saleor/static/images/confirm-order-bg2x.png'
+Copying '/app/saleor/static/images/login-background.svg'
+Copying '/app/saleor/static/images/linkedin-logo.svg'
+Copying '/app/saleor/static/images/empty-checkout-bg.png'
+Copying '/app/saleor/static/images/meetup-logo.svg'
+Copying '/app/saleor/static/images/login-bg2x.png'
+Copying '/app/saleor/static/images/empty-checkout-bg2x.png'
+Copying '/app/saleor/static/images/dribbble-logo.svg'
+Copying '/app/saleor/static/images/placeholder1080x1080.png'
+Copying '/app/saleor/static/images/arrow-down.svg'
+Copying '/app/saleor/static/images/instagram-logo.svg'
+Copying '/app/saleor/static/images/sample-product.jpg'
+Copying '/app/saleor/static/images/facebook-logo.svg'
+Copying '/app/saleor/static/images/logo-light.svg'
+Copying '/app/saleor/static/images/arrow-left.svg'
+Copying '/app/saleor/static/images/sale-bg.svg'
+Copying '/app/saleor/static/images/close.svg'
+Copying '/app/saleor/static/images/photo-icon.svg'
+Copying '/app/saleor/static/images/login-bg.png'
+Copying '/app/saleor/static/images/chevron-down.svg'
+Copying '/app/saleor/static/images/placeholder60x60.png'
+Copying '/app/saleor/static/images/checkout-bg2x.png'
+Copying '/app/saleor/static/images/github-logo.svg'
+Copying '/app/saleor/static/images/logo-white.svg'
+Copying '/app/saleor/static/images/chevron-up.svg'
+Copying '/app/saleor/static/images/placeholder255x255.png'
+Copying '/app/saleor/static/images/edit.svg'
+Copying '/app/saleor/static/images/google-logo.svg'
+Copying '/app/saleor/static/images/no-results-bg.svg'
+Copying '/app/saleor/static/images/loader.svg'
+Copying '/app/saleor/static/images/pass-invisible.svg'
+Copying '/app/saleor/static/images/delete.svg'
+Copying '/app/saleor/static/images/block1.jpg'
+Copying '/app/saleor/static/images/avatars/avatar2.png'
+Copying '/app/saleor/static/images/avatars/avatar3.png'
+Copying '/app/saleor/static/images/avatars/avatar4.png'
+Copying '/app/saleor/static/images/avatars/avatar1.png'
+Copying '/app/saleor/static/images/avatars/avatar8.png'
+Copying '/app/saleor/static/images/avatars/avatar9.png'
+Copying '/app/saleor/static/images/avatars/avatar10.png'
+Copying '/app/saleor/static/images/avatars/avatar6.png'
+Copying '/app/saleor/static/images/avatars/avatar5.png'
+Copying '/app/saleor/static/images/avatars/avatar7.png'
+Copying '/app/saleor/static/images/avatars/avatar12.png'
+Copying '/app/saleor/static/images/avatars/avatar11.png'
+Copying '/app/saleor/static/dashboard/images/more-vert.svg'
+Copying '/app/saleor/static/dashboard/images/store.svg'
+Copying '/app/saleor/static/dashboard/images/description.svg'
+Copying '/app/saleor/static/dashboard/images/history.svg'
+Copying '/app/saleor/static/dashboard/images/add.svg'
+Copying '/app/saleor/static/dashboard/images/chevron-left.svg'
+Copying '/app/saleor/static/dashboard/images/chevron-right.svg'
+Copying '/app/saleor/static/dashboard/images/search.svg'
+Copying '/app/saleor/static/dashboard/images/logo.svg'
+Copying '/app/saleor/static/dashboard/images/phone.svg'
+Copying '/app/saleor/static/dashboard/images/reorder.svg'
+Copying '/app/saleor/static/dashboard/images/mobile-menu.svg'
+Copying '/app/saleor/static/dashboard/images/style.svg'
+Copying '/app/saleor/static/dashboard/images/done.svg'
+Copying '/app/saleor/static/dashboard/images/account-circle.svg'
+Copying '/app/saleor/static/dashboard/images/email.svg'
+Copying '/app/saleor/static/dashboard/images/payment.svg'
+Copying '/app/saleor/static/dashboard/images/arrow-left.svg'
+Copying '/app/saleor/static/dashboard/images/close.svg'
+Copying '/app/saleor/static/dashboard/images/arrow-drop-down.svg'
+Copying '/app/saleor/static/dashboard/images/edit.svg'
+Copying '/app/saleor/static/dashboard/images/collections.svg'
+Copying '/app/saleor/static/dashboard/images/help.svg'
+Copying '/app/saleor/static/dashboard/images/editor/quote.svg'
+Copying '/app/saleor/static/dashboard/images/editor/format_clear.svg'
+Copying '/app/saleor/static/dashboard/images/editor/insert_photo.svg'
+Copying '/app/saleor/static/dashboard/images/editor/insert_link.svg'
+Copying '/app/saleor/static/dashboard/images/editor/align_left.svg'
+Copying '/app/saleor/static/dashboard/images/editor/align_right.svg'
+Copying '/app/saleor/static/dashboard/images/editor/align_justify.svg'
+Copying '/app/saleor/static/dashboard/images/editor/align_center.svg'
+Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/css/versatileimagefield.css'
+Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/css/versatileimagefield-bootstrap3.css'
+Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/css/versatileimagefield-djangoadmin.css'
+Copying '/usr/local/lib/python3.7/site-packages/versatileimagefield/static/versatileimagefield/js/versatileimagefield.js'
+Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/disclosure-down.png'
+Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/draggable-admin.css'
+Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/arrow-move.png'
+Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/disclosure-right.png'
+Copying '/usr/local/lib/python3.7/site-packages/mptt/static/mptt/draggable-admin.js'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ph.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bj.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/aq.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ec.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/am.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/id.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ar.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bh.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ng.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/aw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ai.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sh.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mv.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/jo.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/va.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/py.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ci.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cc.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/er.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/me.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ml.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ke.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/us.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ba.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/na.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cy.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gh.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/__.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite-hq.png'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mt.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/si.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/zm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite-hq.css'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mh.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cx.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/co.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sb.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/wf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lb.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ni.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/to.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bl.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ir.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lc.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mo.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gi.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/br.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nc.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/in.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/re.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ht.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fj.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gs.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lt.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pa.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/de.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/io.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bq.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/my.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bv.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tl.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite.css'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sy.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bs.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/im.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ga.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bi.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ly.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mq.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/is.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pl.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ug.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tt.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/es.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/at.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ye.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gt.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/uz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sl.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/do.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ps.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ge.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bb.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kh.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ky.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bd.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/jm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/az.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ch.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/uy.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tc.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/iq.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/et.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fi.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kp.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/jp.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/qa.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ck.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/fo.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gy.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ag.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ls.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/za.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/li.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/so.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ao.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mc.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tv.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/om.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/md.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vc.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/zw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tj.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sj.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/la.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cd.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cv.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ax.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ua.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sprite.png'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/no.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ws.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/kg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/al.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/eg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ve.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/be.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ae.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gp.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ca.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gd.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bf.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/dj.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/km.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/rs.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/se.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mp.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pe.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/st.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pt.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ma.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ie.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ss.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gl.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bo.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sa.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ki.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/eu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sc.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bz.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/as.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/it.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/eh.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/hn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ro.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/td.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/um.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sx.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ne.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/th.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/pk.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gq.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sn.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/np.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/af.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sd.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/bt.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lr.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/by.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/je.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/nl.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ru.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/rw.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ms.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ad.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vu.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/gb.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tm.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/mx.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/vi.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/ee.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/tg.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/sv.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/il.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/au.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/lv.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/yt.gif'
+Copying '/usr/local/lib/python3.7/site-packages/django_countries/static/flags/cl.gif'
+
+426 static files copied to '/app/static'.
+
+POPULATE
+
+Shipping Zone: Europe
+Shipping Zone: Oceania
+Shipping Zone: Asia
+Shipping Zone: Americas
+Shipping Zone: Africa
+Created products
+Sale: Happy staff day!
+Sale: Happy method day!
+Sale: Happy itself day!
+Sale: Happy now day!
+Sale: Happy research day!
+Voucher #1
+Voucher #2
+Gift card #1
+User: leslie.brown@example.com
+User: robert.reyes@example.com
+User: jesus.walters@example.com
+User: joseph.ortiz@example.com
+User: rebecca.lang@example.com
+User: misty.davies@example.com
+User: william.russell@example.com
+User: tammy.wade@example.com
+User: angelica.perez@example.com
+User: wayne.whitaker@example.com
+User: shelly.kim@example.com
+User: daniel.carlson@example.com
+User: natasha.phillips@example.com
+User: jason.williams@example.com
+User: jacob.morales@example.com
+User: bradley.madden@example.com
+User: martha.holloway@example.com
+User: kelly.owens@example.com
+User: jasmine.marquez@example.com
+User: cindy.martin@example.com
+Order: #1
+Order: #2
+Order: #3
+Order: #4
+Order: #5
+Order: #6
+Order: #7
+Order: #8
+Order: #9
+Order: #10
+Order: #11
+Order: #12
+Order: #13
+Order: #14
+Order: #15
+Order: #16
+Order: #17
+Order: #18
+Order: #19
+Order: #20
+Homepage collection assigned
+Page about created
+Created navbar menu
+Created menu item for category Accessories
+Created menu item for category Groceries
+Created menu item for category Apparel
+Created footer menu
+[]
+
+DEFAULT
+
+
+SERVICES
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+0639e93efa1c        postgres            "docker-entrypoint.s…"   3 minutes ago       Up 3 minutes        0.0.0.0:5431->5432/tcp   compose_postgres_1
+f9557e3adf57        redis               "docker-entrypoint.s…"   3 minutes ago       Up 3 minutes        0.0.0.0:6378->6379/tcp   compose_redis_1
+
+REDIS
+
+1:C 11 Jun 2019 23:21:15.218 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 11 Jun 2019 23:21:15.218 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 11 Jun 2019 23:21:15.218 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1:M 11 Jun 2019 23:21:15.222 * Running mode=standalone, port=6379.
+1:M 11 Jun 2019 23:21:15.222 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 11 Jun 2019 23:21:15.222 # Server initialized
+1:M 11 Jun 2019 23:21:15.222 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 11 Jun 2019 23:21:15.222 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 11 Jun 2019 23:21:15.222 * Ready to accept connections
+
+POSTGRES
+
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+CELERY
+
+
+LOGS
+
+Attaching to compose_postgres_1, compose_redis_1
+[36mpostgres_1  |[0m The files belonging to this database system will be owned by user "postgres".
+[36mpostgres_1  |[0m This user must also own the server process.
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m The database cluster will be initialized with locale "en_US.utf8".
+[36mpostgres_1  |[0m The default database encoding has accordingly been set to "UTF8".
+[36mpostgres_1  |[0m The default text search configuration will be set to "english".
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m Data page checksums are disabled.
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m fixing permissions on existing directory /var/lib/postgresql/data ... ok
+[36mpostgres_1  |[0m creating subdirectories ... ok
+[36mpostgres_1  |[0m selecting default max_connections ... 100
+[36mpostgres_1  |[0m selecting default shared_buffers ... 128MB
+[36mpostgres_1  |[0m selecting dynamic shared memory implementation ... posix
+[36mpostgres_1  |[0m creating configuration files ... ok
+[36mpostgres_1  |[0m running bootstrap script ... ok
+[36mpostgres_1  |[0m performing post-bootstrap initialization ... ok
+[36mpostgres_1  |[0m syncing data to disk ... ok
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m WARNING: enabling "trust" authentication for local connections
+[36mpostgres_1  |[0m You can change this by editing pg_hba.conf or using the option -A, or
+[36mpostgres_1  |[0m --auth-local and --auth-host, the next time you run initdb.
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m Success. You can now start the database server using:
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m     pg_ctl -D /var/lib/postgresql/data -l logfile start
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m waiting for server to start....2019-06-11 23:21:27.233 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[36mpostgres_1  |[0m 2019-06-11 23:21:27.293 UTC [41] LOG:  database system was shut down at 2019-06-11 23:21:26 UTC
+[36mpostgres_1  |[0m 2019-06-11 23:21:27.385 UTC [40] LOG:  database system is ready to accept connections
+[36mpostgres_1  |[0m  done
+[36mpostgres_1  |[0m server started
+[36mpostgres_1  |[0m CREATE DATABASE
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m 2019-06-11 23:21:28.943 UTC [40] LOG:  received fast shutdown request
+[36mpostgres_1  |[0m waiting for server to shut down....2019-06-11 23:21:28.946 UTC [40] LOG:  aborting any active transactions
+[36mpostgres_1  |[0m 2019-06-11 23:21:28.951 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+[36mpostgres_1  |[0m 2019-06-11 23:21:28.951 UTC [42] LOG:  shutting down
+[36mpostgres_1  |[0m 2019-06-11 23:21:28.968 UTC [40] LOG:  database system is shut down
+[36mpostgres_1  |[0m  done
+[36mpostgres_1  |[0m server stopped
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m PostgreSQL init process complete; ready for start up.
+[36mpostgres_1  |[0m 
+[36mpostgres_1  |[0m 2019-06-11 23:21:29.065 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[36mpostgres_1  |[0m 2019-06-11 23:21:29.065 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[36mpostgres_1  |[0m 2019-06-11 23:21:29.071 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[36mpostgres_1  |[0m 2019-06-11 23:21:29.093 UTC [58] LOG:  database system was shut down at 2019-06-11 23:21:28 UTC
+[36mpostgres_1  |[0m 2019-06-11 23:21:29.100 UTC [1] LOG:  database system is ready to accept connections
+[33mredis_1     |[0m 1:C 11 Jun 2019 23:21:15.218 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[33mredis_1     |[0m 1:C 11 Jun 2019 23:21:15.218 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+[33mredis_1     |[0m 1:C 11 Jun 2019 23:21:15.218 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[33mredis_1     |[0m 1:M 11 Jun 2019 23:21:15.222 * Running mode=standalone, port=6379.
+[33mredis_1     |[0m 1:M 11 Jun 2019 23:21:15.222 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[33mredis_1     |[0m 1:M 11 Jun 2019 23:21:15.222 # Server initialized
+[33mredis_1     |[0m 1:M 11 Jun 2019 23:21:15.222 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[33mredis_1     |[0m 1:M 11 Jun 2019 23:21:15.222 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+[33mredis_1     |[0m 1:M 11 Jun 2019 23:21:15.222 * Ready to accept connections
