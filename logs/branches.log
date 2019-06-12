@@ -5,6 +5,86 @@ root
 /builder/home
 uid=0(root) gid=0(root) groups=0(root)
 
+CPU
+
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU @ 2.20GHz
+stepping	: 0
+microcode	: 0x1
+cpu MHz		: 2200.000
+cache size	: 56320 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips	: 4400.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+\RAM
+
+MemTotal:        3781808 kB
+MemFree:         2547184 kB
+MemAvailable:    3175708 kB
+Buffers:          115688 kB
+Cached:           687688 kB
+SwapCached:            0 kB
+Active:           661264 kB
+Inactive:         409028 kB
+Active(anon):     267812 kB
+Inactive(anon):      180 kB
+Active(file):     393452 kB
+Inactive(file):   408848 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:             42836 kB
+Writeback:             0 kB
+AnonPages:        266904 kB
+Mapped:           202668 kB
+Shmem:              1076 kB
+Slab:              90864 kB
+SReclaimable:      58724 kB
+SUnreclaim:        32140 kB
+KernelStack:        3168 kB
+PageTables:         5764 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1890904 kB
+Committed_AS:    1139844 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       88052 kB
+DirectMap2M:     2795520 kB
+DirectMap1G:     1048576 kB
+
 DISK
 
 Filesystem      Size  Used Avail Use% Mounted on
