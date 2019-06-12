@@ -18,7 +18,7 @@ then
         git reset --hard upstream/master
         git push origin master --force
         cd ~/.config && rm -rf branches
-        git clone git@github.com:chetabahana/branches.git
+        git clone git@github.com:Chetabahana/branches.git
         cd branches && export PWD=`pwd` && push
     fi
     cd $WORKDIR && rm -rf Tutorial-Buka-Toko
