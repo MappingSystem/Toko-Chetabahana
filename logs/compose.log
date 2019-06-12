@@ -9,16 +9,16 @@ DISK
 
 Filesystem      Size  Used Avail Use% Mounted on
 udev            279M     0  279M   0% /dev
-tmpfs            59M 1000K   58M   2% /run
-/dev/sda1        29G  8.0G   21G  28% /
+tmpfs            59M  912K   58M   2% /run
+/dev/sda1        29G  7.5G   22G  26% /
 tmpfs           291M     0  291M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           291M     0  291M   0% /sys/fs/cgroup
-/dev/loop0       90M   90M     0 100% /snap/core/6673
-/dev/loop1       60M   60M     0 100% /snap/google-cloud-sdk/86
-/dev/loop2       60M   60M     0 100% /snap/google-cloud-sdk/85
-/dev/loop3       90M   90M     0 100% /snap/core/6818
-/dev/loop4       89M   89M     0 100% /snap/core/6964
+/dev/loop1       89M   89M     0 100% /snap/core/6964
+/dev/loop2       60M   60M     0 100% /snap/google-cloud-sdk/86
+/dev/loop0       90M   90M     0 100% /snap/core/6818
+/dev/loop3       60M   60M     0 100% /snap/google-cloud-sdk/85
+/dev/loop4       90M   90M     0 100% /snap/core/6673
 /dev/sda15      105M  3.6M  101M   4% /boot/efi
 tmpfs            59M     0   59M   0% /run/user/1001
 
@@ -26,16 +26,16 @@ NET STATUS
 
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      1248/dockerd        
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      760/systemd-resolve 
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1424/sshd           
-tcp6       0      0 :::22                   :::*                    LISTEN      1424/sshd           
+tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      1225/dockerd        
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      783/systemd-resolve 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1352/sshd           
+tcp6       0      0 :::22                   :::*                    LISTEN      1352/sshd           
 
 NMAP STATUS
 
-Starting Nmap 7.60 ( https://nmap.org ) at 2019-06-12 20:52 WIB
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-06-12 21:48 WIB
 Nmap scan report for scanme.nmap.org (45.33.32.156)
-Host is up (0.039s latency).
+Host is up (0.040s latency).
 Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
 Not shown: 995 closed ports
 PORT      STATE    SERVICE
@@ -45,7 +45,7 @@ PORT      STATE    SERVICE
 9929/tcp  open     nping-echo
 31337/tcp open     Elite
 
-Nmap done: 1 IP address (1 host up) scanned in 1.96 seconds
+Nmap done: 1 IP address (1 host up) scanned in 1.78 seconds
 
 GCLOUD
 
@@ -67,9 +67,9 @@ STORAGE
 687.46 MiB   gs://artifacts.chetabahana.appspot.com
 947 B        gs://chetabahana_cloudbuild
 18.65 MiB    gs://jual
-179.61 MiB   gs://staging.chetabahana.appspot.com
-30.27 GiB    gs://us.artifacts.chetabahana.appspot.com
-31.14 GiB    total
+179.77 MiB   gs://staging.chetabahana.appspot.com
+30.29 GiB    gs://us.artifacts.chetabahana.appspot.com
+31.16 GiB    total
 
 CLEANING
 
@@ -93,25 +93,14 @@ Status: Image is up to date for chetabahana/saleor:latest
 
 CLAIMING
 
-Deleted Images:
-untagged: chetabahana/saleor@sha256:0387c7684d518f8e5258a8f9f627aa61f69259ccdafbab123b86c9dc5aabc1bf
-deleted: sha256:6459be8672dce0a0319a2b1108da0b5cf2cf30119c1e8756dce9317f112009ec
-deleted: sha256:44a5d7be5c3a595ea44c6e2cf20c4038c0244d853bb0dd1a4b826fc7e748bb2f
-deleted: sha256:f355f66fe5c0e4e2b47300fca5c5076d80b41e9f88d7b85f1d75ed0a1a30c83d
-deleted: sha256:c7bf7da888587f1a511d63b18aa89dde44796d34209d76ee5ebd5f5e4c570574
-deleted: sha256:c5a27b68c1b065afc000b912bf0751846ce9027f71457153aba10bed4cc73e8d
-deleted: sha256:fc31e6f60f3c3a42e5bf63341ba44306396a4d988dd63429794bdb796c37a2ce
-deleted: sha256:28059145b4b7c10edbbe4500279a9c7246929a6e3b429a1a394bcb1ddbac4d2a
-deleted: sha256:7d86a2c787296ecf57392a3876bdb22c1db0144b2a84a197debfe995d0b42a2d
-
-Total reclaimed space: 472MB
+Total reclaimed space: 0B
 
 IMAGES
 
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-chetabahana/saleor   latest              c1761c9e115f        12 hours ago        712MB
-redis                latest              3c41ce05add9        31 hours ago        95MB
-postgres             latest              4e045cb8eecd        38 hours ago        312MB
+chetabahana/saleor   latest              c1761c9e115f        13 hours ago        712MB
+redis                latest              3c41ce05add9        32 hours ago        95MB
+postgres             latest              4e045cb8eecd        39 hours ago        312MB
 postgres             11.3                587aa1d0e586        4 weeks ago         312MB
 redis                5.0.4               a4fe14ff1981        5 weeks ago         95MB
 
@@ -216,8 +205,8 @@ REDIS
 
 [
     {
-        "Id": "bf72738b285ad92d52e795fc6c480ad349c2c56609d3f703177e11b9d5ff438a",
-        "Created": "2019-06-12T13:53:05.200519825Z",
+        "Id": "6bbc0cab4017d59c249191a6efb539dbff01774c41c24735361ffbbe767ef0f6",
+        "Created": "2019-06-12T14:49:12.727440081Z",
         "Path": "docker-entrypoint.sh",
         "Args": [
             "redis-server"
@@ -229,17 +218,17 @@ REDIS
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 15738,
+            "Pid": 4128,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-12T13:53:12.78398476Z",
+            "StartedAt": "2019-06-12T14:49:20.159239571Z",
             "FinishedAt": "0001-01-01T00:00:00Z"
         },
         "Image": "sha256:3c41ce05add98e89ff5ef31ec8cf2f5866e2b82fbe1eae057201f7c6f884f23d",
-        "ResolvConfPath": "/var/lib/docker/containers/bf72738b285ad92d52e795fc6c480ad349c2c56609d3f703177e11b9d5ff438a/resolv.conf",
-        "HostnamePath": "/var/lib/docker/containers/bf72738b285ad92d52e795fc6c480ad349c2c56609d3f703177e11b9d5ff438a/hostname",
-        "HostsPath": "/var/lib/docker/containers/bf72738b285ad92d52e795fc6c480ad349c2c56609d3f703177e11b9d5ff438a/hosts",
-        "LogPath": "/var/lib/docker/containers/bf72738b285ad92d52e795fc6c480ad349c2c56609d3f703177e11b9d5ff438a/bf72738b285ad92d52e795fc6c480ad349c2c56609d3f703177e11b9d5ff438a-json.log",
+        "ResolvConfPath": "/var/lib/docker/containers/6bbc0cab4017d59c249191a6efb539dbff01774c41c24735361ffbbe767ef0f6/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/6bbc0cab4017d59c249191a6efb539dbff01774c41c24735361ffbbe767ef0f6/hostname",
+        "HostsPath": "/var/lib/docker/containers/6bbc0cab4017d59c249191a6efb539dbff01774c41c24735361ffbbe767ef0f6/hosts",
+        "LogPath": "/var/lib/docker/containers/6bbc0cab4017d59c249191a6efb539dbff01774c41c24735361ffbbe767ef0f6/6bbc0cab4017d59c249191a6efb539dbff01774c41c24735361ffbbe767ef0f6-json.log",
         "Name": "/compose_redis_1",
         "RestartCount": 0,
         "Driver": "overlay2",
@@ -350,10 +339,10 @@ REDIS
         },
         "GraphDriver": {
             "Data": {
-                "LowerDir": "/var/lib/docker/overlay2/4807c4b4f0f613bffbca706663a0fe24bd643decd6ed37c515d5069ee9a489f2-init/diff:/var/lib/docker/overlay2/b321ea4ed6b65cba8501c0c9ab29358ba135f73b750e3e711ba90d5fce82f60a/diff:/var/lib/docker/overlay2/53d724cd0be60344271e836ca7319a26528d7fe71937f385eab364a4922c4e2a/diff:/var/lib/docker/overlay2/366cfb42553f7b6e9e7262771ae2b7e8692b5cbc23ef89d51979830b25362c07/diff:/var/lib/docker/overlay2/fdf8539221994b6cd8340423c6915dc9b4e84989387169a8baa5db8b63b6e32b/diff:/var/lib/docker/overlay2/e448130531638b574a2bf5129877310cc04e3affb40084c9f0c0fb3437779c62/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
-                "MergedDir": "/var/lib/docker/overlay2/4807c4b4f0f613bffbca706663a0fe24bd643decd6ed37c515d5069ee9a489f2/merged",
-                "UpperDir": "/var/lib/docker/overlay2/4807c4b4f0f613bffbca706663a0fe24bd643decd6ed37c515d5069ee9a489f2/diff",
-                "WorkDir": "/var/lib/docker/overlay2/4807c4b4f0f613bffbca706663a0fe24bd643decd6ed37c515d5069ee9a489f2/work"
+                "LowerDir": "/var/lib/docker/overlay2/ce69e0caeeaafdbd66dbcbab99ed67de49f9a032e2ec136d4d6cdb8f6ecd0fc6-init/diff:/var/lib/docker/overlay2/b321ea4ed6b65cba8501c0c9ab29358ba135f73b750e3e711ba90d5fce82f60a/diff:/var/lib/docker/overlay2/53d724cd0be60344271e836ca7319a26528d7fe71937f385eab364a4922c4e2a/diff:/var/lib/docker/overlay2/366cfb42553f7b6e9e7262771ae2b7e8692b5cbc23ef89d51979830b25362c07/diff:/var/lib/docker/overlay2/fdf8539221994b6cd8340423c6915dc9b4e84989387169a8baa5db8b63b6e32b/diff:/var/lib/docker/overlay2/e448130531638b574a2bf5129877310cc04e3affb40084c9f0c0fb3437779c62/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/ce69e0caeeaafdbd66dbcbab99ed67de49f9a032e2ec136d4d6cdb8f6ecd0fc6/merged",
+                "UpperDir": "/var/lib/docker/overlay2/ce69e0caeeaafdbd66dbcbab99ed67de49f9a032e2ec136d4d6cdb8f6ecd0fc6/diff",
+                "WorkDir": "/var/lib/docker/overlay2/ce69e0caeeaafdbd66dbcbab99ed67de49f9a032e2ec136d4d6cdb8f6ecd0fc6/work"
             },
             "Name": "overlay2"
         },
@@ -370,7 +359,7 @@ REDIS
             }
         ],
         "Config": {
-            "Hostname": "bf72738b285a",
+            "Hostname": "6bbc0cab4017",
             "Domainname": "",
             "User": "redis:redis",
             "AttachStdin": false,
@@ -413,7 +402,7 @@ REDIS
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "d6a22237ebc45498ed26112573d1d68a3da77867daf1fb8997c13cbe4bacb7f6",
+            "SandboxID": "e99a20a9b2eba9d3baeb27e7c74f41a02961bc454e80f17110b05b5ebc8c8897",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -425,7 +414,7 @@ REDIS
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/d6a22237ebc4",
+            "SandboxKey": "/var/run/docker/netns/e99a20a9b2eb",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -441,11 +430,11 @@ REDIS
                     "IPAMConfig": null,
                     "Links": null,
                     "Aliases": [
-                        "bf72738b285a",
-                        "redis"
+                        "redis",
+                        "6bbc0cab4017"
                     ],
-                    "NetworkID": "a81dd4be0ba2a4b1e68995f4c2e19c31a03421b33beebddaf4157ffab3ee8400",
-                    "EndpointID": "a40c1bbc5949096fb41f7fee709d969b3f860debd9ad14f5c5c0e84a0eca4637",
+                    "NetworkID": "e1a6e06eec62bc9cf734250df726281637f58d3a8cadf4727700f272a372ff8a",
+                    "EndpointID": "321e9b6e0529eb2d4ac52c5049cb60540d31f34e0b156835e5181a8f3db2432c",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.2",
                     "IPPrefixLen": 16,
@@ -464,8 +453,8 @@ POSTGRES
 
 [
     {
-        "Id": "7307c052962546671f37db165aa53f65abd2b730c49f941fdcea2889463c475d",
-        "Created": "2019-06-12T13:53:16.568296459Z",
+        "Id": "93e7e03f803e9c3c0fa0e943bee7bf21dadc06dea647238f51511d8bdeda3c08",
+        "Created": "2019-06-12T14:49:22.090441882Z",
         "Path": "docker-entrypoint.sh",
         "Args": [
             "postgres"
@@ -477,17 +466,17 @@ POSTGRES
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 15892,
+            "Pid": 4280,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-12T13:53:19.119389835Z",
+            "StartedAt": "2019-06-12T14:49:25.308333036Z",
             "FinishedAt": "0001-01-01T00:00:00Z"
         },
         "Image": "sha256:4e045cb8eecd48ecf0b5eea966e9a8b0b9332b18e55d40a40f7971a1a0a08cb6",
-        "ResolvConfPath": "/var/lib/docker/containers/7307c052962546671f37db165aa53f65abd2b730c49f941fdcea2889463c475d/resolv.conf",
-        "HostnamePath": "/var/lib/docker/containers/7307c052962546671f37db165aa53f65abd2b730c49f941fdcea2889463c475d/hostname",
-        "HostsPath": "/var/lib/docker/containers/7307c052962546671f37db165aa53f65abd2b730c49f941fdcea2889463c475d/hosts",
-        "LogPath": "/var/lib/docker/containers/7307c052962546671f37db165aa53f65abd2b730c49f941fdcea2889463c475d/7307c052962546671f37db165aa53f65abd2b730c49f941fdcea2889463c475d-json.log",
+        "ResolvConfPath": "/var/lib/docker/containers/93e7e03f803e9c3c0fa0e943bee7bf21dadc06dea647238f51511d8bdeda3c08/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/93e7e03f803e9c3c0fa0e943bee7bf21dadc06dea647238f51511d8bdeda3c08/hostname",
+        "HostsPath": "/var/lib/docker/containers/93e7e03f803e9c3c0fa0e943bee7bf21dadc06dea647238f51511d8bdeda3c08/hosts",
+        "LogPath": "/var/lib/docker/containers/93e7e03f803e9c3c0fa0e943bee7bf21dadc06dea647238f51511d8bdeda3c08/93e7e03f803e9c3c0fa0e943bee7bf21dadc06dea647238f51511d8bdeda3c08-json.log",
         "Name": "/compose_postgres_1",
         "RestartCount": 0,
         "Driver": "overlay2",
@@ -598,10 +587,10 @@ POSTGRES
         },
         "GraphDriver": {
             "Data": {
-                "LowerDir": "/var/lib/docker/overlay2/62d013057d0e408f0328c8629e06c97b75faef91b891d12f3987f7db23b5d8c8-init/diff:/var/lib/docker/overlay2/c2353f061418fb31717039e72eaac26a439bb1f559e253c2ea0f2434db8ca31c/diff:/var/lib/docker/overlay2/e25cded6483555b3b72491ebe8c02f6ff52e67133b24472add5859c524705964/diff:/var/lib/docker/overlay2/7638a19ba1744384d549e48fa899390c56a385202e0691ace62620c816de019e/diff:/var/lib/docker/overlay2/d2d2105c4c0e09db4f1ed6a7f8204dace63a79dbd93aecd654cc388ad0011975/diff:/var/lib/docker/overlay2/9c94ce5ce883d9f8a598a6de0008d33bf37262d91bdaf92a8d49abae1567e3eb/diff:/var/lib/docker/overlay2/4c4a31813926786865ce7a993a0609578dca72979c316389bf941251dcd80728/diff:/var/lib/docker/overlay2/bd6143335af904753adf29c10e36ec8de04949ca29d0153b1738ee302ba7e04f/diff:/var/lib/docker/overlay2/50d681676f899007ee376a78035a4da8da1b20176e549f170d409bc4faa75aaa/diff:/var/lib/docker/overlay2/8f0e379e0515a2abc7a1cfe787e99eb6f4dac027f726734570692db7d01092f7/diff:/var/lib/docker/overlay2/52344c503438164b0aae80530ae0bc750b5a82ca2f9ec915b9f1fc380a038457/diff:/var/lib/docker/overlay2/589f4d5764764ed84929f8fbfdb31626ad4428f0050099475a0afd0080b399b3/diff:/var/lib/docker/overlay2/ff07c8211573e600cc433646b8769402d97fb15efa091a82915482da58dc9abc/diff:/var/lib/docker/overlay2/cb89d3cf47bc0d2c8a60c48d994a847800913b94f3e573b3b95c174268b695cf/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
-                "MergedDir": "/var/lib/docker/overlay2/62d013057d0e408f0328c8629e06c97b75faef91b891d12f3987f7db23b5d8c8/merged",
-                "UpperDir": "/var/lib/docker/overlay2/62d013057d0e408f0328c8629e06c97b75faef91b891d12f3987f7db23b5d8c8/diff",
-                "WorkDir": "/var/lib/docker/overlay2/62d013057d0e408f0328c8629e06c97b75faef91b891d12f3987f7db23b5d8c8/work"
+                "LowerDir": "/var/lib/docker/overlay2/aba18cf65d89d2294997414f8f0729d5c1beab428d424de0a51a327051b8f9f3-init/diff:/var/lib/docker/overlay2/c2353f061418fb31717039e72eaac26a439bb1f559e253c2ea0f2434db8ca31c/diff:/var/lib/docker/overlay2/e25cded6483555b3b72491ebe8c02f6ff52e67133b24472add5859c524705964/diff:/var/lib/docker/overlay2/7638a19ba1744384d549e48fa899390c56a385202e0691ace62620c816de019e/diff:/var/lib/docker/overlay2/d2d2105c4c0e09db4f1ed6a7f8204dace63a79dbd93aecd654cc388ad0011975/diff:/var/lib/docker/overlay2/9c94ce5ce883d9f8a598a6de0008d33bf37262d91bdaf92a8d49abae1567e3eb/diff:/var/lib/docker/overlay2/4c4a31813926786865ce7a993a0609578dca72979c316389bf941251dcd80728/diff:/var/lib/docker/overlay2/bd6143335af904753adf29c10e36ec8de04949ca29d0153b1738ee302ba7e04f/diff:/var/lib/docker/overlay2/50d681676f899007ee376a78035a4da8da1b20176e549f170d409bc4faa75aaa/diff:/var/lib/docker/overlay2/8f0e379e0515a2abc7a1cfe787e99eb6f4dac027f726734570692db7d01092f7/diff:/var/lib/docker/overlay2/52344c503438164b0aae80530ae0bc750b5a82ca2f9ec915b9f1fc380a038457/diff:/var/lib/docker/overlay2/589f4d5764764ed84929f8fbfdb31626ad4428f0050099475a0afd0080b399b3/diff:/var/lib/docker/overlay2/ff07c8211573e600cc433646b8769402d97fb15efa091a82915482da58dc9abc/diff:/var/lib/docker/overlay2/cb89d3cf47bc0d2c8a60c48d994a847800913b94f3e573b3b95c174268b695cf/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/aba18cf65d89d2294997414f8f0729d5c1beab428d424de0a51a327051b8f9f3/merged",
+                "UpperDir": "/var/lib/docker/overlay2/aba18cf65d89d2294997414f8f0729d5c1beab428d424de0a51a327051b8f9f3/diff",
+                "WorkDir": "/var/lib/docker/overlay2/aba18cf65d89d2294997414f8f0729d5c1beab428d424de0a51a327051b8f9f3/work"
             },
             "Name": "overlay2"
         },
@@ -618,8 +607,8 @@ POSTGRES
             },
             {
                 "Type": "volume",
-                "Name": "e2ae70c1dcc5e745835eb135ddae96b9a4d2e649bd676be73129064b7eecb2e6",
-                "Source": "/var/lib/docker/volumes/e2ae70c1dcc5e745835eb135ddae96b9a4d2e649bd676be73129064b7eecb2e6/_data",
+                "Name": "bfcd39cd69d29fc34084176ff740c807f47b7fee39af9f6449d3df82c0e211e7",
+                "Source": "/var/lib/docker/volumes/bfcd39cd69d29fc34084176ff740c807f47b7fee39af9f6449d3df82c0e211e7/_data",
                 "Destination": "/var/lib/postgresql/data",
                 "Driver": "local",
                 "Mode": "",
@@ -628,7 +617,7 @@ POSTGRES
             }
         ],
         "Config": {
-            "Hostname": "7307c0529625",
+            "Hostname": "93e7e03f803e",
             "Domainname": "",
             "User": "",
             "AttachStdin": false,
@@ -675,7 +664,7 @@ POSTGRES
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "a9ee431d19664f4c3d4d93ea57274f697a3cd854ebb603a49a829f9f5fd0c2b7",
+            "SandboxID": "1244dee950396929b046c96b91c7320edbbb63b4320a7b275bc17c7a9000a5b0",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
@@ -687,7 +676,7 @@ POSTGRES
                     }
                 ]
             },
-            "SandboxKey": "/var/run/docker/netns/a9ee431d1966",
+            "SandboxKey": "/var/run/docker/netns/1244dee95039",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -704,10 +693,10 @@ POSTGRES
                     "Links": null,
                     "Aliases": [
                         "postgres",
-                        "7307c0529625"
+                        "93e7e03f803e"
                     ],
-                    "NetworkID": "a81dd4be0ba2a4b1e68995f4c2e19c31a03421b33beebddaf4157ffab3ee8400",
-                    "EndpointID": "6877404c6d1a8308c03c6cfff4f827f9ee029912719c6165afe64ea5a62756df",
+                    "NetworkID": "e1a6e06eec62bc9cf734250df726281637f58d3a8cadf4727700f272a372ff8a",
+                    "EndpointID": "e04e34a2c82943d1238ae8e4c37efcf6961b54f403b735f8fcad6104a8edad7d",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.3",
                     "IPPrefixLen": 16,
@@ -756,346 +745,346 @@ Running pre-migrate handlers for application django_filters
 Running pre-migrate handlers for application impersonate
 Running pre-migrate handlers for application captcha
 Running migrations:
-  Applying product.0001_initial... OK (0.624s)
-  Applying product.0002_auto_20150722_0545... OK (0.015s)
-  Applying product.0003_auto_20150820_2016... OK (0.059s)
-  Applying product.0003_auto_20150820_1955... OK (0.015s)
-  Applying product.0004_merge... OK (0.008s)
-  Applying product.0005_auto_20150825_1433... OK (0.053s)
-  Applying product.0006_product_updated_at... OK (0.015s)
-  Applying product.0007_auto_20160112_1025... OK (0.019s)
-  Applying product.0008_auto_20160114_0733... OK (0.053s)
-  Applying product.0009_discount_categories... OK (0.046s)
-  Applying product.0010_auto_20160129_0826... OK (0.047s)
-  Applying product.0011_stock_quantity_allocated... OK (0.017s)
-  Applying product.0012_auto_20160218_0812... OK (0.049s)
-  Applying product.0013_auto_20161207_0555... OK (0.037s)
-  Applying product.0014_auto_20161207_0840... OK (0.014s)
-  Applying product.0015_transfer_locations... OK (0.016s)
-  Applying product.0016_auto_20161207_0843... OK (0.025s)
-  Applying product.0017_remove_stock_location... OK (0.016s)
-  Applying product.0018_auto_20161207_0844... OK (0.036s)
-  Applying product.0019_auto_20161212_0230... OK (0.103s)
-  Applying product.0020_attribute_data_to_class... OK (0.022s)
-  Applying product.0021_add_hstore_extension... OK (0.413s)
+  Applying product.0001_initial... OK (0.743s)
+  Applying product.0002_auto_20150722_0545... OK (0.020s)
+  Applying product.0003_auto_20150820_2016... OK (0.157s)
+  Applying product.0003_auto_20150820_1955... OK (0.016s)
+  Applying product.0004_merge... OK (0.007s)
+  Applying product.0005_auto_20150825_1433... OK (0.061s)
+  Applying product.0006_product_updated_at... OK (0.040s)
+  Applying product.0007_auto_20160112_1025... OK (0.024s)
+  Applying product.0008_auto_20160114_0733... OK (0.046s)
+  Applying product.0009_discount_categories... OK (0.066s)
+  Applying product.0010_auto_20160129_0826... OK (0.037s)
+  Applying product.0011_stock_quantity_allocated... OK (0.015s)
+  Applying product.0012_auto_20160218_0812... OK (0.068s)
+  Applying product.0013_auto_20161207_0555... OK (0.053s)
+  Applying product.0014_auto_20161207_0840... OK (0.019s)
+  Applying product.0015_transfer_locations... OK (0.024s)
+  Applying product.0016_auto_20161207_0843... OK (0.028s)
+  Applying product.0017_remove_stock_location... OK (0.017s)
+  Applying product.0018_auto_20161207_0844... OK (0.043s)
+  Applying product.0019_auto_20161212_0230... OK (0.189s)
+  Applying product.0020_attribute_data_to_class... OK (0.025s)
+  Applying product.0021_add_hstore_extension... OK (1.767s)
   Applying product.0022_auto_20161212_0301... OK (0.055s)
-  Applying product.0023_auto_20161211_1912... OK (0.018s)
-  Applying product.0024_migrate_json_data... OK (0.043s)
+  Applying product.0023_auto_20161211_1912... OK (0.016s)
+  Applying product.0024_migrate_json_data... OK (0.046s)
   Applying product.0025_auto_20161219_0517... OK (0.011s)
-  Applying product.0026_auto_20161230_0347... OK (0.011s)
-  Applying product.0027_auto_20170113_0435... OK (0.052s)
-  Applying product.0013_auto_20161130_0608... OK (0.007s)
+  Applying product.0026_auto_20161230_0347... OK (0.012s)
+  Applying product.0027_auto_20170113_0435... OK (0.058s)
+  Applying product.0013_auto_20161130_0608... OK (0.009s)
   Applying product.0014_remove_productvariant_attributes... OK (0.017s)
-  Applying product.0015_productvariant_attributes... OK (0.016s)
-  Applying product.0016_auto_20161204_0311... OK (0.021s)
-  Applying product.0017_attributechoicevalue_slug... OK (0.027s)
+  Applying product.0015_productvariant_attributes... OK (0.017s)
+  Applying product.0016_auto_20161204_0311... OK (0.019s)
+  Applying product.0017_attributechoicevalue_slug... OK (0.022s)
   Applying product.0018_auto_20161212_0725... OK (0.020s)
   Applying product.0026_merge_20161221_0845... OK (0.004s)
-  Applying product.0028_merge_20170116_1016... OK (0.003s)
-  Applying product.0029_product_is_featured... OK (0.017s)
-  Applying product.0030_auto_20170206_0407... OK (0.167s)
-  Applying product.0031_auto_20170206_0601... OK (0.029s)
+  Applying product.0028_merge_20170116_1016... OK (0.004s)
+  Applying product.0029_product_is_featured... OK (0.018s)
+  Applying product.0030_auto_20170206_0407... OK (0.182s)
+  Applying product.0031_auto_20170206_0601... OK (0.031s)
   Applying product.0032_auto_20170216_0438... OK (0.018s)
-  Applying product.0033_auto_20170227_0757... OK (0.036s)
-  Applying product.0034_product_is_published... OK (0.016s)
-  Applying product.0035_auto_20170919_0846... OK (0.021s)
-  Applying product.0036_auto_20171115_0608... OK (0.015s)
-  Applying product.0037_auto_20171124_0847... OK (0.121s)
+  Applying product.0033_auto_20170227_0757... OK (0.038s)
+  Applying product.0034_product_is_published... OK (0.017s)
+  Applying product.0035_auto_20170919_0846... OK (0.022s)
+  Applying product.0036_auto_20171115_0608... OK (0.018s)
+  Applying product.0037_auto_20171124_0847... OK (0.148s)
   Applying product.0038_auto_20171129_0616... OK (0.090s)
-  Applying product.0037_auto_20171129_1004... OK (0.073s)
-  Applying product.0039_merge_20171130_0727... OK (0.012s)
-  Applying product.0040_auto_20171205_0428... OK (0.021s)
-  Applying product.0041_auto_20171205_0546... OK (0.019s)
-  Applying product.0042_auto_20171206_0501... OK (0.011s)
-  Applying product.0043_auto_20171207_0839... OK (0.013s)
-  Applying product.0044_auto_20180108_0814... OK (0.442s)
-  Applying product.0045_md_to_html... OK (0.024s)
-  Applying product.0046_product_category... OK (0.046s)
-  Applying product.0047_auto_20180117_0359... OK (0.043s)
-  Applying product.0048_product_class_to_type... OK (0.088s)
-  Applying product.0049_collection... OK (0.102s)
-  Applying product.0050_auto_20180131_0746... OK (0.016s)
-  Applying product.0051_auto_20180202_1106... OK (0.012s)
-  Applying product.0052_slug_field_length... OK (0.055s)
-  Applying product.0053_product_seo_description... OK (0.034s)
-  Applying product.0053_auto_20180305_1002... OK (0.021s)
-  Applying product.0054_merge_20180320_1108... OK (0.003s)
-  Applying shipping.0001_initial... OK (0.048s)
-  Applying shipping.0002_auto_20160906_0741... OK (0.015s)
-  Applying shipping.0003_auto_20170116_0700... OK (0.008s)
-  Applying shipping.0004_auto_20170206_0407... OK (0.030s)
-  Applying shipping.0005_auto_20170906_0556... OK (0.007s)
-  Applying shipping.0006_auto_20171109_0908... OK (0.008s)
-  Applying shipping.0007_auto_20171129_1004... OK (0.012s)
-  Applying shipping.0008_auto_20180108_0814... OK (0.026s)
-  Applying contenttypes.0001_initial... OK (0.021s)
-  Applying contenttypes.0002_remove_content_type_name... OK (0.032s)
-  Applying auth.0001_initial... OK (0.076s)
+  Applying product.0037_auto_20171129_1004... OK (0.071s)
+  Applying product.0039_merge_20171130_0727... OK (0.006s)
+  Applying product.0040_auto_20171205_0428... OK (0.026s)
+  Applying product.0041_auto_20171205_0546... OK (0.022s)
+  Applying product.0042_auto_20171206_0501... OK (0.012s)
+  Applying product.0043_auto_20171207_0839... OK (0.019s)
+  Applying product.0044_auto_20180108_0814... OK (0.481s)
+  Applying product.0045_md_to_html... OK (0.023s)
+  Applying product.0046_product_category... OK (0.049s)
+  Applying product.0047_auto_20180117_0359... OK (0.047s)
+  Applying product.0048_product_class_to_type... OK (0.098s)
+  Applying product.0049_collection... OK (0.153s)
+  Applying product.0050_auto_20180131_0746... OK (0.020s)
+  Applying product.0051_auto_20180202_1106... OK (0.018s)
+  Applying product.0052_slug_field_length... OK (0.079s)
+  Applying product.0053_product_seo_description... OK (0.039s)
+  Applying product.0053_auto_20180305_1002... OK (0.025s)
+  Applying product.0054_merge_20180320_1108... OK (0.009s)
+  Applying shipping.0001_initial... OK (0.077s)
+  Applying shipping.0002_auto_20160906_0741... OK (0.021s)
+  Applying shipping.0003_auto_20170116_0700... OK (0.014s)
+  Applying shipping.0004_auto_20170206_0407... OK (0.045s)
+  Applying shipping.0005_auto_20170906_0556... OK (0.015s)
+  Applying shipping.0006_auto_20171109_0908... OK (0.012s)
+  Applying shipping.0007_auto_20171129_1004... OK (0.018s)
+  Applying shipping.0008_auto_20180108_0814... OK (0.034s)
+  Applying contenttypes.0001_initial... OK (0.032s)
+  Applying contenttypes.0002_remove_content_type_name... OK (0.039s)
+  Applying auth.0001_initial... OK (0.107s)
   Applying auth.0002_alter_permission_name_max_length... OK (0.012s)
-  Applying auth.0003_alter_user_email_max_length... OK (0.012s)
+  Applying auth.0003_alter_user_email_max_length... OK (0.014s)
   Applying auth.0004_alter_user_username_opts... OK (0.012s)
-  Applying auth.0005_alter_user_last_login_null... OK (0.012s)
-  Applying auth.0006_require_contenttypes_0002... OK (0.003s)
-  Applying account.0001_initial... OK (0.369s)
-  Applying order.0001_initial... OK (0.261s)
-  Applying order.0002_auto_20150820_1955... OK (0.018s)
-  Applying order.0003_auto_20150825_1433... OK (0.033s)
-  Applying order.0004_order_total... OK (0.025s)
-  Applying order.0005_deliverygroup_last_updated... OK (0.019s)
-  Applying order.0006_deliverygroup_shipping_method... OK (0.030s)
-  Applying order.0007_deliverygroup_tracking_number... OK (0.026s)
-  Applying order.0008_auto_20151026_0820... OK (0.065s)
-  Applying order.0009_auto_20151201_0820... OK (0.073s)
-  Applying order.0010_auto_20160119_0541... OK (0.060s)
-  Applying discount.0001_initial... OK (0.099s)
-  Applying discount.0002_voucher... OK (0.063s)
-  Applying discount.0003_auto_20160207_0534... OK (0.160s)
-  Applying order.0011_auto_20160207_0534... OK (0.078s)
-  Applying order.0012_auto_20160216_1032... OK (0.054s)
-  Applying order.0013_auto_20160906_0741... OK (0.096s)
-  Applying order.0014_auto_20161028_0955... OK (0.028s)
-  Applying order.0015_auto_20170206_0407... OK (0.750s)
-  Applying order.0016_order_language_code... OK (0.027s)
-  Applying order.0017_auto_20170906_0556... OK (0.023s)
-  Applying order.0018_auto_20170919_0839... OK (0.037s)
-  Applying order.0019_auto_20171109_1423... OK (0.161s)
-  Applying order.0020_auto_20171123_0609... OK (0.267s)
-  Applying order.0021_auto_20171129_1004... OK (0.098s)
-  Applying order.0022_auto_20171205_0428... OK (0.039s)
-  Applying order.0023_auto_20171206_0506... OK (0.057s)
-  Applying order.0024_remove_order_status... OK (0.027s)
-  Applying order.0025_auto_20171214_1015... OK (0.039s)
-  Applying order.0026_auto_20171218_0428... OK (0.070s)
-  Applying order.0027_auto_20180108_0814... OK (0.921s)
-  Applying order.0028_status_fsm... OK (0.023s)
-  Applying order.0029_auto_20180111_0845... OK (0.061s)
-  Applying order.0030_auto_20180118_0605... OK (0.082s)
-  Applying order.0031_auto_20180119_0405... OK (0.096s)
-  Applying order.0032_orderline_is_shipping_required... OK (0.061s)
-  Applying order.0033_auto_20180123_0832... OK (0.023s)
-  Applying order.0034_auto_20180221_1056... OK (0.056s)
-  Applying order.0035_auto_20180221_1057... OK (0.044s)
-  Applying order.0036_remove_order_total_tax... OK (0.023s)
-  Applying order.0037_auto_20180228_0450... OK (0.098s)
-  Applying order.0038_auto_20180228_0451... OK (0.043s)
-  Applying order.0039_auto_20180312_1203... OK (0.043s)
-  Applying order.0040_auto_20180210_0422... OK (0.507s)
-  Applying order.0041_auto_20180222_0458... OK (0.045s)
-  Applying order.0042_auto_20180227_0436... OK (0.132s)
-  Applying order.0043_auto_20180322_0655... OK (0.044s)
-  Applying order.0044_auto_20180326_1055... OK (0.186s)
-  Applying order.0045_auto_20180329_0142... OK (0.193s)
-  Applying order.0046_order_line_taxes... OK (0.048s)
-  Applying order.0047_order_line_name_length... OK (0.027s)
-  Applying order.0048_auto_20180629_1055... OK (0.058s)
-  Applying order.0049_auto_20180719_0520... OK (0.028s)
-  Applying order.0050_auto_20180803_0528... OK (0.061s)
-  Applying order.0050_auto_20180803_0337... OK (0.273s)
-  Applying order.0051_merge_20180807_0704... OK (0.003s)
-  Applying order.0052_auto_20180822_0720... OK (0.076s)
-  Applying order.0053_orderevent... OK (0.053s)
-  Applying order.0054_move_data_to_order_events... OK (0.082s)
-  Applying order.0055_remove_order_note_order_history_entry... OK (0.141s)
-  Applying order.0056_auto_20180911_1541... OK (0.021s)
-  Applying order.0057_orderevent_parameters_new... OK (0.134s)
-  Applying order.0058_remove_orderevent_parameters... OK (0.025s)
-  Applying order.0059_auto_20180913_0841... OK (0.031s)
-  Applying order.0060_auto_20180919_0731... OK (0.024s)
-  Applying order.0061_auto_20180920_0859... OK (0.025s)
-  Applying order.0062_auto_20180921_0949... OK (0.050s)
-  Applying order.0063_auto_20180926_0446... OK (0.025s)
-  Applying order.0064_auto_20181016_0819... OK (0.036s)
-  Applying checkout.0001_initial... OK (0.171s)
-  Applying checkout.0002_auto_20161014_1221... OK (0.059s)
-  Applying checkout.fix_empty_data_in_lines... OK (0.046s)
-  Applying checkout.0001_auto_20170113_0435... OK (0.077s)
-  Applying checkout.0002_auto_20170206_0407... OK (0.409s)
-  Applying checkout.0003_auto_20170906_0556... OK (0.021s)
-  Applying checkout.0004_auto_20171129_1004... OK (0.037s)
-  Applying checkout.0005_auto_20180108_0814... OK (0.319s)
-  Applying checkout.0006_auto_20180221_0825... OK (0.024s)
-  Applying account.0002_auto_20150907_0602... OK (0.042s)
-  Applying account.0003_auto_20151104_1102... OK (0.031s)
-  Applying account.0004_auto_20160114_0419... OK (0.017s)
-  Applying account.0005_auto_20160205_0651... OK (0.028s)
-  Applying account.0006_auto_20160829_0819... OK (0.037s)
-  Applying account.0007_auto_20161115_0940... OK (0.029s)
-  Applying account.0008_auto_20161115_1011... OK (0.019s)
-  Applying account.0009_auto_20170206_0407... OK (0.094s)
-  Applying account.0010_auto_20170919_0839... OK (0.024s)
-  Applying account.0011_auto_20171110_0552... OK (0.021s)
-  Applying account.0012_auto_20171117_0846... OK (0.020s)
-  Applying account.0013_auto_20171120_0521... OK (0.061s)
-  Applying account.0014_auto_20171129_1004... OK (0.051s)
-  Applying account.0015_auto_20171213_0734... OK (0.033s)
-  Applying account.0016_auto_20180108_0814... OK (0.631s)
-  Applying account.0017_auto_20180206_0957... OK (0.032s)
-  Applying account.0018_auto_20180426_0641... OK (0.133s)
-  Applying account.0019_auto_20180528_1205... OK (0.048s)
-  Applying checkout.0007_merge_cart_with_checkout... OK (0.428s)
-  Applying checkout.0008_rename_tables... OK (0.045s)
-  Applying checkout.0009_cart_translated_discount_name... OK (0.022s)
-  Applying checkout.0010_auto_20180822_0720... OK (0.042s)
-  Applying checkout.0011_auto_20180913_0817... OK (0.096s)
-  Applying checkout.0012_remove_cartline_data... OK (0.023s)
-  Applying checkout.0013_auto_20180913_0841... OK (0.056s)
-  Applying checkout.0014_auto_20180921_0751... OK (0.025s)
-  Applying checkout.0015_auto_20181017_1346... OK (0.020s)
-  Applying payment.0001_initial... OK (0.408s)
-  Applying payment.0002_transfer_payment_to_payment_method... OK (0.054s)
-  Applying order.0065_auto_20181017_1346... OK (0.170s)
-  Applying order.0066_auto_20181023_0319... OK (0.054s)
-  Applying order.0067_auto_20181102_1054... OK (0.026s)
-  Applying order.0068_order_checkout_token... OK (0.030s)
-  Applying order.0069_auto_20190225_2305... OK (0.016s)
-  Applying order.0070_drop_update_event_and_rename_events... OK (0.134s)
-  Applying account.0020_user_token... OK (0.029s)
-  Applying account.0021_unique_token... OK (0.073s)
-  Applying account.0022_auto_20180718_0956... OK (0.022s)
-  Applying account.0023_auto_20180719_0520... OK (0.023s)
-  Applying account.0024_auto_20181011_0737... OK (0.046s)
-  Applying account.0025_auto_20190314_0550... OK (0.018s)
-  Applying account.0026_user_avatar... OK (0.021s)
-  Applying account.0027_customerevent... OK (0.057s)
-  Applying auth.0007_alter_validators_add_error_messages... OK (0.019s)
-  Applying auth.0008_alter_user_username_max_length... OK (0.018s)
-  Applying auth.0009_alter_user_last_name_max_length... OK (0.017s)
-  Applying auth.0010_alter_group_name_max_length... OK (0.018s)
-  Applying auth.0011_update_proxy_permissions... OK (0.050s)
-  Applying giftcard.0001_initial... OK (0.054s)
-  Applying shipping.0009_auto_20180629_1055... OK (0.015s)
-  Applying shipping.0010_auto_20180719_0520... OK (0.014s)
-  Applying shipping.0011_auto_20180802_1238... OK (0.013s)
-  Applying shipping.0012_remove_legacy_shipping_methods... OK (0.052s)
-  Applying shipping.0013_auto_20180822_0721... OK (0.540s)
-  Applying shipping.0014_auto_20180920_0956... OK (0.022s)
-  Applying shipping.0015_auto_20190305_0640... OK (0.012s)
-  Applying sites.0001_initial... OK (0.013s)
-  Applying sites.0002_alter_domain_unique... OK (0.018s)
-  Applying site.0001_initial... OK (0.023s)
-  Applying site.0002_add_default_data... OK (0.066s)
-  Applying site.0003_sitesettings_description... OK (0.017s)
-  Applying site.0004_auto_20170221_0426... OK (0.042s)
-  Applying site.0005_auto_20170906_0556... OK (0.011s)
-  Applying site.0006_auto_20171025_0454... OK (0.020s)
-  Applying site.0007_auto_20171027_0856... OK (0.090s)
-  Applying site.0008_auto_20171027_0856... OK (0.033s)
-  Applying site.0009_auto_20171109_0849... OK (0.011s)
-  Applying site.0010_auto_20171113_0958... OK (0.013s)
-  Applying site.0011_auto_20180108_0814... OK (0.035s)
-  Applying page.0001_initial... OK (0.025s)
-  Applying menu.0001_initial... OK (0.123s)
-  Applying menu.0002_auto_20180319_0412... OK (0.065s)
-  Applying site.0012_auto_20180405_0757... OK (0.107s)
-  Applying menu.0003_auto_20180405_0854... OK (0.082s)
-  Applying site.0013_assign_default_menus... OK (0.067s)
-  Applying site.0014_handle_taxes... OK (0.033s)
-  Applying site.0015_sitesettings_handle_stock_by_default... OK (0.014s)
-  Applying site.0016_auto_20180719_0520... OK (0.016s)
-  Applying site.0017_auto_20180803_0528... OK (0.074s)
-  Applying product.0055_auto_20180321_0417... OK (0.092s)
-  Applying product.0056_auto_20180330_0321... OK (0.047s)
-  Applying product.0057_auto_20180403_0852... OK (0.026s)
-  Applying product.0058_auto_20180329_0142... OK (0.498s)
-  Applying product.0059_generate_variant_name_from_attrs... OK (0.069s)
-  Applying product.0060_collection_is_published... OK (0.027s)
-  Applying product.0061_product_taxes... OK (0.059s)
-  Applying product.0062_sortable_models... OK (0.162s)
+  Applying auth.0005_alter_user_last_login_null... OK (0.014s)
+  Applying auth.0006_require_contenttypes_0002... OK (0.005s)
+  Applying account.0001_initial... OK (0.467s)
+  Applying order.0001_initial... OK (0.310s)
+  Applying order.0002_auto_20150820_1955... OK (0.022s)
+  Applying order.0003_auto_20150825_1433... OK (0.035s)
+  Applying order.0004_order_total... OK (0.028s)
+  Applying order.0005_deliverygroup_last_updated... OK (0.025s)
+  Applying order.0006_deliverygroup_shipping_method... OK (0.039s)
+  Applying order.0007_deliverygroup_tracking_number... OK (0.038s)
+  Applying order.0008_auto_20151026_0820... OK (0.077s)
+  Applying order.0009_auto_20151201_0820... OK (0.089s)
+  Applying order.0010_auto_20160119_0541... OK (0.072s)
+  Applying discount.0001_initial... OK (0.167s)
+  Applying discount.0002_voucher... OK (0.092s)
+  Applying discount.0003_auto_20160207_0534... OK (0.191s)
+  Applying order.0011_auto_20160207_0534... OK (0.096s)
+  Applying order.0012_auto_20160216_1032... OK (0.069s)
+  Applying order.0013_auto_20160906_0741... OK (0.111s)
+  Applying order.0014_auto_20161028_0955... OK (0.034s)
+  Applying order.0015_auto_20170206_0407... OK (1.159s)
+  Applying order.0016_order_language_code... OK (0.034s)
+  Applying order.0017_auto_20170906_0556... OK (0.035s)
+  Applying order.0018_auto_20170919_0839... OK (0.034s)
+  Applying order.0019_auto_20171109_1423... OK (0.225s)
+  Applying order.0020_auto_20171123_0609... OK (0.504s)
+  Applying order.0021_auto_20171129_1004... OK (0.116s)
+  Applying order.0022_auto_20171205_0428... OK (0.051s)
+  Applying order.0023_auto_20171206_0506... OK (0.072s)
+  Applying order.0024_remove_order_status... OK (0.036s)
+  Applying order.0025_auto_20171214_1015... OK (0.044s)
+  Applying order.0026_auto_20171218_0428... OK (0.084s)
+  Applying order.0027_auto_20180108_0814... OK (1.179s)
+  Applying order.0028_status_fsm... OK (0.028s)
+  Applying order.0029_auto_20180111_0845... OK (0.072s)
+  Applying order.0030_auto_20180118_0605... OK (0.081s)
+  Applying order.0031_auto_20180119_0405... OK (0.112s)
+  Applying order.0032_orderline_is_shipping_required... OK (0.072s)
+  Applying order.0033_auto_20180123_0832... OK (0.027s)
+  Applying order.0034_auto_20180221_1056... OK (0.080s)
+  Applying order.0035_auto_20180221_1057... OK (0.090s)
+  Applying order.0036_remove_order_total_tax... OK (0.033s)
+  Applying order.0037_auto_20180228_0450... OK (0.150s)
+  Applying order.0038_auto_20180228_0451... OK (0.049s)
+  Applying order.0039_auto_20180312_1203... OK (0.062s)
+  Applying order.0040_auto_20180210_0422... OK (0.743s)
+  Applying order.0041_auto_20180222_0458... OK (0.054s)
+  Applying order.0042_auto_20180227_0436... OK (0.173s)
+  Applying order.0043_auto_20180322_0655... OK (0.062s)
+  Applying order.0044_auto_20180326_1055... OK (0.251s)
+  Applying order.0045_auto_20180329_0142... OK (0.237s)
+  Applying order.0046_order_line_taxes... OK (0.053s)
+  Applying order.0047_order_line_name_length... OK (0.030s)
+  Applying order.0048_auto_20180629_1055... OK (0.079s)
+  Applying order.0049_auto_20180719_0520... OK (0.362s)
+  Applying order.0050_auto_20180803_0528... OK (0.070s)
+  Applying order.0050_auto_20180803_0337... OK (0.070s)
+  Applying order.0051_merge_20180807_0704... OK (0.005s)
+  Applying order.0052_auto_20180822_0720... OK (0.089s)
+  Applying order.0053_orderevent... OK (0.068s)
+  Applying order.0054_move_data_to_order_events... OK (0.102s)
+  Applying order.0055_remove_order_note_order_history_entry... OK (0.168s)
+  Applying order.0056_auto_20180911_1541... OK (0.027s)
+  Applying order.0057_orderevent_parameters_new... OK (0.174s)
+  Applying order.0058_remove_orderevent_parameters... OK (0.026s)
+  Applying order.0059_auto_20180913_0841... OK (0.045s)
+  Applying order.0060_auto_20180919_0731... OK (0.026s)
+  Applying order.0061_auto_20180920_0859... OK (0.023s)
+  Applying order.0062_auto_20180921_0949... OK (0.060s)
+  Applying order.0063_auto_20180926_0446... OK (0.030s)
+  Applying order.0064_auto_20181016_0819... OK (0.043s)
+  Applying checkout.0001_initial... OK (0.154s)
+  Applying checkout.0002_auto_20161014_1221... OK (0.063s)
+  Applying checkout.fix_empty_data_in_lines... OK (0.411s)
+  Applying checkout.0001_auto_20170113_0435... OK (0.108s)
+  Applying checkout.0002_auto_20170206_0407... OK (0.229s)
+  Applying checkout.0003_auto_20170906_0556... OK (0.030s)
+  Applying checkout.0004_auto_20171129_1004... OK (0.050s)
+  Applying checkout.0005_auto_20180108_0814... OK (0.412s)
+  Applying checkout.0006_auto_20180221_0825... OK (0.032s)
+  Applying account.0002_auto_20150907_0602... OK (0.059s)
+  Applying account.0003_auto_20151104_1102... OK (0.038s)
+  Applying account.0004_auto_20160114_0419... OK (0.023s)
+  Applying account.0005_auto_20160205_0651... OK (0.045s)
+  Applying account.0006_auto_20160829_0819... OK (0.059s)
+  Applying account.0007_auto_20161115_0940... OK (0.039s)
+  Applying account.0008_auto_20161115_1011... OK (0.028s)
+  Applying account.0009_auto_20170206_0407... OK (0.121s)
+  Applying account.0010_auto_20170919_0839... OK (0.033s)
+  Applying account.0011_auto_20171110_0552... OK (0.027s)
+  Applying account.0012_auto_20171117_0846... OK (0.025s)
+  Applying account.0013_auto_20171120_0521... OK (0.068s)
+  Applying account.0014_auto_20171129_1004... OK (0.050s)
+  Applying account.0015_auto_20171213_0734... OK (0.402s)
+  Applying account.0016_auto_20180108_0814... OK (0.421s)
+  Applying account.0017_auto_20180206_0957... OK (0.045s)
+  Applying account.0018_auto_20180426_0641... OK (0.155s)
+  Applying account.0019_auto_20180528_1205... OK (0.063s)
+  Applying checkout.0007_merge_cart_with_checkout... OK (0.499s)
+  Applying checkout.0008_rename_tables... OK (0.062s)
+  Applying checkout.0009_cart_translated_discount_name... OK (0.036s)
+  Applying checkout.0010_auto_20180822_0720... OK (0.051s)
+  Applying checkout.0011_auto_20180913_0817... OK (0.134s)
+  Applying checkout.0012_remove_cartline_data... OK (0.041s)
+  Applying checkout.0013_auto_20180913_0841... OK (0.069s)
+  Applying checkout.0014_auto_20180921_0751... OK (0.387s)
+  Applying checkout.0015_auto_20181017_1346... OK (0.029s)
+  Applying payment.0001_initial... OK (0.153s)
+  Applying payment.0002_transfer_payment_to_payment_method... OK (0.076s)
+  Applying order.0065_auto_20181017_1346... OK (0.215s)
+  Applying order.0066_auto_20181023_0319... OK (0.061s)
+  Applying order.0067_auto_20181102_1054... OK (0.034s)
+  Applying order.0068_order_checkout_token... OK (0.037s)
+  Applying order.0069_auto_20190225_2305... OK (0.028s)
+  Applying order.0070_drop_update_event_and_rename_events... OK (0.164s)
+  Applying account.0020_user_token... OK (0.026s)
+  Applying account.0021_unique_token... OK (0.095s)
+  Applying account.0022_auto_20180718_0956... OK (0.025s)
+  Applying account.0023_auto_20180719_0520... OK (0.029s)
+  Applying account.0024_auto_20181011_0737... OK (0.052s)
+  Applying account.0025_auto_20190314_0550... OK (0.031s)
+  Applying account.0026_user_avatar... OK (0.029s)
+  Applying account.0027_customerevent... OK (0.076s)
+  Applying auth.0007_alter_validators_add_error_messages... OK (0.022s)
+  Applying auth.0008_alter_user_username_max_length... OK (0.024s)
+  Applying auth.0009_alter_user_last_name_max_length... OK (0.026s)
+  Applying auth.0010_alter_group_name_max_length... OK (0.026s)
+  Applying auth.0011_update_proxy_permissions... OK (0.061s)
+  Applying giftcard.0001_initial... OK (0.076s)
+  Applying shipping.0009_auto_20180629_1055... OK (0.017s)
+  Applying shipping.0010_auto_20180719_0520... OK (0.015s)
+  Applying shipping.0011_auto_20180802_1238... OK (0.016s)
+  Applying shipping.0012_remove_legacy_shipping_methods... OK (0.429s)
+  Applying shipping.0013_auto_20180822_0721... OK (0.292s)
+  Applying shipping.0014_auto_20180920_0956... OK (0.024s)
+  Applying shipping.0015_auto_20190305_0640... OK (0.013s)
+  Applying sites.0001_initial... OK (0.020s)
+  Applying sites.0002_alter_domain_unique... OK (0.026s)
+  Applying site.0001_initial... OK (0.025s)
+  Applying site.0002_add_default_data... OK (0.061s)
+  Applying site.0003_sitesettings_description... OK (0.018s)
+  Applying site.0004_auto_20170221_0426... OK (0.049s)
+  Applying site.0005_auto_20170906_0556... OK (0.012s)
+  Applying site.0006_auto_20171025_0454... OK (0.022s)
+  Applying site.0007_auto_20171027_0856... OK (0.155s)
+  Applying site.0008_auto_20171027_0856... OK (0.044s)
+  Applying site.0009_auto_20171109_0849... OK (0.013s)
+  Applying site.0010_auto_20171113_0958... OK (0.012s)
+  Applying site.0011_auto_20180108_0814... OK (0.042s)
+  Applying page.0001_initial... OK (0.030s)
+  Applying menu.0001_initial... OK (0.133s)
+  Applying menu.0002_auto_20180319_0412... OK (0.092s)
+  Applying site.0012_auto_20180405_0757... OK (0.117s)
+  Applying menu.0003_auto_20180405_0854... OK (0.086s)
+  Applying site.0013_assign_default_menus... OK (0.073s)
+  Applying site.0014_handle_taxes... OK (0.037s)
+  Applying site.0015_sitesettings_handle_stock_by_default... OK (0.015s)
+  Applying site.0016_auto_20180719_0520... OK (0.014s)
+  Applying site.0017_auto_20180803_0528... OK (0.085s)
+  Applying product.0055_auto_20180321_0417... OK (0.099s)
+  Applying product.0056_auto_20180330_0321... OK (0.043s)
+  Applying product.0057_auto_20180403_0852... OK (0.030s)
+  Applying product.0058_auto_20180329_0142... OK (0.451s)
+  Applying product.0059_generate_variant_name_from_attrs... OK (0.064s)
+  Applying product.0060_collection_is_published... OK (0.030s)
+  Applying product.0061_product_taxes... OK (0.061s)
+  Applying product.0062_sortable_models... OK (0.169s)
   Applying product.0063_required_attr_value_order... OK (0.015s)
-  Applying product.0064_productvariant_handle_stock... OK (0.019s)
-  Applying product.0065_auto_20180719_0520... OK (0.024s)
-  Applying product.0066_auto_20180803_0528... OK (0.345s)
-  Applying site.0018_sitesettings_homepage_collection... OK (0.102s)
-  Applying product.0067_remove_product_is_featured... OK (0.024s)
-  Applying product.0068_auto_20180822_0720... OK (0.053s)
-  Applying product.0069_auto_20180912_0326... OK (0.018s)
-  Applying product.0070_auto_20180912_0329... OK (0.032s)
-  Applying product.0071_attributechoicevalue_value... OK (0.017s)
-  Applying product.0072_auto_20180925_1048... OK (0.729s)
-  Applying product.0073_auto_20181010_0729... OK (0.081s)
-  Applying product.0074_auto_20181010_0730... OK (0.200s)
-  Applying product.0075_auto_20181010_0842... OK (0.056s)
-  Applying product.0076_auto_20181012_1146... OK (0.014s)
-  Applying product.0077_generate_versatile_background_images... OK (0.158s)
-  Applying product.0078_auto_20181120_0437... OK (0.038s)
-  Applying product.0079_default_tax_rate_instead_of_empty_field... OK (0.077s)
+  Applying product.0064_productvariant_handle_stock... OK (0.018s)
+  Applying product.0065_auto_20180719_0520... OK (0.025s)
+  Applying product.0066_auto_20180803_0528... OK (0.361s)
+  Applying site.0018_sitesettings_homepage_collection... OK (0.100s)
+  Applying product.0067_remove_product_is_featured... OK (0.026s)
+  Applying product.0068_auto_20180822_0720... OK (0.062s)
+  Applying product.0069_auto_20180912_0326... OK (0.016s)
+  Applying product.0070_auto_20180912_0329... OK (0.036s)
+  Applying product.0071_attributechoicevalue_value... OK (0.018s)
+  Applying product.0072_auto_20180925_1048... OK (0.799s)
+  Applying product.0073_auto_20181010_0729... OK (0.165s)
+  Applying product.0074_auto_20181010_0730... OK (0.212s)
+  Applying product.0075_auto_20181010_0842... OK (0.062s)
+  Applying product.0076_auto_20181012_1146... OK (0.015s)
+  Applying product.0077_generate_versatile_background_images... OK (0.183s)
+  Applying product.0078_auto_20181120_0437... OK (0.042s)
+  Applying product.0079_default_tax_rate_instead_of_empty_field... OK (0.076s)
   Applying product.0080_collection_published_date... OK (0.022s)
-  Applying product.0080_auto_20181214_0440... OK (0.033s)
+  Applying product.0080_auto_20181214_0440... OK (0.042s)
   Applying product.0081_merge_20181215_1659... OK (0.004s)
-  Applying product.0081_auto_20181218_0024... OK (0.021s)
+  Applying product.0081_auto_20181218_0024... OK (0.022s)
   Applying product.0082_merge_20181219_1440... OK (0.004s)
-  Applying product.0083_auto_20190104_0443... OK (0.035s)
-  Applying product.0084_auto_20190122_0113... OK (0.028s)
-  Applying product.0085_auto_20190125_0025... OK (0.012s)
-  Applying product.0086_product_publication_date... OK (0.022s)
-  Applying product.0087_auto_20190208_0326... OK (0.023s)
-  Applying product.0088_auto_20190220_1928... OK (0.024s)
-  Applying product.0089_auto_20190225_0252... OK (0.117s)
-  Applying product.0090_auto_20190328_0608... OK (0.024s)
-  Applying product.0091_auto_20190402_0853... OK (0.111s)
-  Applying payment.0003_rename_payment_method_to_payment... OK (0.614s)
-  Applying payment.0004_auto_20181206_0031... OK (0.031s)
-  Applying payment.0005_auto_20190104_0443... OK (0.030s)
-  Applying payment.0006_auto_20190109_0358... OK (0.022s)
-  Applying payment.0007_auto_20190206_0938... OK (0.017s)
-  Applying payment.0007_auto_20190125_0242... OK (0.029s)
+  Applying product.0083_auto_20190104_0443... OK (0.032s)
+  Applying product.0084_auto_20190122_0113... OK (0.039s)
+  Applying product.0085_auto_20190125_0025... OK (0.016s)
+  Applying product.0086_product_publication_date... OK (0.030s)
+  Applying product.0087_auto_20190208_0326... OK (0.025s)
+  Applying product.0088_auto_20190220_1928... OK (0.022s)
+  Applying product.0089_auto_20190225_0252... OK (0.131s)
+  Applying product.0090_auto_20190328_0608... OK (0.031s)
+  Applying product.0091_auto_20190402_0853... OK (0.155s)
+  Applying payment.0003_rename_payment_method_to_payment... OK (0.689s)
+  Applying payment.0004_auto_20181206_0031... OK (0.036s)
+  Applying payment.0005_auto_20190104_0443... OK (0.037s)
+  Applying payment.0006_auto_20190109_0358... OK (0.020s)
+  Applying payment.0007_auto_20190206_0938... OK (0.019s)
+  Applying payment.0007_auto_20190125_0242... OK (0.035s)
   Applying payment.0008_merge_20190214_0447... OK (0.004s)
-  Applying payment.0009_convert_to_partially_charged_and_partially_refunded... OK (0.073s)
-  Applying payment.0010_auto_20190220_2001... OK (0.033s)
-  Applying checkout.0016_auto_20190112_0506... OK (0.031s)
-  Applying checkout.0017_auto_20190130_0207... OK (0.029s)
-  Applying checkout.0018_auto_20190410_0132... OK (0.432s)
-  Applying checkout.0019_checkout_gift_cards... OK (0.092s)
-  Applying discount.0004_auto_20170206_0407... OK (0.746s)
-  Applying discount.0005_auto_20170919_0839... OK (0.049s)
-  Applying discount.0006_auto_20171129_1004... OK (0.043s)
-  Applying discount.0007_auto_20180108_0814... OK (0.418s)
-  Applying discount.0008_sale_collections... OK (0.056s)
-  Applying discount.0009_auto_20180719_0520... OK (0.048s)
-  Applying discount.0010_auto_20180724_1251... OK (0.374s)
-  Applying discount.0011_auto_20180803_0528... OK (0.072s)
-  Applying discount.0012_auto_20190329_0836... OK (0.074s)
-  Applying django_prices_openexchangerates.0001_initial... OK (0.024s)
-  Applying django_prices_openexchangerates.0002_auto_20160329_0702... OK (0.031s)
-  Applying django_prices_openexchangerates.0003_auto_20161018_0707... OK (0.037s)
-  Applying django_prices_openexchangerates.0004_auto_20170316_0944... OK (0.011s)
-  Applying django_prices_vatlayer.0001_initial... OK (0.021s)
-  Applying django_prices_vatlayer.0002_ratetypes... OK (0.030s)
-  Applying django_prices_vatlayer.0003_auto_20180316_1053... OK (0.028s)
-  Applying impersonate.0001_initial... OK (0.084s)
-  Applying menu.0004_sort_order_index... OK (0.038s)
-  Applying menu.0005_auto_20180719_0520... OK (0.014s)
-  Applying menu.0006_auto_20180803_0528... OK (0.376s)
-  Applying menu.0007_auto_20180807_0547... OK (0.091s)
-  Applying menu.0008_menu_json_content_new... OK (0.089s)
+  Applying payment.0009_convert_to_partially_charged_and_partially_refunded... OK (0.080s)
+  Applying payment.0010_auto_20190220_2001... OK (0.030s)
+  Applying checkout.0016_auto_20190112_0506... OK (0.030s)
+  Applying checkout.0017_auto_20190130_0207... OK (0.031s)
+  Applying checkout.0018_auto_20190410_0132... OK (0.454s)
+  Applying checkout.0019_checkout_gift_cards... OK (0.098s)
+  Applying discount.0004_auto_20170206_0407... OK (0.659s)
+  Applying discount.0005_auto_20170919_0839... OK (0.041s)
+  Applying discount.0006_auto_20171129_1004... OK (0.045s)
+  Applying discount.0007_auto_20180108_0814... OK (0.383s)
+  Applying discount.0008_sale_collections... OK (0.121s)
+  Applying discount.0009_auto_20180719_0520... OK (0.047s)
+  Applying discount.0010_auto_20180724_1251... OK (0.434s)
+  Applying discount.0011_auto_20180803_0528... OK (0.092s)
+  Applying discount.0012_auto_20190329_0836... OK (0.083s)
+  Applying django_prices_openexchangerates.0001_initial... OK (0.036s)
+  Applying django_prices_openexchangerates.0002_auto_20160329_0702... OK (0.033s)
+  Applying django_prices_openexchangerates.0003_auto_20161018_0707... OK (0.038s)
+  Applying django_prices_openexchangerates.0004_auto_20170316_0944... OK (0.013s)
+  Applying django_prices_vatlayer.0001_initial... OK (0.374s)
+  Applying django_prices_vatlayer.0002_ratetypes... OK (0.019s)
+  Applying django_prices_vatlayer.0003_auto_20180316_1053... OK (0.022s)
+  Applying impersonate.0001_initial... OK (0.092s)
+  Applying menu.0004_sort_order_index... OK (0.039s)
+  Applying menu.0005_auto_20180719_0520... OK (0.015s)
+  Applying menu.0006_auto_20180803_0528... OK (0.092s)
+  Applying menu.0007_auto_20180807_0547... OK (0.145s)
+  Applying menu.0008_menu_json_content_new... OK (0.095s)
   Applying menu.0009_remove_menu_json_content... OK (0.016s)
-  Applying menu.0010_auto_20180913_0841... OK (0.028s)
+  Applying menu.0010_auto_20180913_0841... OK (0.033s)
   Applying menu.0011_auto_20181204_0004... OK (0.012s)
-  Applying menu.0012_auto_20190104_0443... OK (0.012s)
-  Applying menu.0013_auto_20190507_0309... OK (0.087s)
-  Applying menu.0014_auto_20190523_0759... OK (0.027s)
-  Applying order.0071_order_gift_cards... OK (0.096s)
-  Applying page.0002_auto_20180321_0417... OK (0.024s)
-  Applying page.0003_auto_20180719_0520... OK (0.015s)
-  Applying page.0004_auto_20180803_0528... OK (0.095s)
-  Applying page.0005_auto_20190208_0456... OK (0.127s)
-  Applying page.0006_auto_20190220_1928... OK (0.016s)
-  Applying page.0007_auto_20190225_0252... OK (0.044s)
-  Applying payment.0011_auto_20190516_0901... OK (0.019s)
-  Applying product.0092_auto_20190507_0309... OK (0.087s)
-  Applying product.0093_auto_20190521_0124... OK (0.164s)
-  Applying sessions.0001_initial... OK (0.032s)
-  Applying site.0019_sitesettings_default_weight_unit... OK (0.030s)
-  Applying site.0020_auto_20190301_0336... OK (0.028s)
-  Applying site.0021_auto_20190326_0521... OK (0.077s)
-  Applying social_django.0001_initial... OK (0.449s)
-  Applying social_django.0002_add_related_name... OK (0.072s)
-  Applying social_django.0003_alter_email_max_length... OK (0.014s)
-  Applying social_django.0004_auto_20160423_0400... OK (0.033s)
-  Applying social_django.0005_auto_20160727_2333... OK (0.016s)
-  Applying social_django.0006_partial... OK (0.029s)
+  Applying menu.0012_auto_20190104_0443... OK (0.013s)
+  Applying menu.0013_auto_20190507_0309... OK (0.098s)
+  Applying menu.0014_auto_20190523_0759... OK (0.029s)
+  Applying order.0071_order_gift_cards... OK (0.095s)
+  Applying page.0002_auto_20180321_0417... OK (0.023s)
+  Applying page.0003_auto_20180719_0520... OK (0.013s)
+  Applying page.0004_auto_20180803_0528... OK (0.108s)
+  Applying page.0005_auto_20190208_0456... OK (0.132s)
+  Applying page.0006_auto_20190220_1928... OK (0.019s)
+  Applying page.0007_auto_20190225_0252... OK (0.046s)
+  Applying payment.0011_auto_20190516_0901... OK (0.030s)
+  Applying product.0092_auto_20190507_0309... OK (0.083s)
+  Applying product.0093_auto_20190521_0124... OK (0.451s)
+  Applying sessions.0001_initial... OK (0.045s)
+  Applying site.0019_sitesettings_default_weight_unit... OK (0.029s)
+  Applying site.0020_auto_20190301_0336... OK (0.027s)
+  Applying site.0021_auto_20190326_0521... OK (0.083s)
+  Applying social_django.0001_initial... OK (0.234s)
+  Applying social_django.0002_add_related_name... OK (0.074s)
+  Applying social_django.0003_alter_email_max_length... OK (0.016s)
+  Applying social_django.0004_auto_20160423_0400... OK (0.032s)
+  Applying social_django.0005_auto_20160727_2333... OK (0.024s)
+  Applying social_django.0006_partial... OK (0.035s)
   Applying social_django.0007_code_timestamp... OK (0.022s)
-  Applying social_django.0008_partial_timestamp... OK (0.017s)
+  Applying social_django.0008_partial_timestamp... OK (0.022s)
 Running post-migrate handlers for application contenttypes
 Adding content type 'contenttypes | contenttype'
 Adding permission 'Permission object (1)'
@@ -1882,34 +1871,34 @@ Shipping Zone: Asia
 Shipping Zone: Americas
 Shipping Zone: Africa
 Created products
-Sale: Happy point day!
-Sale: Happy school day!
-Sale: Happy administration day!
-Sale: Happy listen day!
-Sale: Happy general day!
+Sale: Happy thus day!
+Sale: Happy his day!
+Sale: Happy door day!
+Sale: Happy consumer day!
+Sale: Happy to day!
 Voucher #1
 Voucher #2
 Gift card #1
-User: charles.benjamin@example.com
-User: christopher.barnes@example.com
-User: lisa.houston@example.com
-User: kenneth.johnson@example.com
-User: zachary.tucker@example.com
-User: mary.benton@example.com
-User: derek.marquez@example.com
-User: patrick.williams@example.com
-User: brandon.baker@example.com
-User: mary.diaz@example.com
-User: brett.heath@example.com
-User: kenneth.haney@example.com
-User: rachel.rice@example.com
-User: pam.turner@example.com
-User: rachel.arnold@example.com
-User: pamela.taylor@example.com
-User: rebecca.allen@example.com
-User: gregory.hill@example.com
-User: michelle.stone@example.com
-User: jordan.cochran@example.com
+User: courtney.ray@example.com
+User: jeremy.potter@example.com
+User: edward.gordon@example.com
+User: michael.perez@example.com
+User: lawrence.sharp@example.com
+User: brittany.watson@example.com
+User: crystal.santos@example.com
+User: mitchell.woods@example.com
+User: samuel.mendoza@example.com
+User: christina.craig@example.com
+User: crystal.jackson@example.com
+User: dawn.howard@example.com
+User: chad.moore@example.com
+User: kelly.hill@example.com
+User: pamela.benson@example.com
+User: john.hopkins@example.com
+User: timothy.thompson@example.com
+User: julie.fisher@example.com
+User: michael.logan@example.com
+User: renee.kelley@example.com
 Order: #1
 Order: #2
 Order: #3
@@ -1941,8 +1930,8 @@ Created footer menu
 Superuser - admin@example.com/admin
 [
     {
-        "Id": "2218487b4f3cffcbe48f41bc2002f9b0ce0245a7cdfba678a11db7d2d45df792",
-        "Created": "2019-06-12T13:57:01.265810672Z",
+        "Id": "b9b17ac753aaeb1ddfd39754fd9cead66b6f8784b1710b0b0dba106fe7bb2e50",
+        "Created": "2019-06-12T14:53:19.897427134Z",
         "Path": "celery",
         "Args": [
             "-A",
@@ -1958,17 +1947,17 @@ Superuser - admin@example.com/admin
             "Restarting": false,
             "OOMKilled": false,
             "Dead": false,
-            "Pid": 16647,
+            "Pid": 5044,
             "ExitCode": 0,
             "Error": "",
-            "StartedAt": "2019-06-12T13:57:05.957443533Z",
+            "StartedAt": "2019-06-12T14:53:26.939836329Z",
             "FinishedAt": "0001-01-01T00:00:00Z"
         },
         "Image": "sha256:c1761c9e115fdad74d9df9a0bceeedc0cc850150dc79bed568e939d1f1b84c1e",
-        "ResolvConfPath": "/var/lib/docker/containers/2218487b4f3cffcbe48f41bc2002f9b0ce0245a7cdfba678a11db7d2d45df792/resolv.conf",
-        "HostnamePath": "/var/lib/docker/containers/2218487b4f3cffcbe48f41bc2002f9b0ce0245a7cdfba678a11db7d2d45df792/hostname",
-        "HostsPath": "/var/lib/docker/containers/2218487b4f3cffcbe48f41bc2002f9b0ce0245a7cdfba678a11db7d2d45df792/hosts",
-        "LogPath": "/var/lib/docker/containers/2218487b4f3cffcbe48f41bc2002f9b0ce0245a7cdfba678a11db7d2d45df792/2218487b4f3cffcbe48f41bc2002f9b0ce0245a7cdfba678a11db7d2d45df792-json.log",
+        "ResolvConfPath": "/var/lib/docker/containers/b9b17ac753aaeb1ddfd39754fd9cead66b6f8784b1710b0b0dba106fe7bb2e50/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/b9b17ac753aaeb1ddfd39754fd9cead66b6f8784b1710b0b0dba106fe7bb2e50/hostname",
+        "HostsPath": "/var/lib/docker/containers/b9b17ac753aaeb1ddfd39754fd9cead66b6f8784b1710b0b0dba106fe7bb2e50/hosts",
+        "LogPath": "/var/lib/docker/containers/b9b17ac753aaeb1ddfd39754fd9cead66b6f8784b1710b0b0dba106fe7bb2e50/b9b17ac753aaeb1ddfd39754fd9cead66b6f8784b1710b0b0dba106fe7bb2e50-json.log",
         "Name": "/compose_celery_1",
         "RestartCount": 0,
         "Driver": "overlay2",
@@ -2072,10 +2061,10 @@ Superuser - admin@example.com/admin
         },
         "GraphDriver": {
             "Data": {
-                "LowerDir": "/var/lib/docker/overlay2/ad3e6529c2688fc6d7056023f194d4806c61519f431d88c2a65613607acb08a2-init/diff:/var/lib/docker/overlay2/17ebd051ee7df5f904847f96b158d35b0c2c5fc537ecb0244c27426b04bd565f/diff:/var/lib/docker/overlay2/bb8d5ed2cdafbd0a0bae7e9d1586ff948fd6f4cc08dae39b84ca79a67dffe128/diff:/var/lib/docker/overlay2/9d4612b7cc2cc483802680fe1335e748b430253d6cf7ab7d8155bbc0e2278a0b/diff:/var/lib/docker/overlay2/32bc41e67d5c40e6948da6cba48f8b09f93821d59f38f502da7ee88f27044773/diff:/var/lib/docker/overlay2/b57f32ef95b3093e5b332cf10cbc6a9610745531ff66a0837aa9c82fd2e10312/diff:/var/lib/docker/overlay2/b110901fad78496b28795c7934ab17d4999944fe4970529d3ea31bcd1f3662f8/diff:/var/lib/docker/overlay2/dbc7407fc4b278d008521d141a755c24ee36d4aab3633d37a2a85a9c8a67a05e/diff:/var/lib/docker/overlay2/93cf752863981974aedcad37e9787145741b6087beb9a5e17a0c30b2902eeb85/diff:/var/lib/docker/overlay2/d065e54e8cec3a8f014642286ad980d5aef2b696968a895c99f36fdf79e6e60b/diff:/var/lib/docker/overlay2/c69b396530c7cc0867a35ae3c727ddbd8b952112925b60d994e4f9a61ffcdbe3/diff:/var/lib/docker/overlay2/48dc6093afd7e2a3a624fa0709ea04d8a1c63f24f9178d7f991d34bcb8b1a8b8/diff:/var/lib/docker/overlay2/10eace4f8e380b498938fb3efe6f1368ff8d95bfd10eaf9f115a4f4bb9ea0ffe/diff:/var/lib/docker/overlay2/b801a1709a96dc171bb81a64d33417009fc2d3393d8cc25c0f310ba423044179/diff:/var/lib/docker/overlay2/6b6a97f26ee6e223c414e0a146b449948d459f6fee3b80468b89a020c40d9b2e/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
-                "MergedDir": "/var/lib/docker/overlay2/ad3e6529c2688fc6d7056023f194d4806c61519f431d88c2a65613607acb08a2/merged",
-                "UpperDir": "/var/lib/docker/overlay2/ad3e6529c2688fc6d7056023f194d4806c61519f431d88c2a65613607acb08a2/diff",
-                "WorkDir": "/var/lib/docker/overlay2/ad3e6529c2688fc6d7056023f194d4806c61519f431d88c2a65613607acb08a2/work"
+                "LowerDir": "/var/lib/docker/overlay2/1e265c3c450b9655b752d4e750ec2d89a27d4dc152041ad7422b4d5055a5e165-init/diff:/var/lib/docker/overlay2/17ebd051ee7df5f904847f96b158d35b0c2c5fc537ecb0244c27426b04bd565f/diff:/var/lib/docker/overlay2/bb8d5ed2cdafbd0a0bae7e9d1586ff948fd6f4cc08dae39b84ca79a67dffe128/diff:/var/lib/docker/overlay2/9d4612b7cc2cc483802680fe1335e748b430253d6cf7ab7d8155bbc0e2278a0b/diff:/var/lib/docker/overlay2/32bc41e67d5c40e6948da6cba48f8b09f93821d59f38f502da7ee88f27044773/diff:/var/lib/docker/overlay2/b57f32ef95b3093e5b332cf10cbc6a9610745531ff66a0837aa9c82fd2e10312/diff:/var/lib/docker/overlay2/b110901fad78496b28795c7934ab17d4999944fe4970529d3ea31bcd1f3662f8/diff:/var/lib/docker/overlay2/dbc7407fc4b278d008521d141a755c24ee36d4aab3633d37a2a85a9c8a67a05e/diff:/var/lib/docker/overlay2/93cf752863981974aedcad37e9787145741b6087beb9a5e17a0c30b2902eeb85/diff:/var/lib/docker/overlay2/d065e54e8cec3a8f014642286ad980d5aef2b696968a895c99f36fdf79e6e60b/diff:/var/lib/docker/overlay2/c69b396530c7cc0867a35ae3c727ddbd8b952112925b60d994e4f9a61ffcdbe3/diff:/var/lib/docker/overlay2/48dc6093afd7e2a3a624fa0709ea04d8a1c63f24f9178d7f991d34bcb8b1a8b8/diff:/var/lib/docker/overlay2/10eace4f8e380b498938fb3efe6f1368ff8d95bfd10eaf9f115a4f4bb9ea0ffe/diff:/var/lib/docker/overlay2/b801a1709a96dc171bb81a64d33417009fc2d3393d8cc25c0f310ba423044179/diff:/var/lib/docker/overlay2/6b6a97f26ee6e223c414e0a146b449948d459f6fee3b80468b89a020c40d9b2e/diff:/var/lib/docker/overlay2/735804cee61b8f769f17cc24b14878f0306ffc01c69870bc8ad453ba5b830d79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/1e265c3c450b9655b752d4e750ec2d89a27d4dc152041ad7422b4d5055a5e165/merged",
+                "UpperDir": "/var/lib/docker/overlay2/1e265c3c450b9655b752d4e750ec2d89a27d4dc152041ad7422b4d5055a5e165/diff",
+                "WorkDir": "/var/lib/docker/overlay2/1e265c3c450b9655b752d4e750ec2d89a27d4dc152041ad7422b4d5055a5e165/work"
             },
             "Name": "overlay2"
         },
@@ -2090,7 +2079,7 @@ Superuser - admin@example.com/admin
             }
         ],
         "Config": {
-            "Hostname": "2218487b4f3c",
+            "Hostname": "b9b17ac753aa",
             "Domainname": "",
             "User": "saleor:saleor",
             "AttachStdin": false,
@@ -2156,14 +2145,14 @@ Superuser - admin@example.com/admin
         },
         "NetworkSettings": {
             "Bridge": "",
-            "SandboxID": "dda17bc8ccaad1faf2f99eb4cb47a549d219b7a6953adf77a718722f35976e81",
+            "SandboxID": "1785d3ebe677d9beb5d18ee745a4daa5ad23e451e068bc185849ae406c3a3d9c",
             "HairpinMode": false,
             "LinkLocalIPv6Address": "",
             "LinkLocalIPv6PrefixLen": 0,
             "Ports": {
                 "8000/tcp": null
             },
-            "SandboxKey": "/var/run/docker/netns/dda17bc8ccaa",
+            "SandboxKey": "/var/run/docker/netns/1785d3ebe677",
             "SecondaryIPAddresses": null,
             "SecondaryIPv6Addresses": null,
             "EndpointID": "",
@@ -2179,11 +2168,11 @@ Superuser - admin@example.com/admin
                     "IPAMConfig": null,
                     "Links": null,
                     "Aliases": [
-                        "celery",
-                        "2218487b4f3c"
+                        "b9b17ac753aa",
+                        "celery"
                     ],
-                    "NetworkID": "a81dd4be0ba2a4b1e68995f4c2e19c31a03421b33beebddaf4157ffab3ee8400",
-                    "EndpointID": "4c880beac88d81adca6ac24f46708d327c50f10bbad85bb026c6eb28aaa91a65",
+                    "NetworkID": "e1a6e06eec62bc9cf734250df726281637f58d3a8cadf4727700f272a372ff8a",
+                    "EndpointID": "8865cad5ab25d0582407d9e592992d61196672701203b99aa6a4c5fdd1d49df8",
                     "Gateway": "172.18.0.1",
                     "IPAddress": "172.18.0.4",
                     "IPPrefixLen": 16,
@@ -2197,7 +2186,7 @@ Superuser - admin@example.com/admin
         }
     }
 ]
-Agent pid 16743
+Agent pid 5131
 spawn ssh-add /home/chetabahana/.ssh/id_rsa
 Enter passphrase for /home/chetabahana/.ssh/id_rsa: 
 Identity added: /home/chetabahana/.ssh/id_rsa (/home/chetabahana/.ssh/id_rsa)4096 SHA256:xefGz0xMkK/wmtCvyIVLdqNtJOGXVGRHUVp4BtSxBf8 /home/chetabahana/.ssh/id_rsa (RSA)
@@ -2270,6 +2259,8 @@ DEFAULT
 '/tmp/volume/static/favicons/mstile-310x310.png' -> 'static/favicons/mstile-310x310.png'
 '/tmp/volume/static/favicons/apple-touch-icon.png' -> 'static/favicons/apple-touch-icon.png'
 '/tmp/volume/static/images' -> 'static/images'
+'/tmp/volume/static/images/twitter-logo.svg' -> 'static/images/twitter-logo.svg'
+'/tmp/volume/static/images/what.svg' -> 'static/images/what.svg'
 '/tmp/volume/static/images/placeholder120x120.png' -> 'static/images/placeholder120x120.png'
 '/tmp/volume/static/images/favicon.svg' -> 'static/images/favicon.svg'
 '/tmp/volume/static/images/reset-bg.png' -> 'static/images/reset-bg.png'
@@ -2283,8 +2274,6 @@ DEFAULT
 '/tmp/volume/static/images/checkout.svg' -> 'static/images/checkout.svg'
 '/tmp/volume/static/images/search.svg' -> 'static/images/search.svg'
 '/tmp/volume/static/images/mobile-menu.svg' -> 'static/images/mobile-menu.svg'
-'/tmp/volume/static/images/twitter-logo.svg' -> 'static/images/twitter-logo.svg'
-'/tmp/volume/static/images/what.svg' -> 'static/images/what.svg'
 '/tmp/volume/static/images/logo-dark.svg' -> 'static/images/logo-dark.svg'
 '/tmp/volume/static/images/arrow-up-icon.svg' -> 'static/images/arrow-up-icon.svg'
 '/tmp/volume/static/images/arrow-down-icon.svg' -> 'static/images/arrow-down-icon.svg'
@@ -2387,6 +2376,8 @@ DEFAULT
 '/tmp/volume/static/mptt/disclosure-right.png' -> 'static/mptt/disclosure-right.png'
 '/tmp/volume/static/mptt/draggable-admin.js' -> 'static/mptt/draggable-admin.js'
 '/tmp/volume/static/flags' -> 'static/flags'
+'/tmp/volume/static/flags/zw.gif' -> 'static/flags/zw.gif'
+'/tmp/volume/static/flags/mm.gif' -> 'static/flags/mm.gif'
 '/tmp/volume/static/flags/bm.gif' -> 'static/flags/bm.gif'
 '/tmp/volume/static/flags/ph.gif' -> 'static/flags/ph.gif'
 '/tmp/volume/static/flags/bj.gif' -> 'static/flags/bj.gif'
@@ -2424,10 +2415,11 @@ DEFAULT
 '/tmp/volume/static/flags/lk.gif' -> 'static/flags/lk.gif'
 '/tmp/volume/static/flags/sk.gif' -> 'static/flags/sk.gif'
 '/tmp/volume/static/flags/kz.gif' -> 'static/flags/kz.gif'
+'/tmp/volume/static/flags/zm.gif' -> 'static/flags/zm.gif'
+'/tmp/volume/static/flags/md.gif' -> 'static/flags/md.gif'
 '/tmp/volume/static/flags/sprite-hq.png' -> 'static/flags/sprite-hq.png'
 '/tmp/volume/static/flags/mt.gif' -> 'static/flags/mt.gif'
 '/tmp/volume/static/flags/si.gif' -> 'static/flags/si.gif'
-'/tmp/volume/static/flags/zm.gif' -> 'static/flags/zm.gif'
 '/tmp/volume/static/flags/sprite-hq.css' -> 'static/flags/sprite-hq.css'
 '/tmp/volume/static/flags/mh.gif' -> 'static/flags/mh.gif'
 '/tmp/volume/static/flags/hr.gif' -> 'static/flags/hr.gif'
@@ -2540,10 +2532,9 @@ DEFAULT
 '/tmp/volume/static/flags/mc.gif' -> 'static/flags/mc.gif'
 '/tmp/volume/static/flags/tv.gif' -> 'static/flags/tv.gif'
 '/tmp/volume/static/flags/om.gif' -> 'static/flags/om.gif'
-'/tmp/volume/static/flags/md.gif' -> 'static/flags/md.gif'
+'/tmp/volume/static/flags/sn.gif' -> 'static/flags/sn.gif'
 '/tmp/volume/static/flags/sm.gif' -> 'static/flags/sm.gif'
 '/tmp/volume/static/flags/vc.gif' -> 'static/flags/vc.gif'
-'/tmp/volume/static/flags/zw.gif' -> 'static/flags/zw.gif'
 '/tmp/volume/static/flags/cf.gif' -> 'static/flags/cf.gif'
 '/tmp/volume/static/flags/tj.gif' -> 'static/flags/tj.gif'
 '/tmp/volume/static/flags/mu.gif' -> 'static/flags/mu.gif'
@@ -2612,10 +2603,8 @@ DEFAULT
 '/tmp/volume/static/flags/sx.gif' -> 'static/flags/sx.gif'
 '/tmp/volume/static/flags/ne.gif' -> 'static/flags/ne.gif'
 '/tmp/volume/static/flags/th.gif' -> 'static/flags/th.gif'
-'/tmp/volume/static/flags/mm.gif' -> 'static/flags/mm.gif'
 '/tmp/volume/static/flags/pk.gif' -> 'static/flags/pk.gif'
 '/tmp/volume/static/flags/gq.gif' -> 'static/flags/gq.gif'
-'/tmp/volume/static/flags/sn.gif' -> 'static/flags/sn.gif'
 '/tmp/volume/static/flags/np.gif' -> 'static/flags/np.gif'
 '/tmp/volume/static/flags/af.gif' -> 'static/flags/af.gif'
 '/tmp/volume/static/flags/sd.gif' -> 'static/flags/sd.gif'
@@ -2645,440 +2634,31 @@ DEFAULT
 On branch master
 Your branch is up to date with 'origin/master'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
 
-	static/
+	modified:   static/assets/dashboard.16a701600f4a5f253104.css
+	modified:   static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg
+	modified:   static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg
+	modified:   static/dashboard/images/mobile-menu.svg
+	modified:   static/images/arrow-down.svg
+	modified:   static/images/arrow-up.svg
+	modified:   static/images/chevron-down.svg
+	modified:   static/images/chevron-up.svg
+	modified:   static/images/close.svg
+	modified:   static/images/delete.svg
+	modified:   static/images/favicon.svg
+	modified:   static/images/loader.svg
+	modified:   static/images/mobile-menu.svg
+	modified:   static/images/pass-invisible.svg
+	modified:   static/images/pass-visible.svg
 
-nothing added to commit but untracked files present (use "git add" to track)
-[master a168480] fresh commit
- 426 files changed, 2685 insertions(+)
- create mode 100644 static/assets/Lato-Bold.061b572d02df38e00fc9978034ac09b8.woff2
- create mode 100644 static/assets/Lato-Bold.44dfe8cc676882243911a3197a50169e.ttf
- create mode 100644 static/assets/Lato-Bold.d0549ba90a0800d86d585f1e63df52b3.woff
- create mode 100644 static/assets/Lato-Light.067d56d83ba6202f296c6acd0fd107b1.woff
- create mode 100644 static/assets/Lato-Light.5b761f2d1e4259ea6ac7ab3ebf7f3c49.ttf
- create mode 100644 static/assets/Lato-Light.96b78ec9be61a9b1e91d455627636d53.woff2
- create mode 100644 static/assets/Lato-Regular.01f09144fb08c2185c04b46601a6894d.woff
- create mode 100644 static/assets/Lato-Regular.183bf2570509b4588f48227a1799c1bc.woff2
- create mode 100644 static/assets/Lato-Regular.7f690e503a254e0b8349aec0177e07aa.ttf
- create mode 100644 static/assets/Roboto-Bold.c0f1e4a4fdfb8048c72e86aadb2a247d.woff2
- create mode 100644 static/assets/Roboto-Bold.eed9aab5449cc9c8430d7d258108f602.woff
- create mode 100644 static/assets/Roboto-Light.3c37aa69cd77e6a53a067170fa8fe2e9.woff2
- create mode 100644 static/assets/Roboto-Light.ea36cd9a0e9eee97012a67b8a4570d7b.woff
- create mode 100644 static/assets/Roboto-Medium.1561b424aaef2f704bbd89155b3ce514.woff2
- create mode 100644 static/assets/Roboto-Medium.cf4d60bc0b1d4b2314085919a00e1724.woff
- create mode 100644 static/assets/Roboto-Regular.3cf6adf61054c328b1b0ddcd8f9ce24d.woff
- create mode 100644 static/assets/Roboto-Regular.5136cbe62a63604402f2fedb97f246f8.woff2
- create mode 100644 static/assets/Roboto-Thin.1f35e6a11d27d2e10d28946d42332dc5.woff2
- create mode 100644 static/assets/Roboto-Thin.44b78f142603eb69f593ed4002ed7a4a.woff
- create mode 100644 static/assets/align_center.261490e2a4abf6925c5e533cacef7361.svg
- create mode 100644 static/assets/align_justify.2eecf9cbf6e5c9260e4c366e1f2b49b1.svg
- create mode 100644 static/assets/align_left.ab9f0ff87e27ff7b6a58106c012daf22.svg
- create mode 100644 static/assets/align_right.b45aa1ea0df06c6a9506b0cd3e8527fe.svg
- create mode 100644 static/assets/arrow-select.cf30a11fd56d142d7630b56f16fb0f65.svg
- create mode 100644 static/assets/block1.b6fb939e413b8a23addbde6341ce6b56.jpg
- create mode 100644 static/assets/block2.781788024131717ff285b55c9b65bc9b.jpg
- create mode 100644 static/assets/block3.32b6cc89f5782d49fcea30e7b50ef506.jpg
- create mode 100644 static/assets/chevron-right.b90a94d3bf483b8d97e4647049ecdaa2.svg
- create mode 100644 static/assets/close.ec0a5fedbc923f0763a1886366f4967c.svg
- create mode 100644 static/assets/dashboard-next.46a99ef4cd5c9ff12206.js
- create mode 100644 static/assets/dashboard.16a701600f4a5f253104.css
- create mode 100644 static/assets/dashboard.16a701600f4a5f253104.js
- create mode 100644 static/assets/document.5da8542a5fa88198e0b8.css
- create mode 100644 static/assets/document.5da8542a5fa88198e0b8.js
- create mode 100644 static/assets/done.6469e271be639f7e5f1e45ffbb16c876.svg
- create mode 100644 static/assets/format_clear.9ea4294f9494325a0a198b0201443e63.svg
- create mode 100644 static/assets/insert_link.9523768776537a425ceaf093d2dddb00.svg
- create mode 100644 static/assets/insert_photo.497fe7788e4adeb99de29152704b8d32.svg
- create mode 100644 static/assets/login-background.37d2649918db527e7f5c0dc49475a4ff.svg
- create mode 100644 static/assets/logo-dark.b1ba93dc28e3576f4769cab4b77dbbc7.svg
- create mode 100644 static/assets/logo-light.d493430f320751f6bffac210ced37643.svg
- create mode 100644 static/assets/not-found-404.a4d671be72e48d8ad9e8254297221171.svg
- create mode 100644 static/assets/pass-invisible.d5a74fda0ae925038d3d4a2b9cb030d3.svg
- create mode 100644 static/assets/pass-visible.d7d2a2f14d58c56691160e88464dfdb5.svg
- create mode 100644 static/assets/photo-icon.688aa070edcd81510ffe7b9ad5618420.svg
- create mode 100644 static/assets/placeholder255x255.bb658a475f01d6538c482fd852ad782c.png
- create mode 100644 static/assets/quote.a519f24a889ca0c8830dccdd93a810b4.svg
- create mode 100644 static/assets/storefront.e1ffe21d4c6f258d297b.css
- create mode 100644 static/assets/storefront.e1ffe21d4c6f258d297b.js
- create mode 100644 static/assets/what.b7ae116ae14cafe6adfb9cfa119599c5.svg
- create mode 100644 static/dashboard/images/account-circle.svg
- create mode 100644 static/dashboard/images/add.svg
- create mode 100644 static/dashboard/images/arrow-drop-down.svg
- create mode 100644 static/dashboard/images/arrow-left.svg
- create mode 100644 static/dashboard/images/chevron-left.svg
- create mode 100644 static/dashboard/images/chevron-right.svg
- create mode 100644 static/dashboard/images/close.svg
- create mode 100644 static/dashboard/images/collections.svg
- create mode 100644 static/dashboard/images/description.svg
- create mode 100644 static/dashboard/images/done.svg
- create mode 100644 static/dashboard/images/edit.svg
- create mode 100644 static/dashboard/images/editor/align_center.svg
- create mode 100644 static/dashboard/images/editor/align_justify.svg
- create mode 100644 static/dashboard/images/editor/align_left.svg
- create mode 100644 static/dashboard/images/editor/align_right.svg
- create mode 100644 static/dashboard/images/editor/format_clear.svg
- create mode 100644 static/dashboard/images/editor/insert_link.svg
- create mode 100644 static/dashboard/images/editor/insert_photo.svg
- create mode 100644 static/dashboard/images/editor/quote.svg
- create mode 100644 static/dashboard/images/email.svg
- create mode 100644 static/dashboard/images/help.svg
- create mode 100644 static/dashboard/images/history.svg
- create mode 100644 static/dashboard/images/logo.svg
- create mode 100644 static/dashboard/images/mobile-menu.svg
- create mode 100644 static/dashboard/images/more-vert.svg
- create mode 100644 static/dashboard/images/payment.svg
- create mode 100644 static/dashboard/images/phone.svg
- create mode 100644 static/dashboard/images/reorder.svg
- create mode 100644 static/dashboard/images/search.svg
- create mode 100644 static/dashboard/images/store.svg
- create mode 100644 static/dashboard/images/style.svg
- create mode 100644 static/favicons/android-chrome-192x192.png
- create mode 100644 static/favicons/android-chrome-512x512.png
- create mode 100644 static/favicons/apple-touch-icon.png
- create mode 100644 static/favicons/browserconfig.xml
- create mode 100644 static/favicons/favicon-16x16.png
- create mode 100644 static/favicons/favicon-32x32.png
- create mode 100644 static/favicons/favicon.ico
- create mode 100644 static/favicons/mstile-144x144.png
- create mode 100644 static/favicons/mstile-150x150.png
- create mode 100644 static/favicons/mstile-310x150.png
- create mode 100644 static/favicons/mstile-310x310.png
- create mode 100644 static/favicons/mstile-70x70.png
- create mode 100644 static/favicons/safari-pinned-tab.svg
- create mode 100644 static/flags/__.gif
- create mode 100644 static/flags/ad.gif
- create mode 100644 static/flags/ae.gif
- create mode 100644 static/flags/af.gif
- create mode 100644 static/flags/ag.gif
- create mode 100644 static/flags/ai.gif
- create mode 100644 static/flags/al.gif
- create mode 100644 static/flags/am.gif
- create mode 100644 static/flags/ao.gif
- create mode 100644 static/flags/aq.gif
- create mode 100644 static/flags/ar.gif
- create mode 100644 static/flags/as.gif
- create mode 100644 static/flags/at.gif
- create mode 100644 static/flags/au.gif
- create mode 100644 static/flags/aw.gif
- create mode 100644 static/flags/ax.gif
- create mode 100644 static/flags/az.gif
- create mode 100644 static/flags/ba.gif
- create mode 100644 static/flags/bb.gif
- create mode 100644 static/flags/bd.gif
- create mode 100644 static/flags/be.gif
- create mode 100644 static/flags/bf.gif
- create mode 100644 static/flags/bg.gif
- create mode 100644 static/flags/bh.gif
- create mode 100644 static/flags/bi.gif
- create mode 100644 static/flags/bj.gif
- create mode 100644 static/flags/bl.gif
- create mode 100644 static/flags/bm.gif
- create mode 100644 static/flags/bn.gif
- create mode 100644 static/flags/bo.gif
- create mode 100644 static/flags/bq.gif
- create mode 100644 static/flags/br.gif
- create mode 100644 static/flags/bs.gif
- create mode 100644 static/flags/bt.gif
- create mode 100644 static/flags/bv.gif
- create mode 100644 static/flags/bw.gif
- create mode 100644 static/flags/by.gif
- create mode 100644 static/flags/bz.gif
- create mode 100644 static/flags/ca.gif
- create mode 100644 static/flags/cc.gif
- create mode 100644 static/flags/cd.gif
- create mode 100644 static/flags/cf.gif
- create mode 100644 static/flags/cg.gif
- create mode 100644 static/flags/ch.gif
- create mode 100644 static/flags/ci.gif
- create mode 100644 static/flags/ck.gif
- create mode 100644 static/flags/cl.gif
- create mode 100644 static/flags/cm.gif
- create mode 100644 static/flags/cn.gif
- create mode 100644 static/flags/co.gif
- create mode 100644 static/flags/cr.gif
- create mode 100644 static/flags/cu.gif
- create mode 100644 static/flags/cv.gif
- create mode 100644 static/flags/cw.gif
- create mode 100644 static/flags/cx.gif
- create mode 100644 static/flags/cy.gif
- create mode 100644 static/flags/cz.gif
- create mode 100644 static/flags/de.gif
- create mode 100644 static/flags/dj.gif
- create mode 100644 static/flags/dk.gif
- create mode 100644 static/flags/dm.gif
- create mode 100644 static/flags/do.gif
- create mode 100644 static/flags/dz.gif
- create mode 100644 static/flags/ec.gif
- create mode 100644 static/flags/ee.gif
- create mode 100644 static/flags/eg.gif
- create mode 100644 static/flags/eh.gif
- create mode 100644 static/flags/er.gif
- create mode 100644 static/flags/es.gif
- create mode 100644 static/flags/et.gif
- create mode 100644 static/flags/eu.gif
- create mode 100644 static/flags/fi.gif
- create mode 100644 static/flags/fj.gif
- create mode 100644 static/flags/fk.gif
- create mode 100644 static/flags/fm.gif
- create mode 100644 static/flags/fo.gif
- create mode 100644 static/flags/fr.gif
- create mode 100644 static/flags/ga.gif
- create mode 100644 static/flags/gb.gif
- create mode 100644 static/flags/gd.gif
- create mode 100644 static/flags/ge.gif
- create mode 100644 static/flags/gf.gif
- create mode 100644 static/flags/gg.gif
- create mode 100644 static/flags/gh.gif
- create mode 100644 static/flags/gi.gif
- create mode 100644 static/flags/gl.gif
- create mode 100644 static/flags/gm.gif
- create mode 100644 static/flags/gn.gif
- create mode 100644 static/flags/gp.gif
- create mode 100644 static/flags/gq.gif
- create mode 100644 static/flags/gr.gif
- create mode 100644 static/flags/gs.gif
- create mode 100644 static/flags/gt.gif
- create mode 100644 static/flags/gu.gif
- create mode 100644 static/flags/gw.gif
- create mode 100644 static/flags/gy.gif
- create mode 100644 static/flags/hk.gif
- create mode 100644 static/flags/hm.gif
- create mode 100644 static/flags/hn.gif
- create mode 100644 static/flags/hr.gif
- create mode 100644 static/flags/ht.gif
- create mode 100644 static/flags/hu.gif
- create mode 100644 static/flags/id.gif
- create mode 100644 static/flags/ie.gif
- create mode 100644 static/flags/il.gif
- create mode 100644 static/flags/im.gif
- create mode 100644 static/flags/in.gif
- create mode 100644 static/flags/io.gif
- create mode 100644 static/flags/iq.gif
- create mode 100644 static/flags/ir.gif
- create mode 100644 static/flags/is.gif
- create mode 100644 static/flags/it.gif
- create mode 100644 static/flags/je.gif
- create mode 100644 static/flags/jm.gif
- create mode 100644 static/flags/jo.gif
- create mode 100644 static/flags/jp.gif
- create mode 100644 static/flags/ke.gif
- create mode 100644 static/flags/kg.gif
- create mode 100644 static/flags/kh.gif
- create mode 100644 static/flags/ki.gif
- create mode 100644 static/flags/km.gif
- create mode 100644 static/flags/kn.gif
- create mode 100644 static/flags/kp.gif
- create mode 100644 static/flags/kr.gif
- create mode 100644 static/flags/kw.gif
- create mode 100644 static/flags/ky.gif
- create mode 100644 static/flags/kz.gif
- create mode 100644 static/flags/la.gif
- create mode 100644 static/flags/lb.gif
- create mode 100644 static/flags/lc.gif
- create mode 100644 static/flags/li.gif
- create mode 100644 static/flags/lk.gif
- create mode 100644 static/flags/lr.gif
- create mode 100644 static/flags/ls.gif
- create mode 100644 static/flags/lt.gif
- create mode 100644 static/flags/lu.gif
- create mode 100644 static/flags/lv.gif
- create mode 100644 static/flags/ly.gif
- create mode 100644 static/flags/ma.gif
- create mode 100644 static/flags/mc.gif
- create mode 100644 static/flags/md.gif
- create mode 100644 static/flags/me.gif
- create mode 100644 static/flags/mf.gif
- create mode 100644 static/flags/mg.gif
- create mode 100644 static/flags/mh.gif
- create mode 100644 static/flags/mk.gif
- create mode 100644 static/flags/ml.gif
- create mode 100644 static/flags/mm.gif
- create mode 100644 static/flags/mn.gif
- create mode 100644 static/flags/mo.gif
- create mode 100644 static/flags/mp.gif
- create mode 100644 static/flags/mq.gif
- create mode 100644 static/flags/mr.gif
- create mode 100644 static/flags/ms.gif
- create mode 100644 static/flags/mt.gif
- create mode 100644 static/flags/mu.gif
- create mode 100644 static/flags/mv.gif
- create mode 100644 static/flags/mw.gif
- create mode 100644 static/flags/mx.gif
- create mode 100644 static/flags/my.gif
- create mode 100644 static/flags/mz.gif
- create mode 100644 static/flags/na.gif
- create mode 100644 static/flags/nc.gif
- create mode 100644 static/flags/ne.gif
- create mode 100644 static/flags/nf.gif
- create mode 100644 static/flags/ng.gif
- create mode 100644 static/flags/ni.gif
- create mode 100644 static/flags/nl.gif
- create mode 100644 static/flags/no.gif
- create mode 100644 static/flags/np.gif
- create mode 100644 static/flags/nr.gif
- create mode 100644 static/flags/nu.gif
- create mode 100644 static/flags/nz.gif
- create mode 100644 static/flags/om.gif
- create mode 100644 static/flags/pa.gif
- create mode 100644 static/flags/pe.gif
- create mode 100644 static/flags/pf.gif
- create mode 100644 static/flags/pg.gif
- create mode 100644 static/flags/ph.gif
- create mode 100644 static/flags/pk.gif
- create mode 100644 static/flags/pl.gif
- create mode 100644 static/flags/pm.gif
- create mode 100644 static/flags/pn.gif
- create mode 100644 static/flags/pr.gif
- create mode 100644 static/flags/ps.gif
- create mode 100644 static/flags/pt.gif
- create mode 100644 static/flags/pw.gif
- create mode 100644 static/flags/py.gif
- create mode 100644 static/flags/qa.gif
- create mode 100644 static/flags/re.gif
- create mode 100644 static/flags/ro.gif
- create mode 100644 static/flags/rs.gif
- create mode 100644 static/flags/ru.gif
- create mode 100644 static/flags/rw.gif
- create mode 100644 static/flags/sa.gif
- create mode 100644 static/flags/sb.gif
- create mode 100644 static/flags/sc.gif
- create mode 100644 static/flags/sd.gif
- create mode 100644 static/flags/se.gif
- create mode 100644 static/flags/sg.gif
- create mode 100644 static/flags/sh.gif
- create mode 100644 static/flags/si.gif
- create mode 100644 static/flags/sj.gif
- create mode 100644 static/flags/sk.gif
- create mode 100644 static/flags/sl.gif
- create mode 100644 static/flags/sm.gif
- create mode 100644 static/flags/sn.gif
- create mode 100644 static/flags/so.gif
- create mode 100644 static/flags/sprite-hq.css
- create mode 100644 static/flags/sprite-hq.png
- create mode 100644 static/flags/sprite.css
- create mode 100644 static/flags/sprite.png
- create mode 100644 static/flags/sr.gif
- create mode 100644 static/flags/ss.gif
- create mode 100644 static/flags/st.gif
- create mode 100644 static/flags/sv.gif
- create mode 100644 static/flags/sx.gif
- create mode 100644 static/flags/sy.gif
- create mode 100644 static/flags/sz.gif
- create mode 100644 static/flags/tc.gif
- create mode 100644 static/flags/td.gif
- create mode 100644 static/flags/tf.gif
- create mode 100644 static/flags/tg.gif
- create mode 100644 static/flags/th.gif
- create mode 100644 static/flags/tj.gif
- create mode 100644 static/flags/tk.gif
- create mode 100644 static/flags/tl.gif
- create mode 100644 static/flags/tm.gif
- create mode 100644 static/flags/tn.gif
- create mode 100644 static/flags/to.gif
- create mode 100644 static/flags/tr.gif
- create mode 100644 static/flags/tt.gif
- create mode 100644 static/flags/tv.gif
- create mode 100644 static/flags/tw.gif
- create mode 100644 static/flags/tz.gif
- create mode 100644 static/flags/ua.gif
- create mode 100644 static/flags/ug.gif
- create mode 100644 static/flags/um.gif
- create mode 100644 static/flags/us.gif
- create mode 100644 static/flags/uy.gif
- create mode 100644 static/flags/uz.gif
- create mode 100644 static/flags/va.gif
- create mode 100644 static/flags/vc.gif
- create mode 100644 static/flags/ve.gif
- create mode 100644 static/flags/vg.gif
- create mode 100644 static/flags/vi.gif
- create mode 100644 static/flags/vn.gif
- create mode 100644 static/flags/vu.gif
- create mode 100644 static/flags/wf.gif
- create mode 100644 static/flags/ws.gif
- create mode 100644 static/flags/ye.gif
- create mode 100644 static/flags/yt.gif
- create mode 100644 static/flags/za.gif
- create mode 100644 static/flags/zm.gif
- create mode 100644 static/flags/zw.gif
- create mode 100644 static/images/arrow-down-icon.svg
- create mode 100644 static/images/arrow-down.svg
- create mode 100644 static/images/arrow-left.svg
- create mode 100644 static/images/arrow-select.svg
- create mode 100644 static/images/arrow-up-icon.svg
- create mode 100644 static/images/arrow-up.svg
- create mode 100644 static/images/avatars/avatar1.png
- create mode 100644 static/images/avatars/avatar10.png
- create mode 100644 static/images/avatars/avatar11.png
- create mode 100644 static/images/avatars/avatar12.png
- create mode 100644 static/images/avatars/avatar2.png
- create mode 100644 static/images/avatars/avatar3.png
- create mode 100644 static/images/avatars/avatar4.png
- create mode 100644 static/images/avatars/avatar5.png
- create mode 100644 static/images/avatars/avatar6.png
- create mode 100644 static/images/avatars/avatar7.png
- create mode 100644 static/images/avatars/avatar8.png
- create mode 100644 static/images/avatars/avatar9.png
- create mode 100644 static/images/block1.jpg
- create mode 100644 static/images/block2.jpg
- create mode 100644 static/images/block3.jpg
- create mode 100644 static/images/checkout-bg.png
- create mode 100644 static/images/checkout-bg2x.png
- create mode 100644 static/images/checkout.svg
- create mode 100644 static/images/chevron-down.svg
- create mode 100644 static/images/chevron-up.svg
- create mode 100644 static/images/close.svg
- create mode 100644 static/images/confirm-order-bg.png
- create mode 100644 static/images/confirm-order-bg2x.png
- create mode 100644 static/images/delete.svg
- create mode 100644 static/images/dribbble-logo.svg
- create mode 100644 static/images/edit.svg
- create mode 100644 static/images/empty-checkout-bg.png
- create mode 100644 static/images/empty-checkout-bg2x.png
- create mode 100644 static/images/facebook-logo.svg
- create mode 100644 static/images/favicon.svg
- create mode 100644 static/images/filter-icon.svg
- create mode 100644 static/images/gallery-arrow.svg
- create mode 100644 static/images/github-logo.svg
- create mode 100644 static/images/google-logo.svg
- create mode 100644 static/images/instagram-logo.svg
- create mode 100644 static/images/linkedin-logo.svg
- create mode 100644 static/images/loader.svg
- create mode 100644 static/images/login-background.svg
- create mode 100644 static/images/login-bg.png
- create mode 100644 static/images/login-bg2x.png
- create mode 100644 static/images/logo-dark.svg
- create mode 100644 static/images/logo-light.svg
- create mode 100644 static/images/logo-white.svg
- create mode 100644 static/images/meetup-logo.svg
- create mode 100644 static/images/mobile-menu.svg
- create mode 100644 static/images/no-results-bg.svg
- create mode 100644 static/images/not-found-404.svg
- create mode 100644 static/images/pass-invisible.svg
- create mode 100644 static/images/pass-visible.svg
- create mode 100644 static/images/photo-icon.svg
- create mode 100644 static/images/placeholder1080x1080.png
- create mode 100644 static/images/placeholder120x120.png
- create mode 100644 static/images/placeholder255x255.png
- create mode 100644 static/images/placeholder540x540.png
- create mode 100644 static/images/placeholder60x60.png
- create mode 100644 static/images/reset-bg.png
- create mode 100644 static/images/sale-bg.svg
- create mode 100644 static/images/sample-product.jpg
- create mode 100644 static/images/sample-product2.jpg
- create mode 100644 static/images/search.svg
- create mode 100644 static/images/twitter-logo.svg
- create mode 100644 static/images/what.svg
- create mode 100644 static/mptt/arrow-move.png
- create mode 100644 static/mptt/disclosure-down.png
- create mode 100644 static/mptt/disclosure-right.png
- create mode 100644 static/mptt/draggable-admin.css
- create mode 100644 static/mptt/draggable-admin.js
- create mode 100644 static/versatileimagefield/css/versatileimagefield-bootstrap3.css
- create mode 100644 static/versatileimagefield/css/versatileimagefield-djangoadmin.css
- create mode 100644 static/versatileimagefield/css/versatileimagefield.css
- create mode 100644 static/versatileimagefield/js/versatileimagefield.js
+no changes added to commit (use "git add" and/or "git commit -a")
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 PRODUCT
@@ -3099,31 +2679,31 @@ Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 Branch 'master' set up to track remote branch 'master' from 'origin'.
-Agent pid 16743 killed
+Agent pid 5131 killed
 
 SERVICES
 
 CONTAINER ID        IMAGE                COMMAND                  CREATED              STATUS              PORTS                    NAMES
-2218487b4f3c        chetabahana/saleor   "celery -A saleor wo…"   About a minute ago   Up About a minute   8000/tcp                 compose_celery_1
-7307c0529625        postgres             "docker-entrypoint.s…"   5 minutes ago        Up 5 minutes        0.0.0.0:5431->5432/tcp   compose_postgres_1
-bf72738b285a        redis                "docker-entrypoint.s…"   5 minutes ago        Up 5 minutes        0.0.0.0:6378->6379/tcp   compose_redis_1
+b9b17ac753aa        chetabahana/saleor   "celery -A saleor wo…"   About a minute ago   Up About a minute   8000/tcp                 compose_celery_1
+93e7e03f803e        postgres             "docker-entrypoint.s…"   5 minutes ago        Up 5 minutes        0.0.0.0:5431->5432/tcp   compose_postgres_1
+6bbc0cab4017        redis                "docker-entrypoint.s…"   5 minutes ago        Up 5 minutes        0.0.0.0:6378->6379/tcp   compose_redis_1
 
 REDIS
 
-1:C 12 Jun 2019 13:53:13.243 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-1:C 12 Jun 2019 13:53:13.243 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
-1:C 12 Jun 2019 13:53:13.243 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-1:M 12 Jun 2019 13:53:13.251 * Running mode=standalone, port=6379.
-1:M 12 Jun 2019 13:53:13.251 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
-1:M 12 Jun 2019 13:53:13.251 # Server initialized
-1:M 12 Jun 2019 13:53:13.251 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-1:M 12 Jun 2019 13:53:13.251 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
-1:M 12 Jun 2019 13:53:13.252 * Ready to accept connections
-1:M 12 Jun 2019 13:58:14.092 * 100 changes in 300 seconds. Saving...
-1:M 12 Jun 2019 13:58:14.285 * Background saving started by pid 10
-10:C 12 Jun 2019 13:58:14.327 * DB saved on disk
-10:C 12 Jun 2019 13:58:14.328 * RDB: 0 MB of memory used by copy-on-write
-1:M 12 Jun 2019 13:58:14.385 * Background saving terminated with success
+1:C 12 Jun 2019 14:49:20.827 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 12 Jun 2019 14:49:20.827 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 12 Jun 2019 14:49:20.827 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1:M 12 Jun 2019 14:49:20.832 * Running mode=standalone, port=6379.
+1:M 12 Jun 2019 14:49:20.833 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 12 Jun 2019 14:49:20.833 # Server initialized
+1:M 12 Jun 2019 14:49:20.833 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 12 Jun 2019 14:49:20.833 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 12 Jun 2019 14:49:20.833 * Ready to accept connections
+1:M 12 Jun 2019 14:54:23.192 * 100 changes in 300 seconds. Saving...
+1:M 12 Jun 2019 14:54:23.225 * Background saving started by pid 10
+10:C 12 Jun 2019 14:54:23.594 * DB saved on disk
+10:C 12 Jun 2019 14:54:23.595 * RDB: 0 MB of memory used by copy-on-write
+1:M 12 Jun 2019 14:54:23.842 * Background saving terminated with success
 
 POSTGRES
 
@@ -3150,9 +2730,9 @@ Success. You can now start the database server using:
 
     pg_ctl -D /var/lib/postgresql/data -l logfile start
 
-waiting for server to start....2019-06-12 13:53:28.585 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-2019-06-12 13:53:28.660 UTC [41] LOG:  database system was shut down at 2019-06-12 13:53:27 UTC
-2019-06-12 13:53:28.724 UTC [40] LOG:  database system is ready to accept connections
+waiting for server to start....2019-06-12 14:49:34.799 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-06-12 14:49:34.992 UTC [41] LOG:  database system was shut down at 2019-06-12 14:49:32 UTC
+2019-06-12 14:49:35.006 UTC [40] LOG:  database system is ready to accept connections
  done
 server started
 CREATE DATABASE
@@ -3160,11 +2740,11 @@ CREATE DATABASE
 
 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 
-2019-06-12 13:53:30.297 UTC [40] LOG:  received fast shutdown request
-waiting for server to shut down....2019-06-12 13:53:30.302 UTC [40] LOG:  aborting any active transactions
-2019-06-12 13:53:30.307 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
-2019-06-12 13:53:30.307 UTC [42] LOG:  shutting down
-2019-06-12 13:53:30.330 UTC [40] LOG:  database system is shut down
+2019-06-12 14:49:37.276 UTC [40] LOG:  received fast shutdown request
+waiting for server to shut down....2019-06-12 14:49:37.279 UTC [40] LOG:  aborting any active transactions
+2019-06-12 14:49:37.281 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+2019-06-12 14:49:37.285 UTC [42] LOG:  shutting down
+2019-06-12 14:49:37.311 UTC [40] LOG:  database system is shut down
  done
 server stopped
 
@@ -3174,12 +2754,12 @@ PostgreSQL init process complete; ready for start up.
 CELERY
 
  
- -------------- celery@2218487b4f3c v4.3.0 (rhubarb)
+ -------------- celery@b9b17ac753aa v4.3.0 (rhubarb)
 ---- **** ----- 
---- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-12 08:57:35
+--- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-12 09:53:58
 -- * - **** --- 
 - ** ---------- [config]
-- ** ---------- .> app:         saleor:0x7f738d8ecda0
+- ** ---------- .> app:         saleor:0x7f6f1e9cada0
 - ** ---------- .> transport:   redis://redis:6379/1
 - ** ---------- .> results:     disabled://
 - *** --- * --- .> concurrency: 1 (prefork)
@@ -3248,272 +2828,15 @@ CELERY
 
 
 
-
-
-
-
-
 LOGS
 
 Attaching to compose_celery_1, compose_postgres_1, compose_redis_1
 [36mcelery_1    |[0m  
-[36mcelery_1    |[0m  -------------- celery@2218487b4f3c v4.3.0 (rhubarb)
+[36mcelery_1    |[0m  -------------- celery@b9b17ac753aa v4.3.0 (rhubarb)
 [36mcelery_1    |[0m ---- **** ----- 
-[36mcelery_1    |[0m --- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-12 08:57:35
+[36mcelery_1    |[0m --- * ***  * -- Linux-4.15.0-1033-gcp-x86_64-with-debian-9.9 2019-06-12 09:53:58
 [36mcelery_1    |[0m -- * - **** --- 
 [36mcelery_1    |[0m - ** ---------- [config]
-[36mcelery_1    |[0m - ** ---------- .> app:         saleor:0x7f738d8ecda0
-[36mcelery_1    |[0m - ** ---------- .> transport:   redis://redis:6379/1
-[36mcelery_1    |[0m - ** ---------- .> results:     disabled://
-[36mcelery_1    |[0m - *** --- * --- .> concurrency: 1 (prefork)
-[36mcelery_1    |[0m -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
-[36mcelery_1    |[0m --- ***** ----- 
-[36mcelery_1    |[0m  -------------- [queues]
-[36mcelery_1    |[0m                 .> celery           exchange=celery(direct) key=celery
-[36mcelery_1    |[0m                 
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m [tasks]
-[36mcelery_1    |[0m   . saleor.account.emails.send_account_delete_confirmation_email
-[36mcelery_1    |[0m   . saleor.account.emails.send_password_reset_email
-[36mcelery_1    |[0m   . saleor.account.thumbnails.create_user_avatar_thumbnails
-[36mcelery_1    |[0m   . saleor.core.analytics.ga_report
-[36mcelery_1    |[0m   . saleor.core.utils.update_conversion_rates_from_openexchangerates
-[36mcelery_1    |[0m   . saleor.dashboard.emails.send_promote_customer_to_staff_email
-[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_customer_email
-[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_staff_email
-[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_confirmation
-[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_update
-[36mcelery_1    |[0m   . saleor.order.emails.send_order_confirmation
-[36mcelery_1    |[0m   . saleor.order.emails.send_payment_confirmation
-[36mcelery_1    |[0m   . saleor.product.tasks.update_variants_names
-[36mcelery_1    |[0m   . saleor.product.thumbnails.create_category_background_image_thumbnails
-[36mcelery_1    |[0m   . saleor.product.thumbnails.create_collection_background_image_thumbnails
-[36mcelery_1    |[0m   . saleor.product.thumbnails.create_product_thumbnails
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m [2019-06-12 08:57:36,521: INFO/MainProcess] Connected to redis://redis:6379/1
-[36mcelery_1    |[0m [2019-06-12 08:57:36,534: INFO/MainProcess] mingle: searching for neighbors
-[36mcelery_1    |[0m [2019-06-12 08:57:37,618: INFO/MainProcess] mingle: all alone
-[36mcelery_1    |[0m [2019-06-12 08:57:37,680: INFO/MainProcess] celery@2218487b4f3c ready.
-[36mcelery_1    |[0m [2019-06-12 08:57:37,802: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[ce36484d-8a43-4619-8d06-7a4e3636f283]  
-[36mcelery_1    |[0m [2019-06-12 08:57:37,804: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[91c92fa5-722e-4f37-8d5c-ad6db52121f9]  
-[36mcelery_1    |[0m [2019-06-12 08:57:37,806: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[044a42bd-2bd9-44fc-a418-20b9e2560458]  
-[36mcelery_1    |[0m [2019-06-12 08:57:37,807: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[7bbea361-f46c-4b98-b487-18cf9d926284]  
-[36mcelery_1    |[0m [2019-06-12 08:57:37,809: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2829727f-0152-4670-bb4a-669e76293876]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  7 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:38,684: INFO/ForkPoolWorker-1] Creating thumbnails for  7
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:43,620: INFO/ForkPoolWorker-1] Created 1 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:43,650: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[ce36484d-8a43-4619-8d06-7a4e3636f283] succeeded in 5.844739571999526s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  8 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:44,136: INFO/ForkPoolWorker-1] Creating thumbnails for  8
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:44,763: INFO/ForkPoolWorker-1] Created 1 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:44,767: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[91c92fa5-722e-4f37-8d5c-ad6db52121f9] succeeded in 1.1053088100015884s: None
-[36mcelery_1    |[0m [2019-06-12 08:57:44,839: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[456ffafd-3584-4e9c-abfd-d491c1cf3c6e]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  9 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:45,126: INFO/ForkPoolWorker-1] Creating thumbnails for  9
-[36mcelery_1    |[0m [2019-06-12 08:57:46,152: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2172ce94-0ea0-4e7b-a26b-27fe682d365d]  
-[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:47,682: INFO/ForkPoolWorker-1] Created 1 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:47,858: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[044a42bd-2bd9-44fc-a418-20b9e2560458] succeeded in 3.0126317989997915s: None
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m [2019-06-12 08:57:48,606: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2c9560d9-e9fb-4eb6-83a9-4204d1339833]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  1 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:48,937: INFO/ForkPoolWorker-1] Creating thumbnails for  1
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:50,896: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:50,897: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[7bbea361-f46c-4b98-b487-18cf9d926284] succeeded in 3.0260903439993854s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  2 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:50,904: INFO/ForkPoolWorker-1] Creating thumbnails for  2
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:52,466: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:52,467: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2829727f-0152-4670-bb4a-669e76293876] succeeded in 1.5655605380015913s: None
-[36mcelery_1    |[0m [2019-06-12 08:57:52,470: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[bef3f9de-1050-4670-b68f-17d3dd6f7232]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  3 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:52,594: INFO/ForkPoolWorker-1] Creating thumbnails for  3
-[36mcelery_1    |[0m [2019-06-12 08:57:52,637: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[ff5a25f3-1379-430d-9214-e63bd9eca8f9]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:54,153: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:54,153: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[456ffafd-3584-4e9c-abfd-d491c1cf3c6e] succeeded in 1.681977926993568s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  4 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:54,158: INFO/ForkPoolWorker-1] Creating thumbnails for  4
-[36mcelery_1    |[0m [2019-06-12 08:57:54,639: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[461fb789-262d-411c-ac01-37799d4e1a11]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:55,647: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:55,648: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2172ce94-0ea0-4e7b-a26b-27fe682d365d] succeeded in 1.4920701059963903s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  5 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:55,653: INFO/ForkPoolWorker-1] Creating thumbnails for  5
-[36mcelery_1    |[0m [2019-06-12 08:57:56,624: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[ece2084f-08cf-476a-a805-2d0f6815e168]  
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:57,380: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:57,381: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2c9560d9-e9fb-4eb6-83a9-4204d1339833] succeeded in 1.7308252780057956s: None
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  6 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:57,392: INFO/ForkPoolWorker-1] Creating thumbnails for  6
-[36mcelery_1    |[0m [2019-06-12 08:57:57,638: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[6f7e5f89-ce5a-40bc-ac93-6c6b37c3e339]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:59,156: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:57:59,156: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[bef3f9de-1050-4670-b68f-17d3dd6f7232] succeeded in 1.773311550001381s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  7 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:57:59,162: INFO/ForkPoolWorker-1] Creating thumbnails for  7
-[36mcelery_1    |[0m [2019-06-12 08:58:00,647: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[87eeeb16-b39b-4227-a782-62d61c4d0c1c]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:00,885: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:00,888: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[ff5a25f3-1379-430d-9214-e63bd9eca8f9] succeeded in 1.7296615800005384s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  8 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:00,897: INFO/ForkPoolWorker-1] Creating thumbnails for  8
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:02,602: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:02,602: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[461fb789-262d-411c-ac01-37799d4e1a11] succeeded in 1.709299366993946s: None
-[36mcelery_1    |[0m [2019-06-12 08:58:02,607: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[83de54d4-0d82-4399-a52d-8317a8683ad4]  
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  9 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:02,613: INFO/ForkPoolWorker-1] Creating thumbnails for  9
-[36mcelery_1    |[0m [2019-06-12 08:58:02,640: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[75df24d5-36ac-4b93-9ac3-00c9d11aa988]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:04,345: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:04,345: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[ece2084f-08cf-476a-a805-2d0f6815e168] succeeded in 1.7374575170033495s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  10 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:04,352: INFO/ForkPoolWorker-1] Creating thumbnails for  10
-[36mcelery_1    |[0m [2019-06-12 08:58:04,848: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[a6448039-10da-482e-9dd2-abde0e1ff6cf]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:06,417: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:06,417: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[6f7e5f89-ce5a-40bc-ac93-6c6b37c3e339] succeeded in 2.0688039050000953s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  11 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:06,422: INFO/ForkPoolWorker-1] Creating thumbnails for  11
-[36mcelery_1    |[0m [2019-06-12 08:58:06,625: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[14982aa6-750c-455c-a846-24f44ea7209a]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:08,095: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:08,096: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[87eeeb16-b39b-4227-a782-62d61c4d0c1c] succeeded in 1.6763176460008253s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  12 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:08,101: INFO/ForkPoolWorker-1] Creating thumbnails for  12
-[36mcelery_1    |[0m [2019-06-12 08:58:08,855: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[0a2c0ea0-3c9d-44c9-a873-57f70cb10b8d]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:09,648: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:09,649: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[83de54d4-0d82-4399-a52d-8317a8683ad4] succeeded in 1.5510830499988515s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  13 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:09,656: INFO/ForkPoolWorker-1] Creating thumbnails for  13
-[36mcelery_1    |[0m [2019-06-12 08:58:10,859: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[cfb2f6a8-332c-4115-8540-56e4f7aa47c2]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:11,382: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:11,383: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[75df24d5-36ac-4b93-9ac3-00c9d11aa988] succeeded in 1.7305530800003908s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  14 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:11,389: INFO/ForkPoolWorker-1] Creating thumbnails for  14
-[36mcelery_1    |[0m [2019-06-12 08:58:12,643: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2460ad2b-be5a-42d1-9ad4-a98d3e8d09a7]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:12,916: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:12,917: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[a6448039-10da-482e-9dd2-abde0e1ff6cf] succeeded in 1.531222069002979s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  15 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:13,095: INFO/ForkPoolWorker-1] Creating thumbnails for  15
-[36mcelery_1    |[0m [2019-06-12 08:58:14,866: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[ea62af4f-9255-4e16-bb9c-eaa025d0d7e5]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:14,957: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:14,957: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[14982aa6-750c-455c-a846-24f44ea7209a] succeeded in 2.037087172997417s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  16 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:15,094: INFO/ForkPoolWorker-1] Creating thumbnails for  16
-[36mcelery_1    |[0m [2019-06-12 08:58:16,629: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2115eeb0-9938-4e6d-b1c7-af48a61df769]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:16,666: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:16,667: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[0a2c0ea0-3c9d-44c9-a873-57f70cb10b8d] succeeded in 1.7062233569959062s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  17 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:16,844: INFO/ForkPoolWorker-1] Creating thumbnails for  17
-[36mcelery_1    |[0m [2019-06-12 08:58:16,867: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[8d3f0ac4-d164-46f5-8166-1d3a46e93925]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:18,652: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:18,652: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[cfb2f6a8-332c-4115-8540-56e4f7aa47c2] succeeded in 1.9824255639978219s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  18 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:18,656: INFO/ForkPoolWorker-1] Creating thumbnails for  18
-[36mcelery_1    |[0m [2019-06-12 08:58:18,870: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b4afe35e-997c-47bd-8b63-176d0411836d]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:20,164: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:20,166: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2460ad2b-be5a-42d1-9ad4-a98d3e8d09a7] succeeded in 1.5115257700017537s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  19 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:20,173: INFO/ForkPoolWorker-1] Creating thumbnails for  19
-[36mcelery_1    |[0m [2019-06-12 08:58:20,873: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[fbbcaf42-ee11-4892-b06e-eb958a76b0e2]  
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:22,346: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:22,346: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[ea62af4f-9255-4e16-bb9c-eaa025d0d7e5] succeeded in 2.1770656680018874s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  20 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:22,363: INFO/ForkPoolWorker-1] Creating thumbnails for  20
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m [2019-06-12 08:58:22,865: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[63e6389f-0404-4c32-8813-f1c757f79049]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:24,664: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:24,665: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2115eeb0-9938-4e6d-b1c7-af48a61df769] succeeded in 2.3111945590062533s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  21 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:24,843: INFO/ForkPoolWorker-1] Creating thumbnails for  21
-[36mcelery_1    |[0m [2019-06-12 08:58:24,878: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[bf451a4b-4462-4163-b1b5-00e30e6ee719]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:26,349: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:26,349: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[8d3f0ac4-d164-46f5-8166-1d3a46e93925] succeeded in 1.681733235003776s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  22 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:26,355: INFO/ForkPoolWorker-1] Creating thumbnails for  22
-[36mcelery_1    |[0m [2019-06-12 08:58:26,630: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[6d518527-cf17-4e86-ae6a-cfb9002d8e8a]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:27,910: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:27,910: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[b4afe35e-997c-47bd-8b63-176d0411836d] succeeded in 1.558303887002694s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  23 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:27,916: INFO/ForkPoolWorker-1] Creating thumbnails for  23
-[36mcelery_1    |[0m [2019-06-12 08:58:28,884: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[bbf94326-4d6e-4605-a8a6-18c9ac630a0b]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:29,413: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:29,413: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[fbbcaf42-ee11-4892-b06e-eb958a76b0e2] succeeded in 1.5005364980024751s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  24 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:29,418: INFO/ForkPoolWorker-1] Creating thumbnails for  24
-[36mcelery_1    |[0m [2019-06-12 08:58:30,887: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[56cc129d-0277-4132-b29f-94c37b489689]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:30,902: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:30,903: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[63e6389f-0404-4c32-8813-f1c757f79049] succeeded in 1.4867660219970276s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  25 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:30,908: INFO/ForkPoolWorker-1] Creating thumbnails for  25
-[36mcelery_1    |[0m [2019-06-12 08:58:32,652: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[89d4fe7e-5748-4c55-9726-210ff3585b87]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:32,655: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:32,655: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[bf451a4b-4462-4163-b1b5-00e30e6ee719] succeeded in 1.750336047996825s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  26 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:32,660: INFO/ForkPoolWorker-1] Creating thumbnails for  26
-[36mcelery_1    |[0m [2019-06-12 08:58:32,869: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[e7478664-4611-4a88-a2de-09f8444cf8a5]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:34,387: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:34,388: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[6d518527-cf17-4e86-ae6a-cfb9002d8e8a] succeeded in 1.7305681709985947s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  27 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:34,394: INFO/ForkPoolWorker-1] Creating thumbnails for  27
-[36mcelery_1    |[0m [2019-06-12 08:58:34,893: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[c6ef6236-5c08-461f-adc6-8e631c64c96d]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:36,147: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:36,148: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[bbf94326-4d6e-4605-a8a6-18c9ac630a0b] succeeded in 1.7572022179956548s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  28 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:36,154: INFO/ForkPoolWorker-1] Creating thumbnails for  28
-[36mcelery_1    |[0m [2019-06-12 08:58:36,632: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[40fc6985-41f7-4408-9eef-e36b9a7cab42]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:37,669: INFO/ForkPoolWorker-1] Created 6 thumbnails
 [33mpostgres_1  |[0m The files belonging to this database system will be owned by user "postgres".
 [33mpostgres_1  |[0m This user must also own the server process.
 [33mpostgres_1  |[0m 
@@ -3541,9 +2864,9 @@ Attaching to compose_celery_1, compose_postgres_1, compose_redis_1
 [33mpostgres_1  |[0m 
 [33mpostgres_1  |[0m     pg_ctl -D /var/lib/postgresql/data -l logfile start
 [33mpostgres_1  |[0m 
-[33mpostgres_1  |[0m waiting for server to start....2019-06-12 13:53:28.585 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-[33mpostgres_1  |[0m 2019-06-12 13:53:28.660 UTC [41] LOG:  database system was shut down at 2019-06-12 13:53:27 UTC
-[33mpostgres_1  |[0m 2019-06-12 13:53:28.724 UTC [40] LOG:  database system is ready to accept connections
+[33mpostgres_1  |[0m waiting for server to start....2019-06-12 14:49:34.799 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[33mpostgres_1  |[0m 2019-06-12 14:49:34.992 UTC [41] LOG:  database system was shut down at 2019-06-12 14:49:32 UTC
+[33mpostgres_1  |[0m 2019-06-12 14:49:35.006 UTC [40] LOG:  database system is ready to accept connections
 [33mpostgres_1  |[0m  done
 [33mpostgres_1  |[0m server started
 [33mpostgres_1  |[0m CREATE DATABASE
@@ -3551,169 +2874,407 @@ Attaching to compose_celery_1, compose_postgres_1, compose_redis_1
 [33mpostgres_1  |[0m 
 [33mpostgres_1  |[0m /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
 [33mpostgres_1  |[0m 
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.297 UTC [40] LOG:  received fast shutdown request
-[33mpostgres_1  |[0m waiting for server to shut down....2019-06-12 13:53:30.302 UTC [40] LOG:  aborting any active transactions
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.307 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.307 UTC [42] LOG:  shutting down
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.330 UTC [40] LOG:  database system is shut down
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.276 UTC [40] LOG:  received fast shutdown request
+[33mpostgres_1  |[0m waiting for server to shut down....2019-06-12 14:49:37.279 UTC [40] LOG:  aborting any active transactions
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.281 UTC [40] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.285 UTC [42] LOG:  shutting down
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.311 UTC [40] LOG:  database system is shut down
 [33mpostgres_1  |[0m  done
 [33mpostgres_1  |[0m server stopped
 [33mpostgres_1  |[0m 
 [33mpostgres_1  |[0m PostgreSQL init process complete; ready for start up.
 [33mpostgres_1  |[0m 
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.415 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.415 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.420 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.440 UTC [58] LOG:  database system was shut down at 2019-06-12 13:53:30 UTC
-[33mpostgres_1  |[0m 2019-06-12 13:53:30.449 UTC [1] LOG:  database system is ready to accept connections
-[36mcelery_1    |[0m [2019-06-12 08:58:37,670: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[56cc129d-0277-4132-b29f-94c37b489689] succeeded in 1.5189247779999278s: None
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.395 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.395 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.401 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[36mcelery_1    |[0m - ** ---------- .> app:         saleor:0x7f6f1e9cada0
+[36mcelery_1    |[0m - ** ---------- .> transport:   redis://redis:6379/1
+[36mcelery_1    |[0m - ** ---------- .> results:     disabled://
+[36mcelery_1    |[0m - *** --- * --- .> concurrency: 1 (prefork)
+[36mcelery_1    |[0m -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+[36mcelery_1    |[0m --- ***** ----- 
+[36mcelery_1    |[0m  -------------- [queues]
+[36mcelery_1    |[0m                 .> celery           exchange=celery(direct) key=celery
+[36mcelery_1    |[0m                 
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m [tasks]
+[36mcelery_1    |[0m   . saleor.account.emails.send_account_delete_confirmation_email
+[36mcelery_1    |[0m   . saleor.account.emails.send_password_reset_email
+[36mcelery_1    |[0m   . saleor.account.thumbnails.create_user_avatar_thumbnails
+[36mcelery_1    |[0m   . saleor.core.analytics.ga_report
+[36mcelery_1    |[0m   . saleor.core.utils.update_conversion_rates_from_openexchangerates
+[36mcelery_1    |[0m   . saleor.dashboard.emails.send_promote_customer_to_staff_email
+[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_customer_email
+[36mcelery_1    |[0m   . saleor.dashboard.emails.send_set_password_staff_email
+[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_confirmation
+[36mcelery_1    |[0m   . saleor.order.emails.send_fulfillment_update
+[36mcelery_1    |[0m   . saleor.order.emails.send_order_confirmation
+[36mcelery_1    |[0m   . saleor.order.emails.send_payment_confirmation
+[36mcelery_1    |[0m   . saleor.product.tasks.update_variants_names
+[36mcelery_1    |[0m   . saleor.product.thumbnails.create_category_background_image_thumbnails
+[36mcelery_1    |[0m   . saleor.product.thumbnails.create_collection_background_image_thumbnails
+[36mcelery_1    |[0m   . saleor.product.thumbnails.create_product_thumbnails
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m [2019-06-12 09:54:03,129: INFO/MainProcess] Connected to redis://redis:6379/1
+[36mcelery_1    |[0m [2019-06-12 09:54:03,357: INFO/MainProcess] mingle: searching for neighbors
+[36mcelery_1    |[0m [2019-06-12 09:54:04,631: INFO/MainProcess] mingle: all alone
+[36mcelery_1    |[0m [2019-06-12 09:54:04,873: INFO/MainProcess] celery@b9b17ac753aa ready.
+[36mcelery_1    |[0m [2019-06-12 09:54:04,878: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[12721238-19f2-4378-b8df-61cce7e2f921]  
+[36mcelery_1    |[0m [2019-06-12 09:54:04,881: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[51f3a5b2-3fbe-4a52-b2f6-ac0c68862b6c]  
+[36mcelery_1    |[0m [2019-06-12 09:54:04,886: INFO/MainProcess] Received task: saleor.product.thumbnails.create_category_background_image_thumbnails[56a9b3c3-26a9-43ec-b2fa-07df1d43172c]  
+[36mcelery_1    |[0m [2019-06-12 09:54:04,889: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[d6aa2647-d7b8-47a3-81fc-c13e1570a371]  
+[36mcelery_1    |[0m [2019-06-12 09:54:05,346: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[4830be4f-90de-493b-ba9f-4f67699baeea]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  7 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:09,601: INFO/ForkPoolWorker-1] Creating thumbnails for  7
+[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:22,173: INFO/ForkPoolWorker-1] Created 1 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:22,176: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[12721238-19f2-4378-b8df-61cce7e2f921] succeeded in 17.291202959999737s: None
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  8 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:22,654: INFO/ForkPoolWorker-1] Creating thumbnails for  8
+[36mcelery_1    |[0m [2019-06-12 09:54:22,861: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2ad08a17-9653-4d92-8f00-3f91f5916929]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:22,891: INFO/ForkPoolWorker-1] Created 1 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:22,891: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[51f3a5b2-3fbe-4a52-b2f6-ac0c68862b6c] succeeded in 0.6726224369999727s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  9 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:22,895: INFO/ForkPoolWorker-1] Creating thumbnails for  9
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 1 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:23,144: INFO/ForkPoolWorker-1] Created 1 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:23,145: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_category_background_image_thumbnails[56a9b3c3-26a9-43ec-b2fa-07df1d43172c] succeeded in 0.25157920899982855s: None
+[36mcelery_1    |[0m [2019-06-12 09:54:23,147: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[4fdf7066-28a3-46c7-bc50-4f597c2bba8a]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  1 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:23,346: INFO/ForkPoolWorker-1] Creating thumbnails for  1
+[36mcelery_1    |[0m [2019-06-12 09:54:24,864: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[68f14d64-4d55-4b43-8aa2-3860addae53e]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:24,886: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:24,886: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[d6aa2647-d7b8-47a3-81fc-c13e1570a371] succeeded in 1.737847378999959s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  2 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:24,891: INFO/ForkPoolWorker-1] Creating thumbnails for  2
+[36mcelery_1    |[0m [2019-06-12 09:54:25,399: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[399e36e8-9d8c-40bb-8260-006a2b4ebdde]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:26,409: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:26,410: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[4830be4f-90de-493b-ba9f-4f67699baeea] succeeded in 1.520776330999979s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  3 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:26,414: INFO/ForkPoolWorker-1] Creating thumbnails for  3
+[36mcelery_1    |[0m [2019-06-12 09:54:26,867: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[bc0edcdf-79ad-4722-ad28-b50aa4292786]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:27,923: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:27,924: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2ad08a17-9653-4d92-8f00-3f91f5916929] succeeded in 1.5120712949997142s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  4 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:28,094: INFO/ForkPoolWorker-1] Creating thumbnails for  4
+[36mcelery_1    |[0m [2019-06-12 09:54:28,870: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[8b5c6acf-5753-45c9-b0f7-1fcdb330f1bd]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:29,650: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:29,651: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[4fdf7066-28a3-46c7-bc50-4f597c2bba8a] succeeded in 1.7251387420001265s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  5 [PID:8:MainThread]
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.429 UTC [58] LOG:  database system was shut down at 2019-06-12 14:49:37 UTC
+[33mpostgres_1  |[0m 2019-06-12 14:49:37.437 UTC [1] LOG:  database system is ready to accept connections
+[36mcelery_1    |[0m [2019-06-12 09:54:29,656: INFO/ForkPoolWorker-1] Creating thumbnails for  5
+[36mcelery_1    |[0m [2019-06-12 09:54:30,401: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[37a228e0-6b77-4d53-8cea-f542d1a664e9]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:31,161: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:31,161: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[68f14d64-4d55-4b43-8aa2-3860addae53e] succeeded in 1.508233353000378s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  6 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:31,168: INFO/ForkPoolWorker-1] Creating thumbnails for  6
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:32,844: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:32,845: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[399e36e8-9d8c-40bb-8260-006a2b4ebdde] succeeded in 1.6812022829999478s: None
+[36mcelery_1    |[0m [2019-06-12 09:54:32,847: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[e56e9ed1-b25c-4805-9015-5321d2aa5a1c]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  7 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:32,852: INFO/ForkPoolWorker-1] Creating thumbnails for  7
+[36mcelery_1    |[0m [2019-06-12 09:54:32,874: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[28808d42-fc4c-4516-9667-cee3cd99d2df]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:34,422: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:34,422: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[bc0edcdf-79ad-4722-ad28-b50aa4292786] succeeded in 1.5736528970001018s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  8 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:34,427: INFO/ForkPoolWorker-1] Creating thumbnails for  8
+[36mcelery_1    |[0m [2019-06-12 09:54:34,877: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[7dc2b7e8-9e2a-44e4-b809-c8de83cc2b20]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:35,922: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:35,923: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[8b5c6acf-5753-45c9-b0f7-1fcdb330f1bd] succeeded in 1.4981512809999913s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  9 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:35,927: INFO/ForkPoolWorker-1] Creating thumbnails for  9
+[36mcelery_1    |[0m [2019-06-12 09:54:36,880: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[cfcfbed2-75e0-4e4e-88eb-6caa64d410ba]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:37,429: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:37,430: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[37a228e0-6b77-4d53-8cea-f542d1a664e9] succeeded in 1.5048554020004303s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  10 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:37,434: INFO/ForkPoolWorker-1] Creating thumbnails for  10
+[36mcelery_1    |[0m [2019-06-12 09:54:38,884: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[124ef89e-369f-49c5-a1df-acd395af66ba]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:39,162: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:39,163: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[e56e9ed1-b25c-4805-9015-5321d2aa5a1c] succeeded in 1.731090414999926s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  11 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:39,344: INFO/ForkPoolWorker-1] Creating thumbnails for  11
+[36mcelery_1    |[0m [2019-06-12 09:54:40,405: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[ce55516a-fffa-4990-aa24-3c0b47ca5b5c]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:40,893: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:40,893: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[28808d42-fc4c-4516-9667-cee3cd99d2df] succeeded in 1.7273760590001075s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  12 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:40,898: INFO/ForkPoolWorker-1] Creating thumbnails for  12
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:42,595: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:42,596: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[7dc2b7e8-9e2a-44e4-b809-c8de83cc2b20] succeeded in 1.7006382959998518s: None
+[36mcelery_1    |[0m [2019-06-12 09:54:42,599: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[9933dda0-30c9-4ca0-830d-f5fcdb3e53ef]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  13 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:42,606: INFO/ForkPoolWorker-1] Creating thumbnails for  13
+[36mcelery_1    |[0m [2019-06-12 09:54:42,889: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[9b86c4c5-24b7-4ff2-9145-222cd3faca1b]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:44,170: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:44,171: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[cfcfbed2-75e0-4e4e-88eb-6caa64d410ba] succeeded in 1.5706735110002228s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  14 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:44,178: INFO/ForkPoolWorker-1] Creating thumbnails for  14
+[36mcelery_1    |[0m [2019-06-12 09:54:44,891: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[969db5d4-cbce-4646-a138-488bc234e8af]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:45,872: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:45,873: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[124ef89e-369f-49c5-a1df-acd395af66ba] succeeded in 1.6986214150001615s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  15 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:45,878: INFO/ForkPoolWorker-1] Creating thumbnails for  15
+[36mcelery_1    |[0m [2019-06-12 09:54:46,895: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[92f66b7a-067c-4688-8366-36bb336d2403]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:47,594: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:47,595: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[ce55516a-fffa-4990-aa24-3c0b47ca5b5c] succeeded in 1.719578767999792s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  16 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:47,601: INFO/ForkPoolWorker-1] Creating thumbnails for  16
+[36mcelery_1    |[0m [2019-06-12 09:54:48,899: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[6613ac25-ab7f-406d-90a0-c97bd30e473c]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:49,170: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:49,171: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[9933dda0-30c9-4ca0-830d-f5fcdb3e53ef] succeeded in 1.5731682470000123s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  17 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:49,345: INFO/ForkPoolWorker-1] Creating thumbnails for  17
+[36mcelery_1    |[0m [2019-06-12 09:54:50,408: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[94e6c1b1-f1a4-4465-859b-6c3ceb9261d0]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:50,912: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:50,913: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[9b86c4c5-24b7-4ff2-9145-222cd3faca1b] succeeded in 1.5707980880001742s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  18 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:50,917: INFO/ForkPoolWorker-1] Creating thumbnails for  18
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:52,594: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:52,595: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[969db5d4-cbce-4646-a138-488bc234e8af] succeeded in 1.6801541289996749s: None
+[36mcelery_1    |[0m [2019-06-12 09:54:52,599: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b5cfd6fb-8560-4d93-b45a-a10cfe050eca]  
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  19 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:52,604: INFO/ForkPoolWorker-1] Creating thumbnails for  19
+[36mcelery_1    |[0m [2019-06-12 09:54:52,905: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[0e3c1bb3-7775-4170-b76e-42f181daa764]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:54,157: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:54,158: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[92f66b7a-067c-4688-8366-36bb336d2403] succeeded in 1.5567326619998312s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  20 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:54,164: INFO/ForkPoolWorker-1] Creating thumbnails for  20
+[36mcelery_1    |[0m [2019-06-12 09:54:54,908: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[5bdd90b4-7482-420b-95a5-1a20dc604cbc]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:56,096: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:56,097: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[6613ac25-ab7f-406d-90a0-c97bd30e473c] succeeded in 1.9358271649998642s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  21 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:56,103: INFO/ForkPoolWorker-1] Creating thumbnails for  21
+[36mcelery_1    |[0m [2019-06-12 09:54:56,912: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b5bc07dc-46f9-432f-8ef3-2bb9c419ac83]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:57,674: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:57,674: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[94e6c1b1-f1a4-4465-859b-6c3ceb9261d0] succeeded in 1.574098765999679s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  22 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:57,679: INFO/ForkPoolWorker-1] Creating thumbnails for  22
+[36mcelery_1    |[0m [2019-06-12 09:54:58,916: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[1a0c3005-e1cb-402f-a40a-0a0542ae3af0]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:59,188: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:54:59,189: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[b5cfd6fb-8560-4d93-b45a-a10cfe050eca] succeeded in 1.5120726009999998s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  23 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:54:59,346: INFO/ForkPoolWorker-1] Creating thumbnails for  23
+[36mcelery_1    |[0m [2019-06-12 09:55:00,411: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[af2caaa4-4040-4d88-a3ce-20779f1938e4]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:00,844: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:00,845: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[0e3c1bb3-7775-4170-b76e-42f181daa764] succeeded in 1.5024813219997668s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  24 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:00,855: INFO/ForkPoolWorker-1] Creating thumbnails for  24
+[36mcelery_1    |[0m [2019-06-12 09:55:01,094: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[8476fe80-e078-42ec-9020-6b9cf07e816b]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:02,666: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:02,666: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[5bdd90b4-7482-420b-95a5-1a20dc604cbc] succeeded in 1.8143720210000538s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  25 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:02,671: INFO/ForkPoolWorker-1] Creating thumbnails for  25
+[36mcelery_1    |[0m [2019-06-12 09:55:03,098: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2b5fbdc2-72ab-4498-a4d9-040f8cb95e9f]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:04,173: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:04,173: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[b5bc07dc-46f9-432f-8ef3-2bb9c419ac83] succeeded in 1.5045728359996247s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  26 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:04,345: INFO/ForkPoolWorker-1] Creating thumbnails for  26
+[36mcelery_1    |[0m [2019-06-12 09:55:05,106: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[6f0bfc95-17cf-4303-9d09-7e5f22497ea6]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:05,878: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:05,879: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[1a0c3005-e1cb-402f-a40a-0a0542ae3af0] succeeded in 1.7024631650001538s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  27 [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:05,885: INFO/ForkPoolWorker-1] Creating thumbnails for  27
+[36mcelery_1    |[0m [2019-06-12 09:55:07,110: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b62db907-bad9-4712-939c-15ec66fb4635]  
+[36mcelery_1    |[0m 
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:07,412: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:07,413: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[af2caaa4-4040-4d88-a3ce-20779f1938e4] succeeded in 1.531415681999988s: None
+[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  28 [PID:8:MainThread]
+[32mredis_1     |[0m 1:C 12 Jun 2019 14:49:20.827 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[32mredis_1     |[0m 1:C 12 Jun 2019 14:49:20.827 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+[32mredis_1     |[0m 1:C 12 Jun 2019 14:49:20.827 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:49:20.832 * Running mode=standalone, port=6379.
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:49:20.833 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:49:20.833 # Server initialized
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:49:20.833 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:49:20.833 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:49:20.833 * Ready to accept connections
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:54:23.192 * 100 changes in 300 seconds. Saving...
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:54:23.225 * Background saving started by pid 10
+[32mredis_1     |[0m 10:C 12 Jun 2019 14:54:23.594 * DB saved on disk
+[32mredis_1     |[0m 10:C 12 Jun 2019 14:54:23.595 * RDB: 0 MB of memory used by copy-on-write
+[32mredis_1     |[0m 1:M 12 Jun 2019 14:54:23.842 * Background saving terminated with success
+[36mcelery_1    |[0m [2019-06-12 09:55:07,420: INFO/ForkPoolWorker-1] Creating thumbnails for  28
+[36mcelery_1    |[0m [2019-06-12 09:55:09,115: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[8d4f7077-14cd-426d-91cc-3583a0ff232d]  
+[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
+[36mcelery_1    |[0m [2019-06-12 09:55:09,148: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:09,149: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[8476fe80-e078-42ec-9020-6b9cf07e816b] succeeded in 1.732260834999579s: None
+[36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  29 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:37,675: INFO/ForkPoolWorker-1] Creating thumbnails for  29
-[36mcelery_1    |[0m [2019-06-12 08:58:37,871: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[f3a33327-160f-478c-b8eb-d1f4393e8a57]  
+[36mcelery_1    |[0m [2019-06-12 09:55:09,351: INFO/ForkPoolWorker-1] Creating thumbnails for  29
+[36mcelery_1    |[0m [2019-06-12 09:55:10,416: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[8b5bf6db-bf76-4560-bfe2-b2253662cd04]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:39,346: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:39,346: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[89d4fe7e-5748-4c55-9726-210ff3585b87] succeeded in 1.6738257839970174s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:10,915: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:10,916: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2b5fbdc2-72ab-4498-a4d9-040f8cb95e9f] succeeded in 1.764337727000111s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  30 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:39,352: INFO/ForkPoolWorker-1] Creating thumbnails for  30
+[36mcelery_1    |[0m [2019-06-12 09:55:10,923: INFO/ForkPoolWorker-1] Creating thumbnails for  30
+[36mcelery_1    |[0m [2019-06-12 09:55:11,118: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[e7e8db4a-50ab-4e1d-aa1b-342fa5a9c835]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:40,898: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:40,900: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[44e90527-e064-403b-aab5-981842ebdeb1]  
-[36mcelery_1    |[0m [2019-06-12 08:58:40,901: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[e7478664-4611-4a88-a2de-09f8444cf8a5] succeeded in 1.551910162997956s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:12,646: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:12,647: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[6f0bfc95-17cf-4303-9d09-7e5f22497ea6] succeeded in 1.7280389389998163s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  31 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:40,905: INFO/ForkPoolWorker-1] Creating thumbnails for  31
-[36mcelery_1    |[0m [2019-06-12 08:58:42,657: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[4744e70b-4c52-4b23-a827-b9b7f67d974e]  
+[36mcelery_1    |[0m [2019-06-12 09:55:12,654: INFO/ForkPoolWorker-1] Creating thumbnails for  31
+[36mcelery_1    |[0m [2019-06-12 09:55:13,121: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[65e4e784-5373-460a-9e99-870609055160]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:42,680: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:42,680: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[c6ef6236-5c08-461f-adc6-8e631c64c96d] succeeded in 1.7782328249959392s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:14,156: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:14,157: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[b62db907-bad9-4712-939c-15ec66fb4635] succeeded in 1.5072179920002782s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  32 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:42,686: INFO/ForkPoolWorker-1] Creating thumbnails for  32
-[36mcelery_1    |[0m [2019-06-12 08:58:42,872: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[a133c130-fae0-4927-8aa1-df8b0f68634d]  
+[36mcelery_1    |[0m [2019-06-12 09:55:14,343: INFO/ForkPoolWorker-1] Creating thumbnails for  32
+[36mcelery_1    |[0m [2019-06-12 09:55:15,124: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[2b9cca60-bfc6-48e8-b0df-f8d4e9756809]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:44,391: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:44,392: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[40fc6985-41f7-4408-9eef-e36b9a7cab42] succeeded in 1.7087429989987868s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:15,913: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:15,913: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[8d4f7077-14cd-426d-91cc-3583a0ff232d] succeeded in 1.7536035269999957s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  33 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:44,604: INFO/ForkPoolWorker-1] Creating thumbnails for  33
-[36mcelery_1    |[0m [2019-06-12 08:58:44,905: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[871c119f-976b-40cb-b1fe-c521d73a4966]  
+[36mcelery_1    |[0m [2019-06-12 09:55:15,920: INFO/ForkPoolWorker-1] Creating thumbnails for  33
+[36mcelery_1    |[0m [2019-06-12 09:55:17,127: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[ab5c974e-6638-4d75-9be3-5365cd53631c]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:45,914: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:45,915: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[f3a33327-160f-478c-b8eb-d1f4393e8a57] succeeded in 1.3140151820043684s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:17,411: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:17,412: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[8b5bf6db-bf76-4560-bfe2-b2253662cd04] succeeded in 1.4950301670000954s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  34 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:46,096: INFO/ForkPoolWorker-1] Creating thumbnails for  34
-[36mcelery_1    |[0m [2019-06-12 08:58:46,635: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[51a9c131-4604-4c51-b874-908a8e3d274b]  
+[36mcelery_1    |[0m [2019-06-12 09:55:17,418: INFO/ForkPoolWorker-1] Creating thumbnails for  34
+[36mcelery_1    |[0m [2019-06-12 09:55:19,131: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[fe643aaf-cca7-4dad-95aa-9946145f7654]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:47,712: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:47,713: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[44e90527-e064-403b-aab5-981842ebdeb1] succeeded in 1.7955727559965453s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:19,149: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:19,149: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[e7e8db4a-50ab-4e1d-aa1b-342fa5a9c835] succeeded in 1.734454531999745s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  35 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:47,718: INFO/ForkPoolWorker-1] Creating thumbnails for  35
-[36mcelery_1    |[0m [2019-06-12 08:58:47,874: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[89f8264f-9f7e-4190-8829-1c1284e335ac]  
+[36mcelery_1    |[0m [2019-06-12 09:55:19,155: INFO/ForkPoolWorker-1] Creating thumbnails for  35
+[36mcelery_1    |[0m [2019-06-12 09:55:20,629: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[f07c781f-ddff-4ebc-9611-2efd486ddd09]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:49,162: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:49,163: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[4744e70b-4c52-4b23-a827-b9b7f67d974e] succeeded in 1.4477823240013095s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:20,666: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:20,667: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[65e4e784-5373-460a-9e99-870609055160] succeeded in 1.5152768379998633s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  36 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:49,168: INFO/ForkPoolWorker-1] Creating thumbnails for  36
+[36mcelery_1    |[0m [2019-06-12 09:55:20,673: INFO/ForkPoolWorker-1] Creating thumbnails for  36
+[36mcelery_1    |[0m [2019-06-12 09:55:21,134: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b1bfc6b9-59a2-48aa-a475-cbab5f633d0f]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:50,902: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:50,903: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[a133c130-fae0-4927-8aa1-df8b0f68634d] succeeded in 1.7368840060007642s: None
-[36mcelery_1    |[0m [2019-06-12 08:58:50,906: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[54e006fa-814b-4641-bca8-941fd5724b77]  
-[36mcelery_1    |[0m [2019-06-12 08:58:50,914: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[cb13404f-0bf5-4427-8d2b-b14a6e339c80]  
+[36mcelery_1    |[0m [2019-06-12 09:55:22,351: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:22,354: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[2b9cca60-bfc6-48e8-b0df-f8d4e9756809] succeeded in 1.6859375489998456s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  37 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:50,915: INFO/ForkPoolWorker-1] Creating thumbnails for  37
+[36mcelery_1    |[0m [2019-06-12 09:55:22,365: INFO/ForkPoolWorker-1] Creating thumbnails for  37
+[36mcelery_1    |[0m [2019-06-12 09:55:23,137: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[0fd6b759-daf6-49b9-b8a1-801eab384551]  
+[36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:52,411: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:52,411: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[871c119f-976b-40cb-b1fe-c521d73a4966] succeeded in 1.5042342450033175s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:24,134: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:24,135: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[ab5c974e-6638-4d75-9be3-5365cd53631c] succeeded in 1.7744650140002705s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  38 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:52,417: INFO/ForkPoolWorker-1] Creating thumbnails for  38
+[36mcelery_1    |[0m [2019-06-12 09:55:24,140: INFO/ForkPoolWorker-1] Creating thumbnails for  38
+[36mcelery_1    |[0m [2019-06-12 09:55:25,472: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[5c0a5caf-7c23-444d-badd-437db2e880ab]  
 [36mcelery_1    |[0m 
-[36mcelery_1    |[0m [2019-06-12 08:58:52,660: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[0ddf4578-a844-43f3-b5db-44546fd4deb8]  
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:54,093: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:54,094: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[51a9c131-4604-4c51-b874-908a8e3d274b] succeeded in 1.679888751998078s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:26,382: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:26,383: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[fe643aaf-cca7-4dad-95aa-9946145f7654] succeeded in 2.2457458909998422s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  39 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:54,099: INFO/ForkPoolWorker-1] Creating thumbnails for  39
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m [2019-06-12 08:58:55,095: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[dc0406cc-58a5-439e-9907-5eb6fbec9d8e]  
+[36mcelery_1    |[0m [2019-06-12 09:55:26,442: INFO/ForkPoolWorker-1] Creating thumbnails for  39
+[36mcelery_1    |[0m [2019-06-12 09:55:27,608: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[85cdb462-b28e-48b4-98f8-05aec08e78a0]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:55,844: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:55,845: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[89f8264f-9f7e-4190-8829-1c1284e335ac] succeeded in 1.7484576990027563s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:28,158: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:28,159: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[f07c781f-ddff-4ebc-9611-2efd486ddd09] succeeded in 1.773009903000002s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  40 [PID:8:MainThread]
-[32mredis_1     |[0m 1:C 12 Jun 2019 13:53:13.243 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-[32mredis_1     |[0m 1:C 12 Jun 2019 13:53:13.243 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
-[32mredis_1     |[0m 1:C 12 Jun 2019 13:53:13.243 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:53:13.251 * Running mode=standalone, port=6379.
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:53:13.251 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:53:13.251 # Server initialized
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:53:13.251 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:53:13.251 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:53:13.252 * Ready to accept connections
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:58:14.092 * 100 changes in 300 seconds. Saving...
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:58:14.285 * Background saving started by pid 10
-[32mredis_1     |[0m 10:C 12 Jun 2019 13:58:14.327 * DB saved on disk
-[32mredis_1     |[0m 10:C 12 Jun 2019 13:58:14.328 * RDB: 0 MB of memory used by copy-on-write
-[32mredis_1     |[0m 1:M 12 Jun 2019 13:58:14.385 * Background saving terminated with success
-[36mcelery_1    |[0m [2019-06-12 08:58:55,850: INFO/ForkPoolWorker-1] Creating thumbnails for  40
-[36mcelery_1    |[0m [2019-06-12 08:58:56,637: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[0f101eda-030f-40ab-a298-df89b921c83a]  
+[36mcelery_1    |[0m [2019-06-12 09:55:28,164: INFO/ForkPoolWorker-1] Creating thumbnails for  40
+[36mcelery_1    |[0m [2019-06-12 09:55:29,604: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[98af11bd-c732-475b-8fbd-81b17dd6c27e]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:57,168: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:57,168: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[54e006fa-814b-4641-bca8-941fd5724b77] succeeded in 1.321507547996589s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:30,420: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:30,421: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[b1bfc6b9-59a2-48aa-a475-cbab5f633d0f] succeeded in 2.259690456000044s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  41 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:57,345: INFO/ForkPoolWorker-1] Creating thumbnails for  41
-[36mcelery_1    |[0m [2019-06-12 08:58:57,843: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[5056432b-f5ca-4835-8e3e-e6208edc067f]  
+[36mcelery_1    |[0m [2019-06-12 09:55:30,427: INFO/ForkPoolWorker-1] Creating thumbnails for  41
+[36mcelery_1    |[0m [2019-06-12 09:55:30,631: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[672cb793-e009-420e-a34c-c809067803d9]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:58,871: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:58:58,872: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[cb13404f-0bf5-4427-8d2b-b14a6e339c80] succeeded in 1.530023852996237s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:32,155: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:32,156: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[0fd6b759-daf6-49b9-b8a1-801eab384551] succeeded in 1.7324253410001802s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  42 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:58:58,877: INFO/ForkPoolWorker-1] Creating thumbnails for  42
-[36mcelery_1    |[0m [2019-06-12 08:58:59,115: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[facc77d8-28b4-4821-8894-44f1bd4edaa9]  
+[36mcelery_1    |[0m [2019-06-12 09:55:32,162: INFO/ForkPoolWorker-1] Creating thumbnails for  42
+[36mcelery_1    |[0m [2019-06-12 09:55:33,376: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[a190da52-44a4-431f-98b7-f7ce5233d395]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:00,652: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:59:00,653: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[0ddf4578-a844-43f3-b5db-44546fd4deb8] succeeded in 1.7784625720014446s: None
-[36mcelery_1    |[0m [2019-06-12 08:59:01,171: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[3e82406d-0233-4e80-bf35-469af7cf3b31]  
+[36mcelery_1    |[0m [2019-06-12 09:55:35,110: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:35,111: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[5c0a5caf-7c23-444d-badd-437db2e880ab] succeeded in 2.952039419000357s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  43 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:01,380: INFO/ForkPoolWorker-1] Creating thumbnails for  43
-[36mcelery_1    |[0m 
+[36mcelery_1    |[0m [2019-06-12 09:55:35,128: INFO/ForkPoolWorker-1] Creating thumbnails for  43
+[36mcelery_1    |[0m [2019-06-12 09:55:35,621: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[0979e302-5d36-4181-b0f9-ca9df01fc14f]  
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:02,906: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:59:02,907: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[dc0406cc-58a5-439e-9907-5eb6fbec9d8e] succeeded in 2.25193292300537s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:36,915: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:36,916: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[85cdb462-b28e-48b4-98f8-05aec08e78a0] succeeded in 1.7974415459998454s: None
+[36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  44 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:02,918: INFO/ForkPoolWorker-1] Creating thumbnails for  44
-[36mcelery_1    |[0m [2019-06-12 08:59:03,344: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[b8eeaa54-fa9e-40cc-a2eb-1b5f5e3c5bd1]  
+[36mcelery_1    |[0m [2019-06-12 09:55:37,093: INFO/ForkPoolWorker-1] Creating thumbnails for  44
+[36mcelery_1    |[0m [2019-06-12 09:55:37,624: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[f36e8ad9-9e7c-4e5c-9ef5-98c9b31284ce]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:05,846: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:59:05,847: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[0f101eda-030f-40ab-a298-df89b921c83a] succeeded in 2.9373490270008915s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:38,417: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:38,417: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[98af11bd-c732-475b-8fbd-81b17dd6c27e] succeeded in 1.4992784209998717s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  45 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:05,855: INFO/ForkPoolWorker-1] Creating thumbnails for  45
-[36mcelery_1    |[0m [2019-06-12 08:59:06,668: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[27441705-a85f-4f91-b57f-180d3949b7a5]  
+[36mcelery_1    |[0m [2019-06-12 09:55:38,593: INFO/ForkPoolWorker-1] Creating thumbnails for  45
+[36mcelery_1    |[0m [2019-06-12 09:55:39,626: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[e4fe03e0-d94e-4e2f-a2ff-65bd67c8aac5]  
 [36mcelery_1    |[0m 
 [36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:08,343: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:59:08,344: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[5056432b-f5ca-4835-8e3e-e6208edc067f] succeeded in 2.492648401996121s: None
+[36mcelery_1    |[0m [2019-06-12 09:55:39,925: INFO/ForkPoolWorker-1] Created 6 thumbnails
+[36mcelery_1    |[0m [2019-06-12 09:55:39,925: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[672cb793-e009-420e-a34c-c809067803d9] succeeded in 1.506429005999962s: None
 [36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  46 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:08,351: INFO/ForkPoolWorker-1] Creating thumbnails for  46
-[36mcelery_1    |[0m [2019-06-12 08:59:09,355: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[7619a1cb-1e1b-4e43-b705-1f8c23962d7a]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:09,886: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:59:09,887: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[facc77d8-28b4-4821-8894-44f1bd4edaa9] succeeded in 1.5385227239967207s: None
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  47 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:09,891: INFO/ForkPoolWorker-1] Creating thumbnails for  47
-[36mcelery_1    |[0m INFO saleor.core.utils Created 6 thumbnails [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:11,343: INFO/ForkPoolWorker-1] Created 6 thumbnails
-[36mcelery_1    |[0m [2019-06-12 08:59:11,343: INFO/ForkPoolWorker-1] Task saleor.product.thumbnails.create_product_thumbnails[3e82406d-0233-4e80-bf35-469af7cf3b31] succeeded in 1.4542192570006591s: None
-[36mcelery_1    |[0m [2019-06-12 08:59:11,346: INFO/MainProcess] Received task: saleor.product.thumbnails.create_collection_background_image_thumbnails[c145efff-215c-495f-8881-8bf092b185cf]  
-[36mcelery_1    |[0m 
-[36mcelery_1    |[0m INFO saleor.core.utils Creating thumbnails for  48 [PID:8:MainThread]
-[36mcelery_1    |[0m [2019-06-12 08:59:11,350: INFO/ForkPoolWorker-1] Creating thumbnails for  48
-[36mcelery_1    |[0m [2019-06-12 08:59:11,357: INFO/MainProcess] Received task: saleor.product.thumbnails.create_collection_background_image_thumbnails[f32ec13e-c9cd-42d1-91b4-a094a3c68837]  
+[36mcelery_1    |[0m [2019-06-12 09:55:40,095: INFO/ForkPoolWorker-1] Creating thumbnails for  46
+[36mcelery_1    |[0m [2019-06-12 09:55:40,634: INFO/MainProcess] Received task: saleor.product.thumbnails.create_product_thumbnails[1c038ff4-b232-4e94-a4e6-d22e0fdb0359]  
