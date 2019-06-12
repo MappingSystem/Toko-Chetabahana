@@ -19,6 +19,7 @@ then
         git push origin master --force
         cd ~/.config && rm -rf branches
         git clone git@github.com:Chetabahana/branches.git
+        cp -frpT ~/.logs branches/home/chetabahana/.logs
         cd branches && export PWD=`pwd` && push
     fi
     cd $WORKDIR && rm -rf Tutorial-Buka-Toko

@@ -82,8 +82,9 @@ echo "\nUPSTREAM\n"
 [ -d Tutorial-Buka-Toko ] && rm -rf Tutorial-Buka-Toko || echo "cloning.."
 git clone git@github.com:MarketLeader/Tutorial-Buka-Toko.git
 cd Tutorial-Buka-Toko && git checkout master
-git remote add upstream git://github.com/mirumee/saleor.git
-git reset --hard upstream/master && git push origin master --force
+git remote add upstream git@github.com:mirumee/saleor.git
+git pull --rebase upstream master && git reset --hard upstream/master
+git push origin master --force
 
 echo "\nREMOTE\n"
 git checkout Chetabahana
@@ -95,8 +96,8 @@ cd .. && rm -rf Tutorial-Buka-Toko
 
 echo "\nMASTER\n"
 [ -d saleor ] && rm -rf saleor || echo "cloning.."
-git clone git@github.com:chetabahana/saleor.git saleor && cd saleor
-git remote add upstream git://github.com/MarketLeader/Tutorial-Buka-Toko.git
+git clone git@github.com:Chetabahana/saleor.git saleor && cd saleor
+git remote add upstream git@github.com:MarketLeader/Tutorial-Buka-Toko.git
 git fetch --prune upstream Chetabahana && git reset --hard upstream/Chetabahana
 git push origin master --force
 
@@ -110,5 +111,5 @@ git checkout "${NEXT}"
 git fetch --prune origin master && git reset --hard origin/master
 tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
-git push origin "${NEXT}" --force
+#git push origin "${NEXT}" --force
 cd .. && rm -rf saleor

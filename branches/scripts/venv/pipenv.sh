@@ -68,17 +68,17 @@ export DEBIAN_FRONTEND=noninteractive
 export LC_ALL=C.UTF-8 && export LANG=C.UTF-8
 
 #Get Utilities
-git clone https://github.com/mirumee/saleor.git && cd /workspace/saleor
-pip3 install --user pipenv > /dev/null && pipenv sync > /dev/null
-pipenv install $APP > /dev/null && cat Pipfile
+cd /workspace/saleor
+#pip3 install --user pipenv > /dev/null && pipenv sync > /dev/null
+#pipenv install $APP > /dev/null && cat Pipfile
 
 #Run test
 #pipenv install --dev > /dev/null
 #pipenv run pytest > /dev/null
 #pipenv run tox > /dev/null
-pipenv check
+#pipenv check
 
 #Lock
-pipenv lock -r -d > requirements_dev.txt && cat requirements_dev.txt
-pipenv lock -r > requirements.txt && cat requirements.txt
+#pipenv lock -r -d > requirements_dev.txt && cat requirements_dev.txt
+#pipenv lock -r > requirements.txt && cat requirements.txt
 mv -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH

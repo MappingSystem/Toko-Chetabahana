@@ -6,7 +6,7 @@ fi
 
 cd ~/.docker && rm -rf compose
 eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
-git clone git@github.com:chetabahana/compose.git
+git clone git@github.com:Chetabahana/compose.git
 
 cd ~/.docker/compose/scripts && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh > compose.log
