@@ -16,37 +16,37 @@ shm              64M     0   64M   0% /dev/shm
 tmpfs           370M  1.1M  369M   1% /run/docker.sock
 \RAM
 
-MemTotal:        3781800 kB
-MemFree:         1758424 kB
-MemAvailable:    3141732 kB
-Buffers:          130312 kB
-Cached:          1402272 kB
+MemTotal:        3781808 kB
+MemFree:         1746192 kB
+MemAvailable:    3136872 kB
+Buffers:          133200 kB
+Cached:          1406704 kB
 SwapCached:            0 kB
-Active:           688840 kB
-Inactive:        1122688 kB
-Active(anon):     279812 kB
+Active:           693260 kB
+Inactive:        1127536 kB
+Active(anon):     281832 kB
 Inactive(anon):      180 kB
-Active(file):     409028 kB
-Inactive(file):  1122508 kB
+Active(file):     411428 kB
+Inactive(file):  1127356 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:             42692 kB
-Writeback:             0 kB
-AnonPages:        278952 kB
-Mapped:           199728 kB
+Dirty:             42896 kB
+Writeback:            12 kB
+AnonPages:        280948 kB
+Mapped:           204700 kB
 Shmem:              1076 kB
-Slab:             142844 kB
-SReclaimable:     110056 kB
-SUnreclaim:        32788 kB
-KernelStack:        3216 kB
-PageTables:         5868 kB
+Slab:             143164 kB
+SReclaimable:     110072 kB
+SUnreclaim:        33092 kB
+KernelStack:        3280 kB
+PageTables:         5904 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
-CommitLimit:     1890900 kB
-Committed_AS:    1184180 kB
+CommitLimit:     1890904 kB
+Committed_AS:    1209600 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -61,9 +61,87 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:       86004 kB
-DirectMap2M:     3846144 kB
-DirectMap1G:           0 kB
+DirectMap4k:       90100 kB
+DirectMap2M:     2793472 kB
+DirectMap1G:     1048576 kB
+total 1600
+drwxr-xr-x 14 root root    4096 Jun 12 16:38 .
+drwxr-xr-x  7 root root    4096 Jun 12 16:38 ..
+drwxr-xr-x  2 root root    4096 Jun 12 16:38 .circleci
+-rw-r--r--  1 root root     583 Jun 12 16:38 .codeclimate.yml
+-rw-r--r--  1 root root      47 Jun 12 16:38 .dockerignore
+-rw-r--r--  1 root root     448 Jun 12 16:38 .editorconfig
+-rw-r--r--  1 root root     405 Jun 12 16:38 .eslintrc.json
+-rw-r--r--  1 root root     316 Jun 12 16:38 .flowconfig
+drwxr-xr-x  8 root root    4096 Jun 12 16:38 .git
+-rw-r--r--  1 root root     479 Jun 12 16:38 .gitattributes
+drwxr-xr-x  4 root root    4096 Jun 12 16:38 .github
+-rw-r--r--  1 root root     510 Jun 12 16:38 .gitignore
+-rw-r--r--  1 root root     260 Jun 12 16:38 .gqlconfig
+-rw-r--r--  1 root root     669 Jun 12 16:38 .isort.cfg
+-rw-r--r--  1 root root      40 Jun 12 16:38 .npmrc
+-rw-r--r--  1 root root       8 Jun 12 16:38 .nvmrc
+drwxr-xr-x  3 root root    4096 Jun 12 16:38 .plop
+-rw-r--r--  1 root root     503 Jun 12 16:38 .pre-commit-config.yaml
+-rw-r--r--  1 root root     290 Jun 12 16:38 .pylintrc
+-rw-r--r--  1 root root    1384 Jun 12 16:38 .travis.yml
+drwxr-xr-x  2 root root    4096 Jun 12 16:38 .tx
+-rw-r--r--  1 root root   26479 Jun 12 16:38 CHANGELOG.md
+-rw-r--r--  1 root root    1859 Jun 12 16:38 Dockerfile
+-rw-r--r--  1 root root    1521 Jun 12 16:38 LICENSE
+-rw-r--r--  1 root root    2214 Jun 12 16:38 Pipfile
+-rw-r--r--  1 root root   79909 Jun 12 16:38 Pipfile.lock
+-rw-r--r--  1 root root     150 Jun 12 16:38 Procfile
+-rw-r--r--  1 root root    5938 Jun 12 16:38 README.md
+-rw-r--r--  1 root root     298 Jun 12 16:38 apollo.config.js
+-rw-r--r--  1 root root    1684 Jun 12 16:38 app.json
+-rw-r--r--  1 root root     250 Jun 12 16:38 common.env
+drwxr-xr-x  3 root root    4096 Jun 12 16:38 deployment
+-rw-r--r--  1 root root     827 Jun 12 16:38 docker-compose.override.yml
+-rw-r--r--  1 root root    1119 Jun 12 16:38 docker-compose.yml
+drwxr-xr-x 11 root root    4096 Jun 12 16:38 docs
+drwxr-xr-x 43 root root    4096 Jun 12 16:38 locale
+-rwxr-xr-x  1 root root     250 Jun 12 16:38 manage.py
+-rw-r--r--  1 root root 1312758 Jun 12 16:38 package-lock.json
+-rw-r--r--  1 root root    6861 Jun 12 16:38 package.json
+-rw-r--r--  1 root root     346 Jun 12 16:38 pyproject.toml
+-rw-r--r--  1 root root    2610 Jun 12 16:38 requirements.txt
+-rw-r--r--  1 root root    1333 Jun 12 16:38 requirements_dev.txt
+-rw-r--r--  1 root root      13 Jun 12 16:38 runtime.txt
+drwxr-xr-x 21 root root    4096 Jun 12 16:38 saleor
+drwxr-xr-x  2 root root    4096 Jun 12 16:38 scripts
+-rw-r--r--  1 root root    1164 Jun 12 16:38 setup.cfg
+drwxr-xr-x 16 root root    4096 Jun 12 16:38 templates
+drwxr-xr-x  6 root root    4096 Jun 12 16:38 tests
+-rw-r--r--  1 root root    1274 Jun 12 16:38 tox.ini
+-rw-r--r--  1 root root     323 Jun 12 16:38 tsconfig.json
+-rw-r--r--  1 root root     354 Jun 12 16:38 tslint.json
+-rw-r--r--  1 root root    4060 Jun 12 16:38 webpack.config.js
+-rw-r--r--  1 root root     123 Jun 12 16:38 webpack.d.ts
+Collecting pipenv
+  Downloading https://files.pythonhosted.org/packages/13/b4/3ffa55f77161cff9a5220f162670f7c5eb00df52e00939e203f601b0f579/pipenv-2018.11.26-py3-none-any.whl (5.2MB)
+Collecting virtualenv-clone>=0.2.5 (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/ba/f8/50c2b7dbc99e05fce5e5b9d9a31f37c988c99acd4e8dedd720b7b8d4011d/virtualenv_clone-0.5.3-py2.py3-none-any.whl
+Collecting certifi (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/60/75/f692a584e85b7eaba0e03827b3d51f45f571c2e793dd731e598828d380aa/certifi-2019.3.9-py2.py3-none-any.whl (158kB)
+Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
+Collecting virtualenv (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/ca/ee/8375c01412abe6ff462ec80970e6bb1c4308724d4366d7519627c98691ab/virtualenv-16.6.0-py2.py3-none-any.whl (2.0MB)
+Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
+Installing collected packages: virtualenv-clone, certifi, virtualenv, pipenv
+Successfully installed certifi-2019.3.9 pipenv-2018.11.26 virtualenv-16.6.0 virtualenv-clone-0.5.3
+Installing dependencies from Pipfile.lock (c453ce)…
+Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
+Looking in indexes: https://pypi.python.org/simple
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+All dependencies are now up-to-date!
+Installing gunicorn…
+Installing gevent…
+Checking PEP 508 requirements…
+Passed!
+Checking installed package safety…
+All good!
 
 TRANSFER
 
