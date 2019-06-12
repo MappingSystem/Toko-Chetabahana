@@ -78,6 +78,13 @@ echo "\nAGENT\n"
 cd /home/chetabahana/.docker/compose
 eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 
+echo "\nBRANCHES\n"
+[ -d Toko-Chetabahana ] && rm -rf Toko-Chetabahana|| echo "cloning.."
+git clone git@github.com:MarketLeader/Toko-Chetabahana.git
+cp -frpT ~/.logs Toko-Chetabahana/logs && cd Toko-Chetabahana
+git add . && git commit -m "branches logs on cloud builder"
+git push -u origin master && cd .. && rm -rf Toko-Chetabahana
+
 echo "\nUPSTREAM\n"
 [ -d Tutorial-Buka-Toko ] && rm -rf Tutorial-Buka-Toko || echo "cloning.."
 git clone git@github.com:MarketLeader/Tutorial-Buka-Toko.git
