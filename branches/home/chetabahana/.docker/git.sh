@@ -84,7 +84,7 @@ cd $WORKDIR && rm -rf Toko-Chetabahana
 git clone git@github.com:MarketLeader/Toko-Chetabahana.git
 cp -frpT ~/.logs Toko-Chetabahana/logs && cd Toko-Chetabahana
 git add . && git commit -m "fresh commit"
-#git push -u origin master
+git push -u origin master
 
 echo "\nUPSTREAM\n"
 cd $WORKDIR && rm -rf Tutorial-Buka-Toko
