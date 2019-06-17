@@ -1,7 +1,14 @@
-.ssh
+# Ignore files
 *.pyc
 *.exe
+
+# Ignore cache dir
 __pycache__/
+
+# Ignore credential dirs
+.ssh
 .gitconfig
+
+# Ignore credential files
 compose/deploy/product/app.yaml
 compose/deploy/product/Chetabahana-f92949fb068b.json
