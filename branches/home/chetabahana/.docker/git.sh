@@ -78,7 +78,6 @@ WORKDIR=~/.config
 echo "\nAGENT\n"
 eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 
-
 echo "\nBRANCHES\n"
 cd $WORKDIR && rm -rf Toko-Chetabahana
 git clone git@github.com:MarketLeader/Toko-Chetabahana.git
