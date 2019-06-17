@@ -90,34 +90,28 @@ Full documentation at: <http://www.gnu.org/software/coreutils/cp>
 or available locally via: info '(coreutils) cp invocation'
 END
 
-cd ~/.docker/compose
-rm -rf app default product
+WORKDIR=~/.config
+cd $WORKDIR && rm -rf app
 docker cp compose_celery_1:/app .
 eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 
 echo "\nDEFAULT\n"
-cd ~/.docker/compose
+cd $WORKDIR && rm -rf default
 git clone git@github.com:Chetabahana/default.git
-cd default && rm -rf static && mkdir static
-cp -frpvT /tmp/volume/static static
-sed -i 's/-local/-fresh/g' cloudbuild.yaml
-git status && git add . && git commit -m "fresh commit"
-git push -u origin master
+rm -rf default/static && cp -frpvT /tmp/volume default
+cd default && export PWD=`pwd` && push
 
 echo "\nPRODUCT\n"
-cd ~/.docker/compose
+cd $WORKDIR && rm -rf product
 git clone git@github.com:Chetabahana/product.git
-rm -rf product/static && mkdir product/static
-cp -frpT /tmp/volume product && cp -frpT app product
-cp -frpvT deploy/product product
-rm -rf ~/.docker/compose/app
+cp -frpT app product && cp -frpT /tmp/volume product 
+cp -frpvT ~/.docker/compose/deploy/product product
+sed -i 's|America/Chicago|Asia/Jakarta|g' product/saleor/settings.py
+sed -i 's|LANGUAGE_CODE = "en"|LANGUAGE_CODE = "id"|g' product/saleor/settings.py
+sed -i "s|LANGUAGE_CODE = 'en'|LANGUAGE_CODE = 'id'|g" product/saleor/settings.py
+sed -i '/("\([a-z-]*\)", _("\([a-zA-Z ]*\)")),/ {/English\|Indonesian/! s/^/#/g}' product/saleor/settings.py
+cd product && export PWD=`pwd` && push
 
-cd ~/.docker/compose/product
-sed -i "s|'America/Chicago'|'Asia/Jakarta'|g" saleor/settings.py
-sed -i "s|LANGUAGE_CODE = 'en'|LANGUAGE_CODE = 'id'|g" saleor/settings.py
-git status && git add . && git commit -m "gunicorn"
-git push -u origin master
-
-cd ~/.docker/compose
+cd $WORKDIR
 rm -rf app default product
 eval `ssh-agent -k`

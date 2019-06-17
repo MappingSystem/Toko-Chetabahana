@@ -28,5 +28,4 @@ fi
 
 #star iin workspace
 eval `ssh-agent` && expect $HOME/.ssh/agent && ssh-add -l
-cd $HOME/.docker/compose
-
+cd $HOME/.config

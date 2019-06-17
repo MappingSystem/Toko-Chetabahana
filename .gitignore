@@ -1,5 +1,6 @@
 .ssh
 *.pyc
+*.exe
 __pycache__/
 .gitconfig
 compose/deploy/product/app.yaml

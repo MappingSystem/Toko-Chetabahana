@@ -60,34 +60,36 @@ Commands:
   uninstall  Un-installs a provided package and removes it from Pipfile.
 END
 
-#Environtment
-export APP="gunicorn gevent"
-export PATH=$HOME/.local/bin:$PATH
-export BRANCH=/workspace/home/chetabahana/.docker/branch
-export DEBIAN_FRONTEND=noninteractive 
-export LC_ALL=C.UTF-8 && export LANG=C.UTF-8
+#Package
+APP="install gunicorn gevent"
 
-echo "\nSOURCE\n"
-cd /workspace/saleor && ls -al
+#Environment
+export PATH=$HOME/.local/bin:$PATH
 
 echo "\nPIPENV\n"
-pip3 install --user pipenv
+pip install --user pipenv
 
-echo "\nDEV\n"
-pipenv install --dev
+echo "\nPACKAGES\n"
+cd /workspace/saleor
+[ -n "$APP" ] && pipenv $APP || pipenv sync
 
-echo "\n$APP\n"
-pipenv install $APP
+echo "\nPIPFILE\n"
+pipenv clean & cat Pipfile
 
-echo "\nRESULT\n"
-cat Pipfile
-
-echo "\nTEST\n"
-#pipenv run pytest
-pipenv run tox
-pipenv check
+echo "\nGRAPH\n"
+pipenv graph
 
 echo "\nTRANSFER\n"
-pipenv lock -r > requirements.txt && cat requirements.txt
-pipenv lock -r -d > requirements_dev.txt && cat requirements_dev.txt
-mv -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
+pipenv lock -r > requirements.txt
+pipenv lock -r -d > requirements_dev.txt
+BRANCH=/workspace/home/chetabahana/.docker/branch
+cp -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
+
+echo "\nDEV PACKAGES\n"
+pipenv install --dev
+
+echo "\nTOX RESULT\n"
+pipenv run tox
+
+echo "\nCHECK RESULT\n"
+pipenv check
