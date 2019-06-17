@@ -18,36 +18,36 @@ tmpfs           370M  1.1M  369M   1% /run/docker.sock
 RAM
 
 MemTotal:        3781808 kB
-MemFree:         2338516 kB
-MemAvailable:    3174944 kB
-Buffers:          128716 kB
-Cached:           879080 kB
+MemFree:         2357880 kB
+MemAvailable:    3183904 kB
+Buffers:          119920 kB
+Cached:           877836 kB
 SwapCached:            0 kB
-Active:           842304 kB
-Inactive:         427748 kB
-Active(anon):     263152 kB
+Active:           825936 kB
+Inactive:         427384 kB
+Active(anon):     256508 kB
 Inactive(anon):      180 kB
-Active(file):     579152 kB
-Inactive(file):   427568 kB
+Active(file):     569428 kB
+Inactive(file):   427204 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:             42820 kB
+Dirty:             42736 kB
 Writeback:             0 kB
-AnonPages:        262292 kB
-Mapped:           190360 kB
+AnonPages:        255636 kB
+Mapped:           192068 kB
 Shmem:              1076 kB
-Slab:              98768 kB
-SReclaimable:      65692 kB
-SUnreclaim:        33076 kB
-KernelStack:        3216 kB
-PageTables:         5768 kB
+Slab:              96892 kB
+SReclaimable:      65060 kB
+SUnreclaim:        31832 kB
+KernelStack:        3232 kB
+PageTables:         5748 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     1890904 kB
-Committed_AS:    1180096 kB
+Committed_AS:    1164824 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -62,23 +62,23 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:      102388 kB
-DirectMap2M:     2781184 kB
+DirectMap4k:       94196 kB
+DirectMap2M:     2789376 kB
 DirectMap1G:     1048576 kB
 
 PIPENV
 
 Collecting pipenv
   Downloading https://files.pythonhosted.org/packages/13/b4/3ffa55f77161cff9a5220f162670f7c5eb00df52e00939e203f601b0f579/pipenv-2018.11.26-py3-none-any.whl (5.2MB)
-Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
-Collecting virtualenv (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
-Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
-Collecting certifi (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
 Collecting virtualenv-clone>=0.2.5 (from pipenv)
   Downloading https://files.pythonhosted.org/packages/ba/f8/50c2b7dbc99e05fce5e5b9d9a31f37c988c99acd4e8dedd720b7b8d4011d/virtualenv_clone-0.5.3-py2.py3-none-any.whl
-Installing collected packages: virtualenv, certifi, virtualenv-clone, pipenv
+Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
+Collecting virtualenv (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
+Collecting certifi (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
+Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
+Installing collected packages: virtualenv-clone, virtualenv, certifi, pipenv
 Successfully installed certifi-2019.6.16 pipenv-2018.11.26 virtualenv-16.6.1 virtualenv-clone-0.5.3
 
 PACKAGES
@@ -195,8 +195,8 @@ bleach==2.1.4
     - six [required: >=1.9, installed: 1.12.0]
     - webencodings [required: Any, installed: 0.5.1]
   - six [required: Any, installed: 1.12.0]
-boto3==1.9.169
-  - botocore [required: >=1.12.169,<1.13.0, installed: 1.12.169]
+boto3==1.9.170
+  - botocore [required: >=1.12.170,<1.13.0, installed: 1.12.170]
     - docutils [required: >=0.10, installed: 0.14]
     - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
     - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
@@ -204,7 +204,7 @@ boto3==1.9.169
     - urllib3 [required: >=1.20,<1.26, installed: 1.25.3]
   - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
   - s3transfer [required: >=0.2.0,<0.3.0, installed: 0.2.1]
-    - botocore [required: >=1.12.36,<2.0.0, installed: 1.12.169]
+    - botocore [required: >=1.12.36,<2.0.0, installed: 1.12.170]
       - docutils [required: >=0.10, installed: 0.14]
       - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
       - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
