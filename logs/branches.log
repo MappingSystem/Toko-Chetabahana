@@ -8,46 +8,46 @@ uid=0(root) gid=0(root) groups=0(root)
 DISK
 
 Filesystem      Size  Used Avail Use% Mounted on
-overlay         184G   84G  101G  46% /
+overlay         184G   86G   99G  47% /
 tmpfs            64M     0   64M   0% /dev
 tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
-/dev/sda1       184G   84G  101G  46% /workspace
+/dev/sda1       184G   86G   99G  47% /workspace
 shm              64M     0   64M   0% /dev/shm
 tmpfs           370M  1.1M  369M   1% /run/docker.sock
 
 RAM
 
-MemTotal:        3781800 kB
-MemFree:         2587568 kB
-MemAvailable:    3197312 kB
-Buffers:          108328 kB
-Cached:           676640 kB
+MemTotal:        3781808 kB
+MemFree:         2338516 kB
+MemAvailable:    3174944 kB
+Buffers:          128716 kB
+Cached:           879080 kB
 SwapCached:            0 kB
-Active:           639732 kB
-Inactive:         396744 kB
-Active(anon):     252456 kB
+Active:           842304 kB
+Inactive:         427748 kB
+Active(anon):     263152 kB
 Inactive(anon):      180 kB
-Active(file):     387276 kB
-Inactive(file):   396564 kB
+Active(file):     579152 kB
+Inactive(file):   427568 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:             42692 kB
+Dirty:             42820 kB
 Writeback:             0 kB
-AnonPages:        251568 kB
-Mapped:           193860 kB
+AnonPages:        262292 kB
+Mapped:           190360 kB
 Shmem:              1076 kB
-Slab:              89892 kB
-SReclaimable:      58320 kB
-SUnreclaim:        31572 kB
-KernelStack:        3148 kB
-PageTables:         5740 kB
+Slab:              98768 kB
+SReclaimable:      65692 kB
+SUnreclaim:        33076 kB
+KernelStack:        3216 kB
+PageTables:         5768 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
-CommitLimit:     1890900 kB
-Committed_AS:    1131124 kB
+CommitLimit:     1890904 kB
+Committed_AS:    1180096 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -62,96 +62,36 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:       83956 kB
-DirectMap2M:     2799616 kB
+DirectMap4k:      102388 kB
+DirectMap2M:     2781184 kB
 DirectMap1G:     1048576 kB
-
-SOURCE
-
-total 1600
-drwxr-xr-x 14 root root    4096 Jun 12 19:33 .
-drwxr-xr-x  7 root root    4096 Jun 12 19:33 ..
-drwxr-xr-x  2 root root    4096 Jun 12 19:33 .circleci
--rw-r--r--  1 root root     583 Jun 12 19:33 .codeclimate.yml
--rw-r--r--  1 root root      47 Jun 12 19:33 .dockerignore
--rw-r--r--  1 root root     448 Jun 12 19:33 .editorconfig
--rw-r--r--  1 root root     405 Jun 12 19:33 .eslintrc.json
--rw-r--r--  1 root root     316 Jun 12 19:33 .flowconfig
-drwxr-xr-x  8 root root    4096 Jun 12 19:33 .git
--rw-r--r--  1 root root     479 Jun 12 19:33 .gitattributes
-drwxr-xr-x  4 root root    4096 Jun 12 19:33 .github
--rw-r--r--  1 root root     510 Jun 12 19:33 .gitignore
--rw-r--r--  1 root root     260 Jun 12 19:33 .gqlconfig
--rw-r--r--  1 root root     669 Jun 12 19:33 .isort.cfg
--rw-r--r--  1 root root      40 Jun 12 19:33 .npmrc
--rw-r--r--  1 root root       8 Jun 12 19:33 .nvmrc
-drwxr-xr-x  3 root root    4096 Jun 12 19:33 .plop
--rw-r--r--  1 root root     503 Jun 12 19:33 .pre-commit-config.yaml
--rw-r--r--  1 root root     290 Jun 12 19:33 .pylintrc
--rw-r--r--  1 root root    1384 Jun 12 19:33 .travis.yml
-drwxr-xr-x  2 root root    4096 Jun 12 19:33 .tx
--rw-r--r--  1 root root   26479 Jun 12 19:33 CHANGELOG.md
--rw-r--r--  1 root root    1859 Jun 12 19:33 Dockerfile
--rw-r--r--  1 root root    1521 Jun 12 19:33 LICENSE
--rw-r--r--  1 root root    2214 Jun 12 19:33 Pipfile
--rw-r--r--  1 root root   79909 Jun 12 19:33 Pipfile.lock
--rw-r--r--  1 root root     150 Jun 12 19:33 Procfile
--rw-r--r--  1 root root    5938 Jun 12 19:33 README.md
--rw-r--r--  1 root root     298 Jun 12 19:33 apollo.config.js
--rw-r--r--  1 root root    1684 Jun 12 19:33 app.json
--rw-r--r--  1 root root     250 Jun 12 19:33 common.env
-drwxr-xr-x  3 root root    4096 Jun 12 19:33 deployment
--rw-r--r--  1 root root     827 Jun 12 19:33 docker-compose.override.yml
--rw-r--r--  1 root root    1119 Jun 12 19:33 docker-compose.yml
-drwxr-xr-x 11 root root    4096 Jun 12 19:33 docs
-drwxr-xr-x 43 root root    4096 Jun 12 19:33 locale
--rwxr-xr-x  1 root root     250 Jun 12 19:33 manage.py
--rw-r--r--  1 root root 1312758 Jun 12 19:33 package-lock.json
--rw-r--r--  1 root root    6861 Jun 12 19:33 package.json
--rw-r--r--  1 root root     346 Jun 12 19:33 pyproject.toml
--rw-r--r--  1 root root    2610 Jun 12 19:33 requirements.txt
--rw-r--r--  1 root root    1333 Jun 12 19:33 requirements_dev.txt
--rw-r--r--  1 root root      13 Jun 12 19:33 runtime.txt
-drwxr-xr-x 21 root root    4096 Jun 12 19:33 saleor
-drwxr-xr-x  2 root root    4096 Jun 12 19:33 scripts
--rw-r--r--  1 root root    1164 Jun 12 19:33 setup.cfg
-drwxr-xr-x 16 root root    4096 Jun 12 19:33 templates
-drwxr-xr-x  6 root root    4096 Jun 12 19:33 tests
--rw-r--r--  1 root root    1274 Jun 12 19:33 tox.ini
--rw-r--r--  1 root root     323 Jun 12 19:33 tsconfig.json
--rw-r--r--  1 root root     354 Jun 12 19:33 tslint.json
--rw-r--r--  1 root root    4060 Jun 12 19:33 webpack.config.js
--rw-r--r--  1 root root     123 Jun 12 19:33 webpack.d.ts
 
 PIPENV
 
 Collecting pipenv
   Downloading https://files.pythonhosted.org/packages/13/b4/3ffa55f77161cff9a5220f162670f7c5eb00df52e00939e203f601b0f579/pipenv-2018.11.26-py3-none-any.whl (5.2MB)
 Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
+Collecting virtualenv (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
 Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
 Collecting certifi (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/60/75/f692a584e85b7eaba0e03827b3d51f45f571c2e793dd731e598828d380aa/certifi-2019.3.9-py2.py3-none-any.whl (158kB)
-Collecting virtualenv (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/ca/ee/8375c01412abe6ff462ec80970e6bb1c4308724d4366d7519627c98691ab/virtualenv-16.6.0-py2.py3-none-any.whl (2.0MB)
+  Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
 Collecting virtualenv-clone>=0.2.5 (from pipenv)
   Downloading https://files.pythonhosted.org/packages/ba/f8/50c2b7dbc99e05fce5e5b9d9a31f37c988c99acd4e8dedd720b7b8d4011d/virtualenv_clone-0.5.3-py2.py3-none-any.whl
-Installing collected packages: certifi, virtualenv, virtualenv-clone, pipenv
-Successfully installed certifi-2019.3.9 pipenv-2018.11.26 virtualenv-16.6.0 virtualenv-clone-0.5.3
+Installing collected packages: virtualenv, certifi, virtualenv-clone, pipenv
+Successfully installed certifi-2019.6.16 pipenv-2018.11.26 virtualenv-16.6.1 virtualenv-clone-0.5.3
 
-DEV
+PACKAGES
 
-Installing dependencies from Pipfile.lock (c453ce)…
+Installing gunicorn…
+Installing gevent…
+Installing dependencies from Pipfile.lock (b6ec51)…
 Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
 Looking in indexes: https://pypi.python.org/simple
 To activate this project's virtualenv, run pipenv shell.
 Alternatively, run a command inside the virtualenv with pipenv run.
 
-gunicorn gevent
-
-Installing gunicorn…
-Installing gevent…
-
-RESULT
+PIPFILE
 
 [[source]]
 url = "https://pypi.python.org/simple"
@@ -248,17 +188,347 @@ black = "==19.3b0"
 pre-commit = "*"
 flake8 = "*"
 
-TEST
+GRAPH
 
-___________________________________ summary ____________________________________
-ERROR:   py36-django22: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
-ERROR:   py36-django_master: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
-ERROR:   py37-django22: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
-ERROR:   py37-django_master: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
-Checking PEP 508 requirements…
-Passed!
-Checking installed package safety…
-All good!
+bleach==2.1.4
+  - html5lib [required: >=0.99999999pre,!=1.0b8,!=1.0b7,!=1.0b6,!=1.0b5,!=1.0b4,!=1.0b3,!=1.0b2,!=1.0b1, installed: 1.0.1]
+    - six [required: >=1.9, installed: 1.12.0]
+    - webencodings [required: Any, installed: 0.5.1]
+  - six [required: Any, installed: 1.12.0]
+boto3==1.9.169
+  - botocore [required: >=1.12.169,<1.13.0, installed: 1.12.169]
+    - docutils [required: >=0.10, installed: 0.14]
+    - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
+    - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
+      - six [required: >=1.5, installed: 1.12.0]
+    - urllib3 [required: >=1.20,<1.26, installed: 1.25.3]
+  - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
+  - s3transfer [required: >=0.2.0,<0.3.0, installed: 0.2.1]
+    - botocore [required: >=1.12.36,<2.0.0, installed: 1.12.169]
+      - docutils [required: >=0.10, installed: 0.14]
+      - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
+      - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
+        - six [required: >=1.5, installed: 1.12.0]
+      - urllib3 [required: >=1.20,<1.26, installed: 1.25.3]
+braintree==3.49.0
+  - requests [required: >=0.11.1,<3.0, installed: 2.22.0]
+    - certifi [required: >=2017.4.17, installed: 2019.6.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: >=2.5,<2.9, installed: 2.8]
+    - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+celery==4.3.0
+  - billiard [required: >=3.6.0,<4.0, installed: 3.6.0.0]
+  - kombu [required: >=4.4.0,<5.0, installed: 4.6.3]
+    - amqp [required: >=2.5.0,<3.0, installed: 2.5.0]
+      - vine [required: >=1.1.3,<5.0.0a1, installed: 1.3.0]
+  - pytz [required: >dev, installed: 2019.1]
+  - vine [required: >=1.3.0, installed: 1.3.0]
+dj-database-url==0.5.0
+dj-email-url==0.2.0
+django-bootstrap4==0.0.8
+django-cache-url==3.0.0
+django-countries==5.3.3
+django-debug-toolbar-request-history==0.0.10
+  - django-debug-toolbar [required: Any, installed: 1.11]
+    - Django [required: >=1.11, installed: 2.2.2]
+      - pytz [required: Any, installed: 2019.1]
+      - sqlparse [required: Any, installed: 0.3.0]
+    - sqlparse [required: >=0.2.0, installed: 0.3.0]
+django-elasticsearch-dsl==0.5.1
+  - elasticsearch-dsl [required: >=2.1.0,<6.2.0, installed: 6.0.1]
+    - elasticsearch [required: >=6.0.0,<7.0.0, installed: 6.3.1]
+      - urllib3 [required: >=1.21.1, installed: 1.25.3]
+    - ipaddress [required: Any, installed: 1.0.22]
+    - python-dateutil [required: Any, installed: 2.8.0]
+      - six [required: >=1.5, installed: 1.12.0]
+    - six [required: Any, installed: 1.12.0]
+django-filter==2.1.0
+  - Django [required: >=1.11, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+django-graphql-jwt==0.2.1
+  - Django [required: >=1.11, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+  - graphene-django [required: >=2.0.0, installed: 2.3.0]
+    - Django [required: >=1.11, installed: 2.2.2]
+      - pytz [required: Any, installed: 2019.1]
+      - sqlparse [required: Any, installed: 0.3.0]
+    - graphene [required: >=2.1.3,<3, installed: 2.1.6]
+      - aniso8601 [required: >=3,<=6, installed: 6.0.0]
+      - graphql-core [required: >=2.1,<3, installed: 2.2]
+        - promise [required: >=2.1, installed: 2.2.1]
+          - six [required: Any, installed: 1.12.0]
+        - rx [required: >=1.6.0, installed: 1.6.1]
+        - six [required: >=1.10.0, installed: 1.12.0]
+      - graphql-relay [required: >=0.4.5,<1, installed: 0.4.5]
+        - graphql-core [required: >=0.5.0, installed: 2.2]
+          - promise [required: >=2.1, installed: 2.2.1]
+            - six [required: Any, installed: 1.12.0]
+          - rx [required: >=1.6.0, installed: 1.6.1]
+          - six [required: >=1.10.0, installed: 1.12.0]
+        - promise [required: >=0.4.0, installed: 2.2.1]
+          - six [required: Any, installed: 1.12.0]
+        - six [required: >=1.10.0, installed: 1.12.0]
+      - six [required: >=1.10.0,<2, installed: 1.12.0]
+    - graphql-core [required: >=2.1.0,<3, installed: 2.2]
+      - promise [required: >=2.1, installed: 2.2.1]
+        - six [required: Any, installed: 1.12.0]
+      - rx [required: >=1.6.0, installed: 1.6.1]
+      - six [required: >=1.10.0, installed: 1.12.0]
+    - promise [required: >=2.1, installed: 2.2.1]
+      - six [required: Any, installed: 1.12.0]
+    - singledispatch [required: >=3.4.0.3, installed: 3.4.0.3]
+      - six [required: Any, installed: 1.12.0]
+    - six [required: >=1.10.0, installed: 1.12.0]
+  - PyJWT [required: >=1.5.0, installed: 1.7.1]
+django-impersonate==1.4.1
+django-measurement==3.0.0
+  - django [required: Any, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+  - django-appconf [required: >=1.0.2, installed: 1.0.3]
+    - django [required: Any, installed: 2.2.2]
+      - pytz [required: Any, installed: 2019.1]
+      - sqlparse [required: Any, installed: 0.3.0]
+    - six [required: Any, installed: 1.12.0]
+  - measurement [required: >=1.6, installed: 2.0.1]
+    - six [required: >=1.0, installed: 1.12.0]
+    - sympy [required: >=0.7.3, installed: 1.4]
+      - mpmath [required: >=0.19, installed: 1.1.0]
+django-mptt==0.10.0
+  - Django [required: >=1.11, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+  - django-js-asset [required: Any, installed: 1.2.2]
+django-phonenumber-field==2.4.0
+  - babel [required: Any, installed: 2.7.0]
+    - pytz [required: >=2015.7, installed: 2019.1]
+  - Django [required: >=1.11.3, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+django-prices-openexchangerates==1.0.1
+  - Django [required: >=1.11, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+  - django-prices [required: >=1.0.0, installed: 1.0.4]
+    - Babel [required: >=2.2, installed: 2.7.0]
+      - pytz [required: >=2015.7, installed: 2019.1]
+    - Django [required: >=1.11,<3, installed: 2.2.2]
+      - pytz [required: Any, installed: 2019.1]
+      - sqlparse [required: Any, installed: 0.3.0]
+    - django-babel [required: Any, installed: 0.6.2]
+      - babel [required: >=1.3, installed: 2.7.0]
+        - pytz [required: >=2015.7, installed: 2019.1]
+      - django [required: >=1.8,<3.0, installed: 2.2.2]
+        - pytz [required: Any, installed: 2019.1]
+        - sqlparse [required: Any, installed: 0.3.0]
+    - prices [required: >=1.0.0, installed: 1.0.0]
+      - babel [required: >=2.5.0, installed: 2.7.0]
+        - pytz [required: >=2015.7, installed: 2019.1]
+      - typing [required: >=3.6.0, installed: 3.6.6]
+  - prices [required: >=1.0.0, installed: 1.0.0]
+    - babel [required: >=2.5.0, installed: 2.7.0]
+      - pytz [required: >=2015.7, installed: 2019.1]
+    - typing [required: >=3.6.0, installed: 3.6.6]
+django-prices-vatlayer==1.0.2
+  - Django [required: >=1.11, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+  - jsonfield [required: Any, installed: 2.0.2]
+    - Django [required: >=1.8.0, installed: 2.2.2]
+      - pytz [required: Any, installed: 2019.1]
+      - sqlparse [required: Any, installed: 0.3.0]
+  - prices [required: >=1.0.0, installed: 1.0.0]
+    - babel [required: >=2.5.0, installed: 2.7.0]
+      - pytz [required: >=2015.7, installed: 2019.1]
+    - typing [required: >=3.6.0, installed: 3.6.6]
+  - requests [required: Any, installed: 2.22.0]
+    - certifi [required: >=2017.4.17, installed: 2019.6.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: >=2.5,<2.9, installed: 2.8]
+    - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+django-recaptcha==1.5.0
+  - django [required: Any, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+django-redis==4.10.0
+  - Django [required: >=1.11, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+  - redis [required: >=2.10.0, installed: 3.2.1]
+django-silk==2.0.0
+  - autopep8 [required: Any, installed: 1.4.4]
+    - pycodestyle [required: >=2.4.0, installed: 2.5.0]
+  - Django [required: Any, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+  - gprof2dot [required: <2017.09.19, installed: 2016.10.13]
+  - Jinja2 [required: Any, installed: 2.10.1]
+    - MarkupSafe [required: >=0.23, installed: 1.1.1]
+  - Pygments [required: Any, installed: 2.4.2]
+  - python-dateutil [required: Any, installed: 2.8.0]
+    - six [required: >=1.5, installed: 1.12.0]
+  - pytz [required: Any, installed: 2019.1]
+  - requests [required: Any, installed: 2.22.0]
+    - certifi [required: >=2017.4.17, installed: 2019.6.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: >=2.5,<2.9, installed: 2.8]
+    - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+  - sqlparse [required: Any, installed: 0.3.0]
+django-storages==1.7.1
+  - Django [required: >=1.11, installed: 2.2.2]
+    - pytz [required: Any, installed: 2019.1]
+    - sqlparse [required: Any, installed: 0.3.0]
+django-templated-email==2.3.0
+  - django-render-block [required: >=0.5, installed: 0.6]
+    - django [required: >=1.11, installed: 2.2.2]
+      - pytz [required: Any, installed: 2019.1]
+      - sqlparse [required: Any, installed: 0.3.0]
+  - six [required: >=1, installed: 1.12.0]
+django-versatileimagefield==1.10
+  - Pillow [required: >=2.4.0,<6.0.0, installed: 5.4.1]
+django-webpack-loader==0.6.0
+Faker==1.0.7
+  - python-dateutil [required: >=2.4, installed: 2.8.0]
+    - six [required: >=1.5, installed: 1.12.0]
+  - six [required: >=1.10, installed: 1.12.0]
+  - text-unidecode [required: ==1.2, installed: 1.2]
+freezegun==0.3.12
+  - python-dateutil [required: >=1.0,!=2.0, installed: 2.8.0]
+    - six [required: >=1.5, installed: 1.12.0]
+  - six [required: Any, installed: 1.12.0]
+gevent==1.4.0
+  - greenlet [required: >=0.4.14, installed: 0.4.15]
+google-cloud-storage==1.16.1
+  - google-auth [required: >=1.2.0, installed: 1.6.3]
+    - cachetools [required: >=2.0.0, installed: 3.1.1]
+    - pyasn1-modules [required: >=0.2.1, installed: 0.2.5]
+      - pyasn1 [required: >=0.4.1,<0.5.0, installed: 0.4.5]
+    - rsa [required: >=3.1.4, installed: 4.0]
+      - pyasn1 [required: >=0.1.3, installed: 0.4.5]
+    - six [required: >=1.9.0, installed: 1.12.0]
+  - google-cloud-core [required: >=1.0.0,<2.0dev, installed: 1.0.2]
+    - google-api-core [required: >=1.11.0,<2.0.0dev, installed: 1.11.1]
+      - google-auth [required: >=0.4.0,<2.0dev, installed: 1.6.3]
+        - cachetools [required: >=2.0.0, installed: 3.1.1]
+        - pyasn1-modules [required: >=0.2.1, installed: 0.2.5]
+          - pyasn1 [required: >=0.4.1,<0.5.0, installed: 0.4.5]
+        - rsa [required: >=3.1.4, installed: 4.0]
+          - pyasn1 [required: >=0.1.3, installed: 0.4.5]
+        - six [required: >=1.9.0, installed: 1.12.0]
+      - googleapis-common-protos [required: >=1.5.3,<2.0dev,!=1.5.4, installed: 1.6.0]
+        - protobuf [required: >=3.6.0, installed: 3.8.0]
+          - setuptools [required: Any, installed: 41.0.1]
+          - six [required: >=1.9, installed: 1.12.0]
+      - protobuf [required: >=3.4.0, installed: 3.8.0]
+        - setuptools [required: Any, installed: 41.0.1]
+        - six [required: >=1.9, installed: 1.12.0]
+      - pytz [required: Any, installed: 2019.1]
+      - requests [required: >=2.18.0,<3.0.0dev, installed: 2.22.0]
+        - certifi [required: >=2017.4.17, installed: 2019.6.16]
+        - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+        - idna [required: >=2.5,<2.9, installed: 2.8]
+        - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+      - setuptools [required: >=34.0.0, installed: 41.0.1]
+      - six [required: >=1.10.0, installed: 1.12.0]
+  - google-resumable-media [required: >=0.3.1, installed: 0.3.2]
+    - six [required: Any, installed: 1.12.0]
+google-i18n-address==2.3.5
+  - requests [required: >=2.7.0, installed: 2.22.0]
+    - certifi [required: >=2017.4.17, installed: 2019.6.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: >=2.5,<2.9, installed: 2.8]
+    - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+google-measurement-protocol==1.0.0
+  - prices [required: >=1.0.0, installed: 1.0.0]
+    - babel [required: >=2.5.0, installed: 2.7.0]
+      - pytz [required: >=2015.7, installed: 2019.1]
+    - typing [required: >=3.6.0, installed: 3.6.6]
+  - requests [required: >=2.0,<3.0a0, installed: 2.22.0]
+    - certifi [required: >=2017.4.17, installed: 2019.6.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: >=2.5,<2.9, installed: 2.8]
+    - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+  - typing [required: >=3.6.0, installed: 3.6.6]
+graphene-django-optimizer==0.4.0
+gunicorn==19.9.0
+Markdown==3.1.1
+  - setuptools [required: >=36, installed: 41.0.1]
+maxminddb-geolite2==2018.703
+  - maxminddb [required: Any, installed: 1.4.1]
+phonenumberslite==8.10.13
+psycopg2-binary==2.8.3
+purl==1.5
+  - six [required: Any, installed: 1.12.0]
+raven==6.9.0
+razorpay==1.2.0
+  - requests [required: Any, installed: 2.22.0]
+    - certifi [required: >=2017.4.17, installed: 2019.6.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: >=2.5,<2.9, installed: 2.8]
+    - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+social-auth-app-django==3.1.0
+  - six [required: Any, installed: 1.12.0]
+  - social-auth-core [required: >=1.2.0, installed: 3.2.0]
+    - defusedxml [required: >=0.5.0rc1, installed: 0.6.0]
+    - oauthlib [required: >=1.0.3, installed: 3.0.1]
+    - PyJWT [required: >=1.4.0, installed: 1.7.1]
+    - python3-openid [required: >=3.0.10, installed: 3.1.0]
+      - defusedxml [required: Any, installed: 0.6.0]
+    - requests [required: >=2.9.1, installed: 2.22.0]
+      - certifi [required: >=2017.4.17, installed: 2019.6.16]
+      - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+      - idna [required: >=2.5,<2.9, installed: 2.8]
+      - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+    - requests-oauthlib [required: >=0.6.1, installed: 1.2.0]
+      - oauthlib [required: >=3.0.0, installed: 3.0.1]
+      - requests [required: >=2.0.0, installed: 2.22.0]
+        - certifi [required: >=2017.4.17, installed: 2019.6.16]
+        - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+        - idna [required: >=2.5,<2.9, installed: 2.8]
+        - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+    - six [required: >=1.10.0, installed: 1.12.0]
+stripe==2.29.4
+  - requests [required: >=2.20, installed: 2.22.0]
+    - certifi [required: >=2017.4.17, installed: 2019.6.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: >=2.5,<2.9, installed: 2.8]
+    - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
+uWSGI==2.0.18
+WeasyPrint==47
+  - cairocffi [required: >=0.9.0, installed: 1.0.2]
+    - cffi [required: >=1.1.0, installed: 1.12.3]
+      - pycparser [required: Any, installed: 2.19]
+    - setuptools [required: >=39.2.0, installed: 41.0.1]
+  - CairoSVG [required: >=1.0.20, installed: 2.4.0]
+    - cairocffi [required: Any, installed: 1.0.2]
+      - cffi [required: >=1.1.0, installed: 1.12.3]
+        - pycparser [required: Any, installed: 2.19]
+      - setuptools [required: >=39.2.0, installed: 41.0.1]
+    - cssselect2 [required: Any, installed: 0.2.1]
+      - tinycss2 [required: Any, installed: 1.0.2]
+        - setuptools [required: >=39.2.0, installed: 41.0.1]
+        - webencodings [required: >=0.4, installed: 0.5.1]
+    - defusedxml [required: Any, installed: 0.6.0]
+    - pillow [required: Any, installed: 5.4.1]
+    - tinycss2 [required: Any, installed: 1.0.2]
+      - setuptools [required: >=39.2.0, installed: 41.0.1]
+      - webencodings [required: >=0.4, installed: 0.5.1]
+  - cffi [required: >=0.6, installed: 1.12.3]
+    - pycparser [required: Any, installed: 2.19]
+  - cssselect2 [required: >=0.1, installed: 0.2.1]
+    - tinycss2 [required: Any, installed: 1.0.2]
+      - setuptools [required: >=39.2.0, installed: 41.0.1]
+      - webencodings [required: >=0.4, installed: 0.5.1]
+  - html5lib [required: >=0.999999999, installed: 1.0.1]
+    - six [required: >=1.9, installed: 1.12.0]
+    - webencodings [required: Any, installed: 0.5.1]
+  - Pyphen [required: >=0.8, installed: 0.9.5]
+  - setuptools [required: >=39.2.0, installed: 41.0.1]
+  - tinycss2 [required: >=1.0.0, installed: 1.0.2]
+    - setuptools [required: >=39.2.0, installed: 41.0.1]
+    - webencodings [required: >=0.4, installed: 0.5.1]
 
 TRANSFER
 
@@ -266,3 +536,26 @@ TRANSFER
 'Pipfile.lock' -> '/workspace/home/chetabahana/.docker/branch/Pipfile.lock'
 'requirements.txt' -> '/workspace/home/chetabahana/.docker/branch/requirements.txt'
 'requirements_dev.txt' -> '/workspace/home/chetabahana/.docker/branch/requirements_dev.txt'
+
+DEV PACKAGES
+
+Installing dependencies from Pipfile.lock (b6ec51)…
+Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
+Looking in indexes: https://pypi.python.org/simple
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+
+TOX RESULT
+
+___________________________________ summary ____________________________________
+ERROR:   py36-django22: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
+ERROR:   py36-django_master: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
+ERROR:   py37-django22: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
+ERROR:   py37-django_master: unresolvable substitution(s): 'QUERIES_RESULTS_PATH'. Environment variables are missing or defined recursively.
+
+CHECK RESULT
+
+Checking PEP 508 requirements…
+Passed!
+Checking installed package safety…
+All good!
