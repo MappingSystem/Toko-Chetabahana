@@ -18,36 +18,36 @@ tmpfs           370M  1.1M  369M   1% /run/docker.sock
 RAM
 
 MemTotal:        3781800 kB
-MemFree:         2716532 kB
-MemAvailable:    3197192 kB
-Buffers:          117152 kB
-Cached:           543488 kB
+MemFree:         2708792 kB
+MemAvailable:    3189772 kB
+Buffers:          117352 kB
+Cached:           543548 kB
 SwapCached:            0 kB
-Active:           631204 kB
-Inactive:         291012 kB
-Active(anon):     262500 kB
+Active:           638956 kB
+Inactive:         291768 kB
+Active(anon):     270724 kB
 Inactive(anon):      180 kB
-Active(file):     368704 kB
-Inactive(file):   290832 kB
+Active(file):     368232 kB
+Inactive(file):   291588 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:               716 kB
+Dirty:               744 kB
 Writeback:             0 kB
-AnonPages:        261588 kB
-Mapped:           218656 kB
+AnonPages:        269816 kB
+Mapped:           219240 kB
 Shmem:              1080 kB
-Slab:              80652 kB
-SReclaimable:      48744 kB
-SUnreclaim:        31908 kB
+Slab:              80668 kB
+SReclaimable:      48812 kB
+SUnreclaim:        31856 kB
 KernelStack:        3168 kB
-PageTables:         5892 kB
+PageTables:         5944 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     1890900 kB
-Committed_AS:    1151660 kB
+Committed_AS:    1150968 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -62,8 +62,8 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:       86004 kB
-DirectMap2M:     2797568 kB
+DirectMap4k:       83956 kB
+DirectMap2M:     2799616 kB
 DirectMap1G:     1048576 kB
 
 HOME
@@ -101,38 +101,15 @@ HOME
 EXPECT
 
 Ign:1 http://deb.debian.org/debian stretch InRelease
-Get:2 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
-Get:3 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:4 http://deb.debian.org/debian stretch Release [118 kB]
-Get:5 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
-Get:6 http://deb.debian.org/debian stretch Release.gpg [2434 B]
-Get:7 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
-Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
-Fetched 7914 kB in 1s (4319 kB/s)
+Get:2 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:3 http://deb.debian.org/debian stretch Release [118 kB]
+Get:4 http://deb.debian.org/debian stretch Release.gpg [2434 B]
+Get:5 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
+Get:6 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Get:7 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
+Get:8 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
+Fetched 7914 kB in 1s (4360 kB/s)
 Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following additional packages will be installed:
-  libapt-inst2.0
-The following NEW packages will be installed:
-  apt-utils libapt-inst2.0
-0 upgraded, 2 newly installed, 0 to remove and 2 not upgraded.
-Need to get 602 kB of archives.
-After this operation, 1607 kB of additional disk space will be used.
-Get:1 http://deb.debian.org/debian stretch/main amd64 libapt-inst2.0 amd64 1.4.9 [192 kB]
-Get:2 http://deb.debian.org/debian stretch/main amd64 apt-utils amd64 1.4.9 [410 kB]
-Fetched 602 kB in 0s (9579 kB/s)
-Selecting previously unselected package libapt-inst2.0:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30576 files and directories currently installed.)
-Preparing to unpack .../libapt-inst2.0_1.4.9_amd64.deb ...
-Unpacking libapt-inst2.0:amd64 (1.4.9) ...
-Selecting previously unselected package apt-utils.
-Preparing to unpack .../apt-utils_1.4.9_amd64.deb ...
-Unpacking apt-utils (1.4.9) ...
-Setting up libapt-inst2.0:amd64 (1.4.9) ...
-Setting up apt-utils (1.4.9) ...
-Processing triggers for libc-bin (2.24-11+deb9u4) ...
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -145,9 +122,9 @@ Need to get 296 kB of archives.
 After this operation, 589 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian stretch/main amd64 tcl-expect amd64 5.45-7+deb9u1 [131 kB]
 Get:2 http://deb.debian.org/debian stretch/main amd64 expect amd64 5.45-7+deb9u1 [165 kB]
-Fetched 296 kB in 0s (5103 kB/s)
+Fetched 296 kB in 0s (4940 kB/s)
 Selecting previously unselected package tcl-expect:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30707 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30576 files and directories currently installed.)
 Preparing to unpack .../tcl-expect_5.45-7+deb9u1_amd64.deb ...
 Unpacking tcl-expect:amd64 (5.45-7+deb9u1) ...
 Selecting previously unselected package expect.
