@@ -1,3 +1,6 @@
+
+HOME
+
 '/workspace/home/chetabahana/.bash_aliases' -> '/builder/home/.bash_aliases'
 '/workspace/home/chetabahana/.bash_logout' -> '/builder/home/.bash_logout'
 '/workspace/home/chetabahana/.bashrc' -> '/builder/home/.bashrc'
@@ -17,14 +20,11 @@
 '/workspace/home/chetabahana/.logs/compose.log' -> '/builder/home/.logs/compose.log'
 '/workspace/home/chetabahana/.profile' -> '/builder/home/.profile'
 '/workspace/home/chetabahana/.ssh/agent' -> '/builder/home/.ssh/agent'
-'/workspace/home/chetabahana/.ssh/agent_builder' -> '/builder/home/.ssh/agent_builder'
 '/workspace/home/chetabahana/.ssh/authorized_keys' -> '/builder/home/.ssh/authorized_keys'
-'/workspace/home/chetabahana/.ssh/clone' -> '/builder/home/.ssh/clone'
 '/workspace/home/chetabahana/.ssh/expect_clone' -> '/builder/home/.ssh/expect_clone'
 '/workspace/home/chetabahana/.ssh/expect_push' -> '/builder/home/.ssh/expect_push'
 '/workspace/home/chetabahana/.ssh/google_compute_engine.pub' -> '/builder/home/.ssh/google_compute_engine.pub'
 '/workspace/home/chetabahana/.ssh/id_rsa.enc' -> '/builder/home/.ssh/id_rsa.enc'
-'/workspace/home/chetabahana/.ssh/id_rsa.pub' -> '/builder/home/.ssh/id_rsa.pub'
 '/workspace/home/chetabahana/.ssh/push' -> '/builder/home/.ssh/push'
 '/workspace/home/chetabahana/.transifexrc' -> '/builder/home/.transifexrc'
 '/workspace/home/chetabahana/.tx' -> '/builder/home/.tx'
