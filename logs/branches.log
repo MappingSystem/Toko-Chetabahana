@@ -3,15 +3,15 @@ PIPENV
 
 Collecting pipenv
   Downloading https://files.pythonhosted.org/packages/13/b4/3ffa55f77161cff9a5220f162670f7c5eb00df52e00939e203f601b0f579/pipenv-2018.11.26-py3-none-any.whl (5.2MB)
-Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
 Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
-Collecting certifi (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
-Collecting virtualenv (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
 Collecting virtualenv-clone>=0.2.5 (from pipenv)
   Downloading https://files.pythonhosted.org/packages/ba/f8/50c2b7dbc99e05fce5e5b9d9a31f37c988c99acd4e8dedd720b7b8d4011d/virtualenv_clone-0.5.3-py2.py3-none-any.whl
-Installing collected packages: certifi, virtualenv, virtualenv-clone, pipenv
+Collecting certifi (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
+Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
+Collecting virtualenv (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
+Installing collected packages: virtualenv-clone, certifi, virtualenv, pipenv
 Successfully installed certifi-2019.6.16 pipenv-2018.11.26 virtualenv-16.6.1 virtualenv-clone-0.5.3
 
 PACKAGES
@@ -533,19 +533,18 @@ Untracked files:
 	saleor/gunicorn.py
 
 no changes added to commit (use "git add" and/or "git commit -a")
-[Chetabahana e6bffc57e] Add support for taxonomy
+[Chetabahana c56632bb4] Add support for taxonomy
  5 files changed, 41 insertions(+), 23 deletions(-)
  create mode 100644 saleor/gunicorn.py
 
 MASTER
 
-HEAD is now at e6bffc57e Add support for taxonomy
+HEAD is now at c56632bb4 Add support for taxonomy
 
 NEXT
 
 Branch taxonomy set up to track remote branch taxonomy from origin.
-HEAD is now at e6bffc57e Add support for taxonomy
-/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HEAD is now at c56632bb4 Add support for taxonomy
 On branch taxonomy
 Your branch and 'origin/taxonomy' have diverged,
 and have 1 and 2 different commits each, respectively.
@@ -558,7 +557,16 @@ Changes not staged for commit:
 	modified:   saleor/static/dashboard-next/siteSettings/fixtures.ts
 	modified:   saleor/static/dashboard-next/storybook/__snapshots__/Stories.test.ts.snap
 
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	locale/is/
+	saleor/dashboard/locale/is/
+
 no changes added to commit (use "git add" and/or "git commit -a")
-[taxonomy 97aefaa44] Add support for taxonomy
- 3 files changed, 4 insertions(+), 4 deletions(-)
+[taxonomy 16b4eb2e6] Add support for taxonomy
+ 6 files changed, 9123 insertions(+), 4 deletions(-)
+ create mode 100644 locale/is/LC_MESSAGES/django.po
+ create mode 100644 locale/is/LC_MESSAGES/djangojs.po
+ create mode 100644 saleor/dashboard/locale/is/LC_MESSAGES/django.po
 Agent pid 3129 killed
