@@ -74,8 +74,12 @@ END
 NEXT=taxonomy
 CURRENT=gunicorn
 
+echo "\nEXPECT\n"
+apt-get update
+apt-get --assume-yes install expect
+
 echo "\nAGENT\n"
-AGENT=/root/.ssh/agent_builder
+AGENT=$HOME/.ssh/agent
 git config --global user.name "chetabahana"
 git config --global user.email "chetabahana@gmail.com"
 eval `ssh-agent` && expect $AGENT && ssh-add -l
@@ -115,7 +119,7 @@ git fetch --prune origin master && git reset --hard origin/master
 export PATH=$HOME/.local/bin:$PATH && pipenv run tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
 git status && git add . && git commit -m "Add support for ${NEXT}"
-git push origin "${NEXT}" --force
+#git push origin "${NEXT}" --force
 
 cd $HOME
 rm -rf saleor Tutorial-Buka-Toko

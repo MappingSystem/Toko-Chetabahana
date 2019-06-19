@@ -42,16 +42,12 @@ Full documentation at: <http://www.gnu.org/software/coreutils/mv>
 or available locally via: info '(coreutils) mv invocation'
 END
 
-cd $HOME
-apt-get update
-apt-get --assume-yes install expect
-rm -rf saleor && git clone https://github.com/mirumee/saleor.git
-
 cd /workspace/scripts && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh > branches.log
 cat /workspace/scripts/branches.log
 
-AGENT=/root/.ssh/agent_builder
+echo -e "\nBRANCHES\n"
+AGENT=$HOME/.ssh/agent
 cd $HOME && rm -rf Toko-Chetabahana
 git config --global user.name "chetabahana"
 git config --global user.email "chetabahana@gmail.com"
@@ -61,6 +57,3 @@ mv -f /workspace/scripts/branches.log Toko-Chetabahana/logs/
 cd Toko-Chetabahana && git add . && git commit -m "fresh commit"
 git push -u origin master
 eval `ssh-agent -k`
-
-mv -f /workspace/windows/cygwin/home/Chetabahana/.ssh $HOME
-chmod 0400 $HOME/.ssh/*

@@ -62,15 +62,17 @@ END
 
 #Package
 APP="install gunicorn gevent"
+GIT=https://github.com/mirumee/saleor.git
 
 #Environment
-cd $HOME/saleor
 export PATH=$HOME/.local/bin:$PATH
 
 echo "\nPIPENV\n"
 pip install --user pipenv
 
 echo "\nPACKAGES\n"
+cd $HOME && rm -rf saleor
+git clone $GIT && cd $HOME/saleor
 [ -n "$APP" ] && pipenv $APP || pipenv sync
 
 echo "\nPIPFILE\n"
