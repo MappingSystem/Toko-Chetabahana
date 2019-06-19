@@ -16,7 +16,6 @@
 '/workspace/home/chetabahana/.logs/branches.log' -> '/builder/home/.logs/branches.log'
 '/workspace/home/chetabahana/.logs/compose.log' -> '/builder/home/.logs/compose.log'
 '/workspace/home/chetabahana/.profile' -> '/builder/home/.profile'
-'/workspace/home/chetabahana/.ssh/_known_hosts' -> '/builder/home/.ssh/_known_hosts'
 '/workspace/home/chetabahana/.ssh/agent' -> '/builder/home/.ssh/agent'
 '/workspace/home/chetabahana/.ssh/agent_builder' -> '/builder/home/.ssh/agent_builder'
 '/workspace/home/chetabahana/.ssh/authorized_keys' -> '/builder/home/.ssh/authorized_keys'
