@@ -42,9 +42,26 @@ Full documentation at: <http://www.gnu.org/software/coreutils/mv>
 or available locally via: info '(coreutils) mv invocation'
 END
 
-git clone https://github.com/mirumee/saleor.git
+cd $HOME
+apt-get update
+apt-get --assume-yes install expect
+apt-get --assume-yes install transifex-client
+rm -rf saleor && git clone https://github.com/mirumee/saleor.git
 
 cd /workspace/scripts && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh > branches.log
-mv -f /workspace/scripts/branches.log /workspace/home/chetabahana/.logs/
-cat /workspace/home/chetabahana/.logs/branches.log
+cat /workspace/scripts/branches.log
+
+AGENT=/root/.ssh/agent_builder
+cd $HOME && rm -rf Toko-Chetabahana
+git config --global user.name "chetabahana"
+git config --global user.email "chetabahana@gmail.com"
+eval `ssh-agent` && expect $AGENT && ssh-add -l
+git clone git@github.com:MarketLeader/Toko-Chetabahana.git
+mv -f /workspace/scripts/branches.log Toko-Chetabahana/logs/
+cd Toko-Chetabahana && git add . && git commit -m "fresh commit"
+git push -u origin master
+eval `ssh-agent -k`
+
+mv -f /workspace/windows/cygwin/home/Chetabahana/.ssh $HOME
+chmod 0400 $HOME/.ssh/*

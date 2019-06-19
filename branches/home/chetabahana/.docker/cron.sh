@@ -15,8 +15,8 @@ then
         echo "all the same, do nothing"
     else
         echo "update exist, do branches!"
-        git reset --hard upstream/master
-        git push origin master --force
+        #git reset --hard upstream/master
+        #git push origin master --force
         cd $WORKDIR && rm -rf branches
         git clone git@github.com:Chetabahana/branches.git
         cp -frpT ~/.docker/branch branches/home/chetabahana/.docker/branch

@@ -73,20 +73,15 @@ END
 #Environtment
 NEXT=taxonomy
 CURRENT=gunicorn
-WORKDIR=~/.config
 
 echo "\nAGENT\n"
-eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
-
-echo "\nBRANCHES\n"
-cd $WORKDIR && rm -rf Toko-Chetabahana
-git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-cp -frpT ~/.logs Toko-Chetabahana/logs && cd Toko-Chetabahana
-git add . && git commit -m "fresh commit"
-git push -u origin master
+AGENT=/root/.ssh/agent_builder
+git config --global user.name "chetabahana"
+git config --global user.email "chetabahana@gmail.com"
+eval `ssh-agent` && expect $AGENT && ssh-add -l
 
 echo "\nUPSTREAM\n"
-cd $WORKDIR && rm -rf Tutorial-Buka-Toko
+cd $HOME && rm -rf Tutorial-Buka-Toko
 git clone git@github.com:MarketLeader/Tutorial-Buka-Toko.git
 cd Tutorial-Buka-Toko && git checkout master
 git remote add upstream git@github.com:mirumee/saleor.git
@@ -96,12 +91,13 @@ git push origin master --force
 echo "\nREMOTE\n"
 git checkout Chetabahana
 git fetch --prune origin && git reset --hard origin/master
-cp -frpvT ~/.docker/branch "$WORKDIR/Tutorial-Buka-Toko"
+BRANCH=/workspace/home/chetabahana/.docker/branch
+cp -frpvT $BRANCH "$HOME/Tutorial-Buka-Toko"
 git status && git add . && git commit -m "Add support for ${NEXT}"
 git push origin Chetabahana --force
 
 echo "\nMASTER\n"
-cd $WORKDIR && rm -rf saleor
+cd $HOME && rm -rf saleor
 git clone git@github.com:Chetabahana/saleor.git saleor && cd saleor
 git remote add upstream git@github.com:MarketLeader/Tutorial-Buka-Toko.git
 git fetch --prune upstream Chetabahana && git reset --hard upstream/Chetabahana
@@ -116,11 +112,12 @@ git push origin master --force
 echo "\nNEXT\n"
 git checkout "${NEXT}"
 git fetch --prune origin master && git reset --hard origin/master
-tx pull --all > /dev/null
+tx init --token=1/7ecd38ed5a68a0c26e6216139be8ad460f9c0d4d --skipsetup --no-interactive
+cat $HOME/.transifexrc && tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
 git status && git add . && git commit -m "Add support for ${NEXT}"
-git push origin "${NEXT}" --force
+#git push origin "${NEXT}" --force
 
-cd $WORKDIR
-rm -rf saleor Toko-Chetabahana Tutorial-Buka-Toko
+cd $HOME
+rm -rf saleor Tutorial-Buka-Toko
 eval `ssh-agent -k`

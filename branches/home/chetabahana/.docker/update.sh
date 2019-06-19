@@ -10,8 +10,6 @@ gcloud init
 #ssh-keygen -t rsa -b 4096 -C "chetabahana@gmail.com"
 sudo apt-get update
 sudo apt-get --assume-yes install expect
-mkdir -p ~/.ssh && cp ~/.ssh/id_rsa.pub ~/.ssh && cp ~/.docker/backend/.ssh/agent ~/.ssh
-eval `ssh-agent` && expect ~/.ssh/agent && ssh-add -l
 
 #PIP
 sudo apt-get update

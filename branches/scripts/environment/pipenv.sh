@@ -64,13 +64,13 @@ END
 APP="install gunicorn gevent"
 
 #Environment
+cd $HOME/saleor
 export PATH=$HOME/.local/bin:$PATH
 
 echo "\nPIPENV\n"
 pip install --user pipenv
 
 echo "\nPACKAGES\n"
-cd /workspace/saleor
 [ -n "$APP" ] && pipenv $APP || pipenv sync
 
 echo "\nPIPFILE\n"

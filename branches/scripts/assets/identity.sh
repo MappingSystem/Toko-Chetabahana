@@ -117,6 +117,8 @@ EXAMPLES:
 SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 END
 
+return
+
 echo "\nWHOAMI\n"
 whoami
 echo $HOME
