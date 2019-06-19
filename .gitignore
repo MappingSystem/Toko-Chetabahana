@@ -7,9 +7,9 @@ __pycache__/
 
 # Ignore credential dirs
 .ssh
-.gitconfig
 
 # Ignore credential files
+.gitconfig
 .transifexrc
 compose/deploy/product/app.yaml
 compose/deploy/product/Chetabahana-f92949fb068b.json
