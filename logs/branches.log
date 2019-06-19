@@ -50,36 +50,36 @@ tmpfs           370M  1.1M  369M   1% /run/docker.sock
 RAM
 
 MemTotal:        3781800 kB
-MemFree:         2442996 kB
-MemAvailable:    3163600 kB
-Buffers:          122852 kB
-Cached:           769352 kB
+MemFree:         2468736 kB
+MemAvailable:    3180760 kB
+Buffers:          117896 kB
+Cached:           765860 kB
 SwapCached:            0 kB
-Active:           720728 kB
-Inactive:         452480 kB
-Active(anon):     281904 kB
-Inactive(anon):      176 kB
-Active(file):     438824 kB
-Inactive(file):   452304 kB
+Active:           695096 kB
+Inactive:         448148 kB
+Active(anon):     260376 kB
+Inactive(anon):      180 kB
+Active(file):     434720 kB
+Inactive(file):   447968 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:             59008 kB
+Dirty:             59268 kB
 Writeback:             0 kB
-AnonPages:        280980 kB
-Mapped:           211284 kB
+AnonPages:        259476 kB
+Mapped:           211196 kB
 Shmem:              1080 kB
-Slab:              98016 kB
-SReclaimable:      65448 kB
-SUnreclaim:        32568 kB
-KernelStack:        3232 kB
-PageTables:         5944 kB
+Slab:              97652 kB
+SReclaimable:      65168 kB
+SUnreclaim:        32484 kB
+KernelStack:        3196 kB
+PageTables:         6008 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     1890900 kB
-Committed_AS:    1178836 kB
+Committed_AS:    1146692 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -94,6 +94,6 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:       88052 kB
-DirectMap2M:     3844096 kB
-DirectMap1G:           0 kB
+DirectMap4k:       90100 kB
+DirectMap2M:     2793472 kB
+DirectMap1G:     1048576 kB
