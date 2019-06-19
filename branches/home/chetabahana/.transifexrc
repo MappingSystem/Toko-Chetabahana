@@ -3,4 +3,3 @@ api_hostname = https://api.transifex.com
 hostname = https://www.transifex.com
 password = 1/7ecd38ed5a68a0c26e6216139be8ad460f9c0d4d
 username = api
-

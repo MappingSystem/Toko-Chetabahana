@@ -45,7 +45,6 @@ END
 cd $HOME
 apt-get update
 apt-get --assume-yes install expect
-apt-get --assume-yes install transifex-client
 rm -rf saleor && git clone https://github.com/mirumee/saleor.git
 
 cd /workspace/scripts && chmod -R +x *

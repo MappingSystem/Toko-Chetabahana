@@ -32,6 +32,9 @@ etag: BwWLmz5ANcY=
 version: 1
 END
 
+cd /workspace/home/chetabahana
+mv -f .gitconfig .transifexrc -t $HOME
+
 cd /workspace/home/chetabahana/.ssh
 mv -f config agent_builder known_hosts -t /root/.ssh
 chmod 600 /root/.ssh/*
