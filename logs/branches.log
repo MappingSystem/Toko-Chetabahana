@@ -1,4 +1,71 @@
 
+WHOAMI
+
+root
+/builder/home
+uid=0(root) gid=0(root) groups=0(root)
+
+DISK
+
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         184G   86G   99G  47% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
+/dev/sda1       184G   86G   99G  47% /workspace
+shm              64M     0   64M   0% /dev/shm
+tmpfs           370M  1.1M  369M   1% /run/docker.sock
+
+RAM
+
+MemTotal:        3781808 kB
+MemFree:         2432852 kB
+MemAvailable:    3156848 kB
+Buffers:          123964 kB
+Cached:           771548 kB
+SwapCached:            0 kB
+Active:           723164 kB
+Inactive:         453928 kB
+Active(anon):     282548 kB
+Inactive(anon):      180 kB
+Active(file):     440616 kB
+Inactive(file):   453748 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:             58996 kB
+Writeback:            40 kB
+AnonPages:        281660 kB
+Mapped:           217904 kB
+Shmem:              1080 kB
+Slab:              98004 kB
+SReclaimable:      65544 kB
+SUnreclaim:        32460 kB
+KernelStack:        3232 kB
+PageTables:         5920 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1890904 kB
+Committed_AS:    1189176 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       81908 kB
+DirectMap2M:     2801664 kB
+DirectMap1G:     1048576 kB
+
 HOME
 
 '/workspace/home/chetabahana/.bash_aliases' -> '/builder/home/.bash_aliases'
@@ -30,70 +97,3 @@ HOME
 '/workspace/home/chetabahana/.tx' -> '/builder/home/.tx'
 '/workspace/home/chetabahana/.tx/config' -> '/builder/home/.tx/config'
 '/workspace/home/chetabahana/.wget-hsts' -> '/builder/home/.wget-hsts'
-
-WHOAMI
-
-root
-/builder/home
-uid=0(root) gid=0(root) groups=0(root)
-
-DISK
-
-Filesystem      Size  Used Avail Use% Mounted on
-overlay         184G   86G   99G  47% /
-tmpfs            64M     0   64M   0% /dev
-tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
-/dev/sda1       184G   86G   99G  47% /workspace
-shm              64M     0   64M   0% /dev/shm
-tmpfs           370M  1.1M  369M   1% /run/docker.sock
-
-RAM
-
-MemTotal:        3781800 kB
-MemFree:         2468736 kB
-MemAvailable:    3180760 kB
-Buffers:          117896 kB
-Cached:           765860 kB
-SwapCached:            0 kB
-Active:           695096 kB
-Inactive:         448148 kB
-Active(anon):     260376 kB
-Inactive(anon):      180 kB
-Active(file):     434720 kB
-Inactive(file):   447968 kB
-Unevictable:           0 kB
-Mlocked:               0 kB
-SwapTotal:             0 kB
-SwapFree:              0 kB
-Dirty:             59268 kB
-Writeback:             0 kB
-AnonPages:        259476 kB
-Mapped:           211196 kB
-Shmem:              1080 kB
-Slab:              97652 kB
-SReclaimable:      65168 kB
-SUnreclaim:        32484 kB
-KernelStack:        3196 kB
-PageTables:         6008 kB
-NFS_Unstable:          0 kB
-Bounce:                0 kB
-WritebackTmp:          0 kB
-CommitLimit:     1890900 kB
-Committed_AS:    1146692 kB
-VmallocTotal:   34359738367 kB
-VmallocUsed:           0 kB
-VmallocChunk:          0 kB
-HardwareCorrupted:     0 kB
-AnonHugePages:         0 kB
-ShmemHugePages:        0 kB
-ShmemPmdMapped:        0 kB
-CmaTotal:              0 kB
-CmaFree:               0 kB
-HugePages_Total:       0
-HugePages_Free:        0
-HugePages_Rsvd:        0
-HugePages_Surp:        0
-Hugepagesize:       2048 kB
-DirectMap4k:       90100 kB
-DirectMap2M:     2793472 kB
-DirectMap1G:     1048576 kB
