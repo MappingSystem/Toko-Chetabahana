@@ -17,37 +17,37 @@ tmpfs           370M  1.1M  369M   1% /run/docker.sock
 
 RAM
 
-MemTotal:        3781800 kB
-MemFree:         2640640 kB
-MemAvailable:    3176312 kB
-Buffers:          120536 kB
-Cached:           594224 kB
+MemTotal:        3781808 kB
+MemFree:         2720280 kB
+MemAvailable:    3199888 kB
+Buffers:          111896 kB
+Cached:           547444 kB
 SwapCached:            0 kB
-Active:           654628 kB
-Inactive:         340804 kB
-Active(anon):     281592 kB
+Active:           628812 kB
+Inactive:         288448 kB
+Active(anon):     258836 kB
 Inactive(anon):      180 kB
-Active(file):     373036 kB
-Inactive(file):   340624 kB
+Active(file):     369976 kB
+Inactive(file):   288268 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:               700 kB
+Dirty:               560 kB
 Writeback:             0 kB
-AnonPages:        280696 kB
-Mapped:           221036 kB
+AnonPages:        257968 kB
+Mapped:           202808 kB
 Shmem:              1080 kB
-Slab:              83076 kB
-SReclaimable:      50520 kB
-SUnreclaim:        32556 kB
-KernelStack:        3264 kB
-PageTables:         5928 kB
+Slab:              80728 kB
+SReclaimable:      49004 kB
+SUnreclaim:        31724 kB
+KernelStack:        3152 kB
+PageTables:         5880 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
-CommitLimit:     1890900 kB
-Committed_AS:    1194492 kB
+CommitLimit:     1890904 kB
+Committed_AS:    1140032 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -62,9 +62,9 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:       86004 kB
-DirectMap2M:     3846144 kB
-DirectMap1G:           0 kB
+DirectMap4k:       88052 kB
+DirectMap2M:     2795520 kB
+DirectMap1G:     1048576 kB
 
 ASSETS
 
@@ -107,15 +107,15 @@ PIPENV
 
 Collecting pipenv
   Downloading https://files.pythonhosted.org/packages/13/b4/3ffa55f77161cff9a5220f162670f7c5eb00df52e00939e203f601b0f579/pipenv-2018.11.26-py3-none-any.whl (5.2MB)
-Collecting certifi (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
 Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
 Collecting virtualenv-clone>=0.2.5 (from pipenv)
   Downloading https://files.pythonhosted.org/packages/ba/f8/50c2b7dbc99e05fce5e5b9d9a31f37c988c99acd4e8dedd720b7b8d4011d/virtualenv_clone-0.5.3-py2.py3-none-any.whl
+Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
 Collecting virtualenv (from pipenv)
   Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
-Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
-Installing collected packages: certifi, virtualenv-clone, virtualenv, pipenv
+Collecting certifi (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
+Installing collected packages: virtualenv-clone, virtualenv, certifi, pipenv
 Successfully installed certifi-2019.6.16 pipenv-2018.11.26 virtualenv-16.6.1 virtualenv-clone-0.5.3
 
 PACKAGES
@@ -232,8 +232,8 @@ bleach==2.1.4
     - six [required: >=1.9, installed: 1.12.0]
     - webencodings [required: Any, installed: 0.5.1]
   - six [required: Any, installed: 1.12.0]
-boto3==1.9.171
-  - botocore [required: >=1.12.171,<1.13.0, installed: 1.12.171]
+boto3==1.9.173
+  - botocore [required: >=1.12.173,<1.13.0, installed: 1.12.173]
     - docutils [required: >=0.10, installed: 0.14]
     - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
     - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
@@ -241,7 +241,7 @@ boto3==1.9.171
     - urllib3 [required: >=1.20,<1.26, installed: 1.25.3]
   - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
   - s3transfer [required: >=0.2.0,<0.3.0, installed: 0.2.1]
-    - botocore [required: >=1.12.36,<2.0.0, installed: 1.12.171]
+    - botocore [required: >=1.12.36,<2.0.0, installed: 1.12.173]
       - docutils [required: >=0.10, installed: 0.14]
       - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
       - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
@@ -266,7 +266,7 @@ django-bootstrap4==0.0.8
 django-cache-url==3.0.0
 django-countries==5.3.3
 django-debug-toolbar-request-history==0.0.11
-  - django-debug-toolbar [required: Any, installed: 1.11]
+  - django-debug-toolbar [required: Any, installed: 2.0]
     - Django [required: >=1.11, installed: 2.2.2]
       - pytz [required: Any, installed: 2019.1]
       - sqlparse [required: Any, installed: 0.3.0]
@@ -287,7 +287,7 @@ django-graphql-jwt==0.2.1
   - Django [required: >=1.11, installed: 2.2.2]
     - pytz [required: Any, installed: 2019.1]
     - sqlparse [required: Any, installed: 0.3.0]
-  - graphene-django [required: >=2.0.0, installed: 2.3.0]
+  - graphene-django [required: >=2.0.0, installed: 2.3.2]
     - Django [required: >=1.11, installed: 2.2.2]
       - pytz [required: Any, installed: 2019.1]
       - sqlparse [required: Any, installed: 0.3.0]
@@ -363,11 +363,11 @@ django-prices-openexchangerates==1.0.1
     - prices [required: >=1.0.0, installed: 1.0.0]
       - babel [required: >=2.5.0, installed: 2.7.0]
         - pytz [required: >=2015.7, installed: 2019.1]
-      - typing [required: >=3.6.0, installed: 3.6.6]
+      - typing [required: >=3.6.0, installed: 3.7.4]
   - prices [required: >=1.0.0, installed: 1.0.0]
     - babel [required: >=2.5.0, installed: 2.7.0]
       - pytz [required: >=2015.7, installed: 2019.1]
-    - typing [required: >=3.6.0, installed: 3.6.6]
+    - typing [required: >=3.6.0, installed: 3.7.4]
 django-prices-vatlayer==1.0.2
   - Django [required: >=1.11, installed: 2.2.2]
     - pytz [required: Any, installed: 2019.1]
@@ -379,7 +379,7 @@ django-prices-vatlayer==1.0.2
   - prices [required: >=1.0.0, installed: 1.0.0]
     - babel [required: >=2.5.0, installed: 2.7.0]
       - pytz [required: >=2015.7, installed: 2019.1]
-    - typing [required: >=3.6.0, installed: 3.6.6]
+    - typing [required: >=3.6.0, installed: 3.7.4]
   - requests [required: Any, installed: 2.22.0]
     - certifi [required: >=2017.4.17, installed: 2019.6.16]
     - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
@@ -481,13 +481,13 @@ google-measurement-protocol==1.0.0
   - prices [required: >=1.0.0, installed: 1.0.0]
     - babel [required: >=2.5.0, installed: 2.7.0]
       - pytz [required: >=2015.7, installed: 2019.1]
-    - typing [required: >=3.6.0, installed: 3.6.6]
+    - typing [required: >=3.6.0, installed: 3.7.4]
   - requests [required: >=2.0,<3.0a0, installed: 2.22.0]
     - certifi [required: >=2017.4.17, installed: 2019.6.16]
     - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
     - idna [required: >=2.5,<2.9, installed: 2.8]
     - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
-  - typing [required: >=3.6.0, installed: 3.6.6]
+  - typing [required: >=3.6.0, installed: 3.7.4]
 graphene-django-optimizer==0.4.1
 gunicorn==19.9.0
 Markdown==3.1.1
@@ -526,7 +526,7 @@ social-auth-app-django==3.1.0
         - idna [required: >=2.5,<2.9, installed: 2.8]
         - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
     - six [required: >=1.10.0, installed: 1.12.0]
-stripe==2.30.0
+stripe==2.30.1
   - requests [required: >=2.20, installed: 2.22.0]
     - certifi [required: >=2017.4.17, installed: 2019.6.16]
     - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
@@ -607,7 +607,7 @@ Get:5 http://deb.debian.org/debian stretch Release.gpg [2434 B]
 Get:6 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
 Get:7 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
 Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
-Fetched 7914 kB in 1s (4533 kB/s)
+Fetched 7914 kB in 1s (4561 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -621,7 +621,7 @@ Need to get 296 kB of archives.
 After this operation, 589 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian stretch/main amd64 tcl-expect amd64 5.45-7+deb9u1 [131 kB]
 Get:2 http://deb.debian.org/debian stretch/main amd64 expect amd64 5.45-7+deb9u1 [165 kB]
-Fetched 296 kB in 0s (3583 kB/s)
+Fetched 296 kB in 0s (4629 kB/s)
 Selecting previously unselected package tcl-expect:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30576 files and directories currently installed.)
 Preparing to unpack .../tcl-expect_5.45-7+deb9u1_amd64.deb ...
@@ -636,7 +636,7 @@ Processing triggers for libc-bin (2.24-11+deb9u4) ...
 
 AGENT
 
-Agent pid 3134
+Agent pid 3125
 spawn ssh-add /builder/home/.ssh/id_rsa
 Enter passphrase for /builder/home/.ssh/id_rsa: 
 Identity added: /builder/home/.ssh/id_rsa (/builder/home/.ssh/id_rsa)4096 SHA256:xefGz0xMkK/wmtCvyIVLdqNtJOGXVGRHUVp4BtSxBf8 /builder/home/.ssh/id_rsa (RSA)
@@ -674,18 +674,18 @@ Untracked files:
 	saleor/gunicorn.py
 
 no changes added to commit (use "git add" and/or "git commit -a")
-[Chetabahana 4fc160a31] Add support for taxonomy
- 5 files changed, 42 insertions(+), 24 deletions(-)
+[Chetabahana 4bb1614ff] Add support for taxonomy
+ 5 files changed, 44 insertions(+), 26 deletions(-)
  create mode 100644 saleor/gunicorn.py
 
 MASTER
 
-HEAD is now at 4fc160a31 Add support for taxonomy
+HEAD is now at 4bb1614ff Add support for taxonomy
 
 NEXT
 
 Branch taxonomy set up to track remote branch taxonomy from origin.
-HEAD is now at 4fc160a31 Add support for taxonomy
+HEAD is now at 4bb1614ff Add support for taxonomy
 On branch taxonomy
 Your branch and 'origin/taxonomy' have diverged,
 and have 1 and 2 different commits each, respectively.
@@ -705,9 +705,9 @@ Untracked files:
 	saleor/dashboard/locale/is/
 
 no changes added to commit (use "git add" and/or "git commit -a")
-[taxonomy 06886e55a] Add support for taxonomy
+[taxonomy a3c7e6194] Add support for taxonomy
  6 files changed, 9123 insertions(+), 4 deletions(-)
  create mode 100644 locale/is/LC_MESSAGES/django.po
  create mode 100644 locale/is/LC_MESSAGES/djangojs.po
  create mode 100644 saleor/dashboard/locale/is/LC_MESSAGES/django.po
-Agent pid 3134 killed
+Agent pid 3125 killed
