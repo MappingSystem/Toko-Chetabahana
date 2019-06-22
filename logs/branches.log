@@ -1,107 +1,175 @@
 
+WHOAMI
+
+root
+/builder/home
+uid=0(root) gid=0(root) groups=0(root)
+
+DISK
+
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         184G   86G   99G  47% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs           1.9G     0  1.9G   0% /sys/fs/cgroup
+/dev/sda1       184G   86G   99G  47% /workspace
+shm              64M     0   64M   0% /dev/shm
+tmpfs           370M  1.1M  369M   1% /run/docker.sock
+
+RAM
+
+MemTotal:        3781800 kB
+MemFree:         2323076 kB
+MemAvailable:    3094108 kB
+Buffers:          113672 kB
+Cached:           832344 kB
+SwapCached:            0 kB
+Active:           967988 kB
+Inactive:         332632 kB
+Active(anon):     355468 kB
+Inactive(anon):      196 kB
+Active(file):     612520 kB
+Inactive(file):   332436 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:             36380 kB
+Writeback:             0 kB
+AnonPages:        354608 kB
+Mapped:           273000 kB
+Shmem:              1060 kB
+Slab:              91712 kB
+SReclaimable:      58648 kB
+SUnreclaim:        33064 kB
+KernelStack:        3328 kB
+PageTables:         7016 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1890900 kB
+Committed_AS:    1495472 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       94196 kB
+DirectMap2M:     2789376 kB
+DirectMap1G:     1048576 kB
+
 ASSETS
 
 /builder/home:
 total 56
-drwxr-xr-x 7 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 4 root root 4096 Jun 22 14:40 ..
--rw-r--r-- 1 root root   25 Jun 22 14:40 .bash_aliases
--rw-r--r-- 1 root root  240 Jun 22 14:40 .bash_logout
--rw-r--r-- 1 root root 3771 Jun 22 14:40 .bashrc
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 .config
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 .docker
--rw-r--r-- 1 root root   58 Jun 22 14:40 .gitconfig
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 .logs
--rw-r--r-- 1 root root  903 Jun 22 14:40 .profile
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 .ssh
--rw-r--r-- 1 root root  175 Jun 22 14:40 .transifexrc
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 .tx
--rw-r--r-- 1 root root  248 Jun 22 14:40 .wget-hsts
+drwxr-xr-x 7 root root 4096 Jun 22 15:20 .
+drwxr-xr-x 4 root root 4096 Jun 22 15:21 ..
+-rw-r--r-- 1 root root   25 Jun 22 15:20 .bash_aliases
+-rw-r--r-- 1 root root  240 Jun 22 15:20 .bash_logout
+-rw-r--r-- 1 root root 3771 Jun 22 15:20 .bashrc
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 .config
+drwxr-xr-x 3 root root 4096 Jun 22 15:20 .docker
+-rw-r--r-- 1 root root   58 Jun 22 15:20 .gitconfig
+drwxr-xr-x 2 root root 4096 Jun 22 15:20 .logs
+-rw-r--r-- 1 root root  903 Jun 22 15:20 .profile
+drwxr-xr-x 2 root root 4096 Jun 22 15:21 .ssh
+-rw-r--r-- 1 root root  175 Jun 22 15:20 .transifexrc
+drwxr-xr-x 2 root root 4096 Jun 22 15:20 .tx
+-rw-r--r-- 1 root root  248 Jun 22 15:20 .wget-hsts
 
 /builder/home/.config:
 total 12
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 gcloud
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 .
+drwxr-xr-x 7 root root 4096 Jun 22 15:20 ..
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 gcloud
 
 /builder/home/.config/gcloud:
 total 20
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
--rw-r--r-- 1 root root  245 Jun 22 14:40 .last_update_check.json
--rw------- 1 root root    4 Jun 22 14:40 gce
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 logs
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 .
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 ..
+-rw-r--r-- 1 root root  245 Jun 22 15:21 .last_update_check.json
+-rw------- 1 root root    4 Jun 22 15:21 gce
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 logs
 
 /builder/home/.config/gcloud/logs:
 total 12
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 2019.06.22
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 .
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 ..
+drwxr-xr-x 2 root root 4096 Jun 22 15:21 2019.06.22
 
 /builder/home/.config/gcloud/logs/2019.06.22:
 total 16
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
--rw-r--r-- 1 root root  796 Jun 22 14:40 14.40.53.818564.log
--rw-r--r-- 1 root root  604 Jun 22 14:40 14.40.55.249582.log
+drwxr-xr-x 2 root root 4096 Jun 22 15:21 .
+drwxr-xr-x 3 root root 4096 Jun 22 15:21 ..
+-rw-r--r-- 1 root root  796 Jun 22 15:21 15.21.01.634191.log
+-rw-r--r-- 1 root root  604 Jun 22 15:21 15.21.04.269854.log
 
 /builder/home/.docker:
 total 28
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 branch
--rw-r--r-- 1 root root 2688 Jun 22 14:40 config.json
--rw-r--r-- 1 root root  563 Jun 22 14:40 cron.sh
--rw-r--r-- 1 root root  333 Jun 22 14:40 init.sh
--rw-r--r-- 1 root root 3173 Jun 22 14:40 update.sh
+drwxr-xr-x 3 root root 4096 Jun 22 15:20 .
+drwxr-xr-x 7 root root 4096 Jun 22 15:20 ..
+drwxr-xr-x 3 root root 4096 Jun 22 15:20 branch
+-rw-r--r-- 1 root root 2688 Jun 22 15:20 config.json
+-rw-r--r-- 1 root root  541 Jun 22 15:20 cron.sh
+-rw-r--r-- 1 root root  333 Jun 22 15:20 init.sh
+-rw-r--r-- 1 root root 3173 Jun 22 15:20 update.sh
 
 /builder/home/.docker/branch:
 total 108
-drwxr-xr-x 3 root root  4096 Jun 22 14:40 .
-drwxr-xr-x 3 root root  4096 Jun 22 14:40 ..
--rw-r--r-- 1 root root  2242 Jun 22 14:40 Pipfile
--rw-r--r-- 1 root root 83966 Jun 22 14:40 Pipfile.lock
--rw-r--r-- 1 root root  2678 Jun 22 14:40 requirements.txt
--rw-r--r-- 1 root root  1333 Jun 22 14:40 requirements_dev.txt
-drwxr-xr-x 2 root root  4096 Jun 22 14:40 saleor
+drwxr-xr-x 3 root root  4096 Jun 22 15:20 .
+drwxr-xr-x 3 root root  4096 Jun 22 15:20 ..
+-rw-r--r-- 1 root root  2242 Jun 22 15:20 Pipfile
+-rw-r--r-- 1 root root 83966 Jun 22 15:20 Pipfile.lock
+-rw-r--r-- 1 root root  2678 Jun 22 15:20 requirements.txt
+-rw-r--r-- 1 root root  1333 Jun 22 15:20 requirements_dev.txt
+drwxr-xr-x 2 root root  4096 Jun 22 15:20 saleor
 
 /builder/home/.docker/branch/saleor:
 total 12
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
--rw-r--r-- 1 root root  278 Jun 22 14:40 gunicorn.py
+drwxr-xr-x 2 root root 4096 Jun 22 15:20 .
+drwxr-xr-x 3 root root 4096 Jun 22 15:20 ..
+-rw-r--r-- 1 root root  278 Jun 22 15:20 gunicorn.py
 
 /builder/home/.logs:
 total 232
-drwxr-xr-x 2 root root   4096 Jun 22 14:40 .
-drwxr-xr-x 7 root root   4096 Jun 22 14:40 ..
--rw-r--r-- 1 root root  23970 Jun 22 14:40 branches.log
--rw-r--r-- 1 root root 202260 Jun 22 14:40 compose.log
+drwxr-xr-x 2 root root   4096 Jun 22 15:20 .
+drwxr-xr-x 7 root root   4096 Jun 22 15:20 ..
+-rw-r--r-- 1 root root  23970 Jun 22 15:20 branches.log
+-rw-r--r-- 1 root root 202260 Jun 22 15:20 compose.log
 
 /builder/home/.ssh:
-total 64
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
--rw------- 1 root root 2314 Jun 22 14:40 Chetabahana-f92949fb068b.json
--rw------- 1 root root  209 Jun 22 14:40 agent
--rw------- 1 root root 2604 Jun 22 14:40 authorized_keys
--rw------- 1 root root   51 Jun 22 14:40 config
--rw------- 1 root root  296 Jun 22 14:40 expect_clone
--rw------- 1 root root  201 Jun 22 14:40 expect_push
--rw------- 1 root root 1675 Jun 22 14:40 google_compute_engine
--rw------- 1 root root 1758 Jun 22 14:40 google_compute_engine.enc
--rw------- 1 root root  399 Jun 22 14:40 google_compute_engine.pub
--rw------- 1 root root  222 Jun 22 14:40 google_compute_known_hosts
--rw------- 1 root root 3326 Jun 22 14:40 id_rsa
--rw------- 1 root root 3409 Jun 22 14:40 id_rsa.enc
--rw------- 1 root root 1326 Jun 22 14:40 known_hosts
--rw------- 1 root root  282 Jun 22 14:40 push
+total 68
+drwxr-xr-x 2 root root 4096 Jun 22 15:21 .
+drwxr-xr-x 7 root root 4096 Jun 22 15:20 ..
+-rw------- 1 root root 2314 Jun 22 15:20 Chetabahana-f92949fb068b.json
+-rw------- 1 root root  209 Jun 22 15:20 agent
+-rw------- 1 root root 2604 Jun 22 15:20 authorized_keys
+-rw------- 1 root root   51 Jun 22 15:20 config
+-rw------- 1 root root  296 Jun 22 15:20 expect_clone
+-rw------- 1 root root  201 Jun 22 15:20 expect_push
+-rw------- 1 root root   40 Jun 22 15:20 github_token
+-rw------- 1 root root 1675 Jun 22 15:21 google_compute_engine
+-rw------- 1 root root 1758 Jun 22 15:20 google_compute_engine.enc
+-rw------- 1 root root  399 Jun 22 15:20 google_compute_engine.pub
+-rw------- 1 root root  222 Jun 22 15:20 google_compute_known_hosts
+-rw------- 1 root root 3326 Jun 22 15:21 id_rsa
+-rw------- 1 root root 3409 Jun 22 15:20 id_rsa.enc
+-rw------- 1 root root 1326 Jun 22 15:20 known_hosts
+-rw------- 1 root root  282 Jun 22 15:20 push
 
 /builder/home/.tx:
 total 12
-drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
-drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
--rw-r--r-- 1 root root   41 Jun 22 14:40 config
+drwxr-xr-x 2 root root 4096 Jun 22 15:20 .
+drwxr-xr-x 7 root root 4096 Jun 22 15:20 ..
+-rw-r--r-- 1 root root   41 Jun 22 15:20 config
 
 EXPECT
 
@@ -113,7 +181,7 @@ Get:5 http://deb.debian.org/debian stretch Release.gpg [2434 B]
 Get:6 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
 Get:7 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
 Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
-Fetched 7914 kB in 1s (4134 kB/s)
+Fetched 7914 kB in 3s (2371 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -127,7 +195,7 @@ Need to get 296 kB of archives.
 After this operation, 589 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian stretch/main amd64 tcl-expect amd64 5.45-7+deb9u1 [131 kB]
 Get:2 http://deb.debian.org/debian stretch/main amd64 expect amd64 5.45-7+deb9u1 [165 kB]
-Fetched 296 kB in 0s (5003 kB/s)
+Fetched 296 kB in 0s (5113 kB/s)
 Selecting previously unselected package tcl-expect:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30576 files and directories currently installed.)
 Preparing to unpack .../tcl-expect_5.45-7+deb9u1_amd64.deb ...
