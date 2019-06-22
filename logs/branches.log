@@ -1,33 +1,119 @@
 
 ASSETS
 
-/root:
-total 24
-drwx------ 1 root root 4096 Jun 22 14:38 .
-drwxr-xr-x 1 root root 4096 Jun 22 14:38 ..
--rw-r--r-- 1 root root  570 Jan 31  2010 .bashrc
--rw-r--r-- 1 root root  148 Aug 17  2015 .profile
-lrwxrwxrwx 1 root root   18 Jun 22 14:38 .ssh -> /builder/home/.ssh
--rw-r--r-- 1 root root  212 Jun 11 01:07 .wget-hsts
-drwxr-xr-x 2 root root 4096 Jun 22 14:38 tokencache
+/builder/home:
+total 56
+drwxr-xr-x 7 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 4 root root 4096 Jun 22 14:40 ..
+-rw-r--r-- 1 root root   25 Jun 22 14:40 .bash_aliases
+-rw-r--r-- 1 root root  240 Jun 22 14:40 .bash_logout
+-rw-r--r-- 1 root root 3771 Jun 22 14:40 .bashrc
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 .config
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 .docker
+-rw-r--r-- 1 root root   58 Jun 22 14:40 .gitconfig
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 .logs
+-rw-r--r-- 1 root root  903 Jun 22 14:40 .profile
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 .ssh
+-rw-r--r-- 1 root root  175 Jun 22 14:40 .transifexrc
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 .tx
+-rw-r--r-- 1 root root  248 Jun 22 14:40 .wget-hsts
 
-/root/tokencache:
+/builder/home/.config:
 total 12
-drwxr-xr-x 2 root root 4096 Jun 22 14:38 .
-drwx------ 1 root root 4096 Jun 22 14:38 ..
--rw-r--r-- 1 root root  191 Jun 22 14:38 gsutil_token_cache
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 gcloud
+
+/builder/home/.config/gcloud:
+total 20
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
+-rw-r--r-- 1 root root  245 Jun 22 14:40 .last_update_check.json
+-rw------- 1 root root    4 Jun 22 14:40 gce
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 logs
+
+/builder/home/.config/gcloud/logs:
+total 12
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 2019.06.22
+
+/builder/home/.config/gcloud/logs/2019.06.22:
+total 16
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
+-rw-r--r-- 1 root root  796 Jun 22 14:40 14.40.53.818564.log
+-rw-r--r-- 1 root root  604 Jun 22 14:40 14.40.55.249582.log
+
+/builder/home/.docker:
+total 28
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 branch
+-rw-r--r-- 1 root root 2688 Jun 22 14:40 config.json
+-rw-r--r-- 1 root root  563 Jun 22 14:40 cron.sh
+-rw-r--r-- 1 root root  333 Jun 22 14:40 init.sh
+-rw-r--r-- 1 root root 3173 Jun 22 14:40 update.sh
+
+/builder/home/.docker/branch:
+total 108
+drwxr-xr-x 3 root root  4096 Jun 22 14:40 .
+drwxr-xr-x 3 root root  4096 Jun 22 14:40 ..
+-rw-r--r-- 1 root root  2242 Jun 22 14:40 Pipfile
+-rw-r--r-- 1 root root 83966 Jun 22 14:40 Pipfile.lock
+-rw-r--r-- 1 root root  2678 Jun 22 14:40 requirements.txt
+-rw-r--r-- 1 root root  1333 Jun 22 14:40 requirements_dev.txt
+drwxr-xr-x 2 root root  4096 Jun 22 14:40 saleor
+
+/builder/home/.docker/branch/saleor:
+total 12
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 3 root root 4096 Jun 22 14:40 ..
+-rw-r--r-- 1 root root  278 Jun 22 14:40 gunicorn.py
+
+/builder/home/.logs:
+total 232
+drwxr-xr-x 2 root root   4096 Jun 22 14:40 .
+drwxr-xr-x 7 root root   4096 Jun 22 14:40 ..
+-rw-r--r-- 1 root root  23970 Jun 22 14:40 branches.log
+-rw-r--r-- 1 root root 202260 Jun 22 14:40 compose.log
+
+/builder/home/.ssh:
+total 64
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
+-rw------- 1 root root 2314 Jun 22 14:40 Chetabahana-f92949fb068b.json
+-rw------- 1 root root  209 Jun 22 14:40 agent
+-rw------- 1 root root 2604 Jun 22 14:40 authorized_keys
+-rw------- 1 root root   51 Jun 22 14:40 config
+-rw------- 1 root root  296 Jun 22 14:40 expect_clone
+-rw------- 1 root root  201 Jun 22 14:40 expect_push
+-rw------- 1 root root 1675 Jun 22 14:40 google_compute_engine
+-rw------- 1 root root 1758 Jun 22 14:40 google_compute_engine.enc
+-rw------- 1 root root  399 Jun 22 14:40 google_compute_engine.pub
+-rw------- 1 root root  222 Jun 22 14:40 google_compute_known_hosts
+-rw------- 1 root root 3326 Jun 22 14:40 id_rsa
+-rw------- 1 root root 3409 Jun 22 14:40 id_rsa.enc
+-rw------- 1 root root 1326 Jun 22 14:40 known_hosts
+-rw------- 1 root root  282 Jun 22 14:40 push
+
+/builder/home/.tx:
+total 12
+drwxr-xr-x 2 root root 4096 Jun 22 14:40 .
+drwxr-xr-x 7 root root 4096 Jun 22 14:40 ..
+-rw-r--r-- 1 root root   41 Jun 22 14:40 config
 
 EXPECT
 
-Ign:1 http://deb.debian.org/debian stretch InRelease
-Get:2 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:3 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Get:1 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Ign:2 http://deb.debian.org/debian stretch InRelease
+Get:3 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
 Get:4 http://deb.debian.org/debian stretch Release [118 kB]
 Get:5 http://deb.debian.org/debian stretch Release.gpg [2434 B]
-Get:6 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
-Get:7 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
+Get:6 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
+Get:7 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
 Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
-Fetched 7914 kB in 3s (2424 kB/s)
+Fetched 7914 kB in 1s (4134 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -41,7 +127,7 @@ Need to get 296 kB of archives.
 After this operation, 589 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian stretch/main amd64 tcl-expect amd64 5.45-7+deb9u1 [131 kB]
 Get:2 http://deb.debian.org/debian stretch/main amd64 expect amd64 5.45-7+deb9u1 [165 kB]
-Fetched 296 kB in 0s (5048 kB/s)
+Fetched 296 kB in 0s (5003 kB/s)
 Selecting previously unselected package tcl-expect:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30576 files and directories currently installed.)
 Preparing to unpack .../tcl-expect_5.45-7+deb9u1_amd64.deb ...
