@@ -7,7 +7,7 @@ services:
 
   celery:
     volumes: 
-      - ./windows/cygwin/home/Chetabahana/.ssh:/app/.ssh
+      - /home/Chetabahana/.ssh:/app/.ssh
          
   postgres:
     ports:
@@ -15,8 +15,8 @@ services:
 
   saleor:
     volumes: 
-      - ./windows/cygwin/home/Chetabahana/.ssh:/app/.ssh
       - /tmp/volume/static:/app/static
+      - /home/Chetabahana/.ssh:/app/.ssh
       # shared volume between celery and web
       #- ./saleor/:/app/saleor:Z
       #- ./templates/:/app/templates:Z
