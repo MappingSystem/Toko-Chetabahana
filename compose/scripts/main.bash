@@ -191,7 +191,7 @@ then
    #avoid lack of update other than master
     cd $HOME && git clone git@github.com:MarketLeader/Toko-Chetabahana.git
     cd Toko-Chetabahana && rm -rf compose && cp -frpT /workspace compose
-    rm -rf compose/.git compose/home/chetabahana/.ssh
+    rm -rf compose/.git compose/home
     git add . && git commit -m "sync compose"
     git push -u origin master
     rm -rf Toko-Chetabahana
