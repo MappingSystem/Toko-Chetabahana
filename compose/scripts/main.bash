@@ -190,7 +190,8 @@ then
 
    #avoid lack of update other than master
     cd $HOME && git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-    cd Toko-Chetabahana && rm -rf compose && cp -frpT /workspace compose
+    cd Toko-Chetabahana && rm -rf compose
+    cp -frpT /workspace compose
     rm -rf compose/.git compose/home
     git add . && git commit -m "sync compose"
     git push -u origin master
@@ -211,7 +212,8 @@ else
     eval `ssh-agent` && expect $AGENT && ssh-add -l
 
     git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-    cd Toko-Chetabahana && cp -f ~/.docker/compose/scripts/compose.log logs/
+    cd Toko-Chetabahana && sudo rm -rf compose/home
+    cp -f ~/.docker/compose/scripts/compose.log logs/
     git add . && git commit -m "sync compose"
     git push -u origin master
 	
