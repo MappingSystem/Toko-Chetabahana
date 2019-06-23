@@ -1,0 +1,29 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['kms', 'decrypt', '--location', 'global', 
+         '--keyring', 'my-keyring', '--key', 'github-key',
+         '--plaintext-file', '${_LOCAL_PATH}/.ssh/id_rsa', 
+         '--ciphertext-file', '${_LOCAL_PATH}/.ssh/id_rsa.enc'] 
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['kms', 'decrypt', '--location', 'global', 
+         '--keyring', 'my-keyring', '--key', 'google-compute-engine-key',
+         '--plaintext-file', '${_LOCAL_PATH}/.ssh/google_compute_engine', 
+         '--ciphertext-file', '${_LOCAL_PATH}/.ssh/google_compute_engine.enc'] 
+
+- name: 'python'
+  args: ['bash', './scripts/main.bash']
+
+- name: 'gcr.io/cloud-builders/gcloud' 
+  args: ['compute', 'scp', '--zone', '${_ZONE}', '--verbosity', 'debug', 
+         '--recurse', '--force-key-file-overwrite', '${_LOCAL_PATH}',  
+         '${_INSTANCE_NAME}:${_INSTANCE_PATH}']
+
+substitutions:
+  _ZONE: us-central1-c
+  _INSTANCE_PATH: /home
+  _BUILD_ID: 'v1-220004-cron'
+  _INSTANCE_NAME: chetabahana@backend
+  _LOCAL_PATH: /workspace/home/chetabahana
+
+timeout: "1800s"
