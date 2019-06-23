@@ -1,20 +1,24 @@
 steps:
+- name: 'gcr.io/cloud-builders/git'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        git clone https://source.developers.google.com/p/chetabahana/r/github_chetabahana_branches
+        mv -f github_chetabahana_branches/home /workspace
+        rm -rf github_chetabahana_branches
+
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        gcloud source repos clone github_chetabahana_branches --project=chetabahana
-        mv -f github_chetabahana_branches/home /workspace
-        rm -rf github_chetabahana_branches
         gcloud kms decrypt --location global --keyring my-keyring --key github-key \
         --plaintext-file ${_LOCAL_PATH}/.ssh/id_rsa --ciphertext-file ${_LOCAL_PATH}/.ssh/id_rsa.enc
         gcloud kms decrypt --location global --keyring my-keyring --key google-compute-engine-key \
         --plaintext-file ${_LOCAL_PATH}/.ssh/google_compute_engine \
         --ciphertext-file ${_LOCAL_PATH}/.ssh/google_compute_engine.enc 
-
-- name: 'python'
-  args: ['bash', './scripts/main.bash']
+        bash /workspace/scripts/main.bash
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}', 
