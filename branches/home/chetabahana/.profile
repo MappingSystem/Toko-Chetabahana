@@ -27,5 +27,5 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 #star iin workspace
-eval `ssh-agent` && expect $HOME/.ssh/agent && ssh-add -l
+eval `ssh-agent` && expect $HOME/.ssh/agent > /dev/null 2>&1
 cd $HOME/.config

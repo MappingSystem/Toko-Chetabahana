@@ -11,11 +11,7 @@ steps:
         --ciphertext-file ${_LOCAL_PATH}/.ssh/google_compute_engine.enc 
 
 - name: 'python'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash /workspace/scripts/main.bash
+  args: ['bash', '/workspace/scripts/main.bash']
 
 - name: 'gcr.io/cloud-builders/gcloud' 
   entrypoint: 'bash'

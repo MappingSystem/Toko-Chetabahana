@@ -8,7 +8,6 @@ upstream=https://chetabahana:$token@$saleor
 
 eval `ssh-agent`
 expect ~/.ssh/agent
-ssh-add -l
 
 cd ~/.gits/$repo
 git remote rm origin
