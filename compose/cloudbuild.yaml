@@ -1,6 +1,6 @@
 steps:
 - name: 'python'
-  args: ['bash', './scripts/ssh.bash']
+  args: ['bash', './scripts/main.bash']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}', 
@@ -12,6 +12,6 @@ substitutions:
   _INSTANCE_PATH: /home/chetabahana
   _INSTANCE_NAME: chetabahana@backend
   _REPOSITORY: https://github.com/mirumee/saleor.git
-  _BUILD_ID: 'v1-111520-cron'
+  _BUILD_ID: 'v1-221653-cron'
 
 timeout: "1800s"
