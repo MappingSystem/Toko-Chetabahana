@@ -12,6 +12,6 @@ compose/home/
 # Ignore credential files
 .gitconfig
 .transifexrc
-compose/common.env
 compose/deploy/product/app.yaml
+branches/home/chetabahana/.docker/common.env
 compose/deploy/product/Chetabahana-f92949fb068b.json
