@@ -1,5 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        gcloud source repos clone github_chetabahana_branches --project=chetabahana
+
+- name: 'gcr.io/cloud-builders/gcloud'
   args: ['kms', 'decrypt', '--location', 'global', 
          '--keyring', 'my-keyring', '--key', 'github-key',
          '--plaintext-file', '${_LOCAL_PATH}/.ssh/id_rsa', 
