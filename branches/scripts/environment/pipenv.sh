@@ -1,5 +1,5 @@
 #!/bin/sh
-return
+
 : <<'END'
 $ pipenv
 Usage: pipenv [OPTIONS] COMMAND [ARGS]...

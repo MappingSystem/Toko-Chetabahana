@@ -1,5 +1,5 @@
 #!/bin/sh
-return
+
 : <<'END'
 $ git -h
 unknown option: -h

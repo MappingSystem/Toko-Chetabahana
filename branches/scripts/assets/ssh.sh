@@ -1,4 +1,5 @@
 #!/bin/sh
+
 : <<'END'
 To use your SSH key with Cloud Build, you must use a Cloud KMS CryptoKey:
 https://cloud.google.com/cloud-build/docs/access-private-github-repos
