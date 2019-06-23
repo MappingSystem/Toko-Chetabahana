@@ -7,6 +7,7 @@ __pycache__/
 
 # Ignore credential dirs
 .ssh
+compose/home/
 
 # Ignore credential files
 .gitconfig
