@@ -162,10 +162,10 @@ echo "\nCLEANING\n"
 sudo rm -rfv /tmp/volume
 mkdir -pv /tmp/volume/static && chmod -R a+rw /tmp/volume
 
-echo "\nPULLING\n"
-docker pull redis
-docker pull postgres
-docker pull chetabahana/saleor
+#echo "\nPULLING\n"
+#docker pull redis
+#docker pull postgres
+#docker pull chetabahana/saleor
 #docker pull chetabahana/celery
 
 echo "\nCLAIMING\n"
