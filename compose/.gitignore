@@ -21,6 +21,4 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
-.ssh
 .cache
-compose/home/
