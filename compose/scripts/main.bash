@@ -211,7 +211,7 @@ else
     eval `ssh-agent` && expect $AGENT && ssh-add -l
 
     git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-    cd Toko-Chetabahana && cp -f /workspace/scripts/compose.log logs/
+    cd Toko-Chetabahana && cp -f ~/.docker/compose/scripts/compose.log logs/
     git add . && git commit -m "sync compose"
     git push -u origin master
 	
