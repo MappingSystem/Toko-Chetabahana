@@ -5,7 +5,9 @@ steps:
   - '-c'
   - |
         gcloud source repos clone github_chetabahana_branches --project=chetabahana
-
+        mv -f github_chetabahana_branches/home /workspace
+        rm -rf github_chetabahana_branches/home
+        
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['kms', 'decrypt', '--location', 'global', 
          '--keyring', 'my-keyring', '--key', 'github-key',
