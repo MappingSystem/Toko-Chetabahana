@@ -1,5 +1,5 @@
 #!/bin/sh
-
+return
 : <<'END'
 $ docker logs --help
 

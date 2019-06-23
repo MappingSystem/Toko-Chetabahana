@@ -1,4 +1,5 @@
 #!/bin/sh
+return
 : <<'END'
 $ docker cp --help
 Copy files/folders between a container and the local filesystem

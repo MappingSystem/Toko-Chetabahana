@@ -1,17 +1,28 @@
 steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['kms', 'decrypt', '--location', 'global', 
+         '--keyring', 'my-keyring', '--key', 'github-key',
+         '--plaintext-file', '${_LOCAL_PATH}/.ssh/id_rsa', 
+         '--ciphertext-file', '${_LOCAL_PATH}/.ssh/id_rsa.enc'] 
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['kms', 'decrypt', '--location', 'global', 
+         '--keyring', 'my-keyring', '--key', 'google-compute-engine-key',
+         '--plaintext-file', '${_LOCAL_PATH}/.ssh/google_compute_engine', 
+         '--ciphertext-file', '${_LOCAL_PATH}/.ssh/google_compute_engine.enc'] 
+
 - name: 'python'
   args: ['bash', './scripts/main.bash']
 
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}', 
-         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
+#- name: 'gcr.io/cloud-builders/gcloud'
+#  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}', 
+#         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
 
 substitutions:
   _ZONE: us-central1-c
-  _LOCAL_PATH: /workspace/.docker
+  _BUILD_ID: 'v1-221653-cron'
   _INSTANCE_PATH: /home/chetabahana
   _INSTANCE_NAME: chetabahana@backend
-  _REPOSITORY: https://github.com/mirumee/saleor.git
-  _BUILD_ID: 'v1-221653-cron'
+  _LOCAL_PATH: /workspace/home/chetabahana
 
 timeout: "1800s"

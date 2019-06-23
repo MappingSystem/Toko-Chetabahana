@@ -1,5 +1,0 @@
-#[ -f requirements.txt ] && pip freeze -f https://pypi.python.org/simple > requirements.txt || sleep 1
-
-git status && git add .
-git commit -m "local commit"
-expect ~/.ssh/agent_pub
