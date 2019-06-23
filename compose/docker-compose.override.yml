@@ -7,7 +7,7 @@ services:
 
   celery:
     volumes: 
-      - ./home/chetabahana/.ssh:/app/.ssh
+      - /home/chetabahana/.ssh:/app/.ssh
          
   postgres:
     ports:
@@ -16,7 +16,7 @@ services:
   saleor:
     volumes: 
       - /tmp/volume/static:/app/static
-      - ./home/chetabahana/.ssh:/app/.ssh
+      - /home/chetabahana/.ssh:/app/.ssh
       # shared volume between celery and web
       #- ./saleor/:/app/saleor:Z
       #- ./templates/:/app/templates:Z
