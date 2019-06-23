@@ -2,6 +2,7 @@ encoding: utf-8
 highlighter: rouge
 exclude:
   - branches
+  - compose
 plugins:
   - jekyll-feed
   - jekyll-coffeescrip
