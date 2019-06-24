@@ -5,7 +5,7 @@ steps:
 
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  args: ['-c', 'bash /workspace/scripts/clean.bash']
+  args: ['-c', 'bash /workspace/scripts/init.bash']
         
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
