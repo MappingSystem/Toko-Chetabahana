@@ -125,6 +125,7 @@ id
 echo "\nDISK\n"
 df -h
 
+return
 echo "\nNET STATUS\n"
 sudo netstat -plnt
 

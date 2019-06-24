@@ -191,6 +191,10 @@ echo "\nPOSTGRES\n"
 CURRENT_UID=$(id -u):$(id -g) docker-compose up -d postgres
 docker inspect workspace_postgres_1
 
+echo "\nCELERY\n"
+CURRENT_UID=$(id -u):$(id -g) docker-compose up -d celery
+docker inspect workspace_celery_1
+
 echo "\nMIGRATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py migrate --verbosity 3
 
@@ -200,10 +204,4 @@ docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py collec
 echo "\nPOPULATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py populatedb --createsuperuser --verbosity 3
   
-#echo "\nMEDIA\n"
-#docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py create_thumbnails --verbosity 3
-
-echo "\nCELERY\n"
-CURRENT_UID=$(id -u):$(id -g) docker-compose up -d celery
-docker inspect workspace_celery_1
 sleep 10

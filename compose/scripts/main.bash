@@ -175,8 +175,8 @@ chmod 600 $HOME/.ssh/*
 ls -alR $HOME
 	
 echo -e "\nEXPECT\n"
-apt-get update
-apt-get --assume-yes install expect
+apt-get update > /dev/null
+apt-get --assume-yes install expect > /dev/null
 
 echo -e "\nSYNCHING\n"
 AGENT=$HOME/.ssh/agent
