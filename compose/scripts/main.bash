@@ -176,6 +176,7 @@ ls -alR $HOME
 	
 echo -e "\nAGENT\n"
 apt-get update > /dev/null
+apt-get install -y --no-install-recommends apt-utils
 apt-get --assume-yes install jq > /dev/null
 apt-get --assume-yes install nmap > /dev/null
 apt-get --assume-yes install expect > /dev/null

@@ -163,24 +163,12 @@ echo "\nCLEANING\n"
 mkdir -pv /tmp/volume/static
 chmod -R a+rw /tmp/volume
 
-#echo "\nPULLING\n"
-#docker pull redis
-#docker pull postgres
-#docker pull chetabahana/saleor
-#docker pull chetabahana/celery
-
-#echo "\nCLAIMING\n"
-#docker system prune --force
-
-#echo "\nIMAGES\n"
-#docker images --all
-
 echo "\nCONFIG\n"
 DESTINATION=/usr/local/bin/docker-compose
 SOURCE=https://github.com/docker/compose/releases/download
 VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
 RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
-curl -L $RELEASE -o $DESTINATION && chmod +x $DESTINATION
+curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
 docker-compose --version
 docker-compose config
 
