@@ -1,24 +1,15 @@
 steps:
 - name: 'gcr.io/cloud-builders/git'
   entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash /workspace/scripts/home.bash
+  args: ['-c', 'bash /workspace/scripts/home.bash']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash /workspace/scripts/clean.bash
+  args: ['-c', 'bash /workspace/scripts/clean.bash']
         
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash /workspace/scripts/main.bash
+  args: ['-c', 'bash /workspace/scripts/main.bash']
         
 #- name: 'gcr.io/cloud-builders/gcloud'
 #  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}',
