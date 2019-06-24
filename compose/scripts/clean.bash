@@ -104,30 +104,25 @@ END
 
 echo -e "\nGCLOUD\n"
 gcloud version
+
+echo -e "\nSTORAGE\n"
+export BOTO_CONFIG=/dev/null
+gsutil -o GSUtil:default_project_id=chetabahana du -shc
+
+echo -e "\nREGISTRY\n"
+DIGEST=`gcloud container images list-tags us.gcr.io/chetabahana/app-engine-tmp \
+--filter='-tags:*' --format='get(digest)'`
+[ -z "$DIGEST" ] && echo "No digest" || gcloud container images delete \
+--quiet us.gcr.io/chetabahana/app-engine-tmp@$DIGEST
+
+echo -e "\nASSETS\n"
 _LOCAL_PATH=/workspace/home/chetabahana
 gcloud kms decrypt --location global --keyring my-keyring --key github-key \
 --plaintext-file ${_LOCAL_PATH}/.ssh/id_rsa --ciphertext-file ${_LOCAL_PATH}/.ssh/id_rsa.enc
 gcloud kms decrypt --location global --keyring my-keyring --key google-compute-engine-key \
 --plaintext-file ${_LOCAL_PATH}/.ssh/google_compute_engine \
 --ciphertext-file ${_LOCAL_PATH}/.ssh/google_compute_engine.enc 
-
-#echo "\nROLES\n"
-#gcloud projects get-iam-policy chetabahana --flatten="bindings[].members"
-
-echo -e "\nREGISTRY\n"
-DIGEST=`gcloud container images list-tags gcr.io/chetabahana/backend \
---filter='-tags:*' --format='get(digest)'`
-[ -z "$DIGEST" ] && echo "No digest" || gcloud container images delete \
---quiet gcr.io/chetabahana/backend@$DIGEST
-
-#echo "\nGCS MEDIA\n"
-#gcsfuse -o allow_other -o nonempty --uid 1001 --gid 999 --temp-dir /tmp --only-dir saleor/media appspot.chetabahana.com /tmp/volume/media
-#gcsfuse -o allow_other --uid 1001 --gid 999 --temp-dir /tmp --only-dir saleor/static appspot.chetabahana.com volume/static
-#rm -rfv volume/media/products volume/media/category-backgrounds volume/media/collection-backgrounds
-#cd /tmp/volume/media && rm -rfv products category-backgrounds collection-backgrounds
-
-echo -e "\nSTORAGE\n"
-export BOTO_CONFIG=/dev/null
-gsutil -o GSUtil:default_project_id=chetabahana du -shc
-#gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/media
-#gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/static
+cp -frpT /workspace/home/chetabahana $HOME
+chmod 600 $HOME/.ssh/*
+ls -alR $HOME
+	

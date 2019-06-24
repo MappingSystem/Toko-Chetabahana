@@ -176,14 +176,9 @@ apt-get --assume-yes install nmap > /dev/null
 apt-get --assume-yes install expect > /dev/null
 apt-get --assume-yes install transifex-client > /dev/null
 
-echo -e "\nASSETS\n"
-cp -frpT /workspace/home/chetabahana $HOME
-ln -s $HOME/.ssh /root/.ssh
-chmod 600 $HOME/.ssh/*
-ls -alR $HOME
-	
 echo -e "\nAGENT\n"
 AGENT=$HOME/.ssh/agent
+ln -s $HOME/.ssh /root/.ssh
 cd $HOME && rm -rf Toko-Chetabahana
 git config --global user.name "chetabahana"
 git config --global user.email "chetabahana@gmail.com"

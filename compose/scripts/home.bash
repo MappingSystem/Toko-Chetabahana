@@ -168,7 +168,7 @@ See http://rsync.samba.org/ for updates, bug reports, and answers
 rsync error: syntax or usage error (code 1) at main.c(1569) [client=3.1.2]	 
 END
 
-echo -e "\nCLONE BRANCHES\n" && git --version
+echo -e "\nHOME\n" && git --version
 git clone https://source.developers.google.com/p/chetabahana/r/github_chetabahana_branches
 cd github_chetabahana_branches && git show-branch --list | grep -w $BRANCH_NAME
 if [ $? == 0 ];then git checkout $BRANCH_NAME;fi && mv -fv home /workspace
