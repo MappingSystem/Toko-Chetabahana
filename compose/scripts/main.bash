@@ -188,7 +188,7 @@ cd /workspace/scripts && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh
 	
 echo -e "\nSYNCHING\n"
-avoid lack of update other than master
+#avoid lack of update other than master
 cd $HOME && git clone git@github.com:MarketLeader/Toko-Chetabahana.git
 cd Toko-Chetabahana && rm -rf compose
 cp -frpT /workspace compose
