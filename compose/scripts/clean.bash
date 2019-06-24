@@ -1,5 +1,5 @@
-#!/bin/sh
-return
+#!/bin/bash
+
 : <<'END'
 #https://stackoverflow.com/a/47978804/4058484
 $ export BOTO_CONFIG=/dev/null
@@ -102,13 +102,19 @@ GLOBAL OPTIONS:
    --version, -v                print the version
 END
 
-echo "\nGCLOUD\n"
+echo -e "\nGCLOUD\n"
 gcloud version
+_LOCAL_PATH=/workspace/home/chetabahana
+gcloud kms decrypt --location global --keyring my-keyring --key github-key \
+--plaintext-file ${_LOCAL_PATH}/.ssh/id_rsa --ciphertext-file ${_LOCAL_PATH}/.ssh/id_rsa.enc
+gcloud kms decrypt --location global --keyring my-keyring --key google-compute-engine-key \
+--plaintext-file ${_LOCAL_PATH}/.ssh/google_compute_engine \
+--ciphertext-file ${_LOCAL_PATH}/.ssh/google_compute_engine.enc 
 
 #echo "\nROLES\n"
 #gcloud projects get-iam-policy chetabahana --flatten="bindings[].members"
 
-echo "\nREGISTRY\n"
+echo -e "\nREGISTRY\n"
 DIGEST=`gcloud container images list-tags gcr.io/chetabahana/backend \
 --filter='-tags:*' --format='get(digest)'`
 [ -z "$DIGEST" ] && echo "No digest" || gcloud container images delete \
@@ -120,7 +126,7 @@ DIGEST=`gcloud container images list-tags gcr.io/chetabahana/backend \
 #rm -rfv volume/media/products volume/media/category-backgrounds volume/media/collection-backgrounds
 #cd /tmp/volume/media && rm -rfv products category-backgrounds collection-backgrounds
 
-echo "\nSTORAGE\n"
+echo -e "\nSTORAGE\n"
 export BOTO_CONFIG=/dev/null
 gsutil -o GSUtil:default_project_id=chetabahana du -shc
 #gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/media

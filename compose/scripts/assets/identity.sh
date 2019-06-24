@@ -127,7 +127,7 @@ df -h
 
 return
 echo "\nNET STATUS\n"
-sudo netstat -plnt
+netstat -plnt
 
 echo "\nNMAP STATUS"
 nmap scanme.nmap.org

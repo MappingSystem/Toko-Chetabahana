@@ -4,23 +4,15 @@ steps:
   args:
   - '-c'
   - |
-        echo -e "\nCLONE BRANCHES\n" && git --version
-        git clone https://source.developers.google.com/p/chetabahana/r/github_chetabahana_branches
-        cd github_chetabahana_branches && git show-branch --list | grep -w $BRANCH_NAME
-        if [ $? == 0 ];then git checkout $BRANCH_NAME;fi && mv -fv home /workspace
-        cd .. && rm -rf github_chetabahana_branches
+        bash /workspace/scripts/home.bash
 
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        gcloud kms decrypt --location global --keyring my-keyring --key github-key \
-        --plaintext-file ${_LOCAL_PATH}/.ssh/id_rsa --ciphertext-file ${_LOCAL_PATH}/.ssh/id_rsa.enc
-        gcloud kms decrypt --location global --keyring my-keyring --key google-compute-engine-key \
-        --plaintext-file ${_LOCAL_PATH}/.ssh/google_compute_engine \
-        --ciphertext-file ${_LOCAL_PATH}/.ssh/google_compute_engine.enc 
-
+        bash /workspace/scripts/clean.bash
+        
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args:
