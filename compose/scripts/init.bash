@@ -108,13 +108,9 @@ gcloud version
 echo -e "\nSTORAGE\n"
 export BOTO_CONFIG=/dev/null
 gsutil -o GSUtil:default_project_id=chetabahana du -shc
-
-echo -e "\nREGISTRY\n"
-DIGEST=`gcloud container images list-tags us.gcr.io/chetabahana/app-engine-tmp \
---filter='-tags:*' --format='get(digest)'`
-[ -z "$DIGEST" ] && echo "No digest" || gcloud container images delete \
---quiet us.gcr.io/chetabahana/app-engine-tmp@$DIGEST
-bash /workspace/scripts/clean.bash us.gcr.io/chetabahana/app-engine-tmp 2019-06-01
+BEFORE_DATE=`date +%Y-%m-%d -d "3 month ago"`
+REGISTRY_NAME=us.gcr.io/chetabahana/app-engine-tmp
+bash /workspace/scripts/clean.bash $REGISTRY_NAME $BEFORE_DATE
 
 echo -e "\nASSETS\n"
 _LOCAL_PATH=/workspace/home/chetabahana
