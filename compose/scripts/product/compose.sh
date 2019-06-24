@@ -179,7 +179,7 @@ echo "\nCONFIG\n"
 DESTINATION=/usr/local/bin/docker-compose
 SOURCE=https://github.com/docker/compose/releases/download
 VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
-RELEASE="$SOURCE/1.24.1/docker-compose-$(uname -s)-$(uname -m)"
+RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
 curl -L $RELEASE -o $DESTINATION && chmod +x $DESTINATION
 docker-compose --version
 docker-compose config

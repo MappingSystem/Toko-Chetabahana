@@ -174,8 +174,10 @@ ln -s $HOME/.ssh /root/.ssh
 chmod 600 $HOME/.ssh/*
 ls -alR $HOME
 	
-echo -e "\nEXPECT\n"
+echo -e "\nAGENT\n"
 apt-get update > /dev/null
+apt-get --assume-yes install jq > /dev/null
+apt-get --assume-yes install nmap > /dev/null
 apt-get --assume-yes install expect > /dev/null
 
 AGENT=$HOME/.ssh/agent
