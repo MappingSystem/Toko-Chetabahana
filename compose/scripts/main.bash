@@ -168,56 +168,33 @@ See http://rsync.samba.org/ for updates, bug reports, and answers
 rsync error: syntax or usage error (code 1) at main.c(1569) [client=3.1.2]	 
 END
 
-if [ $HOME == "/builder/home" ]
-then 
-
-    echo -e "\nASSETS\n"
-    cp -frpT /workspace/home/chetabahana $HOME
-    ln -s $HOME/.ssh /root/.ssh
-    chmod 600 $HOME/.ssh/*
-    ls -alR $HOME
+echo -e "\nASSETS\n"
+cp -frpT /workspace/home/chetabahana $HOME
+ln -s $HOME/.ssh /root/.ssh
+chmod 600 $HOME/.ssh/*
+ls -alR $HOME
 	
-    echo -e "\nEXPECT\n"
-    apt-get update
-    apt-get --assume-yes install expect
+echo -e "\nEXPECT\n"
+apt-get update
+apt-get --assume-yes install expect
 
-    echo -e "\nSYNCHING\n"
-    AGENT=$HOME/.ssh/agent
-    cd $HOME && rm -rf Toko-Chetabahana
-    git config --global user.name "chetabahana"
-    git config --global user.email "chetabahana@gmail.com"
-    eval `ssh-agent` && expect $AGENT && ssh-add -l
-
-   #avoid lack of update other than master
-    cd $HOME && git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-    cd Toko-Chetabahana && rm -rf compose
-    cp -frpT /workspace compose
-    rm -rf compose/.git compose/home
-    git add . && git commit -m "sync compose"
-    git push -u origin master
-    rm -rf Toko-Chetabahana
-    eval `ssh-agent -k`
+echo -e "\nSYNCHING\n"
+AGENT=$HOME/.ssh/agent
+cd $HOME && rm -rf Toko-Chetabahana
+git config --global user.name "chetabahana"
+git config --global user.email "chetabahana@gmail.com"
+eval `ssh-agent` && expect $AGENT && ssh-add -l
 	
-else
-
-    cd ~/.docker/compose/scripts && chmod -R +x *
-    find . -type f -name '*.sh' | sort | sh > compose.log
-    mv -f compose.log ~/.logs/ && cat ~/.logs/compose.log
+cd /workspace/scripts && chmod -R +x *
+find . -type f -name '*.sh' | sort | sh
 	
-    echo -e "\nSYNCHING\n"
-    AGENT=$HOME/.ssh/agent
-    cd $HOME && rm -rf Toko-Chetabahana
-    git config --global user.name "chetabahana"
-    git config --global user.email "chetabahana@gmail.com"
-    eval `ssh-agent` && expect $AGENT && ssh-add -l
-
-    git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-    cd Toko-Chetabahana && sudo rm -rf compose/home
-    cp -f ~/.docker/compose/scripts/compose.log logs/
-    git add . && git commit -m "sync compose"
-    git push -u origin master
+#avoid lack of update other than master
+cd $HOME && git clone git@github.com:MarketLeader/Toko-Chetabahana.git
+cd Toko-Chetabahana && rm -rf compose
+cp -frpT /workspace compose
+rm -rf compose/.git compose/home
+git add . && git commit -m "sync compose"
+git push -u origin master
 	
-    cd $HOME && rm -rf Toko-Chetabahana
-    eval `ssh-agent -k`
-	
-fi
+cd $HOME && rm -rf Toko-Chetabahana
+eval `ssh-agent -k`

@@ -4,9 +4,11 @@ steps:
   args:
   - '-c'
   - |
+        echo -e "\nCLONE BRANCHES\n" && git --version
         git clone https://source.developers.google.com/p/chetabahana/r/github_chetabahana_branches
-        mv -f github_chetabahana_branches/home /workspace
-        rm -rf github_chetabahana_branches
+        cd github_chetabahana_branches && git show-branch --list | grep -w $BRANCH_NAME
+        if [ $? == 0 ];then git checkout $BRANCH_NAME;fi && mv -fv home /workspace
+        cd .. && rm -rf github_chetabahana_branches
 
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
@@ -19,16 +21,20 @@ steps:
         --plaintext-file ${_LOCAL_PATH}/.ssh/google_compute_engine \
         --ciphertext-file ${_LOCAL_PATH}/.ssh/google_compute_engine.enc 
 
-- name: 'python'
-  args: ['bash', '/workspace/scripts/main.bash']
-
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}',
-         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        bash /workspace/scripts/main.bash
+        
+#- name: 'gcr.io/cloud-builders/gcloud'
+#  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}',
+#         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
 
 substitutions:
   _ZONE: us-central1-c
-  _BUILD_ID: 'v1-240851-cron'
+  _BUILD_ID: 'v1-231508-cron'
   _INSTANCE_PATH: /home/chetabahana
   _INSTANCE_NAME: chetabahana@backend
   _LOCAL_PATH: /workspace/home/chetabahana

@@ -32,13 +32,13 @@ echo "\nSERVICES\n"
 docker ps
 
 echo "\nREDIS\n"
-docker logs compose_redis_1
+docker logs workspace_redis_1
 
 echo "\nPOSTGRES\n"
-docker logs compose_postgres_1
+docker logs workspace_postgres_1
 
 echo "\nCELERY\n"
-docker logs compose_celery_1
+docker logs workspace_celery_1
 
 echo "\nLOGS\n"
 docker-compose logs
