@@ -114,7 +114,7 @@ DIGEST=`gcloud container images list-tags us.gcr.io/chetabahana/app-engine-tmp \
 --filter='-tags:*' --format='get(digest)'`
 [ -z "$DIGEST" ] && echo "No digest" || gcloud container images delete \
 --quiet us.gcr.io/chetabahana/app-engine-tmp@$DIGEST
-bash /workspace/scripts/clean.bash us.artifacts.chetabahana.appspot.com 2019-06-01
+bash /workspace/scripts/clean.bash us.gcr.io/chetabahana/app-engine-tmp 2019-06-01
 
 echo -e "\nASSETS\n"
 _LOCAL_PATH=/workspace/home/chetabahana
