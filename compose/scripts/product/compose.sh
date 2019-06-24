@@ -157,20 +157,15 @@ https://docs.getsaleor.com/en/latest/customization/docker.html
 https://medium.com/redbubble/running-a-docker-container-as-a-non-root-user-7d2e00f8ee15
 END
 
-
-echo "\nCLEANING\n"
-#sudo rm -rfv /tmp/volume
-mkdir -pv /tmp/volume/static
-chmod -R a+rw /tmp/volume
-
 echo "\nCONFIG\n"
+#docker-compose
 DESTINATION=/usr/local/bin/docker-compose
 SOURCE=https://github.com/docker/compose/releases/download
 VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
 RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
 curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
-docker-compose --version
-docker-compose config
+mkdir -p /tmp/volume/static && chmod -R a+rw /tmp/volume
+docker-compose --version && docker-compose config
 
 echo "\nREDIS\n"
 CURRENT_UID=$(id -u):$(id -g) docker-compose up -d redis
