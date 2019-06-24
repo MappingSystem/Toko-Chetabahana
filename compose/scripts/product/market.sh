@@ -97,20 +97,20 @@ git config --global user.email "chetabahana@gmail.com"
 eval `ssh-agent` && expect $AGENT && ssh-add -l
 
 cd $HOME && rm -rf app
-docker cp compose_celery_1:/app .
+docker cp workspace_celery_1:/app .
 
 echo "\nDEFAULT\n"
 cd $HOME && rm -rf default
 git clone git@github.com:Chetabahana/default.git
-rm -rf default/static && cp -frpvT /tmp/volume default
+rm -rf default/static && mkdir default/static
+cp -frpvT app/static default/static
 cd default && git add . && git commit -m "sync compose"
 git push -u origin master
 
 echo "\nPRODUCT\n"
 cd $HOME && rm -rf product
 git clone git@github.com:Chetabahana/product.git
-cp -frpT app product && cp -frpT /tmp/volume product 
-cp -frpvT ~/.docker/compose/deploy/product product
+cp -frpT app product && cp -frpvT /workspace/deploy/product product
 sed -i 's|America/Chicago|Asia/Jakarta|g' product/saleor/settings.py
 sed -i 's|LANGUAGE_CODE = "en"|LANGUAGE_CODE = "id"|g' product/saleor/settings.py
 sed -i "s|LANGUAGE_CODE = 'en'|LANGUAGE_CODE = 'id'|g" product/saleor/settings.py
