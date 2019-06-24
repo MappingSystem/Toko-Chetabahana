@@ -176,10 +176,10 @@ chmod -R a+rw /tmp/volume
 #docker images --all
 
 echo "\nCONFIG\n"
-#cd /home/chetabahana/.docker/compose
-RELEASE="https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)"
-curl -s -L $RELEASE -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+DESTINATION=/usr/local/bin/docker-compose
+VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)
+RELEASE="https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m)"
+curl -s -L $RELEASE -o $DESTINATION && chmod +x $DESTINATION
 docker-compose --version
 docker-compose config
 
