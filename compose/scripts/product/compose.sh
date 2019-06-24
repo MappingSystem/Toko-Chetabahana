@@ -177,8 +177,9 @@ chmod -R a+rw /tmp/volume
 
 echo "\nCONFIG\n"
 DESTINATION=/usr/local/bin/docker-compose
-VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)
-RELEASE="https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m)"
+SOURCE=https://github.com/docker/compose/releases/download
+VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
+RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
 curl -s -L $RELEASE -o $DESTINATION && chmod +x $DESTINATION
 docker-compose --version
 docker-compose config
