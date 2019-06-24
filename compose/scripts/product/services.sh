@@ -40,5 +40,5 @@ docker logs workspace_postgres_1
 echo "\nCELERY\n"
 docker logs workspace_celery_1
 
-echo "\nLOGS\n"
+echo "\nDOCKER\n"
 docker-compose logs

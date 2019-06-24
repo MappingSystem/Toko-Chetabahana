@@ -1,5 +1,5 @@
 #!/bin/sh
-
+return
 : <<'END'
 #https://stackoverflow.com/a/47978804/4058484
 $ export BOTO_CONFIG=/dev/null

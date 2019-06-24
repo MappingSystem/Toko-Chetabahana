@@ -178,7 +178,6 @@ echo -e "\nEXPECT\n"
 apt-get update > /dev/null
 apt-get --assume-yes install expect > /dev/null
 
-echo -e "\nSYNCHING\n"
 AGENT=$HOME/.ssh/agent
 cd $HOME && rm -rf Toko-Chetabahana
 git config --global user.name "chetabahana"
@@ -188,7 +187,8 @@ eval `ssh-agent` && expect $AGENT && ssh-add -l
 cd /workspace/scripts && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh
 	
-#avoid lack of update other than master
+echo -e "\nSYNCHING\n"
+avoid lack of update other than master
 cd $HOME && git clone git@github.com:MarketLeader/Toko-Chetabahana.git
 cd Toko-Chetabahana && rm -rf compose
 cp -frpT /workspace compose
