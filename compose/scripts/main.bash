@@ -169,6 +169,7 @@ rsync error: syntax or usage error (code 1) at main.c(1569) [client=3.1.2]
 END
 
 #apt-utils
+sleep 10
 apt-get update > /dev/null
 apt-get install -y --no-install-recommends apt-utils > /dev/null
 apt-get --assume-yes install jq > /dev/null

@@ -1,5 +1,5 @@
 steps:
-- name: 'gcr.io/cloud-builders/git'
+- name: '${_SOURCE}/git'
   entrypoint: 'bash'
   args:
   - '-c'
@@ -10,21 +10,28 @@ steps:
         [ $? == 0 ] && git checkout $BRANCH_NAME || echo "branch '$BRANCH_NAME' not exist"
         mv -fv home /workspace && cd .. && rm -rf github_chetabahana_branches
 
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: '${_SOURCE}/gcloud'
   entrypoint: 'bash'
-  args: ['-c', 'bash /workspace/scripts/init.bash']
-        
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: ['-c', 'bash /workspace/scripts/main.bash']
-        
-#- name: 'gcr.io/cloud-builders/gcloud'
-#  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}',
-#         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
+  args:
+  - '-c'
+  - |
+        bash ${_SCRIPT}/init.bash
+        gcloud compute scp --zone ${_ZONE} --verbosity debug --recurse \
+        --force-key-file-overwrite ${_LOCAL_PATH} '${_INSTANCE_NAME}:${_INSTANCE_PATH}'
 
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}',
+         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
+
+- name: '${_SOURCE}/docker'
+  entrypoint: 'bash'
+  args: ['-c', 'bash ${_SCRIPT}/main.bash']
+        
 substitutions:
   _ZONE: us-central1-c
   _BUILD_ID: 'v1-231508-cron'
+  _SCRIPT: /workspace/scripts
+  _SOURCE: gcr.io/cloud-builders
   _INSTANCE_PATH: /home/chetabahana
   _INSTANCE_NAME: chetabahana@backend
   _LOCAL_PATH: /workspace/home/chetabahana
