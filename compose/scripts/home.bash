@@ -171,5 +171,5 @@ END
 echo -e "\nHOME\n" && git --version
 git clone https://source.developers.google.com/p/chetabahana/r/github_chetabahana_branches
 cd github_chetabahana_branches && git show-branch --list | grep -w $BRANCH_NAME
-if [ $? == 0 ];then git checkout $BRANCH_NAME;fi && mv -fv home /workspace
-cd .. && rm -rf github_chetabahana_branches
+[ $? == 0 ] && git checkout $BRANCH_NAME || echo "branch '$BRANCH_NAME' not exist"
+mv -fv home /workspace && cd .. && rm -rf github_chetabahana_branches

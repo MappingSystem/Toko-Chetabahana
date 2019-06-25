@@ -1,7 +1,14 @@
 steps:
 - name: 'gcr.io/cloud-builders/git'
   entrypoint: 'bash'
-  args: ['-c', 'bash /workspace/scripts/home.bash']
+  args:
+  - '-c'
+  - |
+        echo -e "\nCLONE BRANCHES\n" && git --version
+        git clone https://source.developers.google.com/p/chetabahana/r/github_chetabahana_branches
+        cd github_chetabahana_branches && git show-branch --list | grep -w $BRANCH_NAME
+        [ $? == 0 ] && git checkout $BRANCH_NAME || echo "branch '$BRANCH_NAME' not exist"
+        mv -fv home /workspace && cd .. && rm -rf github_chetabahana_branches
 
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
