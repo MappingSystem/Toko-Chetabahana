@@ -157,7 +157,6 @@ https://docs.getsaleor.com/en/latest/customization/docker.html
 https://medium.com/redbubble/running-a-docker-container-as-a-non-root-user-7d2e00f8ee15
 END
 
-echo "\nCONFIG\n"
 #docker-compose
 DESTINATION=/usr/local/bin/docker-compose
 SOURCE=https://github.com/docker/compose/releases/download
@@ -165,7 +164,11 @@ VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | j
 RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
 curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
 mkdir -p /tmp/volume/static && chmod -R a+rw /tmp/volume
-docker-compose --version && docker-compose config
+docker-compose --version
+
+echo "\nCONFIG\n"
+cd /workspace/scripts/docker/codefresh
+docker-compose config
 
 echo "\nMIGRATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py migrate --verbosity 3

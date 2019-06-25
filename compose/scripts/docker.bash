@@ -197,5 +197,5 @@ cd $HOME && rm -rf Toko-Chetabahana
 eval `ssh-agent -k`
 
 #run scripts
-cd /workspace/scripts && chmod -R +x *
+cd /workspace/scripts/docker && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh
