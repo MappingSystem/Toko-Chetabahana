@@ -1,0 +1,8 @@
+version: "3.2"
+
+services:
+  saleor:
+    image: chetabahana/saleor
+    restart: 'no'
+    user: saleor:saleor
+    env_file: home/chetabahana/.docker/common.env
