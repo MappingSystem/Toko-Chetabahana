@@ -5,4 +5,4 @@ services:
     image: chetabahana/saleor
     restart: 'no'
     user: saleor:saleor
-    env_file: home/chetabahana/.docker/common.env
+    env_file: home/chetabahana/.docker/codefresh.env
