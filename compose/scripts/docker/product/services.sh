@@ -28,17 +28,7 @@ Options:
                         for each container.
 END
 
-echo "\nREDIS\n"
-docker logs codefresh_redis_1
-docker inspect codefresh_redis_1
-
-echo "\nPOSTGRES\n"
-docker logs codefresh_postgres_1
-docker inspect codefresh_postgres_1
-
-echo "\nCELERY\n"
-docker logs codefresh_celery_1
-docker inspect codefresh_celery_1
-
 echo "\nLOGS\n"
+docker logs codefresh_saleor_1
+docker inspect codefresh_saleor_1
 docker-compose logs
