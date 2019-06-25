@@ -1,8 +1,54 @@
 version: "3.2"
 
 services:
+  redis:
+    image: redis
+    restart: unless-stopped
+    user: redis:redis
+    volumes:
+      - redis_data:/data
+    networks:
+      - network_tier
+
+  celery:
+    image: chetabahana/saleor
+    command: celery -A saleor worker --app=saleor.celeryconf:app --loglevel=info
+    restart: unless-stopped
+    user: saleor:saleor
+    env_file: home/chetabahana/.docker/common.env
+    networks:
+      - network_tier
+    depends_on:
+      - redis
+
+  postgres:
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - psql_data:/var/lib/postgresql
+    networks:
+      - network_tier
+    environment:
+      - POSTGRES_USER=saleor
+      - POSTGRES_PASSWORD=saleor
+
   saleor:
     image: chetabahana/saleor
     restart: 'no'
     user: saleor:saleor
     env_file: home/chetabahana/.docker/common.env
+    networks:
+      - network_tier
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  redis_data:
+    driver: local
+  psql_data:
+    driver: local
+    
+networks:
+  network_tier:
+    driver: bridge

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 : <<'END'
 #https://stackoverflow.com/a/47978804/4058484
@@ -102,29 +102,26 @@ GLOBAL OPTIONS:
    --version, -v                print the version
 END
 
-echo -e "\nGCLOUD\n"
+echo "\nGCLOUD\n"
 gcloud version
 
-echo -e "\nSTORAGE\n"
+#echo "\nROLES\n"
+#gcloud projects get-iam-policy chetabahana --flatten="bindings[].members"
+
+echo "\nREGISTRY\n"
+DIGEST=`gcloud container images list-tags gcr.io/chetabahana/backend \
+--filter='-tags:*' --format='get(digest)'`
+[ -z "$DIGEST" ] && echo "No digest" || gcloud container images delete \
+--quiet gcr.io/chetabahana/backend@$DIGEST
+
+#echo "\nGCS MEDIA\n"
+#gcsfuse -o allow_other -o nonempty --uid 1001 --gid 999 --temp-dir /tmp --only-dir saleor/media appspot.chetabahana.com /tmp/volume/media
+#gcsfuse -o allow_other --uid 1001 --gid 999 --temp-dir /tmp --only-dir saleor/static appspot.chetabahana.com volume/static
+#rm -rfv volume/media/products volume/media/category-backgrounds volume/media/collection-backgrounds
+#cd /tmp/volume/media && rm -rfv products category-backgrounds collection-backgrounds
+
+echo "\nSTORAGE\n"
 export BOTO_CONFIG=/dev/null
 gsutil -o GSUtil:default_project_id=chetabahana du -shc
-
-echo -e "\nCLEANING\n"
-BEFORE_DATE=`date +%Y-%m-%d -d "3 month ago"`
-REGISTRY_NAME=us.gcr.io/chetabahana/app-engine-tmp
-echo "Cleaning old images from 3 months ago: $BEFORE_DATE"
-bash /workspace/scripts/clean.bash $REGISTRY_NAME $BEFORE_DATE
-
-echo -e "\nASSETS\n"
-LOCAL_PATH=/workspace/home/chetabahana
-cp -frpT $LOCAL_PATH $HOME
-gcloud kms decrypt --location global \
---keyring my-keyring --key github-key \
---plaintext-file $HOME/.ssh/id_rsa \
---ciphertext-file $HOME/.ssh/id_rsa.enc
-gcloud kms decrypt --location global \
---keyring my-keyring --key google-compute-engine-key \
---plaintext-file $HOME/.ssh/google_compute_engine \
---ciphertext-file $HOME/.ssh/google_compute_engine.enc 
-chmod 600 $HOME/.ssh/*
-ls -alR $HOME
+#gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/media
+#gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/static
