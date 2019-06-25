@@ -167,18 +167,6 @@ curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
 mkdir -p /tmp/volume/static && chmod -R a+rw /tmp/volume
 docker-compose --version && docker-compose config
 
-echo "\nREDIS\n"
-CURRENT_UID=$(id -u):$(id -g) docker-compose up -d redis
-docker inspect workspace_redis_1
-
-echo "\nPOSTGRES\n"
-CURRENT_UID=$(id -u):$(id -g) docker-compose up -d postgres
-docker inspect workspace_postgres_1
-
-echo "\nCELERY\n"
-CURRENT_UID=$(id -u):$(id -g) docker-compose up -d celery
-docker inspect workspace_celery_1
-
 echo "\nMIGRATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py migrate --verbosity 3
 

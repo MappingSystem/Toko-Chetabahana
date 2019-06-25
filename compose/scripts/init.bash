@@ -111,10 +111,8 @@ gsutil -o GSUtil:default_project_id=chetabahana du -shc
 
 echo -e "\nCLEANING\n"
 BEFORE_DATE=`date +%Y-%m-%d -d "3 month ago"`
+REGISTRY_NAME=us.gcr.io/chetabahana/app-engine-tmp
 echo "Cleaning old images from 3 months ago: $BEFORE_DATE"
-REGISTRY_NAME=`gcloud alpha container images list --repository=gcr.io/chetabahana`
-bash /workspace/scripts/clean.bash $REGISTRY_NAME $BEFORE_DATE
-REGISTRY_NAME=`gcloud alpha container images list --repository=us.gcr.io/chetabahana`
 bash /workspace/scripts/clean.bash $REGISTRY_NAME $BEFORE_DATE
 
 echo -e "\nASSETS\n"
