@@ -170,6 +170,8 @@ END
 
 #apt-utils
 sleep 10
+
+echo -e "\nUPDATE\n"
 apt-get update > /dev/null
 apt-get install -y --no-install-recommends apt-utils > /dev/null
 apt-get --assume-yes install jq > /dev/null
