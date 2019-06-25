@@ -175,5 +175,7 @@ docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py collec
 
 echo "\nPOPULATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py populatedb --createsuperuser --verbosity 3
-  
+
+#echo "\nCELERY\n"
+CURRENT_UID=$(id -u):$(id -g) docker-compose up -d  
 sleep 10

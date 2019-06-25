@@ -31,14 +31,8 @@ END
 echo "\nSERVICES\n"
 docker ps
 
-echo "\nREDIS\n"
-docker logs workspace_redis_1
-
-echo "\nPOSTGRES\n"
-docker logs workspace_postgres_1
-
 echo "\nCELERY\n"
-docker logs workspace_celery_1
+docker logs workspace_saleor_1
 
 echo "\nDOCKER\n"
 docker-compose logs
