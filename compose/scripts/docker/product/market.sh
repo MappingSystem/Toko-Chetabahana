@@ -97,7 +97,7 @@ git config --global user.email "chetabahana@gmail.com"
 eval `ssh-agent` && expect $AGENT && ssh-add -l
 
 cd $HOME && rm -rf app
-docker cp workspace_saleor_1:/app .
+docker cp codefresh_saleor_1:/app .
 
 echo "\nDEFAULT\n"
 cd $HOME && rm -rf default
