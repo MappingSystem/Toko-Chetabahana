@@ -18,10 +18,8 @@ steps:
         bash ${_SCRIPT}/init.bash
         gcloud compute scp --zone ${_ZONE} --verbosity debug --recurse \
         --force-key-file-overwrite ${_LOCAL_PATH} '${_INSTANCE_NAME}:${_INSTANCE_PATH}'
-
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}',
-         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
+        gcloud compute ssh --zone ${_ZONE} '${_INSTANCE_NAME}' \
+        --command 'sh ${_INSTANCE_PATH}/.docker/init.sh'
 
 - name: '${_SOURCE}/docker'
   entrypoint: 'bash'
