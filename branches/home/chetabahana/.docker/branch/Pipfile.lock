@@ -60,18 +60,18 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:73b65793f12141e14393a4f321861f3f33b68f9dfe4f14b7e65cdbfda5c7ccdb",
-                "sha256:e6472861a88d0bb47844c7d03764b730c7fb9ab393a5f0a29f6b4dc0b20bee3d"
+                "sha256:384bd3094e26d2273cbe755ee7ceb1d40e5e7f20dfb109b57e4887e00feadf73",
+                "sha256:401c2e609b7fc343d309e9fea148d535108b8a5d35760d720e94973f66ca08ec"
             ],
             "index": "pypi",
-            "version": "==1.9.174"
+            "version": "==1.9.175"
         },
         "botocore": {
             "hashes": [
-                "sha256:3356e72901d5a4259b8858785e415a895641454971e3fa67b4076b4c9bed543d",
-                "sha256:f7220c6dd551724d4af796fb7ddfef6d423bade92e78c3cc2282953b38dfb259"
+                "sha256:2906736364fe5aaa5812a6eda5bef9b024ce8d7417a97b7eda76257ea11191f6",
+                "sha256:e7bc899e88d622088857337ce4adc65cf3c47c3b8c1a3c9cdbcfe5ffaca965a5"
             ],
-            "version": "==1.12.174"
+            "version": "==1.12.175"
         },
         "braintree": {
             "hashes": [
@@ -322,10 +322,11 @@
         },
         "django-prices": {
             "hashes": [
-                "sha256:0d997da5f34a3f16aff9ecf586c78b67b747cd292459b85a898cfc0b44f907fb"
+                "sha256:62dc368770a389955d443f363cf15051de77a07aaa2d5f2c3a735814428bb821",
+                "sha256:d5b82d1e3cbeceaf23148f242886dcd7435ab994d3231ac6b882aa76ee556de7"
             ],
             "index": "pypi",
-            "version": "==1.0.4"
+            "version": "==2.0.0"
         },
         "django-prices-openexchangerates": {
             "hashes": [
@@ -476,10 +477,10 @@
         },
         "google-api-core": {
             "hashes": [
-                "sha256:7ccfab741a333e8d4259d4bcd93d587ebacee0a41316d93440a9c0c230a999c6",
-                "sha256:a302404746347c3098c13b47c5d9b1a2fbbe4b3118d9e79b32b21e54b7bd1aeb"
+                "sha256:72a1c8966bdbd70a72de32760368aec399fe6a5c2a6675d9476cb9ae27046de7",
+                "sha256:f45d74aef41e1de49ceadebf382e1291ddcbe431a8b533aff8a1140a35531465"
             ],
-            "version": "==1.12.0"
+            "version": "==1.13.0"
         },
         "google-auth": {
             "hashes": [
@@ -1021,11 +1022,11 @@
         },
         "stripe": {
             "hashes": [
-                "sha256:c9a650a94b2184025dddd1cf1f4392411a411a24cd7b06e2ba3690793391081d",
-                "sha256:ce88b53012762200dc4b7591a33857697361dfe8211cc451fd0381a2a897c28d"
+                "sha256:d8aee3a51a030900cccc4008f945cb616d093130c55901f637e5e2b6af7fd97c",
+                "sha256:eb666151dd64bb0a7efd9a32012f9903dd888ff57c07d1f146659e416288f0cf"
             ],
             "index": "pypi",
-            "version": "==2.30.1"
+            "version": "==2.31.0"
         },
         "sympy": {
             "hashes": [
@@ -1644,11 +1645,11 @@
         },
         "tox": {
             "hashes": [
-                "sha256:f5c8e446b51edd2ea97df31d4ded8c8b72e7d6c619519da6bb6084b9dd5770f9",
-                "sha256:f87fd33892a2df0950e5e034def9468988b8d008c7e9416be665fcc0dd45b14f"
+                "sha256:2316d3f56339173c6d45e600dabcfac6fbed7fff82a7d35f4107152e9191a766",
+                "sha256:66d9ccf81b383ab1edc1619410223eec0e046178304728797a850302092ed975"
             ],
             "index": "pypi",
-            "version": "==3.12.1"
+            "version": "==3.13.0"
         },
         "transifex-client": {
             "hashes": [
