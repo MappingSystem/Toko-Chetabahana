@@ -33,6 +33,3 @@ docker ps
 
 echo "\nCELERY\n"
 docker logs workspace_saleor_1
-
-echo "\nDOCKER\n"
-docker-compose logs
