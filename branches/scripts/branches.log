@@ -18,36 +18,36 @@ tmpfs           370M  1.1M  369M   1% /run/docker.sock
 RAM
 
 MemTotal:        3781800 kB
-MemFree:         2384876 kB
-MemAvailable:    3172672 kB
-Buffers:          118564 kB
-Cached:           844072 kB
+MemFree:         2371448 kB
+MemAvailable:    3158048 kB
+Buffers:          117696 kB
+Cached:           844236 kB
 SwapCached:            0 kB
-Active:           867736 kB
-Inactive:         375332 kB
-Active(anon):     279736 kB
+Active:           878524 kB
+Inactive:         374144 kB
+Active(anon):     291656 kB
 Inactive(anon):      168 kB
-Active(file):     588000 kB
-Inactive(file):   375164 kB
+Active(file):     586868 kB
+Inactive(file):   373976 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:             0 kB
 SwapFree:              0 kB
-Dirty:               720 kB
+Dirty:               740 kB
 Writeback:             0 kB
-AnonPages:        280496 kB
-Mapped:           199728 kB
+AnonPages:        290756 kB
+Mapped:           200096 kB
 Shmem:              1076 kB
-Slab:              89612 kB
-SReclaimable:      55760 kB
-SUnreclaim:        33852 kB
-KernelStack:        3184 kB
-PageTables:         5788 kB
+Slab:              91808 kB
+SReclaimable:      58004 kB
+SUnreclaim:        33804 kB
+KernelStack:        3248 kB
+PageTables:         5828 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:     1890900 kB
-Committed_AS:    1167480 kB
+Committed_AS:    1184564 kB
 VmallocTotal:   34359738367 kB
 VmallocUsed:           0 kB
 VmallocChunk:          0 kB
@@ -62,141 +62,141 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
-DirectMap4k:       86004 kB
-DirectMap2M:     2797568 kB
+DirectMap4k:       90100 kB
+DirectMap2M:     2793472 kB
 DirectMap1G:     1048576 kB
 
 ASSETS
 
 /builder/home:
 total 60
-drwxr-xr-x 8 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 4 root root 4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root   25 Jun 26 07:56 .bash_aliases
--rw-r--r-- 1 root root  240 Jun 26 07:56 .bash_logout
--rw-r--r-- 1 root root 3771 Jun 26 07:56 .bashrc
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .config
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .docker
--rw-r--r-- 1 root root   58 Jun 26 07:56 .gitconfig
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .local
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .logs
--rw-r--r-- 1 root root  906 Jun 26 07:56 .profile
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .ssh
--rw-r--r-- 1 root root  175 Jun 26 07:56 .transifexrc
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .tx
--rw-r--r-- 1 root root  248 Jun 26 07:56 .wget-hsts
+drwxr-xr-x 8 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 4 root root 4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root   25 Jun 26 08:10 .bash_aliases
+-rw-r--r-- 1 root root  240 Jun 26 08:10 .bash_logout
+-rw-r--r-- 1 root root 3771 Jun 26 08:10 .bashrc
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .config
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .docker
+-rw-r--r-- 1 root root   58 Jun 26 08:10 .gitconfig
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .local
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .logs
+-rw-r--r-- 1 root root  906 Jun 26 08:10 .profile
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .ssh
+-rw-r--r-- 1 root root  175 Jun 26 08:10 .transifexrc
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .tx
+-rw-r--r-- 1 root root  248 Jun 26 08:10 .wget-hsts
 
 /builder/home/.config:
 total 12
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 8 root root 4096 Jun 26 07:56 ..
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 gcloud
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 8 root root 4096 Jun 26 08:10 ..
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 gcloud
 
 /builder/home/.config/gcloud:
 total 20
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root  245 Jun 26 07:56 .last_update_check.json
--rw------- 1 root root    4 Jun 26 07:56 gce
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 logs
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root  245 Jun 26 08:10 .last_update_check.json
+-rw------- 1 root root    4 Jun 26 08:10 gce
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 logs
 
 /builder/home/.config/gcloud/logs:
 total 12
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 ..
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 2019.06.26
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 ..
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 2019.06.26
 
 /builder/home/.config/gcloud/logs/2019.06.26:
 total 16
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root  796 Jun 26 07:56 07.56.28.841710.log
--rw-r--r-- 1 root root  604 Jun 26 07:56 07.56.29.528935.log
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root  796 Jun 26 08:10 08.10.54.563874.log
+-rw-r--r-- 1 root root  604 Jun 26 08:10 08.10.55.231002.log
 
 /builder/home/.docker:
 total 36
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 8 root root 4096 Jun 26 07:56 ..
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 branch
--rw-r--r-- 1 root root  629 Jun 26 07:56 codefresh.env
--rw-r--r-- 1 root root  629 Jun 26 07:56 common.env
--rw-r--r-- 1 root root 2688 Jun 26 07:56 config.json
--rw-r--r-- 1 root root  530 Jun 26 07:56 cron.sh
--rw-r--r-- 1 root root 2169 Jun 26 07:56 init.sh
--rw-r--r-- 1 root root 3311 Jun 26 07:56 update.sh
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 8 root root 4096 Jun 26 08:10 ..
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 branch
+-rw-r--r-- 1 root root  629 Jun 26 08:10 codefresh.env
+-rw-r--r-- 1 root root  629 Jun 26 08:10 common.env
+-rw-r--r-- 1 root root 2688 Jun 26 08:10 config.json
+-rw-r--r-- 1 root root  530 Jun 26 08:10 cron.sh
+-rw-r--r-- 1 root root 2169 Jun 26 08:10 init.sh
+-rw-r--r-- 1 root root 3311 Jun 26 08:10 update.sh
 
 /builder/home/.docker/branch:
 total 108
-drwxr-xr-x 3 root root  4096 Jun 26 07:56 .
-drwxr-xr-x 3 root root  4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root  2242 Jun 26 07:56 Pipfile
--rw-r--r-- 1 root root 83966 Jun 26 07:56 Pipfile.lock
--rw-r--r-- 1 root root  2678 Jun 26 07:56 requirements.txt
--rw-r--r-- 1 root root  1333 Jun 26 07:56 requirements_dev.txt
-drwxr-xr-x 2 root root  4096 Jun 26 07:56 saleor
+drwxr-xr-x 3 root root  4096 Jun 26 08:10 .
+drwxr-xr-x 3 root root  4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root  2242 Jun 26 08:10 Pipfile
+-rw-r--r-- 1 root root 83966 Jun 26 08:10 Pipfile.lock
+-rw-r--r-- 1 root root  2678 Jun 26 08:10 requirements.txt
+-rw-r--r-- 1 root root  1333 Jun 26 08:10 requirements_dev.txt
+drwxr-xr-x 2 root root  4096 Jun 26 08:10 saleor
 
 /builder/home/.docker/branch/saleor:
 total 12
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root  278 Jun 26 07:56 gunicorn.py
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root  278 Jun 26 08:10 gunicorn.py
 
 /builder/home/.local:
 total 12
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 8 root root 4096 Jun 26 07:56 ..
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 gcloud
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 8 root root 4096 Jun 26 08:10 ..
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 gcloud
 
 /builder/home/.local/gcloud:
 total 12
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 3 root root 4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root 1245 Jun 26 07:56 cloud_env.bat
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 3 root root 4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root 1245 Jun 26 08:10 cloud_env.bat
 
 /builder/home/.logs:
 total 232
-drwxr-xr-x 2 root root   4096 Jun 26 07:56 .
-drwxr-xr-x 8 root root   4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root  23970 Jun 26 07:56 branches.log
--rw-r--r-- 1 root root 202260 Jun 26 07:56 compose.log
+drwxr-xr-x 2 root root   4096 Jun 26 08:10 .
+drwxr-xr-x 8 root root   4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root  23970 Jun 26 08:10 branches.log
+-rw-r--r-- 1 root root 202260 Jun 26 08:10 compose.log
 
 /builder/home/.ssh:
 total 68
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 8 root root 4096 Jun 26 07:56 ..
--rw------- 1 root root 2314 Jun 26 07:56 Chetabahana-f92949fb068b.json
--rw------- 1 root root  209 Jun 26 07:56 agent
--rw------- 1 root root 2604 Jun 26 07:56 authorized_keys
--rw------- 1 root root   51 Jun 26 07:56 config
--rw------- 1 root root  296 Jun 26 07:56 expect_clone
--rw------- 1 root root  201 Jun 26 07:56 expect_push
--rw------- 1 root root   40 Jun 26 07:56 github_token
--rw------- 1 root root 1675 Jun 26 07:56 google_compute_engine
--rw------- 1 root root 1758 Jun 26 07:56 google_compute_engine.enc
--rw------- 1 root root  399 Jun 26 07:56 google_compute_engine.pub
--rw------- 1 root root  222 Jun 26 07:56 google_compute_known_hosts
--rw------- 1 root root 3326 Jun 26 07:56 id_rsa
--rw------- 1 root root 3409 Jun 26 07:56 id_rsa.enc
--rw------- 1 root root 1326 Jun 26 07:56 known_hosts
--rw------- 1 root root  282 Jun 26 07:56 push
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 8 root root 4096 Jun 26 08:10 ..
+-rw------- 1 root root 2314 Jun 26 08:10 Chetabahana-f92949fb068b.json
+-rw------- 1 root root  209 Jun 26 08:10 agent
+-rw------- 1 root root 2604 Jun 26 08:10 authorized_keys
+-rw------- 1 root root   51 Jun 26 08:10 config
+-rw------- 1 root root  296 Jun 26 08:10 expect_clone
+-rw------- 1 root root  201 Jun 26 08:10 expect_push
+-rw------- 1 root root   40 Jun 26 08:10 github_token
+-rw------- 1 root root 1675 Jun 26 08:10 google_compute_engine
+-rw------- 1 root root 1758 Jun 26 08:10 google_compute_engine.enc
+-rw------- 1 root root  399 Jun 26 08:10 google_compute_engine.pub
+-rw------- 1 root root  222 Jun 26 08:10 google_compute_known_hosts
+-rw------- 1 root root 3326 Jun 26 08:10 id_rsa
+-rw------- 1 root root 3409 Jun 26 08:10 id_rsa.enc
+-rw------- 1 root root 1326 Jun 26 08:10 known_hosts
+-rw------- 1 root root  282 Jun 26 08:10 push
 
 /builder/home/.tx:
 total 12
-drwxr-xr-x 2 root root 4096 Jun 26 07:56 .
-drwxr-xr-x 8 root root 4096 Jun 26 07:56 ..
--rw-r--r-- 1 root root   41 Jun 26 07:56 config
+drwxr-xr-x 2 root root 4096 Jun 26 08:10 .
+drwxr-xr-x 8 root root 4096 Jun 26 08:10 ..
+-rw-r--r-- 1 root root   41 Jun 26 08:10 config
 
 EXPECT
 
-Ign:1 http://deb.debian.org/debian stretch InRelease
-Get:2 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:3 http://deb.debian.org/debian stretch Release [118 kB]
-Get:4 http://deb.debian.org/debian stretch Release.gpg [2434 B]
-Get:5 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
-Get:6 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
-Get:7 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
-Get:8 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
-Fetched 7914 kB in 1s (4411 kB/s)
+Get:1 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Ign:2 http://deb.debian.org/debian stretch InRelease
+Get:3 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:4 http://deb.debian.org/debian stretch Release [118 kB]
+Get:5 http://deb.debian.org/debian stretch Release.gpg [2434 B]
+Get:6 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [499 kB]
+Get:7 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
+Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
+Fetched 7914 kB in 1s (4526 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -210,7 +210,7 @@ Need to get 296 kB of archives.
 After this operation, 589 kB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian stretch/main amd64 tcl-expect amd64 5.45-7+deb9u1 [131 kB]
 Get:2 http://deb.debian.org/debian stretch/main amd64 expect amd64 5.45-7+deb9u1 [165 kB]
-Fetched 296 kB in 0s (3638 kB/s)
+Fetched 296 kB in 0s (18.5 MB/s)
 Selecting previously unselected package tcl-expect:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30576 files and directories currently installed.)
 Preparing to unpack .../tcl-expect_5.45-7+deb9u1_amd64.deb ...
@@ -227,43 +227,35 @@ PIPENV
 
 Collecting pipenv
   Downloading https://files.pythonhosted.org/packages/13/b4/3ffa55f77161cff9a5220f162670f7c5eb00df52e00939e203f601b0f579/pipenv-2018.11.26-py3-none-any.whl (5.2MB)
-Collecting virtualenv-clone>=0.2.5 (from pipenv)
-  Downloading https://files.pythonhosted.org/packages/ba/f8/50c2b7dbc99e05fce5e5b9d9a31f37c988c99acd4e8dedd720b7b8d4011d/virtualenv_clone-0.5.3-py2.py3-none-any.whl
+Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
 Collecting virtualenv (from pipenv)
   Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
-Requirement already satisfied: setuptools>=36.2.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (41.0.1)
-Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
 Collecting certifi (from pipenv)
   Downloading https://files.pythonhosted.org/packages/69/1b/b853c7a9d4f6a6d00749e94eb6f3a041e342a885b87340b79c1ef73e3a78/certifi-2019.6.16-py2.py3-none-any.whl (157kB)
-Installing collected packages: virtualenv-clone, virtualenv, certifi, pipenv
+Collecting virtualenv-clone>=0.2.5 (from pipenv)
+  Downloading https://files.pythonhosted.org/packages/ba/f8/50c2b7dbc99e05fce5e5b9d9a31f37c988c99acd4e8dedd720b7b8d4011d/virtualenv_clone-0.5.3-py2.py3-none-any.whl
+Requirement already satisfied: pip>=9.0.1 in /usr/local/lib/python3.7/site-packages (from pipenv) (19.1.1)
+Installing collected packages: virtualenv, certifi, virtualenv-clone, pipenv
 Successfully installed certifi-2019.6.16 pipenv-2018.11.26 virtualenv-16.6.1 virtualenv-clone-0.5.3
 
 PACKAGES
 
-Installing dependencies from Pipfile.lock (c453ce)…
+Installing dependencies from Pipfile.lock (9f8ac6)…
 Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
 Looking in indexes: https://pypi.python.org/simple
 To activate this project's virtualenv, run pipenv shell.
 Alternatively, run a command inside the virtualenv with pipenv run.
 All dependencies are now up-to-date!
-Installing gunicorn…
-Installing gevent…
-Installing dependencies from Pipfile.lock (b6ec51)…
-Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
-Looking in indexes: https://pypi.python.org/simple
-To activate this project's virtualenv, run pipenv shell.
-Alternatively, run a command inside the virtualenv with pipenv run.
 
 GRAPH
 
-Uninstalling relativetimebuilder…
 bleach==2.1.4
   - html5lib [required: >=0.99999999pre,!=1.0b8,!=1.0b7,!=1.0b6,!=1.0b5,!=1.0b4,!=1.0b3,!=1.0b2,!=1.0b1, installed: 1.0.1]
     - six [required: >=1.9, installed: 1.12.0]
     - webencodings [required: Any, installed: 0.5.1]
   - six [required: Any, installed: 1.12.0]
-boto3==1.9.176
-  - botocore [required: >=1.12.176,<1.13.0, installed: 1.12.176]
+boto3==1.9.175
+  - botocore [required: >=1.12.175,<1.13.0, installed: 1.12.175]
     - docutils [required: >=0.10, installed: 0.14]
     - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
     - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
@@ -271,7 +263,7 @@ boto3==1.9.176
     - urllib3 [required: >=1.20,<1.26, installed: 1.25.3]
   - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
   - s3transfer [required: >=0.2.0,<0.3.0, installed: 0.2.1]
-    - botocore [required: >=1.12.36,<2.0.0, installed: 1.12.176]
+    - botocore [required: >=1.12.36,<2.0.0, installed: 1.12.175]
       - docutils [required: >=0.10, installed: 0.14]
       - jmespath [required: >=0.7.1,<1.0.0, installed: 0.9.4]
       - python-dateutil [required: >=2.1,<3.0.0, installed: 2.8.0]
@@ -378,7 +370,7 @@ django-prices-openexchangerates==1.0.1
   - Django [required: >=1.11, installed: 2.2.2]
     - pytz [required: Any, installed: 2019.1]
     - sqlparse [required: Any, installed: 0.3.0]
-  - django-prices [required: >=1.0.0, installed: 2.0.0]
+  - django-prices [required: >=1.0.0, installed: 1.0.4]
     - Babel [required: >=2.2, installed: 2.7.0]
       - pytz [required: >=2015.7, installed: 2019.1]
     - Django [required: >=1.11,<3, installed: 2.2.2]
@@ -465,8 +457,6 @@ freezegun==0.3.12
   - python-dateutil [required: >=1.0,!=2.0, installed: 2.8.0]
     - six [required: >=1.5, installed: 1.12.0]
   - six [required: Any, installed: 1.12.0]
-gevent==1.4.0
-  - greenlet [required: >=0.4.14, installed: 0.4.15]
 google-cloud-storage==1.16.1
   - google-auth [required: >=1.2.0, installed: 1.6.3]
     - cachetools [required: >=2.0.0, installed: 3.1.1]
@@ -519,7 +509,6 @@ google-measurement-protocol==1.0.0
     - urllib3 [required: >=1.21.1,<1.26,!=1.25.1,!=1.25.0, installed: 1.25.3]
   - typing [required: >=3.6.0, installed: 3.7.4]
 graphene-django-optimizer==0.4.2
-gunicorn==19.9.0
 Markdown==3.1.1
   - setuptools [required: >=36, installed: 41.0.1]
 maxminddb-geolite2==2018.703
@@ -613,8 +602,8 @@ autopep8==1.4.4
 babel==2.7.0
 billiard==3.6.0.0
 bleach==2.1.4
-boto3==1.9.176
-botocore==1.12.176
+boto3==1.9.175
+botocore==1.12.175
 braintree==3.49.0
 cachetools==3.1.1
 cairocffi==1.0.2
@@ -645,7 +634,7 @@ django-mptt==0.10.0
 django-phonenumber-field==2.4.0
 django-prices-openexchangerates==1.0.1
 django-prices-vatlayer==1.0.2
-django-prices==2.0.0
+django-prices==1.0.4
 django-recaptcha==1.5.0
 django-redis==4.10.0
 django-render-block==0.6
@@ -660,7 +649,6 @@ elasticsearch-dsl==6.0.1
 elasticsearch==6.3.1
 faker==1.0.7
 freezegun==0.3.12
-gevent==1.4.0
 google-api-core==1.13.0
 google-auth==1.6.3
 google-cloud-core==1.0.2
@@ -675,8 +663,6 @@ graphene-django==2.3.2
 graphene==2.1.6
 graphql-core==2.2
 graphql-relay==0.4.5
-greenlet==0.4.15 ; platform_python_implementation == 'CPython'
-gunicorn==19.9.0
 html5lib==1.0.1
 idna==2.8
 ipaddress==1.0.22
@@ -734,7 +720,7 @@ webencodings==0.5.1
 
 DEV PACKAGES
 
-Installing dependencies from Pipfile.lock (b6ec51)…
+Installing dependencies from Pipfile.lock (9f8ac6)…
 Ignoring dataclasses: markers 'python_version < "3.7"' don't match your environment
 Looking in indexes: https://pypi.python.org/simple
 To activate this project's virtualenv, run pipenv shell.
@@ -757,7 +743,7 @@ All good!
 
 AGENT
 
-Agent pid 3803
+Agent pid 2972
 spawn ssh-add /builder/home/.ssh/id_rsa
 Enter passphrase for /builder/home/.ssh/id_rsa: 
 Identity added: /builder/home/.ssh/id_rsa (/builder/home/.ssh/id_rsa)4096 SHA256:xefGz0xMkK/wmtCvyIVLdqNtJOGXVGRHUVp4BtSxBf8 /builder/home/.ssh/id_rsa (RSA)
@@ -765,8 +751,7 @@ Identity added: /builder/home/.ssh/id_rsa (/builder/home/.ssh/id_rsa)4096 SHA256
 UPSTREAM
 
 Your branch is up-to-date with 'origin/master'.
-First, rewinding head to replay your work on top of it...
-Fast-forwarded master to 482ba001bf3cbb8a6e765649e546b33bb58d00f7.
+Current branch master is up to date.
 HEAD is now at 482ba001b Merge pull request #4347 from NyanKiyoshi/pipenv/freeze-django-prices
 
 REMOTE
@@ -779,34 +764,24 @@ HEAD is now at 482ba001b Merge pull request #4347 from NyanKiyoshi/pipenv/freeze
 '/workspace/home/chetabahana/.docker/branch/requirements_dev.txt' -> '/builder/home/Tutorial-Buka-Toko/requirements_dev.txt'
 '/workspace/home/chetabahana/.docker/branch/saleor/gunicorn.py' -> '/builder/home/Tutorial-Buka-Toko/saleor/gunicorn.py'
 On branch Chetabahana
-Your branch and 'origin/Chetabahana' have diverged,
-and have 2 and 1 different commits each, respectively.
-  (use "git pull" to merge the remote branch into yours)
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   Pipfile
-	modified:   Pipfile.lock
-	modified:   requirements.txt
-	modified:   requirements_dev.txt
-
+Your branch is behind 'origin/Chetabahana' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
 	saleor/gunicorn.py
 
-no changes added to commit (use "git add" and/or "git commit -a")
-[Chetabahana a48eff217] Add support for taxonomy
- 5 files changed, 25 insertions(+), 6 deletions(-)
+nothing added to commit but untracked files present (use "git add" to track)
+[Chetabahana a9404478e] Add support for taxonomy
+ 1 file changed, 14 insertions(+)
  create mode 100644 saleor/gunicorn.py
 
 MASTER
 
-HEAD is now at a48eff217 Add support for taxonomy
+HEAD is now at a9404478e Add support for taxonomy
 
 NEXT
 
 Branch taxonomy set up to track remote branch taxonomy from origin.
-HEAD is now at a48eff217 Add support for taxonomy
-Agent pid 3803 killed
+HEAD is now at a9404478e Add support for taxonomy
+Agent pid 2972 killed
