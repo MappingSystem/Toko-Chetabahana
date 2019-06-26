@@ -28,17 +28,8 @@ Options:
                         for each container.
 END
 
-echo "\nSERVICES\n"
-docker ps
-
-echo "\nREDIS\n"
-docker logs compose_redis_1
-
-echo "\nPOSTGRES\n"
-docker logs compose_postgres_1
-
-echo "\nCELERY\n"
-docker logs compose_celery_1
+echo "\nINSPECT\n"
+docker inspect codefresh_saleor_1
 
 echo "\nLOGS\n"
-docker-compose logs
+docker logs codefresh_saleor_1

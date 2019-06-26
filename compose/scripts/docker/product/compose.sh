@@ -157,33 +157,19 @@ https://docs.getsaleor.com/en/latest/customization/docker.html
 https://medium.com/redbubble/running-a-docker-container-as-a-non-root-user-7d2e00f8ee15
 END
 
-
-echo "\nCLEANING\n"
-sudo rm -rfv /tmp/volume
-mkdir -pv /tmp/volume/static && chmod -R a+rw /tmp/volume
-
-echo "\nPULLING\n"
-docker pull redis
-docker pull postgres
-docker pull chetabahana/saleor
-#docker pull chetabahana/celery
-
-echo "\nCLAIMING\n"
-docker system prune --force
-
-echo "\nIMAGES\n"
-docker images --all
-
+#docker-compose
 echo "\nCONFIG\n"
-cd /home/chetabahana/.docker/compose && docker-compose config
+DESTINATION=/usr/local/bin/docker-compose
+SOURCE=https://github.com/docker/compose/releases/download
+VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
+RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
+curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
+mkdir -p /tmp/volume/static && chmod -R a+rw /tmp/volume
+docker-compose --version
 
-echo "\nREDIS\n"
-CURRENT_UID=$(id -u):$(id -g) docker-compose up -d redis
-docker inspect compose_redis_1
-
-echo "\nPOSTGRES\n"
-CURRENT_UID=$(id -u):$(id -g) docker-compose up -d postgres
-docker inspect compose_postgres_1
+echo "\n"
+cd /workspace/scripts/docker/codefresh
+docker-compose config
 
 echo "\nMIGRATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py migrate --verbosity 3
@@ -193,11 +179,8 @@ docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py collec
 
 echo "\nPOPULATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py populatedb --createsuperuser --verbosity 3
-  
-#echo "\nMEDIA\n"
-#docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py create_thumbnails --verbosity 3
 
 #echo "\nCELERY\n"
-CURRENT_UID=$(id -u):$(id -g) docker-compose up -d celery
-docker inspect compose_celery_1
+CURRENT_UID=$(id -u):$(id -g) docker-compose up -d
+
 sleep 10
