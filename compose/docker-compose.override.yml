@@ -12,3 +12,15 @@ services:
   postgres:
     ports:
       - 5431:5432
+
+  saleor:
+    volumes: 
+      - /tmp/volume/static:/app/static
+      - ./home/chetabahana/.ssh:/app/.ssh
+      # shared volume between celery and web
+      #- ./saleor/:/app/saleor:Z
+      #- ./templates/:/app/templates:Z
+      #- ./tests/:/app/tests
+      # prevents overshadowing of build-time assets
+      #- /app/saleor/static/assets
+      #- /app/templates/templated_email/compiled
