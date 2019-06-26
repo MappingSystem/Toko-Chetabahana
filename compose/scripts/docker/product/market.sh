@@ -91,6 +91,7 @@ Full documentation at: <http://www.gnu.org/software/coreutils/cp>
 or available locally via: info '(coreutils) cp invocation'
 END
 
+echo "\nAGENT\n"
 AGENT=$HOME/.ssh/agent
 git config --global user.name "chetabahana"
 git config --global user.email "chetabahana@gmail.com"

@@ -158,6 +158,7 @@ https://medium.com/redbubble/running-a-docker-container-as-a-non-root-user-7d2e0
 END
 
 #docker-compose
+echo "\nCONFIG\n"
 DESTINATION=/usr/local/bin/docker-compose
 SOURCE=https://github.com/docker/compose/releases/download
 VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
@@ -166,7 +167,7 @@ curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
 mkdir -p /tmp/volume/static && chmod -R a+rw /tmp/volume
 docker-compose --version
 
-echo "\nCONFIG\n"
+echo "\n"
 cd /workspace/scripts/docker/codefresh
 docker-compose config
 

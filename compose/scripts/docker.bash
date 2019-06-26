@@ -176,7 +176,6 @@ apt-get update > /dev/null
 apt-get install -y --no-install-recommends apt-utils > /dev/null
 apt-get --assume-yes install jq > /dev/null && jq --version
 apt-get --assume-yes install expect > /dev/null && expect -v
-apt-get --assume-yes install transifex-client > /dev/null && tx --version
 apt-get --assume-yes install nmap > /dev/null && nmap --version
 
 echo -e "\nAGENT\n"

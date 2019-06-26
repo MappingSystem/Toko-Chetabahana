@@ -28,7 +28,8 @@ Options:
                         for each container.
 END
 
+echo "\nINSPECT\n"
+docker inspect codefresh_saleor_1
+
 echo "\nLOGS\n"
 docker logs codefresh_saleor_1
-docker inspect codefresh_saleor_1
-docker-compose logs
