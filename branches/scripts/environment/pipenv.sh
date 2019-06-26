@@ -61,7 +61,7 @@ Commands:
 END
 
 #Package
-APP="install gunicorn gevent"
+#APP="install gunicorn gevent"
 GIT=https://github.com/mirumee/saleor.git
 
 #Environment
@@ -73,12 +73,9 @@ pip install --user pipenv
 echo "\nPACKAGES\n"
 cd $HOME && rm -rf saleor
 git clone $GIT && cd $HOME/saleor
-
-pipenv sync
-[ -n "$APP" ] && pipenv $APP --keep-outdated
+[ -n "$APP" ] && pipenv $APP --keep-outdated || pipenv sync
 
 echo "\nGRAPH\n"
-pipenv clean
 pipenv graph
 
 echo "\nTRANSFER\n"
