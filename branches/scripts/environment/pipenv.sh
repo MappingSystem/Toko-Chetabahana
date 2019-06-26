@@ -61,7 +61,7 @@ Commands:
 END
 
 #Package
-#APP="install gunicorn gevent"
+APP="install gunicorn gevent"
 GIT=https://github.com/mirumee/saleor.git
 
 #Environment

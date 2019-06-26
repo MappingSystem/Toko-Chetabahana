@@ -70,11 +70,9 @@ sudo usermod -g docker ${USER}
 logout
 
 #COMPOSE
-DESTINATION=/usr/local/bin/docker-compose
-SOURCE=https://github.com/docker/compose/releases/download
-VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
-RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
-sudo curl -L $RELEASE -s -o $DESTINATION && sudo chmod +x $DESTINATION
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/\
+docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 #CREDENTIALS
