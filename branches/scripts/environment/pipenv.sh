@@ -73,12 +73,12 @@ pip install --user pipenv
 echo "\nPACKAGES\n"
 cd $HOME && rm -rf saleor
 git clone $GIT && cd $HOME/saleor
-[ -n "$APP" ] && pipenv $APP || pipenv sync
 
-echo "\nPIPFILE\n"
-pipenv clean & cat Pipfile
+pipenv sync
+[ -n "$APP" ] && pipenv $APP
 
 echo "\nGRAPH\n"
+pipenv clean
 pipenv graph
 
 echo "\nTRANSFER\n"
@@ -86,6 +86,9 @@ pipenv lock -r > requirements.txt
 pipenv lock -r -d > requirements_dev.txt
 BRANCH=/workspace/home/chetabahana/.docker/branch
 cp -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
+
+echo "\nPIPLOCK\n"
+cat requirements.txt
 
 echo "\nDEV PACKAGES\n"
 pipenv install --dev
