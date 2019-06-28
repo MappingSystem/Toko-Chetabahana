@@ -10,17 +10,6 @@ services:
     networks:
       - network_tier
 
-  celery:
-    image: chetabahana/saleor
-    command: celery -A saleor worker --app=saleor.celeryconf:app --loglevel=info
-    restart: unless-stopped
-    user: saleor:saleor
-    env_file: home/chetabahana/.docker/common.env
-    networks:
-      - network_tier
-    depends_on:
-      - redis
-
   postgres:
     image: postgres
     restart: unless-stopped
@@ -31,6 +20,17 @@ services:
     environment:
       - POSTGRES_USER=saleor
       - POSTGRES_PASSWORD=saleor
+
+  celery:
+    image: chetabahana/saleor
+    command: celery -A saleor worker --app=saleor.celeryconf:app --loglevel=info
+    restart: unless-stopped
+    user: saleor:saleor
+    env_file: home/chetabahana/.docker/common.env
+    networks:
+      - network_tier
+    depends_on:
+      - redis
 
 volumes:
   redis_data:

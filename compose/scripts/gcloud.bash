@@ -118,6 +118,7 @@ gcloud kms decrypt --location global \
 --keyring my-keyring --key github-key \
 --plaintext-file $HOME/.ssh/id_rsa \
 --ciphertext-file $HOME/.ssh/id_rsa.enc
+
 gcloud kms decrypt --location global \
 --keyring my-keyring --key google-compute-engine-key \
 --plaintext-file $HOME/.ssh/google_compute_engine \
@@ -128,5 +129,6 @@ ls -alR $HOME
 echo -e '\nINSTANCE\n'
 gcloud compute scp --zone ${4} --verbosity info --recurse \
 --force-key-file-overwrite ${2}/${1} ${1}@backend:/home
+
 gcloud compute ssh --zone ${4} ${1}@backend \
 --command 'sh /home/'${1}'/.docker/init.sh '${5}
