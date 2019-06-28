@@ -32,6 +32,17 @@ services:
       - POSTGRES_USER=saleor
       - POSTGRES_PASSWORD=saleor
 
+  saleor:
+    image: chetabahana/saleor
+    restart: 'no'
+    user: saleor:saleor
+    env_file: home/chetabahana/.docker/common.env
+    networks:
+      - network_tier
+    depends_on:
+      - postgres
+      - redis
+
 volumes:
   redis_data:
     driver: local

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 : <<'END'
 #https://stackoverflow.com/a/47978804/4058484
@@ -102,31 +102,26 @@ GLOBAL OPTIONS:
    --version, -v                print the version
 END
 
-echo -e "\nSTORAGE\n"
+echo "\nGCLOUD\n"
+gcloud version
+
+#echo "\nROLES\n"
+#gcloud projects get-iam-policy chetabahana --flatten="bindings[].members"
+
+echo "\nREGISTRY\n"
+DIGEST=`gcloud container images list-tags gcr.io/chetabahana/backend \
+--filter='-tags:*' --format='get(digest)'`
+[ -z "$DIGEST" ] && echo "No digest" || gcloud container images delete \
+--quiet gcr.io/chetabahana/backend@$DIGEST
+
+#echo "\nGCS MEDIA\n"
+#gcsfuse -o allow_other -o nonempty --uid 1001 --gid 999 --temp-dir /tmp --only-dir saleor/media appspot.chetabahana.com /tmp/volume/media
+#gcsfuse -o allow_other --uid 1001 --gid 999 --temp-dir /tmp --only-dir saleor/static appspot.chetabahana.com volume/static
+#rm -rfv volume/media/products volume/media/category-backgrounds volume/media/collection-backgrounds
+#cd /tmp/volume/media && rm -rfv products category-backgrounds collection-backgrounds
+
+echo "\nSTORAGE\n"
 export BOTO_CONFIG=/dev/null
-gsutil -o GSUtil:default_project_id=${1} du -shc
-
-echo -e "\nCLEANING\n"
-BEFORE_DATE=`date +%Y-%m-%d -d "3 month ago"`
-REGISTRY_NAME=us.gcr.io/${1}/app-engine-tmp
-echo "Cleaning old images from 3 months ago: $BEFORE_DATE"
-bash gcloud/clean.bash $REGISTRY_NAME $BEFORE_DATE
-
-echo -e "\nASSETS\n"
-cp -frpT ${2}/${1} ${3}
-gcloud kms decrypt --location global \
---keyring my-keyring --key github-key \
---plaintext-file $HOME/.ssh/id_rsa \
---ciphertext-file $HOME/.ssh/id_rsa.enc
-gcloud kms decrypt --location global \
---keyring my-keyring --key google-compute-engine-key \
---plaintext-file $HOME/.ssh/google_compute_engine \
---ciphertext-file $HOME/.ssh/google_compute_engine.enc 
-chmod 600 $HOME/.ssh/*
-ls -alR $HOME
-
-echo -e '\nINSTANCE\n'
-gcloud compute scp --zone ${4} --verbosity info --recurse \
---force-key-file-overwrite ${2}/${1} ${1}@backend:/home
-gcloud compute ssh --zone ${4} ${1}@backend \
---command 'sh /home/'${1}'/.docker/init.sh '${5}
+gsutil -o GSUtil:default_project_id=chetabahana du -shc
+#gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/media
+#gsutil -mq rm -rf gs://appspot.chetabahana.com/saleor/static

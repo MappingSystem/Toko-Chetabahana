@@ -1,34 +1,36 @@
 steps:
-- name: '${_SOURCE}/git'
+- name: 'gcr.io/cloud-builders/git'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        echo -e '\nPROFILE\n' && git --version
-        bash ${_SCRIPT}/git.bash ${PROJECT_ID} ${BRANCH_NAME}
+        git clone https://source.developers.google.com/p/chetabahana/r/github_chetabahana_branches
+        mv -f github_chetabahana_branches/home /workspace
+        rm -rf github_chetabahana_branches
 
-- name: '${_SOURCE}/gcloud'
+- name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        echo -e "\nGCLOUD\n" && gcloud version
-        bash ${_SCRIPT}/gcloud.bash ${PROJECT_ID} ${_BUILD_DIR} ${_BUILD_HOME} ${_INSTANCE_ZONE} ${BRANCH_NAME}
+        gcloud kms decrypt --location global --keyring my-keyring --key github-key \
+        --plaintext-file ${_LOCAL_PATH}/.ssh/id_rsa --ciphertext-file ${_LOCAL_PATH}/.ssh/id_rsa.enc
+        gcloud kms decrypt --location global --keyring my-keyring --key google-compute-engine-key \
+        --plaintext-file ${_LOCAL_PATH}/.ssh/google_compute_engine \
+        --ciphertext-file ${_LOCAL_PATH}/.ssh/google_compute_engine.enc 
 
-- name: '${_SOURCE}/docker'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        echo -e "\nDOCKER\n" && docker version
-        bash ${_SCRIPT}/docker.bash ${PROJECT_ID} ${_INSTANCE_ZONE} ${BRANCH_NAME}
+- name: 'python'
+  args: ['bash', '/workspace/scripts/main.bash']
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['compute', 'ssh', '--zone', '${_ZONE}', '${_INSTANCE_NAME}',
+         '--command', 'sh ${_INSTANCE_PATH}/.docker/init.sh']
 
 substitutions:
-  _VERSION: 'v1-231508-cron'
-  _BUILD_HOME: /builder/home
-  _BUILD_DIR: /workspace/home
-  _SCRIPT: /workspace/scripts
-  _INSTANCE_ZONE: us-central1-c
-  _SOURCE: gcr.io/cloud-builders
+  _ZONE: us-central1-c
+  _BUILD_ID: 'v1-280446-cron'
+  _INSTANCE_PATH: /home/chetabahana
+  _INSTANCE_NAME: chetabahana@backend
+  _LOCAL_PATH: /workspace/home/chetabahana
 
-timeout: '1800s'
+timeout: "1800s"
