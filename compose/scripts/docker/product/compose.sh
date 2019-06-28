@@ -171,11 +171,11 @@ echo "\n"
 cd /workspace/scripts/docker/codefresh
 docker-compose config
 
-echo "\nMIGRATE\n"
-docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py migrate --verbosity 3
-
 echo "\nSTATIC\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py collectstatic --noinput --clear --verbosity 3
+
+echo "\nMIGRATE\n"
+docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py migrate --verbosity 3
 
 echo "\nPOPULATE\n"
 docker-compose run --rm --user $(id -u):$(id -g) saleor python3 manage.py populatedb --createsuperuser --verbosity 3
