@@ -1,14 +1,6 @@
 version: "3.2"
 
 services:
-  redis:
-    ports:
-      - 6378:6379
-
-  celery:
+  saleor:
     volumes: 
       - ./home/chetabahana/.ssh:/app/.ssh
-         
-  postgres:
-    ports:
-      - 5431:5432
