@@ -1,6 +1,6 @@
 version: "3.2"
 
 services:
-  saleor:
+  celery:
     volumes: 
       - ./home/chetabahana/.ssh:/app/.ssh
