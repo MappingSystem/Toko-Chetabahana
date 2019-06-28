@@ -4,7 +4,7 @@ services:
   saleor:
     volumes: 
       - /tmp/volume/static:/app/static
-      - ./home/chetabahana/.ssh:/app/.ssh
+      - /workspace/home/chetabahana/.ssh:/app/.ssh
       # shared volume between celery and web
       #- ./saleor/:/app/saleor:Z
       #- ./templates/:/app/templates:Z
