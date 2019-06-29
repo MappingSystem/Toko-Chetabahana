@@ -82,7 +82,7 @@ git config --global user.name "chetabahana"
 git config --global user.email "chetabahana@gmail.com"
 ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 
-echo -e "\nSYNCHING\n"
+echo "\nSYNCHING\n"
 cd $HOME && rm -rf compose Toko-Chetabahana
 git clone git@github.com:Chetabahana/compose.git
 git clone git@github.com:MarketLeader/Toko-Chetabahana.git
