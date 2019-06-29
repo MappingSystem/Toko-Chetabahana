@@ -72,12 +72,28 @@ END
 #Environtment
 NEXT=taxonomy
 CURRENT=gunicorn
-
+	
 echo "\nAGENT\n"
-AGENT=$HOME/.ssh/agent
+eval `ssh-agent`
+apt-get update > /dev/null
+apt-get install -y --no-install-recommends apt-utils > /dev/null
+apt-get --assume-yes install expect > /dev/null
 git config --global user.name "chetabahana"
 git config --global user.email "chetabahana@gmail.com"
-eval `ssh-agent` && expect $AGENT && ssh-add -l
+ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
+
+echo -e "\nSYNCHING\n"
+cd $HOME && rm -rf compose Toko-Chetabahana
+git clone git@github.com:Chetabahana/compose.git
+git clone git@github.com:MarketLeader/Toko-Chetabahana.git
+rm -rf $HOME/Toko-Chetabahana/branches $HOME/Toko-Chetabahana/compose
+cp -frpT /workspace $HOME/Toko-Chetabahana/branches
+cp -frpT $HOME/compose $HOME/Toko-Chetabahana/compose
+cd $HOME/Toko-Chetabahana/branches && rm -rf .git home
+cd $HOME/Toko-Chetabahana/compose && rm -rf .git home
+cd $HOME/Toko-Chetabahana && git status 
+git add . && git commit -m "sync source"
+git push -u origin master
 
 echo "\nUPSTREAM\n"
 cd $HOME && rm -rf Tutorial-Buka-Toko
@@ -89,8 +105,8 @@ git push origin master --force
 
 echo "\nREMOTE\n"
 git checkout Chetabahana
+BRANCH=$BUILD_DIR/$PROJECT_ID/.docker/branch
 git fetch --prune origin && git reset --hard origin/master
-BRANCH=/workspace/home/chetabahana/.docker/branch
 cp -frpvT $BRANCH "$HOME/Tutorial-Buka-Toko"
 git status && git add . && git commit -m "Add support for ${NEXT}"
 git push origin Chetabahana --force
@@ -117,5 +133,5 @@ git status && git add . && git commit -m "Add support for ${NEXT}"
 #git push origin "${NEXT}" --force
 
 cd $HOME
-rm -rf saleor Tutorial-Buka-Toko
+rm -rf compose saleor Tutorial-Buka-Toko Toko-Chetabahana
 eval `ssh-agent -k`

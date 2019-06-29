@@ -50,12 +50,20 @@ gcloud kms keys add-iam-policy-binding $KEY_NAME \
 -----------------------------------------------------------------
 END
 
+echo "\nDISK\n"
+df -h
+
+echo "\nRAM\n"
+cat /proc/meminfo
+
+#echo "\nUPDATE"
+#gcloud components update
+
 echo "\nASSETS\n"
-cp -frpT /workspace/home/chetabahana $HOME
-ln -s $HOME/.ssh /root/.ssh
+cp -frpT $BUILD_DIR/$PROJECT_ID $HOME
+gcloud kms decrypt --location global \
+--keyring my-keyring --key github-key \
+--plaintext-file $HOME/.ssh/id_rsa \
+--ciphertext-file $HOME/.ssh/id_rsa.enc
 chmod 600 $HOME/.ssh/*
 ls -alR $HOME
-
-echo "\nEXPECT\n"
-apt-get update
-apt-get --assume-yes install expect
