@@ -83,9 +83,10 @@ git config --global user.email "chetabahana@gmail.com"
 ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 
 echo "\nSYNCHING\n"
+REPO='github_'$PROJECT_ID'_compose'
 cd $HOME && rm -rf compose Toko-Chetabahana
-git clone git@github.com:Chetabahana/compose.git
 git clone git@github.com:MarketLeader/Toko-Chetabahana.git
+git clone https://source.developers.google.com/p/$PROJECT_ID/r/$REPO
 rm -rf $HOME/Toko-Chetabahana/branches $HOME/Toko-Chetabahana/compose
 cp -frpT /workspace $HOME/Toko-Chetabahana/branches
 cp -frpT $HOME/compose $HOME/Toko-Chetabahana/compose
