@@ -6,7 +6,7 @@ steps:
   - |
         bash ${_SCRIPT}/gcloud.bash $PROJECT_ID $BUILD_ID \
         $REPO_NAME $BRANCH_NAME $REVISION_ID $COMMIT_SHA \
-        ${_BUILD_DIR} ${_SCRIPT}
+        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL}
 
 - name: '${_SOURCE}/git'
   entrypoint: 'bash'
@@ -15,7 +15,7 @@ steps:
   - |
         bash ${_SCRIPT}/git.bash ${PROJECT_ID} $BUILD_ID \
         $REPO_NAME $BRANCH_NAME $REVISION_ID $COMMIT_SHA \
-        ${_BUILD_DIR} ${_SCRIPT}
+        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL}
 
 substitutions:
   _VERSION: 'v1-290549-cron'
