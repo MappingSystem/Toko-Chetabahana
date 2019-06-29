@@ -86,7 +86,7 @@ echo "\nSYNCHING\n"
 REPO='github_'$PROJECT_ID'_compose'
 cd $HOME && rm -rf compose Toko-Chetabahana
 git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-git clone https://source.developers.google.com/p/$PROJECT_ID/r/$REPO
+git clone https://source.developers.google.com/p/$PROJECT_ID/r/$REPO compose
 rm -rf $HOME/Toko-Chetabahana/branches $HOME/Toko-Chetabahana/compose
 cp -frpT /workspace $HOME/Toko-Chetabahana/branches
 cp -frpT $HOME/compose $HOME/Toko-Chetabahana/compose

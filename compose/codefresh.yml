@@ -1,0 +1,29 @@
+version: '1.0'
+steps:
+  get_token:
+    title: Reading Github token
+    image: codefresh/cli
+    commands:
+      - GITHUB_TOKEN=$(codefresh get context github --decrypt -o yaml | yq -y .spec.data.auth.password)
+      - cf_export GIT_URL=https://chetabahana:$GITHUB_TOKEN
+      - cf_export WORKSPACE=`pwd`
+
+  main_clone:
+    title: Checking out code
+    image: python:latest
+    commands:
+      - cd $WORKSPACE && rm -Rf compose
+      - git clone $GIT_URL@github.com/chetabahana/compose.git
+      #- cd $WORKSPACE/compose/scripts && bash cf.bash
+
+  main_update:
+    title: Updating the repo
+    image: alpine/git:latest
+    commands:
+      - git config --global user.name "chetabahana"
+      - git config --global user.email "chetabahana@gmail.com"
+      - cd $WORKSPACE/compose && git remote rm origin
+      - git remote add origin $GIT_URL@github.com/chetabahana/compose.git
+      - BRANCH=`git rev-parse --abbrev-ref HEAD` && git pull origin $BRANCH
+      - sed -i "s/-[0-9]\{1,\}-\([a-zA-Z0-9_]*\)'/-`date +%d%H%M`-cron'/g" cloudbuild.yaml
+      - git status && git add . && git commit -m "codefresh update" && git push -u origin $BRANCH
