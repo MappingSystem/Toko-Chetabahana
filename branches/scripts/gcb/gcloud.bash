@@ -26,8 +26,7 @@ export BRANCH_NAME=${4}
 export REVISION_ID=${5}
 export COMMIT_SHA=${6}
 export BUILD_DIR=${7}
-export INSTANCE_ZONE=${8}
-export SCRIPT=${9}
+export SCRIPT=${8}
 
 export DIRNAME=$(dirname "$0")
 export BASENAME=$(basename "$0" .bash)
