@@ -20,14 +20,14 @@ export: export [-fn] [name[=value] ...] or export -p
 END
 
 export PROJECT_ID=${1}
-export BUILD_ID=${2}
-export REPO_NAME=${3}
-export BRANCH_NAME=${4}
-export REVISION_ID=${5}
-export COMMIT_SHA=${6}
-export BUILD_DIR=${7}
-export INSTANCE_ZONE=${8}
-export SCRIPT=${9}
+export REPO_NAME=${2}
+export BRANCH_NAME=${3}
+export BUILD_ID=${4}
+export COMMIT_SHA=${5}
+export BUILD_DIR=${6}
+export USER_NAME=${7}
+export USER_EMAIL=${8}
+export USER_REPO=${9}
 
 export DIRNAME=$(dirname "$0")
 export BASENAME=$(basename "$0" .bash)

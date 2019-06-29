@@ -78,15 +78,14 @@ eval `ssh-agent`
 apt-get update > /dev/null
 apt-get install -y --no-install-recommends apt-utils > /dev/null
 apt-get --assume-yes install expect > /dev/null
-git config --global user.name "chetabahana"
-git config --global user.email "chetabahana@gmail.com"
+git config --global user.name "$USER_NAME"
+git config --global user.email "$USER_EMAIL"
 ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 
 echo "\nSYNCHING\n"
-REPO='github_'$PROJECT_ID'_compose'
 cd $HOME && rm -rf compose Toko-Chetabahana
+git clone $USER_REPO compose
 git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-git clone https://source.developers.google.com/p/$PROJECT_ID/r/$REPO compose
 rm -rf $HOME/Toko-Chetabahana/branches $HOME/Toko-Chetabahana/compose
 cp -frpT /workspace $HOME/Toko-Chetabahana/branches
 cp -frpT $HOME/compose $HOME/Toko-Chetabahana/compose

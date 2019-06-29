@@ -4,24 +4,22 @@ steps:
   args:
   - '-c'
   - |
-        bash ${_SCRIPT}/gcloud.bash $PROJECT_ID $BUILD_ID \
-        $REPO_NAME $BRANCH_NAME $REVISION_ID $COMMIT_SHA \
-        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL}
+        bash ${_SCRIPT}/gcloud.bash $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $BUILD_ID $COMMIT_SHA \
+        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL} ${_USER_REPO}
 
 - name: '${_SOURCE}/git'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        bash ${_SCRIPT}/git.bash ${PROJECT_ID} $BUILD_ID \
-        $REPO_NAME $BRANCH_NAME $REVISION_ID $COMMIT_SHA \
-        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL}
+        bash ${_SCRIPT}/git.bash ${PROJECT_ID} \
+        $REPO_NAME $BRANCH_NAME $BUILD_ID $COMMIT_SHA \
+        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL} ${_USER_REPO}
 
 substitutions:
   _VERSION: 'v1-290549-cron'
-  _BUILD_HOME: /builder/home
   _BUILD_DIR: /workspace/home
-  _INSTANCE_ZONE: us-central1-c
   _SOURCE: gcr.io/cloud-builders
   _SCRIPT: /workspace/scripts/gcb
 
