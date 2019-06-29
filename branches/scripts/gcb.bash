@@ -50,7 +50,7 @@ echo "Path: "`which $BASENAME`
 
 echo -e "\nENVIRONTMENT\n"
 export WORKDIR=${1}
-export -p
+env
 
 cd $WORKDIR && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh
