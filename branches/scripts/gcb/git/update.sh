@@ -74,12 +74,11 @@ NEXT=taxonomy
 CURRENT=gunicorn
 	
 echo "\nAGENT\n"
-eval `ssh-agent`
-apt-get update > /dev/null
+git config --global user.name $USER_NAME
+git config --global user.email $USER_EMAIL
+eval `ssh-agent` && apt-get update > /dev/null
 apt-get install -y --no-install-recommends apt-utils > /dev/null
 apt-get --assume-yes install expect > /dev/null
-git config --global user.name "$USER_NAME"
-git config --global user.email "$USER_EMAIL"
 ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 
 echo "\nSYNCHING\n"
@@ -107,7 +106,7 @@ echo "\nREMOTE\n"
 git checkout Chetabahana
 BRANCH=$BUILD_DIR/$PROJECT_ID/.docker/branch
 git fetch --prune origin && git reset --hard origin/master
-cp -frpvT $BRANCH "$HOME/Tutorial-Buka-Toko"
+cp -frpvT $BRANCH $HOME/Tutorial-Buka-Toko
 git status && git add . && git commit -m "Add support for ${NEXT}"
 git push origin Chetabahana --force
 
