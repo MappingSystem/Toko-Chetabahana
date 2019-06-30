@@ -90,11 +90,11 @@ git pull --rebase upstream master && git reset --hard upstream/master
 git push origin master --force
 
 echo "\nREMOTE\n"
-git checkout Chetabahana
-BRANCH=$BUILD_DIR/$PROJECT_ID/.docker/branch
+[ $BRANCH_NAME = 'master' ] && BUILD=$DOCKERHUB || BUILD=$CODEFRESH
+git checkout Chetabahana && BRANCH=$BUILD_DIR/$PROJECT_ID/.docker/branch
 git fetch --prune origin && git reset --hard origin/master
 cp -frpvT $BRANCH $HOME/Tutorial-Buka-Toko
-git status && git add . && git commit -m "Add support for $DOCKERHUB"
+git status && git add . && git commit -m "Add support for $BUILD"
 git push origin Chetabahana --force
 
 echo "\nMASTER\n"
@@ -105,12 +105,11 @@ git fetch --prune upstream Chetabahana && git reset --hard upstream/Chetabahana
 git push origin master --force
 
 echo "\nBUILD\n"
-[ $BRANCH_NAME = 'master' ] && BRANCH=$DOCKERHUB || BRANCH=$CODEFRESH
-git checkout $BRANCH && git fetch --prune origin master && git reset --hard origin/master
+git checkout $BUILD && git fetch --prune origin master && git reset --hard origin/master
 export PATH=$HOME/.local/bin:$PATH && pipenv run tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
-git status && git add . && git commit -m "Add support for $BRANCH"
-#git push origin $BRANCH --force
+git status && git add . && git commit -m "Add support for $BUILD"
+#git push origin $BUILD --force
 
 echo "\nSYNC\n"
 cd $HOME && rm -rf compose Toko-Chetabahana
