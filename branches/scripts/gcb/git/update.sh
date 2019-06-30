@@ -116,7 +116,7 @@ git fetch --prune origin master && git reset --hard origin/master
 export PATH=$HOME/.local/bin:$PATH && pipenv run tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
 git status && git add . && git commit -m "Add support for ${NEXT}"
-#git push origin "${NEXT}" --force
+git push origin "${NEXT}" --force
 
 echo "\nSYNC\n"
 cd $HOME && rm -rf compose Toko-Chetabahana
