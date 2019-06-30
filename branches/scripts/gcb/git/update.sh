@@ -81,23 +81,10 @@ apt-get install -y --no-install-recommends apt-utils > /dev/null
 apt-get --assume-yes install expect > /dev/null
 ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 
-echo "\nSYNCHING\n"
-cd $HOME && rm -rf compose Toko-Chetabahana
-git clone $USER_REPO compose
-git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-rm -rf $HOME/Toko-Chetabahana/branches $HOME/Toko-Chetabahana/compose
-cp -frpT /workspace $HOME/Toko-Chetabahana/branches
-cp -frpT $HOME/compose $HOME/Toko-Chetabahana/compose
-cd $HOME/Toko-Chetabahana/branches && rm -rf .git home
-cd $HOME/Toko-Chetabahana/compose && rm -rf .git home
-cd $HOME/Toko-Chetabahana && git status 
-git add . && git commit -m "sync source"
-git push -u origin master
-
 echo "\nUPSTREAM\n"
 cd $HOME && rm -rf Tutorial-Buka-Toko
 git clone git@github.com:MarketLeader/Tutorial-Buka-Toko.git
-cd Tutorial-Buka-Toko && git checkout master
+cd $HOME/Tutorial-Buka-Toko && git checkout master
 git remote add upstream git@github.com:mirumee/saleor.git
 git pull --rebase upstream master && git reset --hard upstream/master
 git push origin master --force
@@ -130,6 +117,19 @@ export PATH=$HOME/.local/bin:$PATH && pipenv run tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
 git status && git add . && git commit -m "Add support for ${NEXT}"
 #git push origin "${NEXT}" --force
+
+echo "\nSYNC\n"
+cd $HOME && rm -rf compose Toko-Chetabahana
+git clone $USER_REPO compose
+git clone git@github.com:MarketLeader/Toko-Chetabahana.git
+rm -rf $HOME/Toko-Chetabahana/branches $HOME/Toko-Chetabahana/compose
+cp -frpT /workspace $HOME/Toko-Chetabahana/branches
+cp -frpT $HOME/compose $HOME/Toko-Chetabahana/compose
+cd $HOME/Toko-Chetabahana/branches && rm -rf .git home
+cd $HOME/Toko-Chetabahana/compose && rm -rf .git home
+cd $HOME/Toko-Chetabahana && git status 
+git add . && git commit -m "sync source"
+git push -u origin master
 
 cd $HOME
 rm -rf compose saleor Tutorial-Buka-Toko Toko-Chetabahana
