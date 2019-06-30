@@ -70,8 +70,8 @@ usage: git clone [<options>] [--] <repo> [<dir>]
 END
 
 #Environtment
-NEXT=taxonomy
-CURRENT=gunicorn
+CODEFRESH=bundles
+DOCKERHUB=taxonomy
 	
 echo "\nAGENT\n"
 git config --global user.name $USER_NAME
@@ -94,7 +94,7 @@ git checkout Chetabahana
 BRANCH=$BUILD_DIR/$PROJECT_ID/.docker/branch
 git fetch --prune origin && git reset --hard origin/master
 cp -frpvT $BRANCH $HOME/Tutorial-Buka-Toko
-git status && git add . && git commit -m "Add support for ${NEXT}"
+git status && git add . && git commit -m "Add support for $DOCKERHUB"
 git push origin Chetabahana --force
 
 echo "\nMASTER\n"
@@ -104,19 +104,13 @@ git remote add upstream git@github.com:MarketLeader/Tutorial-Buka-Toko.git
 git fetch --prune upstream Chetabahana && git reset --hard upstream/Chetabahana
 git push origin master --force
 
-#echo "\nCURRENT\n"
-#git checkout "${CURRENT}"
-#git fetch --prune origin master && git reset --hard origin/master
-#git status && git add . && git commit -m "Add support for ${CURRENT}"
-#git push origin "${CURRENT}" --force
-
-echo "\nNEXT\n"
-git checkout "${NEXT}"
-git fetch --prune origin master && git reset --hard origin/master
+echo "\nBUILD\n"
+[ $BRANCH_NAME = 'master' ] && BRANCH=$DOCKERHUB || BRANCH=$CODEFRESH
+git checkout $BRANCH && git fetch --prune origin master && git reset --hard origin/master
 export PATH=$HOME/.local/bin:$PATH && pipenv run tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
-git status && git add . && git commit -m "Add support for ${NEXT}"
-git push origin "${NEXT}" --force
+git status && git add . && git commit -m "Add support for $BRANCH"
+#git push origin $BRANCH --force
 
 echo "\nSYNC\n"
 cd $HOME && rm -rf compose Toko-Chetabahana
