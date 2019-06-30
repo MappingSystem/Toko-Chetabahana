@@ -24,7 +24,7 @@ steps:
         bash ${_SCRIPT}/docker.bash ${PROJECT_ID} ${_INSTANCE_ZONE} ${BRANCH_NAME}
 
 substitutions:
-  _VERSION: 'v1-301506-cron'
+  _VERSION: 'v1-301509-cron'
   _BUILD_HOME: /builder/home
   _BUILD_DIR: /workspace/home
   _SCRIPT: /workspace/scripts
