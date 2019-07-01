@@ -102,33 +102,21 @@ GLOBAL OPTIONS:
    --version, -v                print the version
 END
 
-echo -e "\nSTORAGE\n"
-export BOTO_CONFIG=/dev/null
-gsutil -o GSUtil:default_project_id=${1} du -shc
+export PROJECT_ID=${1}
+export REPO_NAME=${2}
+export BRANCH_NAME=${3}
+export BUILD_ID=${4}
+export BUILD_LOG=${5}-${4}.txt
+export BUILD_DIR=${6}
+export USER_NAME=${7}
+export USER_EMAIL=${8}
+export USER_REPO=${9}
+export INSTANCE_ZONE=${10}
+export INSTANCE_NAME=${11}
+export HOST_NAME=${12}
+export HOST_INTERNAL=${13}
 
-echo -e "\nCLEANING\n"
-BEFORE_DATE=`date +%Y-%m-%d -d "3 month ago"`
-REGISTRY_NAME=us.gcr.io/${1}/app-engine-tmp
-echo "Cleaning old images from 3 months ago: $BEFORE_DATE"
-bash gcloud/clean.bash $REGISTRY_NAME $BEFORE_DATE
-
-echo -e "\nASSETS\n"
-cp -frpT ${2}/${1} ${3}
-gcloud kms decrypt --location global \
---keyring my-keyring --key github-key \
---plaintext-file $HOME/.ssh/id_rsa \
---ciphertext-file $HOME/.ssh/id_rsa.enc
-
-gcloud kms decrypt --location global \
---keyring my-keyring --key google-compute-engine-key \
---plaintext-file $HOME/.ssh/google_compute_engine \
---ciphertext-file $HOME/.ssh/google_compute_engine.enc 
-chmod 600 $HOME/.ssh/*
-ls -alR $HOME
-
-echo -e '\nINSTANCE\n'
-gcloud compute scp --zone ${4} --verbosity info --recurse \
---force-key-file-overwrite ${2}/${1} ${1}@backend:/home
-
-gcloud compute ssh --zone ${4} ${1}@backend \
---command 'sh /home/'${1}'/.docker/init.sh '${5}
+export DIRNAME=$(dirname "$0")
+export BASENAME=$(basename "$0" .bash)
+export BASEFILE=$(basename "$DIRNAME").bash
+cd $DIRNAME && bash ../$BASEFILE $DIRNAME/$BASENAME

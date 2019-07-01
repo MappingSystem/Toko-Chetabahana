@@ -9,12 +9,19 @@ steps:
       - cf_export WORKSPACE=`pwd`
 
   main_clone:
-    title: Checking out code
+    title: Cloning main repo
     image: python:latest
     commands:
       - cd $WORKSPACE && rm -Rf compose
       - git clone $GIT_URL@github.com/chetabahana/compose.git && cd compose
       - if [ "${CF_COMMIT_MESSAGE+set}" != set ]; then echo "on master"; else git checkout ${CF_COMMIT_MESSAGE##* }; fi
+
+  get_update:
+    title: Checking out code
+    image: docker:latest
+    commands:
+      - printenv
+      - sh $WORKSPACE/compose/scripts/cf/docker.sh
       
   main_update:
     title: Updating the repo

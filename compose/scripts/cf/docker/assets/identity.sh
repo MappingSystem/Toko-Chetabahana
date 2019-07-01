@@ -1,4 +1,5 @@
 #!/bin/sh
+
 : <<'END'
 $ nmap -h
 Nmap 7.60 ( https://nmap.org )
@@ -117,17 +118,17 @@ EXAMPLES:
 SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 END
 
-echo "\nWHOAMI\n"
-whoami
-pwd
-id
-
 echo "\nDISK\n"
 df -h
 
-return
-echo "\nNET STATUS\n"
-netstat -plnt
+echo "\nCOMPOSE\n"
+apt-get update > /dev/null
+apt-get install -y --no-install-recommends apt-utils > /dev/null
+apt-get --assume-yes install jq > /dev/null
 
-echo "\nNMAP STATUS"
-nmap scanme.nmap.org
+DESTINATION=/usr/local/bin/docker-compose
+SOURCE=https://github.com/docker/compose/releases/download
+VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
+RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
+curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
+docker-compose --version

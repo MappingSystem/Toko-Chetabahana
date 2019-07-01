@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 : <<'END'
 $ rsync --help
@@ -168,35 +168,17 @@ See http://rsync.samba.org/ for updates, bug reports, and answers
 rsync error: syntax or usage error (code 1) at main.c(1569) [client=3.1.2]	 
 END
 
-#apt-utils
-sleep 10
+#export PROJECT_ID=${1}
+#export REPO_NAME=${2}
+#export BRANCH_NAME=${3}
+#export BUILD_ID=${4}
+#export BUILD_LOG=${5}-${4}.txt
+#export BUILD_DIR=${6}
+#export USER_NAME=${7}
+#export USER_EMAIL=${8}
+#export USER_REPO=${9}
 
-echo -e "\nUPDATE\n"
-apt-get update > /dev/null
-apt-get install -y --no-install-recommends apt-utils > /dev/null
-apt-get --assume-yes install jq > /dev/null && jq --version
-apt-get --assume-yes install expect > /dev/null && expect -v
-apt-get --assume-yes install nmap > /dev/null && nmap --version
-
-echo -e "\nAGENT\n"
-AGENT=$HOME/.ssh/agent
-ln -s $HOME/.ssh /root/.ssh
-cd $HOME && rm -rf Toko-Chetabahana
-git config --global user.name "chetabahana"
-git config --global user.email "chetabahana@gmail.com"
-eval `ssh-agent` && expect $AGENT && ssh-add -l
-	
-echo -e "\nSYNCHING\n"
-#avoid lack of update other than master
-cd $HOME && git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-cd Toko-Chetabahana && rm -rf compose
-cp -frpT /workspace compose
-rm -rf compose/.git compose/home
-git add . && git commit -m "sync compose"
-git push -u origin master
-cd $HOME && rm -rf Toko-Chetabahana
-eval `ssh-agent -k`
-
-#run scripts
-cd /workspace/scripts/docker && chmod -R +x *
-find . -type f -name '*.sh' | sort | sh
+export DIRNAME=$(dirname "$0")
+export BASENAME=$(basename "$0" .bash)
+export BASEFILE=$(basename "$DIRNAME").bash
+cd $DIRNAME && sh ../$BASEFILE $DIRNAME/$BASENAME

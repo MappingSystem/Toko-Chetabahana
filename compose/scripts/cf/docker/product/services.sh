@@ -28,8 +28,29 @@ Options:
                         for each container.
 END
 
-echo "\nINSPECT\n"
-docker inspect codefresh_saleor_1
+echo "\nREDIS\n"
+docker inspect compose_redis_1
+docker logs compose_redis_1
 
-echo "\nLOGS\n"
-docker logs codefresh_saleor_1
+echo "\nPOSTGRES\n"
+docker inspect compose_postgres_1
+docker logs compose_postgres_1
+
+echo "\nCELERY\n"
+docker inspect compose_celery_1
+docker logs compose_celery_1
+
+echo "\nSALEOR\n"
+docker inspect compose_saleor_1
+docker logs compose_saleor_1
+
+echo "\nSERVICES\n"
+docker ps
+
+echo "\nBUNDLE\n"
+cd $WORKSPACE/compose/home/chetabahana/.docker/compose
+CURRENT_UID=$(id -u):$(id -g) docker-compose bundle --output compose.dab
+
+echo "\nDETAILS\n"
+cat compose.dab
+
