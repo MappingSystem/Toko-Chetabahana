@@ -18,7 +18,7 @@ steps:
         ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL} ${_USER_REPO}
 
 substitutions:
-  _VERSION: 'v1-011121-cron'
+  _VERSION: 'v1-011608-cron'
   _BUILD_DIR: /workspace/home
   _SOURCE: gcr.io/cloud-builders
   _SCRIPT: /workspace/scripts/gcb
