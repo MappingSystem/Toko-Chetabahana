@@ -14,7 +14,6 @@ steps:
     commands:
       - cd $WORKSPACE && rm -Rf branches
       - git clone $GIT_URL@github.com/chetabahana/branches.git
-      - if [ "${CF_COMMIT_MESSAGE+set}" != set ]; then echo "on master"; else git checkout master; fi
       - cd $WORKSPACE/branches/scripts && bash cf.bash
 
   main_update:

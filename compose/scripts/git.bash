@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 : <<'END'
 $ git --help
@@ -46,8 +46,7 @@ concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 END
 
-echo "\nHOME\n"
-sleep 1 && cd $HOME && git clone $USER_REPO branches && cd branches
-SHOW_ALL=`git show-branch --all | grep -w $BRANCH_NAME`
-[ $? = 0 ] && git checkout $BRANCH_NAME || echo "$BRANCH_NAME not exist"
-mv -f $HOME/branches/home /workspace && rm -rf $HOME/branches
+git clone https://source.developers.google.com/p/${1}/r/github_${1}_branches
+cd github_${1}_branches && git show-branch --list | grep -w ${2}
+[ $? == 0 ] && git checkout ${2} || echo 'branch '${2}' not exist'
+mv -fv home /workspace && cd .. && rm -rf github_${1}_branches
