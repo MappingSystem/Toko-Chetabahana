@@ -88,4 +88,4 @@ gcloud compute scp --zone $ZONE --verbosity info --recurse \
 --force-key-file-overwrite $BUILD_DIR/$PROJECT_ID $INSTANCE:/home
 
 gcloud compute ssh --zone $ZONE $INSTANCE \
---command 'sh /home/'$PROJECT_ID'/.docker/init.sh '
+--command 'sh /home/'$PROJECT_ID'/.docker/init.sh $BRANCH_NAME'
