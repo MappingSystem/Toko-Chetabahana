@@ -24,7 +24,7 @@ steps:
     type: composition
     working_directory: compose/home/chetabahana/.docker/compose
     arguments:
-      composition: docker-compose.yml
+      composition: codefresh-composition.yml
       composition_candidates:
         saleor:
           image: chetabahana/saleor
@@ -32,7 +32,7 @@ steps:
           user: saleor:saleor
           command: pytest
           volumes:
-            - /codefresh/volume:/codefresh/volume
+            - '${{CF_VOLUME_NAME}}:${{CF_VOLUME_PATH}}'
           networks:
             - network_tier
           depends_on:
