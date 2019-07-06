@@ -44,10 +44,6 @@ whoami
 echo $HOME
 id
 
-echo -e "\nVERSION\n"
-eval "$BASENAME version"
-echo "Path: "`which $BASENAME`
-
 echo -e "\nENVIRONTMENT\n"
 export WORKDIR=${1}
 env

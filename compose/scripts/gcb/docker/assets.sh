@@ -118,9 +118,6 @@ EXAMPLES:
 SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 END
 
-echo "\nDISK\n"
-df -h
-
 echo "\nCOMPOSE\n"
 apt-get update > /dev/null
 apt-get install -y --no-install-recommends apt-utils > /dev/null

@@ -177,4 +177,12 @@ export BUILD_DIR=${5}
 export DIRNAME=$(dirname "$0")
 export BASENAME=$(basename "$0" .bash)
 export BASEFILE=$(basename "$DIRNAME").bash
-#cd $DIRNAME && bash ../$BASEFILE $DIRNAME/$BASENAME
+
+echo "\nIMAGES\n"
+docker images --all
+
+typeset -u BASECAP=$BASENAME
+echo -e "\n$BASECAP VERSION\n"
+eval "$BASENAME version"
+echo "Path: "`which $BASENAME`
+cd $DIRNAME && bash ../$BASEFILE $DIRNAME/$BASENAME

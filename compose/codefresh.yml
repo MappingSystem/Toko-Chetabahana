@@ -22,15 +22,17 @@ steps:
   get_update:
     title: Run compose
     type: composition
-    working_directory: 'compose/home/chetabahana/.docker/compose'
+    working_directory: compose/home/chetabahana/.docker/compose
     arguments:
-      composition: 'docker-compose.yml'
+      composition: docker-compose.yml
       composition_candidates:
         saleor:
           image: chetabahana/saleor
-          env_file: common.env
+          env_file: codefresh.env
           user: saleor:saleor
-          command: 'pytest'
+          command: pytest
+          volumes:
+            - /codefresh/volume:/codefresh/volume
           networks:
             - network_tier
           depends_on:

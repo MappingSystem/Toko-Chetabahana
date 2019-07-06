@@ -1,20 +1,4 @@
 steps:
-- name: '${_SOURCE}/git'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash ${_SCRIPT}/git.bash ${PROJECT_ID} \
-        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
- 
-- name: '${_SOURCE}/docker'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash ${_SCRIPT}/docker.bash ${PROJECT_ID} \
-        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
-
 - name: '${_SOURCE}/gcloud'
   entrypoint: 'bash'
   args:
@@ -23,9 +7,16 @@ steps:
         bash ${_SCRIPT}/gcloud.bash $PROJECT_ID \
         $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
 
-substitutions:
+- name: '${_SOURCE}/docker'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        bash ${_SCRIPT}/docker.bash ${PROJECT_ID} \
+        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
 
-  _VERSION: 'v1-012105-cron'
+substitutions:
+  _VERSION: 'v1-062105-cron'
   _BUILD_HOME: /builder/home
   _BUILD_DIR: /workspace/home
   _SOURCE: gcr.io/cloud-builders
