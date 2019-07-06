@@ -1,0 +1,15 @@
+steps:
+- name: '${_SOURCE}/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        gcloud config list --all
+
+substitutions:
+  _VERSION: 'v1-060415-cron'
+  _BUILD_DIR: /workspace/home
+  _SOURCE: gcr.io/cloud-builders
+  _SCRIPT: /workspace/scripts/gcb
+
+timeout: "10s"
