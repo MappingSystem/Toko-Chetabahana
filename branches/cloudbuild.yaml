@@ -5,20 +5,10 @@ steps:
   - '-c'
   - |
         bash ${_SCRIPT}/gcloud.bash $PROJECT_ID \
-        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_URL} \
-        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL} ${_USER_REPO}
-
-- name: '${_SOURCE}/git'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash ${_SCRIPT}/git.bash ${PROJECT_ID} \
-        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_URL} \
-        ${_BUILD_DIR} ${_USER_NAME} ${_USER_EMAIL} ${_USER_REPO}
+        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
 
 substitutions:
-  _VERSION: 'v1-011608-cron'
+  _VERSION: 'v1-051324-cron'
   _BUILD_DIR: /workspace/home
   _SOURCE: gcr.io/cloud-builders
   _SCRIPT: /workspace/scripts/gcb

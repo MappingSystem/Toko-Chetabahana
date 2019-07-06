@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 : <<'END'
 $ mv --help
@@ -43,7 +43,19 @@ Full documentation at: <http://www.gnu.org/software/coreutils/mv>
 or available locally via: info '(coreutils) mv invocation'
 END
 
-export DIRNAME=$(dirname "$0")
-export BASENAME=$(basename "$0" .bash)
-export BASEFILE=$(basename "$DIRNAME").bash
-cd $DIRNAME && bash ../$BASEFILE $DIRNAME/$BASENAME
+echo -e "\nWHOAMI\n"
+whoami
+echo $HOME
+id
+
+echo -e "\nVERSION\n"
+eval "$BASENAME version"
+echo "Path: "`which $BASENAME`
+docker-compose --version
+
+echo -e "\nENVIRONTMENT\n"
+export WORKDIR=${1}
+env
+
+#cd $WORKSPACE/branches/scripts/cf && chmod -R +x *
+#find . -type f -name '*.sh' | sort | sh

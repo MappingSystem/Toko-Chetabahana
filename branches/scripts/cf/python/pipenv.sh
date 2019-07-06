@@ -61,7 +61,7 @@ Commands:
 END
 
 #Package
-APP="install gunicorn gevent"
+APP="install gevent gittle gunicorn"
 GIT=https://github.com/mirumee/saleor.git
 
 #Environment
@@ -81,7 +81,7 @@ pipenv graph
 echo "\nTRANSFER\n"
 pipenv lock -r > requirements.txt
 pipenv lock -r -d > requirements_dev.txt
-BRANCH=$WORKSPACE/branches/home/chetabahana/.docker/branch
+BRANCH=$WORKSPACE/branches/home/chetabahana/.docker/build/Tutorial-Buka-Toko
 cp -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
 
 echo "\nPIPLOCK\n"
@@ -89,6 +89,9 @@ cat requirements.txt
 
 echo "\nDEV PACKAGES\n"
 pipenv install --dev
+
+echo "\nPYTEST RESULT\n"
+pipenv run pytest
 
 echo "\nTOX RESULT\n"
 pipenv run tox

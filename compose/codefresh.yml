@@ -1,7 +1,7 @@
 version: '1.0'
 steps:
   get_token:
-    title: Reading Github token
+    title: Read token
     image: codefresh/cli
     commands:
       - GITHUB_TOKEN=$(codefresh get context github --decrypt -o yaml | yq -y .spec.data.auth.password)
@@ -9,27 +9,41 @@ steps:
       - cf_export WORKSPACE=`pwd`
 
   main_clone:
-    title: Cloning main repo
+    title: Clone repo
     image: python:latest
     commands:
-      - cd $WORKSPACE && rm -Rf compose
-      - git clone $GIT_URL@github.com/chetabahana/compose.git && cd compose
-      - if [ "${CF_COMMIT_MESSAGE+set}" != set ]; then echo "on master"; else git checkout ${CF_COMMIT_MESSAGE##* }; fi
+      - cd $WORKSPACE && rm -Rf compose branches
+      - git clone --quiet $GIT_URL@github.com/chetabahana/compose.git
+      - git clone --quiet $GIT_URL@github.com/chetabahana/branches.git
+      - if [ "${CF_COMMIT_MESSAGE+set}" != set ]; then BRANCH=master; else BRANCH=${CF_COMMIT_MESSAGE##* }; fi
+      - cd $WORKSPACE/compose && git checkout $BRANCH && cd $WORKSPACE/branches && git checkout $BRANCH
+      - mv -f $WORKSPACE/branches/home $WORKSPACE/compose && rm -rf $WORKSPACE/branches
 
   get_update:
-    title: Checking out code
-    image: docker:latest
-    commands:
-      - printenv
-      - sh $WORKSPACE/compose/scripts/cf/docker.sh
-      
+    title: Run compose
+    type: composition
+    working_directory: 'compose/home/chetabahana/.docker/compose'
+    arguments:
+      composition: 'docker-compose.yml'
+      composition_candidates:
+        saleor:
+          image: chetabahana/saleor
+          env_file: common.env
+          user: saleor:saleor
+          command: 'pytest'
+          networks:
+            - network_tier
+          depends_on:
+            - postgres
+            - redis
+    
   main_update:
-    title: Updating the repo
+    title: Update repo
     image: alpine/git:latest
     commands:
       - git config --global user.name "chetabahana"
       - git config --global user.email "chetabahana@gmail.com"
-      - cd $WORKSPACE/compose && git remote rm origin
+      - cd $WORKSPACE/compose && rm -rf home && git remote rm origin
       - git remote add origin $GIT_URL@github.com/chetabahana/compose.git
       - BRANCH=`git rev-parse --abbrev-ref HEAD` && git pull origin $BRANCH
       - sed -i "s/-[0-9]\{1,\}-\([a-zA-Z0-9_]*\)'/-`date +%d%H%M`-cron'/g" cloudbuild.yaml

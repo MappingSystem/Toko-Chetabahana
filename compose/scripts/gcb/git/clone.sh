@@ -47,7 +47,11 @@ to read about a specific subcommand or concept.
 END
 
 echo "\nHOME\n"
-sleep 1 && cd $HOME && git clone $USER_REPO branches && cd branches
-SHOW_ALL=`git show-branch --all | grep -w $BRANCH_NAME`
+
+USER_REPO=github_${PROJECT_ID}_branches
+GIT_URL=https://source.developers.google.com/p/${PROJECT_ID}
+
+sleep 1 && cd $HOME && git clone $GIT_URL/r/$USER_REPO branches
+cd branches && SHOW_ALL=`git show-branch --all | grep -w $BRANCH_NAME`
 [ $? = 0 ] && git checkout $BRANCH_NAME || echo "$BRANCH_NAME not exist"
 mv -f $HOME/branches/home /workspace && rm -rf $HOME/branches

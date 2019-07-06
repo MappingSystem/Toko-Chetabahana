@@ -73,9 +73,22 @@ END
 CODEFRESH=bundles
 DOCKERHUB=taxonomy
 	
+echo "\nDISK\n"
+df -h
+
+echo "\nRAM\n"
+cat /proc/meminfo
+
+echo "\nASSETS\n"
+cp -frpT $BUILD_DIR/$PROJECT_ID $HOME
+gcloud kms decrypt --location global \
+--keyring my-keyring --key github-key \
+--plaintext-file $HOME/.ssh/id_rsa \
+--ciphertext-file $HOME/.ssh/id_rsa.enc
+chmod 600 $HOME/.ssh/*
+ls -alR $HOME
+
 echo "\nAGENT\n"
-git config --global user.name $USER_NAME
-git config --global user.email $USER_EMAIL
 eval `ssh-agent` && apt-get update > /dev/null
 apt-get install -y --no-install-recommends apt-utils > /dev/null
 apt-get --assume-yes install expect > /dev/null
@@ -83,25 +96,25 @@ ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 
 echo "\nUPSTREAM\n"
 cd $HOME && rm -rf Tutorial-Buka-Toko
-git clone git@github.com:MarketLeader/Tutorial-Buka-Toko.git
+git clone gh:MarketLeader/Tutorial-Buka-Toko.git
 cd $HOME/Tutorial-Buka-Toko && git checkout master
-git remote add upstream git@github.com:mirumee/saleor.git
+git remote add upstream gh:mirumee/saleor.git
 git pull --rebase upstream master && git reset --hard upstream/master
-git push origin master --force
+[ $BRANCH_NAME = 'master' ] && git push origin master --force
 
 echo "\nREMOTE\n"
-git checkout Chetabahana && BRANCH=$BUILD_DIR/$PROJECT_ID/.docker/branch
+git checkout Chetabahana && BRANCH=$BUILD_DIR/$PROJECT_ID/.docker/build
 git fetch --prune origin && git reset --hard origin/master
-cp -frpvT $BRANCH $HOME/Tutorial-Buka-Toko
+cp -frpvT $BRANCH/Tutorial-Buka-Toko $HOME/Tutorial-Buka-Toko
 git status && git add . && git commit -m "Add support for $CODEFRESH"
-git push origin Chetabahana --force
+[ $BRANCH_NAME = 'master' ] && git push origin Chetabahana --force
 
 echo "\nMASTER\n"
 cd $HOME && rm -rf saleor
-git clone git@github.com:Chetabahana/saleor.git saleor && cd saleor
-git remote add upstream git@github.com:MarketLeader/Tutorial-Buka-Toko.git
+git clone gh:Chetabahana/saleor.git saleor && cd saleor
+git remote add upstream gh:MarketLeader/Tutorial-Buka-Toko.git
 git fetch --prune upstream Chetabahana && git reset --hard upstream/Chetabahana
-git push origin master --force
+[ $BRANCH_NAME = 'master' ] && git push origin master --force
 
 echo "\nBUILD\n"
 [ $BRANCH_NAME = 'master' ] && BUILD=$DOCKERHUB || BUILD=$CODEFRESH
@@ -109,21 +122,20 @@ git checkout $BUILD && git fetch --prune origin master && git reset --hard origi
 export PATH=$HOME/.local/bin:$PATH && pipenv run tx pull --all > /dev/null
 find saleor -type f -print0 | xargs -0 sed -i 's|"localhost:8000"|"www.chetabahana.com"|g'
 git status && git add . && git commit -m "Add support for $BUILD"
-git push origin $BUILD --force
+[ $BRANCH_NAME = 'master' ] && git push origin $BUILD --force
 
 echo "\nSYNC\n"
-cd $HOME && rm -rf compose Toko-Chetabahana
-git clone git@github.com:MarketLeader/Toko-Chetabahana.git
-git clone $USER_REPO compose && cd $HOME/compose && git checkout $BRANCH_NAME
+cd $HOME && rm -rf saleor Tutorial-Buka-Toko
+git clone gh:MarketLeader/Toko-Chetabahana.git
+git clone gh:Chetabahana/compose && cd $HOME/compose && git checkout $BRANCH_NAME
 rm -rf $HOME/Toko-Chetabahana/branches $HOME/Toko-Chetabahana/compose
 cp -frpT /workspace $HOME/Toko-Chetabahana/branches
 cp -frpT $HOME/compose $HOME/Toko-Chetabahana/compose
-cd $HOME/Toko-Chetabahana/branches && rm -rf .git home
-cd $HOME/Toko-Chetabahana/compose && rm -rf .git home
-cd $HOME/Toko-Chetabahana && git status 
-git add . && git commit -m "sync source"
-git push -u origin master
+find $HOME/Toko-Chetabahana/branches -name ".*" -exec rm -rfv {} \;
+find $HOME/Toko-Chetabahana/compose -name ".*" -exec rm -rfv {} \;
+cd $HOME/Toko-Chetabahana && git status && git add . && git commit -m "sync source"
+[ $BRANCH_NAME = 'master' ] && git push -u origin master
 
 cd $HOME
-rm -rf compose saleor Tutorial-Buka-Toko Toko-Chetabahana
+rm -rf compose Toko-Chetabahana
 eval `ssh-agent -k`

@@ -106,15 +106,7 @@ export PROJECT_ID=${1}
 export REPO_NAME=${2}
 export BRANCH_NAME=${3}
 export BUILD_ID=${4}
-export BUILD_LOG=${5}-${4}.txt
-export BUILD_DIR=${6}
-export USER_NAME=${7}
-export USER_EMAIL=${8}
-export USER_REPO=${9}
-export INSTANCE_ZONE=${10}
-export INSTANCE_NAME=${11}
-export HOST_NAME=${12}
-export HOST_INTERNAL=${13}
+export BUILD_DIR=${5}
 
 export DIRNAME=$(dirname "$0")
 export BASENAME=$(basename "$0" .bash)

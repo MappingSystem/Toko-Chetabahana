@@ -50,6 +50,11 @@ gcloud kms keys add-iam-policy-binding $KEY_NAME \
 -----------------------------------------------------------------
 END
 
+echo "\nMETADATA\n"
+gcloud compute project-info describe #gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97
+ZONE=`gcloud compute project-info describe --format 'value(commonInstanceMetadata.items.google-compute-default-zone)'`
+INSTANCE=$PROJECT_ID@`gcloud compute instances list --filter="status=('RUNNING')" | head -2 | tail -1 | sed 's/ .*//'`
+
 echo "\nSTORAGE\n"
 export BOTO_CONFIG=/dev/null
 gsutil -o GSUtil:default_project_id=$PROJECT_ID du -shc
@@ -70,8 +75,9 @@ chmod 600 $HOME/.ssh/*
 ls -alR $HOME
 
 echo '\nINSTANCE\n'
-#gcloud compute scp --zone $INSTANCE_ZONE --verbosity info --recurse \
-#--force-key-file-overwrite $BUILD_DIR/$PROJECT_ID $HOST_NAME:/home
 
-#gcloud compute ssh --zone $INSTANCE_ZONE $HOST_NAME \
-#--command 'sh /home/'$PROJECT_ID'/.docker/init.sh '$BRANCH_NAME
+gcloud compute scp --zone $ZONE --verbosity info --recurse \
+--force-key-file-overwrite $BUILD_DIR/$PROJECT_ID $INSTANCE:/home
+
+gcloud compute ssh --zone $ZONE $INSTANCE \
+--command 'sh /home/'$PROJECT_ID'/.docker/init.sh '

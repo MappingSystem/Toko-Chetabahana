@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 : <<'END'
 $ mv --help
@@ -43,8 +43,7 @@ Full documentation at: <http://www.gnu.org/software/coreutils/mv>
 or available locally via: info '(coreutils) mv invocation'
 END
 
-#cd $WORKSPACE && rm -rf saleor
-#git clone $GIT_URL@github.com/mirumee/saleor.git
-
-cd $WORKSPACE/branches/scripts/cf && chmod -R +x *
-find . -type f -name '*.sh' | sort | sh
+export DIRNAME=$(dirname "$0")
+export BASENAME=$(basename "$0" .bash)
+export BASEFILE=$(basename "$DIRNAME").bash
+cd $DIRNAME && bash ../$BASEFILE $DIRNAME/$BASENAME

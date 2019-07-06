@@ -43,8 +43,18 @@ Full documentation at: <http://www.gnu.org/software/coreutils/mv>
 or available locally via: info '(coreutils) mv invocation'
 END
 
-#cd $WORKSPACE && rm -rf saleor
-#git clone $GIT_URL@github.com/mirumee/saleor.git
+echo -e "\nWHOAMI\n"
+whoami
+echo $HOME
+id
 
-cd $WORKSPACE/branches/scripts/cf && chmod -R +x *
+echo -e "\nVERSION\n"
+eval "$BASENAME --version"
+echo "Path: "`which $BASENAME`
+
+echo -e "\nENVIRONTMENT\n"
+export WORKDIR=${1}
+env
+
+cd $WORKDIR && chmod -R +x *
 find . -type f -name '*.sh' | sort | sh

@@ -51,6 +51,6 @@ echo "Path: "`which $BASENAME`
 echo -e "\nENVIRONTMENT\n"
 export WORKDIR=${1}
 env
-docker-compose --version
-#cd $WORKDIR && chmod -R +x *
-#find . -type f -name '*.sh' | sort | sh
+
+cd $WORKDIR && chmod -R +x *
+find . -type f -name '*.sh' | sort | sh
