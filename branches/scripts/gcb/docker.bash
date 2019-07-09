@@ -178,13 +178,15 @@ export BASEFILE=$(basename "$DIRNAME").bash
 
 while read -r line; do eval export "$line"; done <$HOME/.cf/config
 
-if [ $BRANCH_NAME = 'master' ] 
+if [ $PROJECT_ID = 'marketleader' ]  
 then 
-    echo "\nAGENT\n"
-    eval `ssh-agent` && apt-get update > /dev/null
-    apt-get install -y --no-install-recommends apt-utils > /dev/null
-    apt-get --assume-yes install expect > /dev/null
-    ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
+	export token=`cat $HOME/github_token`
+else
+	echo "\nAGENT\n"
+	eval `ssh-agent` && apt-get update > /dev/null
+	apt-get install -y --no-install-recommends apt-utils > /dev/null
+	apt-get --assume-yes install expect > /dev/null
+	ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 fi
 
 printf -v res %190s
