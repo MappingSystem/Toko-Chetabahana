@@ -50,12 +50,6 @@ gcloud kms keys add-iam-policy-binding $KEY_NAME \
 -----------------------------------------------------------------
 END
 
-gcloud kms decrypt --location global \
---keyring my-keyring --key google-compute-engine-key \
---plaintext-file $HOME/.ssh/google_compute_engine \
---ciphertext-file $HOME/.ssh/google_compute_engine.enc 
-chmod 600 $HOME/.ssh/*
-
 gcloud compute instances add-metadata $NAME --zone $ZONE \
 --metadata enable-migrate=false
 

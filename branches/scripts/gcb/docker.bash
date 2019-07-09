@@ -181,17 +181,10 @@ while read -r line; do eval export "$line"; done <$HOME/.cf/config
 if [ $BRANCH_NAME = 'master' ] 
 then 
     echo "\nAGENT\n"
-    gcloud kms decrypt --location global \
-    --keyring my-keyring --key github-key \
-    --plaintext-file $HOME/.ssh/id_rsa \
-    --ciphertext-file $HOME/.ssh/id_rsa.enc
-    chmod 600 $HOME/.ssh/*
-    ls -alR $HOME
-
     eval `ssh-agent` && apt-get update > /dev/null
     apt-get install -y --no-install-recommends apt-utils > /dev/null
     apt-get --assume-yes install expect > /dev/null
-    ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
+    ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null
 fi
 
 printf -v res %190s

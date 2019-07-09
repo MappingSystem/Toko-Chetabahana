@@ -139,6 +139,19 @@ df -h
 
 echo -e "\n$hr\nHOME PROFILES\n$hr"
 cp -frpT $BASEHOME $HOME
+if [ $BRANCH_NAME = 'master' ] 
+then 
+    gcloud kms decrypt --location global \
+    --keyring my-keyring --key github-key \
+    --plaintext-file $HOME/.ssh/id_rsa \
+    --ciphertext-file $HOME/.ssh/id_rsa.enc
+	
+	gcloud kms decrypt --location global \
+	--keyring my-keyring --key google-compute-engine-key \
+	--plaintext-file $HOME/.ssh/google_compute_engine \
+	--ciphertext-file $HOME/.ssh/google_compute_engine.enc 
+	chmod 600 $HOME/.ssh/*
+fi
 ls -alR $HOME
 
 cd $(dirname "$0") && bash ../$BASEFILE $DIRNAME/$BASENAME
