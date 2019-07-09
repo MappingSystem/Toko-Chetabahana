@@ -169,20 +169,37 @@ rsync error: syntax or usage error (code 1) at main.c(1569) [client=3.1.2]
 END
 
 export PROJECT_ID=${1}
-export REPO_NAME=${2}
-export BRANCH_NAME=${3}
-export BUILD_ID=${4}
-export BUILD_DIR=${5}
+export BRANCH_NAME=${2}
+export BUILD_ID=${3}
 
 export DIRNAME=$(dirname "$0")
 export BASENAME=$(basename "$0" .bash)
 export BASEFILE=$(basename "$DIRNAME").bash
 
-echo "\nIMAGES\n"
-docker images --all
+printf -v res %190s
+hr=`printf '%s\n' "${res// /-}"`
 
-typeset -u BASECAP=$BASENAME
-echo -e "\n$BASECAP VERSION\n"
-eval "$BASENAME version"
-echo "Path: "`which $BASENAME`
-cd $DIRNAME && bash ../$BASEFILE $DIRNAME/$BASENAME
+echo -e "$hr\nWHOAMI\n$hr"
+whoami
+echo $HOME
+id
+
+echo -e "\n$hr\nENVIRONTMENT\n$hr"
+cd /workspace
+[ -d .io ] && cd .io || export DIRNAME=${4}/${1}/.config
+export BASEHOME=`pwd`/home/${1} && printenv
+export hr=$hr
+
+echo -e "\n$hr\nDOCKER VERSION\n$hr"
+docker version
+
+echo -e "\n$hr\nDOCKER INFO\n$hr"
+docker info
+
+echo -e "$hr\nIMAGE BUILDERS\n$hr"
+docker images --all | sort
+
+echo -e "\n$hr\nRUNNING SERVICES\n$hr"
+docker ps
+
+cd $(dirname "$0") && bash ../$BASEFILE $DIRNAME/$BASENAME

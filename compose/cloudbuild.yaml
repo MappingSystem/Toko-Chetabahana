@@ -4,21 +4,20 @@ steps:
   args:
   - '-c'
   - |
-        bash ${_SCRIPT}/gcloud.bash $PROJECT_ID \
-        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
+        gcloud source repos clone --verbosity=none `gcloud source \
+        repos list --limit=1 --format 'value(REPO_NAME)'` .io
+        cd .io && git checkout $BRANCH_NAME && cp -fr scripts /workspace
+        bash ${_SCRIPT}/gcloud.bash $PROJECT_ID $BRANCH_NAME $BUILD_ID
 
 - name: '${_SOURCE}/docker'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        bash ${_SCRIPT}/docker.bash ${PROJECT_ID} \
-        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
+        bash ${_SCRIPT}/docker.bash $PROJECT_ID $BRANCH_NAME $BUILD_ID
 
 substitutions:
   _VERSION: 'v1-062105-cron'
-  _BUILD_HOME: /builder/home
-  _BUILD_DIR: /workspace/home
   _SOURCE: gcr.io/cloud-builders
   _SCRIPT: /workspace/scripts/gcb
 

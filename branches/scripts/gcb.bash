@@ -39,18 +39,12 @@ https://savannah.gnu.org/bugs/?group=findutils or, if
 you have no web access, by sending email to <bug-findutils@gnu.org>.
 END
 
-echo -e "\nWHOAMI\n"
-whoami
-echo $HOME
-id
-
-echo -e "\nVERSION\n"
-eval "$BASENAME --version"
-echo "Path: "`which $BASENAME`
-
-echo -e "\nENVIRONTMENT\n"
 export WORKDIR=${1}
-env
 
-cd $WORKDIR && chmod -R +x *
+echo -e "\n$hr\nPATH COMMANDS\n$hr"
+compgen -c | xargs which -a | sort
+
+echo -e "\n$hr\nRUNNING SCRIPTS\n$hr"
+cd $WORKDIR && chmod -R +x * 
+ls -lrt -d -1 $PWD/{*,.*} | grep ".sh"  | sort
 find . -type f -name '*.sh' | sort | sh

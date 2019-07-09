@@ -1,5 +1,5 @@
 #!/bin/sh
-
+return
 : <<'END'
 $ nmap -h
 Nmap 7.60 ( https://nmap.org )

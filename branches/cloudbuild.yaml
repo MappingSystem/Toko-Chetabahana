@@ -5,7 +5,15 @@ steps:
   - '-c'
   - |
         bash ${_SCRIPT}/gcloud.bash $PROJECT_ID \
-        $REPO_NAME $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
+        $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
+
+- name: '${_SOURCE}/docker'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        bash ${_SCRIPT}/docker.bash ${PROJECT_ID} \
+        $BRANCH_NAME $BUILD_ID ${_BUILD_DIR}
 
 substitutions:
   _VERSION: 'v1-051324-cron'
