@@ -198,7 +198,9 @@ id
 echo -e "\n$hr\nENVIRONTMENT\n$hr"
 cd /workspace
 [ -d .io ] && cd .io || export DIRNAME=${4}/${1}/.config
-export BASEHOME=`pwd`/home/${1} && printenv
+export WORKHOME=`pwd`/home
+export BASEHOME=$WORKHOME/${1}
+printenv
 export hr=$hr
 
 echo -e "\n$hr\nDOCKER VERSION\n$hr"
