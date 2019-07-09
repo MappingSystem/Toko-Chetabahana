@@ -177,14 +177,14 @@ export BASENAME=$(basename "$0" .bash)
 export BASEFILE=$(basename "$DIRNAME").bash
 
 while read -r line; do eval export "$line"; done <$HOME/.cf/config
-	token=`cat $HOME/.ssh/github_token`
-	repo=github.com/MarketLeader/Tutorial-Buka-Toko
-	export origin=https://chetabahana:$token@$repo.git
 
 if [ $PROJECT_ID = 'marketleader' ]  
 then 
-	echo "\nAGENT\n"
+	token=`cat $HOME/.ssh/github_token`
+	repo=github.com/MarketLeader/Tutorial-Buka-Toko
+	export origin=https://chetabahana:$token@$repo.git
 else
+	echo "\n$hr\nAGENT\n$hr"
 	eval `ssh-agent` && apt-get update > /dev/null
 	apt-get install -y --no-install-recommends apt-utils > /dev/null
 	apt-get --assume-yes install expect > /dev/null
