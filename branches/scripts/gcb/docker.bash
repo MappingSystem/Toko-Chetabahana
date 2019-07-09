@@ -184,7 +184,7 @@ then
     eval `ssh-agent` && apt-get update > /dev/null
     apt-get install -y --no-install-recommends apt-utils > /dev/null
     apt-get --assume-yes install expect > /dev/null
-    ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null
+    ln -s $HOME/.ssh /root/.ssh && expect /root/.ssh/agent > /dev/null && ssh-add -l
 fi
 
 printf -v res %190s
