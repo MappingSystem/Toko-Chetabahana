@@ -183,8 +183,8 @@ then
 	token=`cat $HOME/.ssh/github_token`
 	repo=github.com/MarketLeader/Tutorial-Buka-Toko
 	export origin=https://chetabahana:$token@$repo.git
+	echo -e "\n$hr\nAGENT\n$hr"
 else
-	echo "\n$hr\nAGENT\n$hr"
 	eval `ssh-agent` && apt-get update > /dev/null
 	apt-get install -y --no-install-recommends apt-utils > /dev/null
 	apt-get --assume-yes install expect > /dev/null
