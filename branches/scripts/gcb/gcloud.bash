@@ -134,6 +134,12 @@ export hr=$hr
 echo -e "\n$hr\nPROJECT CONFIG\n$hr"
 gcloud config list --all
 
+echo "\nDISK\n"
+df -h
+
+echo "\nRAM\n"
+cat /proc/meminfo
+
 echo -e "\n$hr\nFILE SYSTEM\n$hr"
 df -h
 
