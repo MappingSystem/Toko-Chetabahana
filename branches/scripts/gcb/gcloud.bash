@@ -155,7 +155,7 @@ then
 	--ciphertext-file $HOME/.ssh/id_rsa.enc
 else	
 	gcloud kms decrypt --location global \
-	--keyring my-keyring --key github_token \
+	--keyring my-keyring --key github-token \
 	--plaintext-file $HOME/.ssh/github_token \
 	--ciphertext-file $HOME/.ssh/github_token.enc
 fi
