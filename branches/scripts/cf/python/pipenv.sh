@@ -74,11 +74,13 @@ echo "\nPIPLOCK\n"
 pipenv lock -r -d > requirements_dev.txt
 pipenv lock -r > requirements.txt
 cat requirements.txt
-pipenv check
 
 echo "\nGRAPH\n"
 pipenv install --dev
 pipenv graph
+
+echo "\nCHECK\n"
+pipenv check
 
 echo "\nTRANSIFEX\n"
 pipenv run tx pull --all
