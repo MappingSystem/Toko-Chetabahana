@@ -80,5 +80,5 @@ echo "\nGRAPH\n"
 pipenv install --dev
 pipenv graph
 
-echo "\TRANSIFEX\n"
+echo "\nTRANSIFEX\n"
 pipenv run tx pull --all
