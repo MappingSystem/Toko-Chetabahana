@@ -13,7 +13,7 @@ steps:
     commands:
       - printenv | sort
       - cd ${CF_VOLUME_PATH} && rm -rf .io ${CF_REPO_NAME}
-      - git clone $GIT_URL@github.com/${CF_REPO_OWNER}/${CF_REPO_NAME}
+      - git clone $GIT_URL@github.com/${CF_REPO_OWNER}/${CF_REPO_NAME}.git
       - cd ${CF_REPO_NAME} && git checkout -B ${CF_BUILD_INITIATOR}
       - git config --global user.name ${GIT_USER_NAME}
       - git config --global user.email ${GIT_USER_EMAIL}
@@ -23,7 +23,7 @@ steps:
     image: python:latest
     commands:
       - cd ${CF_VOLUME_PATH} && rm -rf .io
-      - git clone $GIT_URL@github.com/${CF_ACCOUNT}/$WORKSPACE .io
+      - git clone $GIT_URL@github.com/${CF_ACCOUNT}/$WORKSPACE.git .io
       - find .io -type d -name ${CF_REPO_NAME} -exec cp -frpT {} ${CF_REPO_NAME} \;
       - find .io -type d -name ${CF_ACCOUNT} -exec cp -frpT {} $HOME \;
       - find .io -type f -name python.env -exec bash {} \;
