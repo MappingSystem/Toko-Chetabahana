@@ -53,7 +53,7 @@ USER=chetabahana
 SHOP=Toko-Chetabahana
 ORGANIZATION=MarketLeader
 
-echo "\nSYNC\n"
+echo "\n$hr\nSYNC\n$hr"
 git clone git@github.com:Chetabahana/compose
 git clone git@github.com:$ORGANIZATION/$SHOP.git
 

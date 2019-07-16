@@ -126,10 +126,10 @@ gcloud projects describe $PROJECT_ID
 echo "\n$hr\nSYSTEM INFO\n$hr"
 gcloud info
 
-echo "\n$hr\nFILE SYSTEM\n$hr"
+echo "$hr\nFILE SYSTEM\n$hr"
 df -h
 
-echo "\nRAM\n"
+echo "\n$hr\nRAM\n$hr"
 cat /proc/meminfo
 
 echo "\n$hr\nHOME PROFILES\n$hr"
