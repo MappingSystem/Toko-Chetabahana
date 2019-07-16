@@ -60,41 +60,25 @@ Commands:
   uninstall  Un-installs a provided package and removes it from Pipfile.
 END
 
-#Package
-APP="install gevent gittle gunicorn"
-GIT=https://github.com/mirumee/saleor.git
 
-#Environment
-export PATH=/root/.local/bin:$PATH
+#Package
+APP="gevent gittle gunicorn"
 
 echo "\nPIPENV\n"
+cd ${CF_VOLUME_PATH}/${CF_REPO_NAME}
+export PATH=/root/.local/bin:$PATH
 pip install --user pipenv
 
-echo "\nPACKAGES\n"
-cd $WORKSPACE && rm -rf saleor
-git clone $GIT && cd $WORKSPACE/saleor
-[ -n "$APP" ] && pipenv $APP --keep-outdated || pipenv sync
+echo "\nPIPLOCK\n"
+[ -n "$APP" ] && pipenv install $APP --keep-outdated || pipenv sync
+pipenv lock -r -d > requirements_dev.txt
+pipenv lock -r > requirements.txt
+cat requirements.txt
+pipenv check
 
 echo "\nGRAPH\n"
+pipenv install --dev
 pipenv graph
 
-echo "\nTRANSFER\n"
-pipenv lock -r > requirements.txt
-pipenv lock -r -d > requirements_dev.txt
-BRANCH=$WORKSPACE/branches/home/chetabahana/.docker/build/Tutorial-Buka-Toko
-cp -fv Pipfile Pipfile.lock requirements.txt requirements_dev.txt -t $BRANCH
-
-echo "\nPIPLOCK\n"
-cat requirements.txt
-
-echo "\nDEV PACKAGES\n"
-pipenv install --dev
-
-echo "\nPYTEST RESULT\n"
-pipenv run pytest
-
-echo "\nTOX RESULT\n"
-pipenv run tox
-
-echo "\nCHECK RESULT\n"
-pipenv check
+echo "\TRANSIFEX\n"
+pipenv run tx pull --all

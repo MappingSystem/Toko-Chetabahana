@@ -43,18 +43,10 @@ Full documentation at: <http://www.gnu.org/software/coreutils/mv>
 or available locally via: info '(coreutils) mv invocation'
 END
 
-echo -e "\nWHOAMI\n"
-whoami
-echo $HOME
-id
+echo -e "\n$hr\nPATH COMMANDS\n$hr"
+compgen -c | xargs which -a | sort
 
-echo -e "\nVERSION\n"
-eval "$BASENAME --version"
-echo "Path: "`which $BASENAME`
-
-echo -e "\nENVIRONTMENT\n"
-export WORKDIR=${1}
-env
-
-cd $WORKDIR && chmod -R +x *
+echo -e "\n$hr\nRUNNING SCRIPTS\n$hr"
+cd ${1} && chmod -R +x *
+ls -l -d -1 $PWD/{*,.*} | grep ".sh"
 find . -type f -name '*.sh' | sort | sh

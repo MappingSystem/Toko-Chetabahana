@@ -1,25 +1,19 @@
 version: '1.0'
 steps:
-  get_token:
-    title: Read token
+  read_token:
+    title: 'Read Github token'
     image: codefresh/cli
     commands:
-      - GITHUB_TOKEN=$(codefresh get context github --decrypt -o yaml | yq -y .spec.data.auth.password)
-      - cf_export GIT_URL=https://chetabahana:$GITHUB_TOKEN
-      - cf_export WORKSPACE=`pwd`
+      - cf_export GITHUB_TOKEN=$(codefresh get context github --decrypt -o yaml | yq -y .spec.data.auth.password)
 
   main_clone:
-    title: Clone repo
+    title: 'Checking out code'
     image: python:latest
     commands:
-      - cd $WORKSPACE && rm -Rf compose branches
-      - git clone --quiet $GIT_URL@github.com/chetabahana/compose.git
-      - git clone --quiet $GIT_URL@github.com/chetabahana/branches.git
-      - if [ "${CF_COMMIT_MESSAGE+set}" != set ]; then BRANCH=master; else BRANCH=${CF_COMMIT_MESSAGE##* }; fi
-      - cd $WORKSPACE/compose && git checkout $BRANCH && cd $WORKSPACE/branches && git checkout $BRANCH
-      - mv -f $WORKSPACE/branches/home $WORKSPACE/compose && rm -rf $WORKSPACE/branches
+      - rm -Rf $WORKSPACE && git clone $GIT_URL/${GIT_USER_NAME}/$WORKSPACE.git && cd $WORKSPACE
+      - find . -type d -name cf -exec bash {}/python.bash \;
 
-  get_update:
+  test_image:
     title: Run compose
     type: composition
     working_directory: compose/home/chetabahana/.docker/compose
@@ -39,14 +33,3 @@ steps:
             - postgres
             - redis
     
-  main_update:
-    title: Update repo
-    image: alpine/git:latest
-    commands:
-      - git config --global user.name "chetabahana"
-      - git config --global user.email "chetabahana@gmail.com"
-      - cd $WORKSPACE/compose && rm -rf home && git remote rm origin
-      - git remote add origin $GIT_URL@github.com/chetabahana/compose.git
-      - BRANCH=`git rev-parse --abbrev-ref HEAD` && git pull origin $BRANCH
-      - sed -i "s/-[0-9]\{1,\}-\([a-zA-Z0-9_]*\)'/-`date +%d%H%M`-cron'/g" cloudbuild.yaml
-      - git status && git add . && git commit -m "codefresh update" && git push -u origin $BRANCH

@@ -1,5 +1,5 @@
 #!/bin/sh
-return
+
 : <<'END'
 $ nmap -h
 Nmap 7.60 ( https://nmap.org )
@@ -118,14 +118,29 @@ EXAMPLES:
 SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 END
 
-echo "\nCOMPOSE\n"
-apt-get update > /dev/null
-apt-get install -y --no-install-recommends apt-utils > /dev/null
-apt-get --assume-yes install jq > /dev/null
+echo "\n$hr\nPROJECT CONFIG\n$hr"
+gcloud projects describe $PROJECT_ID
+#gcloud config list --all && gcloud app describe
+#gcloud compute project-info describe #gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97
 
-DESTINATION=/usr/local/bin/docker-compose
-SOURCE=https://github.com/docker/compose/releases/download
-VERSION=`curl -s https://api.github.com/repos/docker/compose/releases/latest | jq .name -r`
-RELEASE="$SOURCE/$VERSION/docker-compose-$(uname -s)-$(uname -m)"
-curl -L $RELEASE -s -o $DESTINATION && chmod +x $DESTINATION
-docker-compose --version
+echo "\n$hr\nSYSTEM INFO\n$hr"
+gcloud info
+
+echo "\n$hr\nFILE SYSTEM\n$hr"
+df -h
+
+echo "\nRAM\n"
+cat /proc/meminfo
+
+echo "\n$hr\nHOME PROFILES\n$hr"
+ls -alR $HOME
+
+echo "\n$hr\nSTORAGE\n$hr"
+export BOTO_CONFIG=/dev/null
+gsutil -o GSUtil:default_project_id=$PROJECT_ID du -shc
+
+echo "\n$hr\nCLEANING\n$hr"
+BEFORE_DATE=`date +%Y-%m-%d -d "3 month ago"`
+REGISTRY_NAME=us.gcr.io/$PROJECT_ID/app-engine-tmp
+echo "Cleaning old images from 3 months ago: $BEFORE_DATE"
+#bash /workspace/scripts/gcb/docker/assets.bash $REGISTRY_NAME $BEFORE_DATE

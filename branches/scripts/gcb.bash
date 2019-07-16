@@ -39,12 +39,17 @@ https://savannah.gnu.org/bugs/?group=findutils or, if
 you have no web access, by sending email to <bug-findutils@gnu.org>.
 END
 
-export WORKDIR=${1}
-
 echo -e "\n$hr\nPATH COMMANDS\n$hr"
 compgen -c | xargs which -a | sort
 
 echo -e "\n$hr\nRUNNING SCRIPTS\n$hr"
-cd $WORKDIR && chmod -R +x * 
-ls -lrt -d -1 $PWD/{*,.*} | grep ".sh"  | sort
+cd /workspace
+if [ -d .io ]
+then
+	export BASEHOME=/workspace/.io/home
+    find scripts -type d -name $BASENAME -exec cp -frpT {} ${1} \;
+fi
+
+cd ${1} && chmod -R +x *
+ls -l -d -1 $PWD/{*,.*} | grep ".sh"
 find . -type f -name '*.sh' | sort | sh

@@ -93,5 +93,5 @@ END
 
 [ `cat $HOME/.config/docker/enable-migrate` = false ] && return
 
-docker run --env-file $HOME/.docker/compose/gcloud.env --user saleor:saleor \
+docker run --env-file $HOME/.docker/compose/google.env --user saleor:saleor \
 -v $BASEHOME/.docker/compose:/app/compose chetabahana/saleor bash /app/compose/run.bash

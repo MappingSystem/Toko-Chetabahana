@@ -77,7 +77,7 @@ FIREWALL/IDS EVASION AND SPOOFING:
   -f; --mtu <val>: fragment packets (optionally w/given MTU)
   -D <decoy1,decoy2[,ME],...>: Cloak a scan with decoys
   -S <IP_Address>: Spoof source address
-  <iface>: Use specified interface
+  -e <iface>: Use specified interface
   -g/--source-port <portnum>: Use given port number
   --proxies <url1,[url2],...>: Relay connections through HTTP/SOCKS4 proxies
   --data <hex string>: Append a custom payload to sent packets
@@ -118,14 +118,11 @@ EXAMPLES:
 SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
 END
 
-echo "\n$hr\nDOCKER VERSION\n$hr"
-docker version
+echo "\n$hr\nFILE SYSTEM\n$hr"
+df -h
 
-echo "\n$hr\nDOCKER INFO\n$hr"
-docker info
+echo "\nRAM\n"
+cat /proc/meminfo
 
-echo "$hr\nIMAGE BUILDERS\n$hr"
-docker images --all | sort
-
-echo "\n$hr\nRUNNING SERVICES\n$hr"
-docker ps
+echo "\n$hr\nHOME PROFILES\n$hr"
+ls -alR $HOME

@@ -48,8 +48,11 @@ gcloud kms keys add-iam-policy-binding $KEY_NAME \
 --member=serviceAccount:$SERVICE_ACCOUNT@cloudbuild.gserviceaccount.com \
 --role=roles/cloudkms.cryptoKeyDecrypter
 -----------------------------------------------------------------
+chek stored key at https://console.cloud.google.com/security/kms
+-----------------------------------------------------------------
 END
 
+echo "\n$hr\nINSTANCE\n$hr"
 gcloud compute instances add-metadata $NAME --zone $ZONE \
 --metadata enable-migrate=false
 
