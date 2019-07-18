@@ -14,7 +14,6 @@ steps:
       - cd ${CF_VOLUME_PATH} && rm -rf .io ${CF_REPO_NAME}
       - git clone $GIT_URL@github.com/${CF_ACCOUNT}/$WORKSPACE.git .io
       - git clone $GIT_URL@github.com/${CF_REPO_OWNER}/${CF_REPO_NAME}.git
-      - cd ${CF_REPO_NAME} && git checkout -B ${CF_BUILD_INITIATOR} && cd ..
       - find .io -type f -name python.env -exec bash {} ${CF_REPO_NAME} \;
 
   git_update:
@@ -22,8 +21,6 @@ steps:
     image: alpine/git:latest
     commands:
       - cd ${CF_VOLUME_PATH}/${CF_REPO_NAME}
-      - git config --global user.name ${GIT_USER_NAME}
-      - git config --global user.email ${GIT_USER_EMAIL}
       - sed -i "s/-[0-9]\{1,\}-\([a-zA-Z0-9_]*\)'/-`date +%d%H%M`-cron'/g" cloudbuild.yaml
       - rm -rf access.json docker-stack.yml .cf .config .io .ssh .transifexrc
       - git status && git add . && git commit -m "Add support for taxonomy" 
