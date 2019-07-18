@@ -49,20 +49,17 @@ END
 echo "\n$hr\nBRANCH\n$hr"
 cd ${CF_VOLUME_PATH}/${CF_REPO_NAME}
 
+git config --global user.name ${GIT_USER_NAME}
+git config --global user.email ${GIT_USER_EMAIL}
+
 LOWER=`echo "${CF_BUILD_INITIATOR}" | sed -r 's/\<./\L&/g'`
 FIRST=`echo "$LOWER" | sed -r 's/\<./\U&/g'`
 
 for i in $LOWER $FIRST demo; do
-if grep -Fqe $i << EOF
-`git show-branch --all`
+if grep -Fqe origin/$i << EOF
+`git branch -r`
 EOF
 then
    git push origin --delete $i
-   git branch -D $i
-   sleep 5
 fi
 done
-
-git checkout -B ${CF_BUILD_INITIATOR}
-git config --global user.name ${GIT_USER_NAME}
-git config --global user.email ${GIT_USER_EMAIL}
