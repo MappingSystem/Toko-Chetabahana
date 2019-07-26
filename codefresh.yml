@@ -16,3 +16,10 @@ steps:
     image: google/cloud-sdk:alpine
     commands:
       - printenv | sort
+
+  main_clone:
+    title: 'Python test'
+    stage: stage1
+    image: python:latest
+    commands:
+      - LOWER="`echo ${CF_REPO_OWNER} | tr '[:upper:]' '[:lower:]'`"
