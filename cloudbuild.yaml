@@ -1,10 +1,6 @@
 steps:
 - name: 'chetabahana/gcloud-kms'
-  entrypoint: 'sh'
-  args:
-  - '-c'
-  - |
-        echo 'example.html'
+  args: ["cat", "/example.html"]
         
 substitutions:
   _VERSION: 'v1-261650-cron'
