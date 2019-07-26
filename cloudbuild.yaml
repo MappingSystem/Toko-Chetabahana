@@ -4,7 +4,7 @@ steps:
   args:
   - '-c'
   - |
-        bash ls -al
+        ls -al
         
 substitutions:
   _VERSION: 'v1-261650-cron'
