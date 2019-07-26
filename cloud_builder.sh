@@ -1,4 +1,10 @@
 #!/bin/bash
+ls -al
+cat example.html
+gcloud info
+echo $PROJECT_ID
+
+exit 1
 
 # Adjust column numbers ('190') follow to your screen
 printf -v res %190s
