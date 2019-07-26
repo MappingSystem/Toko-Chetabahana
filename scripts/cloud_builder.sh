@@ -1,4 +1,3 @@
 #!/bin/bash
 ls -al
-cat example.html
-gcloud info
+cat cloud_builder.sh
