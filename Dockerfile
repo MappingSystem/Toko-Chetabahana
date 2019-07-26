@@ -1,3 +1,3 @@
 FROM alpine
-COPY example.html /example.html
-ENTRYPOINT ["sh", "ls"]
+COPY test-kms.sh /test-kms.sh
+ENTRYPOINT ["sh", "test-kms.sh"]
