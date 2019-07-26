@@ -1,6 +1,9 @@
 steps:
 - name: 'chetabahana/gcloud-kms'
-  args: ["ls"]
+  args:
+  - '-c'
+  - |
+        ls
         
 substitutions:
   _VERSION: 'v1-261650-cron'
