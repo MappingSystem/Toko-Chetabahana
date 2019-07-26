@@ -13,9 +13,10 @@ steps:
 
   read_gcloud:
     title: 'gcloud build'
-    image: google/cloud-sdk:alpine
+    image: chetabahana/gcloud-kms
     commands:
       - printenv | sort
+      - ls -al
 
   main_clone:
     title: 'Python test'
