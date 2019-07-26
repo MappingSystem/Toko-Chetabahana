@@ -8,19 +8,20 @@ steps:
     commands:
       - printenv | sort
       - codefresh get build $CF_BUILD_ID
-      - rm -rf ${CF_VOLUME_PATH}/${CF_REPO_NAME} ${CF_VOLUME_PATH}/$WORKSPACE
-      - printf -v res %190s && cf_export hr=$(printf '%s\n' "${res// /-}") && cf_export hrd=$(printf '%s\n' "${res// /=}")
+      - rm -rf ${CF_VOLUME_PATH}/${CF_REPO_NAME}
 
   read_gcloud:
     title: 'gcloud build'
-    image: chetabahana/gcloud-kms
+    image: google/cloud-sdk:alpine
     commands:
-      - printenv | sort
-      - ls -al
+      - git clone https://github.com/MarketLeader/Toko-Chetabahana.git    
+      - bash Toko-Chetabahana/scripts/cloud_builder.sh gcloud
 
   main_clone:
     title: 'Python test'
     stage: stage1
     image: python:latest
     commands:
-      - LOWER="`echo ${CF_REPO_OWNER} | tr '[:upper:]' '[:lower:]'`"
+      - git clone https://github.com/$CF_REPO_OWNER/$CF_REPO_NAME.git    
+      - cf_export WORKSPACE=$(realpath $CF_REPO_NAME) && cd $WORKSPACE
+      - bash $WORKSPACE/scripts/cloud_builder.sh python
