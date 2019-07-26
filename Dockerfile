@@ -1,3 +1,3 @@
 FROM alpine
 COPY example.html /example.html
-ENTRYPOINT ["cat", "/example.html"]
+ENTRYPOINT ["sh", "cat", "/example.html"]
