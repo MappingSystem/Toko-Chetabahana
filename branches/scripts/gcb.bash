@@ -47,6 +47,7 @@ cd /workspace
 if [ -d .io ]
 then
 	export BASEHOME=/workspace/.io/home
+	find ${1} ! -name 'assets.sh' -type f -exec rm -f {} +
     find scripts -type d -name $BASENAME -exec cp -frpT {} ${1} \;
 fi
 

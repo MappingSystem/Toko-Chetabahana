@@ -66,6 +66,8 @@ APP="gevent gittle gunicorn"
 
 echo "\nPIPENV\n"
 cd ${CF_VOLUME_PATH}/${CF_REPO_NAME}
+git checkout -B ${CF_BUILD_INITIATOR}
+
 export PATH=/root/.local/bin:$PATH
 pip install --user pipenv
 

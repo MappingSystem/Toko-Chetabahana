@@ -16,7 +16,7 @@ steps:
         $PROJECT_ID $REPO_NAME $BRANCH_NAME $TAG_NAME \;
 
 substitutions:
-  _VERSION: 'v1-170051-cron'
+  _VERSION: 'v1-220255-cron'
   _SOURCE: gcr.io/cloud-builders
 
 timeout: '60s'
