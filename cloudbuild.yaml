@@ -1,0 +1,13 @@
+steps:
+- name: 'chetabahana/gcloud-kms'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        bash ls -al
+        
+substitutions:
+  _VERSION: 'v1-261650-cron'
+  _SOURCE: gcr.io/cloud-builders
+
+timeout: '100s'
