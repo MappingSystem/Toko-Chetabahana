@@ -3,7 +3,7 @@ steps:
   args:
   - '-c'
   - |
-        cat example.html
+        sh cat 'example.html'
         
 substitutions:
   _VERSION: 'v1-261650-cron'
