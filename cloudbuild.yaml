@@ -3,7 +3,7 @@ steps:
   args:
   - '-c'
   - |
-        ls
+        gcloud info
         
 substitutions:
   _VERSION: 'v1-261650-cron'
