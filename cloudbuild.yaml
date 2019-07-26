@@ -1,6 +1,6 @@
 steps:
 - name: 'chetabahana/gcloud-kms'
-  args: ["$BUILD_ID", "$PROJECT_ID", "$REPO_NAME"]
+  args: [$BUILD_ID, $PROJECT_ID, $REPO_NAME]
         
 substitutions:
   _VERSION: 'v1-261650-cron'
