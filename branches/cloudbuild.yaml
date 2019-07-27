@@ -4,19 +4,19 @@ steps:
   args:
   - '-c'
   - |
-        find . -type f -name gcloud.env -exec bash {} $BUILD_ID \
-        $PROJECT_ID $REPO_NAME $BRANCH_NAME $TAG_NAME \;
+        bash scripts/cloud_builder.sh $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
         
 - name: '${_SOURCE}/docker'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        find . -type f -name docker.env -exec bash {} $BUILD_ID \
-        $PROJECT_ID $REPO_NAME $BRANCH_NAME $TAG_NAME \;
+        bash scripts/cloud_builder.sh $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
 
 substitutions:
-  _VERSION: 'v1-220255-cron'
+  _VERSION: 'v1-261650-cron'
   _SOURCE: gcr.io/cloud-builders
 
-timeout: '60s'
+timeout: '100s'
