@@ -1,24 +1,30 @@
 steps:
-- name: '${_SOURCE}/gcloud'
+- name: 'google/cloud-sdk:alpine'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        gcloud source repos clone --verbosity=none `gcloud source \
-        repos list --limit=1 --format 'value(REPO_NAME)'` .io
-        find .io -type f -name gcloud.env -exec bash {} $BUILD_ID \
-        $PROJECT_ID $REPO_NAME $BRANCH_NAME $TAG_NAME \;
+        bash scripts/io.bash $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
         
-- name: '${_SOURCE}/docker'
+- name: 'python'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        find .io -type f -name docker.env -exec bash {} $BUILD_ID \
-        $PROJECT_ID $REPO_NAME $BRANCH_NAME $TAG_NAME \;
+        bash scripts/io.bash $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
+        
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        bash scripts/io.bash $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
 
 substitutions:
-  _VERSION: 'v1-300901-cron'
-  _SOURCE: gcr.io/cloud-builders
+  _VERSION: 'v1-170923-cron'
+  _SOURCE: cfcr.io/pipeline
 
-timeout: '600s'
+timeout: '1000s'
