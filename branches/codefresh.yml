@@ -25,4 +25,5 @@ steps:
     commands:
       - git clone https://github.com/$CF_REPO_OWNER/$CF_REPO_NAME.git    
       - export WORKSPACE=$(realpath $CF_REPO_NAME) && cd $WORKSPACE
+      - echo $WORKFLOW/branches/.codefresh/pipeline/__init__
       - bash $WORKFLOW/branches/.codefresh/pipeline/__init__ python
