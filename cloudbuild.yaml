@@ -1,30 +1,22 @@
 steps:
-- name: 'google/cloud-sdk:alpine'
+- name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        bash scripts/io.bash $BUILD_ID $PROJECT_ID \
-        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
+        bash ${_INIT} $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME \;
         
 - name: 'python'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
-        bash scripts/io.bash $BUILD_ID $PROJECT_ID \
-        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
-        
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-        bash scripts/io.bash $BUILD_ID $PROJECT_ID \
-        $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
+        bash ${_INIT} $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME \;
 
 substitutions:
   _VERSION: 'v1-301953-cron'
-  _SOURCE: cfcr.io/pipeline
-
+  _INIT: branches/.codefresh/pipeline/__init__
+  
 timeout: '1000s'
