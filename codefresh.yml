@@ -8,7 +8,7 @@ steps:
     commands:
       - printenv | sort
       - codefresh get build $CF_BUILD_ID
-      - rm -rf Toko-Chetabahana $CF_REPO_NAME
+      - rm -rf Toko-Chetabahana saleor $CF_REPO_NAME
 
   read_gcloud:
     title: 'gcloud build'
@@ -23,6 +23,5 @@ steps:
     stage: stage1
     image: python:latest
     commands:
-      - git clone https://github.com/$CF_REPO_OWNER/$CF_REPO_NAME.git    
-      - export WORKSPACE=$(realpath $CF_REPO_NAME) && cd $WORKSPACE
+      - git clone https://github.com/mirumee/saleor.git && cd saleor
       - bash $WORKFLOW/branches/.codefresh/pipeline/__init__ python
