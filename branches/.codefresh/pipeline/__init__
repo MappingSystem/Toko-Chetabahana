@@ -18,7 +18,7 @@ export TAG_NAME=$CF_STEP_NAME
 
 if [ -z $GOOGLE_APPLICATION_CREDENTIALS ]; then
     echo $GCP_SA_KEY > creds.json
-    export GOOGLE_APPLICATION_CREDENTIALS=$(realpath creds.json)
+    cf_export GOOGLE_APPLICATION_CREDENTIALS=$(realpath creds.json)
 	gcloud auth activate-service-account $GCP_ACCOUNT \
 	--key-file=$GOOGLE_APPLICATION_CREDENTIALS \
 	--project=$PROJECT_ID

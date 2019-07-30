@@ -25,7 +25,7 @@ pip install --user pipenv
 
 echo "\n$hr\nDEFAULT\n$hr"
 pwd & ls -al
-#sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
+sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
 #[ -n "$APP" ] && pipenv install $APP || pipenv sync
 
 echo "\n$hr\nPIPFILE\n$hr"
