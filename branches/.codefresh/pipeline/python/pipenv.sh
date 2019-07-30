@@ -19,6 +19,7 @@ trap 'abort' 0
 set -e
 
 echo "\n$hr\nPIPENV\n$hr"
+rm -rf $HOME/.local && mkdir $HOME/.local
 export PATH=$HOME/.local/bin:$PATH
 #pip install --upgrade pip
 pip install --user pipenv
