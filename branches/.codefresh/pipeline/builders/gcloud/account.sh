@@ -42,10 +42,15 @@ fi
 echo "$hr\nWHOAMI\n$hr"
 whoami
 echo $HOME
-[ $HOME != /root ] && ln -s $HOME/.ssh /root/.ssh || cf_export ROOT=$(realpath .root) 
-chmod 600 /root/.ssh/*
 id
 
 echo "$hr\nSSH FILES\n$hr"
-mkdir .root && cp -frpT /root .root
-ls -lL /root/.ssh
+if [ $HOME != /root ]
+then 
+    ln -s $HOME/.ssh /root/.ssh
+else
+    mkdir .root && cp -frpT /root .root
+    cf_export ROOT=$(realpath .root)
+fi
+chmod 600 /root/.ssh/*
+#ls -lL /root/.ssh
