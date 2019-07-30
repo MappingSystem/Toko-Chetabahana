@@ -6,9 +6,14 @@ echo $HOME
 id
 
 echo "$hr\nSSH FILES\n$hr"
-cp -frpT $ROOT /root
+if [ $HOME != /root ]
+then 
+    ln -s $HOME/.ssh /root/.ssh
+else
+    cp -frpT $ROOT /root
+fi
 chmod 600 /root/.ssh/*
-ls -lL /root
+ls -lL /root/.ssh
 
 echo "\n$hr\nHOME PROFILES\n$hr"
 ls -al $HOME
