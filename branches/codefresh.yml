@@ -12,7 +12,7 @@ steps:
 
   read_gcloud:
     title: 'gcloud build'
-    image: google/cloud-sdk:alpine
+    image: gcr.io/cloud-builders/gcloud
     commands:
       - git clone https://github.com/MarketLeader/Toko-Chetabahana.git    
       - cf_export WORKFLOW=$(realpath Toko-Chetabahana) 
