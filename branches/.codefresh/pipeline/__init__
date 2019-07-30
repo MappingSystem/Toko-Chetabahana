@@ -16,12 +16,13 @@ export REPO_NAME=$CF_REPO_NAME
 export BRANCH_NAME=$CF_BRANCH
 export TAG_NAME=$CF_STEP_NAME
 
+# Google App Credentials
 if [ -z $GOOGLE_APPLICATION_CREDENTIALS ]; then
     echo $GCP_SA_KEY > creds.json
-    cf_export GOOGLE_APPLICATION_CREDENTIALS=$(realpath creds.json)
+	KEY_FILE=$(realpath creds.json)
 	gcloud auth activate-service-account $GCP_ACCOUNT \
-	--key-file=$GOOGLE_APPLICATION_CREDENTIALS \
-	--project=$PROJECT_ID
+	--key-file=$KEY_FILE --project=$PROJECT_ID
+    cf_export GOOGLE_APPLICATION_CREDENTIALS=$KEY_FILE
 fi
 
 # Run scripts
