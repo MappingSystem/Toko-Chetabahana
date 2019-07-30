@@ -7,16 +7,16 @@ steps:
     image: codefresh/cli
     commands:
       - printenv | sort
-      - codefresh get build $CF_BUILD_ID
       - rm -rf Toko-Chetabahana $CF_REPO_NAME
+      - cf_export INIT=branches/.codefresh/pipeline/builders/__init__ 
 
   read_gcloud:
     title: 'gcloud build'
     image: google/cloud-sdk:alpine
     commands:
       - git clone https://github.com/MarketLeader/Toko-Chetabahana.git    
-      - bash Toko-Chetabahana/branches/.codefresh/pipeline/__init__ kms
       - cf_export WORKFLOW=$(realpath Toko-Chetabahana) 
+      - bash Toko-Chetabahana/$INIT gcloud
 
   main_clone:
     title: 'python test'
@@ -25,5 +25,4 @@ steps:
     commands:
       - git clone https://github.com/$CF_REPO_OWNER/$CF_REPO_NAME.git    
       - export WORKSPACE=$(realpath $CF_REPO_NAME) && cd $WORKSPACE
-      - echo $WORKFLOW/branches/.codefresh/pipeline/__init__
-      - bash $WORKFLOW/branches/.codefresh/pipeline/__init__ python
+      - bash $WORKFLOW/$INIT python
