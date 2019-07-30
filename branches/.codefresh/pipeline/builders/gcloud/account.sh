@@ -53,4 +53,6 @@ else
     cf_export ROOT=$(realpath .root)
 fi
 chmod 600 /root/.ssh/*
-#ls -lL /root/.ssh
+ls -lL /root/.ssh
+
+echo "$hr\nDECLARE\n$hr"
