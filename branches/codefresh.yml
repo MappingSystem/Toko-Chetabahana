@@ -17,10 +17,13 @@ steps:
       - git clone https://github.com/MarketLeader/Toko-Chetabahana.git    
       - cf_export WORKFLOW=$(realpath Toko-Chetabahana) 
       - bash Toko-Chetabahana/$INIT gcloud
+      - mkdir .root && cp -frpT /root .root
+      - cf_export ROOT=$(realpath .root)
 
   main_clone:
     title: 'python test'
     stage: stage1
     image: python:latest
     commands:
+      - cp -frpT $ROOT /root
       - bash $WORKFLOW/$INIT python

@@ -6,12 +6,7 @@ echo $HOME
 id
 
 echo "$hr\nSSH FILES\n$hr"
-if [ $HOME != /root ]
-then 
-    ln -s $HOME/.ssh /root/.ssh
-else
-    cp -frpT $ROOT /root
-fi
+[ $HOME != /root ] && ln -s $HOME/.ssh /root/.ssh
 chmod 600 /root/.ssh/*
 ls -lL /root/.ssh
 
