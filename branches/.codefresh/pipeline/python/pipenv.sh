@@ -18,6 +18,13 @@ abort()
 trap 'abort' 0
 set -e
 
+echo "\n$hr\nENVIRONTMENT\n$hr"
+HR=$hr && unset hr
+HRD=$hrd && unset hrd
+printenv | sort
+export hr=$HR
+export hrd=$HRD
+
 echo "\n$hr\nPIPENV\n$hr"
 rm -rf $HOME/.local && mkdir $HOME/.local
 export PATH=$HOME/.local/bin:$PATH
