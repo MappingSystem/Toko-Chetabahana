@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #Package
-APP="gevent gunicorn"
-DEV="gittle"
+#APP="gevent gunicorn"
+#DEV="gittle"
 
 #Error trap
 abort()
