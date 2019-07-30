@@ -50,10 +50,3 @@ echo "$hr\nSSH FILES\n$hr"
 mkdir .root && cp -frpT /root .root
 cf_export ROOT=$(realpath .root) 
 ls -lL /root/.ssh
-
-echo "\n$hr\nENVIRONTMENT\n$hr"
-HR=$hr && unset hr
-HRD=$hrd && unset hrd
-printenv | sort
-export hr=$HR
-export hrd=$HRD

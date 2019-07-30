@@ -25,6 +25,6 @@ BASENAME=$(basename $(head -n 1 steps.csv | cut -d ';' -f `wc -l < steps.csv`))
 BASENAME=${BASENAME##*-}; BASENAME=${BASENAME##*_};
 
 # Run scripts
-source branches/.codefresh/list_files
 DIR=`dirname ${0}`/builders/$BASENAME
+source /workspace/branches/.codefresh/list_files
 for i in $DIR .io/$DIR; do read_files $i; done
