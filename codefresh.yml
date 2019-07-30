@@ -15,7 +15,7 @@ steps:
     image: google/cloud-sdk:alpine
     commands:
       - git clone https://github.com/MarketLeader/Toko-Chetabahana.git    
-      - bash Toko-Chetabahana/scripts/cloud_builder.sh gcloud
+      - bash Toko-Chetabahana/branches/.codefresh/__init__ kms
       - cf_export WORKFLOW=$(realpath Toko-Chetabahana) 
 
   main_clone:
@@ -25,4 +25,4 @@ steps:
     commands:
       - git clone https://github.com/$CF_REPO_OWNER/$CF_REPO_NAME.git    
       - export WORKSPACE=$(realpath $CF_REPO_NAME) && cd $WORKSPACE
-      - bash $WORKFLOW/scripts/cloud_builder.sh python
+      - bash $WORKFLOW/branches/.codefresh/__init__ python
