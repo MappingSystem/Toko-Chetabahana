@@ -48,5 +48,4 @@ echo "$hr\nSSH FILES\n$hr"
 [ $HOME != /root ] && ln -s $HOME/.ssh /root/.ssh
 chmod 600 /root/.ssh/*
 ls -lL /root/.ssh
-
-echo "$hr\nDECLARE\n$hr"
+cat /root/.ssh/common_env
