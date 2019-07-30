@@ -3,14 +3,19 @@
 echo "$hr\nWHOAMI\n$hr"
 whoami
 echo $HOME
-chmod 600 /root/.ssh/*
 id
 
 echo "$hr\nSSH FILES\n$hr"
+cp -frpT $ROOT /root
+chmod 600 /root/.ssh/*
 ls -lL /root/.ssh
 
 echo "\n$hr\nENVIRONTMENT\n$hr"
+HR=$hr && unset hr
+HRD=$hrd && unset hrd
 printenv | sort
+export hr=$HR
+export hrd=$HRD
 
 echo "\n$hr\nHOME PROFILES\n$hr"
 ls -al $HOME

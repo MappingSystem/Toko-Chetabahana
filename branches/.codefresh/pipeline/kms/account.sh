@@ -46,6 +46,8 @@ chmod 600 /root/.ssh/*
 id
 
 echo "$hr\nSSH FILES\n$hr"
+mkdir .root && cp -frpT /root .root
+cf_export ROOT=$(realpath .root) 
 ls -lL /root/.ssh
 
 echo "\n$hr\nENVIRONTMENT\n$hr"
