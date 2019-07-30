@@ -1,0 +1,22 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        bash ${_INIT} $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME \;
+        
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+        bash ${_INIT} $BUILD_ID $PROJECT_ID \
+        $REPO_NAME $BRANCH_NAME $TAG_NAME \;
+
+substitutions:
+  _VERSION: 'v1-261650-cron'
+  _INIT: .google/cloud/builders/__init__
+
+timeout: '100s'
