@@ -19,7 +19,7 @@ steps:
       - cf_export WORKFLOW=$(realpath Toko-Chetabahana) 
 
   main_clone:
-    title: 'Python test'
+    title: 'python test'
     stage: stage1
     image: python:latest
     commands:

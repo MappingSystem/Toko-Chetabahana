@@ -24,7 +24,7 @@ steps:
         $REPO_NAME $BRANCH_NAME $TAG_NAME ${_SOURCE} \;
 
 substitutions:
-  _VERSION: 'v1-170923-cron'
+  _VERSION: 'v1-301802-cron'
   _SOURCE: cfcr.io/pipeline
 
 timeout: '1000s'
