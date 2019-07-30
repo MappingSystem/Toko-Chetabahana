@@ -2,7 +2,7 @@
 
 #Package
 #APP="gevent gunicorn"
-DEV="gittle"
+#DEV="gittle"
 
 #Error trap
 abort()
@@ -24,7 +24,6 @@ export PATH=$HOME/.local/bin:$PATH
 pip install --user pipenv
 
 echo "\n$hr\nDEFAULT\n$hr"
-pwd & ls -al
 sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
 #[ -n "$APP" ] && pipenv install $APP || pipenv sync
 

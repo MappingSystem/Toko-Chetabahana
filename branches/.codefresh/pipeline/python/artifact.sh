@@ -8,7 +8,7 @@ id
 echo "$hr\nSSH FILES\n$hr"
 cp -frpT $ROOT /root
 chmod 600 /root/.ssh/*
-ls -lL /root/.ssh
+ls -lL /root
 
 echo "\n$hr\nENVIRONTMENT\n$hr"
 HR=$hr && unset hr
