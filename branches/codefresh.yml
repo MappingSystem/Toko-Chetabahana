@@ -23,6 +23,4 @@ steps:
     stage: stage1
     image: python:latest
     commands:
-      - git clone https://github.com/$CF_REPO_OWNER/$CF_REPO_NAME.git    
-      - export WORKSPACE=$(realpath $CF_REPO_NAME) && cd $WORKSPACE
       - bash $WORKFLOW/$INIT python

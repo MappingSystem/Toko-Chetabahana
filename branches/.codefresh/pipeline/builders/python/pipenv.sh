@@ -26,6 +26,8 @@ export hr=$HR
 export hrd=$HRD
 
 echo "\n$hr\nPIPENV\n$hr"
+git clone https://github.com/MarketLeader/Tutorial-Buka-Toko.git    
+cd Tutorial-Buka-Toko
 rm -rf $HOME/.local && mkdir $HOME/.local
 export PATH=$HOME/.local/bin:$PATH
 #pip install --upgrade pip
