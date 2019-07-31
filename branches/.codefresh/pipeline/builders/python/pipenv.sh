@@ -18,9 +18,15 @@ abort()
 trap 'abort' 0
 set -e
 
+apt-get -y update \
+  && apt-get install -y gettext \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
 echo "\n$hr\nENVIRONTMENT\n$hr"
 HR=$hr && unset hr
 HRD=$hrd && unset hrd
+export PATH=$HOME/.local/bin:$PATH
 printenv | sort
 export hr=$HR
 export hrd=$HRD
@@ -31,14 +37,6 @@ rm -rf $REPO && git clone $ORIGIN $REPO
 find .io -type d -name $REPO -exec cp -frpvT {} $REPO \;
 
 echo "\n$hr\nPIPENV\n$hr"
-rm -rf $HOME/.local && mkdir $HOME/.local
-export PATH=$HOME/.local/bin:$PATH
-
-apt-get -y update \
-  && apt-get install -y gettext \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
-
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install --user pipenv
