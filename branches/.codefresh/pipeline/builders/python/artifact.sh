@@ -58,3 +58,4 @@ VENV=`pipenv --venv`
 ln -s $HOME/.ssh/push $VENV/bin/push
 pipenv run chmod +x /bin/push
 ls -al $VENV/bin
+cat Pipfile
