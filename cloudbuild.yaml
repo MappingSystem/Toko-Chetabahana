@@ -7,7 +7,7 @@ steps:
         bash ${_INIT} $BUILD_ID $PROJECT_ID \
         $REPO_NAME $BRANCH_NAME $TAG_NAME \;
         
-- name: 'python'
+- name: 'kennethreitz/pipenv'
   entrypoint: 'bash'
   args:
   - '-c'
