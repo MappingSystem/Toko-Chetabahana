@@ -2,7 +2,7 @@
 
 #Package
 APP="gevent gunicorn"
-DEV="gittle"
+#DEV="gittle"
 
 #Error trap
 abort()
