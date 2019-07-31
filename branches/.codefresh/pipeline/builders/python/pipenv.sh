@@ -36,7 +36,6 @@ export PATH=$HOME/.local/bin:$PATH
 
 apt-get -y update \
   && apt-get install -y gettext \
-  # Cleanup apt cache
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
