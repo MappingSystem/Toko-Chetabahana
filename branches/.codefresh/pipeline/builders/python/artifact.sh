@@ -35,27 +35,6 @@ cp -frpvT $WORKFLOW $REPO/.google
 echo "\n$hr\nORIGIN REPOSITORY\n$hr"
 cd $REPO && ls -al .
 
-echo "\n$hr\nUPDATE\n$hr"
-apt-get -y update \
-  && apt-get install -y gettext \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
-
-echo "\n$hr\nENVIRONTMENT\n$hr"
-HR=$hr && unset hr
-HRD=$hrd && unset hrd
-printenv | sort
-export hr=$HR
-export hrd=$HRD
-
-echo "\n$hr\nPIPENV\n$hr"
-pip install --upgrade pip
-pip install --upgrade setuptools
-pip install --user pipenv
-
-echo "\n$hr\nBIN FILES\n$hr"
-VENV=`pipenv --venv`
-ln -s $HOME/.ssh/push $VENV/bin/push
-pipenv run chmod +x /bin/push
-ls -al $VENV/bin
-cat Pipfile
+ln -s $HOME/.ssh/push /bin/push
+chmod +x /bin/push
+push $ORIGIN

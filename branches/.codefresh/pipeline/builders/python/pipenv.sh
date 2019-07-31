@@ -18,8 +18,27 @@ abort()
 trap 'abort' 0
 set -e
 
+apt-get -y update \
+  && apt-get install -y gettext \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+echo "\n$hr\nENVIRONTMENT\n$hr"
+HR=$hr && unset hr
+HRD=$hrd && unset hrd
+export PATH=$HOME/.local/bin:$PATH
+printenv | sort
+export hr=$HR
+export hrd=$HRD
+
+echo "\n$hr\nPIPENV\n$hr"
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install --user pipenv
+
 echo "\n$hr\nPIPFILE\n$hr"
-cd $(basename $ORIGIN .git) && cat Pipfile
+REPO=$(basename $ORIGIN .git)
+cd $REPO && cat Pipfile
 
 echo "\n$hr\nDEFAULT\n$hr"
 sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
@@ -33,6 +52,10 @@ pipenv graph
 
 echo "\n$hr\nCHECK\n$hr"
 pipenv check
+
+echo "\n$hr\nBIN FILES\n$hr"
+VENV=`pipenv --venv`
+ls -al $VENV/bin
 
 echo "\n$hr\nRECHECK\n$hr"
 pipenv check
@@ -56,5 +79,7 @@ EOF
 then
     return
 else
-    pipenv run push $ORIGIN
+   ln -s $HOME/.ssh/push $VENV/bin/push
+   pipenv run chmod +x /bin/push
+   pipenv run push $ORIGIN
 fi
