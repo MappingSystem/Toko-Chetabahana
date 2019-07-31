@@ -16,7 +16,7 @@ read_lines() {
 # Running each scripts
 run_script() {
     # Looping..
-    read_lines $HOME/.ssh/common_env
+    read_lines $HOME/.ssh/env_keys
     # Calling..
     echo -e "$hrd\nRUN SCRIPT:\n$1\n$hr"
     sh $1; rm -f .io/$1;

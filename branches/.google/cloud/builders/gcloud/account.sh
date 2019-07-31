@@ -16,7 +16,7 @@ then
 fi
 
 # Account credentials
-for i in id_rsa common_env google_compute_engine; do
+for i in id_rsa env_keys google_compute_engine; do
 	if [ -f $HOME/.ssh/$i.enc ]  
 	then
 		gcloud kms decrypt \
@@ -34,8 +34,8 @@ then
 	--format 'value(name)' --filter="status=('RUNNING')"`
 	ZONE=`gcloud compute instances list --limit=1 \
 	--format 'value(zone)' --filter="status=('RUNNING')"`
-	echo "ZONE=$ZONE" >> $HOME/.ssh/common_env
-	echo "INSTANCE=$PROJECT_ID@$NAME" >> $HOME/.ssh/common_env
+	echo "ZONE=$ZONE" >> $HOME/.ssh/env_keys
+	echo "INSTANCE=$PROJECT_ID@$NAME" >> $HOME/.ssh/env_keys
 fi
 
 echo "$hr\nWHOAMI\n$hr"
