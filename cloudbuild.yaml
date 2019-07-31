@@ -16,7 +16,7 @@ steps:
         $REPO_NAME $BRANCH_NAME $TAG_NAME \;
 
 substitutions:
-  _VERSION: 'v1-311934-cron'
+  _VERSION: 'v1-311949-cron'
   _INIT: branches/.codefresh/pipeline/__init__
   
 timeout: '1000s'
