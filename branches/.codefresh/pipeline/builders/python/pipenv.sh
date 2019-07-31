@@ -38,13 +38,14 @@ pip install --user pipenv
 
 echo "\n$hr\nDEFAULT\n$hr"
 sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
-[ -n "$APP" ] && pipenv install $APP || pipenv sync
+#[ -n "$APP" ] && pipenv install $APP || pipenv sync
 
 echo "\n$hr\nPIPFILE\n$hr"
 cat Pipfile
 
 echo "\n$hr\nDEV\n$hr"
-pipenv install $DEV --dev
+#pipenv install $DEV --dev
+pipenv install --system --deploy --dev
 
 echo "\n$hr\nGRAPH\n$hr"
 pipenv graph
