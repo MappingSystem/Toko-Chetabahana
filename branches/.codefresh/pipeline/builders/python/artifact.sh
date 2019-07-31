@@ -33,7 +33,7 @@ rm -rf $FLOWNAME && git clone $FLOW_GIT
 cp -frpvT $WORKFLOW $REPO/.google
 
 echo "\n$hr\nORIGIN REPOSITORY\n$hr"
-ls -al $REPO
+cd $REPO && ls -al .
 
 echo "\n$hr\nUPDATE\n$hr"
 apt-get -y update \
