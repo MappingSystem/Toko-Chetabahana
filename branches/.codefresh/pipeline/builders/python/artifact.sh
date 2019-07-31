@@ -42,7 +42,6 @@ echo "\n$hr\nORIGIN REPOSITORY\n$hr"
 cd $REPO && ls -al .
 
 [ $HOME = /root ] && return
-git push origin --delete Chetabahana
 ln -s $HOME/.ssh/push /bin/push
 chmod +x /bin/push
 push $ORIGIN
