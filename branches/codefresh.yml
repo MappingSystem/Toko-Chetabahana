@@ -22,7 +22,7 @@ steps:
   main_clone:
     title: 'python test'
     stage: stage1
-    image: kennethreitz/pipenv
+    image: python:latest
     commands:
       - cp -frpT $ROOT /root
       - bash $WORKFLOW/$INIT python
