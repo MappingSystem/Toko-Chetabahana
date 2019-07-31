@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Package
-TAG="taxonomy"
+TAG="Chetabahana"
 APP="gevent gunicorn"
 DEV="gittle"
 
@@ -27,7 +27,7 @@ export hr=$HR
 export hrd=$HRD
 
 echo "\n$hr\nCLONE ORIGIN\n$hr"
-rm -rf $REPO_NAME && git clone https://github.com/chetabahana/saleor.git $REPO_NAME && cd $REPO_NAME
+rm -rf $REPO_NAME && git clone $ORIGIN $REPO_NAME && cd $REPO_NAME
 [ `git rev-parse --abbrev-ref HEAD` != $TAG ] && git checkout $TAG
 
 echo "\n$hr\nPIPENV\n$hr"
@@ -39,20 +39,19 @@ apt-get -y update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-#pip install --upgrade pip
-#pip install --upgrade setuptools
+pip install --upgrade pip
+pip install --upgrade setuptools
 pip install --user pipenv
-
-echo "\n$hr\nDEFAULT\n$hr"
-sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
-#[ -n "$APP" ] && pipenv install $APP || pipenv sync
 
 echo "\n$hr\nPIPFILE\n$hr"
 cat Pipfile
 
+echo "\n$hr\nDEFAULT\n$hr"
+sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
+[ -n "$APP" ] && pipenv install $APP || pipenv sync
+
 echo "\n$hr\nDEV\n$hr"
-#pipenv install $DEV --dev
-pipenv install --system --deploy --dev
+pipenv install $DEV --dev --system --deploy
 
 echo "\n$hr\nGRAPH\n$hr"
 pipenv graph
