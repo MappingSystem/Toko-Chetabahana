@@ -15,9 +15,8 @@ steps:
     image: gcr.io/cloud-builders/gcloud
     commands:
       - git clone https://github.com/MarketLeader/Toko-Chetabahana.git    
-      - cf_export WORKFLOW=$(realpath Toko-Chetabahana) 
-      - bash Toko-Chetabahana/$INIT gcloud
-      - mkdir .root && cp -frpT /root .root
+      - cf_export WORKFLOW=$(realpath Toko-Chetabahana) && mkdir .root 
+      - bash Toko-Chetabahana/$INIT gcloud && cp -frpT /root .root
       - cf_export ROOT=$(realpath .root)
 
   main_clone:
