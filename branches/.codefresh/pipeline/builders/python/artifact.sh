@@ -21,13 +21,13 @@ pwd
 ls -al .
 
 echo "\n$hr\nCLONE ORIGIN\n$hr"
-FLOWNAME=Toko-Chetabahana
-WORKFLOW=$FLOWNAME/branches/.google
-FLOW_GIT=git@github.com:MarketLeader/$FLOWNAME.git
-
 REPO=$(basename $ORIGIN .git)
 rm -rf $REPO && git clone $ORIGIN $REPO
 find .io -type d -name $REPO -exec cp -frpvT {} $REPO \;
+
+FLOWNAME=Toko-Chetabahana
+WORKFLOW=$FLOWNAME/branches/.google
+FLOW_GIT=https://github.com:MarketLeader/$FLOWNAME.git
 
 rm -rf $FLOWNAME && git clone $FLOW_GIT
 cp -frpvT $WORKFLOW $REPO/.google
