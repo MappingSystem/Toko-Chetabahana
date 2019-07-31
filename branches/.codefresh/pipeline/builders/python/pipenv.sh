@@ -33,8 +33,15 @@ rm -rf $REPO_NAME && git clone https://github.com/chetabahana/saleor.git $REPO_N
 echo "\n$hr\nPIPENV\n$hr"
 rm -rf $HOME/.local && mkdir $HOME/.local
 export PATH=$HOME/.local/bin:$PATH
-pip install --upgrade pip
-pip install --upgrade setuptools
+
+apt-get -y update \
+  && apt-get install -y gettext \
+  # Cleanup apt cache
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+#pip install --upgrade pip
+#pip install --upgrade setuptools
 pip install --user pipenv
 
 echo "\n$hr\nDEFAULT\n$hr"
