@@ -33,6 +33,7 @@ echo "\n$hr\nPIPENV\n$hr"
 rm -rf $HOME/.local && mkdir $HOME/.local
 export PATH=$HOME/.local/bin:$PATH
 pip install --upgrade pip
+pip install --upgrade setuptools
 pip install --user pipenv
 
 echo "\n$hr\nDEFAULT\n$hr"
