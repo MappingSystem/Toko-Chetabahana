@@ -19,3 +19,11 @@ ls -al /
 echo "\n$hr\nCURRENT REPOSITORY\n$hr"
 pwd
 ls -al .
+
+echo "\n$hr\nENVIRONTMENT\n$hr"
+HR=$hr && unset hr
+HRD=$hrd && unset hrd
+export PATH=$HOME/.local/bin:$PATH
+printenv | sort
+export hr=$HR
+export hrd=$HRD
