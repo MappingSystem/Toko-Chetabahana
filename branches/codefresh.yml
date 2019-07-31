@@ -7,7 +7,7 @@ steps:
     image: codefresh/cli
     commands:
       - printenv | sort
-      - rm -rf Toko-Chetabahana $CF_REPO_NAME
+      - rm -rf .root Toko-Chetabahana $CF_REPO_NAME
       - cf_export INIT=branches/.codefresh/pipeline/builders/__init__ 
 
   read_gcloud:
