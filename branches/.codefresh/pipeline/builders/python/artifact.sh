@@ -27,7 +27,7 @@ find .io -type d -name $REPO -exec cp -frpvT {} $REPO \;
 
 FLOWNAME=Toko-Chetabahana
 WORKFLOW=$FLOWNAME/branches/.google
-FLOW_GIT=https://github.com:MarketLeader/$FLOWNAME.git
+FLOW_GIT=https://github.com/MarketLeader/$FLOWNAME.git
 
 rm -rf $FLOWNAME && git clone $FLOW_GIT
 cp -frpvT $WORKFLOW $REPO/.google
