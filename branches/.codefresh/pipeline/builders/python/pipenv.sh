@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Package
-TAG="Chetabahana"
+TAG="taxonomy"
 APP="gevent gunicorn"
 DEV="gittle"
 
@@ -27,7 +27,7 @@ export hr=$HR
 export hrd=$HRD
 
 echo "\n$hr\nCLONE ORIGIN\n$hr"
-rm -rf $REPO_NAME && git clone $ORIGIN $REPO_NAME && cd $REPO_NAME
+rm -rf $REPO_NAME && git clone https://github.com/chetabahana/saleor.git $REPO_NAME && cd $REPO_NAME
 [ `git rev-parse --abbrev-ref HEAD` != $TAG ] && git checkout $TAG
 
 echo "\n$hr\nPIPENV\n$hr"
