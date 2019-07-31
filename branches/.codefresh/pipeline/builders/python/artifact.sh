@@ -26,6 +26,7 @@ rm -rf $REPO && git clone $ORIGIN $REPO
 
 cd $REPO
 git pull origin master
+git reset --hard origin/master
 cd ..
 
 echo "\n$hr\nCOPYING\n$hr"
