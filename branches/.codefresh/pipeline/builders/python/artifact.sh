@@ -25,8 +25,7 @@ REPO=$(basename $ORIGIN .git)
 rm -rf $REPO && git clone $ORIGIN $REPO
 
 cd $REPO
-git pull --rebase origin master
-git reset --hard origin/master
+git pull origin master
 cd ..
 
 echo "\n$hr\nCOPYING\n$hr"
