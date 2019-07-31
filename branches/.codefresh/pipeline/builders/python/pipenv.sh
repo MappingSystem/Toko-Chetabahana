@@ -29,16 +29,16 @@ echo "\n$hr\nCLONE ORIGIN\n$hr"
 git clone $ORIGIN   
 cd Tutorial-Buka-Toko
 
-echo "\n$hr\nPIPENV\n$hr"
-rm -rf $HOME/.local && mkdir $HOME/.local
-export PATH=$HOME/.local/bin:$PATH
+echo "\n$hrd\nPIPENV\n$hr"
+#rm -rf $HOME/.local && mkdir $HOME/.local
+#export PATH=$HOME/.local/bin:$PATH
 #pip install --upgrade pip
 #pip install --upgrade setuptools
 #pip install --user pipenv
 
-echo "\n$hr\nDEFAULT\n$hr"
+#echo "\n$hr\nDEFAULT\n$hr"
 sed -i 's|.<|,<|g' Pipfile && sed -i 's|.>|,>|g' Pipfile
-[ -n "$APP" ] && pipenv install $APP || pipenv sync
+#[ -n "$APP" ] && pipenv install $APP || pipenv sync
 
 echo "\n$hr\nPIPFILE\n$hr"
 cat Pipfile
