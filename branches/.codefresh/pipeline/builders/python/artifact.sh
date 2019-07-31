@@ -29,6 +29,7 @@ git pull --rebase origin master
 git reset --hard origin/master
 cd ..
 
+echo "\n$hr\nCOPYING\n$hr"
 find .io -type d -name $REPO -exec cp -frpvT {} $REPO \;
 
 FLOWNAME=Toko-Chetabahana
@@ -42,6 +43,7 @@ echo "\n$hr\nORIGIN REPOSITORY\n$hr"
 cd $REPO && ls -al .
 
 [ $HOME = /root ] && return
+echo "\n$hr\nPUSH REPOSITORY\n$hr"
 ln -s $HOME/.ssh/push /bin/push
 chmod +x /bin/push
 push $ORIGIN
