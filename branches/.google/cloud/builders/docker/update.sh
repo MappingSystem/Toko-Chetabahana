@@ -31,7 +31,7 @@ fi
 
 rm -rf $DIR && mkdir -p $DIR && cp -frpT /workspace $DIR
 find $DIR -type d -name ".io" -or -name ".git" \
--or -name "home" -exec rm -rf {} \;
+-or -name "compute" -exec rm -rf {} \;
 find $DIR -type f -name "update.sh" -or -name "README.md" \
 -or -name "steps.csv" -exec rm -rfv {} \;
 find $DIR -type f -name "*.sh" -and ! -name "account.sh" \
