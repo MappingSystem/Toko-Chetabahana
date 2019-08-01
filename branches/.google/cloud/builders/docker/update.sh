@@ -31,12 +31,13 @@ fi
 
 rm -rf $DIR && mkdir -p $DIR && cp -frpT /workspace $DIR
 find $DIR -type d -name "home" -or -name ".git" \
--or -name ".io" -exec rm -rfv {} \;
+-or -name ".io" -exec rm -rf {} \;
 find $DIR -type f -name "update.sh" -or -name "README.md" \
 -or -name "steps.csv" -exec rm -rfv {} \;
 find $DIR -type f -name "*.sh" -and ! -name "account.sh" \
 -and ! -name "artifact.sh" -exec echo {} \;
 
+echo "\n$hr\nPUSH\n$hr"
 sed -i "s/-[0-9]\{1,\}-\([a-zA-Z0-9_]*\)'/-`date +%d%H%M`-cron'/g" cloudbuild.yaml
 git status && git add . && git commit -m "sync source"
 git push origin $BRANCH_NAME
