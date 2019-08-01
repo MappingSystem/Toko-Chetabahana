@@ -7,7 +7,7 @@ steps:
         bash ${_INIT} $BUILD_ID $PROJECT_ID \
         $REPO_NAME $BRANCH_NAME $TAG_NAME \;
         
-- name: 'python'
+- name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args:
   - '-c'
@@ -16,7 +16,7 @@ steps:
         $REPO_NAME $BRANCH_NAME $TAG_NAME \;
 
 substitutions:
-  _VERSION: 'v1-010059-cron'
-  _INIT: branches/.codefresh/pipeline/__init__
-  
-timeout: '1000s'
+  _VERSION: 'v1-261650-cron'
+  _INIT: .google/cloud/builders/__init__
+
+timeout: '100s'

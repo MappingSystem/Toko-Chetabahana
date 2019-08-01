@@ -1,0 +1,6 @@
+# HSTS 1.0 Known Hosts database for GNU Wget.
+# Edit at your own risk.
+# <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
+id.docker.com	0	0	1559841923	31536000
+www.python.org	0	1	1557787981	63072000
+cloud.docker.com	0	0	1559841923	31536000
