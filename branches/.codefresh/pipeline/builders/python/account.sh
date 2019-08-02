@@ -27,6 +27,7 @@ rm -rf $REPO && git clone $ORIGIN $REPO
 cd $REPO
 git pull origin master
 git reset --hard origin/master
+git pull origin $REPO
 cd ..
 
 echo "\n$hr\nCOPYING\n$hr"
@@ -45,5 +46,4 @@ cd $REPO && ls -al .
 echo "\n$hr\nPUSH REPOSITORY\n$hr"
 ln -s $HOME/.ssh/push /bin/push
 chmod +x /bin/push
-date
 push $ORIGIN
