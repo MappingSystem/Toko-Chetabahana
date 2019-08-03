@@ -1,5 +1,4 @@
 #!/bin/sh
-[ $HOME != /root ] && return
 
 #Package
 APP="gevent gunicorn"
@@ -83,4 +82,5 @@ else
 	ln -s $HOME/.ssh/push $VENV/bin/push
 	pipenv run chmod +x /bin/push
 	pipenv run push $ORIGIN
+	git gc --aggressive --prune=all
 fi
