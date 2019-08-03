@@ -17,6 +17,6 @@ steps:
 
 substitutions:
   _VERSION: 'v1-261650-cron'
-  _INIT: .google/cloud/builders/__init__
+  _INIT: .google/cloud/__init__
 
 timeout: '100s'
