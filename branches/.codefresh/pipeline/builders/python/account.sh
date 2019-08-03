@@ -45,6 +45,5 @@ cd $REPO && ls -al .
 [ $HOME = /root ] && return
 echo "\n$hr\nPUSH REPOSITORY\n$hr"
 ln -s $HOME/.ssh/push /bin/push
-chmod +x /bin/push
-push $ORIGIN
+chmod +x /bin/push && push $ORIGIN
 git gc --aggressive --prune=all
