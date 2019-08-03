@@ -17,6 +17,6 @@ steps:
 
 substitutions:
   _VERSION: 'v1-031425-cron'
-  _INIT: branches/.codefresh/pipeline/__init__
+  _INIT: branches/.google/cloud/__init__
   
 timeout: '1000s'
