@@ -1,4 +1,5 @@
 #!/bin/sh
+[ $HOME != /root ] && return
 
 #Package
 APP="gevent gunicorn"
