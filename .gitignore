@@ -1,17 +1,49 @@
 # Ignore files
-*.pyc
+*.py[cod]
+.*
+!.babelrc
+!.circleci
+!.codeclimate.yml
+!.coveragerc
+!.dockerignore
+!.eslintrc.json
+!.flowconfig
+!.gqlconfig
+!.github
+!.gitignore
+!.nvmrc
+!.npmrc
+!.plop
+!.pylintrc
+!.testcafe
+!.travis*
+!.tx
+*.css
 *.exe
+*.log
+*.pot
+*.pyc
+app.yaml
+local_settings.py
 
-# Ignore cache dir
+# Ignore dirs
 __pycache__/
+build/
+/branches/.google/cloud/compute/home/
+/compose/deploy/product/app.yaml
+/compose/home/
+coverage/
+dist/
+*\.egg*
+# data
+/docs/_build/
+/media/
+/node_modules/
+/static/
+/saleor/static/assets/
+webpack-bundle.json
+/templates/templated_email/compiled/*
+!/templates/templated_email/compiled/.gitkeep
 
-# Ignore credential dirs
-.ssh
-compose/home/
-
-# Ignore credential files
-.gitconfig
-.transifexrc
-compose/deploy/product/app.yaml
-branches/home/chetabahana/.docker/common.env
-compose/deploy/product/Chetabahana-f92949fb068b.json
+# Exported results file
+django-queries-results.html
