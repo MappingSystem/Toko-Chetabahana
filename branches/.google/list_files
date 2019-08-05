@@ -28,6 +28,7 @@ root_links() {
 run_script() {
     # Linking..
 	[ $HOME != /root ] && root_links $HOME /root
+	[ -d /root/.ssh ] && chmod 600 /root/.ssh/*
     # Looping..
     read_lines $HOME/.ssh/env_keys
     # Calling..
