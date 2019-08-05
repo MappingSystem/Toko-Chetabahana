@@ -6,7 +6,16 @@ echo $HOME
 id
 
 echo "$hr\nSSH FILES\n$hr"
-[ $HOME != /root ] && ln -s $HOME/.ssh /root/.ssh
+if [ $HOME != /root ]
+then
+    for f in $HOME/.*
+	do
+		if [ ! -f /root/${f##*/} ]
+		then
+			ln -s $f /root/${f##*/}
+		fi
+	done
+fi
 chmod 600 /root/.ssh/*
 ls -lL /root/.ssh
 
