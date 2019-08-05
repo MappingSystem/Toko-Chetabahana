@@ -55,7 +55,7 @@ echo "$hr\nSSH FILES\n$hr"
 root_links() {
     for f in $1/.*
 	do
-		if ([ ! -f $2/${f##*/} ] && [ f =! . ] && [ f =! .. ])
+		if ( [ ! -f $2/${f##*/} ] && [ f != . ] && [ f != .. ] )
 		then
 			echo ln -s $f $2/${f##*/}
 		fi
