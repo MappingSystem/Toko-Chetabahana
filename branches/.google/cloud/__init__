@@ -28,4 +28,4 @@ BASENAME=${BASENAME%:*}; BASENAME=${BASENAME##*-}; BASENAME=${BASENAME##*_};
 # Run scripts
 DIR=`dirname ${0}`/builders/$BASENAME
 source ${DIR%.google/*}.google/list_files
-for i in $DIR .io/$DIR; do read_files $i; done
+for i in $DIR .io/$DIR; do export -f root_links && read_files $i; done

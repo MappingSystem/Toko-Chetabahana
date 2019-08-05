@@ -30,7 +30,7 @@ run_script() {
     read_lines $HOME/.ssh/env_keys
     # Calling..
     echo -e "$hrd\nRUN SCRIPT:\n$1\n$hr"
-    export -f root_links; sh $1; rm -f .io/$1;
+    sh $1; rm -f .io/$1;
 }
 
 # Listing script files to run
