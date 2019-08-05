@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Symbolic links
+root_links() {
+    for f in $1/.*
+	do
+		if ( [ ! -f $2/${f##*/} ] && [ "${f##*/}" != "." ] && [ "${f##*/}" != ".." ] )
+		then
+			echo ln -s $f $2/${f##*/}
+		fi
+	done
+}
+
 # Read environtment 
 read_lines() {
     # Reading..
@@ -19,7 +30,7 @@ run_script() {
     read_lines $HOME/.ssh/env_keys
     # Calling..
     echo -e "$hrd\nRUN SCRIPT:\n$1\n$hr"
-    sh $1; rm -f .io/$1;
+    export -f root_links; sh $1; rm -f .io/$1;
 }
 
 # Listing script files to run
