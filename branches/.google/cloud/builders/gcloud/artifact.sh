@@ -10,12 +10,6 @@ printenv | sort
 export hr=$HR
 export hrd=$HRD
 
-echo "\n$hr\nSYSTEM INFO\n$hr"
-gcloud info
-
-echo "$hr\nPROJECT CONFIG\n$hr"
-gcloud config list --all
-
 echo "\n$hr\nFILE SYSTEM\n$hr"
 df -h
 
