@@ -51,6 +51,16 @@ echo $HOME
 id
 
 echo "$hr\nSSH FILES\n$hr"
-[ $HOME != /root ] && ln -s $HOME/.ssh /root/.ssh
+# Symbolic links
+root_links() {
+    for f in $1/.*
+	do
+		if [ ! -f /$2/${f##*/} ]
+		then
+			ln -s $f /$2/${f##*/}
+		fi
+	done
+}
+[ $HOME != /root ] && root_links $HOME /root
 chmod 600 /root/.ssh/*
 ls -lL /root/.ssh

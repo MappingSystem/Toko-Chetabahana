@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Symbolic links
-root_files() {
-    for f in $HOME/.*
-	do
-		if [ ! -f /root/${f##*/} ]
-		then
-			ln -s $f /root/${f##*/}
-		fi
-	done
-}
-
 # Read environtment 
 read_lines() {
     # Reading..
