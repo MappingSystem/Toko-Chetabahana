@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo "$hr\nSSH FILES\n$hr"
+chmod 600 /root/.ssh/*
+ls -lL /root/.ssh
+
 echo "\n$hr\nENVIRONTMENT\n$hr"
 HR=$hr && unset hr
 HRD=$hrd && unset hrd
