@@ -50,8 +50,8 @@ whoami
 echo $HOME
 id
 
-echo "\n$hr\nSYSTEM INFO\n$hr"
-gcloud info
-
 echo "$hr\nPROJECT CONFIG\n$hr"
 gcloud config list --all
+
+echo "\n$hr\nSYSTEM INFO\n$hr"
+gcloud info
