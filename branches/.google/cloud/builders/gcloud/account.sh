@@ -57,11 +57,10 @@ root_links() {
 	do
 		if ( [ ! -f $2/${f##*/} ] && [ "${f##*/}" != "." ] && [ "${f##*/}" != ".." ] )
 		then
-			echo ln -s $f $2/${f##*/}
+			ln -s $f $2/${f##*/}
 		fi
 	done
 }
 [ $HOME != /root ] && root_links $HOME /root
-[ $HOME != /root ] && ln -s $HOME/.ssh /root/.ssh
 chmod 600 /root/.ssh/*
 ls -lL /root/.ssh
