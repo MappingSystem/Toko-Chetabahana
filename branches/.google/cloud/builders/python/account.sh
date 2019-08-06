@@ -24,9 +24,8 @@ rm -rf $REPO && git clone $ORIGIN $REPO
 
 cd $REPO
 git checkout master
-git branch -D Chetabahana
-git branch -m Chetabahana
 mv README.md README_original.md
+git branch -D Chetabahana && git branch -m Chetabahana
 sed -i '0,/!.gitignore/s//!.gitignore\n!.google/' .gitignore
 cd ..
 
