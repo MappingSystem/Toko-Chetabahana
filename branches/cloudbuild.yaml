@@ -1,6 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
+  id: 'gcloud'
   args:
   - '-c'
   - |
@@ -9,6 +10,7 @@ steps:
         
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
+  id: 'docker'
   args:
   - '-c'
   - |
