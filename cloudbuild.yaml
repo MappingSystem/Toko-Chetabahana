@@ -16,7 +16,7 @@ steps:
         $REPO_NAME $BRANCH_NAME $TAG_NAME \;
 
 substitutions:
-  _VERSION: 'v1-080207-cron'
+  _VERSION: 'v1-080208-cron'
   _INIT: branches/.google/cloud/__init__
   
 timeout: '1000s'
