@@ -59,7 +59,7 @@ Alur dari [_proses_](#proses) menuju [_manfaat_](#manfaat) diatur sbb:
 - [Repo#1](https://github.com/MarketLeader/Google-Sites-API#struktur): Mulai dari akses ke daftar produk, menyaring data sampai sunting untuk tampilkan produk.
 - [Repo#2](https://github.com/MarketLeader/Google-Content-API#struktur): Mulai dari akses ke saran produk, memilah barang sampai input menjadi database produk.
 - [Repo#3](https://github.com/MarketLeader/Google-AdWords-API#struktur): Mulai dari akses ke database produk, kinerja penjualan sampai [optimasi setelan promosi](https://support.google.com/adwords).
-- [Top Directory](#struktur): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari setelan.
+- [Top Directory](#struktur): Mengatur konfigurasi, penjadwalan, lalu-lintas data, dan analisa hasil dari [setelan](https://chetabahana.github.io/feed.json).
 
 ## Repositori
 Hirarki dari Top Directory (Top_dir) disetel via [_remote_](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) atau [_symlink_](https://github.com/MarketLeader/gh-pages-symlink-test) ke Repositori ([_Repo_](https://help.github.com/articles/create-a-repo/)) sbb:
