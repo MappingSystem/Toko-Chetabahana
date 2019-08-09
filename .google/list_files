@@ -39,7 +39,7 @@ run_script() {
 # Listing script files to run
 read_files() {
     [[ $1 == *"io/"* ]] && TYPE=CUSTOM || TYPE=COMMON
-    echo -e "\n$hrd\n$TYPE SCRIPTS\n$hrd"
+    sleep 5 && echo -e "\n$hrd\n$TYPE SCRIPTS\n$hrd"
     if ([ -d $1 ] && [ "$(ls -A $1)" ])
     then
         # Listing..
@@ -49,6 +49,6 @@ read_files() {
         find $1 -type f -name '*.sh' | sort | \
         while read file; do run_script "$file"; done
     else
-        sleep 5 && echo -e "No '$TYPE' scripts to run\n$hr"	
+        echo -e "No '$TYPE' scripts to run\n$hr"	
     fi
 }
