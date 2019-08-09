@@ -1,6 +1,23 @@
 #!/bin/sh
 
-echo "$hr\nSSH FILES\n$hr"
+echo "$hr\nWHOAMI\n$hr"
+whoami
+echo $HOME
+id
+
+echo "$hr\nPROJECT CONFIG\n$hr"
+gcloud config list --all
+
+echo "\n$hr\nSYSTEM INFO\n$hr"
+gcloud info
+
+echo "\n$hr\nHOME PROFILES\n$hr"
+ls -al $HOME
+
+echo "$hr\nHOME SSH\n$hr"
+ls -lL $HOME/.ssh
+
+echo "$hr\nROOT SSH\n$hr"
 ls -lL /root/.ssh
 
 echo "\n$hr\nENVIRONTMENT\n$hr"
@@ -13,9 +30,6 @@ export hrd=$HRD
 echo "\n$hr\nFILE SYSTEM\n$hr"
 df -h
 
-echo "\n$hr\nHOME PROFILES\n$hr"
-ls -al $HOME
-
 echo "\n$hr\nALL REPOSITORY\n$hr"
 pwd
 ls -al /
@@ -23,3 +37,4 @@ ls -al /
 echo "\n$hr\nCURRENT REPOSITORY\n$hr"
 pwd
 ls -al .
+

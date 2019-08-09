@@ -1,0 +1,121 @@
+#!/bin/bash
+
+# Unmark the 2 line below to see all commands available
+#echo -e "\n$hr\nPATH COMMANDS\n$hr"
+#compgen -c | xargs which -a | sort && dpkg -l
+
+# Adjust column numbers ('180') follow to your screen
+printf -v res %180s
+export hr=`printf '%s\n' "${res// /_}"`
+export hrd=`printf '%s\n' "${res// /=}"`
+export PATH=$HOME/.local/bin:$PATH
+
+# Built-in Environtment
+export BUILD_ID=${1}
+export PROJECT_ID=${2}
+export REPO_NAME=${3}
+export BRANCH_NAME=${4}
+export TAG_NAME=${5}
+
+# Check active gcloud
+if [[ $(compgen -c | xargs which -a | grep gcloud) ]]
+then
+    # Set Google App Credentials
+    if ! gcloud config get-value account &> /dev/null
+    then
+        # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
+        if [ -z $GOOGLE_APPLICATION_CREDENTIALS ]
+        then
+            echo $GCP_SA_KEY > google-app-creds.json
+            export KEY_FILE=$(realpath google-app-creds.json)
+    	    gcloud auth activate-service-account $GCP_ACCOUNT \
+    	    --key-file=$KEY_FILE --project=$PROJECT_ID
+    	fi
+    fi
+
+    # Private repository
+    if [ ! -f $HOME/.ssh ]
+    then
+        # Dependencies: Set 'mirror configuration' to GCR
+        # Put the repo on top of the list and Set IAM role
+        if gcloud source repos list &> /dev/null
+        then
+            gcloud source repos clone --verbosity=none `gcloud source \
+            repos list --limit=1 --format 'value(REPO_NAME)'` .io
+            if [ $BRANCH_NAME != master ]
+            then
+                cd .io
+                if grep -q origin/$BRANCH_NAME << EOF
+`git branch -r`
+EOF
+                then
+                    git checkout $BRANCH_NAME
+                fi
+                cd ..
+            fi
+
+            # Get credential files
+            find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
+            find $HOME -type d -name $REPO_NAME -exec cp -frpT {} /workspace \;
+
+            # Set credential files
+            for i in $HOME/.ssh/*.enc
+            do
+                # Decrypt credential files
+                # Dependencies: Put name of keys same as encrypted files
+                if [[ ! -f ${i%.*} ]]  
+                then
+                    gcloud kms decrypt --location global --keyring my-keyring \
+                    --key $(basename ${i%.*}) --ciphertext-file $i \
+                    --plaintext-file ${i%.*}
+                fi
+                # Put environtment
+                # Dependencies: Put the name of file as env_keys
+                if [[ "$(basename ${i%.*})" == "env_keys" ]]  
+                then
+                    # Google App Credentials
+                    if [[ ! -z $KEY_FILE ]]
+                    then
+                        echo GOOGLE_APPLICATION_CREDENTIALS=$KEY_FILE >> ${i%.*}
+                    fi
+                    # Google Compute Instance
+                    if gcloud compute instances list &> /dev/null
+                    then
+                        NAME=`gcloud compute instances list \
+                        --limit=1 --format 'value(name)' \
+                        --filter="status=('RUNNING')"`
+                        ZONE=`gcloud compute instances list \
+                        --limit=1 --format 'value(zone)' \
+                        --filter="status=('RUNNING')"`
+                        echo "INSTANCE=$PROJECT_ID@$NAME" >> ${i%.*}
+                        echo "ZONE=$ZONE" >> ${i%.*}
+                    fi
+                fi
+                chmod 600 ${i%.*}
+            done	
+        fi
+    fi
+
+    # Get list of all steps
+    if gcloud builds describe $BUILD_ID &> /dev/null
+    then
+        # Dependencies: Put 'gcloud' on the 1st step
+        [[ ! -f .steps ]] && gcloud builds describe $BUILD_ID \
+        --format 'value(steps.id)' > .steps
+    fi
+fi
+
+# Get current step
+if [[ -z "${TAG_NAME%;*}" ]]
+then
+    [[ -f .steps ]] && date +%s >> .steps
+    TAG_STEP_NUM=$(($(wc -l < .steps) - 1))
+    TAG_NAME=$(head -n 1 .steps | cut -d ';' -f $TAG_STEP_NUM)
+    TAG_NAME=$(basename $TAG_NAME); TAG_NAME=${TAG_NAME%:*}; 
+    TAG_NAME=${TAG_NAME##*-}; TAG_NAME=${TAG_NAME##*_};
+fi
+
+# Run the current step
+source .google/list_files
+DIR=`dirname ${0}`/$TAG_NAME
+for i in $DIR .io/$DIR; do read_files $i; done
