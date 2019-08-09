@@ -79,7 +79,7 @@ EOF
                         echo GOOGLE_APPLICATION_CREDENTIALS=$KEY_FILE >> ${i%.*}
                     fi
                     # Google Compute Instance
-                    if gcloud compute instances list &> /dev/null
+                    if [[ ! -z $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
                     then
                         NAME=`gcloud compute instances list \
                         --limit=1 --format 'value(name)' \

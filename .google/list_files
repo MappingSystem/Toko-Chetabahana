@@ -49,6 +49,6 @@ read_files() {
         find $1 -type f -name '*.sh' | sort | \
         while read file; do run_script "$file"; done
     else
-        echo -e "No '$TYPE' scripts to run\n$hr"	
+        sleep 5 && echo -e "No '$TYPE' scripts to run\n$hr"	
     fi
 }

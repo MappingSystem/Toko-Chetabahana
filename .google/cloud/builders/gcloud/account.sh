@@ -14,10 +14,7 @@ gcloud info
 echo "\n$hr\nHOME PROFILES\n$hr"
 ls -al $HOME
 
-echo "$hr\nHOME SSH\n$hr"
-ls -lL $HOME/.ssh
-
-echo "$hr\nROOT SSH\n$hr"
+echo "$hr\nSSH FILES\n$hr"
 ls -lL /root/.ssh
 
 echo "\n$hr\nENVIRONTMENT\n$hr"

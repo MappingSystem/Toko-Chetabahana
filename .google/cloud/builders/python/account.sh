@@ -5,11 +5,11 @@ whoami
 echo $HOME
 id
 
-echo "$hr\nSSH FILES\n$hr"
-ls -lL /root/.ssh
-
 echo "\n$hr\nHOME PROFILES\n$hr"
 ls -al $HOME
+
+echo "$hr\nSSH FILES\n$hr"
+ls -lL /root/.ssh
 
 echo "\n$hr\nALL REPOSITORY\n$hr"
 ls -al /
