@@ -29,7 +29,7 @@ options:
 substitutions:
   _INIT: .google/cloud/builders/__init__
   _OUTPUT: /builder/outputs/volume
-  _VERSION: v1-101619-f4f4cb99-57c4-4602-ae01-ed5db2cf3329-gcp
+  _VERSION: v1-101700-2e16e0a1-4e27-4304-9fea-5b07c605ddc4-gcp
 
 tags: [mytag1, mytag2]
 timeout: 100s
