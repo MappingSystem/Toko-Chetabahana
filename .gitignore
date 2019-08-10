@@ -30,9 +30,6 @@ local_settings.py
 # Ignore dirs
 __pycache__/
 build/
-/branches/.google/cloud/compute/home/
-/compose/deploy/product/app.yaml
-/compose/home/
 coverage/
 dist/
 *\.egg*
