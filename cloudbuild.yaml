@@ -9,6 +9,11 @@ steps:
   args: [$_INIT]
   id: docker
 
+- name: python
+  entrypoint: /bin/bash
+  args: [$_INIT]
+  id: python
+
 options:
   env:
   - BUILD_ID=$BUILD_ID
@@ -24,7 +29,7 @@ options:
 substitutions:
   _INIT: .google/cloud/builders/__init__
   _OUTPUT: /builder/outputs/volume
-  _VERSION: v1-101529-0724503a-ea8d-4976-9754-c60ce8124054-gcp
+  _VERSION: v1-101619-f4f4cb99-57c4-4602-ae01-ed5db2cf3329-gcp
 
 tags: [mytag1, mytag2]
 timeout: 100s
