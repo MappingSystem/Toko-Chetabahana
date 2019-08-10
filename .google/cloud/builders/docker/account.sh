@@ -23,6 +23,7 @@ docker version
 
 echo "\n$hr\nDOCKER INFO\n$hr"
 docker info
+python --version
 
 echo "$hr\nIMAGE BUILDERS\n$hr"
 docker images --all | sort

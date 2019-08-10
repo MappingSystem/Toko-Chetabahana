@@ -10,6 +10,7 @@ gcloud config list --all
 
 echo "\n$hr\nSYSTEM INFO\n$hr"
 gcloud info
+python --version
 
 echo "\n$hr\nHOME PROFILES\n$hr"
 ls -al $HOME
