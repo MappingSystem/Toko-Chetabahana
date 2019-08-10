@@ -18,6 +18,8 @@ echo "\n$hr\nCURRENT REPOSITORY\n$hr"
 pwd
 ls -al .
 
+return
+
 echo "\n$hr\nCLONE ORIGIN\n$hr"
 REPO=$(basename $ORIGIN .git)
 rm -rf $REPO && git clone $ORIGIN $REPO
@@ -26,7 +28,6 @@ cd $REPO
 git checkout master
 mv README.md README_original.md
 git branch -D Chetabahana && git branch -m Chetabahana
-sed -i '0,/!.gitignore/s//!.gitignore\n!.google/' .gitignore
 cd ..
 
 echo "\n$hr\nCOPYING\n$hr"
