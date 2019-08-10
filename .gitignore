@@ -1,11 +1,23 @@
 # Ignore files
 *.py[cod]
 .*
-!.docker
+!.babelrc
+!.circleci
+!.codeclimate.yml
+!.coveragerc
 !.dockerignore
+!.eslintrc.json
+!.flowconfig
+!.gqlconfig
 !.github
 !.gitignore
 !.google
+!.nvmrc
+!.npmrc
+!.plop
+!.pylintrc
+!.testcafe
+!.travis*
 !.tx
 *.css
 *.exe
@@ -13,9 +25,14 @@
 *.pot
 *.pyc
 app.yaml
+local_settings.py
 
 # Ignore dirs
 __pycache__/
+build/
+/branches/.google/cloud/compute/home/
+/compose/deploy/product/app.yaml
+/compose/home/
 coverage/
 dist/
 *\.egg*
