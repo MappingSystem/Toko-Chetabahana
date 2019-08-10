@@ -5,9 +5,9 @@ steps:
   id: gcloud
     
 - name: gcr.io/cloud-builders/docker
+  entrypoint: /bin/bash
   args: [$_INIT]
   id: docker
-  entrypoint: bash
 
 options:
   env:
