@@ -10,13 +10,6 @@ export hr=`printf '%s\n' "${res// /_}"`
 export hrd=`printf '%s\n' "${res// /=}"`
 export PATH=$HOME/.local/bin:$PATH
 
-# Built-in Environtment
-export BUILD_ID=${1}
-export PROJECT_ID=${2}
-export REPO_NAME=${3}
-export BRANCH_NAME=${4}
-export TAG_NAME=${5}
-
 # Check active gcloud
 if [[ $(compgen -c | xargs which -a | grep gcloud) ]]
 then
@@ -36,8 +29,8 @@ then
     # Private repository
     if [ ! -f $HOME/.ssh ]
     then
-        # Dependencies: Set 'mirror configuration' to GCR
-        # Put the repo on top of the list and Set IAM role
+        # Dependencies: Set 'mirror configuration' to Google Repository
+        # Name the repo to be on top of the list and Set IAM role to clone it
         if gcloud source repos list &> /dev/null
         then
             gcloud source repos clone --verbosity=none `gcloud source \
