@@ -17,8 +17,7 @@ read_lines() {
 file_links() {
     for f in $1/.*
     do
-        if ( [ ! -f $2/${f##*/} ] && [ ! -d $2/${f##*/} ] && \
-        [ "${f##*/}" != "." ] && [ "${f##*/}" != ".." ] )
+        if ( [ ! -f $2/${f##*/} ] && [ ! -d $2/${f##*/} ] && [ "${f##*/}" != "." ] && [ "${f##*/}" != ".." ] )
         then
             ln -s $f $2/${f##*/}
         fi
@@ -53,8 +52,7 @@ read_files() {
         chmod -R +x $1/*
         ls -l $1 | grep ".sh" && echo -e "\n$hr\n"
         # Running..
-        find $1 -type f -name '*.sh' | sort | \
-        while read file; do run_script "$file"; done
+        find $1 -type f -name '*.sh' | sort | while read file; do run_script "$file"; done
     else
         echo -e "No '$TYPE' scripts to run\n$hr"	
     fi

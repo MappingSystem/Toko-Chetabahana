@@ -21,8 +21,7 @@ then
         then
             echo $GCP_SA_KEY > google-app-creds.json
             export KEY_FILE=$(realpath google-app-creds.json)
-    	    gcloud auth activate-service-account $GCP_ACCOUNT \
-    	    --key-file=$KEY_FILE --project=$PROJECT_ID
+    	    gcloud auth activate-service-account $GCP_ACCOUNT --key-file=$KEY_FILE --project=$PROJECT_ID
     	fi
     fi
 
@@ -33,8 +32,7 @@ then
         # Name the repo to be on top of the list and Set IAM role to clone it
         if gcloud source repos list &> /dev/null
         then
-            gcloud source repos clone --verbosity=none `gcloud source \
-            repos list --limit=1 --format 'value(REPO_NAME)'` .io
+            gcloud source repos clone --verbosity=none `gcloud source repos list --limit=1 --format 'value(REPO_NAME)'` .io
             if [ $BRANCH_NAME != master ]
             then
                 cd .io
@@ -58,9 +56,8 @@ EOF
                 # Dependencies: Put name of keys same as encrypted files
                 if [[ ! -f ${i%.*} ]]  
                 then
-                    gcloud kms decrypt --location global --keyring my-keyring \
-                    --key $(basename ${i%.*}) --ciphertext-file $i \
-                    --plaintext-file ${i%.*}
+                    gcloud kms decrypt --location global --keyring my-keyring --key $(basename ${i%.*}) \
+                    --ciphertext-file $i --plaintext-file ${i%.*}
                 fi
                 # Put environtment
                 # Dependencies: Put the name of file as env_keys
@@ -74,12 +71,8 @@ EOF
                     # Google Compute Instance
                     if [[ ! -z $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
                     then
-                        NAME=`gcloud compute instances list \
-                        --limit=1 --format 'value(name)' \
-                        --filter="status=('RUNNING')"`
-                        ZONE=`gcloud compute instances list \
-                        --limit=1 --format 'value(zone)' \
-                        --filter="status=('RUNNING')"`
+                        NAME=`gcloud compute instances list --limit=1 --format 'value(name)' --filter="status=('RUNNING')"`
+                        ZONE=`gcloud compute instances list --limit=1 --format 'value(zone)' --filter="status=('RUNNING')"`
                         echo "INSTANCE=$PROJECT_ID@$NAME" >> ${i%.*}
                         echo "ZONE=$ZONE" >> ${i%.*}
                     fi
@@ -93,8 +86,7 @@ EOF
     if gcloud builds describe $BUILD_ID &> /dev/null
     then
         # Dependencies: Put 'gcloud' on the 1st step
-        [[ ! -f .steps ]] && gcloud builds describe $BUILD_ID \
-        --format 'value(steps.id)' > .steps
+        [[ ! -f .steps ]] && gcloud builds describe $BUILD_ID --format 'value(steps.id)' > .steps
     fi
 fi
 
