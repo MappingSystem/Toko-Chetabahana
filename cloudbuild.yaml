@@ -15,7 +15,7 @@ options:
     path: /builder/outputs/volume
     
 substitutions:
-  _VERSION: 'v1-100844-cron'
+  _VERSION: 'v1-100847-cron'
   _INIT: .google/cloud/builders/__init__
 
 tags: ['mytag1', 'mytag2']
