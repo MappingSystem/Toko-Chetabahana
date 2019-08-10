@@ -13,9 +13,9 @@ options:
   env:
   - BUILD_ID=$BUILD_ID
   - PROJECT_ID=$PROJECT_ID
+  - TAG_NAME=$TAG_NAME
   - REPO_NAME=$REPO_NAME
   - BRANCH_NAME=$BRANCH_NAME
-  - TAG_NAME=$TAG_NAME
   volumes:
   - name: outputs
     path: /builder/outputs/volume
