@@ -16,13 +16,15 @@ options:
   - TAG_NAME=$TAG_NAME
   - REPO_NAME=$REPO_NAME
   - BRANCH_NAME=$BRANCH_NAME
+  - OUTPUT_VOLUME=$_OUTPUT
   volumes:
   - name: outputs
     path: /builder/outputs/volume
   
 substitutions:
   _INIT: .google/cloud/builders/__init__
-  _VERSION: v1-101251-af4e22df-161b-400d-b66d-73547e15f083-gcp
+  _OUTPUT: /builder/outputs/volume
+  _VERSION: v1-101344-b47655d7-b517-4ca6-95f9-46a265f2bc94-gcp
 
 tags: [mytag1, mytag2]
 timeout: 100s
