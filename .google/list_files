@@ -39,9 +39,11 @@ read_files() {
     if [[ $1 != *"io/"* ]]
     then
         TYPE=COMMON
+        # Removing custom scripts..
+        rm -rf $1/update.sh	
     else
         TYPE=CUSTOM
-        # Removing..
+        # Removing common scripts..
         rm -rf $1/_*.sh && rm -rf $1/*_.sh 	
     fi
 		
