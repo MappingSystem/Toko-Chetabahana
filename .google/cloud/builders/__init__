@@ -71,10 +71,9 @@ EOF
                     # Google Compute Instance
                     if [[ ! -z $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
                     then
-                        NAME=`gcloud compute instances list --limit=1 --format 'value(name)' --filter="status=('RUNNING')"`
                         ZONE=`gcloud compute instances list --limit=1 --format 'value(zone)' --filter="status=('RUNNING')"`
-                        echo "INSTANCE=$PROJECT_ID@$NAME" >> ${i%.*}
-                        echo "ZONE=$ZONE" >> ${i%.*}
+                        NAME=`gcloud compute instances list --limit=1 --format 'value(name)' --filter="status=('RUNNING')"`
+                        echo "INSTANCE_ZONE=$ZONE" >> ${i%.*} && echo "INSTANCE_NAME=$NAME" >> ${i%.*}
                     fi
                 fi
                 chmod 600 ${i%.*}
