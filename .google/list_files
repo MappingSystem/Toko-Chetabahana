@@ -40,11 +40,11 @@ read_files() {
     then
         TYPE=COMMON
         # Removing custom scripts..
-        rm -rf $1/update.sh	
+        rm -rf $1/*_.sh 	
     else
         TYPE=CUSTOM
         # Removing common scripts..
-        rm -rf $1/_*.sh && rm -rf $1/*_.sh 	
+        rm -rf $1/_*.sh
     fi
 		
     echo -e "\n$hrd\n$TYPE SCRIPTS\n$hrd"
