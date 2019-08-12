@@ -12,11 +12,11 @@ export hrd=`printf '%s\n' "${res// /=}"`
 # Environtment
 export PATH=$HOME/.local/bin:$PATH
 
-echo Check active gcloud
+# Check active gcloud
 if [[ "${TAG_NAME}" == "gcloud" ]]
 then
-    echo gcloud active
 	# Set Google App Credentials
+	gcloud config get-value account
     if ! gcloud config get-value account &> /dev/null
     then
     echo gcloud account none
