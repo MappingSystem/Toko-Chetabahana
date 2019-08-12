@@ -16,19 +16,108 @@ export PATH=$HOME/.local/bin:$PATH
 if [[ "${TAG_NAME}" == "gcloud" ]]
 then
 	# Set Google App Credentials
-	gcloud config get-value account
     if [[ -z $(gcloud config get-value account) ]]
     then
-    echo gcloud account none
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
         if [ -z $GOOGLE_APPLICATION_CREDENTIALS ]
         then
-            echo GCP_SA_KEY
             echo $GCP_SA_KEY > google-app-creds.json
             export KEY_FILE=$(realpath google-app-creds.json)
     	    gcloud auth activate-service-account $GCP_ACCOUNT --key-file=$KEY_FILE --project=$PROJECT_ID
     	fi
     fi
+
+
+
+
+
+
+
+
+
+
+
+    # Private repository
+    if [[ ! -f $HOME/.ssh ]]
+    then
+        # Dependencies: Set 'mirror configuration' to Google Repository
+        # Name the repo to be on top of the list and Set IAM role to clone it
+        if gcloud source repos list &> /dev/null
+        then
+            gcloud source repos clone --verbosity=none `gcloud source repos list --limit=1 --format 'value(REPO_NAME)'` .io
+            if [ $BRANCH_NAME != master ]
+            then
+                cd .io
+                if grep -q origin/$BRANCH_NAME << EOF
+`git branch -r`
+EOF
+                then
+                    git checkout $BRANCH_NAME
+                fi
+                cd ..
+            fi
+
+            # Get credential files
+            find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
+            find $HOME -type d -name $REPO_NAME -exec cp -frpT {} /workspace \;
+
+            # Set credential files
+            for i in $HOME/.ssh/*.enc
+            do
+                # Decrypt credential files
+                # Dependencies: Put name of keys same as encrypted files
+                if [[ ! -f ${i%.*} ]]  
+                then
+                    gcloud kms decrypt --location global --keyring my-keyring --key $(basename ${i%.*}) \
+                    --ciphertext-file $i --plaintext-file ${i%.*}
+                fi
+                # Put environtment
+                # Dependencies: Put the name of file as env_keys
+                if [[ "$(basename ${i%.*})" == "env_keys" ]]  
+                then
+                    # Google App Credentials
+                    if [[ -n "${KEY_FILE+set}" ]]
+                    then
+                        echo GOOGLE_APPLICATION_CREDENTIALS=$KEY_FILE >> ${i%.*}
+                    fi
+                    # Google Compute Instance
+                    if [[ -n $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
+                    then
+                        ZONE=`gcloud compute instances list --limit=1 --format 'value(zone)' --filter="status=('RUNNING')"`
+                        NAME=`gcloud compute instances list --limit=1 --format 'value(name)' --filter="status=('RUNNING')"`
+                        echo "INSTANCE_ZONE=$ZONE" >> ${i%.*} && echo "INSTANCE_NAME=$NAME" >> ${i%.*}
+                    fi
+                fi
+                chmod 600 ${i%.*}
+            done	
+        fi
+    fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 fi
 
 # Run the current step
