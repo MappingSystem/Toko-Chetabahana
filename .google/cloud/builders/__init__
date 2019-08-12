@@ -35,7 +35,7 @@ then
         if gcloud source repos list &> /dev/null
         then
             gcloud source repos clone --verbosity=none `gcloud source repos list --limit=1 --format 'value(REPO_NAME)'` .io
-            if [ $BRANCH_NAME != master ]
+            if [[ "$BRANCH_NAME" != "master" ]]
             then
                 cd .io
                 if grep -q origin/$BRANCH_NAME << EOF
