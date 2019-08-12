@@ -10,6 +10,9 @@ read_lines() {
             var=`echo $line | cut -d '=' -f1`; test=$(echo $var)
             if [ -z "$(test)" ];then eval export "$line";fi
         done <$1
+        if ( [[ -n "${LOCAL_TIME+set}" ]] && [[ -f /usr/share/zoneinfo/$LOCAL_TIME ]] ); then
+            cp -f /usr/share/zoneinfo/$LOCAL_TIME /etc/localtime
+        fi
     fi
 }
 
@@ -31,31 +34,27 @@ run_script() {
     # Looping..
     [[ -f $HOME/.ssh/env_keys ]] && read_lines $HOME/.ssh/env_keys 
     # Calling..
-    echo -e "$hrd\nRUN SCRIPT:\n$1\n$hr" && sh $1
+    [[ $1 != *"_"* ]] && TYPE=COMMON || TYPE=CUSTOM
+    echo -e "$hrd\nRUN '$TYPE' SCRIPT:\n$1\n$hr" && bash $1
 }
 
 # Listing script files to run
 read_files() {
-    if [[ $1 != *"io/"* ]]
-    then
-        TYPE=COMMON
-        # Removing custom scripts..
-        rm -rf $1/*_.sh 	
-    else
-        TYPE=CUSTOM
-        # Removing common scripts..
-        rm -rf $1/_*.sh
-    fi
-		
-    echo -e "\n$hrd\n$TYPE SCRIPTS\n$hrd"
+    echo -e "\n$hrd\nSCRIPT FILES\n$hrd"
     if ([ -d $1 ] && [ "$(ls -A $1)" ])
-    then
+	then
         # Listing..
         chmod -R +x $1/*
-        ls -l $1 | grep ".sh" && echo -e "\n$hr\n"
+        ls -l $1 | grep _*.sh && echo -e "\n$hr\n"
+        find $1 -type f -name "*.sh" -and -name "_*.sh" | sort | \
+		while read file; do run_script "$file"; done
         # Running..
-        find $1 -type f -name '*.sh' | sort | while read file; do run_script "$file"; done
+        find $1 -type f -name "*.sh" -and ! -name "*_*" | sort | \
+		while read file; do run_script "$file"; done
+        # Running..
+        find $1 -type f -name "*.sh" -and -name "*_.sh" | sort | \
+		while read file; do run_script "$file"; done
     else
-        [[ -n "${TYPE+set}" ]] && echo -e "No '$TYPE' scripts to run\n$hr"	
+        echo -e "No scripts to run\n$hr"	
     fi
 }

@@ -8,6 +8,8 @@
 printf -v res %180s
 export hr=`printf '%s\n' "${res// /_}"`
 export hrd=`printf '%s\n' "${res// /=}"`
+
+# Environtment
 export PATH=$HOME/.local/bin:$PATH
 
 # Check active gcloud
@@ -64,12 +66,12 @@ EOF
                 if [[ "$(basename ${i%.*})" == "env_keys" ]]  
                 then
                     # Google App Credentials
-                    if [[ ! -z $KEY_FILE ]]
+                    if [[ -n "${KEY_FILE+set}" ]]
                     then
                         echo GOOGLE_APPLICATION_CREDENTIALS=$KEY_FILE >> ${i%.*}
                     fi
                     # Google Compute Instance
-                    if [[ ! -z $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
+                    if [[ -n $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
                     then
                         ZONE=`gcloud compute instances list --limit=1 --format 'value(zone)' --filter="status=('RUNNING')"`
                         NAME=`gcloud compute instances list --limit=1 --format 'value(name)' --filter="status=('RUNNING')"`
@@ -95,11 +97,9 @@ then
     [[ -f .steps ]] && date +%s >> .steps
     TAG_STEP_NUM=$(($(wc -l < .steps) - 1))
     TAG_NAME=$(head -n 1 .steps | cut -d ';' -f $TAG_STEP_NUM)
-    TAG_NAME=$(basename $TAG_NAME); TAG_NAME=${TAG_NAME%:*}; 
-    TAG_NAME=${TAG_NAME##*-}; TAG_NAME=${TAG_NAME##*_};
+    TAG_NAME=${TAG_NAME%/*}; TAG_NAME=${TAG_NAME%:*}; TAG_NAME=${TAG_NAME##*-}; TAG_NAME=${TAG_NAME##*_};
 fi
 
 # Run the current step
 source .google/list_files
-DIR=`dirname ${0}`/$TAG_NAME
-for i in $DIR .io/$DIR; do read_files $i; done
+read_files ${0%/*}/$TAG_NAME
