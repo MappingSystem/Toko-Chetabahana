@@ -2,17 +2,20 @@ steps:
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: /bin/bash
   args: [$_INIT]
-  id: gcloud
+  env:
+  - TAG_NAME=gcloud
     
 - name: gcr.io/cloud-builders/docker
   entrypoint: /bin/bash
   args: [$_INIT]
-  id: docker
+  env:
+  - TAG_NAME=docker
 
 - name: python
   entrypoint: /bin/bash
   args: [$_INIT]
-  id: python
+  env:
+  - TAG_NAME=python
 
 options:
   env:
@@ -29,7 +32,7 @@ options:
 substitutions:
   _INIT: .google/cloud/builders/__init__
   _OUTPUT: /builder/outputs/volume
-  _VERSION: v1-1908130425-3dd1f192-d192-4e2a-9e56-97360fd8025f-gcp
+  _VERSION: v1-1908130526-173f1d12-6377-4db0-b9e0-4049b866eec6-gcp
 
-tags: [mytag1, mytag2]
+tags: [mytag1, mytag2, mytag3]
 timeout: 100s

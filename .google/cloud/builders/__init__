@@ -13,7 +13,7 @@ export hrd=`printf '%s\n' "${res// /=}"`
 export PATH=$HOME/.local/bin:$PATH
 
 # Check active gcloud
-if [[ $(compgen -c | xargs which -a | grep gcloud) ]]
+if gcloud --version &> /dev/null
 then
     # Set Google App Credentials
     if ! gcloud config get-value account &> /dev/null
@@ -82,22 +82,6 @@ EOF
             done	
         fi
     fi
-
-    # Get list of all steps
-    if gcloud builds describe $BUILD_ID &> /dev/null
-    then
-        # Dependencies: Put 'gcloud' on the 1st step
-        [[ ! -f .steps ]] && gcloud builds describe $BUILD_ID --format 'value(steps.id)' > .steps
-    fi
-fi
-
-# Get current step
-if [[ -z "${TAG_NAME%;*}" ]]
-then
-    [[ -f .steps ]] && date +%s >> .steps
-    TAG_STEP_NUM=$(($(wc -l < .steps) - 1))
-    TAG_NAME=$(head -n 1 .steps | cut -d ';' -f $TAG_STEP_NUM)
-    TAG_NAME=${TAG_NAME%/*}; TAG_NAME=${TAG_NAME%:*}; TAG_NAME=${TAG_NAME##*-}; TAG_NAME=${TAG_NAME##*_};
 fi
 
 # Run the current step
