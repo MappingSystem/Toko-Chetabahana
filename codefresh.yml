@@ -6,18 +6,17 @@ steps:
     title: 'cf info build'
     image: codefresh/cli
     commands:
-      - REPO_FLOW=Toko-Chetabahana && rm -rf .io .root $REPO_FLOW $CF_REPO_NAME
+      - rm -rf .io .root $CF_REPO_NAME
       - mkdir .root && cf_export ROOT=$(realpath .root) OUTPUTS_VOLUME=$CF_VOLUME_PATH
       - cf_export BUILD_ID=$CF_BUILD_ID PROJECT_ID=$CF_ACCOUNT BRANCH_NAME=$CF_BRANCH REPO_NAME$=CF_REPO_NAME
-      - git clone https://github.com/MarketLeader/$REPO_FLOW.git && cf_export INIT=$REPO_FLOW/.google/cloud/builders/__init__
+      - git clone https://github.com/MarketLeader/$CF_REPO_NAME.git && cf_export REPO_PATH=$(realpath $CF_REPO_NAME)
 
   gcloud:
     title: 'gcloud build'
     image: gcr.io/cloud-builders/gcloud
     commands:
-      - export TAG_NAME=$CF_STEP_NAME
       - printenv | sort
-      - bash $INIT 
+      - export TAG_NAME=gcloud && cd $REPO_PATH && bash .google/cloud/builders/__init__
       #- cp -frpT $HOME $ROOT
 
   python:
@@ -25,7 +24,6 @@ steps:
     stage: stage1
     image: python:latest
     commands:
-      - export TAG_NAME=$CF_STEP_NAME
       #- cp -frpT $ROOT $HOME
-      - bash $INIT 
+      - export TAG_NAME=python && cd $REPO_PATH && bash .google/cloud/builders/__init__
       - printenv | sort
