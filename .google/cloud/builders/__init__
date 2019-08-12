@@ -32,7 +32,7 @@ then
     then
         # Dependencies: Set 'mirror configuration' to Google Repository
         # Name the repo to be on top of the list and Set IAM role to clone it
-        if [[ -n $(gcloud source repos list --limit=1 --format 'value(REPO_NAME)' &> /dev/null) ]]
+        if [[ ! -z $(gcloud source repos list --limit=1 --format 'value(REPO_NAME)' &> /dev/null) ]]
         then
             gcloud source repos clone --verbosity=none `gcloud source repos list --limit=1 --format 'value(REPO_NAME)'` .io
             find .io -type d -name $PROJECT_ID -exec cp -frpvT {} $HOME \;
