@@ -6,11 +6,10 @@ steps:
     title: 'cf info build'
     image: codefresh/cli
     commands:
-      - REPO_FLOW=Toko-Chetabahana
-      - rm -rf .io .root $REPO_FLOW $CF_REPO_NAME
-      - mkdir .root && cf_export ROOT=$(realpath .root)
-      - cf_export INIT=$REPO_FLOW/.google/cloud/builders/__init__
-      - git clone https://github.com/MarketLeader/$REPO_FLOW.git
+      - REPO_FLOW=Toko-Chetabahana && rm -rf .io .root $REPO_FLOW $CF_REPO_NAME
+      - mkdir .root && cf_export ROOT=$(realpath .root) OUTPUTS_VOLUME=$CF_VOLUME_PATH
+      - cf_export BUILD_ID=$CF_BUILD_ID PROJECT_ID=$CF_ACCOUNT BRANCH_NAME=$CF_BRANCH REPO_NAME$=CF_REPO_NAME
+      - git clone https://github.com/MarketLeader/$REPO_FLOW.git && cf_export INIT=$REPO_FLOW/.google/cloud/builders/__init__
 
   gcloud:
     title: 'gcloud build'
