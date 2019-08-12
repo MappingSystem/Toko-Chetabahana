@@ -12,6 +12,25 @@ export hrd=`printf '%s\n' "${res// /=}"`
 # Environtment
 export PATH=$HOME/.local/bin:$PATH
 
+# Check active gcloud
+if gcloud --version &> /dev/null
+then
+    echo gcloud active
+	# Set Google App Credentials
+    if ! gcloud config get-value account &> /dev/null
+    then
+    echo gcloud account none
+        # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
+        if [ -z $GOOGLE_APPLICATION_CREDENTIALS ]
+        then
+            echo GCP_SA_KEY
+            echo $GCP_SA_KEY > google-app-creds.json
+            export KEY_FILE=$(realpath google-app-creds.json)
+    	    gcloud auth activate-service-account $GCP_ACCOUNT --key-file=$KEY_FILE --project=$PROJECT_ID
+    	fi
+    fi
+fi
+
 # Run the current step
 source .google/list_files
 read_files ${0%/*}/$TAG_NAME
