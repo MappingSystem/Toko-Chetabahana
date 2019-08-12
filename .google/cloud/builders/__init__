@@ -17,7 +17,7 @@ if [[ "${TAG_NAME}" == "gcloud" ]]
 then
 	# Set Google App Credentials
 	gcloud config get-value account
-    if ! gcloud config get-value account &> /dev/null
+    if [[ -z $(gcloud config get-value account) ]]
     then
     echo gcloud account none
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
