@@ -13,7 +13,7 @@ export hrd=`printf '%s\n' "${res// /=}"`
 export PATH=$HOME/.local/bin:$PATH
 
 # Check active gcloud
-if gcloud --version &> /dev/null
+if [[ $(compgen -c | xargs which -a | grep gcloud) ]]
 then
     # Set Google App Credentials
     if ! gcloud config get-value account &> /dev/null
