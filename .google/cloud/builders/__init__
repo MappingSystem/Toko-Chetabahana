@@ -19,7 +19,7 @@ then
     if [[ -z $(gcloud config get-value account) ]]
     then
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
-        if [ -z $GOOGLE_APPLICATION_CREDENTIALS ]
+        if [[ -z $GOOGLE_APPLICATION_CREDENTIALS ]]
         then
             echo $GCP_SA_KEY > google-app-creds.json
             export KEY_FILE=$(realpath google-app-creds.json)
@@ -32,7 +32,7 @@ then
     then
         # Dependencies: Set 'mirror configuration' to Google Repository
         # Name the repo to be on top of the list and Set IAM role to clone it
-        if gcloud source repos list &> /dev/null
+        if [[ -n $(gcloud source repos list --limit=1 --format 'value(REPO_NAME)' &> /dev/null) ]]
         then
             gcloud source repos clone --verbosity=none `gcloud source repos list --limit=1 --format 'value(REPO_NAME)'` .io
             find .io -type d -name $PROJECT_ID -exec cp -frpvT {} $HOME \;
