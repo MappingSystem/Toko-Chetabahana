@@ -49,7 +49,7 @@ EOF
             fi
 
             find .io -type d -name $PROJECT_ID -exec cp -frpvT {} $HOME \;
-            find $HOME -type d -name $REPO_NAME -exec echo {} \;
+            #find $HOME -type d -name $REPO_NAME -exec echo {} \;
 
 
             # Set credential files
