@@ -16,12 +16,20 @@ steps:
     image: gcr.io/cloud-builders/gcloud
     commands:
       - export TAG_NAME=gcloud && cd $REPO_PATH && bash .google/cloud/builders/__init__
-      #- cp -frpT $HOME $ROOT
+      - cp -frpT $HOME $ROOT
+
+  docker:
+    title: 'docker test'
+    stage: stage1
+    image: gcr.io/cloud-builders/docker
+    commands:
+      - cp -frpT $ROOT $HOME
+      - export TAG_NAME=docker && cd $REPO_PATH && bash .google/cloud/builders/__init__
 
   python:
     title: 'python test'
     stage: stage1
     image: python:latest
     commands:
-      #- cp -frpT $ROOT $HOME
+      - cp -frpT $ROOT $HOME
       - export TAG_NAME=python && cd $REPO_PATH && bash .google/cloud/builders/__init__
