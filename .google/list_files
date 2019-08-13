@@ -58,3 +58,11 @@ read_files() {
         echo -e "No scripts to run\n$hr"	
     fi
 }
+
+# Taking script files to run
+greb_files() {
+    # Cleaning..
+    ls -alR $1
+	# find $1/.google/cloud/builders -type f -name "*.sh" -and -name "*_*"  -exec rm -f {} \;
+	# cp -frpvT $1 $OUTPUTS_VOLUME/$OUTPUT_REPO
+}
