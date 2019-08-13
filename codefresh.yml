@@ -8,7 +8,7 @@ steps:
     commands:
       - cf_export PROJECT_ID=$(echo "$CF_REPO_OWNER" | tr '[:upper:]' '[:lower:]')
       - rm -rf .io .root $CF_REPO_NAME && mkdir .root && cf_export ROOT=$(realpath .root)
-      - git clone https://github.com/MarketLeader/$CF_REPO_NAME.git && cf_export REPO_PATH=$(realpath $CF_REPO_NAME)
+      - git clone https://github.com/CF_REPO_OWNER/$CF_REPO_NAME.git && cf_export REPO_PATH=$(realpath $CF_REPO_NAME)
       - cf_export BUILD_ID=$CF_BUILD_ID BRANCH_NAME=$CF_BRANCH REPO_NAME=$CF_REPO_NAME OUTPUTS_VOLUME=$CF_VOLUME_PATH
 
   gcloud:
