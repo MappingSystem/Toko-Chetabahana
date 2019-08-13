@@ -62,5 +62,5 @@ read_files() {
 # Taking script files to run
 greb_files() {
     # Copying..
-	find $1/.google/cloud/builders -maxdepth 1 -type d -exec echo {} \;
+	find $1/.google/cloud/builders -mindepth 1 -type d -exec echo {} \;
 }
