@@ -45,41 +45,40 @@ EOF
             fi
             cd ..
         fi
+        
+		# Get credential files
         find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
         find $HOME -type d -name $REPO_NAME -exec echo {} \;
 
-
-            # Set credential files
-            for i in $HOME/.ssh/*.enc
-            do
-                # Decrypt credential files
-                # Dependencies: Put name of keys same as encrypted files
-                if [[ ! -f ${i%.*} ]]  
+        # Set credential files
+        for i in $HOME/.ssh/*.enc
+        do
+            # Decrypt credential files
+            # Dependencies: Put name of keys same as encrypted files
+            if [[ ! -f ${i%.*} ]]  
+            then
+                gcloud kms decrypt --location global --keyring my-keyring --key $(basename ${i%.*}) \
+                --ciphertext-file $i --plaintext-file ${i%.*}
+            fi
+            # Put environtment
+            # Dependencies: Put the name of file as env_keys
+            if [[ "$(basename ${i%.*})" == "env_keys" ]]  
+            then
+                # Google App Credentials
+                if [[ -n "${KEY_FILE+set}" ]]
                 then
-                    gcloud kms decrypt --location global --keyring my-keyring --key $(basename ${i%.*}) \
-                    --ciphertext-file $i --plaintext-file ${i%.*}
+                    echo GOOGLE_APPLICATION_CREDENTIALS=$KEY_FILE >> ${i%.*}
                 fi
-                # Put environtment
-                # Dependencies: Put the name of file as env_keys
-                if [[ "$(basename ${i%.*})" == "env_keys" ]]  
+                # Google Compute Instance
+                if [[ -n $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
                 then
-                    # Google App Credentials
-                    if [[ -n "${KEY_FILE+set}" ]]
-                    then
-                        echo GOOGLE_APPLICATION_CREDENTIALS=$KEY_FILE >> ${i%.*}
-                    fi
-                    # Google Compute Instance
-                    if [[ -n $(gcloud compute instances list --limit=1 --format 'value(name)') ]]
-                    then
-                        ZONE=`gcloud compute instances list --limit=1 --format 'value(zone)' --filter="status=('RUNNING')"`
-                        NAME=`gcloud compute instances list --limit=1 --format 'value(name)' --filter="status=('RUNNING')"`
-                        echo "INSTANCE_ZONE=$ZONE" >> ${i%.*} && echo "INSTANCE_NAME=$NAME" >> ${i%.*}
-                    fi
+                    ZONE=`gcloud compute instances list --limit=1 --format 'value(zone)' --filter="status=('RUNNING')"`
+                    NAME=`gcloud compute instances list --limit=1 --format 'value(name)' --filter="status=('RUNNING')"`
+                    echo "INSTANCE_ZONE=$ZONE" >> ${i%.*} && echo "INSTANCE_NAME=$NAME" >> ${i%.*}
                 fi
-                chmod 600 ${i%.*}
-            done	
-
-
+            fi
+            chmod 600 ${i%.*}
+        done	
     fi
 fi
 
