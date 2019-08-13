@@ -10,8 +10,7 @@ export hr=`printf '%s\n' "${res// /_}"`
 export hrd=`printf '%s\n' "${res// /=}"`
 
 # Environtment
-source .google/list_files
-rexport PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Check active gcloud
 if [[ "${TAG_NAME}" == "gcloud" ]]
@@ -33,7 +32,7 @@ then
     then
         # Dependencies: Set 'mirror configuration' to Google Repository
         # Name the repo to be on top of the list and Set IAM role to clone it
-            gcloud source repos clone --verbosity=none $(gcloud source repos list --limit=1 --format 'value(REPO_NAME)') .io
+        gcloud source repos clone --verbosity=none $(gcloud source repos list --limit=1 --format 'value(REPO_NAME)') .io
             if [[ "$BRANCH_NAME" != "master" ]]
             then
                 cd .io
@@ -45,9 +44,8 @@ EOF
                 fi
                 cd ..
             fi
-
-            find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
-            find $HOME -type d -name $REPO_NAME -exec echo {} \;
+        find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
+        find $HOME -type d -name $REPO_NAME -exec echo {} \;
 
 
             # Set credential files
@@ -85,4 +83,5 @@ EOF
 fi
 
 # Run the current step
-ead_files ${0%/*}/$TAG_NAME
+source .google/list_files
+read_files ${0%/*}/$TAG_NAME
