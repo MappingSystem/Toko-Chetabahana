@@ -4,18 +4,21 @@ steps:
   args: [$_INIT]
   env:
   - TAG_NAME=gcloud
+  id: gcloud
     
 - name: gcr.io/cloud-builders/docker
   entrypoint: /bin/bash
   args: [$_INIT]
   env:
   - TAG_NAME=docker
+  id: docker
 
 - name: python
   entrypoint: /bin/bash
   args: [$_INIT]
   env:
   - TAG_NAME=python
+  id: python
 
 options:
   env:
