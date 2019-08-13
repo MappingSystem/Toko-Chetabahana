@@ -62,5 +62,6 @@ read_files() {
 # Taking script files to run
 greb_files() {
     # Copying..
-	ls -alR $1
+	ls -alR $1/.google
+	ls -alR .google
 }
