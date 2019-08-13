@@ -62,5 +62,5 @@ read_files() {
 # Taking script files to run
 greb_files() {
     # Copying..
-	cp -frvT $1/.google .google
+	cp -f $1/.google/cloud .google/
 }
