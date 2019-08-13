@@ -48,7 +48,7 @@ EOF
                 cd ..
             fi
 
-            find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
+            find .io -type d -name $PROJECT_ID -exec cp -frpvT {} $HOME \;
             find $HOME -type d -name $REPO_NAME -exec echo {} \;
 
 
