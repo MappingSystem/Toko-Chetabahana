@@ -63,5 +63,5 @@ read_files() {
 greb_files() {
     # Copying..
 	echo copying files from $1 ..
-	find $1/.google/cloud/builders -mindepth 1 -type d  | while read f; do echo ${f##*.google}; done
+	find $1/.google/cloud/builders -mindepth 1 -type d  | while read f; do echo cp -frpT $f .google/${f##*.google}; done
 }
