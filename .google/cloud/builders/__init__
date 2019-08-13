@@ -41,7 +41,7 @@ then
 `git branch -r`
 EOF
             then
-                    git checkout $BRANCH_NAME
+                git checkout $BRANCH_NAME
             fi
             cd ..
         fi
