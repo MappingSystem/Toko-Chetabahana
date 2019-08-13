@@ -16,7 +16,7 @@ export PATH=$HOME/.local/bin:$PATH
 # Check active gcloud
 if [[ "${TAG_NAME}" == "gcloud" ]]
 then
-	# Set Google App Credentials
+    # Set Google App Credentials
     if [[ -z $(gcloud config get-value account) ]]
     then
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
@@ -46,7 +46,7 @@ EOF
             cd ..
         fi
         
-		# Get credential files
+        # Get credential files
         find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
         find $HOME -type d -name $REPO_NAME | while read dir; do greb_files $dir; done
 
