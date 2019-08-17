@@ -18,13 +18,13 @@ if [[ "${TAG_NAME}" == "gcloud" ]]
 then
     # Set Google App Credentials
 echo test1
+gcloud config get-value account
     if [[ -z $(gcloud config get-value account) ]]
     then
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
 echo test2
         if [[ -z $GOOGLE_APPLICATION_CREDENTIALS ]]
         then
-echo test3
             echo $GCP_SA_KEY > .google-app-creds.json
             export KEY_FILE=$(realpath .google-app-creds.json)
     	    gcloud auth activate-service-account $GCP_ACCOUNT --key-file=$KEY_FILE --project=$PROJECT_ID
