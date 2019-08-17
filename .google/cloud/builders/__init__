@@ -17,13 +17,16 @@ export PATH=$HOME/.local/bin:$PATH
 if [[ "${TAG_NAME}" == "gcloud" ]]
 then
     # Set Google App Credentials
+echo test1
     if [[ -z $(gcloud config get-value account) ]]
     then
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
+echo test2
         if [[ -z $GOOGLE_APPLICATION_CREDENTIALS ]]
         then
-            echo $GCP_SA_KEY > google-app-creds.json
-            export KEY_FILE=$(realpath google-app-creds.json)
+echo test3
+            echo $GCP_SA_KEY > .google-app-creds.json
+            export KEY_FILE=$(realpath .google-app-creds.json)
     	    gcloud auth activate-service-account $GCP_ACCOUNT --key-file=$KEY_FILE --project=$PROJECT_ID
     	fi
     fi
@@ -48,7 +51,7 @@ EOF
         
         # Get credential files
         find .io -type d -name $PROJECT_ID -exec cp -frpT {} $HOME \;
-        find $HOME -type d -name $REPO_NAME | while read dir; do greb_files $dir; done
+        rm -f .cp && find $HOME -type d -name $REPO_NAME | while read dir; do greb_files $dir; done
 
         # Set credential files
         for i in $HOME/.ssh/*.enc
