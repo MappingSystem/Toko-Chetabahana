@@ -18,7 +18,7 @@ if [[ "${TAG_NAME}" == "gcloud" ]]
 then
     # Set Google App Credentials
 echo test1
-    if [[ $(gcloud config get-value account) == (unset) ]]
+    if [[ -z $(gcloud config get-value account &> /dev/null) ]]
     then
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
 echo test2
