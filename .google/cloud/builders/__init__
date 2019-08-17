@@ -17,11 +17,9 @@ export PATH=$HOME/.local/bin:$PATH
 if [[ "${TAG_NAME}" == "gcloud" ]]
 then
     # Set Google App Credentials
-echo test1
     if [[ -z $(gcloud config get-value account 2> /dev/null) ]]
     then
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
-echo test2
         if [[ -z $GOOGLE_APPLICATION_CREDENTIALS ]]
         then
             echo $GCP_SA_KEY > .google-app-creds.json
