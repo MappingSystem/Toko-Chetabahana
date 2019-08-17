@@ -17,7 +17,8 @@ export PATH=$HOME/.local/bin:$PATH
 if [[ "${TAG_NAME}" == "gcloud" ]]
 then
     # Set Google App Credentials
-    if [[ "$(gcloud config get-value account)" == "(unset)" ]]
+echo test1
+    if [[ -z $(gcloud config get-value account --verbosity=none) ]]
     then
         # Dependencies: GCP_ACCOUNT & GCP_SA_KEY
 echo test2
