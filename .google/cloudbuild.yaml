@@ -13,29 +13,20 @@ steps:
   env:
   - TAG_NAME=docker
 
-- name: python
-  entrypoint: /bin/bash
-  args: [$_INIT]
-  id: python
-  env:
-  - TAG_NAME=python
-
 options:
   env:
   - BUILD_ID=$BUILD_ID
   - PROJECT_ID=$PROJECT_ID
-  - TAG_NAME=$TAG_NAME
+  - TAG_REPO=$_TAG_REPO
   - REPO_NAME=$REPO_NAME
   - BRANCH_NAME=$BRANCH_NAME
-  - OUTPUTS_VOLUME=$_OUTPUT
   volumes:
   - name: outputs-volume
     path: /builder/outputs/volume
   
 substitutions:
   _INIT: .google/cloud/builders/__init__
-  _OUTPUT: /builder/outputs/volume
-  _VERSION: v1-1908131241-3fbe63a0-637c-45a0-bb7d-3c784901ed85-gcp
+  _VERSION: v1-1909142126-4.9.0-8-amd64-gcp
 
-tags: [mytag1, mytag2, mytag3]
-timeout: 100s
+timeout: 300s
+tags: ['$_PR_NUMBER', '$_REPO_OWNER', '$_REPO', '$_SHA']
