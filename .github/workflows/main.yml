@@ -2,12 +2,12 @@ name: Main CI
 on:
   push:
     branches:
-    - '*'
-    - !master
-    - !compose
-    - !production
-    - !development
-    - !Chetabahana
+      - '*'
+      - '!master'
+      - '!compose'
+      - '!production'
+      - '!development'
+      - '!Chetabahana'
   schedule:
   - cron: 0 */6 * * *
     branches:
