@@ -5,13 +5,6 @@ whoami
 echo $HOME
 id
 
-echo -e "$hr\nPROJECT CONFIG\n$hr"
-gcloud config list --all
-
-echo -e "\n$hr\nSYSTEM INFO\n$hr"
-gcloud info
-python --version
-
 echo -e "\n$hr\nHOME PROFILES\n$hr"
 echo $HOME
 ls -al $HOME
@@ -22,7 +15,7 @@ echo "/root -> $HOME"
 
 echo -e "$hr\nSSH FILES\n$hr"
 echo "/root/.ssh -> $HOME/.ssh"
-[[ "$(whoami)" == "root" ]] && ls -alL /root/.ssh || sudo bash -c 'ls -al /root/.ssh'
+[[ "$(whoami)" == "root" ]] && ls -al /root/.ssh || sudo bash -c 'ls -alL /root/.ssh'
 
 echo -e "\n$hr\nENVIRONTMENT\n$hr"
 HR=$hr && unset hr
