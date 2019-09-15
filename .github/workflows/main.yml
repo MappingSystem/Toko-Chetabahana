@@ -1,0 +1,26 @@
+name: Main CI
+on:
+  push:
+    branches:
+    - *
+    - !master
+    - !compose
+    - !production
+    - !development
+    - !Chetabahana
+  schedule:
+  - cron: 0 */6 * * *
+    branches:
+    - master
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Check repositories
+      run: |
+        bash .github/workflows/builders/__init__
+      env:
+        GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        GCP_ACCOUNT: ${{ secrets.GCP_ACCOUNT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
