@@ -1,5 +1,9 @@
 name: Main CI
 on:
+  schedule:
+  - cron: '0 */6 * * *'
+    branches:
+    - master
   push:
     branches:
       - '*'
@@ -8,10 +12,6 @@ on:
       - '!production'
       - '!development'
       - '!Chetabahana'
-  schedule:
-  - cron: '0 */6 * * *'
-    branches:
-    - master
 jobs:
   job1:
     runs-on: ubuntu-latest
