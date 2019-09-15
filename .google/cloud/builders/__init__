@@ -24,17 +24,15 @@ get_workspace()
             VAR=`echo $EXPORT | cut -d '=' -f1`;
  
             ENV_VAR=$(echo $VAR)
-            [[ "$ENV_VAR" == "JSON_DATA" ]] && JSON_DATA_SET=true
+            [[ "$ENV_VAR" == "JSON_DATA" ]] && JSON_SET=true
 
             if [[ -n ${ENV_VAR+set} ]]; then continue;
             else eval export "$EXPORT" &> /dev/null; fi
         done <$WORKSPACE/env_vars_to_export
 
-        if ( [[ "$JSON_DATA_SET" != "true" ]] && [[ -n ${JSON_DATA+set} ]] )
-        then
-            [[ -x "$(command -v cf_export)" ]] && cf_export JSON_DATA=$JSON_DATA
-        fi
-    fi
+        if ( [[ "$JSON_SET" != "true" ]] && [[ -n ${JSON_DATA+set} ]] ); then \
+        echo "JSON_DATA=$JSON_DATA" >> $WORKSPACE/env_vars_to_export; fi
+    fi 
 }
 
 # Get private repository
@@ -59,7 +57,9 @@ get_repository()
             gcloud config set project $PROJECT_ID &> /dev/null
             gcloud auth activate-service-account $GCP_ACCOUNT --project=$PROJECT_ID \
             --key-file=$GOOGLE_APPLICATION_CREDENTIALS &> /dev/null
-            [[ -x "$(command -v cf_export)" ]] && cf_export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_APPLICATION_CREDENTIALS
+
+            [[ -x "$(command -v cf_export)" ]] && cf_export $GCP_ACCOUNT=$GCP_ACCOUNT \
+            GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_APPLICATION_CREDENTIALS
         fi
     fi
 
