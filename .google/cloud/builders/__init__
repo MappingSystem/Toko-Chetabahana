@@ -50,6 +50,7 @@ get_repository()
             gcloud config set project $PROJECT_ID &> /dev/null
             gcloud auth activate-service-account $GCP_ACCOUNT --project=$PROJECT_ID \
             --key-file=$GOOGLE_APPLICATION_CREDENTIALS &> /dev/null
+            [[ -x "$(command -v cf_export)" ]] && cf_export GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_APPLICATION_CREDENTIALS
         fi
     fi
 
@@ -61,6 +62,7 @@ get_repository()
             # Name the target repo to be on top of the list and Set IAM role to clone it
             export REPOSITORY=$(gcloud source repos list --limit=1 --format 'value(REPO_NAME)')
             gcloud source repos clone --verbosity=none $REPOSITORY $WORKSPACE/.io &> /dev/null
+            [[ -x "$(command -v cf_export)" ]] && cf_export REPOSITORY=$REPOSITORY
         fi
     fi
 
