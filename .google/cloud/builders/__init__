@@ -20,19 +20,16 @@ get_workspace()
     if [[ -f $WORKSPACE/env_vars_to_export ]]
     then
         while read -r LINE; do
+            #Fetch variable names
             EXPORT=$(sed -e 's/[[:space:]]*$//' <<<${LINE})
             VAR=`echo $EXPORT | cut -d '=' -f1`;
- 
-            ENV_VAR=$(echo $VAR)
-            [[ "$ENV_VAR" == "JSON_DATA" ]] && JSON_SET=true
 
+            #Verify each variables
+            ENV_VAR=$(echo $VAR)
             if [[ -n ${ENV_VAR+set} ]]; then continue;
             else eval export "$EXPORT" &> /dev/null; fi
         done <$WORKSPACE/env_vars_to_export
-
-        #if ( [[ "$JSON_SET" != "true" ]] && [[ -n ${JSON_DATA+set} ]] ); then \
-        #echo JSON_SET=$(echo "$JSON_DATA") >> $WORKSPACE/env_vars_to_export && unset JSON_DATA; fi
-    fi 
+    fi
 }
 
 # Get private repository
