@@ -30,8 +30,8 @@ get_workspace()
             else eval export "$EXPORT" &> /dev/null; fi
         done <$WORKSPACE/env_vars_to_export
 
-        if ( [[ "$JSON_SET" != "true" ]] && [[ -n ${JSON_DATA+set} ]] ); then \
-        echo JSON_SET=$(echo "$JSON_DATA") >> $WORKSPACE/env_vars_to_export && unset JSON_DATA; fi
+        #if ( [[ "$JSON_SET" != "true" ]] && [[ -n ${JSON_DATA+set} ]] ); then \
+        #echo JSON_SET=$(echo "$JSON_DATA") >> $WORKSPACE/env_vars_to_export && unset JSON_DATA; fi
     fi 
 }
 
