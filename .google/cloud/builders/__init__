@@ -30,6 +30,10 @@ get_workspace()
             else eval export "$EXPORT" &> /dev/null; fi
         done <$WORKSPACE/env_vars_to_export
     fi
+
+    # Injected Environtments
+    if ( [[ -z $DATA ]] && [[ -n ${JSON_DATA+set} ]] && [[ -x "$(command -v cf_export)" ]] ); \
+    then echo $JSON_DATA > data.json && cf_export DATA=$(realpath data.json); fi
 }
 
 # Get private repository
