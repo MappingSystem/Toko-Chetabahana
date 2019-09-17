@@ -5,12 +5,15 @@ whoami
 echo $HOME
 id
 
-echo -e "$hr\nPROJECT CONFIG\n$hr"
-gcloud config list --all
+if [[ -x "$(command -v gcloud)" ]]
+then
+    echo -e "$hr\nPROJECT CONFIG\n$hr"
+    gcloud config list --all
 
-echo -e "\n$hr\nSYSTEM INFO\n$hr"
-gcloud info
-python --version
+    echo -e "\n$hr\nSYSTEM INFO\n$hr"
+    gcloud info
+    python --version
+fi
 
 echo -e "\n$hr\nHOME PROFILES\n$hr"
 ls -al $HOME
@@ -37,15 +40,17 @@ echo -e "\n$hr\nCURRENT REPOSITORY\n$hr"
 pwd
 ls -al .
 
-[[ ! -x "$(command -v docker)" ]] && exit 0
-echo -e "\n$hr\nDOCKER VERSION\n$hr"
-docker version
+if [[ ! -x "$(command -v docker)" ]]
+then
+    echo -e "\n$hr\nDOCKER VERSION\n$hr"
+    docker version
 
-echo -e "\n$hr\nDOCKER INFO\n$hr"
-docker info
+    echo -e "\n$hr\nDOCKER INFO\n$hr"
+    docker info
 
-echo -e "$hr\nIMAGE BUILDERS\n$hr"
-docker images --all | sort
+    echo -e "$hr\nIMAGE BUILDERS\n$hr"
+    docker images --all | sort
 
-echo -e "\n$hr\nCURRENTLY RUNNING\n$hr"
-docker ps
+    echo -e "\n$hr\nCURRENTLY RUNNING\n$hr"
+    docker ps
+fi
