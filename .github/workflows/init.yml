@@ -4,6 +4,7 @@ on:
     branches:
       - '*'
       - '!master'
+      - '!deploy'
       - '!compose'
       - '!production'
       - '!development'
